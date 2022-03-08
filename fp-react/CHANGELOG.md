@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.12](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.11...@shawnsandy/fp-react@0.7.12) (2022-03-08)
+
+
+### Features
+
+* link component ([6744a64](https://github.com/shawn-sandy/fp-kit/commit/6744a64e82ffa310b4f0b3803982a39548f608a3))
+
+
+
+
+
 ## 0.7.11 (2022-03-08)
 
 
