@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.11](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.7.10...@shawnsandy/first-paint@2.7.11) (2022-03-08)
+
+
+### Bug Fixes
+
+* husky hangs on install ([72f7827](https://github.com/shawn-sandy/fp-kit/commit/72f782717e82eed165deee76f32acd47ebac4df1))
+
+
+
+
+
 ## [2.7.10](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.7.9...@shawnsandy/first-paint@2.7.10) (2022-03-08)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
