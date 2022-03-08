@@ -1,0 +1,204 @@
+$render: true !default;
+$color: darkblue !default;
+$background-color: lightgray !default;
+$background-color-hover: rgb(228, 228, 228) !default;
+$margin: 0.7rem !default;
+$padding: 1rem !default;
+$padding-x: 1.8rem !default;
+$padding-y: 0.85rem !default;
+$button-padding: $padding-y $padding-x;
+$border-transparent: 1px transparent solid !default;
+$border-default: 1px solid $background-color-hover !default;
+$border-hover: 1px solid $background-color-hover !default;
+$border-radius: 0.1rem !default;
+$border-radius-rounded: 99rem;
+$display: inline-flex !default;
+$align-items: center !default;
+$justify-content: center !default;
+$cursor: pointer !default;
+$transitions: all 200ms ease !default;
+$transform: scale(0.98) !default;
+
+// *************************************************
+// ******************** imports ********************
+// *************************************************
+
+@use 'styles.scss';
+
+@mixin renderComponent($renderComponent: $render, $className: null) {
+  @if $renderComponent {
+    #{if($className, $className, '.fp-button')},
+    button[type] {
+      @include button();
+    }
+  }
+}
+
+/**
+TODO: deprecate this mixin
+**/
+@mixin button() {
+  @include styles.flex-box();
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: $background-color;
+  border-radius: $border-radius;
+  border: $border-transparent;
+  cursor: $cursor;
+  margin-bottom: $margin;
+  font-weight: normal;
+  line-height: 1;
+  transition: $transitions;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: $border-transparent;
+    transform: $transform;
+  }
+
+  &[type='reset'],
+  &[type='button'],
+  &[type='submit'] {
+    padding: $button-padding;
+    border: $border-default;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      background-color: darken($background-color-hover, 10);
+
+      border: $border-default;
+    }
+  }
+}
+
+@mixin links() {
+  @warn '@mixin links() uses [role=button] on href tags; some consider this an anti-pattern you can use the linkBtn() instead';
+  a,
+  .fp-button-link {
+    &[role='button'] {
+      display: inline-flex;
+      text-decoration: none;
+      background-color: transparent;
+      border: none;
+      border-radius: $border-radius;
+      color: $color;
+      line-height: 1;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border: none;
+      }
+
+      > span,
+      > b,
+      > em {
+        border: $border-transparent;
+        padding: $padding-y $padding-x;
+        border: $border-default;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1;
+        transition: $transitions;
+        // background-color: $background-color;
+
+        &:active,
+        &:hover,
+        &:focus {
+          //border-radius: $border-radius-rounded !important;
+          background-color: darken($background-color-hover, 10);
+          transform: $transform;
+        }
+      }
+
+      &:hover {
+        // background-color: darken($background-color-hover, 10);
+      }
+      > span {
+        background-color: $background-color;
+      }
+
+      > b {
+        background-color: $background-color;
+      }
+
+      > em {
+        background-color: $background-color;
+        border-radius: $border-radius-rounded !important;
+      }
+    }
+  }
+}
+
+@mixin linkBtn() {
+  a,
+  a[onclick],
+  a[tabindex='0'],
+  a[aria-pressed],
+  a[aria-label] {
+    //text-decoration: none;
+    text-decoration: none !important;
+    > b,
+    > em {
+      background-color: $background-color;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: $border-radius;
+      color: $color;
+      line-height: 1;
+      min-height: calc(48 / 16 * 1rem);
+      padding: 0 1.5rem;
+      transition: $transitions;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      > b,
+      > em {
+        //border-radius: $border-radius-rounded !important;
+        background-color: $background-color;
+        transform: $transform;
+      }
+    }
+
+    > b {
+      background-color: $background-color;
+    }
+
+    > em {
+      background-color: $background-color;
+      border-radius: $border-radius-rounded !important;
+    }
+  }
+
+  em:where(a) {
+    text-decoration: none !important;
+  }
+}
+
+@mixin config(
+  $_color: $color,
+  $_background-color: $background-color,
+  $_background-color-hover: $background-color-hover,
+  $_border-radius: $border-radius,
+  $_button-padding: $button-padding,
+  $_transitions: $transitions,
+  $_transform: $transform
+) {
+  $color: $_color !global;
+  $background-color: $_background-color !global;
+  $background-color-hover: $_background-color-hover !global;
+  $border-radius: $_border-radius !global;
+  $button-padding: $_button-padding !global;
+  $transitions: $_transitions !global;
+  $transform: $_transform !global;
+}
+
+@include renderComponent();

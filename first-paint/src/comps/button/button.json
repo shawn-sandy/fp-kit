@@ -1,0 +1,6 @@
+{
+  "layout": "elements.njk",
+  "showDate": true,
+  "category": "button",
+  "scripts": []
+}

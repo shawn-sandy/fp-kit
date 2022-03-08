@@ -1,0 +1,10 @@
+// @use './components/form.scss';
+@use './components.scss';
+
+@include components.button-config($_background_color: black, $_color: white);
+@include components.button-links();
+
+@include components.form-elements();
+
+@include components.elements-pre();
+@include components.button-linkBtn();

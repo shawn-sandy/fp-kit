@@ -1,0 +1,52 @@
+// set variables
+// TODO Search and replace name with CSS tag/element name
+@use './utilities/maps';
+@use './utilities/mixins' as mix;
+$render: true !default;
+$prefix: 'layout';
+$tokens: ();
+
+// render component mixin
+@mixin renderComponent($renderContent: $render, $className: null) {
+  @if ($renderContent) {
+    #{$className,
+    $className,
+    '.fp-footer'},
+    footer {
+      @include maps.customProperties($tokens, $prefix);
+      @include footer();
+    }
+  }
+}
+
+@mixin footer {
+  &[role='contentinfo'] {
+    --fs: var(--s2) !important;
+    --px: var(--xl);
+    > section {
+      @include mix.flexbox();
+      --dsp: var(--dsp-f);
+      --fs: var(--s2);
+      --p: var(--rem);
+      --py: var(--xl);
+      --gap: var(--rem);
+      --px: 0;
+    }
+    > div {
+      --dsp: block;
+      --align-txt: center;
+      --py: 1rem;
+    }
+  }
+}
+
+@mixin footer-elements {
+}
+
+@mixin config($_color: null, $_background-color: null) {
+  $footer-color: $_color !global;
+  $footer-background-color: $_background-color !global;
+}
+
+// include render component
+@include renderComponent();

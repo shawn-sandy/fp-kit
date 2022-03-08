@@ -1,0 +1,653 @@
+html,
+body,
+main,
+div,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+audio,
+video,
+[style] {
+  display: var(--dsp, initial);
+  flex-direction: var(--direction, initial);
+  justify-content: var(--justify, initial);
+  align-items: var(--align, initial);
+  gap: var(--gap, initial);
+  flex-wrap: var(--wrap, initial);
+  grow: var(--grow, initial);
+  shrink: var(--shrink, initial);
+  --dsp: block;
+}
+
+button,
+a,
+input,
+select,
+textarea,
+em,
+s,
+i {
+  display: var(--dsp);
+  --dsp: inline-block;
+}
+
+/*
+ ***************************************
+ Name: tokens.scss
+ ***************************************
+*/
+/* Name: core.scss */
+*,
+[style] {
+  --cl: var(--color, initial);
+  --fs: var(--font-size, 1rem);
+  --fst: var(--font-style, normal);
+  --fw: var(--font-weight, normal);
+  --ff: var(--font-family, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  --lh: var(--line-height, 1.2);
+  --txa: var(--text-align, left);
+  --txd: var(--text-decoration, none);
+  --txt: var(--text-transform, none);
+  --li-style: var(--list-style, none);
+  --visible: var(--visibility, visible);
+  --border: var(--brd, initial);
+  --min-w: var(--min-width, auto);
+  --min-h: var(--min-height, auto);
+  --max-w: var(--max-width, auto);
+  --max-h: var(--max-height, auto);
+  --fv: var(--font-variant, normal);
+  --fk: var(--font-kerning, normal);
+  --lts: var(--letter-spacing, normal);
+  --ws: var(--white-space, normal);
+  --wsp: var(--word-spacing, normal);
+  --w: var(--width, auto);
+  --h: var(--height, auto);
+  --p: var(--padding, initial);
+  --m: var(--margin, initial);
+  --px: var(--padding-inline, initial);
+  --py: var(--padding-block, initial);
+  --mx: var(--margin-inline, initial);
+  --my: var(--margin-block, initial);
+  --dsp: initial;
+  --pos: var(--position, initial);
+  --gap: 1rem;
+  --gap-sm: var(--sm);
+  --gap-md: var(--md);
+  --gap-lg: var(--lg);
+  --gap-xl: var(--xl);
+  --rem: 1rem;
+  --0: 0;
+  --s1: 0.75rem;
+  --s2: 0.875rem;
+  --s3: 1.3125rem;
+  --s4: 1.75rem;
+  --s5: 2.25rem;
+  --s6: 3rem;
+  --s7: 3.75rem;
+  --s8: 4.5rem;
+  --s9: 5rem;
+  --s10: 7.5rem;
+  --s11: 9rem;
+  --s12: 12rem;
+  --s13: 15rem;
+  --s14: 18rem;
+  --none: 0;
+  --xs: var(--s1);
+  --sm: var(--s2);
+  --md: var(--s3);
+  --lg: var(--s4);
+  --xl: var(--s5);
+  --2xl: var(--s6);
+  --3xl: var(--s7);
+  --4xl: var(--s8);
+  --5xl: var(--s9);
+  --6xl: var(--s10);
+  --7xl: var(--s11);
+  --8xl: var(--s12);
+  --9xl: var(--s13);
+  --10xl: var(--s14);
+  --d: var(--rem);
+  --pct-1: 10%;
+  --pct-2: 20%;
+  --pct-3: 30%;
+  --pct-4: 40%;
+  --pct-5: 50%;
+  --pct-6: 60%;
+  --pct-7: 70%;
+  --pct-8: 80%;
+  --pct-9: 90%;
+  --pct-10: 100%;
+  --pct: var(pct-10);
+  --vh-sm: 10vh;
+  --vh-md: 25vh;
+  --vh-lg: 50vh;
+  --vh-xl: 70vh;
+  --vh-2xl: 90vh;
+  --vmin: 1%;
+  --vmax: 1%;
+  --vw-sm: 10vw;
+  --vw-md: 25vw;
+  --vw-lg: 50vw;
+  --vw-xl: 70vw;
+  --vw-2xl: 90vw;
+  --rds: 0.2rem;
+  --rds-xs: 0.3rem;
+  --rds-sm: 0.5rem;
+  --rds-md: 0.8rem;
+  --rds-lg: 1.3rem;
+  --rds-xl: 1.8rem;
+  --rds-pill: 99rem;
+  --off-white: hsl(240, 100%, 96%);
+  --dark: hsl(0, 0%, 9%);
+  --light: lightgray;
+  --alert: yellowgreen;
+  --info: hsl(210, 100%, 41%);
+  --warning: hsl(33, 100%, 50%);
+  --danger: hsl(348, 98%, 38%);
+  --highlight: hsl(54, 100%, 90%);
+  --text: var(dark);
+  box-sizing: border-box;
+  font-family: var(--ff);
+  font-size: var(--fs);
+  padding-inline: var(--px);
+  padding-block: var(--py);
+  margin-inline: var(--mx);
+  margin-block: var(--my);
+  width: var(--w);
+  height: var(--h);
+  list-style: var(--li-style);
+  color: var(--cl, black);
+  align-items: var(--align);
+  background-color: var(--bg, white);
+  border: var(--border, 0);
+  -webkit-text-decoration: var(--txd);
+          text-decoration: var(--txd);
+  cursor: var(--cursor);
+  width: var(--w);
+  min-height: var(--min-h);
+  max-height: var(--max-h);
+  min-width: var(--min-w);
+  max-width: var(--max-w);
+  justify-content: var(--justify, initial);
+  text-align: var(--txa);
+  border-radius: var(--b-rds);
+}
+
+:root {
+  --container-sm: calc(1280rem / 16);
+  --container-md: calc(1440rem / 16);
+  --container-lg: calc(1600rem / 16);
+  --container-xl: calc(1980rem / 16);
+  --container: 100%;
+  --line: thin solid lightgray;
+  --cursor: auto;
+  --rad: intial;
+}
+
+footer[role=contentinfo],
+header,
+main,
+ul,
+ol,
+div,
+> nav,
+> section {
+  --px: 1.2rem;
+}
+
+main,
+body > section,
+footer {
+  --dsp: block;
+  --px: 1rem;
+  --py: auto;
+  --mx: auto;
+}
+@media (min-width: 61.25rem) {
+  main,
+body > section,
+footer {
+    --max-w: var(--container-md, var(--pct-8));
+    --px: 0;
+  }
+}
+
+header,
+nav {
+  --px: 0;
+  --w: 100%;
+}
+
+> * + * {
+  --py: 1rem;
+}
+
+header > section {
+  --px: 1rem;
+}
+
+ul {
+  --dsp: block;
+  --mx: 1rem;
+}
+
+section + section,
+div + div {
+  --dsp: block;
+  --py: 1rem 0;
+}
+
+div,
+article,
+button,
+link,
+ul,
+p,
+form,
+blockquote {
+  width: var(--w);
+  height: var(--h);
+  px: 1rem;
+  py: 1rem;
+  mx: var(--elm-mx, --mx);
+  my: var(--elm-my, --my);
+  --w: auto;
+  --h: auto;
+}
+
+:-webkit-any-link {
+  --cl: blue;
+  --txd: none;
+  --cursor: pointer;
+}
+
+:any-link,
+a {
+  --cl: blue;
+  --txd: none;
+  --cursor: pointer;
+}
+:-webkit-any-link:visited, :-webkit-any-link :active {
+  --cl: navy;
+}
+:any-link:visited,
+:any-link :active,
+a:visited,
+a :active {
+  --cl: navy;
+}
+
+p + p {
+  --py: 1rem 0;
+}
+
+hr {
+  --border: none;
+}
+
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: elements.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: elements.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+footer[role=contentinfo] > section,
+footer[role=contentinfo] > div {
+  --dsp: flex;
+  --wrap: wrap;
+  --py: 3rem;
+}
+footer[role=contentinfo] > section > div {
+  flex: 1 1 calc(100% / var(--cols, 3) - var(--gap));
+}
+footer[role=contentinfo] > section > div + * {
+  --py: 0;
+}
+footer[role=contentinfo] > div {
+  --w: 100%;
+  --justify: center;
+}
+
+/*  Component: nav.scss */
+nav {
+  --dsp: flex;
+  --w: 100%;
+  --align: center;
+  --justify: space-between;
+  --h: var(--nav-h, var(--s8));
+  --mx: auto;
+}
+@media (min-width: 61.25rem) {
+  nav {
+    --max-w: var(--container-md, var(--pct-8));
+  }
+}
+nav section {
+  --dsp: flex;
+  --align: center;
+}
+nav section + section {
+  --py: 0;
+}
+
+/* menubar */
+ul[role=menubar] {
+  --dsp: flex;
+  --gap: 1rem;
+  --fs: 0.8rem;
+  --py: var(--rem);
+}
+ul[role=menubar] :-webkit-any-link {
+  --fs: var(--s2);
+}
+ul[role=menubar] li,
+ul[role=menubar] :any-link {
+  --fs: var(--s2);
+}
+
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: main.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/** banner.scss */
+[role=banner],
+[style*="--banner"] {
+  --dsp: flex;
+  --align: var(--banner-align, center);
+  --justify: var(--banner-justify, center);
+  --min-h: var(--banner-vh, var(--vh-lg));
+  --max-w: var(--pct-8);
+  --py: var(--banner-px, var(--rem));
+  --px: var(--banner-py, var(--rem));
+  --mx: var(--banner-mx, auto);
+}
+[role=banner] > *,
+[style*="--banner"] > * {
+  --txa: var(--banner-txa, left);
+}
+[role=banner] h1,
+[style*="--banner"] h1 {
+  --fs: var(--banner-h1, var(--s8));
+}
+[role=banner] p,
+[role=banner] p > *,
+[style*="--banner"] p,
+[style*="--banner"] p > * {
+  --fs: var(--banner-p, var(--s4));
+}
+[role=banner] [style*="--btn:"],
+[style*="--banner"] [style*="--btn:"] {
+  --fs: var(--btn-fs, var(--rem));
+  --h: var(--banner-btn-h, var(--s6));
+}
+
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: section.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ cComponent: aside.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/* Component: foundation.scss */
+/* component: button.scss */
+button,
+[style*="--btn"] {
+  --bg: lightgray;
+  --dsp: inline-flex;
+  --align: center;
+  --h: calc(36rem / 16);
+  --px: 1.5rem;
+  --border: var(--line);
+  --b-rds: var(--btn-rds, var(--rds));
+}
+button:-webkit-any-link, [style*="--btn"]:-webkit-any-link {
+  --txd: none;
+  --cl: var(--btn-cl, var(--dark));
+}
+button:any-link,
+button a,
+[style*="--btn"]:any-link,
+[style*="--btn"] a {
+  --txd: none;
+  --cl: var(--btn-cl, var(--dark));
+}
+button:hover,
+[style*="--btn"]:hover {
+  --cursor: pointer;
+  --bg: var(--btn-hover-bg, var(--dark));
+  --cl: var(--btn-hover-cl, var(--light));
+}
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: div.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+div[role=grid],
+section[role=grid] {
+  --py: var(--rem);
+}
+
+div[role=row],
+[style="--role"] {
+  --dsp: flex;
+  --gap: var(--rem);
+  --wrap: var(--row-wrap, wrap);
+}
+div[role=row] [role=gridcell],
+[style="--role"] [role=gridcell] {
+  flex: 1 1 calc(100% / var(--cols, 4) - var(--gap));
+  --py: var(--rem);
+  --px: var(--rem);
+}
+div[role=row] [role=gridcell] * + *,
+[style="--role"] [role=gridcell] * + * {
+  --py: var(--gap) 0;
+}
+
+section[role=list], section[style*="--list"],
+div[role=list],
+div[style*="--list"],
+ul[role=list],
+ul[style*="--list"] {
+  --dsp: flex;
+  --gap: var(--rem);
+  --wrap: var(--row-wrap, wrap);
+}
+section [role=listitem],
+div [role=listitem],
+ul [role=listitem] {
+  flex: 1 1 calc(100% / var(--cols, 3) - var(--gap));
+  --py: var(--rem);
+  --px: var(--rem);
+}
+section [role=listitem] * + *,
+div [role=listitem] * + *,
+ul [role=listitem] * + * {
+  --py: var(--gap) 0;
+}
+
+/*  Component: elements.scss */
+/* flex styles */
+[style*="--flex"] {
+  display: var(--dsp, flex);
+  --dsp: flex;
+  --gap: 1rem;
+}
+
+/** styles **/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  --fw: var(--fw-medium);
+  line-height: var(--line-height);
+  color: var(--cl);
+  margin: var(--m);
+  font-weight: var(--fw);
+  overflow-wrap: var(--overflow, var(--break));
+  word-break: var(--word-break, break-all);
+  -webkit-hyphens: var(--hyphens, auto);
+      -ms-hyphens: var(--hyphens, auto);
+          hyphens: var(--hyphens, auto);
+  --fx-weight: var(--fw-medium);
+  text-shadow: var(--shadow);
+  padding-block: var(--py, var(--p));
+  padding-inline: var(--px, var(--p));
+  display: var(--dsp, block);
+}
+
+h1 {
+  --fs: var(--4xl);
+}
+
+h2 {
+  --fs: var(--3xl);
+}
+
+h3 {
+  --fs: var(--2xl);
+}
+
+h4 {
+  --fs: var(--xl);
+}
+
+h5 {
+  --fs: var(--lg);
+}
+
+h6 {
+  --fs: var(--md);
+}
+
+small,
+time {
+  --fs: var(--fs);
+}
+
+time {
+  padding: 0 0 0.5rem;
+}
+
+p {
+  margin: 0;
+  line-height: 1.7;
+  --fw: normal;
+}
+p i {
+  font-style: italic;
+}
+p strong {
+  font-weight: var(--fw-medium);
+}
+
+p + p,
+p + * {
+  margin-top: 2rem;
+}
+
+/** utility.scss */
+/*
+**************************************
+Author: Shawn Sandy
+Date: 2021-11-01
+Email: shawnsandy04@gmail.com
+Description: First Paint Components
+Project: first-paint
+Version: 2.0
+Website: https://shawnsandy.github.io/first-paint/
+License: MIT
+***************************************
+*/

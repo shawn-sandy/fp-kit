@@ -1,0 +1,127 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: elements.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: elements.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+footer[role=contentinfo] > section,
+footer[role=contentinfo] > div {
+  --dsp: flex;
+  --wrap: wrap;
+  --py: 3rem;
+}
+footer[role=contentinfo] > section > div {
+  flex: 1 1 calc(100% / var(--cols, 3) - var(--gap));
+}
+footer[role=contentinfo] > section > div + * {
+  --py: 0;
+}
+footer[role=contentinfo] > div {
+  --w: 100%;
+  --justify: center;
+}
+
+/*  Component: nav.scss */
+nav {
+  --dsp: flex;
+  --w: 100%;
+  --align: center;
+  --justify: space-between;
+  --h: var(--nav-h, var(--s8));
+  --mx: auto;
+}
+@media (min-width: 61.25rem) {
+  nav {
+    --max-w: var(--container-md, var(--pct-8));
+  }
+}
+nav section {
+  --dsp: flex;
+  --align: center;
+}
+nav section + section {
+  --py: 0;
+}
+
+/* menubar */
+ul[role=menubar] {
+  --dsp: flex;
+  --gap: 1rem;
+  --fs: 0.8rem;
+  --py: var(--rem);
+}
+ul[role=menubar] :-webkit-any-link {
+  --fs: var(--s2);
+}
+ul[role=menubar] li,
+ul[role=menubar] :any-link {
+  --fs: var(--s2);
+}
+
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: main.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/** banner.scss */
+[role=banner],
+[style*="--banner"] {
+  --dsp: flex;
+  --align: var(--banner-align, center);
+  --justify: var(--banner-justify, center);
+  --min-h: var(--banner-vh, var(--vh-lg));
+  --max-w: var(--pct-8);
+  --py: var(--banner-px, var(--rem));
+  --px: var(--banner-py, var(--rem));
+  --mx: var(--banner-mx, auto);
+}
+[role=banner] > *,
+[style*="--banner"] > * {
+  --txa: var(--banner-txa, left);
+}
+[role=banner] h1,
+[style*="--banner"] h1 {
+  --fs: var(--banner-h1, var(--s8));
+}
+[role=banner] p,
+[role=banner] p > *,
+[style*="--banner"] p,
+[style*="--banner"] p > * {
+  --fs: var(--banner-p, var(--s4));
+}
+[role=banner] [style*="--btn:"],
+[style*="--banner"] [style*="--btn:"] {
+  --fs: var(--btn-fs, var(--rem));
+  --h: var(--banner-btn-h, var(--s6));
+}
+
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: section.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ cComponent: aside.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/* Component: foundation.scss */

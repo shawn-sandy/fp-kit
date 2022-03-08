@@ -1,0 +1,45 @@
+$render: true !default;
+$padding: 0 !default;
+$box-sizing: border-box !default;
+$display: flex !default;
+$wrap: wrap !default;
+$justify-content: flex-start !default;
+$flex-media-780: 1 1 48% !default;
+$flex-media-980: 1 1 28% !default;
+
+@mixin renderComponent($renderComponent: $render, $className: null) {
+  @if ($renderComponent) {
+    #{if($className, $className, '.fp-grid')},
+    section,
+    div {
+      &[role='list'] {
+        @include grid();
+      }
+    }
+  }
+}
+
+@mixin grid {
+  padding: $padding;
+  box-sizing: $box-sizing;
+  display: $display;
+  flex-wrap: $wrap;
+  justify-content: $justify-content;
+  gap: 1.2rem;
+
+  [role='listitem'] {
+    flex: 1 1 100%;
+    line-height: 1.6;
+    padding: 1rem;
+
+    @media all and (min-width: 780px) {
+      flex: $flex-media-780;
+    }
+
+    @media all and (min-width: 992px) {
+      flex: $flex-media-980;
+    }
+  }
+}
+
+@include renderComponent();

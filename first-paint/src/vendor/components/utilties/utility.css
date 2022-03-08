@@ -1,0 +1,82 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  --fw: var(--fw-medium);
+  line-height: var(--line-height);
+  color: var(--cl);
+  margin: var(--m);
+  font-weight: var(--fw);
+  overflow-wrap: var(--overflow, var(--break));
+  word-break: var(--word-break, break-all);
+  -webkit-hyphens: var(--hyphens, auto);
+      -ms-hyphens: var(--hyphens, auto);
+          hyphens: var(--hyphens, auto);
+  --fx-weight: var(--fw-medium);
+  text-shadow: var(--shadow);
+  padding-block: var(--py, var(--p));
+  padding-inline: var(--px, var(--p));
+  display: var(--dsp, block);
+}
+
+h1 {
+  --fs: var(--4xl);
+}
+
+h2 {
+  --fs: var(--3xl);
+}
+
+h3 {
+  --fs: var(--2xl);
+}
+
+h4 {
+  --fs: var(--xl);
+}
+
+h5 {
+  --fs: var(--lg);
+}
+
+h6 {
+  --fs: var(--md);
+}
+
+small,
+time {
+  --fs: var(--fs);
+}
+
+time {
+  padding: 0 0 0.5rem;
+}
+
+p {
+  margin: 0;
+  line-height: 1.7;
+  --fw: normal;
+}
+p i {
+  font-style: italic;
+}
+p strong {
+  font-weight: var(--fw-medium);
+}
+
+p + p,
+p + * {
+  margin-top: 2rem;
+}
+
+/* flex styles */
+[style*="--flex"] {
+  display: var(--dsp, flex);
+  --dsp: flex;
+  --gap: 1rem;
+}
+
+/** utility.scss */

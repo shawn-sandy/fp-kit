@@ -1,0 +1,39 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: elements.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+
+@use "../../modules/utilities/maps";
+
+footer[role="contentinfo"],
+[style*="--footer"] {
+  > section,
+  > div {
+    --dsp: flex;
+    --wrap: wrap;
+    --py: 3rem;
+    --direction: column;
+
+    @media (min-width: calc(768rem / 16)) {
+      --direction: row;
+    }
+  }
+  > section {
+    > div {
+      flex: 1 1
+        calc(100% / var(--footer-cols, 3) - var(--footer-gap, var(--gap)));
+      + * {
+        --py: 0;
+      }
+    }
+  }
+
+  > div {
+    --w: 100%;
+    --justify: center;
+  }
+}

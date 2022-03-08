@@ -1,0 +1,9 @@
+body button {
+  background: var(--color-primary);
+  font-size: var(--font-size-button);
+  padding: var(--space-s);
+  margin: auto;
+  border-radius: var(--border-radius-button);
+}
+
+/*# sourceMappingURL=fp.css.map */

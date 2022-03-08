@@ -1,0 +1,43 @@
+/** dynamic utility styles **/
+:empty:empty:not(hr, img, input, br),
+[style*="--is"] {
+  display: var(--dsp);
+}
+
+:empty:not(hr, img, input, br) {
+  display: var(--is-empty, var(--dsp, none));
+}
+
+[style="--is-empty"] {
+  display: var(--is-empty, none);
+}
+
+@media screen and (max-width: 62rem) and (min-width: 48rem) {
+  [style*="--is-phone"] {
+    display: var(--is-phone);
+  }
+}
+
+@media screen and (max-width: 62rem) and (min-width: 48rem) {
+  [style*="--is-tablet"] {
+    display: var(--is-mobile);
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  [style*="--is-mobile"] {
+    display: var(--is-mobile);
+  }
+}
+
+@media screen and (max-width: 80rem) and (min-width: 62rem) {
+  [style*="--is-laptop"] {
+    display: var(--is-laptop);
+  }
+}
+
+@media screen and (max-width: 87.5rem) and (min-width: 80rem) {
+  [style*="--is-desktop"] {
+    display: var(--is-desktop);
+  }
+}

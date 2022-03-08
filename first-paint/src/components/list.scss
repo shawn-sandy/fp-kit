@@ -1,0 +1,35 @@
+$render: true !default;
+
+@mixin list($renderContent: $render, $className: null) {
+  @if ($renderContent) {
+    #{if($className, $className, '.fp-list')} ol,
+    ul,
+    dl {
+      padding-left: 1rem;
+      list-style: disc;
+
+      > * + * {
+        margin-top: 0.5rem;
+      }
+
+      > * {
+        line-height: 1.5;
+      }
+    }
+
+    @include mix-list();
+  }
+}
+
+@mixin mix-list() {
+  span {
+    > ol,
+    ul {
+      list-style: none;
+      margin-left: 0rem;
+      padding-left: 0rem;
+    }
+  }
+}
+
+@include list();

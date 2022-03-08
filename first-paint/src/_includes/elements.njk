@@ -1,0 +1,40 @@
+{% extends 'index.njk' %}
+{% block styles %}
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
+  <link rel="stylesheet" href="/v2/css/components/index.css"/>
+  <link rel="stylesheet" href="/v2/css/components/layouts/cover.css"/>
+{% endblock %}
+{% block header %}
+  <section role="banner" style="--bnr-h: var(--bnr-sm); --bnr-justify: center">
+    <div>
+      <h2 style="--fw: 700">{{ title }}</h2>
+    </div>
+  </section>
+  <hr>
+  {% endblock %}
+  {% block feature %}{% endblock %}
+  {% block main %}
+    <section style="--py: 4rem">
+      <h3 role="none">{{ description }}</h3>
+    </section>
+    {{ content | safe }}
+    {% highlight %}
+    {{ content }}
+    {% endhighlight %}
+    {% if sandbox %}
+      {{ box.demo(sandbox, title) }}
+    {% endif %}
+    <hr
+      style="--py: 4rem">
+      {# TODO change collections from component to latest posts #}
+      {% set components = collections['components'] %}
+      {{ hlp.sort(components, 'fileSlug') }}
+      <div style="--flex-justify: flex-start; --min-w: 100%; --py: var(--s4)">
+        {% for item in components %}
+          <a href="{{ item.url }}" style="--btn-pill; --min-w: calc(100% / 5 - 1rem)">
+            {{ item.data.title }}
+            <span class="icon-arrow-right"></span>
+          </a>
+        {% endfor %}
+      </div>
+    {% endblock %}

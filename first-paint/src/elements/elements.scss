@@ -1,0 +1,17 @@
+$text-color: null !default;
+
+$link-color: null !default;
+
+p {
+  color: $text-color;
+  line-height: 1.6;
+
+  & + P {
+    margin-top: 1rem;
+  }
+}
+
+a {
+  color: $link-color or #020202;
+  text-decoration: none;
+}

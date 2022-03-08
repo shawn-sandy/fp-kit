@@ -1,0 +1,43 @@
+{% extends 'cover.njk' %}
+{% block styles %}
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
+  <link rel="stylesheet" href="/v2/css/components/index.css"/>
+  <link rel="stylesheet" href="/v2/css/components/layouts/cover.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet"/>
+{% endblock %}
+{% block feature %}{% endblock %}
+{% block main %}
+  <section>
+    {% include './_partials/cover-list.njk' %}
+  </section>
+  <section>
+    <h2 style="--fs: var(--h3)" id="components">Components</h2>
+  </section>
+  {{ content | safe }}
+  <section role="grid" style="--w: 100%">
+    <div role="row" style="--w: 100%">
+      {% set components = collections['components'] %}
+      {{ hlp.sort(components, 'fileSlug') }}
+      {% for item in components %}
+        <div role="gridcell">
+          <h3>
+            <a href="{{ item.url }}" style="--fs: var(--lg); --cl: var(--dark); --my: 0 var(--rem)">{{ item.data.title }}</a>
+          </h3>
+          <div style="--main:;">
+            <p style="--truncate: 2">
+              {{ item.data.description }}
+            </p>
+          </div>
+          <p>
+            <a href="{{ item.url }}" style="--btn-pill">View Component</a>
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
+{% block scripts %}
+  <script src="/js/scripts.js"></script>
+{% endblock %}

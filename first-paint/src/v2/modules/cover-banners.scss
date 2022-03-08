@@ -1,0 +1,69 @@
+// set variables
+// TODO Search and replace name with CSS tag/element name
+$render-header: true;
+$header-color: black;
+$background-color: null;
+$tokens: (
+  'bg': var(--bg),
+  'h': var(--h),
+  'dp': var(--dsp),
+  'al': var(--al),
+  'js': var(justify-s),
+  'row': var(--row)
+);
+// render component mixin
+@mixin renderComponent($renderContent: $render-header, $className: null) {
+  @if ($renderContent) header {
+    @include header();
+  }
+}
+
+@mixin banner {
+  --bg: var(--off-white);
+  --ban: var(--vh-lg);
+  --bd: var(--lg);
+  // background-color: var(--bg);
+  min-height: var(--ban, var(--min-h));
+  display: var(--dsp-f);
+  align-items: var(--fb-center);
+  justify-content: var(--justify-c);
+  flex-direction: var(--row);
+  border-block: var(--bd);
+  gap: var(--gap);
+  padding-block: var(--s5);
+
+  h1 {
+    --fw: var(--fw-bold);
+    text-shadow: var(--text-shadow-sm);
+    + p {
+      --fs: var(--md);
+    }
+  }
+
+  > div {
+    --fw: var(--vw-medium);
+    --w: 80%;
+    --text-align: var(--center);
+    max-width: var(--w);
+    p {
+      --w: 100%;
+      --text-align: var(--center);
+    }
+  }
+}
+
+@mixin header {
+  // background-color: var(--hd-bg, $background-color);
+
+  [role='banner'] {
+    @include banner();
+  }
+}
+
+@mixin config($_color: null, $_background-color: null) {
+  $header-color: $_color !global;
+  $header-background-color: $_background-color !global;
+}
+
+// include render component
+@include renderComponent();

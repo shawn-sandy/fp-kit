@@ -1,0 +1,36 @@
+/*  Component: nav.scss */
+
+@use "../../modules/utilities/maps";
+
+nav {
+  --dsp: flex;
+  --w: 100%;
+  --align: center;
+  --justify: space-between;
+  --h: var(--nav-h, var(--s8));
+  --mx: auto;
+  --bg: whitesmoke;
+  @media (min-width: calc(980rem / 16)) {
+    // --max-w: var(--container-md, var(--pct-8));
+    --px: calc(10% - 1rem);
+  }
+  @media (max-width: calc(700rem / 16)) {
+    --dsp: block;
+    --w: 100%;
+    --h: auto;
+    --py: var(--rem);
+    --justify: center;
+  }
+  section {
+    --dsp: flex;
+    --align: center;
+    + section {
+      --py: 0;
+    }
+  }
+
+  img[alt] {
+    --px: 0 var(--s1);
+    --w: var(--brand-w, 3.6rem);
+  }
+}

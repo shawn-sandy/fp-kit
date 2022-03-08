@@ -1,0 +1,280 @@
+// @use "@shawnsandy/mix/sass/foundations/settings.scss";
+// @import "@shawnsandy/mix/sass/foundations/nav.scss";
+// TODO optimize nav component reduce size to 1kb; remove all unnecessary  styles
+$render: true !default;
+$color: null !default;
+$border: whitesmoke 1px solid !default;
+$background-color: null !default;
+$min-height: 3.5rem !default;
+$max-width: null !default;
+$padding: 0.5rem !default;
+$padding-x: 0.5rem !default;
+$padding-y: 0.5rem !default;
+$padding-items: 0 1rem !default;
+$title-font-size: 1.5rem !default;
+$brand-img-height: null !default;
+$align-items: flex-start !default;
+$justify-content: space-between !default;
+$brand-name: 'brand name' !default;
+
+@mixin renderComponent($renderComponent: $render, $className: null) {
+  @if $renderComponent {
+    #{if($className, $className ',', '')} nav {
+      // hide nav by default on mobile
+      @media (max-width: 980px) {
+        [data-mobile] {
+          display: none;
+          visibility: hidden;
+        }
+      }
+
+      flex-direction: column;
+      align-items: $align-items;
+      justify-content: $justify-content;
+      padding: $padding-y $padding-x;
+      margin: 0 auto;
+      margin-bottom: 0rem;
+      border-bottom: #{if($max-width, $border, 'none')};
+      width: 100%;
+
+      @media (min-width: 980px) {
+        display: flex;
+        align-items: center;
+        visibility: visible;
+        flex-direction: row;
+        justify-content: space-between !important;
+        margin-bottom: 0;
+        padding: 0.5rem 0;
+        width: $max-width or 80%;
+        max-width: calc(1500rem / 16);
+      }
+
+      &:target {
+        @media (max-width: 980px) {
+          display: flex;
+          visibility: visible;
+          position: absolute;
+          z-index: 99;
+          right: 0;
+          top: 0rem;
+          padding: 2rem 0.5rem;
+          background-color: rgba(255, 255, 255, 0.95);
+
+          ul {
+            margin-left: 0;
+            padding: 0;
+          }
+        }
+      }
+
+      // always display on mobile/desktop
+      // &[data-display-nav] {
+      //   display: flex !important;
+      //   visibility: visible !important;
+      //   justify-content: space-between !important;
+      //   flex-direction: row !important;
+      //   padding: .5rem;
+      // }
+
+      &[data-mobile] > section {
+        width: auto !important;
+
+        @media (max-width: 980px) {
+          &:not(:first-child) {
+            display: none;
+            visibility: hidden;
+          }
+
+          &:target {
+            display: flex;
+            visibility: visible;
+            position: absolute;
+            z-index: 99;
+            right: 0;
+            top: 0rem;
+            padding: 2rem 0.5rem;
+            background-color: rgba(255, 255, 255, 0.95);
+
+            ul {
+              margin-left: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0;
+
+        &:target {
+          @media (max-width: 980px) {
+            display: flex;
+            visibility: visible;
+            position: absolute;
+            z-index: 99;
+            right: 0;
+            left: 0;
+            top: 0rem;
+            padding: 2rem 0.5rem;
+            background-color: rgba(255, 255, 255, 0.95);
+
+            ul {
+              margin-left: 0;
+              padding: 0;
+            }
+          }
+        }
+
+        &[role='region'][aria-label] {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        li,
+        a {
+          margin-top: 0rem;
+        }
+
+        // margin-bottom: .5rem;
+
+        li {
+          height: inherit;
+          display: block;
+          align-items: left;
+          margin-top: 0;
+          padding: 0.5rem;
+
+          & + li {
+            margin-top: 0;
+          }
+        }
+
+        @media (min-width: 960px) {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          margin-bottom: 0;
+
+          li,
+          a {
+            margin-top: 0;
+          }
+
+          [role='region'][aria-label] {
+            width: auto;
+            max-width: auto;
+          }
+        }
+
+        a {
+          padding: 0 0.5rem;
+          font-size: 0.9rem;
+          text-decoration: none;
+        }
+
+        button[type],
+        a[role='button'] {
+          margin-bottom: 0;
+        }
+
+        ul {
+          @media (min-width: 980px) {
+            display: flex;
+          }
+
+          min-height: $min-height;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin: 0;
+        }
+      }
+
+      h1,
+      [aria-label='#{$brand-name}'] {
+        display: block;
+        text-align: center;
+        height: 100%;
+        margin: 0;
+        line-height: normal;
+        font-size: $title-font-size;
+
+        @media (min-width: 960px) {
+          display: flex;
+          align-items: center;
+        }
+
+        a {
+          font-size: $title-font-size;
+          padding: 0;
+        }
+
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+@mixin max-width($max-width: 100%) {
+  nav {
+    @media (min-width: 960px) {
+    }
+  }
+}
+
+@mixin dashboard {
+  nav[data-sidebar-nav] {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    visibility: hidden;
+
+    @media (max-width: 980px) {
+      &:target {
+        display: flex;
+        visibility: visible;
+      }
+    }
+
+    @media (min-width: 980px) {
+      visibility: visible;
+      display: flex;
+    }
+
+    section {
+      min-width: 15vw;
+      align-items: left;
+      justify-content: flex-start;
+
+      ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 1rem;
+        width: 100%;
+
+        li {
+          padding: 0.31rem;
+          width: 100%;
+
+          & + li {
+            margin-top: 0;
+          }
+        }
+
+        a {
+          padding: 0;
+        }
+      }
+
+      li + li {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+@include renderComponent();

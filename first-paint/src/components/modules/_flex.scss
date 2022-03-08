@@ -1,0 +1,17 @@
+// styles
+$display: flex !default;
+$align-items: center !default;
+$justify-content: center !default;
+$direction: row;
+
+@mixin box() {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $direction;
+}
+
+@mixin box-top() {
+  $align-items: top;
+  @include box();
+}

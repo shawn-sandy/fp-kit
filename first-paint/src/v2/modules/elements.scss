@@ -1,0 +1,129 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+// set variables
+// TODO Search and replace name with CSS tag/element name
+@use './utilities/maps';
+@use './utilities/mixins' as mix;
+@use './utilities/functions' as fn;
+$render: true !default;
+$prefix: 'layout';
+$tokens: ();
+
+// render component mixin
+@mixin renderComponent($renderContent: $render, $className: null) {
+  @if ($renderContent) {
+    // @include elements();
+  }
+}
+
+*,
+*::before,
+*::after,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--cl);
+  min-height: var(--min-h, 100vh);
+}
+
+// TODO add mixin code
+
+blockquote {
+  --dsp: block;
+}
+
+// layout containers
+header,
+footer,
+section {
+  min-height: var(--min-h);
+  min-width: var(--w);
+}
+
+:any-link {
+  color: var(--cl, var(--color));
+  text-decoration: var(--decoration, none);
+  font-size: var(--fs);
+  border-width: var(--border-w);
+  border-style: var(--border-s);
+  border-color: var(--border-cl);
+  padding-inline: var(--x);
+  padding-block: var(--y);
+  border-radius: var(--border-rad);
+  + * {
+    margin-inline-start: var(--ml);
+    --ml: var(--rem);
+  }
+  :where(em, strong, b, div) {
+    @include mix.button();
+  }
+
+  b {
+    --bg: transparent;
+    --border-s: solid;
+    --border-cl: var(--light);
+    --border-w: 2px;
+  }
+
+  em {
+    --border-rad: 99rem;
+  }
+
+  strong,
+  div {
+    --dsp: block;
+  }
+}
+
+blockquote {
+  --m: var(--xl);
+  --p: var(--md);
+  --border: none;
+  --border-w: thick;
+  --border-s: solid;
+  --border-cl: var(--light);
+  border-left: var(--border-w) var(--border-s) var(--border-cl);
+}
+
+hr {
+  --my: var(--2xl);
+  --border-w: thin;
+  --border-s: solid;
+  --border-cl: var(--light);
+  border-bottom: var(--border-w) var(--border-s) var(--border-cl);
+}
+
+@mixin config($_color: null, $_background-color: null) {
+  $elements-color: $_color !global;
+  $elements-background-color: $_background-color !global;
+}
+// label element
+label[for] {
+  em {
+    font-style: var(--fs-style);
+
+    &::before {
+      content: var(--content, '\2217');
+      color: var(--danger, var(--border-cl));
+    }
+  }
+
+  font-size: var(--fs, 0.9rem);
+  display: var(--dsp, block);
+  margin-bottom: var(--mb, 0.5rem);
+}
+
+:any-link:where(em strong b),
+button {
+  --fs-style: normal;
+}
+
+@include renderComponent();

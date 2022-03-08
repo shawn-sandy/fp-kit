@@ -1,0 +1,18 @@
+<svg id="fp-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="168" height="168" viewBox="0 0 168 168">
+  <defs>
+    <filter id="paint-roller" x="31.637" y="46.505" width="94.872" height="94.872" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feFlood flood-opacity="0.29"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <circle id="Ellipse_7" data-name="Ellipse 7" cx="84" cy="84" r="84" fill="#1f3228"/>
+  <path id="Path_4" data-name="Path 4" d="M84,0A84,84,0,1,1,0,84,84,84,0,0,1,84,0Z" fill="#1f3228"/>
+  <path id="Path_5" data-name="Path 5" d="M73.25,0A73.25,73.25,0,1,1,0,73.25,73.25,73.25,0,0,1,73.25,0Z" transform="translate(10.75 10.75)" fill="#0cce6b" opacity="0.06"/>
+  <path id="Path_6" data-name="Path 6" d="M0,0H51.685V98.084l-28.52,6.948L0,102.75Z" transform="translate(58.546 56.916)" fill="#1f3228"/>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#paint-roller)">
+    <path id="paint-roller-2" data-name="paint-roller" d="M6.926,9.234h6.926V6.926A6.925,6.925,0,0,1,20.777,0h46.17a6.925,6.925,0,0,1,6.926,6.926V16.16a6.925,6.925,0,0,1-6.926,6.926H20.777a6.925,6.925,0,0,1-6.926-6.926V13.851H6.926A2.312,2.312,0,0,0,4.617,16.16V30.011a2.312,2.312,0,0,0,2.309,2.309H36.936a6.933,6.933,0,0,1,6.926,6.926V46.17H46.17a4.618,4.618,0,0,1,4.617,4.617V69.255a4.618,4.618,0,0,1-4.617,4.617H36.936a4.618,4.618,0,0,1-4.617-4.617V50.787a4.618,4.618,0,0,1,4.617-4.617h2.308V39.245a2.312,2.312,0,0,0-2.308-2.309H6.926A6.933,6.933,0,0,1,0,30.011V16.16A6.933,6.933,0,0,1,6.926,9.234Zm11.543,0V16.16a2.312,2.312,0,0,0,2.309,2.309h46.17a2.312,2.312,0,0,0,2.309-2.309V6.926a2.312,2.312,0,0,0-2.309-2.309H20.777a2.312,2.312,0,0,0-2.309,2.309ZM36.936,69.255H46.17V50.787H36.936Z" transform="translate(40.14 53)" fill="#0ccd6a"/>
+  </g>
+</svg>

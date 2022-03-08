@@ -1,0 +1,8 @@
+/* flex styles */
+[style*="--flex"] {
+  display: var(--dsp, flex);
+  --dsp: flex;
+  --gap: 1rem;
+}
+
+/** styles **/

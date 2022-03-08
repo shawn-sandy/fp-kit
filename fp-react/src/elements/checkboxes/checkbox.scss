@@ -1,0 +1,3 @@
+@use "@shawnsandy/first-paint/src/v21/modules/reset.scss";
+@use "@shawnsandy/first-paint/src/v21/modules/checkbox";
+@include checkbox.module();

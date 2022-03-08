@@ -1,0 +1,69 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --fw: var(--fw-medium);
+  line-height: var(--line-height);
+  color: var(--cl);
+  margin: var(--m);
+  font-weight: var(--fw);
+  overflow-wrap: break-word;
+  word-break: var(--word-break);
+  --fx-weight: var(--fw-medium);
+  text-shadow: var(--shadow);
+}
+
+h1 {
+  --fs: var(--4xl);
+}
+
+h2 {
+  --fs: var(--3xl);
+}
+
+h3 {
+  --fs: var(--2xl);
+}
+
+h4 {
+  --fs: var(--xl);
+}
+
+h5 {
+  --fs: var(--lg);
+}
+
+h6 {
+  --fs: var(--md);
+}
+
+small,
+time {
+  --fs: var(--fs);
+}
+
+time {
+  padding: 0 0 0.5rem;
+}
+
+p {
+  margin: 0;
+  line-height: 1.7;
+}
+p i {
+  font-style: italic;
+}
+p strong {
+  font-weight: var(--fw-medium);
+}
+
+p + p,
+p + * {
+  margin-top: 2rem;
+}
+
+p + * {
+  margin-top: 1.5rem !important;
+}

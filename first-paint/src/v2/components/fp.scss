@@ -1,0 +1,5 @@
+@use "sass:meta";
+
+body {
+  @include meta.load-css("./modules/buttons");
+}

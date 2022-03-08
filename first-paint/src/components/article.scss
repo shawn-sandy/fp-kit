@@ -1,0 +1,25 @@
+// set variables
+// TODO Search and replace name with CSS tag/element name
+$render: true !default;
+
+// render component mixin
+@mixin renderComponent($renderContent: true, $className: null) {
+  @if ($renderContent) {
+    article,
+    #{$className,
+    $className,
+    '.fp-article'} {
+      @include article();
+    }
+  }
+}
+
+@mixin article {
+  & + article {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+// include render component
+@include renderComponent();

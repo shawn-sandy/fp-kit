@@ -1,0 +1,62 @@
+$render: true !default;
+
+$min-height: 30vh !default;
+
+@mixin main($renderContent: $render, $className: null) {
+  @if ($renderContent) {
+    #{if($className, $className, '.fp-main')},
+    main {
+      @include mix-main();
+    }
+  }
+}
+
+@mixin mix-main {
+  min-height: $min-height;
+  padding: 2rem 0;
+
+  > section {
+    width: 100%;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+
+    > * + * {
+      margin-top: 2rem;
+    }
+  }
+
+  article + aside,
+  section + aside {
+    // width: 100%;
+    min-width: 25%;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+    margin-top: 1rem;
+    // border-top: solid 1px whitesmoke;
+  }
+
+  @media all and (min-width: 1280px) {
+    display: flex;
+
+    > section {
+      max-width: 75%;
+    }
+
+    align-items: flex-start;
+
+    section + aside,
+    aside + section,
+    section + [role='complementary'],
+    [role='complementary'] + section {
+      padding: 0 1rem 0 1.5rem;
+      min-width: 25%;
+      max-width: 25%;
+    }
+  }
+}
+
+@include main();

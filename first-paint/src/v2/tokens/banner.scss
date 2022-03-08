@@ -1,0 +1,15 @@
+@use "../modules/utilities/functions" as fn;
+@use "../modules/utilities/maps";
+@use "sass:math";
+
+$prefix: "ban";
+$resolution: 1080;
+$tokens: (
+  "2xl": 90vh,
+  "xl": 80vh,
+  "lg": 75vh,
+  "md": 50vh,
+  "sm": 33vh,
+  "xs": 25vh,
+  "leader-board": fn.rems(90),
+);

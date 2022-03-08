@@ -1,0 +1,9 @@
+@use "../modules/utilities/functions"as fn;
+@use "../modules/utilities/maps";
+@use "sass:math";
+
+$prefix: "fp";
+$resolution: 1080;
+$tokens: (
+  "align": "start",
+);

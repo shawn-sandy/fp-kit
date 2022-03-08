@@ -1,0 +1,42 @@
+/** Card component **/
+[style*='--card'] {
+  --dsp: grid;
+  grid-template-rows: auto 1fr auto;
+  --h: 100%;
+  --align: stretch;
+  --gap: var(--card-gap, 0);
+}
+[style*='--card'] > div {
+  --h: 100%;
+  --w: 100%;
+}
+
+[style*='--fx-card'] {
+  flex-direction: var(--fx-card-direction, column);
+  --dsp: flex;
+  flex: var(--grid-flex);
+  line-height: 1.6;
+  width: var(--grid-w);
+}
+[style*='--fx-card'] > * + * {
+  --mt: 1rem;
+  margin-top: var(--mt, 1rem);
+}
+@media (min-width: 1680px) {
+  [style*='--fx-card'] {
+    --grid-flex: 1 1 24%;
+    --grid-w: 24%;
+  }
+}
+@media (max-width: 980px) {
+  [style*='--fx-card'] {
+    --grid-flex: 1 1 48%;
+    --grid-w: 48%;
+  }
+}
+@media (max-width: 680px) {
+  [style*='--fx-card'] {
+    --grid-flex: 1 1 98%;
+    --grid-w: 49%;
+  }
+}

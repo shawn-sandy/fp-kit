@@ -1,0 +1,200 @@
+/* Name: core.scss */
+
+@use "../modules/utilities/maps";
+
+@use "./tokens.scss";
+
+@mixin display {
+  display: var(--dsp, block);
+}
+
+:root {
+  @include maps.cp(tokens.$units);
+  @include maps.cp(tokens.$colors);
+  @include maps.cp(tokens.$flex);
+  @include maps.cp(tokens.$filter);
+}
+// custom props
+* {
+  @include maps.cp(tokens.$props);
+  box-sizing: border-box;
+  font-family: var(--ff);
+  font-size: var(--fs);
+  padding-inline: var(--px);
+  padding-block: var(--py);
+  margin-inline: var(--mx);
+  margin-block: var(--my);
+  width: var(--w);
+  height: var(--h);
+  list-style: var(--li-style);
+  color: var(--cl, black);
+  align-items: var(--align);
+  background-color: var(--bg, white);
+  border: var(--border, 0);
+  text-decoration: var(--decoration, var(--txd));
+  text-transform: var(--transform, var(--txt));
+  cursor: var(--cursor);
+  width: var(--w);
+  min-height: var(--min-h);
+  max-height: var(--max-h);
+  min-width: var(--min-w);
+  max-width: var(--max-w);
+  justify-content: var(--justify, initial);
+  text-align: var(--tx-align);
+  border-radius: var(--rads);
+  line-height: var(--lh);
+  -webkit-line-clamp: var(--clamp, initial);
+  letter-spacing: var(--lts);
+}
+
+::before {
+  content: var(--before);
+}
+
+::after {
+  content: var(--after);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+
+  font-size: var(--page-fs, 100%);
+
+  @media screen and (max-width: calc(768rem / 16)) {
+    font-size: var(--page-fs-xs, 82%);
+  }
+
+  @media screen and (max-width: calc(992rem / 16)) and (min-width: calc(768rem / 16)) {
+    font-size: var(--page-fs-sm, 87%);
+  }
+
+  @media screen and (max-width: calc(1280rem / 16)) and (min-width: calc(992rem / 16)) {
+    font-size: var(--page-fs-md, 90%);
+  }
+
+  @media screen and (max-width: calc(1400rem / 16)) and (min-width: calc(1280rem / 16)) {
+    font-size: var(--page-fs-lg, 95%);
+  }
+}
+
+footer[role="contentinfo"],
+header,
+main,
+ul,
+ol,
+div,
+> nav,
+> section {
+  --px: 1.2rem;
+}
+
+main,
+body > section,
+footer {
+  --dsp: block;
+  --px: 1rem;
+  --py: auto;
+  --mx: auto;
+
+  @media (min-width: calc(992rem / 16)) {
+    --px: calc(10% - 1rem);
+  }
+}
+
+header,
+nav {
+  --px: 0;
+  // --dsp: flex;
+  --w: 100%;
+}
+
+> * + * {
+  --py: 1rem;
+}
+
+header {
+  > section {
+    --px: 1rem;
+  }
+}
+
+ul {
+  --dsp: block;
+  --mx: 1rem;
+}
+
+section + section,
+div + div {
+  --dsp: block;
+  --py: 1rem 0;
+}
+
+// elements
+div,
+article,
+button,
+link,
+ul,
+p,
+form,
+blockquote {
+  width: var(--w);
+  height: var(--h);
+  --mx: var(--elm-mx, --mx);
+  --my: var(--elm-my, --my);
+  --w: initial;
+  --h: initial;
+}
+
+div {
+  --dsp: block;
+  --mx: initial;
+  --my: initial;
+  --w: auto;
+}
+
+button,
+link,
+ul {
+  display: var(--dsp, inline-block);
+}
+
+:any-link,
+a {
+  --cl: blue;
+  --txd: none;
+  --cursor: pointer;
+
+  &:visited,
+  :active {
+    --cl: navy;
+  }
+
+  * {
+    --cursor: pointer;
+  }
+}
+
+p {
+  + p {
+    --py: 1rem 0;
+  }
+}
+
+hr,
+[style*="--hr"] {
+  --border: none;
+  height: 1px;
+  border-bottom: var(--hr-border, 1px solid var(--light));
+  --my: var(--hr-my, 2rem);
+  --min-width: 100%;
+}
+
+button,
+[style*="--btn"] {
+  font-size: var(--fs);
+  font-weight: var(--fw);
+  box-sizing: border-box;
+}

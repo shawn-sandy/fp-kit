@@ -1,0 +1,20 @@
+{
+  "title": "FirstPaint",
+  "subtitle": "Lightweight, Fast, Accessible, Inclusive",
+  "url": "https://shawnsandy.dev",
+  "description": "A performance-first, accessibility-driven, SCSS/CSS micro-framework built on CSS custom properties",
+  "logo_url": "/images/nav-logo.svg",
+  "feed": {
+    "subtitle": "A UI toolkit for creating and managing design/style systems, pattern libraries, style-guides, etc",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://shawnsandy.dev/"
+  },
+  "author": {
+    "name": "Shawn Sandy",
+    "email": "shawnsandy@shawnsandy.dev",
+    "twitter": "@shawnsandy"
+  },
+  "styles": [],
+  "scripts": ["./js/min/index.min.js"]
+}

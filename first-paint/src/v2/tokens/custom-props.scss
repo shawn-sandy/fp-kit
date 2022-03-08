@@ -1,0 +1,160 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+@use "../modules/utilities/functions" as fn;
+
+$font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$tokens: (
+  "cl": "hsl(0, 0%, 8%)",
+  "border-rad": 0,
+  "border": none,
+  "rad-pill": 99rem,
+  "rad": 0.25rem,
+  // alignment
+  "mid": "middle",
+  "top": "top",
+  "base": "baseline",
+  "bottom": "bottom",
+  "txt-top": "text-top",
+  "v-align": var(--base),
+  "right": "end",
+  "center": "center",
+  "justify": "justify",
+  "left": "start",
+  "middle": "middle",
+  "text-align": var(--left),
+  // display properties
+  "dsp-f": "flex",
+  "dsp-i": "inline-flex",
+  "dsp-b": "block",
+  "drt": "row",
+  "row": "row",
+  "col": "column",
+  "dsp": var(--dsp-b),
+  // flex properties
+  "fb-direction": var("row"),
+  "fb-shrink": 1,
+  "fb-grow": 1,
+  "fb-basis": 30%,
+  "flex": var(--fb-grow) var(--fb-shrink) var(--fb-basis),
+  // flex alignment,
+  "fb-start": "flex-start",
+  "fb-end": "flex-end",
+  "fb-stretch": "stretch",
+  "fb-center": "center",
+  "align-items": var(--fb-center),
+  // flex justify
+  "fb-wrap": "wrap",
+  "gap": 1rem,
+  "gap-sm": var(--sm),
+  "gap-md": var(--md),
+  "gap-lg": var(--lg),
+  "gap-xl": var(--xl),
+  // named colors
+  "off-white": "hsl(240, 100%, 96%)",
+  "dark": "hsl(0, 0%, 9%)",
+  "light": "lightgray",
+  "alert": "yellowgreen",
+  "info": "hsl(210, 100%, 41%)",
+  "warning": "hsl(33, 100%, 50%)",
+  "danger": "hsl(348, 98%, 38%)",
+  "highlight": "hsl(54, 100%, 90%)",
+  "text": "var(dark)",
+  // units
+  "rem": 1rem,
+  "0": "0",
+  "s1": fn.rems(12),
+  "s2": fn.rems(14),
+  "s3": fn.rems(21),
+  "s4": fn.rems(28),
+  "s5": fn.rems(36),
+  "s6": fn.rems(48),
+  "s7": fn.rems(60),
+  "s8": fn.rems(72),
+  "s9": fn.rems(80),
+  "s10": fn.rems(120),
+  "s11": fn.rems(144),
+  "s12": fn.rems(192),
+  "s13": fn.rems(240),
+  "s14": fn.rems(288),
+  // units expressive
+  "none": 0,
+  "xs": var(--s1),
+  "sm": var(--s2),
+  "md": var(--s3),
+  "lg": var(--s4),
+  "xl": var(--s5),
+  "2xl": var(--s6),
+  "3xl": var(--s7),
+  "4xl": var(--s8),
+  "5xl": var(--s9),
+  "6xl": var(--s10),
+  "7xl": var(--s11),
+  "8xl": var(--s12),
+  "9xl": var(--s13),
+  "10xl": var(--s14),
+  "d": var(--rem),
+  // percentages
+  "pct-1": 10%,
+  "pct-2": 20%,
+  "pct-3": 30%,
+  "pct-4": 40%,
+  "pct-5": 50%,
+  "pct-6": 60%,
+  "pct-7": 70%,
+  "pct-8": 80%,
+  "pct-9": 90%,
+  "pct-10": 100%,
+  "pct": var(pct-10),
+  "vh-sm": 10vh,
+  "vh-md": 25vh,
+  "vh-lg": 50vh,
+  "vh-xl": 70vh,
+  "vh-2xl": 90vh,
+  "vmin": 1%,
+  "vmax": 1%,
+  // vertical heights
+  "vw-sm": 10vw,
+  "vw-md": 25vw,
+  "vw-lg": 50vw,
+  "vw-xl": 70vw,
+  "vw-2xl": 90vw,
+  // Height
+  "min": auto,
+  "max-h": auto,
+  "h": auto,
+  // Width
+  "w": auto,
+  // fonts
+  "fs": clamp(var(--s1), var(--d), var(--s4)),
+  // font-size: clamp(1rem, 2.5vw, 2rem);
+  "fs-family": $font-family,
+  "ff": var(--fs-family),
+  "fs-d": var(--d),
+  "fw-medium": 500,
+  "fw-bold": 700,
+  "fw-regular": 400,
+  "fw": var(--fw-regular),
+  //others
+  "shadow-sm": 2px 4px 3px rgba(0, 0, 0, 0.2),
+  "allcaps": uppercase,
+  "lowercase": lowercase,
+  "capitalize": capitalize,
+  "truncate": truncate,
+  "box-ct": content-box,
+);
+
+$radius: (
+  "rad-sm": 0.7rem,
+  "rad-md": 0.7.5rem,
+  "rad-lg": 1rem,
+  "rad-xl": 2rem,
+);

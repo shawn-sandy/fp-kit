@@ -1,0 +1,126 @@
+$render: true !default;
+$background-color: #ffffff !default;
+$color: #000000 !default;
+$width: 90% !default;
+$width-md: 80% !default;
+$width-md-max: 1600px !default;
+$width-lg: $width-md !default;
+$width-lg-max: 1920px !default;
+$margin: 0 auto !default;
+$height: null !default;
+$padding: 0 1rem !default;
+$brand-img-height: 2rem;
+$font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI',
+  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+
+// set variables
+
+// render component mixin
+
+@mixin renderComponent($renderContent: $render, $className: null) {
+  @if ($renderContent) {
+    html {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-size: 90%;
+
+      @media (min-width: 980px) {
+        font-size: 98%;
+      }
+
+      @media (min-width: 1600px) {
+        font-size: 100%;
+      }
+
+      @media (min-width: 1980px) {
+        font-size: 110%;
+      }
+
+      * {
+        outline: none;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+    }
+
+    body {
+      font-family: $font-family;
+      background-color: $background-color;
+      color: lighten($color, 15%);
+
+      & > section,
+      & > main,
+      & > header > section,
+      & > footer > section {
+        max-width: $width;
+        margin: $margin;
+
+        @media (min-width: 980px) {
+          width: 90%;
+          max-width: calc(1500rem / 16);
+        }
+
+        @media (min-width: 1980px) {
+          width: 80%;
+          font-size: 110%;
+        }
+      }
+
+      [role='region'][aria-label] {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    [data-show-mobile] {
+      display: flex;
+      visibility: visible;
+    }
+
+    [data-show-desktop] {
+      display: none;
+    }
+
+    @media (min-width: 980px) {
+      [data-show-mobile] {
+        display: none;
+      }
+
+      [data-show-desktop] {
+        display: inline-flex;
+      }
+    }
+  }
+
+  [data-brand] {
+    img[alt] {
+      display: inline-block;
+      vertical-align: middle;
+      height: $brand-img-height or 2rem;
+      max-height: $brand-img-height or 2rem;
+
+      + * {
+        margin-left: 1rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h5 {
+      font-size: $brand-img-height - 0.5 or 2rem - 0.75;
+    }
+  }
+}
+
+// include render component
+
+@include renderComponent();

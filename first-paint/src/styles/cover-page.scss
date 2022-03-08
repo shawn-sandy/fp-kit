@@ -1,0 +1,34 @@
+@use '../components.scss'
+  with(
+    $render-page: true,
+    $render-type: true,
+    $render-nav: true,
+    $render-footer: true,
+    // $render-form: true, // the form is optional
+  );
+
+[data-cover] {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+nav,
+footer {
+  flex-shrink: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+
+  & > [role='banner'] {
+    flex-grow: 1;
+    @include components.header-banner();
+  }
+}
+
+@include components.button-links();

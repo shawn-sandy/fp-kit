@@ -1,0 +1,93 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+@use './utilities/maps';
+@use './utilities/mixins' as mix;
+@use './utilities/functions' as fn; // set variables
+// TODO Search and replace button with CSS tag/element name
+$render: true !default;
+
+// render component mixin
+@mixin renderComponent($renderContent: $render, $className: null) {
+  @if ($renderContent) {
+    // #{$className,
+    // $className,
+    // ".fp-link"},
+    button {
+      --bg: transparent;
+      --justify: 'center';
+      --min: 2.5rem;
+      --px: var(--s4);
+      --pl: var(--rem);
+      --line-height: 0;
+      --border-rad: 0.3rem;
+      &[type] {
+        --bg: var(--light);
+        @include button();
+      }
+      &[type='submit'] {
+        --bg: var(--dark);
+        --cl: var(--light);
+      }
+      &[type='reset'] {
+        --bg: transparent;
+        --fw: var(--fw-medium);
+        --border-s: solid;
+        --border-cl: var(--light);
+        --border-w: 2px;
+        &:hover {
+          --bg: var(--cl);
+          --cl: var(--bg);
+        }
+      }
+      &[type='button'] {
+        --bg: var(--light);
+        &:hover {
+          //--bg: lighten(var(--bg), 10%);
+        }
+      }
+    }
+
+    :any-link {
+      + * {
+        margin-inline-start: var(--ml);
+        --ml: var(--rem);
+      }
+      :where(em, strong, b, div) {
+        --px: var(--s4);
+        --min: var(--xl);
+        --bg: var(--light);
+        --dsp: inline-flex;
+        --border-rad: 0.2rem;
+      }
+
+      b {
+        --bg: transparent;
+        --border-s: solid;
+        --border-cl: var(--light);
+        --border-w: 2px;
+      }
+
+      em {
+        --border-rad: 99rem;
+      }
+
+      strong,
+      div {
+        --dsp: block;
+      }
+    }
+  }
+}
+
+@mixin button {
+}
+
+// include render component
+
+@include renderComponent();

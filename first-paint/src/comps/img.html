@@ -1,0 +1,23 @@
+---
+title: Images
+description: Images component
+---
+
+<hr />
+<section>
+  <div role="list">
+    {% for i in [1,2,3,4] -%}
+    <div role="listitem">
+      <picture>
+        <img
+          src=""
+          alt="Placeholder 1"
+          width="200px"
+          height="200px"
+        />
+      </picture>
+      <p>Lorem ipsum dolor sit.</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

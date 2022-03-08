@@ -1,0 +1,27 @@
+{% macro demo(id, title ='', editorView ='editor', split =
+'40') %}
+<h5 style="--w: 100%; --py: 3rem">{{ title }} Sandbox</h5>
+<section
+  style="
+    --dsp: block;
+    --w: 100%;
+    border: solid thin lightgray;
+    padding: 0.5rem;
+    background-color: lightgray;
+  "
+>
+  <iframe
+    src="https://codesandbox.io/embed/{{ id }}?fontsize=11&hidenavigation=1&theme=light&codemirror=1&view={{editorView}}"
+    style="
+      width: 100%;
+      height: 500px;
+      border: 3;
+      border-radius: 4px;
+      overflow: hidden;
+    "
+    title="{{ title }}"
+    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+  ></iframe>
+</section>
+{% endmacro %}

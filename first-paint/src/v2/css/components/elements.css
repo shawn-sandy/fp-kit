@@ -1,0 +1,267 @@
+/* stylelint-disable declaration-colon-newline-after */
+/* component: button.scss */
+button,
+[style*="--btn"] {
+  --btn-py-sm: 1rem 0.9rem;
+  --btn-py-md: 1.3rem 1.2rem;
+  --btn-py-lg: 1.5rem 1.4rem;
+  --h: calc(44rem / 16);
+  --h-sm: calc(32rem / 16);
+  --h-lg: calc(60rem / 16);
+  --pill: 99rem;
+  --bg: lightgray;
+  --dsp: inline-flex;
+  --align: center;
+  --justify: center;
+  --lh: 1;
+  --px: 1.9rem;
+  --py: var(--btn-py-sm);
+  --border: var(--border);
+  --rads: var(--btn-rds, var(--rds));
+  --fs: var(--s2);
+  --fw: var(--btn-fw, normal);
+  --cl: var(--btn-cl, var(--dark));
+  --lh: var(--btn-lh, 1);
+  --lts: var(--btn-lts, 0.08);
+}
+button:hover,
+[style*="--btn"]:hover {
+  --cursor: pointer;
+  filter: var(--dark-mode);
+}
+button[type=submit],
+[style*="--btn"][type=submit] {
+  --bg: var(--submit-bg, royalblue);
+  --cl: var(--btn-cl, var(--white));
+  --btn-lts: 0.08rem;
+}
+button[type=reset],
+[style*="--btn"][type=reset] {
+  --bg: var(--reset-bg, transparent);
+  --cl: var(--dark);
+  --border: thin solid var(--reset-cl, lightgray);
+}
+button[type=reset]:hover,
+[style*="--btn"][type=reset]:hover {
+  filter: none;
+  border-color: var(--dark);
+}
+
+[style*="--btn-pill"] {
+  --rads: var(--btn-pill, var(--pill));
+}
+
+[style*="--btn-sm"] {
+  --h: var(--btn-sm, var(--h-sm));
+  --fs: var(--s1);
+  --px: var(--px-sm, 1.2rem);
+}
+
+[style*="--btn-lg"] {
+  --h: var(--btn-lg, var(--h-lg));
+  --fs: var(--rem);
+  --py: var(--btn-py-lg);
+  --px: var(--px-lg, 2.8rem);
+}
+
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: div.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+[role=grid] {
+  --dsp: block;
+}
+
+[role=row],
+[style*="--row"],
+[role=list],
+[style*="--list"] {
+  --dsp: flex;
+  --gap: var(--rem);
+  --wrap: var(--row-wrap, wrap);
+}
+
+[role=gridcell],
+[role=listitem],
+[style*="--grid"] {
+  --dsp: flex;
+  flex: var(--col-flex, 1 1 calc(100% / var(--cols, 4) - var(--gap)));
+  --py: var(--grid-py, var(--rem));
+  --px: var(--grid-px, var(--rem));
+  --direction: var(--grid-direction, column);
+  --max-w: calc(100% / var(--cols, 4) - var(--gap));
+}
+@media (max-width: 48rem) {
+  [role=gridcell],
+[role=listitem],
+[style*="--grid"] {
+    --cols: var(--cols-xs, 1);
+  }
+}
+@media (max-width: 62rem) and (min-width: 48rem) {
+  [role=gridcell],
+[role=listitem],
+[style*="--grid"] {
+    --cols: var(--cols-sm, 2);
+  }
+}
+@media (max-width: 80rem) and (min-width: 62rem) {
+  [role=gridcell],
+[role=listitem],
+[style*="--grid"] {
+    --cols: var(--cols-md, 3);
+  }
+}
+@media (max-width: 87.5rem) and (min-width: 80rem) {
+  [role=gridcell],
+[role=listitem],
+[style*="--grid"] {
+    --cols: var(--cols-lg, 4);
+  }
+}
+[style*="--main:"] {
+  flex: var(--fx-auto-size);
+}
+
+pre,
+textarea[role=presentation],
+div[contenteditable] {
+  padding: 1rem;
+  margin: 2rem 0;
+  background-color: var(--code-bg, var(--bg, #2b2b2b));
+  line-height: 1.8;
+  border-radius: 0.2rem;
+  border-color: #2b2b2b;
+  border-style: solid;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  min-height: 150px;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  --w: var(--code-w, 80%);
+  --px: 1rem;
+  --py: 1rem;
+}
+pre::-webkit-scrollbar,
+textarea[role=presentation]::-webkit-scrollbar,
+div[contenteditable]::-webkit-scrollbar {
+  width: 0.5rem;
+}
+pre::-webkit-scrollbar-track,
+textarea[role=presentation]::-webkit-scrollbar-track,
+div[contenteditable]::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+pre::-webkit-scrollbar-thumb,
+textarea[role=presentation]::-webkit-scrollbar-thumb,
+div[contenteditable]::-webkit-scrollbar-thumb {
+  background-color: ghostwhite;
+  outline: none;
+}
+
+table {
+  --mx: var(--sm-x);
+  --my: 0;
+  --border-w: thin;
+  --border-s: solid;
+  --border-cl: var(--light);
+  --tbl-border-w: thin;
+  --tb-border: thin solid var(--tb-border-color, lightgray);
+  margin: 25px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  width: var(--tbl-w, 100%);
+  border-width: var(--tbl-border-w);
+  border: var(--tb-border);
+  box-shadow: 0 0 0.2rem rgba(87, 87, 87, 0.15);
+}
+table td {
+  background-color: transparent;
+}
+table thead tr {
+  --text-align: left;
+  width: 100%;
+  text-align: var(--text-align);
+  border-bottom: var(--tb-border);
+  background-color: var(--tb-bg, #fafafa);
+}
+table th,
+table td {
+  --py: 0.75rem;
+  --px: 0.75rem;
+  padding-inline: var(--py);
+  padding-block: var(--px);
+  background-color: var(--td-bg, transparent);
+}
+table tbody tr:nth-of-type(even) {
+  background-color: var(--tbl-bg, #fafafa);
+}
+table tbody tr:nth-of-type(even) td {
+  background-color: transparent;
+}
+table tbody tr:last-of-type {
+  --tbl-border-w: medium;
+  border-bottom: var(--tbl-border);
+}
+
+img[alt],
+img[alt][style*="--img"] {
+  --dsp: inline-block;
+  vertical-align: var(--img-align, center);
+  --w: var(--img-w, 100%);
+  --h: var(--img-h, auto);
+}
+
+picture,
+[style*="--img"] {
+  --dsp: flex;
+  max-width: var(--img-w, 100%);
+  width: var(--img-w, 100%);
+  min-height: var(--img-h, auto);
+  padding-block: var(--py);
+  padding: var(--p);
+  text-align: center;
+  display: var(--dsp);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+picture img[alt],
+[style*="--img"] img[alt] {
+  max-width: var(--img-w, 100%);
+  height: var(--img-w, 100%);
+}
+picture img[alt]::after,
+[style*="--img"] img[alt]::after {
+  --fs: 0.8rem;
+  width: var(--img-w, 100%);
+  min-height: var(--img-h, 100%);
+  content: "" " " attr(alt);
+  position: absolute;
+  font-size: var(--fs);
+  top: 0;
+  left: 0;
+  background-color: lightgray;
+  border-radius: 0.1rem;
+  border: none;
+  color: gray;
+  background-repeat: no-repeat;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/*  Component: elements.scss */
+
+/*# sourceMappingURL=elements.css.map */

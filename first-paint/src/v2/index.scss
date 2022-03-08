@@ -1,0 +1,56 @@
+/*
+ ***************************************
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ Email: shawnsandy04@gmail.com
+ Description: First Paint
+ Project: first-paint
+ Version: 2.0
+ Website: https://shawnsandy.github.io/first-paint/
+ License: MIT
+ ***************************************
+*/
+
+// page core styles
+@use './modules/core.scss';
+
+// Elements modules
+@use './modules/elements.scss';
+
+// Page modules
+@use './modules/page.scss';
+
+// add typography Modules
+@use './modules/type.scss';
+
+// Header Modules
+@use './modules/header.scss';
+
+// Banner Modules
+@use './modules/banners.scss';
+
+// adds the navigation Modules
+@use './modules/nav.scss';
+
+// add Main Modules
+@use './modules/main.scss';
+
+// flex-grid Modules
+@use './modules/flex-grid.scss';
+
+// Button Modules
+@use './modules/buttons.scss';
+
+//Table Modules
+@use './modules/table.scss';
+
+// Img Modules
+@use './modules/img.scss';
+
+// Footer modules
+@use './modules/footer.scss';
+
+// Inputs/Forms Modules
+@use './modules/form.scss';
+
+@include form.elements();

@@ -1,0 +1,41 @@
+// set variables
+
+$render: false !default;
+$width: 12px !default;
+$background-color: darkgray !default;
+$thumb-color: lightgray !default;
+
+// render component mixin
+
+@mixin renderComponent($renderContent: $render, $className: null) {
+  @if ($renderContent) {
+    @if ($className) {
+      .#{$className} {
+        @include scrollbar();
+      }
+    }
+  }
+}
+
+// include render component
+
+@mixin scrollbar {
+  scrollbar-width: $width;
+  scrollbar-color: $thumb-color $background-color;
+
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: 6px;
+    border: 3px solid $background-color;
+  }
+}
+
+@include renderComponent();

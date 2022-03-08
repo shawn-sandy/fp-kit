@@ -1,0 +1,8 @@
+/* stylelint-disable declaration-colon-newline-after */
+/* stylelint-disable declaration-empty-line-before */
+/* stylelint-disable declaration-colon-newline-after */
+
+@use "@shawnsandy/first-paint/src/v21/modules/reset.scss";
+@use "@shawnsandy/first-paint/src/v21/modules/global.scss";
+@use "@shawnsandy/first-paint/src/v21/modules/container";
+@include container.module();

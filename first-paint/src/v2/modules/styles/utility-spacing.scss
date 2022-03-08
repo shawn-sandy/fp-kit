@@ -1,0 +1,76 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+// Utility styles for padding
+
+// set the padding properties for all padding
+[style*='--p'] {
+  padding-top: var(--pt);
+  padding-right: var(--pr);
+  padding-bottom: var(--pb);
+  padding-left: var(--pl);
+}
+
+[style*='--py'] {
+  padding-block: var(--py);
+}
+
+[style*='--px'] {
+  padding-inline: var(--px);
+}
+
+// set the padding properties for left padding
+[style*='--pl'] {
+  padding-left: var(--pl);
+  padding-inline-start: var(--pl);
+}
+
+// set the padding properties for right padding
+[style*='--pr'] {
+  padding-right: var(--pr);
+  padding-inline-end: var(--pr);
+}
+
+// set the padding properties for top padding
+[style*='--pt'] {
+  padding-top: var(--pt);
+  padding-block-start: var(--pt);
+}
+
+// set the padding properties for bottom padding
+[style*='--pb'] {
+  padding-bottom: var(--pb);
+  padding-block-end: var(--pb);
+}
+
+// Utility styles for margin
+
+// set the margin properties for all margins
+[style*='--m'] {
+  margin: var(--ml) var(--mr) var(--mt) var(--mb);
+}
+
+// set the margin properties for left margin
+[style*='--ml'] {
+  margin-left: var(--ml);
+}
+
+// set the margin properties for right margin
+[style*='--mr'] {
+  margin-right: var(--mr);
+}
+
+//set the margin properties for top margin
+[style*='--mt'] {
+  margin-top: var(--mt);
+}
+
+// set the margin properties for bottom margin
+[style*='--mb'] {
+  margin-bottom: var(--mb);
+}

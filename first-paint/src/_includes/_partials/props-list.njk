@@ -1,0 +1,26 @@
+<section>{# <h2 style="--fs: var(--h3)" id="props">Custom Properties</h2> #}
+  {# <hr/> #}
+</section>
+{{ content | safe }}
+<section role="grid" style="--w: 100%">
+  <div role="row" style="--w: 100%">
+    {% set components = collections['props'] %}
+    {{ hlp.sort(components, 'fileSlug') }}
+    {% for item in components %}
+      <div role="gridcell">
+        <h3>
+          <a href="{{ item.url }}" style="--fs: var(--lg); --cl: var(--dark); --my: 0 var(--rem)">{{ item.data.title }}</a>
+        </h3>
+        <div style="--main:;">
+          <p style="--truncate: 2">
+            {{ item.data.description }}
+          </p>
+        </div>
+        <p>
+          <a href="{{ item.url }}" style="--btn-pill">View Component</a>
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+<hr>

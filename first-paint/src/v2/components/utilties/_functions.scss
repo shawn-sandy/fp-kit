@@ -1,0 +1,7 @@
+// reusable function
+@use 'sass:math';
+
+@function rems($value: 16) {
+  $remValue: math.div($value, 16) + rem;
+  @return $remValue;
+}

@@ -1,0 +1,53 @@
+// @forward "@shawnsandy/mix/foundation.scss";
+$render-all: null !default;
+$render-page: $render-all !default;
+$render-type: $render-all !default;
+$render-header: $render-all !default;
+$render-nav: $render-all !default;
+$render-main: $render-all !default;
+$render-footer: $render-all !default;
+$render-button: $render-all !default;
+$render-form: $render-all !default;
+$render-img: $render-all !default;
+$render-list: $render-all !default;
+$render-hr: $render-all !default;
+$render-table: $render-all !default;
+$render-grid: $render-all !default;
+$render-scrollbar: $render-all !default;
+$render-elements: $render-all !default;
+$render-article: $render-all !default;
+
+@forward './components/styles';
+
+@forward './components/page.scss' as page-* with($render: $render-page);
+
+@forward './components/type.scss' as type-* with($render: $render-type);
+
+@forward './components/nav.scss' as nav-* with($render: $render-nav);
+
+@forward './components/header.scss' as header-* with($render: $render-header);
+
+@forward './components/main.scss' as main-* with($render: $render-main);
+
+@forward './components/footer.scss' as footer-* with($render: $render-footer);
+
+@forward './components/grid.scss' as grid-* with($render: $render-grid);
+
+@forward './components/button.scss' as button-* with($render: $render-button);
+
+@forward './components/form.scss' as form-* with($render: $render-form);
+
+@forward './components/img.scss' as img-* with($render: $render-img);
+
+@forward './components/list.scss' as list-* with($render: $render-list);
+
+@forward './components/hr.scss' as hr-* with($render: $render-hr);
+
+@forward './components/table.scss' as table-* with($render: $render-table);
+
+@forward './components/article.scss' as article-* with($render: $render-article);
+
+// @forward './components/scrollbar.scss'as scrollbar-* with($render: $render-scrollbar);
+
+@forward './components/elements.scss' as elements-* with($render:
+      $render-elements);

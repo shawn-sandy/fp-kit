@@ -1,0 +1,7 @@
+@use '../components.scss' with (
+  $render-all: true,
+  $render-page: false,
+  $render-nav: false,
+  $render-header: false,
+  $render-footer: false
+);
