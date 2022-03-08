@@ -13,6 +13,7 @@ import Details, {
   Summary
 } from "./elements/details-summary/details-summary"
 import Navbar from "./elements/nav/navbar"
+import FpLinks, { OpenTab } from './elements/content/links'
 
 export {
   Button,
@@ -29,5 +30,7 @@ export {
   Grid,
   GridCell,
   Navbar,
-  Summary
+  Summary,
+  FpLinks,
+  OpenTab
 }
