@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.7.7 (2022-03-08)
+
+
+### Features
+
+* add first-paint fp-kit to package ([73dffc0](https://github.com/shawn-sandy/ideas/commit/73dffc06d938099f133cecce246c50bf381a3a04))
+
+
+
+
+
+
 ## [2.7.6](https://github.com/shawn-sandy/ideas/compare/@shawnsandy/first-paint@2.7.5...@shawnsandy/first-paint@2.7.6) (2022-03-07)
 
 
