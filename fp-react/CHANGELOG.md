@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.13](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.12...@shawnsandy/fp-react@0.7.13) (2022-03-08)
+
+
+### Features
+
+* setup husky ([a3f9233](https://github.com/shawn-sandy/fp-kit/commit/a3f92333ab782ab9454d9ec27222f4b4b3da7f8b))
+
+
+
+
+
 ## [0.7.12](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.11...@shawnsandy/fp-react@0.7.12) (2022-03-08)
 
 

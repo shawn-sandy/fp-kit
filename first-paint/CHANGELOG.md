@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.9](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.7.8...@shawnsandy/first-paint@2.7.9) (2022-03-08)
+
+
+### Features
+
+* setup husky ([a3f9233](https://github.com/shawn-sandy/fp-kit/commit/a3f92333ab782ab9454d9ec27222f4b4b3da7f8b))
+
+
+
+
+
 ## [2.7.8](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.7.7...@shawnsandy/first-paint@2.7.8) (2022-03-08)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
