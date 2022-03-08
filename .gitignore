@@ -114,3 +114,4 @@ projects/fp-mix/builds/
 /plopfile.js
 /.stylelintcache
 fp-react/lib/
+/projects/test-package
