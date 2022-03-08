@@ -5,7 +5,7 @@
   "description": "A UI toolkit for creating and managing style-guides, design systems, pattern libraries, apps, digital products, etc.",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "start": "run-s clean && run-p watch:* js:* serve",
+    "start": "docsify serve docs",
     "serve": "eleventy --serve",
     "eleventy": "run-s eleventy --serve",
     "build": "npx @11ty/eleventy",
