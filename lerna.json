@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "projects/*",
+    "fp-react/",
+    "first-paint/",
+    "components/react/*"
+  ],
+  "version": "independent"
+}

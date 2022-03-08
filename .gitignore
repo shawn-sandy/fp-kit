@@ -80,7 +80,7 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+
 
 # Gatsby files
 .cache/
@@ -102,3 +102,15 @@ dist
 
 # TernJS port file
 .tern-port
+
+**/node_modules
+**/dist
+/dist
+www
+/history
+projects/fp-mix/builds/
+/projects/fp-mix/.parcel-cache
+.dccache
+/plopfile.js
+/.stylelintcache
+fp-react/lib/
