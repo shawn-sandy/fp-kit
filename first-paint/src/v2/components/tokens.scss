@@ -1,0 +1,173 @@
+/*
+ ***************************************
+ Name: tokens.scss
+ ***************************************
+*/
+@use "sass:math";
+
+@function rems($value: 16) {
+  $remValue: math.div($value, 16) + rem;
+
+  @return $remValue;
+}
+
+$font-family: roboto, "Segoe UI", -apple-system,
+  blinkmacsystemfont, "Helvetica Neue", arial, "Noto Sans",
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$props: (
+  "cl": var(--color, initial),
+  "fs": var(--font-size, 1rem),
+  "fst": var(--font-style, normal),
+  "fw": var(--font-weight, normal),
+  "ff": var(--font-family, $font-family),
+  "ff-inter": "'Inter', sans-serif",
+  "lh": var(--line-height, 1.2),
+  "txa": var(--text-align, left),
+  "txd": var(--text-decoration, none),
+  "txt": var(--text-transform, none),
+  "li-style": var(--list-style, none),
+  "visible": var(--visibility, visible),
+  "border": var(--brd, initial),
+  "min-w": var(--min-width, auto),
+  "min-h": var(--min-height, auto),
+  "max-w": var(--max-width, auto),
+  "max-h": var(--max-height, auto),
+  "fv": var(--font-variant, normal),
+  "fk": var(--font-kerning, normal),
+  "lts": var(--letter-spacing, normal),
+  "ws": var(--white-space, normal),
+  "wsp": var(--word-spacing, normal),
+  "before": intial,
+  "after": intial,
+  "w": var(--width, auto),
+  "h": var(--height, auto),
+  "p": var(--padding, initial),
+  "m": var(--margin, initial),
+  "px": var(--padding-inline, initial),
+  "py": var(--padding-block, initial),
+  "mx": var(--margin-inline, initial),
+  "my": var(--margin-block, initial),
+  "dsp": initial,
+  "pos": var(--position, initial),
+  "line": thin solid lightgray,
+  "cursor": auto,
+  "rad": intial
+);
+
+$colors: (
+  // named colors
+  "black": #000,
+  "white": #fff,
+  "off-white": "hsl(240, 100%, 96%)",
+  "dark": "hsl(0, 0%, 9%)",
+  "light": "lightgray",
+  "alert": "yellowgreen",
+  "info": "hsl(210, 100%, 41%)",
+  "warning": "hsl(33, 100%, 50%)",
+  "danger": "hsl(348, 98%, 38%)",
+  "highlight": "hsl(54, 100%, 90%)",
+  "text": "var(dark)"
+);
+
+$units: (
+  "gap": 1rem,
+  "gap-sm": var(--sm),
+  "gap-md": var(--md),
+  "gap-lg": var(--lg),
+  "gap-xl": var(--xl),
+  // units
+  "rem": 1rem,
+  "0": "0",
+  "s1": rems(12),
+  "s2": rems(14),
+  "s3": rems(21),
+  "s4": rems(28),
+  "s5": rems(36),
+  "s6": rems(48),
+  "s7": rems(60),
+  "s8": rems(72),
+  "s9": rems(80),
+  "s10": rems(120),
+  "s11": rems(144),
+  "s12": rems(192),
+  "s13": rems(240),
+  "s14": rems(288),
+  // units expressive
+  "none": 0,
+  "xs": var(--s1),
+  "sm": var(--s2),
+  "md": var(--s3),
+  "lg": var(--s4),
+  "xl": var(--s5),
+  "2xl": var(--s6),
+  "3xl": var(--s7),
+  "4xl": var(--s8),
+  "5xl": var(--s9),
+  "6xl": var(--s10),
+  "7xl": var(--s11),
+  "8xl": var(--s12),
+  "9xl": var(--s13),
+  "10xl": var(--s14),
+  "lead": var(--s3),
+  "pitch": var(--s3),
+  "d": var(--rem),
+  // percentages
+  "pct-1": 10%,
+  "pct-2": 20%,
+  "pct-3": 30%,
+  "pct-4": 40%,
+  "pct-5": 50%,
+  "pct-6": 60%,
+  "pct-7": 70%,
+  "pct-8": 80%,
+  "pct-9": 90%,
+  "pct-10": 100%,
+  "pct": var(pct-10),
+  "vh-sm": 10vh,
+  "vh-md": 25vh,
+  "vh-lg": 50vh,
+  "vh-xl": 70vh,
+  "vh-2xl": 90vh,
+  "vmin": 1%,
+  "vmax": 1%,
+  // vertical heights
+  "vw-sm": 10vw,
+  "vw-md": 25vw,
+  "vw-lg": 50vw,
+  "vw-xl": 70vw,
+  "vw-2xl": 90vw,
+  // radius
+  "rds": 0.19rem,
+  "rds-xs": 0.3rem,
+  "rds-sm": 0.5rem,
+  "rds-md": 0.8rem,
+  "rds-lg": 1.3rem,
+  "rds-xl": 1.8rem,
+  "rds-pill": 99rem,
+  // containers
+  "container-xs": calc(768rem / 16),
+  "container-sm": calc(992rem / 16),
+  "container-md": calc(1280rem / 16),
+  "container-lg": calc(1400rem / 16),
+  "container-xl": calc(1600rem / 16),
+  "container": 100%
+);
+
+$flex: (
+  "fx-auto-size": 1 0 auto,
+  "fx-max-w": calc(100% - var(--col, 4) - var(--gap, 1rem)),
+  "fx-cols":
+    var(
+      --col-flex,
+      1 1
+        calc(
+          100% / var(--cols, 4) - var(--fx-gap, var(--gap))
+        )
+    )
+);
+
+$filter: (
+  "dark-mode": invert(1) hue-rotate(180deg)
+);

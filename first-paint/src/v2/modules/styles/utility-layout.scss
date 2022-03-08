@@ -1,0 +1,80 @@
+/*
+ ***************************************
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ Email: shawnsandy04@gmail
+ Description: First Paint
+ Project: first-paint
+ Version: 2.0
+ Website: https://shawnsandy.github.io/first-paint/
+ License: MIT
+ ***************************************
+*/
+
+// get utility mixins
+@use '../utilities/mixins' as mix;
+
+// get utility maps;
+@use '../utilities/maps';
+
+//Display properties
+$dsp: (
+  flexbox: 'fx',
+  inline: 'in',
+  inline-block: 'inb',
+  inline-flex: 'infx',
+  none: 'none',
+  table: 'ta',
+  grid: 'grid',
+  inline-table: 'inta',
+  inline-grid: 'ingrid'
+);
+
+// set flex box direction
+$direction: (
+  row: 'row',
+  row-reverse: 'row-v',
+  column: 'col',
+  column-reverse: 'col-v'
+);
+
+// set flex box wrap
+$wrap: (
+  nowrap: 'nw',
+  wrap: 'w',
+  wrap-reverse: 'wr'
+);
+
+// set flex box justify
+$justify: (
+  flex-start: 'fst',
+  flex-end: 'fend',
+  center: 'ce',
+  space-between: 'sb',
+  space-around: 'sa'
+);
+
+// set flex box align
+$align: (
+  flex-start: 'start',
+  flex-end: 'end',
+  center: 'center',
+  stretch: 'stretch'
+);
+:root {
+  @include maps.styleProps($align);
+  @include maps.styleProps($direction);
+  @include maps.styleProps($justify);
+  @include maps.styleProps($wrap);
+  @include maps.styleProps($dsp);
+}
+@include maps.styleUtilities('dsp', 'display', $dsp);
+@include maps.styleUtilities('fxd', 'flex-direction', $direction);
+@include maps.styleUtilities('wrap', 'flex-wrap', $wrap);
+@include maps.styleUtilities('just', 'justify-content', $justify);
+@include maps.styleUtilities('align', 'align-items', $align);
+
+// set flex shrink properties
+[style*='shrink'] {
+  flex-shrink: var(--shrink);
+}

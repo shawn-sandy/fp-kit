@@ -1,0 +1,43 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+[style='--mobile'],
+[style='--desktop'],
+[style='--laptop'] {
+}
+
+// display mobile
+[style*='--mobile'] {
+  --dsp: none;
+  @media (max-width: 980px) {
+    --dsp: var(--mobile, flex);
+  }
+}
+
+//display laptop
+[style*='--laptop'] {
+  --dsp: none;
+  @media (min-width: 980px) {
+    --dsp: var(--laptop, flex);
+  }
+  &:target {
+    --dsp: var(--desktop, flex);
+  }
+}
+
+//display laptop
+[style*='--desktop'] {
+  --dsp: none;
+
+  @media (min-width: 1280px) {
+    --dsp: var(--desktop, flex);
+  }
+  &:target {
+    --dsp: var(--desktop, flex);
+  }
+}

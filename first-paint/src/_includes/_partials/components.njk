@@ -1,0 +1,36 @@
+{% extends 'cover.njk' %}
+{% block styles %}
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
+  <link rel="stylesheet" href="/v2/css/components/index.css"/>
+  <link rel="stylesheet" href="/v2/css/components/layouts/cover.css"/>
+{% endblock %}
+{% block feature %}{% endblock %}
+{% block main %}
+  <section role="grid" style="--w: 100%">
+    <div role="row" style="--w: 100%">
+      {% set components = collections['components'] %}
+      {{ hlp.sort(components, 'fileSlug') }}
+      {% for item in components %}
+        <span role="gridcell">
+          <div style="--card: ;--min-h: calc(260rem / 16)">
+            <h5>
+              <a href="{{ item.url }}" style="--fs: var(--lg); --cl: var(--dark); --my: 0 var(--rem)">{{ item.data.title }}</a>
+            </h5>
+            <div>
+              <p style="--cl: gray; --truncate: 3">
+                {{ item.data.description }}
+              </p>
+            </div>
+            <div>
+              <a href="{{ item.url }}" style="--btn-pill">View Component</a>
+            </div>
+          </div>
+        </span>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
+{% block scripts %}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+  <script src="/js/scripts.js"></script>
+{% endblock %}

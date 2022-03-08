@@ -1,0 +1,10 @@
+README.md
+**/**/README.md
+**/_drafts
+**/dist
+scaffold
+dist/
+**/public
+node_modules/
+**/node_modules
+system/debug

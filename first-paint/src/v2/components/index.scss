@@ -1,0 +1,24 @@
+/*
+**************************************
+Author: Shawn Sandy
+Date: 2021-11-01
+Email: shawnsandy04@gmail.com
+Description: First Paint Components
+Project: first-paint
+Version: 2.0
+Website: https://shawnsandy.github.io/first-paint/
+License: MIT
+***************************************
+*/
+
+@use "./modules/reset-components.scss";
+
+@use "./core.scss";
+
+@use "./foundation.scss";
+
+@use "./elements.scss";
+
+@use "./styles.scss";
+
+@use "./utilties/utility.scss";

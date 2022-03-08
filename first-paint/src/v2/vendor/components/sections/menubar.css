@@ -1,0 +1,13 @@
+/* menubar */
+ul[role=menubar] {
+  --dsp: flex;
+  --gap: 1rem;
+  --fs: 0.8rem;
+}
+ul[role=menubar] :-webkit-any-link {
+  --fs: var(--s2);
+}
+ul[role=menubar] li,
+ul[role=menubar] :any-link {
+  --fs: var(--s2);
+}

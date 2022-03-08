@@ -1,0 +1,99 @@
+/// @author: @shawnsandy
+/// TODO Search and replace name with CSS tag/element name
+
+$render-page: true !default;
+$body-background-color: white;
+$body-color: var(--color, #292929);
+$body-width: 80%;
+$font-family: var(--fs-family) !default;
+
+// render component mixin
+@mixin renderComponent($renderContent: $render-page, $className: null) {
+  @if ($renderContent) {
+    @include page();
+  }
+}
+
+@mixin page {
+  // TODO add mixin code
+  * {
+    outline: none;
+    box-sizing: border-box;
+    &:before,
+    &:after {
+      box-sizing: border-box;
+    }
+    color: var(--cl);
+  }
+  html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-size: clamp(86%, 96%, 120%);
+    font-family: var(--ff);
+    line-height: 1.5;
+    @media (min-width: 680px) {
+      font-size: 95%;
+    }
+    @media (min-width: 980px) {
+      font-size: 98%;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 100%;
+    }
+
+    @media (min-width: 1980px) {
+      font-size: 110%;
+    }
+  }
+
+  body {
+    font-family: $font-family;
+    background-color: $body-background-color;
+    color: $body-color;
+  }
+
+  :where(body) {
+    & > section,
+    main,
+    nav,
+    footer[role='contentinfo'] {
+      @media screen and (max-width: 980px) {
+        --w: auto;
+        padding-inline: var(--px);
+        --mx: 1rem;
+      }
+      // width: $body-width;
+      --w: 80%;
+      --dsp: block;
+      --mx: auto;
+    }
+  }
+
+  section,
+  article,
+  aside,
+  summary,
+  ul,
+  ol,
+  div,
+  main {
+    @media (max-width: 980px) {
+      padding-block: var(--py);
+      --px: auto;
+    }
+  }
+}
+
+@mixin config($color: null, $bg-color: null, $fonts: null, $width: null) {
+  $body-color: $color or $body-color !global;
+  $body-background-color: $bg-color or $body-background-color !global;
+  $font-family: $fonts or $font-family !global;
+  $body-width: $width or $body-width !global;
+}
+
+// include render component
+@include renderComponent();

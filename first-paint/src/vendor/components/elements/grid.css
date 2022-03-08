@@ -1,0 +1,43 @@
+div[role=grid],
+section[role=grid] {
+  --py: var(--rem);
+}
+
+div[role=row],
+[style="--role"] {
+  --dsp: flex;
+  --gap: var(--rem);
+  --wrap: var(--row-wrap, wrap);
+}
+div[role=row] [role=gridcell],
+[style="--role"] [role=gridcell] {
+  flex: 1 1 calc(100% / var(--cols, 4) - var(--gap));
+  --py: var(--rem);
+  --px: var(--rem);
+}
+div[role=row] [role=gridcell] * + *,
+[style="--role"] [role=gridcell] * + * {
+  --py: var(--gap) 0;
+}
+
+section[role=list], section[style*="--list"],
+div[role=list],
+div[style*="--list"],
+ul[role=list],
+ul[style*="--list"] {
+  --dsp: flex;
+  --gap: var(--rem);
+  --wrap: var(--row-wrap, wrap);
+}
+section [role=listitem],
+div [role=listitem],
+ul [role=listitem] {
+  flex: 1 1 calc(100% / var(--cols, 3) - var(--gap));
+  --py: var(--rem);
+  --px: var(--rem);
+}
+section [role=listitem] * + *,
+div [role=listitem] * + *,
+ul [role=listitem] * + * {
+  --py: var(--gap) 0;
+}

@@ -1,0 +1,55 @@
+// set variables
+// TODO Search and replace name with CSS tag/element name
+$render: true !default;
+$bg-color: whitesmoke !default;
+$bg-color-row: ghostwhite !default;
+$border-color: lightgray !default;
+
+// render component mixin
+@mixin renderComponent($renderContent: true, $className: null) {
+  @if ($renderContent) {
+    #{$className,
+    $className,
+    '.fp-table'},
+    table {
+      @include table();
+    }
+  }
+}
+
+@mixin table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  width: 100%;
+  border: thin solid $bg-color;
+  // box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.15);
+
+  thead tr {
+    background-color: $bg-color;
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 0.75rem 1rem;
+  }
+
+  tbody tr {
+    border-bottom: thin solid $bg-color;
+  }
+
+  tbody tr:nth-of-type(even) {
+    background-color: $bg-color-row;
+  }
+
+  tbody tr:last-of-type {
+    border-bottom: 2px solid $bg-color;
+  }
+}
+
+// include render component
+
+@include renderComponent();

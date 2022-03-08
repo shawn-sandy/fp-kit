@@ -1,0 +1,91 @@
+<section id="articles">
+  {{ content | safe }}
+  <blockquote>
+    BOLCKQUOTE: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    Accusamus fugit officia consectetur delectus voluptates ut maiores
+    repudiandae porro ipsam alias iure, tenetur quia veniam ullam placeat
+    repellat. Non, earum impedit?
+  </blockquote>
+
+  <article>
+    <h3>
+      <a href="#">Sample Article</a>
+    </h3>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+      assumenda odio rem maiores ad minima doloribus. Pariatur quibusdam dolorum
+      distinctio repellendus vero natus explicabo mollitia ea, nemo sunt
+      voluptatibus eaque!
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+      assumenda odio rem maiores ad minima doloribus. Pariatur quibusdam dolorum
+      distinctio repellendus vero natus explicabo mollitia ea, nemo sunt
+      voluptatibus eaque!
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+      assumenda odio rem maiores ad minima doloribus. Pariatur quibusdam dolorum
+      distinctio repellendus vero natus explicabo mollitia ea, nemo sunt
+      voluptatibus eaque!
+    </p>
+
+    <footer>
+      <p>
+        <a href="#" role="button"><b>Read more</b></a>
+      </p>
+    </footer>
+  </article>
+  <hr />
+  {% include "_partials/article.html" %}
+
+  <section>
+    <div aria-label="get-started">
+      <h4 id="get-started">
+        <a href="#">Get Started</a>
+      </h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae
+        officiis dicta accusantium. Nulla recusandae in exercitationem
+        inventore, minus dignissimos placeat, ratione et minima aspernatur
+        alias, aut ipsum quasi nihil?
+      </p>
+    </div>
+  </section>
+  <section>{%- include './heading.html' %}</section>
+  <!-- {% include "./components.html" %} -->
+  <!--  -->
+  {% include "./img.html" %}
+  <!--  -->
+  {% include "./list.html" %}
+  <!--  -->
+  {% include "./inputs.html" %}
+  <!--  -->
+  {% include "./table.html" %}
+
+  <div>
+    {% clipbutton "Copy Code", ".btn btn-primary" %} String to copy {%
+    endclipbutton %}
+    <hr />
+    <textarea id="mx-clip" role="presentation">
+  <img src=" img/fp.svg" alt="" />
+  <h2>Lightweight, Fast, Accessible, Inclusive</h2>
+  <p>
+      <span>First Paint is lightweight easy to use CSS/SCSS starter library for
+          quickly scaffolding/building modern, mobile friendly websites.</span>
+  </p>
+  <a href="#" role="button" aria-label="Add word, cta action, to your button title">
+  <span>Get Started</span></a>
+</textarea
+    >
+    {% clip "#mx-clip", '.btn btn-primaty' %} Copy Code {% endclip %}
+  </div>
+</section>
+<aside>
+  <h4>Sidebar</h4>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos error, quas
+    at facilis temporibus optio rem, doloremque, modi numquam commodi illum
+    cumque. Sit eveniet, quod expedita libero obcaecati a laudantium.
+  </p>
+</aside>

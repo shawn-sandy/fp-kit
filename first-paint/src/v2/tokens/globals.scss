@@ -1,0 +1,126 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Tokens: Globals
+ Date: 2021-04-01
+ ***************************************
+*/
+
+$globals: (
+  // color
+  "cl": initial,
+  // background-color
+  "bg": initial,
+  // background-image
+  "bg-img": initial,
+  // border-color
+  "border-c": initial,
+  // border-style
+  "border-s": initial,
+  // border-width
+  "border-w": initial,
+  // border
+  "border": var(--border-s) var(--border-w) var(--border-c),
+  // padding top
+  "pt": initial,
+  // padding right
+  "pr": initial,
+  // padding bottom
+  "pb": initial,
+  // padding left
+  "pl": initial,
+  // padding block
+  "py": var(--pt) var(--pb),
+  // padding inline
+  "px": var(--pl) var(--pr),
+  // padding
+  "p": var(--pt) var(--pr) var(--pb) var(--pl),
+  // margin top
+  "mt": initial,
+  // margin right
+  "mr": initial,
+  // margin bottom
+  "mb": initial,
+  // margin left
+  "ml": initial,
+  // margin block
+  "my": var(--mt, var(--start)) var(--mb, var(--end)),
+  // margin inline
+  "mx": var(--ml, var(--start)) var(--mr, var(--end)),
+  // margin
+  "m": var(--mt) var(--mr) var(--mb) var(--ml),
+  // height
+  "h": initial,
+  // min-height
+  "min-h": initial,
+  // max-height
+  "max-h": initial,
+  // width
+  "w": auto,
+  // min-width
+  "min-w": initial,
+  // max-width
+  "max-w": initial,
+  // font-size
+  "fs": initial,
+  // font-weight
+  "fw": initial,
+  // font-family
+  "family": initial,
+  // text-decoration
+  "decoration": none,
+  // text-transform
+  "tts": initial,
+  // shadow
+  "shadow": initial,
+  // text-shadow
+  "text-shadow": initial,
+  // text-align
+  "text-align": initial,
+  // box-size
+  "box": initial,
+  // box-sizing
+  "box-sizing": initial,
+  // border-radius
+  "border-rd": initial,
+  // outline
+  "outline": initial,
+  //display
+  "dsp": initial,
+  // visibility
+  "vis": initial,
+  // opacity
+  "op": initial,
+  // flexbox
+  "flex": initial,
+  // flex-direction
+  "direction": initial,
+  // flex-wrap
+  "wrap": initial,
+  // flex-flow
+  "flow": initial,
+  // justify-content
+  "justify": initial,
+  // align-items
+  "align": initial,
+  // gap
+  "gap": initial,
+  // text-align
+  "t-align": initial,
+  "align-t": initial,
+  // vertical-align
+  "valign": initial,
+  // z-index
+  "z": initial
+);
+
+// custom properties mixin
+
+$styles: (
+  // colors
+  "cl": var(--color, initial)
+);
+
+@mixin custom-properties {
+}

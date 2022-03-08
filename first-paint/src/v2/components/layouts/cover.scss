@@ -1,0 +1,26 @@
+// footer[role="contentinfo"] {
+//   position: sticky;
+//   margin-top: 500px;
+// }
+
+body[style='--cover'] {
+  display: grid;
+  grid-template-rows: var(--grid-rows, auto 1fr auto);
+  main {
+    --py: 3rem;
+    --dsp: grid;
+    --min-w: 100%;
+    place-items: var(--placement, start);
+    > section,
+    div {
+      --dsp: flex;
+      --align: flex-start;
+      --justify: flex-start;
+      --w: 100%;
+      --px: 0;
+      + div {
+        --py: 0;
+      }
+    }
+  }
+}

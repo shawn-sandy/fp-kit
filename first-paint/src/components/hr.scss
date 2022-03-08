@@ -1,0 +1,27 @@
+// set variables
+$render: true !default; // add component to stylesheet
+$border: 1px solid whitesmoke !default;
+$margin: 2rem 0 !default;
+
+// render component mixin
+
+@mixin renderComponent($renderContent: $render, $className: null) {
+  @if ($renderContent) {
+    #{$className,
+    $className,
+    '.fp-hr'},
+    hr {
+      @include hr();
+    }
+  }
+}
+
+// include render component
+@mixin hr {
+  border: none;
+  background-color: transparent;
+  border-top: $border;
+  margin: $margin;
+}
+
+@include renderComponent();

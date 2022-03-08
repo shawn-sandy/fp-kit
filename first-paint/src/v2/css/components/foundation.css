@@ -1,0 +1,151 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: elements.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: elements.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+footer[role=contentinfo] > section,
+footer[role=contentinfo] > div,
+[style*="--footer"] > section,
+[style*="--footer"] > div {
+  --dsp: flex;
+  --wrap: wrap;
+  --py: 3rem;
+  --direction: column;
+}
+@media (min-width: 48rem) {
+  footer[role=contentinfo] > section,
+footer[role=contentinfo] > div,
+[style*="--footer"] > section,
+[style*="--footer"] > div {
+    --direction: row;
+  }
+}
+footer[role=contentinfo] > section > div,
+[style*="--footer"] > section > div {
+  flex: 1 1 calc(100% / var(--footer-cols, 3) - var(--footer-gap, var(--gap)));
+}
+footer[role=contentinfo] > section > div + *,
+[style*="--footer"] > section > div + * {
+  --py: 0;
+}
+footer[role=contentinfo] > div,
+[style*="--footer"] > div {
+  --w: 100%;
+  --justify: center;
+}
+
+/*  Component: nav.scss */
+nav {
+  --dsp: flex;
+  --w: 100%;
+  --align: center;
+  --justify: space-between;
+  --h: var(--nav-h, var(--s8));
+  --mx: auto;
+  --bg: whitesmoke;
+}
+@media (min-width: 61.25rem) {
+  nav {
+    --px: calc(10% - 1rem);
+  }
+}
+@media (max-width: 43.75rem) {
+  nav {
+    --dsp: block;
+    --w: 100%;
+    --h: auto;
+    --py: var(--rem);
+    --justify: center;
+  }
+}
+nav section {
+  --dsp: flex;
+  --align: center;
+}
+nav section + section {
+  --py: 0;
+}
+nav img[alt] {
+  --px: 0 var(--s1);
+  --w: var(--brand-w, 3.6rem);
+}
+
+/* menubar */
+ul[role=menubar] {
+  --dsp: flex;
+  --gap: 1rem;
+  --fs: 0.8rem;
+}
+ul[role=menubar] li,
+ul[role=menubar] :any-link {
+  --fs: var(--s2);
+}
+
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: main.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/** banner.scss */
+[role=banner],
+[style*="--bnr"] {
+  --bnr-sm: 30vh;
+  --bnr-md: 50vh;
+  --bnr-lg: 80vh;
+  --bg: var(--bnr-bg, transparent);
+  --dsp: flex;
+  --align: var(--bnr-align, center);
+  --justify: var(--bnr-justify, center);
+  --min-h: var(--bnr-h, var(--bnr-md));
+  --max-w: var(--pct-8);
+  --py: var(--bnr-px, var(--rem));
+  --px: var(--bnr-py, var(--rem));
+  --mx: var(--bnr-mx, auto);
+}
+[role=banner] > *,
+[style*="--bnr"] > * {
+  --tx-align: var(--bnr-tx-align, center);
+}
+[role=banner] [style*="--btn:"],
+[style*="--bnr"] [style*="--btn:"] {
+  --fs: var(--btn-fs, var(--rem));
+  --h: var(--bnr-btn-h, var(--s6));
+}
+
+[style*="--bnr-h"] {
+  --min-h: var(--bnr-h);
+}
+
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Component: section.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ cComponent: aside.scss
+ Date: 2021-04-01
+ ***************************************
+*/
+/* Component: foundation.scss */
+
+/*# sourceMappingURL=foundation.css.map */

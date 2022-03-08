@@ -1,0 +1,8 @@
+{
+  "layout": "elements.njk",
+  "title": "Components",
+  "tags": "components",
+  "showDate": true,
+  "scripts": [],
+  "description": " Add your component description here"
+}

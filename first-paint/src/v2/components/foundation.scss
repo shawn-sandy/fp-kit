@@ -1,0 +1,18 @@
+/* Component: foundation.scss */
+
+// header
+@use "./sections/header.scss";
+// footer
+@use "./sections/footer.scss";
+// nav
+@use "./sections/nav.scss";
+// menubar
+@use "./sections/menubar.scss";
+// main
+@use "./sections/main.scss";
+// banners
+@use "./sections/banner.scss";
+// section
+@use "./sections/section.scss";
+// aside
+@use "./sections/aside.scss";

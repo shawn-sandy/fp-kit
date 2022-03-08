@@ -1,0 +1,67 @@
+/* stylelint-disable declaration-colon-newline-after */
+/* component: button.scss */
+button,
+[style*="--btn"] {
+  --btn-py-sm: 1rem 0.9rem;
+  --btn-py-md: 1.3rem 1.2rem;
+  --btn-py-lg: 1.5rem 1.4rem;
+  --h: calc(44rem / 16);
+  --h-sm: calc(32rem / 16);
+  --h-lg: calc(60rem / 16);
+  --pill: 99rem;
+  --bg: lightgray;
+  --dsp: inline-flex;
+  --align: center;
+  --justify: center;
+  --lh: 1;
+  --px: 1.9rem;
+  --py: var(--btn-py-sm);
+  --border: var(--border);
+  --rads: var(--btn-rds, var(--rds));
+  --fs: var(--s2);
+  --fw: var(--btn-fw, normal);
+  --cl: var(--btn-cl, var(--dark));
+  --lh: var(--btn-lh, 1);
+  --lts: var(--btn-lts, 0.08);
+}
+button:hover,
+[style*="--btn"]:hover {
+  --cursor: pointer;
+  -webkit-filter: var(--dark-mode);
+          filter: var(--dark-mode);
+}
+button[type=submit],
+[style*="--btn"][type=submit] {
+  --bg: var(--submit-bg, royalblue);
+  --cl: var(--btn-cl, var(--white));
+  --btn-lts: 0.08rem;
+}
+button[type=reset],
+[style*="--btn"][type=reset] {
+  --bg: var(--reset-bg, transparent);
+  --cl: var(--dark);
+  --border: thin solid var(--reset-cl, lightgray);
+}
+button[type=reset]:hover,
+[style*="--btn"][type=reset]:hover {
+  -webkit-filter: none;
+          filter: none;
+  border-color: var(--dark);
+}
+
+[style*="--btn-pill"] {
+  --rads: var(--btn-pill, var(--pill));
+}
+
+[style*="--btn-sm"] {
+  --h: var(--btn-sm, var(--h-sm));
+  --fs: var(--s1);
+  --px: var(--px-sm, 1.2rem);
+}
+
+[style*="--btn-lg"] {
+  --h: var(--btn-lg, var(--h-lg));
+  --fs: var(--rem);
+  --py: var(--btn-py-lg);
+  --px: var(--px-lg, 2.8rem);
+}

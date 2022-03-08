@@ -1,0 +1,48 @@
+@charset "UTF-8";
+> div + div {
+  --mt: var(rem, 1rem);
+  margin-top: var(--mt);
+}
+
+label[for] {
+  font-size: 0.9rem;
+  display: block;
+}
+label[for] em {
+  font-style: normal;
+}
+label[for] em::after {
+  content: '∗';
+  color: var(--danger);
+}
+
+input[id],
+textarea[id],
+select[id] {
+  background-color: transparent;
+  display: flex;
+  margin: 0.5rem 0 1rem;
+  padding: 0.5rem;
+  --w: 90%;
+  width: var(--w);
+  --border: var(--border-1);
+  border: var(--border);
+  --border-rad: 0.2rem;
+  border-radius: var(--border-rad);
+}
+input[id]:focus,
+input[id]:focus-within,
+textarea[id]:focus,
+textarea[id]:focus-within,
+select[id]:focus,
+select[id]:focus-within {
+  border: thin solid gray;
+  outline-color: gray;
+}
+input[id]::placeholder,
+textarea[id]::placeholder,
+select[id]::placeholder {
+  font-style: italic;
+  --cl: var(--light);
+  color: var(--cl);
+}

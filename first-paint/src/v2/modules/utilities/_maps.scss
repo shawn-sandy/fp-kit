@@ -1,0 +1,62 @@
+// Module contains maps mixins for generating rules/variables
+
+@mixin customProperties($map: null, $prefix: null) {
+  // @debug "debuging";
+  @if type-of($map) == 'map' or $map != 'null' {
+    @each $key, $val in $map {
+      @if $prefix != null {
+        @include mapProps($name: #{$prefix}-#{$key}, $value: $val);
+      } @else {
+        @include mapProps($name: $key, $value: $val);
+      }
+    }
+  } @else {
+    @error "map variable must be a map";
+  }
+}
+
+@mixin cp($map: null, $prefix: null) {
+  @include customProperties($map: $map, $prefix: $prefix);
+}
+
+@mixin mapProps($name: null, $value: null) {
+  --#{$name}: #{$value};
+}
+
+// Generate utility styles from maps or list
+@mixin styleUtilities($key: null, $prop: null, $list: null) {
+  [style*='--#{$key}'] {
+    #{$prop}: var(--#{$key});
+  }
+  $completed: false;
+  @if type-of($list) == 'list' or $list == 'null' {
+    @each $item in $list {
+      [style*='--#{$key}-#{$item}'] {
+        $val: --#{$key}-#{$item};
+        #{$prop}: var(#{$val});
+      }
+    }
+    $completed: true;
+  }
+
+  @if type-of($list) == 'map' or $list == 'null' {
+    @each $index, $item in $list {
+      [style*='--#{$key}-#{$item}'] {
+        $val: --#{$key}-#{$item};
+        #{$prop}: var(#{$val}, #{$index});
+      }
+    }
+    $completed: true;
+  }
+  @if ($completed == false) {
+    @error "styleUtilities: map parameter list must be a list or map";
+  }
+}
+
+@mixin styleProps($map: null) {
+  @if type-of($map) == 'map' or $map != 'null' {
+    @each $key, $val in $map {
+      @include mapProps($val, $key);
+    }
+  }
+}

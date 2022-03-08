@@ -1,0 +1,59 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+// Uility styles for borders
+
+// find style attribute with a border value
+// set the border to none
+
+@function border($w: thin, $s: none, $c: currentcolor) {
+  @return var(--border-bw) var(--border-bs) var(--border-bcl);
+}
+
+//set all the border properties
+[style*='--border'] {
+  border-width: var(--border-w);
+  border-style: var(--border-s);
+  border-color: var(--border-cl);
+}
+
+[style*='--border-thin'] {
+  --border-thin: var(--border-thin, thin);
+  --border-w: var(--border-thin);
+}
+
+[style*='--border-w'] {
+  --border-w: var(--border-thin, thin);
+}
+
+[style*='--border-w'] {
+  --border-w: var(--border-thin, thin);
+}
+
+//set the border properties for top border
+[style*='--border-t'] {
+  border-top: var(--tw) var(--ts) var(--tcl);
+}
+
+// set the border properties for right border
+[style*='--border-r'] {
+  border-right: var(--rw) var(--rs) var(--rcl);
+}
+
+// set the border properties for bottom border
+[style*='--border-b'],
+[style*='--divider'] {
+  border: none;
+  border-bottom: var(--bw, var(--bw, thin)) var(--bs, var(--bs))
+    var(--bcl, var(--bcl, var(--light)));
+}
+
+// set the border properties for left border
+[style*='--border-l'] {
+  border-left: var(--lw) var(--ls) var(--lcl, currentcolor);
+}

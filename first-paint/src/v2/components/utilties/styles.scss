@@ -1,0 +1,51 @@
+/** dynamic utility styles **/
+
+:empty:empty:not(hr, img, input, br),
+[style*="--is"] {
+  display: var(--dsp);
+}
+
+//**
+//* utility-style to
+//* quickly hide empty elements
+//* that are not (hr, img, input, br) self-closing tags
+//* turn it off using css custom properties
+//* style="--is-empty: block;"
+//**/
+:empty:not(hr, img, input, br) {
+  display: var(--is-empty, var(--dsp, none));
+}
+
+[style="--is-empty"] {
+  display: var(--is-empty, none);
+}
+
+[style*="--is-phone"] {
+  @media screen and (max-width: calc(992rem / 16)) and (min-width: calc(768rem / 16)) {
+    display: var(--is-phone);
+  }
+}
+
+[style*="--is-tablet"] {
+  @media screen and (max-width: calc(992rem / 16)) and (min-width: calc(768rem / 16)) {
+    display: var(--is-mobile);
+  }
+}
+
+[style*="--is-mobile"] {
+  @media screen and (max-width: calc(768rem / 16)) {
+    display: var(--is-mobile);
+  }
+}
+
+[style*="--is-laptop"] {
+  @media screen and (max-width: calc(1280rem / 16)) and (min-width: calc(992rem / 16)) {
+    display: var(--is-laptop);
+  }
+}
+
+[style*="--is-desktop"] {
+  @media screen and (max-width: calc(1400rem / 16)) and (min-width: calc(1280rem / 16)) {
+    display: var(--is-desktop);
+  }
+}

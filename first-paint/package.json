@@ -1,0 +1,96 @@
+{
+  "name": "@shawnsandy/first-paint",
+  "version": "2.7.7",
+  "private": false,
+  "description": "First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly websites.",
+  "keywords": [
+    "CSS",
+    "Toolkit",
+    "SCSS",
+    "HTML",
+    "Classless",
+    "SEMANTIC"
+  ],
+  "author": "shawn-sandy <creative@shawnsandy.com>",
+  "homepage": "https://github.com/shawn-sandy/ideas/tree/main/first-paint",
+  "license": "MIT",
+  "main": "index.scss",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "components",
+    "dist",
+    "tokens",
+    "index.css",
+    "/**/*.scss",
+    "/**/*.map"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawn-sandy/ideas.git"
+  },
+  "scripts": {
+    "start": "run-p watch:* 11ty",
+    "serve": "serve dist/index.html",
+    "watch": "run-p watch:*",
+    "11ty": "eleventy --serve",
+    "11ty-prod": "eleventy && build",
+    "build": "run-s build:*",
+    "watch:index": "sass --watch src/index.scss:src/index.css src/custom-styles.scss:src/custom-styles.css src/components.scss:src/components.css  src/styles:src/css/. --load-path=node_modules --no-source-map",
+    "watch:v21": "sass --watch --style compressed src/v21/index.scss:src/v21/css/index.css src/v21/tokens:src/v21/css/tokens/.  src/v21/modules:src/v21/css/modules/. src/v21/components:src/v21/css/components/.--load-path=node_modules --source-map",
+    "build:v21": "run-s build-v21-prefix build-v21",
+    "build-v21-prefix": "postcss ./src/v21/css/**/*.css --base src/v21/css --use autoprefixer -d ./src/v21/vendor --no-map",
+    "build-v21": "postcss ./src/v21/**/*.css --base src/v21 -d ./dist/v21/ --ext min.css --map",
+    "watch:v2": "sass --watch --style compressed src/v2/index.scss:src/v2/css/index.css src/v2/tokens:src/v2/css/tokens/.  src/v2/modules:src/v2/css/modules/. src/v2/components:src/v2/css/components/.--load-path=node_modules --source-map",
+    "build:v2": "run-s build-v2-prefix build-v2",
+    "build-v2-prefix": "postcss ./src/v2/css/**/*.css --base src/v2/css --use autoprefixer -d ./src/v2/vendor --no-map",
+    "build-v2": "postcss ./src/v2/**/*.css --base src/v2 -d ./dist/v2/ --ext min.css --map",
+    "watch-components": "sass --watch src/v2/components:src/v2/css/components/. --load-path=node_modules --source-map",
+    "watch-scss": "sass --style --update compressed src/components:dist/css/. src/index.scss:dist/css/index.css src/styles:src/styles/. --load-path=node_modules --color",
+    "build-css": "postcss ./dist/css/*.css --dir ./dist/css/ --ext min.css",
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "production": "11ty-prod",
+    "clean": "trash dist/**/",
+    "clean:dist": "trash dist/**"
+  },
+  "bugs": {
+    "url": "https://github.com/shawn-sandy/ideas/issues"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@shawnsandy/code-clipper": "^0.2.18",
+    "@shawnsandy/ideas": "^0.3.15",
+    "@shawnsandy/marked": "^0.2.16",
+    "@shawnsandy/mix": "^0.10.35",
+    "autoprefixer": "^10.4.2",
+    "clean-css": "^5.2.4",
+    "concurrently": "^7.0.0",
+    "cssnano": "^5.0.17",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.7",
+    "postcss-cli": "^9.1.0",
+    "postcss-modules": "^4.3.1",
+    "posthtml-include": "^1.7.2",
+    "rimraf": "^3.0.2",
+    "sass": "^1.49.9",
+    "trash-cli": "^5.0.0"
+  },
+  "resolutions": {
+    "node-forge": "0.10.0"
+  },
+  "browserslist": [
+    "> 0.2%",
+    "not dead"
+  ],
+  "dependencies": {
+    "modern-css-reset": "^1.4.0",
+    "rimraf": "^3.0.2"
+  },
+  "gitHead": "5ceb95c74b18da641d388b96660617599f4f71f7"
+}

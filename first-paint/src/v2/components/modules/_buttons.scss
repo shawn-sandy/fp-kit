@@ -1,0 +1,94 @@
+/* stylelint-disable declaration-colon-newline-after */
+@mixin rules {
+  --bg: var(--btn-bg, var(--bg));
+  --btn-fs-lg: var(--fs-lg, calc(21rem / 16));
+  --btn-fs-md: var(--fs-md, calc(14rem / 16));
+  --btn-fs-sm: var(--fs-sm, calc(13rem / 16));
+  --btn-fs-xl: var(--fs-xl, calc(24rem / 16));
+  --btn-fs-xs: var(--fs-xs, calc(12rem / 16));
+  --btn-rds-lg: 0.6rem;
+  --btn-rds-md: 0.4rem;
+  --btn-pill: 99rem;
+  --btn-round: 99rem;
+  --btn-rds-sm: 0.3rem;
+  --btn-xs: calc(21rem / 16);
+  --btn-sm: calc(28rem / 16);
+  --btn-md: calc(51rem / 16);
+  --btn-lg: calc(58rem / 16);
+  --btn-trans: transition: all .2s ease!important;
+  --btn-hover-trans: none;
+  --btn-hover-transF: transform: scale(.98);
+
+  background-color: var(--btn-bgc, var(--bg, blue));
+  border-radius: var(--btn-rds, var(--radius, 0.12rem));
+  border: var(--btn-border, none);
+  color: var(--btn-color, var(--clr, white));
+  cursor: var(--btn-cursor, pointer);
+  display: var(--btn-dsp, var(--dsp, inline-flex));
+  font-size: var(--btn-fs, calc(13rem / 16));
+  gap: var(--btn-gap, var(--gap, 1rem));
+  padding-inline: var(--btn-px, var(--px, 2rem));
+  place-items: var(--btn-place, var(--place, center));
+  width: var(--btn-w, var(--w, auto));
+  transition: var(--btn-trans, var(--trans));
+
+  min-height: var(
+    --btn-size,
+    var(--btn-h, calc(40rem / 16))
+  );
+
+  &:hover {
+    --btn-color: var(--btn-color-hover, white);
+    --btn-bg: var(--btn-bg-hover, darkblue);
+
+    border: var(--hover-border, var(--btn-border));
+    transition: var(--btn-hover-trans);
+    transform: var(--btn-hover-transF);
+  }
+
+  &:active,
+  &:focus,
+  &:visited {
+    color: var(
+      --btn-state-color,
+      var(--btn-color, lightgray)
+    );
+  }
+
+  &:disabled {
+    opacity: var(--btn-disabled-opacity, var(--opacity, 0.5));
+    cursor: var(--btn-disabled-cursor, var(--cursor, not-allowed));
+  }
+
+  &[type="submit"] {
+    color: var(--submit-clr, var(--btn-color, white));
+    border: var(--submit-border, var(--btn-border));
+    background-color: var(
+      --submit-bg,
+      var(--btn-bg, royalblue)
+    );
+  }
+
+  &[type="reset"] {
+    color: var(--reset-clr, var(--btn-color, white));
+    border: var(--reset-border, var(--btn-border));
+    background-color: var(
+      --reset-bg,
+      var(--btn-bg, royalblue)
+    );
+
+  }
+  @content;
+}
+
+@mixin components {
+  button,
+  button[style*="--btn"],
+  [role="button"] {
+    @include rules();
+  }
+
+  [style*="--btn-size"] {
+    min-height: var(--btn-size, var(--ht));
+  }
+}

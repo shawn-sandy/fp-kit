@@ -1,0 +1,81 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+@mixin props() {
+  --img-xs: 10vw;
+  --img-sm: 25vw;
+  --img-md: 50vw;
+  --img-lg: 75vw;
+  --img-xl: 90vw;
+  --img-100: 100vw;
+  @content;
+}
+
+@mixin img-rules {
+  @include props;
+
+  max-width: 100%;
+  width: var(--img-w, auto);
+  object-fit: var(--img-obj-fit, cover);
+  object-position: var(--img-obj-position, center center);
+  aspect-ratio: var(--img-ratio, auto 2/3);
+
+  &[width] {
+    width: var(--img-w, auto);
+  }
+
+  &[width][height] {
+    height: var(--img-h, auto);
+  }
+
+  &[src$=".svg"] {
+    width: 100%;
+    height: auto;
+    max-width: none;
+  }
+}
+
+@mixin figure-rules {
+  @include props();
+
+  max-width: var(--pic-max-w, 100%);
+  width: var(--pic-w, auto);
+  display: var(--pic-dsp, flex);
+  flex-direction: var(--pic-flex-dir, column);
+  place-content: var(--place-x, center);
+  place-items: var(--place-y, center);
+  height: var(--pic-h, auto);
+  padding-block: var(--pic-py, 0.5rem);
+  padding-inline: var(--pic-px, 0.5rem);
+}
+
+@mixin figcaption-rules {
+  @include props();
+
+  font-size: var(--fcap-fs, inherit);
+  display: var(--fcap-dsp, flex);
+  place-content: var(--place-x, flex-start);
+  place-items: var(--place-y, center);
+  padding-block: var(--fcap-py, 0.5rem);
+  padding-inline: var(--fcap-px, 0.5rem);
+}
+
+@mixin module {
+  img {
+    @include img-rules;
+  }
+
+  picture,
+  figure {
+    @include figure-rules;
+  }
+
+  figcaption {
+    @include figcaption-rules;
+  }
+}

@@ -1,0 +1,45 @@
+/*
+ ***************************************
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ Email: shawnsandy04@gmail
+ Description: First Paint
+ Project: first-paint/critical.scss
+ Version: 2.0
+ Website: https://shawnsandy.github.io/first-paint/
+ License: MIT
+ ***************************************
+*/
+
+// custom properties--tokens
+@use '../../tokens/tokens.scss';
+
+// user reset from v1
+@use '../../../components/reset.scss';
+
+// Layout modules
+@use '../../modules/layout.scss';
+
+// Page modules
+@use '../../modules/page.scss';
+
+// Elements modules
+@use '../../modules/elements.scss';
+
+// Header Modules
+@use '../../modules/header.scss';
+
+// Banner Modules
+@use '../../modules/banners.scss';
+
+// Adds the navigation Modules
+@use '../../modules/nav.scss';
+
+// Button Modules
+@use '../../modules/buttons.scss';
+
+// Media queries modules
+@use '../../modules/utilities/responsive.scss';
+
+// add typography Modules
+@use '../../modules/type.scss';

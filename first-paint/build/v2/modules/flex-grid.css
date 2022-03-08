@@ -1,0 +1,48 @@
+.fp-grid[role='list'],
+section[role='list'],
+div[role='list'],
+ul[role='list'] {
+  --grid-w: 30%;
+  --grid-flex: 1 1 30%;
+  --grid-size: 30%;
+  --flex: var(--flex);
+  display: var(--dsp-f, flex);
+  flex-wrap: var(--wrap, wrap);
+  justify-content: var(--justify-b, space-between);
+  gap: var(--gap, 0);
+}
+.fp-grid[role='list'] [role='listitem'],
+section[role='list'] [role='listitem'],
+div[role='list'] [role='listitem'],
+ul[role='list'] [role='listitem'] {
+  flex: var(--grid-flex);
+  line-height: 1.6;
+  width: var(--grid-w);
+}
+@media (min-width: 1680px) {
+  .fp-grid[role='list'] [role='listitem'],
+  section[role='list'] [role='listitem'],
+  div[role='list'] [role='listitem'],
+  ul[role='list'] [role='listitem'] {
+    --grid-flex: 1 1 24%;
+    --grid-w: 24%;
+  }
+}
+@media (max-width: 980px) {
+  .fp-grid[role='list'] [role='listitem'],
+  section[role='list'] [role='listitem'],
+  div[role='list'] [role='listitem'],
+  ul[role='list'] [role='listitem'] {
+    --grid-flex: 1 1 48%;
+    --grid-w: 48%;
+  }
+}
+@media (max-width: 680px) {
+  .fp-grid[role='list'] [role='listitem'],
+  section[role='list'] [role='listitem'],
+  div[role='list'] [role='listitem'],
+  ul[role='list'] [role='listitem'] {
+    --grid-flex: 1 1 98%;
+    --grid-w: 49%;
+  }
+}

@@ -1,0 +1,66 @@
+// mixin utilities
+@use './functions' as fn;
+@mixin flexbox() {
+  display: var(--dsp);
+  flex-direction: var(--fb-direction);
+  flex-wrap: var(--wrap);
+  align-items: var(--al);
+  justify-content: var(--justify-c);
+  gap: var(--gap);
+}
+
+@mixin flex-items() {
+  flex: var(--flex, 1);
+  flex-basis: var(--fb-basis, auto);
+  align-items: var(--al);
+}
+
+@mixin padding() {
+  padding: var(--p);
+  padding-line: var(--p);
+  padding-block: var(--p);
+  padding-block-start: var(--pt);
+  padding-block-end: var(--pb);
+  padding-inline-start: var(--pl);
+  padding-inline-end: var(--pr);
+}
+
+@mixin margin() {
+  margin: var(--m);
+  margin-block-start: var(--mt);
+  margin-block-end: var(--mb);
+  margin-inline-start: var(--ml);
+  margin-inline-end: var(--mr);
+}
+
+@mixin border() {
+  --border-w: thin;
+  --border-s: none;
+  --border-c: inherit;
+  --border: var(--border-w) var(--border-s) var(--border-c);
+}
+
+@mixin button() {
+  @include margin();
+  @include padding();
+  justify-content: var(--justify);
+  align-items: var(--fb-center);
+  min-height: var(--min);
+  display: var(--dsp-i);
+  padding-inline: var(--px);
+  background-color: var(--bg);
+  border: var(--border-w) var(--border-s) var(--border-cl);
+  border-radius: var(--border-rad);
+  font-weight: var(--fw);
+  box-sizing: var(--box);
+  font-style: var(--fs-style, normal);
+  cursor: pointer;
+  transition: all 0.2s ease !important;
+  &:hover {
+    transform: scale(var(--transform, 0.98));
+    text-decoration: none;
+  }
+  @media (max-width: 680px) {
+    --min: var(--s6);
+  }
+}

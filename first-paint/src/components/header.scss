@@ -1,0 +1,44 @@
+$render: true !default;
+$height: calc(400rem / 16) !default;
+$display: flex !default;
+$align-items: center !default;
+$flex-direction: column !default;
+$justify-content: center !default;
+$border: 1px solid whitesmoke !default;
+$background-color: null !default;
+
+// @imports
+
+@use 'styles.scss';
+
+@mixin renderComponent($renderContent: $render, $className: null) {
+  @if ($renderContent) {
+    header {
+      background-color: $background-color;
+    }
+
+    #{if($className, $className, '.fp-header')},
+    header > [role='banner'] {
+      @include banner();
+    }
+  }
+}
+
+@mixin banner {
+  @include styles.flex-box();
+  min-height: $height;
+
+  > section,
+  > div {
+    text-align: center;
+  }
+}
+
+@mixin addBorders() {
+  header {
+    border-top: $border;
+    border-bottom: $border;
+  }
+}
+
+@include renderComponent();

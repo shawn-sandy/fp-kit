@@ -1,0 +1,10 @@
+/* flex styles */
+[style*="--flex"] {
+  --dsp: flex;
+  --gap: var(--flex-gap, 1rem);
+  --wrap: var(--flex-wrap, wrap);
+  --align: var(--flex-align, center);
+  --justify: var(--flex-justify, start);
+}
+
+/*# sourceMappingURL=flex.css.map */

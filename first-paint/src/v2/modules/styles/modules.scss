@@ -1,0 +1,41 @@
+/*
+ ***************************************
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ Email: shawnsandy04@gmail
+ Description: First Paint
+ Project: first-paint
+ Version: 2.0
+ Website: https://shawnsandy.github.io/first-paint/
+ License: MIT
+ ***************************************
+*/
+
+// add Main Modules
+@use '../../modules/main.scss';
+
+// flex-grid Modules
+@use '../../modules/flex-grid.scss';
+
+//Table Modules
+@use '../../modules/table.scss';
+
+// Img Modules
+@use '../../modules/img.scss';
+
+// Inputs/Forms Modules
+@use '../../modules/form.scss';
+
+// Footer modules
+@use '../../modules/footer.scss';
+
+/// don't automatically render the page Modules
+// @use '../../modules/page.scss' with($render-page: false);
+
+/// here we can change the body color using the config mixin
+// @include page.config($color: #1b1b1b);
+
+/// now we render the body
+// @include page.page();
+
+@include form.elements();

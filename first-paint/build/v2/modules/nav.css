@@ -1,0 +1,58 @@
+@import '../modules/utilities/functions' as fn;
+nav {
+  --nav-dp: var(--dsp-f);
+  --nav-align: var(--al);
+  --nav-height: var(--4xl);
+  --justify: var(--justify-b);
+  --dsp: var(--nav-dp);
+}
+@media (min-width: 980px) {
+  nav {
+    display: var(--nav-dp);
+    align-items: var(--align-items);
+    justify-content: var(--justify-b);
+    height: var(--nav-height);
+  }
+}
+@media (max-width: 780px) {
+  nav {
+    flex-direction: var(--col);
+    justify-content: var(--justify-c);
+  }
+}
+nav a,
+nav li {
+  font-size: var(--fs);
+  --fs: var(--sm);
+}
+nav span {
+  --bg: transparent;
+}
+nav h1 {
+  --line-height: 0;
+}
+nav h1 a {
+  --fs: var(--md);
+  margin-block-end: 0;
+}
+nav :where(> section, ul) {
+  display: var(--nav-dp, --dsp);
+  align-items: var(--nav-align, --aln);
+  gap: var(--gap);
+  --gap: var(--lg);
+  height: 100%;
+  font-size: var(--font-size);
+}
+nav :where(> section, ul) :any-link {
+  font-size: var(--font-size);
+}
+nav img[alt] {
+  vertical-align: var(--vertical-align);
+  --vertical-align: var(--mid);
+  --max: var(--2xl);
+  max-height: var(--max);
+}
+nav img[alt] + * {
+  --ml: var(--s1);
+  margin-left: var(--ml);
+}

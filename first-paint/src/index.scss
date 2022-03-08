@@ -1,0 +1,2 @@
+@use './components/reset.scss';
+@use './components.scss' with($render-all: true);

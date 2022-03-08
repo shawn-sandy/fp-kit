@@ -1,0 +1,22 @@
+.fp-footer[role='contentinfo'],
+footer[role='contentinfo'] {
+  --fs: var(--s2) !important;
+  --px: var(--xl);
+}
+.fp-footer[role='contentinfo'] > section,
+footer[role='contentinfo'] > section {
+  display: var(--dsp);
+  flex-direction: var(--fb-direction);
+  flex-wrap: var(--wrap);
+  align-items: var(--al);
+  justify-content: var(--justify-c);
+  gap: var(--gap);
+  --dsp: var(--dsp-f);
+  --fs: var(--s2);
+  --p: var(--rem);
+}
+.fp-footer[role='contentinfo'] > div,
+footer[role='contentinfo'] > div {
+  --text-align: center;
+  --p: 1rem;
+}

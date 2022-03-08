@@ -1,0 +1,77 @@
+* {
+  outline: none;
+  box-sizing: border-box;
+  color: var(--cl);
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: clamp(86%, 96%, 120%);
+  font-family: var(--font-family);
+  line-height: 1.5;
+}
+@media (min-width: 680px) {
+  html {
+    font-size: 95%;
+  }
+}
+@media (min-width: 980px) {
+  html {
+    font-size: 98%;
+  }
+}
+@media (min-width: 1600px) {
+  html {
+    font-size: 100%;
+  }
+}
+@media (min-width: 1980px) {
+  html {
+    font-size: 110%;
+  }
+}
+
+body {
+  font-family: var(--fs-family);
+  background-color: white;
+  color: var(--color, #292929);
+}
+
+:where(body) > section,
+:where(body) main,
+:where(body) nav,
+:where(body) footer[role='contentinfo'] {
+  padding-block: var(--px);
+  padding-inline: var(--py);
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 980px) {
+  :where(body) > section,
+  :where(body) main,
+  :where(body) nav,
+  :where(body) footer[role='contentinfo'] {
+    width: 100%;
+    padding-inline: var(--py);
+  }
+}
+
+@media (max-width: 980px) {
+  section,
+  article,
+  aside,
+  summary,
+  ul,
+  ol,
+  div {
+    padding: 1rem;
+  }
+}

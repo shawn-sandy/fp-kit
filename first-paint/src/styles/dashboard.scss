@@ -1,0 +1,97 @@
+// @use '../components/reset.scss';
+
+@use '../components.scss'
+  with(
+    $render-all: true,
+    $render-page: false,
+    $render-nav: false,
+    $render-header: false
+  );
+
+@include components.button-links();
+
+[data-dashboard] {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 0;
+
+  [data-sidebar] {
+    padding: 0.5rem 0.5rem;
+
+    hr {
+      margin: 0.5rem 0;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    padding: 1rem;
+  }
+
+  @media (min-width: 980px) {
+    flex-direction: row;
+  }
+
+  [data-sidebar] {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    border-right: 0.1rem solid whitesmoke;
+
+    strong a {
+      font-size: 1.1rem;
+    }
+
+    @include components.nav-dashboard();
+
+    [data-sidebar-button] {
+      font-weight: 500;
+    }
+
+    @media (max-width: 980px) {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  main {
+    flex-direction: column;
+    overflow: auto;
+    padding: 0 2rem;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+
+    @media (max-width: 980px) {
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    @media (min-width: 1280px) {
+      max-width: 100%;
+
+      article {
+        max-width: 100%;
+      }
+    }
+
+    nav {
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+
+    > section {
+      @media (min-width: 980px) {
+        // width: 100% !important;
+        width: 80%;
+        margin: auto;
+      }
+    }
+
+    @include components.elements-pre();
+  }
+}

@@ -1,0 +1,9 @@
+@use 'sass:math';
+@use 'sass:list';
+@use 'sass:meta';
+@use 'sass:string';
+
+@function divide($value, $key: 16) {
+  @debug math.div($value, $key);
+  @return math.div($value, $key);
+}

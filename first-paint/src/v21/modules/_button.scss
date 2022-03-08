@@ -1,0 +1,77 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+/* stylelint-disable declaration-colon-newline-after */
+
+@mixin props {
+  --btn-sm: calc(12rem / 16);
+  --btn-md: calc(16rem / 16);
+  --btn-lg: calc(21rem / 16);
+  --btn-pill: 99rem;
+  @content;
+}
+@mixin rules() {
+  @include props;
+
+  color: var(--btn-color, currentColor);
+  background-color: var(--btn-bg, lightgray);
+  font-size: var(--btn-fs, calc(14rem / 16));
+  display: var(--btn-dsp, inline-flex);
+  gap: var(--btn-gap, 1rem);
+  min-height: calc(40rem / 16);
+  place-items: var(--btn-place, center);
+  padding-inline: var(--btn-px, 1.4rem);
+  padding-block: var(--btn-py, 0.9rem);
+  border: var(--btn-border, none);
+  border-radius: var(--btn-radius, 0.15rem);
+  text-decoration: var(--btn-deco, none);
+  transition: all 0.2s ease !important;
+
+  @content;
+}
+
+@mixin styles {
+  button[type="submit"],
+  [style*="--btn: submit"] {
+    --btn-bg: darkblue;
+    --btn-color: white;
+  }
+
+  button {
+    &[disabled] {
+      cursor: var(--btn-cursor-disabled, not-allowed);
+      opacity: var(--btn-opacity-disabled, 0.5);
+    }
+
+    &:hover {
+      filter: invert(1) hue-rotate (180deg);
+      transform: scale(1.05);
+      // --btn-bg: var(--btn-color, blue);
+      // --btn-color: var(--btn-bg, lightgray);
+    }
+
+    &[type="reset"],
+    &[style*="--btn: 'reset'"] {
+      --btn-bg: transparent;
+      --btn-color: gray;
+      --btn-border: gray medium solid;
+    }
+
+    &[style*="lg"] {
+      --btn-fs: var(--btn-lg);
+      --btn-min-h: 60px;
+    }
+  }
+}
+
+@mixin module {
+  :where(button, [style*="--btn"]) {
+    @include rules;
+  }
+  @include styles;
+}

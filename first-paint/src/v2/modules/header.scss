@@ -1,0 +1,34 @@
+// set variables
+// TODO Search and replace name with CSS tag/element name
+@use './utilities/maps';
+$render: true !default;
+$prefix: 'layout';
+$tokens: ();
+
+// render component mixin
+@mixin renderComponent($renderContent: $render, $className: null) {
+  @if ($renderContent) {
+    #{$className,
+    $className,
+    '.fp-header'},
+    header {
+      @include maps.customProperties($tokens, $prefix);
+      @include header();
+    }
+  }
+}
+
+@mixin header {
+  // TODO add mixin code
+}
+
+@mixin header-element {
+}
+
+@mixin config($_color: null, $_background-color: null) {
+  $header-color: $_color !global;
+  $header-background-color: $_background-color !global;
+}
+
+// include render component
+@include renderComponent();

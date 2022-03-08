@@ -1,0 +1,10 @@
+@use '../components/reset.scss';
+// import page
+@use '../components.scss'
+  with(
+    $render-page: true,
+    $render-nav: true,
+    $render-header: true,
+    $render-elements: true,
+    $render-footer: true
+  );

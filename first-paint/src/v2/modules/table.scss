@@ -1,0 +1,77 @@
+// set variables
+// TODO Search and replace name with CSS tag/element name
+@use "./utilities/maps" as map;
+
+$renderTable: true !default;
+
+$tokens: (
+  width: 100%,
+  height: 100%,
+  border-radius: 0,
+  bg: whitesmoke,
+  bg-alt: rgb(240, 240, 240),
+  border-width: var(--border-w, thin),
+  border-style: var(--border-s, solid),
+  border-color: var(--border-cl, currentColor),
+  border: var(--tb-border-width) var(--tb-border-style) var(--tb-border-color)
+);
+
+// render component mixin
+@mixin renderComponent($renderContent: $renderTable, $className: null) {
+  @if ($renderContent) {
+    #{$className,
+    $className,
+    ".fp-table"},
+    table {
+      @include map.cp($tokens, "tb");
+      @include table();
+    }
+  }
+}
+
+@mixin table {
+  --mx: var(--sm-x);
+  --my: 0;
+  --collapse: collapse;
+  --border-w: thin;
+  --border-s: solid;
+  --border-cl: var(--light);
+  border-collapse: var(--collapse);
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: var(--tb-width);
+  border: var(--tb-border);
+  // box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.15);
+
+  thead tr {
+    --text-align: left;
+    background-color: var(--tb-bg);
+    text-align: var(--text-align);
+    border-bottom: var(--tb-border);
+  }
+
+  th,
+  td {
+    --py: 0.75rem;
+    --px: 0.75rem;
+    padding-inline: var(--py);
+    padding-block: var(--px);
+  }
+
+  tbody tr {
+  }
+
+  tbody tr:nth-of-type(even) {
+    background-color: var(--tb-bg);
+  }
+
+  tbody tr:last-of-type {
+    --tbl-border: medium solid var(--tb-border-color);
+    border-bottom: var(--tbl-border);
+  }
+}
+
+// include render component
+
+@include renderComponent();
