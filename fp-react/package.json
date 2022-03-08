@@ -6,11 +6,11 @@
     "access": "public"
   },
   "author": "shawn-sandy <creative@shawnsandy.com>",
-  "homepage": "https://github.com/shawn-sandy/ideas/tree/main/fp-react",
+  "homepage": "https://github.com/shawn-sandy/fp-kit/tree/main/fp-react",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shawn-sandy/ideas.git"
+    "url": "git+https://github.com/shawn-sandy/fp-kit.git"
   },
   "dependencies": {
     "@shawnsandy/first-paint": "^2.7.7",
