@@ -127,7 +127,7 @@
     "trash-cli": "^5.0.0"
   },
   "lint-staged": {
-    "**/.*.{js,ts,jsx, tsx}": "eslint --fix",
+    "**/.*.{js,ts,jsx,tsx}": "eslint --fix",
     "**/.*.{js,jsx,ts,tsx,md,html,scss,json,md}": "prettier --write"
   }
 }
