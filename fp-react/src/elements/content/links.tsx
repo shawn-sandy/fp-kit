@@ -1,5 +1,40 @@
 import * as React from "react"
-// import PropTypes, { InferProps } from "prop-types"
+
+
+export interface LinkProps {
+  /**
+   * The link destination
+   */
+  to: string
+  /**
+   * Classnames to be added to the link
+   */
+  classes?: string
+  /**
+   * The lins styles/props
+   */
+  styles?: any
+  /**
+   * The title attribute for links
+   */
+  title?: string
+  /**
+   * The target attribute for links
+   */
+  target?: string
+  /**
+   * The rel attribute for links
+   */
+  rel?: string
+  /**
+   * The download attribute for links
+   */
+  download?: string
+  /**
+   * The content to be displayed in the link
+   */
+  children?: React.ReactNode
+}
 
 /**
  * Link Element.
@@ -33,19 +68,7 @@ const FpLinks: React.FC<LinkProps> = ({
   )
 }
 
-interface LinkProps {
-  /**
-   * The link destination
-   */
-  to: string
-  classes?: string
-  styles?: any
-  title?: string
-  target?: string
-  rel?: string
-  download?: string
-  children?: React.ReactNode
-}
+
 
 export const OpenTab: React.FC<LinkProps> = ({
   to = "#",
