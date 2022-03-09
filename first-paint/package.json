@@ -57,8 +57,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1",
     "production": "11ty-prod",
     "clean": "trash dist/**/",
-    "clean:dist": "trash dist/**",
-    "publish": "npm publish"
+    "clean:dist": "trash dist/**"
   },
   "bugs": {
     "url": "https://github.com/shawn-sandy/ideas/issues"
