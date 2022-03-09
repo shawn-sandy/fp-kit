@@ -90,6 +90,7 @@
   ],
   "dependencies": {
     "modern-css-reset": "^1.4.0",
+    "np": "^7.6.0",
     "rimraf": "^3.0.2"
   },
   "gitHead": "3e3dea632205e36cd47082469dd090a88da78941"
