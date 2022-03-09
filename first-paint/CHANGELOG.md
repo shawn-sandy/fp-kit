@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.14](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.7.13...@shawnsandy/first-paint@2.7.14) (2022-03-09)
+
+
+### Bug Fixes
+
+* link to repo in npm package ([04205f2](https://github.com/shawn-sandy/fp-kit/commit/04205f2f52b5684f062ec43f7c3eb97d4b9de605))
+
+
+
+
+
 ## [2.7.13](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.7.12...@shawnsandy/first-paint@2.7.13) (2022-03-08)
 
 
