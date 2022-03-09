@@ -46,7 +46,7 @@
     "build-storybook": "build-storybook -o ./www/components",
     "compile": "rollup -c",
     "compile:clean": "rimraf lib && rollup -c",
-    "publish": "np"
+    "publish": "np --any-branch"
   },
   "eslintConfig": {
     "extends": [
