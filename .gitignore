@@ -115,3 +115,4 @@ projects/fp-mix/builds/
 /.stylelintcache
 fp-react/lib/
 /projects/test-package
+/components/react/fp-datatable/lib

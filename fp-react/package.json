@@ -31,11 +31,11 @@
     "web-vitals": "^2.1.4"
   },
   "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
     "build": "react-scripts build",
