@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.19](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.18...@shawnsandy/fp-react@0.7.19) (2022-03-09)
+
+**Note:** Version bump only for package @shawnsandy/fp-react
+
+
+
+
+
 ## [0.7.18](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.17...@shawnsandy/fp-react@0.7.18) (2022-03-09)
 
 
