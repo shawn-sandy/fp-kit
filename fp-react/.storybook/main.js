@@ -7,8 +7,9 @@ module.exports = {
     "../src/modules/**/*.stories.@(js|jsx|ts|tsx)",
     "../src/pages/**/*.stories.@(js|jsx|ts|tsx)",
     "../src/services/**/*.stories.@(js|jsx|ts|tsx)",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)",
+    // "../src/**/*.stories.@(js|jsx|ts|tsx)",
     "../src/**/*.stories.mdx",
+    // "../../components/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   "addons": [
     '@whitespace/storybook-addon-html',
