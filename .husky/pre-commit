@@ -8,11 +8,11 @@
 
 # commitizen
 echo 'Starting commitlint...'
-npx commitlint -V --edit  "$1"
+# npx commitlint -V --edit  "$1"
 
 # lint-staged
 echo 'Starting lint-staged...'
-npx lint-staged "$1"
+# npx lint-staged "$1"
 
 
 # If everything passes... Now we can commit
