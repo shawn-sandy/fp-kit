@@ -4,8 +4,8 @@ export interface DatatableProps {
   children?: React.ReactNode;
 }
 
-const Datatable: React.FC<DatatableProps> = ({children, ...props}) => {
+const DataTable: React.FC<DatatableProps> = ({children, ...props}) => {
   return <div>{children?? 'Table content'}</div>
 }
 
-export default Datatable
+export default DataTable
