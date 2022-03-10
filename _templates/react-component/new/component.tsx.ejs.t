@@ -1,5 +1,5 @@
 ---
-to: <%= absPath %>/component/index.tsx
+to: <%= absPath %>/src/component/index.tsx
 ---
 import * as React from 'react';
 

@@ -1,5 +1,5 @@
 ---
-to: <%= absPath %>/component/<%= component_name %>.scss
+to: <%= absPath %>/src/component/<%= component_name %>.scss
 ---
 
 body {

@@ -1,5 +1,5 @@
 ---
-to: <%= absPath %>/component/<%= component_name %>.stories.tsx
+to: <%= absPath %>/src/component/<%= component_name %>.stories.tsx
 ---
 
 import React from 'react'
