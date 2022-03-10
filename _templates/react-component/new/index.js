@@ -10,7 +10,7 @@ module.exports = {
       {
         type: 'input',
         name: 'dir',
-        message: 'Where is the directory(Optional)'
+        message: 'The name of the directory to store the component (optional)'
       }
     ]
     return inquirer

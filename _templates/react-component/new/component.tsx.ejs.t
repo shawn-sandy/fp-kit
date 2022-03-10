@@ -5,7 +5,7 @@ import * as React from 'react';
 
 interface <%= component_name %>Props = {};
 
-const Component = () => {
+const Component: React.FC<<%= component_name %>Props> = () => {
   return <div><%= component_name %></div>;
 };
 

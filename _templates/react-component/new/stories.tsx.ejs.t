@@ -1,22 +1,22 @@
 ---
-to: <%= absPath %>/src/component/<%= component_name %>.stories.tsx
+to: <%= absPath %>/src/component/<%= path %>.stories.tsx
 ---
 
 import React from 'react'
 
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import <%= component_name %> from './<%= component_name %>/index'
+import <%= component_name %> from './index'
 
 export default {
-  title: 'Example',
-  component: Example,
+  title: 'Component/<%= component_name %>',
+  component: <%= component_name %>,
   layout: 'padded',
   status: {
     type: 'alpha',
   },
-} as ComponentMeta<typeof Example>
+} as ComponentMeta<typeof <%= component_name %>>
 
-export const Primary: ComponentStory<typeof Example> = () => (
-  <Example primary>Example</Example>
+export const Primary: ComponentStory<typeof <%= component_name %>> = () => (
+  <<%= component_name %>>Example</<%= component_name %>>
 )
