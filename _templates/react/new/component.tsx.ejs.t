@@ -3,12 +3,12 @@ to: <%= absPath %>/src/component/index.tsx
 ---
 import React from 'react';
 
-export interface <%= component_name %>Props {
+export interface <%= componentName %>Props {
   children: React.ReactNode;
 };
 
-const <%= component_name %>: React.FC<<%= component_name %>Props> = ({children}) => {
-  return <div><%= component_name %>{children}</div>;
+const <%= componentName %>: React.FC<<%= componentName %>Props> = ({children}) => {
+  return <div><%= componentName %>{children}</div>;
 };
 
-export default <%= component_name %>;
+export default <%= componentName %>;

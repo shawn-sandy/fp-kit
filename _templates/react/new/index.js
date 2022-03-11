@@ -4,7 +4,7 @@ module.exports = {
     const questions = [
       {
         type: 'input',
-        name: 'component_name',
+        name: 'componentName',
         message: 'What is the component name?'
       },
       {
@@ -16,8 +16,8 @@ module.exports = {
     return inquirer
       .prompt(questions)
       .then(answers => {
-        const { component_name, dir } = answers
-        const path = dir ? `${dir}` : `${component_name.toLowerCase()}`
+        const { componentName, dir } = answers
+        const path = dir ? `${dir}` : `${componentName.toLowerCase()}`
         const absPath = `components/react/${path}`
         return { ...answers, path, absPath }
       })

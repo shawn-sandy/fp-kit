@@ -1,12 +1,12 @@
 ---
-to: <%= absPath %>/__tests__/<%= component_name %>.test.tsx
+to: <%= absPath %>/__tests__/<%= componentName %>.test.tsx
 ---
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { <%= component_name %> } from '../';
+import { <%= componentName %> } from '../';
 
 test('renders component successfully', () => {
-  render(<<%= component_name %>  />);
+  render(<<%= componentName %>  />);
   const element = screen.getByTestId(/test/i);
   expect(element).toBeInTheDocument();
 });

@@ -6,17 +6,17 @@ import React from 'react'
 
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import <%= component_name %> from './index'
+import <%= componentName %> from './index'
 
 export default {
-  title: 'Component/<%= component_name %>',
-  component: <%= component_name %>,
+  title: 'Component/<%= componentName %>',
+  component: <%= componentName %>,
   layout: 'padded',
   status: {
     type: 'alpha',
   },
-} as ComponentMeta<typeof <%= component_name %>>
+} as ComponentMeta<typeof <%= componentName %>>
 
-export const Primary: ComponentStory<typeof <%= component_name %>> = () => (
-  <<%= component_name %>>Example</<%= component_name %>>
+export const Primary: ComponentStory<typeof <%= componentName %>> = () => (
+  <<%= componentName %>>Example</<%= componentName %>>
 )
