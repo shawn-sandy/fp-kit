@@ -82,7 +82,7 @@
     "posthtml-include": "^1.7.2",
     "rimraf": "^3.0.2",
     "sass": "^1.49.9",
-    "trash-cli": "^5.0.0",
+    "trash-cli": "^5.0.0"
   },
   "resolutions": {
     "node-forge": "0.10.0"
