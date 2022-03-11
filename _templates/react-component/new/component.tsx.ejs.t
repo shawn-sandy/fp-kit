@@ -1,12 +1,14 @@
 ---
 to: <%= absPath %>/index.tsx
 ---
-import * as React from 'react';
+import React from 'react';
 
-interface <%= component_name %>Props = {};
+export interface <%= component_name %>Props {
+  children: React.ReactNode;
+};
 
-const Component: React.FC<<%= component_name %>Props> = () => {
-  return <div><%= component_name %></div>;
+const <%= component_name %>: React.FC<<%= component_name %>Props> = ({children}) => {
+  return <div>{children ?? '<%= component_name %>'}</div>;
 };
 
 export default <%= component_name %>;
