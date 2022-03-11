@@ -10,12 +10,12 @@ module.exports = {
       {
         type: 'input',
         name: 'dir',
-        message: 'The Components directory store the component (comps) default (components)'
+        message: 'The directory to store the component, ( default components)'
       },
       {
         type: 'input',
         name: 'folderName',
-        message: 'The name of the component (my-component) default (react)'
+        message: 'The name of the component (my-component) (default react)'
       }
     ]
     return inquirer
