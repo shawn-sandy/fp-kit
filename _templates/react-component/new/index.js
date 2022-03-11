@@ -5,17 +5,17 @@ module.exports = {
 
       {
         type: 'input',
-        name: 'component_name',
+        name: 'componentName',
         message: 'What is the component name?'
       },
       {
         type: 'input',
-        name: 'package_dir',
+        name: 'packageDir',
         message: 'Path  to the package do you want to add the component to (my-package)?'
       },
       {
         type: 'select',
-        name: 'sub_folder',
+        name: 'subFolder',
         message: 'Which sub_folder of the package dir you would like to place the component (src/components)?',
         choices: ['components', 'elements', 'modules', 'page', 'services']
       },
@@ -28,9 +28,9 @@ module.exports = {
     return inquirer
       .prompt(questions)
       .then(answers => {
-        const { component_name, dir, package_dir, sub_folder } = answers
-        const path = dir ? `${dir}` : `${component_name.toLowerCase()}`
-        const absPath = `${package_dir}/src/${sub_folder}/${path}`
+        const { componentName, dir, packageDir, subFolder } = answers
+        const path = dir ? `${dir}` : `${componentName.toLowerCase()}`
+        const absPath = `${packageDir}/src/${subFolder}/${path}`
         return { ...answers, path, absPath }
       })
   }
