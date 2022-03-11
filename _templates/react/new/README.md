@@ -1,5 +1,5 @@
 ---
-to: <%= absPath %>README.md
+to: <%= absPath %>/README.md
 ---
 
 # <%= componentName %>

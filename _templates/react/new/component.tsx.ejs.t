@@ -5,8 +5,8 @@ to: <%= absPath %>/src/component/index.tsx
 import React from 'react';
 
 export interface <%= componentName %>Props {
-  children: React.ReactNode;
-  styles?: object;
+  children: React.ReactNode
+  styles?: object
 }
 
 const <%= componentName %>: React.FC<<%= componentName %>Props> = ({styles, children, ...props}) => {
