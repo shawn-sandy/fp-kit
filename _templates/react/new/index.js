@@ -5,7 +5,7 @@ module.exports = {
       {
         type: 'input',
         name: 'componentName',
-        message: 'What is the component name?'
+        message: 'What is the component name (my-package/MyPackage)?'
       },
       {
         type: 'input',
