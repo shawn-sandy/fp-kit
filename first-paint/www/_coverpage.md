@@ -1,5 +1,5 @@
 <h1 id="cover-heading">
-  TD Synnex Styles Kit  <!-- TODO: Update title -->
+  First Paint  <!-- TODO: Update title -->
 </h1>
 
 
