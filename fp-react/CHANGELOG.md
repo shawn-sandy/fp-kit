@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.24...@shawnsandy/fp-react@0.8.0) (2022-03-12)
+
+
+### Features
+
+* scaffold for react datatable ([973afa8](https://github.com/shawn-sandy/fp-kit/commit/973afa88a42ec6589073e0fcabfefc64388777a1))
+* scaffold for react datatable ([c33ba89](https://github.com/shawn-sandy/fp-kit/commit/c33ba890513034d87bc9a8c8696fa8638dad1ef6))
+
+
+
+
+
+
 ## [0.7.24](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.23...@shawnsandy/fp-react@0.7.24) (2022-03-09)
 
 **Note:** Version bump only for package @shawnsandy/fp-react
