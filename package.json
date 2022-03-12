@@ -16,7 +16,7 @@
     "npm-release": "HUSKY=0 && lerna publish --conventional-commits -m \"chore(release): publish patch \"",
     "npm-next": "lerna publish --dist-tag next patch --conventional-commits -m \"chore(next): publish next release \"",
     "npm-publish": "HUSKY=0 && lerna publish --yes  --dist-tag next --conventional-commits -m \"chore(next): publish @next %s\"",
-    "release": "lerna version --conventional-commits -m \"chore(release): publish patch \"",
+    "release": "lerna version --dist-tag next --conventional-commits -m \"chore(release): publish patch \"",
     "git:add": "git add .",
     "git:cz": "git cz",
     "git:push": "git push",
