@@ -7,7 +7,9 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
+  <!-- <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
+   -->
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css" />
   <link
     rel="stylesheet"
     href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css"
@@ -28,18 +30,25 @@
   <script defer src="https://unpkg.com/docsify-copy-code@2"></script>
     <script>
       var repoUrl =
-        'https://dev.azure.com/techdatacorp/WW%20Digital%20Commerce/_git/ReactComponentsLibs?path' // TODO: Update.
-      var editPath = repoUrl + '/style-kit/www/docs/'
-      var editMsg = '📝 Edit on Azure DevOps'
+        'https://github.com/shawn-sandy/fp-kit' // TODO: Update.
+      var editPath = repoUrl + '/tree/main/docs'
+      var editMsg = '📝 Edit on GitHub'
 
       window.$docsify = {
         name: 'First Paint', // TODO: Update.
         repo: repoUrl,
         auto2top: true,
-        search: ['/'],
+        search: {
+          placeholder: 'Search',
+          noData: 'No results found.',
+          depth: 2,
+          keys: ['title', 'subtitle', 'path'],
+          paths: ['/']
+        },
         coverpage: true,
         loadSidebar: true,
         subMaxLevel: 3,
+        logo: 'https://res.cloudinary.com/dqjs95c7n/image/upload/v1644774792/fp-brand-rgb-sm_v1rtjz.svg',
         themeColor: '#001524', // TODO: Set your own color.
         copyCode: {
           buttonText: 'Copy to clipboard',
@@ -51,6 +60,7 @@
           headings: 'h1, h2, h3, h4, h5, h6',
           title: 'Table of Contents'
         },
+        onlyCover: true,
         plugins: [EditOnGithubPlugin.create(editPath, null, editMsg)]
       }
     </script>
