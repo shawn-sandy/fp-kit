@@ -36,9 +36,10 @@
     "url": "git+https://github.com/shawn-sandy/fp-kit.git"
   },
   "scripts": {
-    "start": "run-p watch:* 11ty",
+    "start": "run-p watch:* docs",
     "serve": "serve dist/index.html",
     "watch": "run-p watch:*",
+    "docs": "docsify serve www/ --open --port 4040",
     "11ty": "eleventy --serve",
     "11ty-prod": "eleventy && build",
     "build": "run-s build:*",
