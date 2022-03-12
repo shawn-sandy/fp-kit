@@ -3,6 +3,125 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.24](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.23...@shawnsandy/fp-react@0.7.24) (2022-03-09)
+
+**Note:** Version bump only for package @shawnsandy/fp-react
+
+
+
+
+
+## [0.7.23](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.22...@shawnsandy/fp-react@0.7.23) (2022-03-09)
+
+**Note:** Version bump only for package @shawnsandy/fp-react
+
+
+
+
+
+## [0.7.22](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.21...@shawnsandy/fp-react@0.7.22) (2022-03-09)
+
+**Note:** Version bump only for package @shawnsandy/fp-react
+
+
+
+
+
+## [0.7.21](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.20...@shawnsandy/fp-react@0.7.21) (2022-03-09)
+
+**Note:** Version bump only for package @shawnsandy/fp-react
+
+
+
+
+
+## [0.7.20](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.19...@shawnsandy/fp-react@0.7.20) (2022-03-09)
+
+**Note:** Version bump only for package @shawnsandy/fp-react
+
+
+
+
+
+## [0.7.19](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.18...@shawnsandy/fp-react@0.7.19) (2022-03-09)
+
+**Note:** Version bump only for package @shawnsandy/fp-react
+
+
+
+
+
+## [0.7.18](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.17...@shawnsandy/fp-react@0.7.18) (2022-03-09)
+
+
+### Bug Fixes
+
+* link to repo in npm package ([04205f2](https://github.com/shawn-sandy/fp-kit/commit/04205f2f52b5684f062ec43f7c3eb97d4b9de605))
+
+
+
+
+
+## [0.7.17](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.16...@shawnsandy/fp-react@0.7.17) (2022-03-08)
+
+
+### Bug Fixes
+
+* link to repo in npm package ([b8aa2d2](https://github.com/shawn-sandy/fp-kit/commit/b8aa2d252a4c2fb60059c002b71f5cd6dc6f97b1))
+
+
+
+
+
+## [0.7.16](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.15...@shawnsandy/fp-react@0.7.16) (2022-03-08)
+
+**Note:** Version bump only for package @shawnsandy/fp-react
+
+
+
+
+
+## [0.7.15](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.14...@shawnsandy/fp-react@0.7.15) (2022-03-08)
+
+
+### Bug Fixes
+
+* husky hangs on install ([72f7827](https://github.com/shawn-sandy/fp-kit/commit/72f782717e82eed165deee76f32acd47ebac4df1))
+
+
+
+
+
+## [0.7.14](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.13...@shawnsandy/fp-react@0.7.14) (2022-03-08)
+
+**Note:** Version bump only for package @shawnsandy/fp-react
+
+
+
+
+
+## [0.7.13](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.12...@shawnsandy/fp-react@0.7.13) (2022-03-08)
+
+
+### Features
+
+* setup husky ([a3f9233](https://github.com/shawn-sandy/fp-kit/commit/a3f92333ab782ab9454d9ec27222f4b4b3da7f8b))
+
+
+
+
+
+## [0.7.12](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.7.11...@shawnsandy/fp-react@0.7.12) (2022-03-08)
+
+
+### Features
+
+* link component ([6744a64](https://github.com/shawn-sandy/fp-kit/commit/6744a64e82ffa310b4f0b3803982a39548f608a3))
+
+
+
+
+
 ## 0.7.11 (2022-03-08)
 
 

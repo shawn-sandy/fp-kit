@@ -1,14 +1,20 @@
-# A lightweight React component library built for FirstPaint, a performance-first, accessibility-driven, SCSS/CSS Micro Framework.
+---
+to: <%= absPath %>/README.md
+---
 
-This is beta release and there may be changes to the interface for these components.
+# <%= componentName %>
 
-## Docs
+Description
 
-Docs and info will be coming soon.
+## Installation
 
-Check out a demo of the library here: [FP React Demo](https://fp-react.netlify.app)
+ -  `npm i <%= componentName %>`
 
-## Licence (MIT)
+## Usage
+
+Usage docs and info will be coming soon.
+
+## License (MIT)
 
 The MIT License (MIT)
 

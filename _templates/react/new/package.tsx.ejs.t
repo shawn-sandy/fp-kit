@@ -1,16 +1,20 @@
+---
+to: <%= absPath %>/package.json
+---
 {
-  "name": "@shawnsandy/fp-react",
-  "version": "0.7.24",
+  "name": "@shawnsandy/<%= componentName %>",
+  "version": "0.0.1",
+  "description": "FP-Datable a simple react data-table use standalone or with react-datable",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "author": "shawn-sandy <creative@shawnsandy.com>",
-  "homepage": "https://github.com/shawn-sandy/fp-kit/tree/main/fp-react",
+  "homepage": "",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shawn-sandy/fp-kit.git"
+    "url": ""
   },
   "dependencies": {
     "@shawnsandy/first-paint": "^2.7.20",
@@ -106,6 +110,5 @@
     "storybook-addon-pseudo-states": "^1.0.0",
     "storybook-design-token": "^1.4.0",
     "webpack": "^5.69.1"
-  },
-  "gitHead": "addf4806d95afd22bb248d11ecb079dcb8f87bb6"
+  }
 }

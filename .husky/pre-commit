@@ -1,0 +1,19 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# npm test
+
+# echo 'Starting prettier...'
+# npx pretty-quick --staged "$1"
+
+# commitizen
+echo 'Starting commitlint...'
+npx commitlint -V --edit  "$1"
+
+# lint-staged
+echo 'Starting lint-staged...'
+npx lint-staged "$1"
+
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ Excellent all test passed, I am committing this now.'

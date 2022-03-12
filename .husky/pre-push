@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# npm run test
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ Excellent all test passed, I am pushing this now.'
+
