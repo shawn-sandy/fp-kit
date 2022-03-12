@@ -49,7 +49,7 @@
     "build-v21-prefix": "postcss ./src/v21/css/**/*.css --base src/v21/css --use autoprefixer -d ./src/v21/vendor --no-map",
     "build-v21": "postcss ./src/v21/**/*.css --base src/v21 -d ./dist/v21/ --ext min.css --map",
     "watch:v2": "sass --watch --style compressed src/v2/index.scss:src/v2/css/index.css src/v2/tokens:src/v2/css/tokens/.  src/v2/modules:src/v2/css/modules/. src/v2/components:src/v2/css/components/.--load-path=node_modules --source-map",
-    "watch:docs": "sass --watch --style compressed src/v2/index.scss:www/css/index.css src/v2/tokens:www/css/tokens/.  src/v2/modules:src/www/css/modules/. src/v2/components:src/www/css/components/.--load-path=node_modules --source-map",
+    "watch:docs": "sass --watch --style compressed src/v21/index.scss:www/css/index.css src/v21/tokens:www/css/tokens/.  src/v21/modules:src/www/css/modules/. src/v21/components:src/www/css/components/.--load-path=node_modules --source-map",
     "build:v2": "run-s build-v2-prefix build-v2",
     "build-v2-prefix": "postcss ./src/v2/css/**/*.css --base src/v2/css --use autoprefixer -d ./src/v2/vendor --no-map",
     "build-v2": "postcss ./src/v2/**/*.css --base src/v2 -d ./dist/v2/ --ext min.css --map",
