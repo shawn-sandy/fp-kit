@@ -13,7 +13,7 @@ window.$docsify = {
     keys: ['title', 'subtitle', 'path'],
     paths: ['/']
   },
-  coverpage: true,
+  coverpage: false,
   loadSidebar: true,
   subMaxLevel: 3,
   logo: 'https://res.cloudinary.com/dqjs95c7n/image/upload/v1644774792/fp-brand-rgb-sm_v1rtjz.svg',
