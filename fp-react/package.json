@@ -1,19 +1,19 @@
 {
   "name": "@shawnsandy/fp-react",
-  "version": "0.7.11",
+  "version": "0.8.0",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "author": "shawn-sandy <creative@shawnsandy.com>",
-  "homepage": "https://github.com/shawn-sandy/ideas/tree/main/fp-react",
+  "homepage": "https://github.com/shawn-sandy/fp-kit/tree/main/fp-react",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shawn-sandy/ideas.git"
+    "url": "git+https://github.com/shawn-sandy/fp-kit.git"
   },
   "dependencies": {
-    "@shawnsandy/first-paint": "^2.7.7",
+    "@shawnsandy/first-paint": "^2.7.21",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
@@ -21,6 +21,7 @@
     "@types/node": "^17.0.18",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
+    "np": "^7.6.0",
     "react": "^17.0.2",
     "react-content-loader": "^6.1.0",
     "react-dom": "^17.0.2",
@@ -30,21 +31,21 @@
     "web-vitals": "^2.1.4"
   },
   "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
-    "start": "react-scripts start",
-    "dev": "start-storybook -p 6006 -s public",
+    "start": "start-storybook -p 6006 -s public",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook-docs": "start-storybook --docs --no-manager-cache",
     "build-storybook": "build-storybook -o ./www/components",
     "compile": "rollup -c",
-    "compile:clean": "rimraf lib && rollup -c"
+    "compile:clean": "rimraf lib && rollup -c",
+    "release": "npm publish"
   },
   "eslintConfig": {
     "extends": [
@@ -106,5 +107,5 @@
     "storybook-design-token": "^1.4.0",
     "webpack": "^5.69.1"
   },
-  "gitHead": "5ceb95c74b18da641d388b96660617599f4f71f7"
+  "gitHead": "addf4806d95afd22bb248d11ecb079dcb8f87bb6"
 }

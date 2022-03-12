@@ -1,6 +1,6 @@
 {
   "name": "@shawnsandy/first-paint",
-  "version": "2.7.7",
+  "version": "2.7.21",
   "private": false,
   "description": "First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly websites.",
   "keywords": [
@@ -12,7 +12,7 @@
     "SEMANTIC"
   ],
   "author": "shawn-sandy <creative@shawnsandy.com>",
-  "homepage": "https://github.com/shawn-sandy/ideas/tree/main/first-paint",
+  "homepage": "https://github.com/shawn-sandy/fp-kit/tree/main/first-paint",
   "license": "MIT",
   "main": "index.scss",
   "directories": {
@@ -33,12 +33,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shawn-sandy/ideas.git"
+    "url": "git+https://github.com/shawn-sandy/fp-kit.git"
   },
   "scripts": {
-    "start": "run-p watch:* 11ty",
+    "start": "run-p watch:* docs",
     "serve": "serve dist/index.html",
     "watch": "run-p watch:*",
+    "docs": "docsify serve www/ --open --port 4040",
     "11ty": "eleventy --serve",
     "11ty-prod": "eleventy && build",
     "build": "run-s build:*",
@@ -48,6 +49,7 @@
     "build-v21-prefix": "postcss ./src/v21/css/**/*.css --base src/v21/css --use autoprefixer -d ./src/v21/vendor --no-map",
     "build-v21": "postcss ./src/v21/**/*.css --base src/v21 -d ./dist/v21/ --ext min.css --map",
     "watch:v2": "sass --watch --style compressed src/v2/index.scss:src/v2/css/index.css src/v2/tokens:src/v2/css/tokens/.  src/v2/modules:src/v2/css/modules/. src/v2/components:src/v2/css/components/.--load-path=node_modules --source-map",
+    "watch:docs": "sass --watch --style compressed src/v21/index.scss:www/css/index.css src/v21/tokens:www/css/tokens/.  src/v21/modules:src/www/css/modules/. src/v21/components:src/www/css/components/.--load-path=node_modules --source-map",
     "build:v2": "run-s build-v2-prefix build-v2",
     "build-v2-prefix": "postcss ./src/v2/css/**/*.css --base src/v2/css --use autoprefixer -d ./src/v2/vendor --no-map",
     "build-v2": "postcss ./src/v2/**/*.css --base src/v2 -d ./dist/v2/ --ext min.css --map",
@@ -57,7 +59,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1",
     "production": "11ty-prod",
     "clean": "trash dist/**/",
-    "clean:dist": "trash dist/**"
+    "clean:dist": "trash dist/**",
+    "release": "npm publish"
   },
   "bugs": {
     "url": "https://github.com/shawn-sandy/ideas/issues"
@@ -72,6 +75,9 @@
     "clean-css": "^5.2.4",
     "concurrently": "^7.0.0",
     "cssnano": "^5.0.17",
+    "docsify": "^4.12.2",
+    "modern-css-reset": "^1.4.0",
+    "np": "^7.6.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.7",
     "postcss-cli": "^9.1.0",
@@ -88,9 +94,5 @@
     "> 0.2%",
     "not dead"
   ],
-  "dependencies": {
-    "modern-css-reset": "^1.4.0",
-    "rimraf": "^3.0.2"
-  },
-  "gitHead": "5ceb95c74b18da641d388b96660617599f4f71f7"
+  "gitHead": "1077c0a5691b023d213f15d9ba27f17717d0347c"
 }
