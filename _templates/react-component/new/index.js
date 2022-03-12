@@ -22,7 +22,7 @@ module.exports = {
       {
         type: 'input',
         name: 'dir',
-        message: 'The name of the directory to store the component (optional) will default to the component name'
+        message: 'The name of the directory to store the component (optional)'
       }
     ]
     return inquirer
