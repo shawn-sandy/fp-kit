@@ -4,59 +4,60 @@
 
 First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, classless, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly digital products, websites apps and the likes.
 
-- [First Paint](#first-paint)
-  - [Quick Start](#quick-start)
-  - [Customized Build](#customized-build)
-  - [Creating/Customizing an HTML5 page with FirstPaint](#creatingcustomizing-an-html5-page-with-firstpaint)
-    - [HTML5 Page](#html5-page)
-    - [HTML snippets markup](#html-snippets-markup)
-    - [Header](#header)
-    - [Main](#main)
-    - [Navbar](#navbar)
-    - [Page Footer](#page-footer)
-    - [Button](#button)
-    - [Link Button](#link-button)
-    - [Grid (w/list)](#grid-wlist)
-    - [Grid Row](#grid-row)
-    - [Img](#img)
-    - [Ordered List](#ordered-list)
-    - [Unordered List](#unordered-list)
-    - [Ordered List (unstyled)](#ordered-list-unstyled)
-    - [Unordered List (unstyled)](#unordered-list-unstyled)
-    - [Input](#input)
-    - [Label Required](#label-required)
-    - [Email](#email)
-    - [Checkbox](#checkbox)
-    - [Radio](#radio)
-    - [Select](#select)
-    - [Textarea](#textarea)
-    - [Textarea for code](#textarea-for-code)
-    - [Table](#table)
-  - [Licence (MIT)](#licence-mit)
-  - [Contribute](#contribute)
-  - [Enjoy](#enjoy)
+* [First Paint](#first-paint)
+
+  * [Quick Start](#quick-start)
+  * [Customized Build](#customized-build)
+  * [Creating/Customizing an HTML5 page with FirstPaint](#creatingcustomizing-an-html5-page-with-firstpaint)
+
+    * [HTML5 Page](#html5-page)
+    * [HTML snippets markup](#html-snippets-markup)
+    * [Header](#header)
+    * [Main](#main)
+    * [Navbar](#navbar)
+    * [Page Footer](#page-footer)
+    * [Button](#button)
+    * [Link Button](#link-button)
+    * [Grid (w/list)](#grid-wlist)
+    * [Grid Row](#grid-row)
+    * [Img](#img)
+    * [Ordered List](#ordered-list)
+    * [Unordered List](#unordered-list)
+    * [Ordered List (unstyled)](#ordered-list-unstyled)
+    * [Unordered List (unstyled)](#unordered-list-unstyled)
+    * [Input](#input)
+    * [Label Required](#label-required)
+    * [Email](#email)
+    * [Checkbox](#checkbox)
+    * [Radio](#radio)
+    * [Select](#select)
+    * [Textarea](#textarea)
+    * [Textarea for code](#textarea-for-code)
+    * [Table](#table)
+  * [Licence (MIT)](#licence-mit)
+  * [Contribute](#contribute)
+  * [Enjoy](#enjoy)
 
 ## Quick Start
 
 **Install**
 
-- Install `npm i @shawnsandy/first-paint` stable version
-
-- Install `npm i @shawnsandy/first-paint@next` latest version (next)
-- Yarn install `yarn add @shawnsandy/first-paint`
+* Install `npm i @shawnsandy/first-paint` stable version
+* Install `npm i @shawnsandy/first-paint@next` latest version (next)
+* Yarn install `yarn add @shawnsandy/first-paint`
 
 **Simple & Easy copy paste option**
 
-- Create an empty html page
-- Copy and paste the code from [Gist](https://gist.githubusercontent.com/shawn-sandy/8460e6e400d3206c8a073367855ae381/raw/5309ceec672aa8a5332f2a8a52ed1efa6d63f63c/sample.html) this gist into your new HTML page
-- Edit/customize your page `markup and content`
-- Launch you page in your browser
-- Edit some more
-- Publish to the web :)
+* Create an empty html page
+* Copy and paste the code from [Gist](https://gist.githubusercontent.com/shawn-sandy/8460e6e400d3206c8a073367855ae381/raw/5309ceec672aa8a5332f2a8a52ed1efa6d63f63c/sample.html) this gist into your new HTML page
+* Edit/customize your page `markup and content`
+* Launch you page in your browser
+* Edit some more
+* Publish to the web :)
 
 ## Customized Build
 
-- Copy and add the stylesheet below into the `<head></head>` of you HTML page
+* Copy and add the stylesheet below into the `<head></head>` of you HTML page
 
 ```html
 <link
@@ -64,8 +65,6 @@ First Paint is an easy to use CSS/SCSS starter library that contains accessibili
   src="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint/dist/css/index.css"
 />
 ```
-
-<script src="https://gist.github.com/shawn-sandy/bcc3739439954599280f6acd6432c127.js"></script>
 
 ## Creating/Customizing an HTML5 page with FirstPaint
 
@@ -164,7 +163,7 @@ Copy and paste these snippets to build custom templates using fist-paint-CSS
 </header>
 ```
 
-### Main
+### Section
 
 ```html
 <section id="articles">
@@ -500,9 +499,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Contribute
 
-- Clone repo
-- Edit code `projects/ideas`
-- Submit pull request
+* Clone repo
+* Edit code `projects/ideas`
+* Submit pull request
 
 ## Enjoy
 
