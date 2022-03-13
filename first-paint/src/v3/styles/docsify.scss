@@ -1,0 +1,30 @@
+@use "../modules/reset.scss";
+@use "../modules/global.scss";
+@use "../tokens/colors.scss";
+@use "../modules/container";
+@use "../modules/button";
+@use "../modules/checkbox";
+@use "../modules/img";
+@use "../modules/details-summary";
+@use "../modules/nav";
+@use "../modules/table";
+@use "../modules/grid";
+
+// @include container.module();
+@include nav.module();
+@include table.module();
+@include details-summary.module();
+@include img.module();
+@include checkbox.module();
+@include grid.module();
+@include button.module();
+
+
+/// customs styles for docsify
+
+.sidebar {
+  h1 {
+    display: flex;
+    place-content: center;
+  }
+}
