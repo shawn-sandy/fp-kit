@@ -46,7 +46,7 @@
     "compile": "rollup -c",
     "compile:clean": "rimraf lib && rollup -c",
     "release": "npm publish",
-    "release-next": "npm publish --dist-tag next"
+    "release-next": "npm publish --tag next"
   },
   "eslintConfig": {
     "extends": [
