@@ -19,7 +19,7 @@ window.$docsify = {
   logo: 'https://res.cloudinary.com/dqjs95c7n/image/upload/v1644774792/fp-brand-rgb-sm_v1rtjz.svg',
   themeColor: '#001524', // TODO: Set your own color.
   copyCode: {
-    buttonText: 'Copy to clipboard',
+    buttonText: 'Copy',
     errorText: 'Error',
     successText: 'Copied'
   },
