@@ -229,7 +229,7 @@ Header Section
 
 ### Button
 
-```html
+```html preview
 <button type="button">Button</button>
 ```
 
