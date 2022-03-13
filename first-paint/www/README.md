@@ -136,10 +136,6 @@ Or you can just copy and create your page using the snippet below.
 </html>
 ```
 
-```html<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" />
-
-```
-
 ### HTML snippets markup
 
 Copy and paste these snippets to build custom templates using fist-paint-CSS
