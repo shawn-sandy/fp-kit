@@ -262,7 +262,7 @@ Copy and paste these snippets to build custom templates using fist-paint-CSS
 
 ### Button
 
-```html
+```html preview
 <button type="button">Button</button>
 ```
 

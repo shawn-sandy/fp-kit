@@ -28,3 +28,20 @@
     place-content: center;
   }
 }
+
+.demo_preview {
+  .demo_preview_content {
+    display: flex;
+    place-content: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+}
+ .docsify-copy-code-button {
+    font-size: 0.8rem !important;
+  }
+
+  .demo-copy-code-button {
+    display: none !important;
+  }
