@@ -60,6 +60,7 @@
     "production": "11ty-prod",
     "clean": "trash dist/**/",
     "clean:dist": "trash dist/**",
+    "release-next": "npm publish --dist-tag next",
     "release": "npm publish"
   },
   "bugs": {

@@ -1,8 +1,8 @@
-# First Paint
+# First Paint (beta)
 
  > ## Lightweight, Fast, Accessible, Inclusive
 
-## First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, classless, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly digital products, websites apps and the likes.
+<h3> <em>First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, classless, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly digital products, websites apps and the likes.</em></h3>
 
 ----------------------------------------------
 
@@ -19,8 +19,9 @@
 Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
 ```html
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/index.css">
 ```
+> **Note:** you should consider the @next release as the latest beta version.
 
 
 ## Modules

@@ -45,7 +45,8 @@
     "build-storybook": "build-storybook -o ./www/components",
     "compile": "rollup -c",
     "compile:clean": "rimraf lib && rollup -c",
-    "release": "npm publish"
+    "release": "npm publish",
+    "release-next": "npm publish --dist-tag next"
   },
   "eslintConfig": {
     "extends": [
