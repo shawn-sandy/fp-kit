@@ -5,7 +5,7 @@
 First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, classless, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly digital products, websites apps and the likes.
 
 ---
-## Quick Start
+## Getting Started
 
 **Install**
 
@@ -13,34 +13,10 @@ First Paint is an easy to use CSS/SCSS starter library that contains accessibili
 * Install `npm i @shawnsandy/first-paint@next` latest version (next)
 * Yarn install `yarn add @shawnsandy/first-paint`
 
-**Simple & Easy copy paste option**
+## Usage
 
-* Create an empty html page
-* Copy and paste the code from [Gist](https://gist.githubusercontent.com/shawn-sandy/8460e6e400d3206c8a073367855ae381/raw/5309ceec672aa8a5332f2a8a52ed1efa6d63f63c/sample.html) this gist into your new HTML page
-* Edit/customize your page `markup and content`
-* Launch you page in your browser
-* Edit some more
-* Publish to the web :)
+Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
-## Customized Build
-
-* Copy and add the stylesheet below into the `<head></head>` of you HTML page
-
-```html
-<link
-  rel="stylesheet"
-  src="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint/dist/css/index.css"
-/>
-```
-
-Copy and add the stylesheet below into the `<head></head>` of you HTML page
-
-```html
-<link
-  rel="stylesheet"
-  src="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint/dist/css/index.css"
-/>
-```
 ## Modules
 
 ### Header
