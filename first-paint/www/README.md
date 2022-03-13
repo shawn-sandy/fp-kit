@@ -21,7 +21,8 @@ Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/index.css">
 ```
-> **Note:** you should consider the @next release as the latest beta version.
+
+!> **Note:** you should consider the @next release as the latest beta(stable) version.
 
 
 ## Modules
