@@ -10,12 +10,7 @@ First Paint is an easy to use CSS/SCSS starter library that contains accessibili
   * [Customized Build](#customized-build)
   * [Creating/Customizing an HTML5 page with FirstPaint](#creatingcustomizing-an-html5-page-with-firstpaint)
 
-    * [HTML5 Page](#html5-page)
-    * [HTML snippets markup](#html-snippets-markup)
-    * [Header](#header)
     * [Main](#main)
-    * [Navbar](#navbar)
-    * [Page Footer](#page-footer)
     * [Button](#button)
     * [Link Button](#link-button)
     * [Grid (w/list)](#grid-wlist)
@@ -25,15 +20,6 @@ First Paint is an easy to use CSS/SCSS starter library that contains accessibili
     * [Unordered List](#unordered-list)
     * [Ordered List (unstyled)](#ordered-list-unstyled)
     * [Unordered List (unstyled)](#unordered-list-unstyled)
-    * [Input](#input)
-    * [Label Required](#label-required)
-    * [Email](#email)
-    * [Checkbox](#checkbox)
-    * [Radio](#radio)
-    * [Select](#select)
-    * [Textarea](#textarea)
-    * [Textarea for code](#textarea-for-code)
-    * [Table](#table)
   * [Licence (MIT)](#licence-mit)
   * [Contribute](#contribute)
   * [Enjoy](#enjoy)
@@ -135,37 +121,18 @@ Or you can just copy and create your page using the snippet below.
 </html>
 ```
 
-### HTML snippets markup
-
-Copy and paste these snippets to build custom templates using fist-paint-CSS
 
 ### Header
 
 ```html
 <header>
-  <section>
-    <img src="img/fp.svg" alt="" />
-    <h2>Lightweight, Fast, Accessible, Inclusive</h2>
-    <p>
-      <span
-        >First Paint is lightweight easy to use CSS/SCSS starter library for
-        quickly scaffolding/building modern, mobile friendly websites.</span
-      >
-    </p>
-    <a
-      href="#"
-      role="button"
-      aria-label="Add word, cta action, to your button title"
-    >
-      <span>Get Started</span></a
-    >
-  </section>
+Header Section
 </header>
 ```
 
 ### Section
 
-```html
+```html preview
 <section id="articles">
   <article>
     <h2>Sample Article 1</h2>
