@@ -18,3 +18,13 @@
 @include checkbox.module();
 @include grid.module();
 @include button.module();
+
+
+/// customs styles for docsify
+
+.sidebar {
+  h1 {
+    display: flex;
+    place-content: center;
+  }
+}
