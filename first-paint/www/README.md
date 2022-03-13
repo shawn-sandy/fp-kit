@@ -118,6 +118,15 @@ Header Section
       <span>Get Started</span></a
 ```
 
+### Checkbox
+
+```html preview
+<label for="checkbox">
+  <input type="checkbox" id="checkbox" value="" />
+  Checkbox Label
+</label>
+```
+
 ### Grid (w/list)
 
 ```html preview
@@ -179,7 +188,7 @@ Header Section
 ### Table
 
 ```html preview
-  <table>
+  <table style="display: table">
     <thead style="background-color: var(--tbl-head-bg, #f5f5f5);">
       <tr>
         <td>First Name</td>
