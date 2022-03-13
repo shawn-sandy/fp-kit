@@ -1,6 +1,6 @@
 {
   "name": "@shawnsandy/first-paint",
-  "version": "2.7.21",
+  "version": "2.7.3",
   "private": false,
   "description": "First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly websites.",
   "keywords": [
@@ -44,12 +44,12 @@
     "11ty-prod": "eleventy && build",
     "build": "run-s build:*",
     "watch:index": "sass --watch src/index.scss:src/index.css src/custom-styles.scss:src/custom-styles.css src/components.scss:src/components.css  src/styles:src/css/. --load-path=node_modules --no-source-map",
-    "watch:v21": "sass --watch --style compressed src/v21/index.scss:src/v21/css/index.css src/v21/tokens:src/v21/css/tokens/.  src/v21/modules:src/v21/css/modules/. src/v21/components:src/v21/css/components/.--load-path=node_modules --source-map",
-    "build:v21": "run-s build-v21-prefix build-v21",
-    "build-v21-prefix": "postcss ./src/v21/css/**/*.css --base src/v21/css --use autoprefixer -d ./src/v21/vendor --no-map",
-    "build-v21": "postcss ./src/v21/**/*.css --base src/v21 -d ./dist/v21/ --ext min.css --map",
+    "watch:v3": "sass --watch --style compressed src/v3/index.scss:src/v3/css/index.css src/v3/tokens:src/v3/css/tokens/.  src/v3/modules:src/v3/css/modules/. src/v3/components:src/v3/css/components/. src/v3/styles:src/v3/css/styles/. --load-path=node_modules --source-map",
+    "watch:docs": "sass --watch --style compressed src/v3/index.scss:www/css/index.css src/v3/tokens:www/css/tokens/.  src/v3/modules:www/css/modules/. src/v3/components:www/css/components/. src/v3/styles:www/css/styles/. --load-path=node_modules --source-map",
+    "build:v3": "run-s build-v3-prefix build-v3",
+    "build-v3-prefix": "postcss ./src/v3/css/**/*.css --base src/v3/css --use autoprefixer -d ./src/v3/vendor --no-map",
+    "build-v3": "postcss ./src/v3/**/*.css --base src/v3 -d ./dist/v3/ --ext min.css --map",
     "watch:v2": "sass --watch --style compressed src/v2/index.scss:src/v2/css/index.css src/v2/tokens:src/v2/css/tokens/.  src/v2/modules:src/v2/css/modules/. src/v2/components:src/v2/css/components/.--load-path=node_modules --source-map",
-    "watch:docs": "sass --watch --style compressed src/v21/index.scss:www/css/index.css src/v21/tokens:www/css/tokens/.  src/v21/modules:src/www/css/modules/. src/v21/components:src/www/css/components/.--load-path=node_modules --source-map",
     "build:v2": "run-s build-v2-prefix build-v2",
     "build-v2-prefix": "postcss ./src/v2/css/**/*.css --base src/v2/css --use autoprefixer -d ./src/v2/vendor --no-map",
     "build-v2": "postcss ./src/v2/**/*.css --base src/v2 -d ./dist/v2/ --ext min.css --map",
@@ -94,5 +94,5 @@
     "> 0.2%",
     "not dead"
   ],
-  "gitHead": "1077c0a5691b023d213f15d9ba27f17717d0347c"
+  "gitHead": "1077c0a5691b023d33f15d9ba27f17717d0347c"
 }
