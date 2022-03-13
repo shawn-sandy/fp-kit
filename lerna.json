@@ -5,5 +5,10 @@
     "first-paint/",
     "components/react/*"
   ],
-  "version": "independent"
+  "version": "independent",
+  "command": {
+    "version": {
+      "message": "chore(release): publish %s"
+    }
+  }
 }

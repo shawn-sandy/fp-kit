@@ -1,6 +1,6 @@
 {
   "name": "@shawnsandy/first-paint",
-  "version": "2.7.3",
+  "version": "2.8.8",
   "private": false,
   "description": "First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly websites.",
   "keywords": [
@@ -60,6 +60,7 @@
     "production": "11ty-prod",
     "clean": "trash dist/**/",
     "clean:dist": "trash dist/**",
+    "release-next": "npm publish --tag next",
     "release": "npm publish"
   },
   "bugs": {
@@ -93,6 +94,5 @@
   "browserslist": [
     "> 0.2%",
     "not dead"
-  ],
-  "gitHead": "1077c0a5691b023d33f15d9ba27f17717d0347c"
+  ]
 }
