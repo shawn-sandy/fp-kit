@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.8.3...@shawnsandy/fp-react@0.8.4) (2022-03-13)
+
+
+### Bug Fixes
+
+* typo package json first-paint ([9b55241](https://github.com/shawn-sandy/fp-kit/commit/9b552411610e41029ff45953e82d04fc590953b0))
+
+
+
+
+
 ## [0.8.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.8.2...@shawnsandy/fp-react@0.8.3) (2022-03-13)
 
 **Note:** Version bump only for package @shawnsandy/fp-react

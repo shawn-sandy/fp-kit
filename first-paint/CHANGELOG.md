@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.8](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.7.6...@shawnsandy/first-paint@2.8.8) (2022-03-13)
+
+
+### Bug Fixes
+
+* typo package json first-paint ([b5d8816](https://github.com/shawn-sandy/fp-kit/commit/b5d88168f31c8e0ba13eae6bd337b1d8814b6eaa))
+
+
+
+
+
 ## [2.7.6](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.7.5...@shawnsandy/first-paint@2.7.6) (2022-03-13)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
