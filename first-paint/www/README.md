@@ -1,10 +1,10 @@
 # First Paint
 
-> Lightweight, Fast, Accessible, Inclusive
+ > ## Lightweight, Fast, Accessible, Inclusive
 
-First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, classless, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly digital products, websites apps and the likes.
+### First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, classless, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly digital products, websites apps and the likes.
+----------------------------------------------
 
----
 ## Getting Started
 
 **Install**
@@ -57,10 +57,7 @@ Header Section
 ### Navbar
 
 ```html preview
-<nav
-  style="background-color: var(--navbar-bg, #f8f9fa);
-   flex-direction: var(--nav-direction, row);"
->
+<nav>
   <ul>
     <li><a href="#">Link</a></li>
     <li><a href="#">Link</a></li>
@@ -101,15 +98,7 @@ Header Section
 ### Button
 
 ```html preview
-<button
-  type="button"
-  style="padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, 0.8rem);
-  display: var(--btn-dsp, inline-flex);
-  place-items: var(--btn-place, center);
-  justify-content: var(--btn-justify, center);
-  cursor: var(--btn-cursor, pointer);"
->
+<button>
   Default Button
 </button>
 ```
@@ -176,16 +165,13 @@ Header Section
   src="https://source.unsplash.com/random?w=800"
   loading="lazy"
   alt="Placeholder Image"
-  style="object-fit: var(--img-fit, undefined); aspect-ratio: var(--img-ratio, auto 4 / 3); width: var(--img-w, 100%); height: var(--img-h, auto); --img-w:480px;"
 />
 ```
 
 ### Table
 
 ```html preview
-  <table
-    style="display: var(--tbl-dsp, table); width: var(--tbl-width, 100%); border-collapse: var(--tbl-collapse, collapse); min-width: var(--tbl-min-w, 100%);"
-  >
+  <table>
     <thead style="background-color: var(--tbl-head-bg, #f5f5f5);">
       <tr>
         <td>First Name</td>
