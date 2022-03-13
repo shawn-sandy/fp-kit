@@ -1,17 +1,1 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @use "../modules/button";
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   src\v3\components\button.scss 1:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use \"../modules/button\";\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src\\v3\\components\\button.scss 1:1  root stylesheet";
-}
+:where(button, [style*="--btn"]){--btn-sm: calc(12rem / 16);--btn-md: calc(16rem / 16);--btn-lg: calc(21rem / 16);--btn-pill: 99rem;color:var(--btn-color, currentColor);background-color:var(--btn-bg, lightgray);font-size:var(--btn-fs, 0.875rem);display:var(--btn-dsp, inline-flex);gap:var(--btn-gap, 1rem);min-height:2.5rem;place-items:var(--btn-place, center);padding-inline:var(--btn-px, 1.4rem);padding-block:var(--btn-py, 0.8rem);border:var(--btn-border, none);border-radius:var(--btn-radius, 0.15rem);text-decoration:var(--btn-deco, none);transition:all .2s ease !important}button[type=submit],[style*="--btn: submit"]{--btn-bg: darkblue;--btn-color: white}button[disabled]{cursor:var(--btn-cursor-disabled, not-allowed);opacity:var(--btn-opacity-disabled, 0.5)}button:hover{filter:invert(1) hue-rotate 180deg;transform:scale(1.05)}button[type=reset],button[style*="--btn: 'reset'"]{--btn-bg: transparent;--btn-color: gray;--btn-border: gray medium solid}button[style*=lg]{--btn-fs: var(--btn-lg);--btn-min-h: 60px}/*# sourceMappingURL=button.css.map */
