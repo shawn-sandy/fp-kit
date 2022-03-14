@@ -32,3 +32,9 @@ window.$docsify = {
   // eslint-disable-next-line no-undef
   plugins: [EditOnGithubPlugin.create(editPath, null, editMsg)]
 }
+
+
+function imgError(event) {
+  console.log("Image loading error" + event.currentTarget.src);
+  event.currentTarget.src = "https://via.placeholder.com/800";
+ };

@@ -2,5 +2,7 @@
 - [Overiew](/)
 - Components
   - [Buttons](/components/button)
-  - [Grid](/components/grid)
   - [Details disclosure](/components/DETAILS)
+  - [Grid](/components/grid)
+  - [Img](/components/Img)
+  - [Table](/Components/table)

@@ -20,7 +20,7 @@ to: <%= absPath %>/<%= name %>.md
   color: var(--color, currentColor);
 ```
 
-## <%= name %> Examples
+## Examples
 
 ### Default <%= name %>
 
