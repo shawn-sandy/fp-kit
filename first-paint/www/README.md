@@ -6,6 +6,9 @@
 
 ----------------------------------------------
 
+## Features
+
+!> _TODO_ add features description
 ## Getting Started
 
 **Install**
@@ -24,7 +27,9 @@ Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
 !> **Note:** you should consider the @next release as the latest beta(stable) version.
 
+## Usage
 
+!> Add usage info description
 ## Modules
 
 ### Header
@@ -133,9 +138,7 @@ Header Section
 <section style="max-width: min(80vw, 100vw);">
   <section role="grid">
     <div
-      role="row"
-      style="display: var(--gird-dsp, grid); grid-template-columns: var(--gird-cols, repeat(auto-fill, calc(100% / 4))); grid-gap: var(--gird-gap, 1em); --grid-count:2;"
-    >
+      role="row">
       <div role="gridcell">
         <h3>Grid col</h3>
         <p>
