@@ -6,6 +6,9 @@
 
 ----------------------------------------------
 
+## Features
+
+!> _TODO_ add features description
 ## Getting Started
 
 **Install**
@@ -24,7 +27,9 @@ Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
 !> **Note:** you should consider the @next release as the latest beta(stable) version.
 
+## Usage
 
+!> Add usage info description
 ## Modules
 
 ### Header
