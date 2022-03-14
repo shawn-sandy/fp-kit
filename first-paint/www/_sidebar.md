@@ -5,4 +5,5 @@
   - [Details disclosure](/components/DETAILS)
   - [Grid](/components/grid)
   - [Img](/components/Img)
-  - [Table](/Components/table)
+  - [Navbar](/components/Navbar)
+  - [Table](/components/table)
