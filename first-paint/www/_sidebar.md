@@ -3,3 +3,4 @@
 - Components
   - [Buttons](/components/button)
   - [Grid](/components/grid)
+  - [Details disclosure](/components/DETAILS)

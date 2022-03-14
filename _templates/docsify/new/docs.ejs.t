@@ -2,7 +2,7 @@
 to: <%= absPath %>/<%= name %>.md
 ---
 
-# Buttons
+# <%= name %>
 
 <%= description ? description : '?>  _TODO_ add description' %>
 

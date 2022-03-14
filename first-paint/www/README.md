@@ -27,7 +27,6 @@ Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
 !> **Note:** you should consider the @next release as the latest beta(stable) version.
 
-## Usage
 
 !> Add usage info description
 ## Modules
@@ -215,6 +214,19 @@ Header Section
 </section>
 
 ```
+
+### Details Disclosure
+
+```html preview
+<details
+  title="Element Title">
+  <summary>
+    Element Title
+  </summary>
+  <p>Add some content here to make it work</p>
+</details>
+```
+
 
 ## Licence (MIT)
 
