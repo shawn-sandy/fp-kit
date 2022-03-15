@@ -4,7 +4,7 @@ to: <%= absPath %>/<%= name %>.md
 
 # <%= name %>
 
-<%= description ? description : '?>  _TODO_ add description' %>
+<%= description ? description : "?>  _TODO_ add description" %>
 
 ## <%= name %> Variables
 
@@ -27,3 +27,14 @@ to: <%= absPath %>/<%= name %>.md
 ```html preview
 ...
 ```
+
+
+----
+### References/Additional info
+
+
+[MDN GUIDELINES AND SEPCFICATIONS]()
+
+[ACCESSIBILITY GUIDE]()
+
+----

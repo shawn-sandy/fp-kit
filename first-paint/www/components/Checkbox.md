@@ -1,6 +1,7 @@
 # Checkbox
 
-?&gt;  _TODO_ add description
+?>  _TODO_ add description
+
 
 ## Checkbox Variables
 
@@ -26,5 +27,13 @@
   Checkbox Label
 </label>
 ```
+
+----
+### References/Additional info
+
+
+[MDN GUIDELINES AND SEPCFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#see_also)
+
+[ACCESSIBILITY GUIDE]()
 
 ----

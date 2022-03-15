@@ -48,3 +48,13 @@ font-size: var(--summary-fs, 1.1rem);
 </details>
 ```
 
+
+----
+### References/Additional info
+
+
+[MDN GUIDELINES AND SEPCFICATIONS]()
+
+[ACCESSIBILITY GUIDE]()
+
+----

@@ -75,3 +75,13 @@ Style attributes are applied to the `figure` element.
   <figcaption>A Caption for my image</figcaption>
 </figure>
 ```
+
+----
+### References/Additional info
+
+
+[MDN GUIDELINES AND SEPCFICATIONS]()
+
+[ACCESSIBILITY GUIDE]()
+
+----

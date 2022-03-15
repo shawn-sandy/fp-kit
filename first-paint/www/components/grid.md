@@ -132,3 +132,14 @@ Change the grid `--grid-cols: 2` to set the number of grid columns.
 </section>
 
 ```
+
+
+----
+### References/Additional info
+
+
+[MDN GUIDELINES AND SEPCFICATIONS]()
+
+[ACCESSIBILITY GUIDE]()
+
+----
