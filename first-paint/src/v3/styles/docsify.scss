@@ -11,7 +11,6 @@
 @use "../modules/grid";
 @use "../modules/cards";
 @use "../tokens/colors-scales.scss";
-
 // @include container.module();
 @include nav.module();
 @include table.module();
@@ -22,7 +21,7 @@
 @include button.module();
 @include cards.module();
 
-/// customs styles for docsify
+// customs styles for docsify
 
 .sidebar {
   h1 {
