@@ -1,4 +1,4 @@
-# First Paint (beta)
+# First Paint 3.0 (beta)
 
  > ## Lightweight, Fast, Accessible, Inclusive
 
@@ -6,6 +6,7 @@
 
 ----------------------------------------------
 
+?> Version 3.0 is currently in beta development. While we don't anticipate many changes, we are constantly adding new features and improving the existing ones. Please be aware that some features may change in the future.
 ## Features
 
 #### Easy to use
@@ -252,6 +253,9 @@ Header Section
 </details>
 ```
 
+## Changelog
+
+You can view recent changes to this project on [Github](https://github.com/shawn-sandy/fp-kit/blob/main/first-paint/CHANGELOG.md)
 
 ## Licence (MIT)
 

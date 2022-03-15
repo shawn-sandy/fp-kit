@@ -1,7 +1,10 @@
 <!-- TODO: Complete with your own sidebar structure and enable sidebar in index.html - or delete this file. -->
-- [Overiew](/)
+- [First Paint(beta)](/)
+- Tokens
+  - [CSS Tokens](/tokens/tokens)
 - Components
   - [Buttons](/components/button)
+  - [Cards](/components/Cards)
   - [Checkbox](/components/Checkbox)
   - [Details disclosure](/components/DETAILS)
   - [Grid](/components/grid)

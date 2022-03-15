@@ -12,7 +12,7 @@
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
-  --btn-pill: 99rem;
+  --btn-pill: 100rem;
   @content;
 }
 @mixin rules() {
@@ -28,7 +28,7 @@
   padding-inline: var(--btn-px, 1.4rem);
   padding-block: var(--btn-py, 0.8rem);
   border: var(--btn-border, none);
-  border-radius: var(--btn-radius, 0.15rem);
+  border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
   transition: all 0.2s ease !important;
 
