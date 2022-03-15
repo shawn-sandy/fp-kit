@@ -98,10 +98,23 @@ style="--btn-fs:var(--btn-lg);"
 </button>
 ```
 
+### Pill Button
+
+```html
+style="--btn-rds:var(--btn-pill);"
+```
+
+```html preview
+<button
+  type="button"
+  style="--btn-rds: var(--btn-pill);"
+>
+  Pill button
+</button>
+```
 
 ----
 ## References/Additional info
-
 
 [MDN GUIDELINES AND SEPCFICATIONS]()
 

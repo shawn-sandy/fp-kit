@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "yatki.vscode-surround",
-    "darkriszty.markdown-table-prettify"
+    "darkriszty.markdown-table-prettify",
+    "Tyriar.lorem-ipsum"
   ]
 }

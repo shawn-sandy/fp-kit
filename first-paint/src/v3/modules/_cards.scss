@@ -1,0 +1,60 @@
+/**
+ * **************************************
+ *  FirsPaint
+ *  Author: Shawn Sandy
+ *  Date: 2021-04-01
+ * **************************************
+ * @format
+ */
+
+@mixin props() {
+  // * css custom properties
+  --cd-sm: 1rem;
+  --cd-md: 1.5rem;
+  --cd-lg: 2rem;
+  --cd-xl: 3rem;
+  // TODO: decide which variable name works best
+  --card-sm: 1rem;
+  --card-md: 1.5rem;
+  --card-lg: 2rem;
+  --card-xl: 3rem;
+  --cd-shadow-sm: 0 0.1rem 0.15rem rgba(0, 0, 0, 0.1);
+  --cd-shadow-md: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+  --cd-shadow-lg: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+  @content;
+}
+
+@mixin rules {
+  @include props;
+
+  // * css rules/styles
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+  }
+  display: var(--card-dsp, flex);
+  flex-direction: var(--card-direction, column);
+  padding: var(--card, var(--card-sm));
+  border-radius: var(--card-radius, 0.2rem);
+  background-color: var(--card-bg, var(--bg, #fff));
+  box-shadow: var(--cd-shadow);
+  border: var(--card-border, thin solid whitesmoke);
+  @content;
+}
+
+@mixin styles {
+  // * css style utilities
+  @content;
+}
+
+/**
+* tag or classname name nav, .nav
+*/
+@mixin module {
+  div[role="presentation"] {
+    @include rules;
+  }
+  @include styles;
+}
