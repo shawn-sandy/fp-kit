@@ -9,6 +9,7 @@
 @use "../modules/nav";
 @use "../modules/table";
 @use "../modules/grid";
+@use "../modules/cards";
 
 // @include container.module();
 @include nav.module();
@@ -18,7 +19,7 @@
 @include checkbox.module();
 @include grid.module();
 @include button.module();
-
+@include cards.module();
 
 /// customs styles for docsify
 

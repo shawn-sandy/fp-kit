@@ -4,6 +4,7 @@
   - [CSS Tokens](/tokens/tokens)
 - Components
   - [Buttons](/components/button)
+  - [Cards](/components/Cards)
   - [Checkbox](/components/Checkbox)
   - [Details disclosure](/components/DETAILS)
   - [Grid](/components/grid)
