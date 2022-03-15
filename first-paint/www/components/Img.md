@@ -77,7 +77,7 @@ Style attributes are applied to the `figure` element.
 ```
 
 ----
-### References/Additional info
+## References/Additional info
 
 
 [MDN GUIDELINES AND SEPCFICATIONS]()

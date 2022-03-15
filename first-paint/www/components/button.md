@@ -100,7 +100,7 @@ style="--btn-fs:var(--btn-lg);"
 
 
 ----
-### References/Additional info
+## References/Additional info
 
 
 [MDN GUIDELINES AND SEPCFICATIONS]()

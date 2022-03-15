@@ -29,7 +29,7 @@
 ```
 
 ----
-### References/Additional info
+## References/Additional info
 
 
 [MDN GUIDELINES AND SEPCFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#see_also)

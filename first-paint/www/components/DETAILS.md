@@ -50,7 +50,7 @@ font-size: var(--summary-fs, 1.1rem);
 
 
 ----
-### References/Additional info
+## References/Additional info
 
 
 [MDN GUIDELINES AND SEPCFICATIONS]()
