@@ -15,4 +15,3 @@
   - [Navbar](/components/Navbar)
   - [Table](/components/table)
 - [Changelog](/CHANGELOG)
-
