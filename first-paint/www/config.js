@@ -9,7 +9,7 @@ window.$docsify = {
   search: {
     placeholder: 'Search',
     noData: 'No results found.',
-    depth: 2,
+    depth: 3,
     keys: ['title', 'subtitle', 'path'],
     paths: ['/']
   },

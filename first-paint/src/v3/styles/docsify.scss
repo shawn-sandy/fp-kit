@@ -10,6 +10,7 @@
 @use "../modules/table";
 @use "../modules/grid";
 @use "../modules/cards";
+@use "../tokens/colors-scales.scss";
 
 // @include container.module();
 @include nav.module();
