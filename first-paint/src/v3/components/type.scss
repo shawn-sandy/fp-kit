@@ -34,8 +34,11 @@ p,
   --fs: var(--p-fs, var(--rem));
   --fw: normal;
   --lh: 1.7;
+  --spacing: 0.5rem;
 
   margin: var(--p-m, 0);
+  line-height: var(--lh, 1.6rem);
+  word-spacing: 0.05rem;
 
   i {
     font-style: italic;
