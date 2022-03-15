@@ -58,8 +58,7 @@ Add shadows to your cards with `style="--card:var(--cd-lg)` use the following cu
 <div role="presentation" style="--card:var(--cd-lg); --cd-shadow:var(--cd-shadow-lg);">
   <h3>Card Title</h3>
   <p>
-    First paint is a performance-first, accessibility-driven, SCSS/CSS
-    micro-framework...
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
   </p>
 </div>
 ```
@@ -70,8 +69,7 @@ Add shadows to your cards with `style="--card:var(--cd-lg)` use the following cu
 <div role="presentation" style="--card:var(--cd-md); --cd-shadow:var(--cd-shadow-sm);">
   <h3>Card Title</h3>
   <p>
-    First paint is a performance-first, accessibility-driven, SCSS/CSS
-    micro-framework...
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
   </p>
 </div>
 ```
