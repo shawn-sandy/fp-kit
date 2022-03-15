@@ -8,7 +8,32 @@
 
 ## Features
 
-!> _TODO_ add features description
+#### Easy to use
+
+Drop into any semantic HTML5 page and customize global CSS varibles to your liking.
+
+```html
+https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.css
+```
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@2.8.8/dist/v3/css/index.min.css">
+
+```
+
+#### Classlesss
+
+No need to use classes, just use semantic HTML5 elements and  attributes.
+
+#### Modular
+
+Grab the entire library *(5kb-20kb)* or use only the modules you need.
+
+#### Dynamic CSS Styles
+
+Customize you CSS styles with variables, custom properties, mixins.
+
+----
 ## Getting Started
 
 **Install**
@@ -22,13 +47,13 @@
 Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.css">
 ```
 
 !> **Note:** you should consider the @next release as the latest beta(stable) version.
 
 
-!> Add usage info description
+?> Add usage info description
 ## Modules
 
 ### Header
