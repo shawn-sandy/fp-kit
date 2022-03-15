@@ -155,13 +155,39 @@
 
 ## Examples
 
+### White
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--white)">
+  <h3>white</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Black
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--black); color: white" >
+  <h3 style=" color: white">black</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
 ### Gray 500
 
 
 ```html preview
 
 <div role="presentation" style="background-color: var(--gray-500)">
-  <h3>Gray-500</h3>
+  <h3>gray-500</h3>
   <p>
     Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
   </p>
@@ -175,6 +201,153 @@
 
 <div role="presentation" style="background-color: var(--primary-500)">
   <h3>primary-500</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Error 500
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--error-500)">
+  <h3>error-500</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+
+### Warning 500
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--warning-500)">
+  <h3>warning-500</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+
+### Success 500
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--success-500)">
+  <h3>success-500</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+
+
+### Blue Gray 500
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--blue-gray-500)">
+  <h3>blue-gray-500</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Blue Light 500
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--blue-light-500)">
+  <h3>blue-light-500</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Blue 500
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--blue-500)">
+  <h3>blue-500</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Indigo 500
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--indigo-500)">
+  <h3>indigo-500</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Purple 500
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--purple-500)">
+  <h3>purple-500</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Pink 500
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--pink-500)">
+  <h3>pink-500</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Rose 500
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--rose-500)">
+  <h3>rose-500</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Orange 500
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--orange-500)">
+  <h3>orange-500</h3>
   <p>
     Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
   </p>
