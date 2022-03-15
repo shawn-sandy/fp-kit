@@ -109,14 +109,12 @@ style="--btn-rds:var(--btn-pill);"
   type="button"
   style="--btn-rds: var(--btn-pill);"
 >
-  Large Button
+  Pill button
 </button>
 ```
 
-
 ----
 ## References/Additional info
-
 
 [MDN GUIDELINES AND SEPCFICATIONS]()
 
