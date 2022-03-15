@@ -2,6 +2,7 @@
 - [First Paint(beta)](/)
 - Tokens
   - [CSS Tokens](/tokens/tokens)
+  - [Scaled Color Tokens](/tokens/color)
 - Components
   - [Buttons](/components/button)
   - [Cards](/components/Cards)
