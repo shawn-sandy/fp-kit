@@ -1,10 +1,10 @@
 <!-- TODO: Complete with your own sidebar structure and enable sidebar in index.html - or delete this file. -->
 - [First Paint(beta)](/)
-- Tokens
-  - [CSS Tokens](/tokens/tokens)
+- [Changelog](/CHANGELOG)
+- [Tokens](/tokens/tokens)
   - [Scaled Color Tokens](/tokens/color)
   - [Named Color Tokens](/tokens/colornames)
-- Components
+- Modules
   - [Buttons](/components/button)
   - [Cards](/components/Cards)
   - [Checkbox](/components/Checkbox)
@@ -13,3 +13,4 @@
   - [Img](/components/Img)
   - [Navbar](/components/Navbar)
   - [Table](/components/table)
+

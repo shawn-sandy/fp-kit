@@ -252,11 +252,6 @@ Header Section
   <p>Add some content here to make it work</p>
 </details>
 ```
-
-## Changelog
-
-You can view recent changes to this project on [Github](https://github.com/shawn-sandy/fp-kit/blob/main/first-paint/CHANGELOG.md)
-
 ## Licence (MIT)
 
 The MIT License (MIT)

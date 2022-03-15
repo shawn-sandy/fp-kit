@@ -6,7 +6,7 @@ export default create({
   base: 'light',
   brandTitle: 'FirstPaint',
   brandUrl: '/',
-  brandImage: 'https://res.cloudinary.com/dqjs95c7n/image/upload/v1644774792/fp-brand-rgb-sm_v1rtjz.svg',
+  brandImage: 'https://res.cloudinary.com/dqjs95c7n/image/upload/v1647385126/fp-text-logo-sm_efd59g.svg',
   // UI settings
   appBg: 'white',
   appContentBg: 'white',
