@@ -3,6 +3,7 @@
 - Tokens
   - [CSS Tokens](/tokens/tokens)
   - [Scaled Color Tokens](/tokens/color)
+  - [Named Color Tokens](/tokens/colornames)
 - Components
   - [Buttons](/components/button)
   - [Cards](/components/Cards)

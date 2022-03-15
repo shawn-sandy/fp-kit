@@ -1,17 +1,23 @@
-/* stylelint-disable alpha-value-notation */
-/* stylelint-disable alpha-value-notation */
-:root {
-  --gray-gainsboro: rgba(220, 220, 220, 1);
+# CSS Tokens (variables)
+
+?>  _TODO_ add description
+
+## Tokens Variables
+
+## Color scale tokens
+
+```css
+--gray-gainsboro: rgba(220, 220, 220, 1);
   --gray-light-gray: rgba(211, 211, 211, 1);
   --gray-silver: rgba(192, 192, 192, 1);
   --gray-dark-gray: rgba(169, 169, 169, 1);
-  --gray: rgba(128, 128, 128, 1);
+  --gray-gray: rgba(128, 128, 128, 1);
   --gray-dim-gray: rgba(105, 105, 105, 1);
   --gray-light-slate-gray: rgba(119, 136, 153, 1);
   --gray-slate-gray: rgba(112, 128, 144, 1);
   --gray-dark-slate-gray: rgba(47, 79, 79, 1);
   --gray-black: rgba(0, 0, 0, 1);
-  --white: rgba(255, 255, 255, 1);
+  --white-white: rgba(255, 255, 255, 1);
   --white-snow: rgba(255, 250, 250, 1);
   --white-honey-dew: rgba(240, 255, 240, 1);
   --white-mint-cream: rgba(245, 255, 250, 1);
@@ -34,10 +40,10 @@
   --red-light-coral: rgba(240, 128, 128, 1);
   --red-indian-red: rgba(205, 92, 92, 1);
   --red-crimson: rgba(220, 20, 60, 1);
-  --red: rgba(255, 0, 0, 1);
+  --red-red: rgba(255, 0, 0, 1);
   --red-fire-brick: rgba(178, 34, 34, 1);
   --red-dark-red: rgba(139, 0, 0, 1);
-  --orange: rgba(255, 165, 0, 1);
+  --orange-orange: rgba(255, 165, 0, 1);
   --orange-dark-orange: rgba(255, 140, 0, 1);
   --orange-coral: rgba(255, 127, 80, 1);
   --orange-tomato: rgba(255, 99, 71, 1);
@@ -140,5 +146,56 @@
   --pink-hot-pink: rgba(255, 105, 180, 1);
   --pink-deep-pink: rgba(255, 20, 147, 1);
   --pink-pale-violet-red: rgba(219, 112, 147, 1);
-  --pink-medium-violet-red: rgba(199, 21, 133, 1);
-}
+  --pink-medium-violet-red: rgba(199, 21,
+```
+
+## Examples
+
+### Gray-gainsboro
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--gray-gainsboro)">
+  <h3>gray-gainsboro</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Black
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--black); color: white" >
+  <h3 style=" color: white">black</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Red-light-salmon
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--red-light-salmon); color: white" >
+  <h3 style=" color: white">red-light-salmon</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+
+----
+## References/Additional info
+
+[MDN GUIDELINES AND SEPCFICATIONS]()
+
+[ACCESSIBILITY GUIDE]()
+
+----
