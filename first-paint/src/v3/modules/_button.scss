@@ -12,7 +12,7 @@
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
-  --btn-pill: 99rem;
+  --btn-pill: 100rem;
   @content;
 }
 @mixin rules() {

@@ -98,6 +98,21 @@ style="--btn-fs:var(--btn-lg);"
 </button>
 ```
 
+### Pill Button
+
+```html
+style="--btn-rds:var(--btn-pill);"
+```
+
+```html preview
+<button
+  type="button"
+  style="--btn-radius: var(--btn-pill);"
+>
+  Large Button
+</button>
+```
+
 
 ----
 ## References/Additional info
