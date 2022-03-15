@@ -19,6 +19,7 @@
   background-color: var(--detail-bg, whitesmoke);
   border: var(--detail-border, none);
   border-radius: 0.5rem;
+  width: var(--details, min(100%, 350px));
 
   :where(div, aside, p, ul) {
     padding: var(--summary-pd, 0 1rem 1rem 1rem);

@@ -4,21 +4,39 @@
 
 ## Grid variables
 
+### Grid rules
+
 ```css
+/* [role=grid] */
 --grid-gap: 1rem;
-  --grid-count: 4;
-  --grid-min-width: calc(250rem / 16);
-/**
-   * Calculated values.
-   */
-  --gap-count: calc(var(--grid-count) - 1);
-  --total-gap-width: calc(
-    var(--gap-count) * var(--grid-gap)
-  );
-  --grid-max-width: calc(
-    (100% - var(--total-gap-width)) / var(--grid-count)
-  );
+--grid-count: 4;
+--grid-min-width: calc(250rem / 16);
+--gap-count: calc(var(--grid-count) - 1);
+--total-gap-width: calc(
+  var(--gap-count) * var(--grid-gap)
+);
+--grid-max-width: calc(
+  (100% - var(--total-gap-width)) / var(--grid-count)
+);
+
 ```
+
+### Grid row rules
+
+```css
+/* [role=row] */
+--grid-cols-tpl: repeat(
+auto-fill,
+minmax(
+  max(var(--grid-min-width), var(--grid-max-width)),
+  1fr
+)
+);
+grid-template-columns: var(--grid-cols-tpl);
+grid-gap: var(--grid-gap);
+```
+
+## Grid Examples
 
 ### Default Grid (4cols)
 
@@ -66,15 +84,15 @@
 
 ### Two column grid
 
-Change the grid `--grid-count: 2` to set the number of grid columns.
+Change the grid `--grid-cols: 2` to set the number of grid columns.
 
 ```html
- style="--grid-count: 2"
+ style="--grid-cols: 2"
 ```
 
 ```html preview
 <section style="max-width: min(80vw, 100vw);">
-  <section role="grid" style="--grid-count: 2">
+  <section role="grid" style="--grid-cols: 2">
     <div
       role="row">
       <div role="gridcell">
@@ -114,3 +132,14 @@ Change the grid `--grid-count: 2` to set the number of grid columns.
 </section>
 
 ```
+
+
+----
+## References/Additional info
+
+
+[MDN GUIDELINES AND SEPCFICATIONS]()
+
+[ACCESSIBILITY GUIDE]()
+
+----
