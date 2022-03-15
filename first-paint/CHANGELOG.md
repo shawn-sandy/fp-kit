@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.8.9...@shawnsandy/first-paint@2.9.0) (2022-03-15)
+
+
+### Features
+
+* add card components readme ([4569260](https://github.com/shawn-sandy/fp-kit/commit/456926037ff0e90905c05e2e0ed4684e1aa4f887))
+* move sidebar toggle up a bit ([9e7198d](https://github.com/shawn-sandy/fp-kit/commit/9e7198d6d46ccd89cb91b9d3f8cc5698f0eabaa6))
+
+
+
+
+
+
 ## [2.8.9](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.8.8...@shawnsandy/first-paint@2.8.9) (2022-03-14)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
