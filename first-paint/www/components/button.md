@@ -107,7 +107,7 @@ style="--btn-rds:var(--btn-pill);"
 ```html preview
 <button
   type="button"
-  style="--btn-radius: var(--btn-pill);"
+  style="--btn-rds: var(--btn-pill);"
 >
   Large Button
 </button>
