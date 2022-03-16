@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.9.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.0...@shawnsandy/first-paint@2.9.1) (2022-03-16)
+
+
+### Features
+
+* add logo to the README page ([70abdf7](https://github.com/shawn-sandy/fp-kit/commit/70abdf76a173c9b9e5e1e9068c47f5bd78d88777))
+* add update logo/brand image ([b688416](https://github.com/shawn-sandy/fp-kit/commit/b68841658917f867b642b71832b6a9ad7fac1c81))
+
+
+
+
+
+
 # [2.9.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.8.9...@shawnsandy/first-paint@2.9.0) (2022-03-15)
 
 
