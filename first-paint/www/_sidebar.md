@@ -12,6 +12,7 @@
   - [Checkbox](/components/Checkbox)
   - [Details disclosure](/components/DETAILS)
   - [Grid](/components/grid)
+  - [Header](/components/header)
   - [Img](/components/Img)
   - [Navbar](/components/Navbar)
   - [Table](/components/table)

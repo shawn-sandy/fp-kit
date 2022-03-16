@@ -1,7 +1,13 @@
 ---
 to: <%= absPath %>/<%= name %>.scss
 ---
-
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
 
 @mixin props() {
   // * css custom properties
@@ -24,6 +30,8 @@ to: <%= absPath %>/<%= name %>.scss
 * tag or classname name nav, .nav
 */
 @mixin module {
-  @include rules;
+  <%= name %> {
+    @include rules;
+  }
   @include styles;
 }

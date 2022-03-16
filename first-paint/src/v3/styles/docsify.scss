@@ -1,5 +1,6 @@
 @use "../modules/reset.scss";
 @use "../modules/global.scss";
+@use "../modules/header.scss";
 @use "../tokens/colors.scss";
 @use "../modules/container";
 @use "../modules/button";
@@ -14,6 +15,7 @@
 @use "../components/type.scss";
 // @include container.module();
 @include nav.module();
+@include header.module();
 @include table.module();
 @include details-summary.module();
 @include img.module();
