@@ -13,13 +13,13 @@
 
 ## [Features](/FEATURES)
 
-- [x] Easy to use
-- [x] Classless
-- [x] Modular
-- [x] Dynamic CSS Styles
-- [x] Accessible
-- [x] Lightweight
-- [x] Customizable
+* Easy to use
+* Classless
+* Modular
+* Dynamic Styles
+* Accessible
+* Lightweight
+* Fully Customizable CSS/SCSS
 
 [Read more abot our features/modules and see what's new in First Paint 3.0 here](/FEATURES).
 
@@ -31,7 +31,7 @@
 * Install `npm i @shawnsandy/first-paint@next` latest version (next)
 * Yarn install `yarn add @shawnsandy/first-paint`
 
-## Usage
+## Quick Start
 
 Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
@@ -44,12 +44,14 @@ Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
 ?> Add usage info description
 
-## Browse Content
+## Tokens
 
-- [Tokens](/tokens/tokens)
-  - [Scaled Color Tokens](/tokens/color)
-  - [Named Color Tokens](/tokens/colornames)
-- Modules
+- [Design Tokens](/tokens/tokens)
+- [Scaled Color Tokens](/tokens/color)
+- [Named Color Tokens](/tokens/colornames)
+
+## Modules
+
   - [Buttons](/components/button)
   - [Content elements](/components/content)
   - [Cards](/components/Cards)
@@ -59,7 +61,6 @@ Copy and add the stylesheet below into the `<head></head>` of you HTML page...
   - [Img](/components/Img)
   - [Navbar](/components/Navbar)
   - [Table](/components/table)
-- [Changelog](/CHANGELOG)
 
 ## Licence (MIT)
 
@@ -77,6 +78,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 * Edit code `projects/ideas`
 * Submit pull request
 
-## Enjoy
-
-**Wakanda Forever :)**
+## Hope Enjoy!
