@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.9.2](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.1...@shawnsandy/first-paint@2.9.2) (2022-03-16)
+
+
+### Features
+
+* add header module w/docs ([52dc8b1](https://github.com/shawn-sandy/fp-kit/commit/52dc8b120c2699ca8f051640d6df15c9c8275be5))
+
+
+
+
+
 ## [2.9.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.0...@shawnsandy/first-paint@2.9.1) (2022-03-16)
 
 
