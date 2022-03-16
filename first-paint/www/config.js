@@ -17,7 +17,7 @@ window.$docsify = {
   loadSidebar: true,
   subMaxLevel: 3,
   logo: 'https://res.cloudinary.com/dqjs95c7n/image/upload/v1647385126/fp-text-logo-sm_efd59g.svg',
-  themeColor: '#001524', // TODO: Set your own color.
+  themeColor: '#008000', // TODO: Set your own color.
   copyCode: {
     buttonText: 'Copy',
     errorText: 'Error',

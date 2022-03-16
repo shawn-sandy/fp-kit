@@ -1,3 +1,6 @@
+![first paint logo](https://res.cloudinary.com/dqjs95c7n/image/upload/v1647389048/fp-text-logo_rbstcw.svg)
+
+-------
 # First Paint 3.0 (beta)
 
  > ## Lightweight, Fast, Accessible, Inclusive

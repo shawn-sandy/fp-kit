@@ -1,4 +1,3 @@
-<!-- TODO: Complete with your own sidebar structure and enable sidebar in index.html - or delete this file. -->
 - [First Paint v3.0(beta)](/)
 - [Features](/FEATURES)
 - [Tokens](/tokens/tokens)
