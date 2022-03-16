@@ -37,7 +37,7 @@ Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
 ?> Add usage info description
 
-## Content Nav
+## Browse Content
 
 - [Tokens](/tokens/tokens)
   - [Scaled Color Tokens](/tokens/color)
