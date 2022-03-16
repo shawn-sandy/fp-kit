@@ -53,6 +53,7 @@
 
  .content {
     padding-bottom: 5rem !important;
+    font-size: 1rem !important;
   }
 
   .sidebar-toggle {
@@ -70,4 +71,11 @@
   border-radius: var(--sl-border-radius-medium);
   background-color: var(--sl-color-neutral-0);
   padding: 0.5rem;
+}
+.docsify-pagination-container {
+  padding-block: 2rem;
+
+  svg {
+    display: inline-block;
+  }
 }

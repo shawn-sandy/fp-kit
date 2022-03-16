@@ -25,7 +25,9 @@ to: <%= absPath %>/<%= name %>.md
 ### Default <%= name %>
 
 ```html preview
-...
+<button>
+<% name %>
+</button>
 ```
 
 
@@ -33,7 +35,7 @@ to: <%= absPath %>/<%= name %>.md
 ## References/Additional info
 
 
-[MDN GUIDELINES AND SEPCFICATIONS]()
+[MDN GUIDELINES AND SPECFICATIONS]()
 
 [ACCESSIBILITY GUIDE]()
 
