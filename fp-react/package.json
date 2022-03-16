@@ -47,7 +47,8 @@
     "compile": "rollup -c",
     "compile:clean": "rimraf lib && rollup -c",
     "release": "npm publish",
-    "release-next": "npm publish --tag next"
+    "release-next": "npm publish --tag next",
+    "chromatic": "npx chromatic --project-token=0fcc87f34f0e"
   },
   "eslintConfig": {
     "extends": [

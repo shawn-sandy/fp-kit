@@ -1,5 +1,6 @@
 - [First Paint v3.0(beta)](/)
 - [Features](/FEATURES)
+- [Changes](/CHANGELOG)
 - [Tokens](/tokens/tokens)
   - [Scaled Color Tokens](/tokens/color)
   - [Named Color Tokens](/tokens/colornames)
@@ -13,4 +14,4 @@
   - [Img](/components/Img)
   - [Navbar](/components/Navbar)
   - [Table](/components/table)
-- [Changelog](/CHANGELOG)
+- FP Labs
