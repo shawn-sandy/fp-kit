@@ -1,4 +1,4 @@
-![first paint logo](https://res.cloudinary.com/dqjs95c7n/image/upload/v1647389048/fp-text-logo_rbstcw.svg)
+![first paint logo](https://res.cloudinary.com/dqjs95c7n/image/upload/v1647442611/fp-text-logo-xl_vrsh8c.svg)
 
 -------
 # First Paint 3.0 (beta)
@@ -13,10 +13,17 @@
 
 ## [Features](/FEATURES)
 
-Check out our features/modules and see what's new in [First Paint 3.0 here](/FEATURES).
+- [x] Easy to use
+- [x] Classless
+- [x] Modular
+- [x] Dynamic CSS Styles
+- [x] Accessible
+- [x] Lightweight
+- [x] Customizable
+
+[Read more abot our features/modules and see what's new in First Paint 3.0 here](/FEATURES).
+
 ## Getting Started
-
-
 
 **Install**
 
@@ -37,7 +44,7 @@ Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
 ?> Add usage info description
 
-## Content Nav
+## Browse Content
 
 - [Tokens](/tokens/tokens)
   - [Scaled Color Tokens](/tokens/color)

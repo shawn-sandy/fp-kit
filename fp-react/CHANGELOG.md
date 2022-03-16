@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.7](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.8.6...@shawnsandy/fp-react@0.8.7) (2022-03-16)
+
+
+### Features
+
+* add update logo/brand image ([b688416](https://github.com/shawn-sandy/fp-kit/commit/b68841658917f867b642b71832b6a9ad7fac1c81))
+
+
+
+
+
+
 ## [0.8.6](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.8.5...@shawnsandy/fp-react@0.8.6) (2022-03-15)
 
 **Note:** Version bump only for package @shawnsandy/fp-react
