@@ -11,6 +11,7 @@
 @use "../modules/grid";
 @use "../modules/cards";
 @use "../tokens/colors-scales.scss";
+@use "../components/type.scss";
 // @include container.module();
 @include nav.module();
 @include table.module();
