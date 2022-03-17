@@ -1,6 +1,3 @@
----
-to: <%= absPath %>/_<%= name %>.scss
----
 /*
  ***************************************
  FirsPaint
@@ -27,7 +24,7 @@ to: <%= absPath %>/_<%= name %>.scss
 }
 
 @mixin module {
-  <%= elementName ? elementName : name %> {
+  aside {
     @include rules;
   }
   @include styles;

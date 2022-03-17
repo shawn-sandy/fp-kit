@@ -1,6 +1,3 @@
----
-to: <%= absPath %>/_<%= name %>.scss
----
 /*
  ***************************************
  FirsPaint
@@ -11,6 +8,16 @@ to: <%= absPath %>/_<%= name %>.scss
 
 @mixin props() {
   // * css custom properties
+  font-size: var(--fs, 100%);
+  font-weight: var(--fw, normal);
+  font-style: var(--fst, normal);
+  font-family: var(--ff, sans-serif);
+  color: var(--cl, initial);
+  background-color: var(--bg, initial);
+  background-image: var(--bg-img, initial);
+  border: var(--border, initial);
+  outline: var(--line, initial);
+
   @content;
 }
 
@@ -27,7 +34,7 @@ to: <%= absPath %>/_<%= name %>.scss
 }
 
 @mixin module {
-  <%= elementName ? elementName : name %> {
+  html {
     @include rules;
   }
   @include styles;

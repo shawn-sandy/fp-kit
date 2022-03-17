@@ -127,6 +127,10 @@ h6 {
   overflow-wrap: break-word;
 }
 
+*:focus {
+  outline: none;
+}
+
 /* Removes spacing between cells in tables */
 table {
   border-collapse: collapse;

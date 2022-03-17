@@ -1,4 +1,5 @@
 @use "../modules/reset.scss";
+@use "../modules/props";
 @use "../modules/global.scss";
 @use "../modules/header.scss";
 @use "../tokens/colors.scss";
@@ -11,9 +12,11 @@
 @use "../modules/table";
 @use "../modules/grid";
 @use "../modules/cards";
+@use "../modules/dialog";
 @use "../tokens/colors-scales.scss";
 @use "../components/type.scss";
 // @include container.module();
+@include props.module();
 @include nav.module();
 @include header.module();
 @include table.module();

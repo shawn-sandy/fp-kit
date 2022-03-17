@@ -10,6 +10,11 @@ module.exports = {
       },
       {
         type: 'input',
+        name: 'elementName',
+        message: 'What is the name of the element (optional defaults to name)?'
+      },
+      {
+        type: 'input',
         name: 'savePath',
         message: 'Where do you want the module saved/stored (path/dirname)?'
       }
@@ -17,9 +22,9 @@ module.exports = {
     return inquirer
       .prompt(questions)
       .then(answers => {
-        const { name, savePath, description } = answers
+        const { name, savePath, description, elementName } = answers
         const absPath = savePath
-        return { ...answers, name, absPath, description }
+        return { ...answers, name, absPath, description, elementName }
       })
   }
 }
