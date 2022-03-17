@@ -2,6 +2,48 @@
 
 ?>  _TODO_ add description
 
+
+## Examples
+
+### Gray-gainsboro
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--gray-gainsboro)">
+  <h3>gray-gainsboro</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Black
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--black); color: white" >
+  <h3 style=" color: white">black</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Red-light-salmon
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--red-light-salmon); color: white" >
+  <h3 style=" color: white">red-light-salmon</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
 ## Tokens Variables
 
 ## Color scale tokens
@@ -148,48 +190,6 @@
   --pink-pale-violet-red: rgba(219, 112, 147, 1);
   --pink-medium-violet-red: rgba(199, 21,
 ```
-
-## Examples
-
-### Gray-gainsboro
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--gray-gainsboro)">
-  <h3>gray-gainsboro</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Black
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--black); color: white" >
-  <h3 style=" color: white">black</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Red-light-salmon
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--red-light-salmon); color: white" >
-  <h3 style=" color: white">red-light-salmon</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
 
 ----
 ## References/Additional info

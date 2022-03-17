@@ -8,6 +8,11 @@
 
 @mixin props() {
   // * css custom properties
+  @content;
+}
+
+@mixin rules {
+  @include props;
   font-size: var(--fs, 100%);
   font-weight: var(--fw, normal);
   font-style: var(--fst, normal);
@@ -18,11 +23,10 @@
   border: var(--border, initial);
   outline: var(--line, initial);
 
-  @content;
-}
-
-@mixin rules {
-  @include props;
+  // prefix rules
+  --clip-path: initial;
+	-webkit-clip-path: var(--clip-path);
+	clip-path: var(--clip-path);
 
   // * css rules/styles
   @content;
@@ -34,7 +38,7 @@
 }
 
 @mixin module {
-  html {
+  * {
     @include rules;
   }
   @include styles;
