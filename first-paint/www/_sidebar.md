@@ -1,10 +1,11 @@
 
 - [First Paint v3.0(beta)](/)
 - [Features](/FEATURES)
-- [Changes](/CHANGELOG)
+- [Guides](/GUIDES)
 - [Design Tokens](/tokens/tokens)
-  - [Scaled Color Tokens](/tokens/color)
+  - [Open Color Tokens](/tokens/opencolor)
   - [Named Color Tokens](/tokens/colornames)
+  - [Scaled Color Tokens](/tokens/color)
 - Modules
   - [Buttons](/components/button)
   - [Content elements](/components/content)
@@ -14,7 +15,9 @@
   - [Grid](/components/grid)
   - [Header](/components/header)
   - [Img](/components/Img)
+  - [Inputs](/components/Input)
   - [Navbar](/components/Navbar)
   - [Table](/components/table)
-- [GUIDES](/)
+- [Changelog](/CHANGELOG)
+
 

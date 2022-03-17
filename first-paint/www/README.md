@@ -5,9 +5,10 @@
 
  > ## Lightweight, Fast, Accessible, Inclusive
 
-<h3> <em>First Paint is an easy to use CSS/SCSS micro library that contains accessibility focused, classless, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly digital products, websites apps and the likes.</em></h3>
 
-----------------------------------------------
+?> First Paint is a performance first, easy to use CSS/SCSS micro library that contains accessibility focused lightweight, mobile aps without the need to learn a bunch of new `.classes`. Yet flexible enough to allow you to easily restyle or create your own `.classes`.
+
+-------
 
 ?> Version 3.0 is currently in beta development. While we don't anticipate many changes, we are constantly adding new features and improving the existing ones. Please be aware that some features may change in the future.
 
@@ -74,8 +75,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Contribute
 
-* Clone repo
-* Edit code `projects/ideas`
-* Submit pull request
+- Clone (mono)-repo `git clone https://github.com/shawn-sandy/fp-kit.git`
+- Install dependencies `npm i`
+- Symling packages `lerna bootstrap`
+- CD into `/first-paint`
+- Edit code
+- Submit pull request
 
-## Hope Enjoy!
+## Enjoy!
