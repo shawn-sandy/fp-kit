@@ -1,4 +1,4 @@
-@use "../index.scss";
+@use "../all.scss";
 
 // customs styles for docsify
 
@@ -56,7 +56,7 @@
 }
 
 .sidebar-toggle {
-  top: 3.5rem;
+  top: 0.25rem;
   left: 0.25rem;
   width: 2rem;
   height: 2rem;
@@ -75,4 +75,10 @@
 
   .tip {
     font-size: .9rem;
+  }
+
+  .search {
+    input {
+      margin-top: 2rem;
+    }
   }
