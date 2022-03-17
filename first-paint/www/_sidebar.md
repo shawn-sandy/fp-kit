@@ -15,6 +15,7 @@
   - [Grid](/components/grid)
   - [Header](/components/header)
   - [Img](/components/Img)
+  - [Inputs](/components/Input)
   - [Navbar](/components/Navbar)
   - [Table](/components/table)
 - [Changelog](/CHANGELOG)

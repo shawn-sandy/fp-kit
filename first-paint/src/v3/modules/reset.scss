@@ -86,7 +86,7 @@ svg {
 }
 
 /* Inherit fonts for inputs and buttons */
-:where(input, textarea, select) {
+input, textarea, select{
   font: inherit;
 }
 

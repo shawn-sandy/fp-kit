@@ -46,6 +46,10 @@
         font-weight: normal;
       }
     }
+
+    .demo_button demo_toggle {
+      height: revert;
+    }
   }
 
   .sidebar-toggle {

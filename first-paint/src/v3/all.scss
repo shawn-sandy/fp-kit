@@ -15,6 +15,7 @@
 @use "./modules/grid";
 @use "./modules/cards";
 @use "./modules/dialog";
+@use "./modules/input";
 @use "./components/type.scss";
 // @include container.module();
 @include props.module();
@@ -25,5 +26,6 @@
 @include img.module();
 @include checkbox.module();
 @include grid.module();
+@include input.module();
 @include button.module();
 @include cards.module();
