@@ -204,6 +204,14 @@ Header Section
 </label>
 ```
 
+### Input
+
+```html preview
+
+<input id="input-id" type="text" placeholder="Text input element">
+
+```
+
 ### Grid (w/list)
 
 ```html preview

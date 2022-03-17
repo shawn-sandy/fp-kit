@@ -16,13 +16,13 @@
   background-color: var(--input-cl, inherit);
   font-size: var(--input-fs, .9rem);
   font-weight: var(--input-fw, normal);
-  border-style: var(--border-style, solid);
-  border-width: var(--input-border-width, thin);
-  border-color: var(--input-border-color, lightgray);
+  border-style: var(--input-bdr-style, solid);
+  border-width: var(--input-w, thin);
+  border-color: var(--input-bdr-color, lightgray);
   padding-inline: var(--input-px, 1rem);
   padding-block: var(--input-py, .5rem);
   min-width: var(--input-min-w, 100%);
-  border-radius: var(--input-border-radius, .1rem);
+  border-radius: var(--input-bdr-radius, .1rem);
   // * css rules/styles
   &::placeholder {
     font-style: italic;
@@ -36,7 +36,7 @@
 }
 
 @mixin module {
-  input[type] {
+  input[id][type] {
     @include rules;
   }
   @include styles;

@@ -21,7 +21,7 @@
 ### Default Input
 
 ```html preview
-<input type="text" placeholder="Text input element">
+<input id="input-id" type="text" placeholder="Text input element">
 ```
 
 
