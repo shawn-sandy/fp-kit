@@ -1,5 +1,5 @@
 ---
-to: <%= absPath %>/<%= name %>.scss
+to: <%= absPath %>/_<%= name %>.scss
 ---
 /*
  ***************************************
@@ -26,11 +26,8 @@ to: <%= absPath %>/<%= name %>.scss
   @content;
 }
 
-/**
-* tag or classname name nav, .nav
-*/
 @mixin module {
-  <%= name %> {
+  <%= elementName ? elementName : name %> {
     @include rules;
   }
   @include styles;

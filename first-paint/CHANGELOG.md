@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.9.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.2...@shawnsandy/first-paint@2.9.3) (2022-03-17)
+
+
+### Features
+
+* add id to input rule ([f40e389](https://github.com/shawn-sandy/fp-kit/commit/f40e389674d3ed425f07d14fca773c0933922ed6))
+* add props module w/default html properties ([3f17854](https://github.com/shawn-sandy/fp-kit/commit/3f178548ee23073da9506ad078e22ccd84f1485d))
+* add the input(text) module w/docs ([f562a98](https://github.com/shawn-sandy/fp-kit/commit/f562a9868aea8016db3983f295842767a6b6ee09))
+* add/update props, feature docs/description ([88f2365](https://github.com/shawn-sandy/fp-kit/commit/88f2365381f6a2ba5ba67c6e6d1a89797685d056))
+* push the search bar a couple of rems ([daed2fc](https://github.com/shawn-sandy/fp-kit/commit/daed2fca7c1f8ed39023904094fceb2ffea65cf1))
+
+
+
+
+
+## [2.9.2](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.1...@shawnsandy/first-paint@2.9.2) (2022-03-16)
+
+
+### Features
+
+* add header module w/docs ([52dc8b1](https://github.com/shawn-sandy/fp-kit/commit/52dc8b120c2699ca8f051640d6df15c9c8275be5))
+
+
+
+
+
 ## [2.9.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.0...@shawnsandy/first-paint@2.9.1) (2022-03-16)
 
 

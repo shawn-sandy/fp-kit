@@ -1,28 +1,4 @@
-@use "../modules/reset.scss";
-@use "../modules/global.scss";
-@use "../modules/header.scss";
-@use "../tokens/colors.scss";
-@use "../modules/container";
-@use "../modules/button";
-@use "../modules/checkbox";
-@use "../modules/img";
-@use "../modules/details-summary";
-@use "../modules/nav";
-@use "../modules/table";
-@use "../modules/grid";
-@use "../modules/cards";
-@use "../tokens/colors-scales.scss";
-@use "../components/type.scss";
-// @include container.module();
-@include nav.module();
-@include header.module();
-@include table.module();
-@include details-summary.module();
-@include img.module();
-@include checkbox.module();
-@include grid.module();
-@include button.module();
-@include cards.module();
+@use "../all.scss";
 
 // customs styles for docsify
 
@@ -56,6 +32,24 @@
  .content {
     padding-bottom: 5rem !important;
     font-size: 1rem !important;
+    blockquote {
+      p {
+        font-size: 1.2rem !important;
+        font-weight: normal !important;
+        line-height: 1.5;
+        font-style: italic;
+      }
+    }
+
+    .markdown-section {
+      a {
+        font-weight: normal;
+      }
+    }
+
+    .demo_button demo_toggle {
+      height: revert;
+    }
   }
 
   .sidebar-toggle {
@@ -66,7 +60,7 @@
 }
 
 .sidebar-toggle {
-  top: 3.5rem;
+  top: 0.25rem;
   left: 0.25rem;
   width: 2rem;
   height: 2rem;
@@ -80,4 +74,15 @@
   svg {
     display: inline-block;
   }
+
 }
+
+  .tip {
+    font-size: .9rem;
+  }
+
+  .search {
+    input {
+      margin-top: 2rem;
+    }
+  }
