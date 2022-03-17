@@ -6,12 +6,12 @@ module.exports = {
       {
         type: 'input',
         name: 'name',
-        message: 'What is the file name?'
+        message: 'What is the name of the module (button) underscore is added?'
       },
       {
         type: 'input',
         name: 'savePath',
-        message: 'Where do you want the document saved/stored (path/dirname)?'
+        message: 'Where do you want the module saved/stored (path/dirname)?'
       }
     ]
     return inquirer
