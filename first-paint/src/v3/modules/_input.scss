@@ -12,7 +12,7 @@
 }
 
 @mixin rules {
-  @include props;
+
   background-color: var(--input-cl, inherit);
   font-size: var(--input-fs, .9rem);
   font-weight: var(--input-fw, normal);
@@ -36,8 +36,8 @@
 }
 
 @mixin module {
+  @include props;
   input[id]:not([type="checkbox"], [type="radio"]) {
-
     @include rules;
   }
   @include styles;
