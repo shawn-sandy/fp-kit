@@ -36,8 +36,8 @@
 }
 
 @mixin module {
-  @include props;
   input[id][type]:not([type="checkbox"], [type="radio"]) {
+    @include props;
     @include rules;
   }
   @include styles;
