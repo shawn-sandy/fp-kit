@@ -14,7 +14,7 @@
   --chk-bg: whitesmoke;
   --chk-size: 1rem;
   --chk-appearance: none;
-  --chk-radius: 0.2rem;
+  --chk-radius: var(--rds);
   @content;
 }
 
