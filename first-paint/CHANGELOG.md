@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.9.5](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.4...@shawnsandy/first-paint@2.9.5) (2022-03-18)
+
+
+### Features
+
+* textarea scss module/docs ([c113b45](https://github.com/shawn-sandy/fp-kit/commit/c113b45aedb8c4ea36a00447bb8ceedbac617396))
+
+
+
+
+
 ## [2.9.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.3...@shawnsandy/first-paint@2.9.4) (2022-03-18)
 
 
