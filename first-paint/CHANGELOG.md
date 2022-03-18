@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.9.5](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.4...@shawnsandy/first-paint@2.9.5) (2022-03-18)
+
+
+### Features
+
+* textarea scss module/docs ([c113b45](https://github.com/shawn-sandy/fp-kit/commit/c113b45aedb8c4ea36a00447bb8ceedbac617396))
+
+
+
+
+
+## [2.9.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.3...@shawnsandy/first-paint@2.9.4) (2022-03-18)
+
+
+### Bug Fixes
+
+* resolve issue--input module breaks checkbox ([f8f7b0b](https://github.com/shawn-sandy/fp-kit/commit/f8f7b0bf71d76ef71867bb36f56ea810039483a4))
+
+
+### Features
+
+* moves props mixin style to module mixin ([551b4b8](https://github.com/shawn-sandy/fp-kit/commit/551b4b8a139fceddd81e16eb1879dada8e29fd3d))
+
+
+
+
+
 ## [2.9.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.2...@shawnsandy/first-paint@2.9.3) (2022-03-17)
 
 

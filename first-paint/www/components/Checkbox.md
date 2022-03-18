@@ -2,6 +2,14 @@
 
 ?>  _TODO_ add description
 
+### Default Checkbox
+
+```html preview
+<label for="checkbox">
+  <input type="checkbox" id="checkbox" value="" />
+  Checkbox Label
+</label>
+```
 
 ## Checkbox Variables
 
@@ -19,14 +27,6 @@
 
 ## Examples
 
-### Default Checkbox
-
-```html preview
-<label for="checkbox">
-  <input type="checkbox" id="checkbox" value="" />
-  Checkbox Label
-</label>
-```
 
 ----
 ## References/Additional info

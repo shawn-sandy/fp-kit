@@ -22,6 +22,7 @@
   background-image: var(--bg-img, initial);
   border: var(--border, initial);
   outline: var(--line, initial);
+  border-radius: var(--rds, initial);
 
   // prefix rules
   --clip-path: initial;
