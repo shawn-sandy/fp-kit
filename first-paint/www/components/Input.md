@@ -2,6 +2,14 @@
 
 ?>  _TODO_ add description
 
+
+### Default Input
+
+```html preview
+<input id="input-id" type="text" placeholder="Text input element">
+```
+
+
 ## Input Variables
 
 ### Custom variables
@@ -17,12 +25,6 @@
 ```
 
 ## Examples
-
-### Default Input
-
-```html preview
-<input id="input-id" type="text" placeholder="Text input element">
-```
 
 
 ----
