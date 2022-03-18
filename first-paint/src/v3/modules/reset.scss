@@ -87,7 +87,13 @@ svg {
 
 /* Inherit fonts for inputs and buttons */
 input, textarea, select{
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-variant: inherit;
+  line-height: inherit;
+  background-color: inherit;
 }
 
 /* Inherit fonts for inputs and buttons */

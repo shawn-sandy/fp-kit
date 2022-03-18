@@ -6,6 +6,14 @@ to: <%= absPath %>/<%= name %>.md
 
 <%= description ? description : "?>  _TODO_ add description" %>
 
+### Default <%= name %>
+
+```html preview
+<div>
+<%= name %>
+</div>
+```
+
 ## <%= name %> Variables
 
 ### Custom variables
@@ -21,15 +29,6 @@ to: <%= absPath %>/<%= name %>.md
 ```
 
 ## Examples
-
-### Default <%= name %>
-
-```html preview
-<button>
-<% name %>
-</button>
-```
-
 
 ----
 ## References/Additional info

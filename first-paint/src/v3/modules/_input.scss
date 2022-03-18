@@ -8,6 +8,7 @@
 
 @mixin props() {
   // * css custom properties
+  --input-appearance: none;
   @content;
 }
 
@@ -23,6 +24,9 @@
   padding-block: var(--input-py, .5rem);
   min-width: var(--input-min-w, 100%);
   border-radius: var(--input-bdr-radius, .1rem);
+  -webkit-appearance: var(--input-appearance);
+  -moz-appearance: var(--input-appearance);
+  appearance: var(--input-appearance);
   // * css rules/styles
   &::placeholder {
     font-style: italic;

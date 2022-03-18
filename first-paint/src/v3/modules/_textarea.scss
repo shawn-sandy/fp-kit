@@ -1,0 +1,56 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+@mixin props() {
+  // * css custom properties
+  --ta-bdr-s: solid;
+  --ta-bdr-w: thin;
+  --ta-bdr-cl: lightgray;
+  --ta-px: .5rem;
+  --ta-py: .5rem;
+  --ta-fs: var(--fs);
+  --ta-min-w: 100%;
+  --ta-min-h: calc(100rem / 16);
+  --ta-overflow: auto;
+  --ta-appearance: none;
+
+  @content;
+}
+
+@mixin rules {
+  // * css rules/styles
+  --fs: .95rem;
+  border-style: var(--ta-bdr-s);
+  border-width: var(--ta-bdr-w);
+  border-color: var(--ta-bdr-cl);
+  padding-inline: var(--ta-px);
+  padding-block: var(--ta-py);
+  font-size: var(--ta-fs);
+  min-width: var(--ta-min-w);
+  min-height: var(--ta-min-h);
+  overflow-y: var(--overflow-x, var(--ta-overflow));
+  overflow-x: var(--overflow, var(--ta-overflow));
+  background-clip: padding-box;
+  -webkit-appearance: var(--ta-appearance);
+  -moz-appearance: var(--ta-appearance);
+  appearance: var(--ta-appearance);
+  @content;
+}
+
+@mixin styles {
+  // * css style utilities
+  @content;
+}
+
+@mixin module {
+  textarea {
+  @include props;
+    @include rules;
+  }
+  @include styles;
+}

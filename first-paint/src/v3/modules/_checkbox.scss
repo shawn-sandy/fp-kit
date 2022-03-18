@@ -31,6 +31,7 @@
   :where([id][type="checkbox"]) {
     appearance: var(--chk-appearance);
     -webkit-appearance: var(--chk-appearance);
+    -moz-appearance: var(--chk-appearance);
     border-radius: var(--rds);
     cursor: pointer;
 
