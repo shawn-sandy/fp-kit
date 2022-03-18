@@ -8,13 +8,13 @@ module.exports = {
         name: 'componentName',
         message: 'What is the component name?'
       },
-      {
-        type: 'input',
-        name: 'controls',
-        message: 'Do you want to include controls (yes|no)?',
-        enables: 'yes',
-        disabled: 'no'
-      },
+      // {
+      //   type: 'input',
+      //   name: 'controls',
+      //   message: 'Do you want to include controls (yes|no)?',
+      //   enables: 'yes',
+      //   disabled: 'no'
+      // },
       {
         type: 'input',
         name: 'packageDir',
