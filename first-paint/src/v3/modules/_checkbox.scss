@@ -9,7 +9,7 @@
 @mixin props() {
   --chk-appr: none;
   --chk-bdr: solid;
-  --chk-bdr-w: thick;
+  --chk-bdr-w: medium;
   --chk-bdr-cl: transparent;
   --chk-bg: whitesmoke;
   --chk-size: 1rem;
@@ -31,11 +31,7 @@
   :where([id][type="checkbox"]) {
     appearance: var(--chk-appearance);
     -webkit-appearance: var(--chk-appearance);
-    border-style: var(--chk-bdr);
-    border-width: var(--chk-bdr-w);
-    border-color: var(--chk-bdr-cl);
     border-radius: var(--rds);
-
     cursor: pointer;
 
     &::before {
@@ -48,7 +44,10 @@
       justify-content: center;
       width: var(--chk-size);
       height: var(--chk-size);
-      border: var(--chk-bdr) var(--chk-bdr-cl);
+      // border: var(--chk-bdr) var(--chk-bdr-cl);
+      border-style: var(--chk-bdr);
+      border-width: var(--chk-bdr-w);
+      border-color: var(--chk-bdr-cl);
       background-color: var(--chk-bg);
       border-radius: var(--chk-rds);
     }
