@@ -2,6 +2,17 @@
 
 Responsive and accessible `img` componnent
 
+
+### Default Img
+
+```html preview
+<img
+  src="https://source.unsplash.com/random?h=500w=500"
+  loading="lazy"
+  alt="Placeholder Image"
+/>
+...
+```
 ## Img Variables
 
 ### Custom variables
@@ -22,17 +33,6 @@ Responsive and accessible `img` componnent
 ```
 
 ## Examples
-
-### Default Img
-
-```html preview
-<img
-  src="https://source.unsplash.com/random?w=800"
-  loading="lazy"
-  alt="Placeholder Image"
-/>
-...
-```
 
 ### Error Loading Img
 
