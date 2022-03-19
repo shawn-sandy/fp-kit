@@ -1,4 +1,4 @@
-@use "../all.scss";
+@use "./all.scss";
 
 // customs styles for docsify
 
@@ -86,7 +86,7 @@
 }
 
 .demo_preview .demo_preview_content {
-  display: flex;
+  display: flex;_pro
   > section {
     width: 100%;
   }

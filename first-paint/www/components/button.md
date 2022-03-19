@@ -5,8 +5,7 @@
 ### Default Button
 
 ```html preview
-<button
-  type="button"
+<button type="button"
 >
   Default Button
 </button>
