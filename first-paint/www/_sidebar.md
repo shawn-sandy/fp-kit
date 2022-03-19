@@ -9,6 +9,7 @@
 - Modules
   - [Buttons](/components/button)
   - [Content elements](/components/Content)
+    - [Headings](/components/Headings)
   - [Cards](/components/Cards)
   - [Checkbox](/components/Checkbox)
   - [Details disclosure](/components/DETAILS)

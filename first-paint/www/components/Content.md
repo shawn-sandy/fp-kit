@@ -2,6 +2,9 @@
 
 ?&gt;  _TODO_ add description
 
+
+## Heading
+
 ## Content Variables
 
 ### Custom variables
@@ -16,44 +19,6 @@
   color: var(--color, currentColor);
 ```
 
-## Heading Elements
-
-### H1
-
-```html preview
-<h1>Sample H1 Header</h1>
-```
-
-### H2
-
-```html preview
-<h2>Sample H2 Header</h2>
-```
-
-### H3
-
-```html preview
-<h3>Sample H3 Header</h3>
-```
-
-### H4
-
-```html preview
-<h4>Sample H4 Header</h4>
-```
-
-### H5
-
-```html preview
-<h5>Sample H5 Header</h5>
-```
-
-### H6
-
-```html preview
-<h6>Sample H6 Header</h6>
-
-```
 
 ## Paragraph
 
