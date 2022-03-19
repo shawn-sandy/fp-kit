@@ -16,5 +16,7 @@ export default {
 
 
 export const BasicInput: ComponentStory<typeof Input> = () => (
-  <Input>Example</Input>
+  <div style={ { width: 'min(100vw, 50vw)'}}>
+    <Input>Example</Input>
+  </div>
 )

@@ -5,13 +5,13 @@ export interface InputProps {
   styles?: object;
 }
 
-const Input: React.FC<InputProps> = ({styles, children, ...props}) => {
+const Input: React.VFC<InputProps> = ({styles, children, ...props}) => {
   const defStyles = {
     display: "var(--dsp, flex)"
   }
-  return <div style={{...defStyles, ...styles}} {...props}>
- {children ?? Input}
- </div>;
-};
+  return (
+    <input id="input-id" type="text" placeholder="Text input element"/>
+ );
+  }
 
 export default Input;
