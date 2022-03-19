@@ -2,6 +2,29 @@
 
 ?&gt;  _TODO_ add description
 
+### Default Navbar
+
+```html preview
+<nav>
+  <ul>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+  </ul>
+  <ul>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+  </ul>
+  <section>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+  </section>
+</nav>
+
+
+```
+
 ## Navbar Variables
 
 ### Custom variables
@@ -32,28 +55,6 @@
 
 ## Examples
 
-### Default Navbar
-
-```html preview
-<nav>
-  <ul>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-  </ul>
-  <ul>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-  </ul>
-  <section>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-  </section>
-</nav>
-
-
-```
 
 ----
 ## References/Additional info

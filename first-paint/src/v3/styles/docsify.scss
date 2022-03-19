@@ -16,47 +16,42 @@
     width: 100%;
     overflow: hidden;
   }
-
 }
 
+.docsify-copy-code-button {
+  font-size: 0.8rem !important;
+}
 
- .docsify-copy-code-button {
-    font-size: 0.8rem !important;
-  }
+.demo-copy-code-button {
+  display: none !important;
+}
 
-  .demo-copy-code-button {
-    display: none !important;
-  }
-
-
- .content {
-    padding-bottom: 5rem !important;
-    font-size: 1rem;
-    blockquote {
-      p {
-        font-size: 1.2rem !important;
-        font-weight: normal !important;
-        line-height: 1.5;
-        font-style: italic;
-      }
-    }
-
-    .markdown-section {
-      a {
-        font-weight: normal;
-      }
-    }
-
-    .demo_button demo_toggle {
-      height: revert;
+.content {
+  padding-bottom: 5rem !important;
+  font-size: 1rem;
+  blockquote {
+    p {
+      font-size: 1.2rem !important;
+      font-weight: normal !important;
+      line-height: 1.5;
+      font-style: italic;
     }
   }
 
-  .sidebar-toggle {
+  .markdown-section {
+    a {
+      font-weight: normal;
+    }
+  }
 
-    bottom: 20px !important;
-    background-color: transparent !important;
+  .demo_button demo_toggle {
+    height: revert;
+  }
+}
 
+.sidebar-toggle {
+  bottom: 20px !important;
+  background-color: transparent !important;
 }
 
 .sidebar-toggle {
@@ -74,15 +69,25 @@
   svg {
     display: inline-block;
   }
-
 }
 
-  .tip {
-    font-size: .9rem;
-  }
+.tip {
+  font-size: 0.9rem;
+}
 
-  .search {
-    input {
-      margin-top: 2rem;
-    }
+.search {
+  input {
+    margin-top: 2rem;
   }
+}
+
+.markdown-section table {
+  display: table;
+}
+
+.demo_preview .demo_preview_content {
+  display: flex;
+  > section {
+    width: 100%;
+  }
+}

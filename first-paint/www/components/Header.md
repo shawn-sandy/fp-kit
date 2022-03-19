@@ -2,6 +2,16 @@
 
 Creates a page Header/Cover Element for pages.
 
+### Default Header
+
+```html preview
+<header>
+<section>
+<h2>Header Section</h2>
+<p>Labore est esse et nulla anim labore consequat veniam cupidatat laborum adipisicing.</p>
+</section>
+</header>
+```
 ## Header Variables
 
 ### Custom variables
@@ -44,13 +54,7 @@ Creates a page Header/Cover Element for pages.
 
 ## Examples
 
-### Default Header
 
-```html preview
-<header>
-<section>Header Section</section>
-</header>
-```
 
 ### Header Title (h2)
 
