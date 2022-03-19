@@ -96,7 +96,7 @@ Now we can change the button color/background color using the style attribute `s
 
 ```
 
-!> *CSS classes can override CSS custom-props when used with inline styles, unless set globally. If you are not a fan of style attrigutes you can do the same thing in a class*
+!> *CSS classes can override CSS custom-props when used with inline styles, unless set globally. If you are not a fan of style attributes you can do the same thing in a class*
 
 ----
 
