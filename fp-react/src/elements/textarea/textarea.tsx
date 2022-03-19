@@ -15,20 +15,19 @@ const Textarea: React.FC<TextareaProps> = ({
   ...props
 }) => {
   const defStyles = {
-    display: "var(--dsp, flex)",
-    borderStyle: "var(--ta-bdr-s, solid)",
-    borderWidth: "var(--ta-bdr-w, thin)",
-    paddingInline: "var(--ta-px, .5rem)",
-    paddingBlock: "var(--ta-py, .5rem)",
-    minWidth: "var(--ta-min-w, min(100vw, 50vw))",
-    minHeight: "var(--ta-min-h,100px)"
+    borderStyle: "solid",
+    borderWidth: "thin",
+    paddingInline: ".5rem",
+    paddingBlock: ".5rem",
+    minWidth: "min(100vw, 50vw)",
+    minHeight: "calc(100rem / 16)"
   }
   return (
     <div style={{ minWidth: 'min(80vw, 100%)'}}>
       <textarea
         id={id}
         className={classes}
-        style={defStyles ?? styles}
+        style={styles ?? defStyles}
         {...props}
       >
         {children ??
