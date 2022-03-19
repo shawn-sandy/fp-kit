@@ -84,3 +84,10 @@
 .markdown-section table {
   display: table;
 }
+
+.demo_preview .demo_preview_content {
+  display: flex;
+  > section {
+    width: 100%;
+  }
+}

@@ -6,7 +6,7 @@
 ### Default Table
 
 ```html preview
-<section style="width: 100%; min-width: 85vw;">
+<section>
   <table>
     <thead>
       <tr>
