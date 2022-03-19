@@ -10,7 +10,7 @@ import {
 import Grid from "./grid"
 
 export default {
-  title: "Components/Grids",
+  title: "Components/Grids/Examples",
   component: Grid,
   parameters: {
     layout: "fullscreen",

@@ -16,7 +16,7 @@ import FpTable, {
 import "./table.scss"
 
 export default {
-  title: "Components/FPTable",
+  title: "Components/Table/Examples",
   component: FpTable,
   layout: "centered",
   status: {

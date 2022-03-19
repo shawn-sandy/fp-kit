@@ -1,8 +1,12 @@
+---
+to: <%= absPath %>/readme.stories.mdx
+---
+
 import { Meta } from "@storybook/addon-docs"
 
-<Meta title="Elements/Checkbox/Readme" />
+<Meta title="<%= h.inflection.camelize(subFolder) %>/<%= componentName %>/Readme" />
 
-# Checkbox
+# <%= componentName %>
 
 Browse example stories now by navigating to them in the sidebar.
 View their code in the `src/elements/**` directory to learn how they work.
