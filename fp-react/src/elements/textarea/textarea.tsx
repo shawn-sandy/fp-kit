@@ -1,17 +1,39 @@
-import React from 'react';
+import React from "react"
 
 export interface TextareaProps {
-  children: React.ReactNode;
-  styles?: object;
+  children?: React.ReactNode
+  styles?: object
+  id?: string
+  classes?: string
 }
 
-const Textarea: React.FC<TextareaProps> = ({styles, children, ...props}) => {
+const Textarea: React.FC<TextareaProps> = ({
+  styles,
+  children,
+  id = "textarea-id",
+  classes,
+  ...props
+}) => {
   const defStyles = {
-    display: "var(--dsp, flex)"
+    display: "var(--dsp, flex)",
+    borderStyle: "var(--ta-bdr-s, solid)",
+    borderWidth: "var(--ta-bdr-w, thin)",
+    paddingInline: "var(--ta-px, .5rem)",
+    paddingBlock: "var(--ta-py, .5rem)",
+    minWidth: "var(--ta-min-w, min(100vw, 50vw))",
+    minHeight: "var(--ta-min-h,100px)"
   }
-  return (<div style={{...defStyles, ...styles}} {...props}>
- {children ?? Textarea}
- </div>);
-};
+  return (
+    <textarea
+      id={id}
+      className={classes}
+      style={defStyles ?? styles}
+      {...props}
+    >
+      {children ??
+        "Cillum ea cillum veniam enim ipsum minim."}
+    </textarea>
+  )
+}
 
-export default Textarea;
+export default Textarea
