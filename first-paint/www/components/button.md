@@ -2,6 +2,16 @@
 
 ?> _TODO_ add description
 
+### Default Button
+
+```html preview
+<button
+  type="button"
+>
+  Default Button
+</button>
+```
+
 ## Button Variables
 
 ### Custom variables
@@ -32,16 +42,6 @@
 ```
 
 ## Button Examples
-
-### Default Button
-
-```html preview
-<button
-  type="button"
->
-  Default Button
-</button>
-```
 
 ### Disabled Button
 
