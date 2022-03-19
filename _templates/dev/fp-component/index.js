@@ -24,12 +24,12 @@ module.exports = {
         type: 'select',
         name: 'subFolder',
         message: 'Which sub_folder of the package dir you would like to place the component (src/components)?',
-        choices: ['components', 'elements', 'modules', 'page', 'services']
+        choices: ['components', 'elements', 'modules', 'pages', 'services']
       },
       {
         type: 'input',
         name: 'dir',
-        message: 'The name of the directory to store the component (optional)'
+        message: 'Component directory name (my-component)?'
       }
     ]
     return inquirer
@@ -39,7 +39,7 @@ module.exports = {
         const { componentName, dir, packageDir, subFolder, controls } = answers
         const path = dir ? `${dir}` : `${componentName.toLowerCase()}`
         const absPath = `${packageDir}/src/${subFolder}/${path}`
-        return { ...answers, path, absPath, controls }
+        return { ...answers, path, absPath, controls, subFolder }
       })
   }
 }

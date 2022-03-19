@@ -1,5 +1,5 @@
 ---
-to: <%= absPath %>/index.tsx
+to: <%= absPath %>/<%= path %>.tsx
 ---
 import React from 'react';
 
@@ -12,9 +12,9 @@ const <%= componentName %>: React.FC<<%= componentName %>Props> = ({styles, chil
   const defStyles = {
     display: "var(--dsp, flex)"
   }
-  return <div style={{...defStyles, ...styles}} {...props}>
+  return (<div style={{...defStyles, ...styles}} {...props}>
  {children ?? <%= componentName %>}
- </div>;
+ </div>);
 };
 
 export default <%= componentName %>;
