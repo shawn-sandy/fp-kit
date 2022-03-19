@@ -26,7 +26,7 @@ window.$docsify = {
     successText: 'Copied'
   },
   remoteMarkdown: {
-    tag: 'remoteMarkdownUrl',
+    tag: 'remoteMarkdownUrl'
   },
   onlyCover: true,
   pagination: {
@@ -44,8 +44,8 @@ window.$docsify = {
   plugins: [EditOnGithubPlugin.create(editPath, null, editMsg)]
 }
 
-
-function imgError(event) {
-  console.log("Image loading error" + event.currentTarget.src);
-  event.currentTarget.src = "https://via.placeholder.com/800";
- };
+// eslint-disable-next-line no-unused-vars
+function imgError (event) {
+  console.log('Image loading error' + event.currentTarget.src)
+  event.currentTarget.src = 'https://via.placeholder.com/800'
+}

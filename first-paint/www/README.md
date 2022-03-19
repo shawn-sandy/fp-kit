@@ -10,7 +10,7 @@
 
 -------
 
-?> Version 3.0 is currently in beta development. While we don't anticipate many changes, we are constantly adding new features and improving the existing ones. Please be aware that some features may change in the future.
+!> Version 3.0 is currently in beta development. While we don't anticipate many changes, we are constantly adding new features and improving the existing ones. Please be aware that some features may change in the future.
 
 ## [Features](/FEATURES)
 
