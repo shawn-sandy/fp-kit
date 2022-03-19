@@ -24,15 +24,17 @@ const Textarea: React.FC<TextareaProps> = ({
     minHeight: "var(--ta-min-h,100px)"
   }
   return (
-    <textarea
-      id={id}
-      className={classes}
-      style={defStyles ?? styles}
-      {...props}
-    >
-      {children ??
-        "Cillum ea cillum veniam enim ipsum minim."}
-    </textarea>
+    <div style={{ minWidth: 'min(80vw, 100%)'}}>
+      <textarea
+        id={id}
+        className={classes}
+        style={defStyles ?? styles}
+        {...props}
+      >
+        {children ??
+          "Cillum ea cillum veniam enim ipsum minim."}
+      </textarea>
+    </div>
   )
 }
 
