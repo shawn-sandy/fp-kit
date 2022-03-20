@@ -10,7 +10,7 @@
 
 html {
   /* Make base font-size 100% of browser font-size */
-  font-size: 100%;
+  font-size: var(--fs, 100%);
 }
 
 ::selection {
@@ -144,7 +144,7 @@ table {
 
 svg {
   /* Make the SVGs fit the parent container by default */
-  height: 100%;
+  height: auto;
   width: 100%;
 
   /* Optional - make the SVG's fill be the same as the inherited color */
