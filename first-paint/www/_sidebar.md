@@ -10,6 +10,7 @@
   - [Buttons](/components/button)
   - [Content elements](/components/Content)
     - [Headings](/components/Headings)
+    - [Paragraph](/components/Paragraph)
   - [Cards](/components/Cards)
   - [Checkbox](/components/Checkbox)
   - [Details disclosure](/components/DETAILS)
