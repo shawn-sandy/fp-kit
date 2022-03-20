@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.8.12...@shawnsandy/fp-react@0.9.0) (2022-03-20)
+
+
+### Features
+
+* add props/styles to textarea component ([450474a](https://github.com/shawn-sandy/fp-kit/commit/450474a03e35e75e8f7421e484dc92ca93e2c5cb))
+* add react input component base ([316cb48](https://github.com/shawn-sandy/fp-kit/commit/316cb48779d7e8b507ad305b254ddee9578e9420))
+* input component ([4d1c272](https://github.com/shawn-sandy/fp-kit/commit/4d1c272529fd894da41a7d07d1183233622f8f45))
+* scaffold input component ([bc7f237](https://github.com/shawn-sandy/fp-kit/commit/bc7f2377fa42ed5915cce89151f09d9fa047fa7c))
+* scaffold textarea component ([f1ab517](https://github.com/shawn-sandy/fp-kit/commit/f1ab517088116ca569959cf15ca06950b3a3e8b4))
+
+
+
+
+
 ## [0.8.12](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.8.11...@shawnsandy/fp-react@0.8.12) (2022-03-18)
 
 **Note:** Version bump only for package @shawnsandy/fp-react
