@@ -3,20 +3,11 @@
 ?&gt;  _TODO_ add description
 
 
-## Heading
 
-## Content Variables
+### Heading
 
-### Custom variables
-
-```css
---color: #000;
-```
-
-### Custom properties (rules)
-
-```css
-  color: var(--color, currentColor);
+```html preview
+<h1 style="font-size: var(--h1)">Sample H1 Header</h1>
 ```
 
 

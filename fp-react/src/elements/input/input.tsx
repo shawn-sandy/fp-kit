@@ -12,11 +12,11 @@ export interface InputProps {
 
 const Input: React.VFC<InputProps> = ({styles, type = "text", classes, value, ...props}) => {
   const defStyles = {
-    borderStyle: "solid",
-    borderWidth: "thin",
-    borderColor: "lightgray",
-    paddingInline: "1rem",
-    paddingBlock: "1rem",
+    borderStyle: "var(--input-bdr-style, solid)",
+    borderWidth: "var(--input-w, thin)",
+    borderColor: "var(--input-bdr-color, lightgray)",
+    paddingInline: "var(--input-py, .5rem)",
+    paddingBlock: "var(--input-px, .5rem)",
   }
   return (
     <input id="input-id" type={type} className={classes} style={{...defStyles, ...styles}} placeholder="Text input element" {...props}/>
