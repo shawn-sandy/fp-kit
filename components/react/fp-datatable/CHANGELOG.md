@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-datatable@0.1.4...@shawnsandy/fp-datatable@0.2.0) (2022-03-20)
+
+**Note:** Version bump only for package @shawnsandy/fp-datatable
+
+
+
+
+
 ## [0.1.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-datatable@0.1.3...@shawnsandy/fp-datatable@0.1.4) (2022-03-16)
 
 **Note:** Version bump only for package @shawnsandy/fp-datatable
