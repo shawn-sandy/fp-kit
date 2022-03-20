@@ -11,10 +11,10 @@
   /*  css custom properties */
   --mx: var(--sm-x);
   --my: 0;
-  --collapse: collapse;
-  --border-w: thin;
-  --border-s: solid;
-  --border-cl: var(--light);
+  --tbl-collapse: collapse;
+  --tbl-bdr-w: thin;
+  --tbl-bdr-s: solid;
+  --tbl-bdr-cl: var(--light);
 
   @content;
 }
@@ -23,12 +23,12 @@
   @include props;
 
   margin: 25px 0;
+  display: table;
   font-size: var(--tbl-fs, 0.9em);
   font-family: var(--fs, sans-serif);
-  min-width: var(--tbl-width, 100%);
-  width: var(--tbl-width, 100%);
+  min-width: var(--tbl-width, min(100%, 50vw));
   border-collapse: var(--tbl-collapse);
-  border: var(--tbl-border, thin solid lightgray);
+  border: var(--tbl-bdr, thin solid gray);
   display: var(--tbl-dsp, table);
 
   thead tr {
@@ -36,9 +36,9 @@
     background-color: var(--tb-bg, lightgray);
     text-align: var(--text-align);
     border-bottom: var(
-      --tbl-head-border,
-      var(--tb-border) var(--tb-border-w),
-      var(--tb-border-color)
+      --tbl-head-bdr,
+      var(--tb-bdr) var(--tb-bdr-w),
+      var(--tb-bdr-color)
     );
   }
 
@@ -55,8 +55,8 @@
   }
 
   tbody tr:last-of-type {
-    --tbl-border: medium solid var(--tb-border-color);
-    border-bottom: var(--tbl-border);
+    --tbl-bdr: medium solid var(--tb-bdr-color);
+    border-bottom: var(--tbl-bdr);
   }
 
   @content;

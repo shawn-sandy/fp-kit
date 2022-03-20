@@ -1,3 +1,7 @@
+:root {
+  --fs-1x: clamp(calc(24px /16), 2vw + 1rem, 2.25rem);
+  --fs-2x: clamp(2rem, 4vw + 1rem, 3.75rem);
+}
 h1,
 h2,
 h3,
@@ -5,14 +9,15 @@ h4,
 h5,
 h6,
 p {
-  --h1: var(--4xl);
-  --h2: var(--3xl);
-  --h3: var(--2xl);
-  --h4: var(--xl);
-  --h5: var(--lg);
-  --h6: var(--md);
+  --h1: var(--fs-10);
+  --h2: var(--fs-9);
+  --h3: var(--fs-8);
+  --h4: var(--fs-7);
+  --h5: var(--fs-6);
+  --h6: var(--fs-5);
   --fw: var(--fw-medium);
   --fx-weight: var(--fw-medium);
+
 
   line-height: var(--lh);
   color: var(--cl);
@@ -55,43 +60,34 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: var(--fs);
-
-  --h1: var(--4xl);
-  --h2: var(--3xl);
-  --h3: var(--2xl);
-  --h4: var(--xl);
-  --h5: var(--lg);
-  --h6: var(--md);
-  --ff: var(--ff-inter);
 
   + p {
     margin-top: var(--rem);
   }
 }
 
-h1 {
-  --fs: var(--4xl);
+h1, h1[role="decoration"] {
+  font-size: var(--fs-1);
 }
 
-h2 {
-  --fs: var(--3xl);
+h2, h2[role="decoration"] {
+  font-size: var(--fs-2);
 }
 
-h3 {
-  --fs: var(--2xl);
+h3, h3[role="decoration"] {
+  font-size: var(--fs-3);
 }
 
-h4 {
-  --fs: var(--xl);
+h4, h4[role="decoration"] {
+  font-size: var(--fs-4);
 }
 
-h5 {
-  --fs: var(--lg);
+h5, h5[role="decoration"] {
+  font-size: var(--fs-5);
 }
 
-h6 {
-  --fs: var(--md);
+h6, h6[role="decoration"] {
+  font-size: var(--fs-6);
 }
 
 small,

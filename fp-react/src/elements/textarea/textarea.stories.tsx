@@ -24,7 +24,7 @@ export const ExampleDefault: ComponentStory<
 export const ExampleText: ComponentStory<
   typeof Textarea
 > = () => (
-  <Textarea styles={ {'--ta-min-h': "260px"} }>
+  <Textarea styles={ {'min-height': "260px"} }>
     Quis cillum tempor sit cillum incididunt esse
     adipisicing non voluptate quis sint mollit aliquip.
     Eiusmod adipisicing eiusmod consequat ad ex. Minim Lorem

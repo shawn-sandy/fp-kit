@@ -2,6 +2,20 @@
 
 ?&gt;  _TODO_ add description
 
+### Default Cards
+
+To style a card we repurpose `role="presentation` attribute on a `div` element.
+
+```html preview
+
+<div role="presentation">
+  <h3>Card Title</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+
+```
 ## Cards Variables
 
 ### Custom variables
@@ -35,20 +49,6 @@
 
 ## Examples
 
-### Default Cards
-
-To style a card we repurpose `role="presentation` attribute on a `div` element.
-
-```html preview
-
-<div role="presentation">
-  <h3>Card Title</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-
-```
 
 ### Shadow Card
 

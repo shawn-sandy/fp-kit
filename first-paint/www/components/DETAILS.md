@@ -2,6 +2,17 @@
 
 ?>  Details disclosure element
 
+### Default
+
+```html preview
+<details title="Element Title">
+  <summary>
+    Element Title
+  </summary>
+  <p>In ullamco consequat magna laboris cillum. Nisi cillum pariatur nostrud dolore incididunt duis adipisicing minim mollit voluptate minim ut. Qui velit id ex adipisicing adipisicing nisi eu adipisicing proident occaecat aute in. Anim Lorem mollit magna esse anim est nulla.</p>
+</details>
+```
+
 ## DETAILS Variables
 
 ### Custom variables
@@ -36,17 +47,6 @@ font-size: var(--summary-fs, 1.1rem);
 ```
 
 ## Examples
-
-### Default
-
-```html preview
-<details title="Element Title">
-  <summary>
-    Element Title
-  </summary>
-  <p>Add some content here to make it work</p>
-</details>
-```
 
 
 ----
