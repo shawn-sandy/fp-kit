@@ -1,6 +1,5 @@
 import React from "react"
 
-
 type LabelProps = {
   children: React.ReactNode
   classes?: string
@@ -26,11 +25,16 @@ export const Label: React.FC<LabelProps> = ({
   children = "Default Checkbox",
   ...props
 }) => {
+  const defStyles = {
+    display: "var(--lbl-dsp, flex)",
+    fontSize: "var(--chk-fs, 1rem)",
+    marginInlineEnd: "var(--lbl-me)"
+  }
   return (
     <label
       htmlFor={name}
       className={classes}
-      style={styles}
+      style={{...defStyles, ...styles }}
       {...props}
     >
       {children}
@@ -54,10 +58,14 @@ const Checkbox: React.VFC<CheckboxProps> = ({
   click,
   ...props
 }) => {
+  const defStyles = {
+    border: "var(--chk-bdr, none)",
+    width: "var(--chk-size, 1.2rem)"
+  }
   return (
     <input
       className={classes}
-      style={styles}
+      style={{ ...defStyles, ...styles }}
       type="checkbox"
       id={name}
       value={value}

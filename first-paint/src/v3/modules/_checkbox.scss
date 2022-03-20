@@ -7,37 +7,39 @@
 */
 
 @mixin props() {
-  --chk-appearance: none;
-  --chk-bdr: solid;
+  --chk-bdr: none;
   --chk-bdr-w: medium;
   --chk-bdr-cl: transparent;
-  --chk-bg: whitesmoke;
-  --chk-size: 1rem;
+  --chk-bg: darkgray;
+  --chk-size: 1.2rem;
   --chk-appearance: none;
-  --chk-radius: var(--rds);
+  --chk-rds: var(--rds);
+  --lbl-me: 1rem;
+  --lbl-dsp: flex;
   @content;
 }
 
 @mixin rules {
   --fs: var(--chk-size);
-  display: flex;
+  display: var(--lbl-dsp);
   flex-direction: var(--lbl-direction, row);
   place-items: center;
-  margin-inline: 0 1rem;
+  margin-inline-end: var(--lbl-me);
   gap: 0.3rem;
   cursor: pointer;
   height: auto;
+  font-size: var(var(--chk-fs), var(--fs));
 
   :where([id][type="checkbox"]) {
     appearance: var(--chk-appearance);
     -webkit-appearance: var(--chk-appearance);
     -moz-appearance: var(--chk-appearance);
-    border-radius: var(--rds);
+    border-radius: var(--check-rds);
     cursor: pointer;
 
     &::before {
       --chk-bdr-cl: lightgray;
-      --check-bdr-w: thin;
+      --check-bdr-w: initial;
       --chk-rds: var(--rds);
       content: "";
       display: flex;
@@ -45,7 +47,7 @@
       justify-content: center;
       width: var(--chk-size);
       height: var(--chk-size);
-      // border: var(--chk-bdr) var(--chk-bdr-cl);
+      border: var(--chk-bdr, none);
       border-style: var(--chk-bdr);
       border-width: var(--chk-bdr-w);
       border-color: var(--chk-bdr-cl);
@@ -53,11 +55,10 @@
       border-radius: var(--chk-rds);
     }
 
-    &:checked{
+    &:checked {
       --chk-appearance: none;
       &::before {
        --chk-bg: green;
-       --chk-bdr-cl: darkgreen;
       }
     }
   }
