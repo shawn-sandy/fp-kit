@@ -8,7 +8,7 @@
   - [Scaled Color Tokens](/tokens/Color)
 - Modules
   - [Buttons](/components/button)
-  - [Content elements](/components/Content)
+  - [Content Elements](/components/Content)
     - [Headings](/components/Headings)
     - [Paragraph](/components/Paragraph)
   - [Cards](/components/Cards)

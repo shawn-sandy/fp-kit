@@ -27,7 +27,30 @@
 ### Custom properties (rules)
 
 ```css
-  //.....
+
+h1, h1[role="decoration"] {
+  font-size: var(--h1);
+}
+
+h2, h2[role="decoration"] {
+  font-size: var(--h2);
+}
+
+h3, h3[role="decoration"] {
+  font-size: var(--h3);
+}
+
+h4, h4[role="decoration"] {
+  font-size: var(--h4);
+}
+
+h5, h5[role="decoration"] {
+  font-size: var(--h5);
+}
+
+h6, h6[role="decoration"] {
+  font-size: var(--h6);
+}
 ```
 
 ## Examples
