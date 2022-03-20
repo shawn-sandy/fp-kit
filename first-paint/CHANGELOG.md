@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.6...@shawnsandy/first-paint@2.10.0) (2022-03-20)
+
+
+### Features
+
+* add clamp code for responsive type ([860c84e](https://github.com/shawn-sandy/fp-kit/commit/860c84e7717d9cc6172e175b229adc2f618136b9))
+* move examples to top of page ([577dc51](https://github.com/shawn-sandy/fp-kit/commit/577dc51eef275c633b19b9b6ac1dec56eb648880))
+* move header example to top-page ([6b16698](https://github.com/shawn-sandy/fp-kit/commit/6b1669847b4c97951966920d2bf39067b80328c2))
+* responsive heading sizes ([afb743e](https://github.com/shawn-sandy/fp-kit/commit/afb743eee1fcdd7b8b2f32579f74b34139094bc7))
+
+
+
+
+
 ## [2.9.6](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.5...@shawnsandy/first-paint@2.9.6) (2022-03-18)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
