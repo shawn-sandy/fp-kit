@@ -9,6 +9,10 @@
 @mixin props() {
   // * css custom properties
   --hdr-bg: whitesmoke;
+  --hdr-bg-img: none;
+  --hdr-bg-pos: center center;
+  --hdr-bg-size: cover;
+  --hdr-bg-repeat: no-repeat;
   --hdr-bd: none;
   --hdr-min-h: 40vh;
   --hdr-w: 100%;
@@ -32,6 +36,10 @@
   @include props;
   display: var(--hdr-dsp);
   background-color: var(--hdr-bg);
+  background-image: var(--hdr-bg-img);
+  background-position: var(--hdr-bg-pos);
+  background-size: var(--hdr-bg-size);
+  background-repeat: var(--hdr-bg-repeat);
   flex-direction: var(--hdr-direction);
   place-content: var(--hdr-place-x);
   place-items: var(--hdr-place-y);

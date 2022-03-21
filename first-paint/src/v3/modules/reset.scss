@@ -87,6 +87,13 @@ svg {
   max-width: 100%;
 }
 
+img,
+video,
+iframe {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
 /* Inherit fonts for inputs and buttons */
 input, textarea, select{
   font-family: inherit;
