@@ -50,7 +50,7 @@
 
   &[open] > summary {
     &::before {
-      content: "\2212";
+      content: "\00D7";
       transform: rotate(90deg);
     }
   }
