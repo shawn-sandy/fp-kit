@@ -13,6 +13,9 @@
   --img-lg: 75vw;
   --img-xl: 90vw;
   --img-100: 100vw;
+  --img-ratio:function-exists($name: ) auto 2/3;
+  --img-fit: cover;
+  --img-position: center center;
   @content;
 }
 
@@ -21,9 +24,9 @@
 
   max-width: 100%;
   width: var(--img-w, auto);
-  object-fit: var(--img-obj-fit, cover);
-  object-position: var(--img-obj-position, center center);
-  aspect-ratio: var(--img-ratio, auto 2/3);
+  object-fit: var(--img-obj-fit);
+  object-position: var(--img-position);
+  aspect-ratio: var(--img-ratio);
 
   &[width] {
     width: var(--img-w, auto);

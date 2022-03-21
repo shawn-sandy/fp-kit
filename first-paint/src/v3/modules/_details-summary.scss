@@ -34,6 +34,25 @@
     list-style: var(--summary-ls, none);
     cursor: var(--detail-cursor, pointer);
     border-bottom: var(--summary-border, solid lightgray);
+    transition: all 0.2s ease;
+    &::before {
+      content: "\002B";
+      font-size: 1.3rem;
+    }
+    &:hover {
+      &::before {
+        color: lightgray;
+        transform: scale(1.1);
+        // transform: rotate(60deg);
+      }
+    }
+  }
+
+  &[open] > summary {
+    &::before {
+      content: "\2212";
+      transform: rotate(90deg);
+    }
   }
 }
 
