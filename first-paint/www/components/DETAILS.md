@@ -1,4 +1,4 @@
-# Buttons
+# Details Element (accordion)
 
 ?>  Details disclosure element
 
