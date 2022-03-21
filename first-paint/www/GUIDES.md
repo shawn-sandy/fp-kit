@@ -8,11 +8,16 @@
 <section>
 <h2>Header Section</h2>
 <p>Labore est esse et nulla anim labore consequat veniam cupidatat laborum adipisicing.</p>
+<p>
+<button type="button" style="--btn-rds: 99rem">
+  Default Button
+</button>
+</p>
 </section>
 </header>
 <main>
   <section style="max-width: min(80vw, 100vw);">
-  <section role="grid" style="--grid-cols: 2">
+  <section role="grid">
     <div
       role="row">
       <div role="gridcell">
@@ -157,6 +162,11 @@
 <section>
 <h2>Header Section</h2>
 <p>Labore est esse et nulla anim labore consequat veniam cupidatat laborum adipisicing.</p>
+<p>
+<button type="button" style="--btn-rds: 99rem">
+  Default Button
+</button>
+</p>
 </section>
 </header>
 ```
@@ -229,7 +239,7 @@
 ```html
   <article id="articles">
     <h2>Sample Article 1</h2>
-   <img src="https://source.unsplash.com/random/1200x680" loading="lazy"
+   <img src="https://source.unsplash.com/random/1200x480" loading="lazy"
   alt="Placeholder Image"/>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
