@@ -18,7 +18,19 @@
 ### Custom variables
 
 ```css
---details-pd: 1rem;
+  --details-fs: 1rem;
+  --details-pd: 1rem;
+  --details-color: currentColor;
+  --details-bg: whitesmoke;
+  --details-rds: .5rem;
+  --details-w:'min(100%, 350px)';
+  --detail-cursor: pointer;
+  //summary
+  --summary-pd: 0 1rem 1rem 1rem;
+  --summary-fs: 1.1rem;
+  --summary-color: currentColor;
+  --summary-ls: none;
+
 ```
 
 ### Custom properties (rules)
