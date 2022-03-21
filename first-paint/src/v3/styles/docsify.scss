@@ -10,11 +10,18 @@
 }
 
 .demo_preview {
+    width: 100%;
+    display: flex;
   .demo_preview_content {
     display: flex;
+    flex-direction: column;
     place-content: center;
-    width: 100%;
+    place-items: center;
     overflow: hidden;
+    width: 100%;
+    main {
+      width: auto;
+    }
   }
 }
 
