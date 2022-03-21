@@ -1,5 +1,4 @@
 import React from 'react';
-import { text } from 'stream/consumers'
 
 export interface InputProps {
   styles?: object;
