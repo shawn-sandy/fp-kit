@@ -22,13 +22,41 @@
 ### Custom variables
 
 ```css
---color: #000;
+  --rdo-bdr: none;
+  --rdo-bdr-w: medium;
+  --rdo-bdr-cl: transparent;
+  --rdo-bg: darkgray;
+  --rdo-appearance: none;
+  --rdo-rds: 99rem;
 ```
 
 ### Custom properties (rules)
 
 ```css
-  color: var(--color, currentColor);
+  appearance: var(--rdo-appearance);
+  -webkit-appearance: var(--rdo-appearance);
+  -moz-appearance: var(--rdo-appearance);
+  border-radius: var(--check-rds);
+  cursor: pointer;
+  margin: 0;
+
+  &::before {
+  --rdo-bdr-cl: lightgray;
+  --rdo-bdr-w: initial;
+  --rdo-size: 1.2rem;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--rdo-size);
+  min-height: var(--rdo-size);
+  margin: 0;
+  border: var(--rdo-bdr, none);
+  border-style: var(--rdo-bdr);
+  border-width: var(--rdo-bdr-w);
+  border-color: var(--rdo-bdr-cl);
+  background-color: var(--rdo-bg);
+  border-radius: var(--rdo-rds);
 ```
 
 ## Examples
