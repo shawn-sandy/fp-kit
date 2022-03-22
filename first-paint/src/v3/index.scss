@@ -1,6 +1,5 @@
 @use "./modules/reset.scss";
 @use "./modules/props";
-@use "./tokens/open-color.scss";
 @use "./modules/global.scss";
 @use "./modules/header.scss";
 @use "./modules/container";
@@ -13,6 +12,8 @@
 @use "./modules/grid";
 @use "./modules/cards";
 @use "./modules/dialog";
+@use "./modules/input";
+@use "./modules/radio";
 // components
 @use "./components/type.scss";
 // @include container.module();
@@ -26,3 +27,5 @@
 @include grid.module();
 @include button.module();
 @include cards.module();
+@include input.module();
+@include radio.module();

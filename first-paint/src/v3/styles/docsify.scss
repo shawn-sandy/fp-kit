@@ -98,3 +98,13 @@
     width: 100%;
   }
 }
+
+.app-sub-sidebar li{
+  display: flex;
+  &::before {
+  content: " ";
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+}
