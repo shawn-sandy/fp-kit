@@ -16,6 +16,7 @@
 @use "../modules/cards";
 @use "../modules/dialog";
 @use "../modules/input";
+@use "../modules/radio";
 @use "../modules/textarea";
 @use "../components/type.scss";
 // @include container.module();
@@ -28,6 +29,7 @@
 @include checkbox.module();
 @include grid.module();
 @include input.module();
+@include radio.module();
 @include textarea.module();
 @include button.module();
 @include cards.module();
