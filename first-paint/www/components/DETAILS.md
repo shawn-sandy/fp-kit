@@ -7,7 +7,7 @@
 ```html preview
 <details title="Element Title">
   <summary>
-    Element Title
+    Summary Title
   </summary>
   <p>In ullamco consequat magna laboris cillum. Nisi cillum pariatur nostrud dolore incididunt duis adipisicing minim mollit voluptate minim ut. Qui velit id ex adipisicing adipisicing nisi eu adipisicing proident occaecat aute in. Anim Lorem mollit magna esse anim est nulla.</p>
 </details>
