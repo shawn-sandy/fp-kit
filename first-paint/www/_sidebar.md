@@ -19,6 +19,7 @@
   - [Img](/components/Img)
   - [Inputs](/components/Input)
   - [Navbar](/components/Navbar)
+  - [Radio](/components/Radio)
   - [Textarea](/components/Textarea)
   - [Table](/components/Table)
 - [Changelog](/CHANGELOG)
