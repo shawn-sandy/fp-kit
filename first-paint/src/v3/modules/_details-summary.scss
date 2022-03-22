@@ -8,7 +8,18 @@
 
 @mixin props() {
   // !Add props
+  --details-fs: 1rem;
   --details-pd: 1rem;
+  --details-color: currentColor;
+  --details-bg: whitesmoke;
+  --details-rds: .5rem;
+  --details-w:'min(100%, 350px)';
+  --detail-cursor: pointer;
+  //summary
+  --summary-pd: 0 1rem 1rem 1rem;
+  --summary-fs: 1.1rem;
+  --summary-color: currentColor;
+  --summary-ls: none;
   @content;
 }
 @mixin rules {
@@ -33,24 +44,25 @@
     background-color: var(--summary-bg, transparent);
     list-style: var(--summary-ls, none);
     cursor: var(--detail-cursor, pointer);
-    border-bottom: var(--summary-border, solid lightgray);
+    border-bottom: var(--summary-border, none);
     transition: all 0.2s ease;
     &::before {
       content: "\002B";
       font-size: 1.3rem;
+      color: lightgray;
     }
     &:hover {
       &::before {
-        color: lightgray;
         transform: scale(1.1);
         // transform: rotate(60deg);
+        color: currentColor;
       }
     }
   }
 
   &[open] > summary {
     &::before {
-      content: "\2212";
+      content: "\00D7";
       transform: rotate(90deg);
     }
   }

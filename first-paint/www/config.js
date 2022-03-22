@@ -41,7 +41,25 @@ window.$docsify = {
   //   title: 'On This Page'
   // },
   // eslint-disable-next-line no-undef
-  plugins: [EditOnGithubPlugin.create(editPath, null, editMsg)]
+  plugins: [
+    // eslint-disable-next-line no-undef
+    EditOnGithubPlugin.create(editPath, null, editMsg),
+    function (hook, vm) {
+      const title = encodeURIComponent('What is the issue title?')
+      const body = encodeURIComponent(`Please describe the type of issue (page - ${window.location.href})?`)
+      const footer = [
+        '<footer>',
+        `<p><a href="https://github.com/shawn-sandy/fp-kit/issues/new?title=${title}&body=${body}" target="_blank">Open a github issue</a>.</p>`,
+        '</footer>'
+      ].join('')
+
+      hook.afterEach(function (html) {
+        return html + footer
+      })
+      console.log(vm?.route, vm)
+    }
+
+  ]
 }
 
 // eslint-disable-next-line no-unused-vars
