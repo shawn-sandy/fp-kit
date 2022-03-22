@@ -25,12 +25,12 @@
   --details-rds: .5rem;
   --details-w:'min(100%, 350px)';
   --detail-cursor: pointer;
-  //summary
+
+  // summary
   --summary-pd: 0 1rem 1rem 1rem;
   --summary-fs: 1.1rem;
   --summary-color: currentColor;
   --summary-ls: none;
-
 ```
 
 ### Custom properties (rules)
