@@ -47,14 +47,14 @@ window.$docsify = {
     function (hook, vm) {
       const title = encodeURIComponent('What is the issue title?')
       const body = encodeURIComponent(`Please describe the type of issue (page - ${window.location.href})?`)
-      const footer = [
-        '<footer>',
+      const issue = [
+        '<div style="text-align: right">',
         `<p><a href="https://github.com/shawn-sandy/fp-kit/issues/new?title=${title}&body=${body}" target="_blank">Open a github issue</a>.</p>`,
-        '</footer>'
+        '</div>'
       ].join('')
 
-      hook.afterEach(function (html) {
-        return html + footer
+      hook.beforeEach(function (html) {
+        return html + issue
       })
       console.log(vm?.route, vm)
     }
