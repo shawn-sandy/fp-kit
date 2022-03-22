@@ -12,7 +12,7 @@
     - [Headings](/components/Headings)
     - [Paragraph](/components/Paragraph)
   - [Cards](/components/Cards)
-  - [Details disclosure](/components/DETAILS)
+  - [Dropdowns](/components/DETAILS)
   - [Forms](/components/Checkbox)
     - [Checkbox](/components/Checkbox)
     - [Radio](/components/Radio)
