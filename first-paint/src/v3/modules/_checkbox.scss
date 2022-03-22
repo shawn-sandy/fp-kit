@@ -19,6 +19,26 @@
   @content;
 }
 
+@mixin label() {
+  --lbl-me: 1rem;
+  --lbl-dsp: flex;
+  --lbl-fs: 1rem;
+  --lbl-align: center;
+  --lbl-gap: 0.5rem;
+  --lbl-color: currentColor;
+  --lbl-cursor: pointer;
+  --lbl-height: auto;
+  display: var(--lbl-dsp);
+  flex-direction: var(--lbl-direction, row);
+  place-items: var(--lbl-align);
+  margin-inline-end: var(--lbl-me);
+  gap: 0.3rem;
+  cursor: pointer;
+  height: auto;
+  font-size: var(--lbl-fs, var(--fs));
+  @content;
+}
+
 @mixin rules {
   --fs: var(--chk-size);
   display: var(--lbl-dsp);
@@ -36,6 +56,7 @@
     -moz-appearance: var(--chk-appearance);
     border-radius: var(--check-rds);
     cursor: pointer;
+    margin: var(--chk-mg, 0);
 
     &::before {
       --chk-bdr-cl: lightgray;
@@ -66,7 +87,7 @@
 }
 
 @mixin module {
-  :where(label) {
+  :where(label[for]) {
     @include props;
     @include rules;
   }

@@ -7,8 +7,12 @@
 ```html preview
 <div>
 <label for="radio">
-  <input type="radio" id="radio" value="" />
-  Checkbox Label
+  <input type="radio" id="radio" name="radio" value="" />
+  Radio label
+</label>
+<label for="radio2">
+  <input type="radio" id="radio2" name="radio"  value="" />
+  Radio2 label
 </label>
 </div>
 ```
