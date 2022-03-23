@@ -5,9 +5,15 @@
 ### Default Select
 
 ```html preview
-<div>
-Select
-</div>
+
+<select>
+    <option>This is a native select element</option>
+    <option>Apples</option>
+    <option>Bananas</option>
+    <option>Grapes</option>
+    <option>Oranges</option>
+</select>
+
 ```
 
 ## Select Variables
