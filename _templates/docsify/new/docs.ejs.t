@@ -22,10 +22,12 @@ to: <%= absPath %>/<%= name %>.md
 --color: #000;
 ```
 
-### Custom properties (rules)
+### <%= name %> properties (rules)
 
 ```css
+<%= name %> {
   color: var(--color, currentColor);
+}
 ```
 
 ## Examples

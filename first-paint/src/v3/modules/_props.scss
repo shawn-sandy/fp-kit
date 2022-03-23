@@ -26,6 +26,7 @@
   --bdr: initial;
   --line: initial;
   --rds: initial;
+  --appearance: none;
 
   font-size: var(--fs);
   font-weight: var(--fw);
@@ -85,6 +86,11 @@
   --clip-path: initial;
   -webkit-clip-path: var(--clip-path);
   clip-path: var(--clip-path);
+
+
+  // -webkit-appearance: var(--appearance);
+  // appearance: var(--appearance);
+  // -moz-appearance: var(--appearance);
 
   // * css rules/styles
   @content;

@@ -1,4 +1,4 @@
-# Details Element (accordion)
+# Dropdowns
 
 ?>  Details disclosure element
 
