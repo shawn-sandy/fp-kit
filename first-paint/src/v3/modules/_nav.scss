@@ -15,8 +15,8 @@
   --nav-justify: space-between;
   --nav-mx: 1rem;
   --nav-align: center;
-    --nav-gap: 0.5rem;
-    --nav-px: 1rem;
+  --nav-gap: 0.5rem;
+  --nav-px: 1rem;
   --nav-bg: initial;
   @content;
 }
@@ -50,14 +50,12 @@
   > ul {
     --nav-dsp: flex;
 
-
     display: var(--nav-dsp, var(--dsp));
     gap: var(--nav-gap, var(--gap));
     font-size: var(--nav-fs, 0.9rem);
     align-items: var(--nav-align, var(--align));
     padding-inline: var(--nav-px, var(--px));
     height: 100%;
-
   }
   > section {
     > div {
