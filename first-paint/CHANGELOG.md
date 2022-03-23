@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.10.0...@shawnsandy/first-paint@2.10.1) (2022-03-23)
+
+
+### Bug Fixes
+
+* reset default/root bg-color to initial ([4dd7acf](https://github.com/shawn-sandy/fp-kit/commit/4dd7acf2368aa401b79db30eb839dd092ad27600))
+
+
+### Features
+
+* add +/x open-close icons to summary ([96c2d72](https://github.com/shawn-sandy/fp-kit/commit/96c2d726e3876996a75ba7ac26829fe54589066c))
+* add +/x open-close icons to summary ([303c1fe](https://github.com/shawn-sandy/fp-kit/commit/303c1feb770618df6eb415b26a7ef02f9964baa7))
+* add create issue link to the bottom of page ([5c95976](https://github.com/shawn-sandy/fp-kit/commit/5c95976a9595eb5cb3960b7fe3466acf1d70a7b0))
+* add custom props for details elements ([8e920c5](https://github.com/shawn-sandy/fp-kit/commit/8e920c5bf61a0a12fd4b4f301aa5dc4867d53412))
+* add plus/minus open-close icons to summary ([34f9eaa](https://github.com/shawn-sandy/fp-kit/commit/34f9eaa87002b02102c97caed0ddb56f9cbcdbb7))
+* add radio element ([320d274](https://github.com/shawn-sandy/fp-kit/commit/320d2745de81b0afe22e48ab146ea1f8988981c1))
+* add radio element readme ([d319dec](https://github.com/shawn-sandy/fp-kit/commit/d319dec90c7a8bdb7f024b07eb1b665de31f14b9))
+* **alpha:** add basic-sample.html page ([ec1f49d](https://github.com/shawn-sandy/fp-kit/commit/ec1f49df7154be31b1165ca97d117c55b6f90fb7))
+* **alpha:** add svg dropdown arrow ([7321ad1](https://github.com/shawn-sandy/fp-kit/commit/7321ad14a15aac6d21d16190141c8d107bec1af1))
+* **beta:** add select component w/readme ([70f8d4f](https://github.com/shawn-sandy/fp-kit/commit/70f8d4f6c0f360db8d6a3dcba741be89a71f3e70))
+* markup/docs for radio element ([e545073](https://github.com/shawn-sandy/fp-kit/commit/e5450739edd4ded56a807673cf7612c001bc56c8))
+* move new issue link above paganiation links ([ec7b981](https://github.com/shawn-sandy/fp-kit/commit/ec7b9814b295ca7cac343246a65e7f35a1ad7f0e))
+* rename retails component to dropdown ([f5aebb8](https://github.com/shawn-sandy/fp-kit/commit/f5aebb8395ddd4ce53d480184904f76c62b565c4))
+* responsive header , img enhancements ([a8f8406](https://github.com/shawn-sandy/fp-kit/commit/a8f8406a7a7e1b61f554e28889b248a4fb2510df))
+* responsive header , img enhancements ([bae536e](https://github.com/shawn-sandy/fp-kit/commit/bae536ed4188dac30d2e5413eb3ac15426678f28))
+* scaffold the input component ([c4612f8](https://github.com/shawn-sandy/fp-kit/commit/c4612f8aaf400efa9c94515a97a500412831aeef))
+* scaffold the radio module ([e07bdcc](https://github.com/shawn-sandy/fp-kit/commit/e07bdcc8b63ae211830c0541bd0dc9809afaa08a))
+* update the details element title style ([9136cd5](https://github.com/shawn-sandy/fp-kit/commit/9136cd51967ebdbe048b5242ddc9f00404e7cee6))
+* update the details element title style ([185691a](https://github.com/shawn-sandy/fp-kit/commit/185691afb55d2c923d12d1c86ef6239c3540b319))
+* **wip:** add dropdown arrow ([1d05e06](https://github.com/shawn-sandy/fp-kit/commit/1d05e06530242e0454c01fbb49f9062223084931))
+
+
+
+
+
+
 # [2.10.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.9.6...@shawnsandy/first-paint@2.10.0) (2022-03-20)
 
 
