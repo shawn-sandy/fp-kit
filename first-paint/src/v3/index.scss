@@ -14,6 +14,8 @@
 @use "./modules/dialog";
 @use "./modules/input";
 @use "./modules/radio";
+@use "modules/textarea";
+@use "./modules/select";
 // components
 @use "./components/type.scss";
 // @include container.module();
@@ -29,3 +31,5 @@
 @include cards.module();
 @include input.module();
 @include radio.module();
+@include textarea.module();
+@include select.module();

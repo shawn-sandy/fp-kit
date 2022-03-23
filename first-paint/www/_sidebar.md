@@ -12,18 +12,16 @@
     - [Headings](/components/Headings)
     - [Paragraph](/components/Paragraph)
   - [Cards](/components/Cards)
-  - [Details disclosure](/components/DETAILS)
+  - [Dropdowns](/components/DETAILS)
   - [Forms](/components/Checkbox)
     - [Checkbox](/components/Checkbox)
+    - [Inputs](/components/Input)
     - [Radio](/components/Radio)
+    - [Select](/components/select)
     - [Textarea](/components/Textarea)
   - [Grid](/components/grid)
   - [Header](/components/Header)
   - [Img](/components/Img)
-  - [Inputs](/components/Input)
   - [Navbar](/components/Navbar)
-
   - [Table](/components/Table)
 - [Changelog](/CHANGELOG)
-
-

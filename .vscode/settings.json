@@ -1,2 +1,7 @@
 {
+  "conventionalCommits.scopes": [
+    "wip",
+    "alpha",
+    "beta"
+  ]
 }
