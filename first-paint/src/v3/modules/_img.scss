@@ -16,6 +16,7 @@
   --img-ratio:function-exists($name: ) auto 2/3;
   --img-fit: cover;
   --img-position: center center;
+  --img-w: min(100%, 80vw);
   @content;
 }
 
@@ -40,6 +41,10 @@
     // width: 100%;
     height: auto;
     max-width: none;
+  }
+
+  + p {
+    margin-block: 1rem 0;
   }
 }
 

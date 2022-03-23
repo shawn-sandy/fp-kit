@@ -14,7 +14,7 @@
   --nav-align: center;
   --nav-justify: space-between;
   --nav-mx: auto;
-  --nav-bg: whitesmoke;
+  --nav-bg: initial;
   @content;
 }
 
@@ -25,7 +25,7 @@
   flex-direction: var(--nav-direction, var(--direction));
   width: var(--nav-w, var(--w));
   height: var(--nav-h, var(--h));
-  align-items: var(--nav-align, var(--align));
+  place-items: var(--nav-align, var(--align));
   justify-content: var(--nav-justify, var(--justify));
   margin-inline: var(--nav-mx, var(--mx));
   background-color: var(--nav-bg, var(--bg));
@@ -36,11 +36,11 @@
   }
 
   @media (max-width: calc(700rem / 16)) {
-    --dsp: block;
-    --w: 100%;
-    --h: auto;
-    --py: var(--rem);
-    --justify: center;
+    // --dsp: block;
+    // --w: 100%;
+    // --h: auto;
+    // --py: var(--rem);
+    // --justify: center;
   }
 
   > section,
@@ -56,7 +56,7 @@
     padding-block: var(--nav-py, var(--py));
     padding-inline: var(--nav-px, var(--px));
     align-items: var(--nav-align, var(--align));
-    width: 100%;
+    min-width: initial;
     height: 100%;
   }
   > section {

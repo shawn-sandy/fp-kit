@@ -1,7 +1,7 @@
-:root {
-  --fs-1x: clamp(calc(24px /16), 2vw + 1rem, 2.25rem);
-  --fs-2x: clamp(2rem, 4vw + 1rem, 3.75rem);
-}
+// :root {
+//   --fs-1x: clamp(calc(24px /16), 2vw + 1rem, 2.25rem);
+//   --fs-2x: clamp(2rem, 4vw + 1rem, 3.75rem);
+// }
 h1,
 h2,
 h3,
@@ -31,14 +31,15 @@ p,
   --p-sm: var(--sm);
   --p-md: var(--md);
   --p-lg: var(--lg);
-  --fs: clamp(0.688rem, 4vw - 1.5rem, 1rem);
   --fw: normal;
   --lh: 1.7;
   --spacing: 0.5rem;
 
+
   margin: var(--p-m, 0);
   line-height: var(--lh, 1.6rem);
   word-spacing: 0.05rem;
+  font-size: var(--p-fs, var(--fs-0));
 
   i {
     font-style: italic;
@@ -96,7 +97,7 @@ time {
 
 p + p,
 p + * {
-  margin-top: var(--rem);
+  margin-top: var(--fs-0);
 }
 
 [style*="--truncate"] {
