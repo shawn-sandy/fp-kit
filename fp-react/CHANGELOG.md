@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.9.0...@shawnsandy/fp-react@0.9.1) (2022-03-23)
+
+
+### Bug Fixes
+
+* remove unused imports ([0d8230f](https://github.com/shawn-sandy/fp-kit/commit/0d8230fe01ecd5f3db3107eb4e4db5fc97283263))
+
+
+
+
+
+
 # [0.9.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.8.12...@shawnsandy/fp-react@0.9.0) (2022-03-20)
 
 
