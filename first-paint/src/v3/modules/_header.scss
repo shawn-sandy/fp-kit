@@ -44,8 +44,8 @@
   place-content: var(--hdr-place-x);
   place-items: var(--hdr-place-y);
   text-align: var(--hdr-align);
-  height: var(--hdr-min-h, auto);
-  width: var(--hdr-w, auto);
+  min-height: var(--hdr-min-h, auto);
+  min-width: var(--hdr-w, auto);
   padding-block: var(--hdr-py);
   padding-inline: var(--hdr-px);
   margin: var(--hdr-m);
