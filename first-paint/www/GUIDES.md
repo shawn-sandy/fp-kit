@@ -2,6 +2,7 @@
 
 ## Landing Page
 
+<a href="/basic-sample.html" target="_blank">Open in new tab</a>
 
 ```html preview
 <header>
