@@ -45,25 +45,30 @@ window.$docsify = {
     // eslint-disable-next-line no-undef
     EditOnGithubPlugin.create(editPath, null, editMsg),
     function (hook, vm) {
-      const title = encodeURIComponent('What is the issue title?')
-      const body = encodeURIComponent(`Please describe the type of issue (page - ${window.location.href})?`)
+      const path = window.location.pathname
+      // const title = encodeURIComponent(`Issue ${path} :`)
+      const title = encodeURIComponent(`Issue title..?`)
+      const body = encodeURIComponent(
+        `<!-- Please describe related issue(s) (page - ${window.location.href}${path})? -->`
+      )
       const issue = [
         '<div style="text-align: right">',
-        `<p><a href="https://github.com/shawn-sandy/fp-kit/issues/new?title=${title}&body=${body}" target="_blank">Open a github issue</a>.</p>`,
+        `<p><a href="https://github.com/shawn-sandy/fp-kit/issues/new/?title=${title}&body=${body}" target="_blank">Open a github issue</a>.</p>`,
         '</div>'
       ].join('')
-
+      console.log(vm?.config, vm)
       hook.beforeEach(function (html) {
         return html + issue
       })
-      console.log(vm?.route, vm)
     }
-
   ]
 }
 
 // eslint-disable-next-line no-unused-vars
 function imgError (event) {
-  console.log('Image loading error' + event.currentTarget.src)
-  event.currentTarget.src = 'https://via.placeholder.com/800'
+  console.log(
+    'Image loading error' + event.currentTarget.src
+  )
+  event.currentTarget.src =
+    'https://via.placeholder.com/800'
 }
