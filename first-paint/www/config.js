@@ -45,7 +45,7 @@ window.$docsify = {
     // eslint-disable-next-line no-undef
     EditOnGithubPlugin.create(editPath, null, editMsg),
     function (hook, vm) {
-      const path = window.location.pathname
+      const path = window.location.hash
       // const title = encodeURIComponent(`Issue ${path} :`)
       const title = encodeURIComponent(`Issue title..?`)
       const body = encodeURIComponent(
