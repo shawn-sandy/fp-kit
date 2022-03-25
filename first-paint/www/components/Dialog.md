@@ -15,7 +15,7 @@
   Some basic text inside the modal to demonstrate how it all looks and works.
 </p>
 
-    <button class="btn btn-close" onclick="closeDialog(this)">
+    <button type="button" class="btn btn-close" onclick="closeDialog(this)">
       Close
     </button>
 </dialog>
