@@ -8,12 +8,24 @@
 
 @mixin props() {
   // * css custom properties
+  --diag-bg: whitesmoke;
+  --diag-bg-img: none;
+  --diag-x: 1.5rem;
+  --diag-y: 1.5rem;
+
+
   @content;
 }
 
 @mixin rules {
-  @include props;
   // * css rules/styles
+  background-color: var(--diag-bg);
+  background-image: var(--diag-bg-img);
+  padding-inline: var(--diag-x);
+  padding-block: var(--diag-y);
+  &::backdrop {
+    background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
+  }
   @content;
 }
 
@@ -23,8 +35,10 @@
 }
 
 @mixin module {
-  [role=dialog] {
+  dialog, [role=dialog] {
+  @include props;
     @include rules;
+
   }
   @include styles;
 }
