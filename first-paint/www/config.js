@@ -80,7 +80,7 @@ function imgError (event) {
 
 // eslint-disable-next-line no-unused-vars
 function openDialog (target, elm) {
-  console.log(target, elm)
+  //console.log(target, elm)
   document.querySelector(target).showModal()
 }
 
