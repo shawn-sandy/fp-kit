@@ -45,7 +45,7 @@ window.$docsify = {
     // eslint-disable-next-line no-undef
     EditOnGithubPlugin.create(editPath, null, editMsg),
     function (hook, vm) {
-      console.log(vm?.config.repo, vm)
+      // console.log(vm?.config.repo, vm)
       hook.beforeEach(function (html) {
         const path = window.location.hash
         // const title = encodeURIComponent(`Issue ${path} :`)
@@ -57,7 +57,7 @@ window.$docsify = {
         )
         const issue = [
           '<div style="text-align: right">',
-          `<p><a href="https://github.com/shawn-sandy/fp-kit/issues/new/?title=${title}&body=${body}" target="_blank">Open a github issue</a>.</p>`,
+          `<p><a href="${vm?.config?.repo}/issues/new/?title=${title}&body=${body}" target="_blank">Open a github issue</a>.</p>`,
           '</div>'
         ].join('')
 
