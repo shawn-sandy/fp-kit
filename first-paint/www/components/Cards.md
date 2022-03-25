@@ -55,7 +55,7 @@ To style a card we repurpose `role="presentation` attribute on a `div` element.
 Add shadows to your cards with `style="--card:var(--cd-lg)` use the following custom properties `--card-lg; --card-md; --card-sm;` to add shadows to your cards.
 
 ```html preview
-<div role="presentation" style="--card:var(--cd-lg); --cd-shadow:var(--cd-shadow-lg);">
+<div role="presentation" style="--card:var(--cd-lg); --card-shadow:var(--cd-shadow-lg);">
   <h3>Card Title</h3>
   <p>
     Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
@@ -66,7 +66,7 @@ Add shadows to your cards with `style="--card:var(--cd-lg)` use the following cu
 ### Shadow Card (Small)
 
 ```html preview
-<div role="presentation" style="--card:var(--cd-md); --cd-shadow:var(--cd-shadow-sm);">
+<div role="presentation" style="--card:var(--cd-md); --card-shadow:var(--cd-shadow-sm);">
   <h3>Card Title</h3>
   <p>
     Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
