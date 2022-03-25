@@ -75,3 +75,16 @@ function imgError (event) {
   event.currentTarget.src =
     'https://via.placeholder.com/800'
 }
+
+// open dialog
+
+// eslint-disable-next-line no-unused-vars
+function openDialog (target, elm) {
+  console.log(target, elm)
+  document.querySelector(target).showModal()
+}
+
+// eslint-disable-next-line no-unused-vars
+function closeDialog (elm) {
+  elm.closest('dialog').close()
+}
