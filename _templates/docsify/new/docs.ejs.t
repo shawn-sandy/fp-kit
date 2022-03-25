@@ -36,8 +36,11 @@ to: <%= absPath %>/<%= name %>.md
 ## References/Additional info
 
 
-[MDN GUIDELINES AND SPECFICATIONS]()
 
-[ACCESSIBILITY GUIDE]()
+[MDN GUIDELINES AND SPECFICATIONS](https: ':_target="_blank"')
+
+[HTML SPECIFICATIONS](https:// ':_target="_blank"')
+
+[ACCESSIBILITY GUIDE](https://, ':_target="_blank"')
 
 ----
