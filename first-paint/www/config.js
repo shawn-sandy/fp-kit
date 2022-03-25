@@ -57,7 +57,7 @@ window.$docsify = {
         )
         const issue = [
           '<div style="text-align: right">',
-          `<p><a href="${vm?.config?.repo}/issues/new/?title=${title}&body=${body}" target="_blank">Open a github issue</a>.</p>`,
+          `<p><a href="${vm?.config?.repo}/issues/new/?title=${title}&body=${body}" target="_blank" style="--btn-rds: var(--btn-pill)">Open a github issue</a>.</p>`,
           '</div>'
         ].join('')
 

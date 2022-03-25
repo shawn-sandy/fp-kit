@@ -52,7 +52,6 @@ function closeDialog (elm) {
 ### Dialog properties (rules)
 
 ```css
-Dialog {
 
   background-color: var(--diag-bg);
   background-image: var(--diag-bg-img);
@@ -61,7 +60,7 @@ Dialog {
   &::backdrop {
     background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
   }
-}
+
 ```
 
 ## Examples
