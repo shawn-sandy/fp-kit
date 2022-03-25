@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.10.1...@shawnsandy/first-paint@2.11.0) (2022-03-25)
+
+
+### Bug Fixes
+
+* **alpha:** reslove issue w/issue link ([16b0222](https://github.com/shawn-sandy/fp-kit/commit/16b0222ce0efec807785f7816a632f9a37e72618))
+* **alpha:** reslove issue w/issue link ([89c129e](https://github.com/shawn-sandy/fp-kit/commit/89c129e182c74a753333ea1c88bba91756555c7b))
+* **alpha:** reslove issue w/issue link ([1840918](https://github.com/shawn-sandy/fp-kit/commit/184091809edb3eda08058ce0d34f4b69c2b291fe))
+* **alpha:** reslove issue w/issue link ([3ef4230](https://github.com/shawn-sandy/fp-kit/commit/3ef42305f98f3e3bc6bfe608d4a50d4e9c5101ef))
+
+
+### Features
+
+* **alpha:** add dialog/modal element w/readme ([de28bfc](https://github.com/shawn-sandy/fp-kit/commit/de28bfcf9244e660332fdaf2fe67ce3dd88532b3))
+* **beta:** sampel page preview ([c7024b7](https://github.com/shawn-sandy/fp-kit/commit/c7024b7ce3c8756dae45b7d9d67b810692068ade))
+
+
+
+
+
 ## [2.10.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.10.0...@shawnsandy/first-paint@2.10.1) (2022-03-23)
 
 
