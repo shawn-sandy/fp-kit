@@ -70,7 +70,7 @@
 }
 
 @mixin module {
-  :where(button, [style*="--btn"]) {
+  button[type], [style*="--btn"] {
     @include rules;
   }
   @include styles;
