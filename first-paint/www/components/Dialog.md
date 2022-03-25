@@ -15,11 +15,27 @@
   Some basic text inside the modal to demonstrate how it all looks and works.
 </p>
 
-    <button class="btn btn-close" onclick="closeDialog(this)">
+    <button type="button" class="btn btn-close" onclick="closeDialog(this)">
       Close
     </button>
 </dialog>
 </div>
+```
+
+#### Example `javascript` for opening and closing the dialog
+
+```javascript
+// eslint-disable-next-line no-unused-vars
+function openDialog (target, elm) {
+  console.log(target, elm)
+  document.querySelector(target).showModal()
+}
+
+// eslint-disable-next-line no-unused-vars
+function closeDialog (elm) {
+  elm.closest('dialog').close()
+}
+
 ```
 
 ## Dialog Variables
@@ -27,15 +43,24 @@
 ### Custom variables
 
 ```css
---color: #000;
+  --diag-bg: whitesmoke;
+  --diag-bg-img: none;
+  --diag-x: 1.5rem;
+  --diag-y: 1.5rem;
 ```
 
 ### Dialog properties (rules)
 
 ```css
-Dialog {
-  color: var(--color, currentColor);
-}
+
+  background-color: var(--diag-bg);
+  background-image: var(--diag-bg-img);
+  padding-inline: var(--diag-x);
+  padding-block: var(--diag-y);
+  &::backdrop {
+    background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
+  }
+
 ```
 
 ## Examples
