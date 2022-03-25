@@ -2,7 +2,8 @@
   "conventionalCommits.scopes": [
     "wip",
     "alpha",
-    "beta"
+    "beta",
+    "dx"
   ],
   "cSpell.words": [
     "Cpath",
