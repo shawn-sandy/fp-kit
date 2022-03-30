@@ -60,7 +60,7 @@
     "release": "npm publish"
   },
   "bugs": {
-    "url": "https://github.com/shawn-sandy/ideas/issues"
+    "url": "https://github.com/shawn-sandy/fp-kit/issues"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
