@@ -6,8 +6,8 @@
 
 ```html preview
 <div>
-<label for="radio">
-  <input type="radio" id="radio" name="radio" value="" />
+<label for="radio1">
+  <input type="radio" id="radio1" name="radio" value="" />
   Radio label
 </label>
 <label for="radio2">
