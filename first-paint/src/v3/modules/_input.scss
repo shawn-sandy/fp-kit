@@ -9,7 +9,7 @@
 @mixin props() {
   // * css custom properties
   --input-appearance: none;
-  --input-min-w: min(150px, 100%);
+  --input-min-w: min(100px, 100%);
   --input-fw: normal;
   --input-bdr-style: solid;
   --input-bdr-color: lightgray;
