@@ -21,6 +21,7 @@
 @use "../modules/select";
 @use "../modules/textarea";
 @use "../components/type.scss";
+@use "../modules/tooltip";
 // @include container.module();
 @include props.module();
 @include nav.module();
@@ -37,3 +38,4 @@
 @include cards.module();
 @include select.module();
 @include dialog.module();
+@include tooltip.module();

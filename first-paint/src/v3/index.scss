@@ -16,6 +16,7 @@
 @use "./modules/radio";
 @use "modules/textarea";
 @use "./modules/select";
+@use "./modules/tooltip";
 // components
 @use "./components/type.scss";
 // @include container.module();
@@ -33,3 +34,6 @@
 @include radio.module();
 @include textarea.module();
 @include select.module();
+@include dialog.module();
+@include tooltip.module();
+
