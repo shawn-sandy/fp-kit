@@ -11,7 +11,7 @@
   --slt-dsp: grid;
   --slt-align: center;
   --slt-justify: space-between;
-  --slt-min-w: min(350px, 100%);
+  --slt-min-w: min(100px, 100%);
   --slt-fs: 1rem;
   --slt-cl: currentColor;
   --slt-bdr-style: solid;
@@ -20,10 +20,13 @@
   --slt-px: 0.5rem;
   --slt-py: 0.5rem;
   --slt-appearance: none;
+  @content;
+}
+
+@mixin icons {
   --slt-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctitle%3Eic_keyboard_arrow_down_24px%3C/title%3E%3Cg fill='%23000000'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
   --bg-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctitle%3Eic_keyboard_arrow_down_24px%3C/title%3E%3Cg fill='%23696969'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
   --bg-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctitle%3Eic_keyboard_arrow_down_24px%3C/title%3E%3Cg fill='%23f1f1f1'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-  @content;
 }
 
 @mixin rules {
@@ -60,6 +63,7 @@
 @mixin module {
   select {
     @include props;
+    @include icons;
     @include rules;
   }
   select * {
