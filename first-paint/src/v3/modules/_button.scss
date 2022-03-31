@@ -35,6 +35,11 @@
     transition: all 0.2s ease !important;
   }
 
+   + * {
+    // margin-inline-end: var(--btn-mxs, 0.5rem);
+    margin-block-start: var(--btn-mys, 0.5rem);
+  }
+
   @content;
 }
 
@@ -52,10 +57,11 @@
     }
 
     &:hover {
+      --btn-cl: var(--btn-cl-hover);
+      --btn-bg: var(--btn-bg-hover);
       filter: invert(1) hue-rotate (180deg);
-      transform: scale(1.05);
-      // --btn-bg: var(--btn-color, blue);
-      // --btn-color: var(--btn-bg, lightgray);
+      transform: scale(0.95);
+
     }
 
     &[type="reset"],

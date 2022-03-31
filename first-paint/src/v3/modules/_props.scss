@@ -71,7 +71,6 @@
 }
 
 @mixin rules {
-  @include props;
 
   font-size: var(--fs, 1rem);
   font-weight: var(--fw);

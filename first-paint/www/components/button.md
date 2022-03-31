@@ -42,6 +42,25 @@
 
 ## Button Examples
 
+### Default Buttons
+
+```html preview
+<button type="button"
+>
+  Default Button
+</button>
+
+<button type="button"
+>
+  Default Button
+</button>
+
+<button type="button"
+>
+  Default Button
+</button>
+```
+
 ### Button
 
 You can use the button to create a button without border or background color, **styleless buttons**--useful for creating/styling buttons that look like links using of vice-versa. For links `<a>` you use `style="--btn:*"` or the `[role="button"] attribute.
@@ -114,6 +133,8 @@ style="--btn-fs:var(--btn-lg);"
 
 ### Pill Button
 
+Button with a pill style/shape `--btn-pll`
+
 ```html
 style="--btn-rds:var(--btn-pill);"
 ```
@@ -138,6 +159,6 @@ style="--btn-rds:var(--btn-pill);"
 
 [ACCESSIBILITY GUIDE](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
 
-[Hidding content/button](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)
+[Hiding content/button](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)
 
 ----
