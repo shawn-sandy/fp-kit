@@ -13,8 +13,11 @@
   --my: 0;
   --tbl-collapse: collapse;
   --tbl-bdr-w: thin;
-  --tbl-bdr-s: solid;
+  --tbl-bdr-s: none;
   --tbl-bdr-cl: var(--light);
+  --tbl-rds: .5rem;
+  --tbl-td-py: 1rem;
+  --tbl-td-px: 1rem;
 
   @content;
 }
@@ -22,32 +25,26 @@
 @mixin rules {
   @include props;
 
-  margin: 25px 0;
   display: table;
   font-size: var(--tbl-fs, 0.9em);
   font-family: var(--fs, sans-serif);
-  min-width: var(--tbl-width, min(100%, 50vw));
+  min-width: var(--tbl-width, 100%);
   border-collapse: var(--tbl-collapse);
-  border: var(--tbl-bdr, thin solid gray);
+  border: var(--tbl-bdr, none);
   display: var(--tbl-dsp, table);
+  border-radius: var(--tbl-rds);
 
   thead tr {
     --text-align: left;
-    background-color: var(--tb-bg, lightgray);
+    background-color: var(--tb-bg, whitesmoke);
     text-align: var(--text-align);
-    border-bottom: var(
-      --tbl-head-bdr,
-      var(--tb-bdr) var(--tb-bdr-w),
-      var(--tb-bdr-color)
-    );
+    border-bottom: var(--tbl-bdr);
   }
 
   th,
   td {
-    --py: 0.5rem;
-    --px: 0.75rem;
-    padding-block: var(--py);
-    padding-inline: var(--px);
+    padding-block: var(--tbl-td-py);
+    padding-inline: var(--tbl-td-px);
   }
 
   tr:nth-of-type(even) {
@@ -58,6 +55,7 @@
     --tbl-bdr: medium solid var(--tb-bdr-color);
     border-bottom: var(--tbl-bdr);
   }
+
 
   @content;
 }
@@ -73,6 +71,5 @@
   table {
     @include rules;
   }
-
   @include styles;
 }

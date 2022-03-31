@@ -182,7 +182,7 @@ Header Section
 
 ```html preview
 
-<button>
+<button type="button">
   Default Button
 </button>
 
@@ -198,8 +198,8 @@ Header Section
 ### Checkbox
 
 ```html preview
-<label for="checkbox">
-  <input type="checkbox" id="checkbox" value="" />
+<label for="checkbox1">
+  <input type="checkbox" id="checkbox1" value="" />
   Checkbox Label
 </label>
 ```
@@ -262,7 +262,7 @@ Header Section
 
 ```html preview
 <img
-  src="https://source.unsplash.com/random?w=800"
+  src="https://source.unsplash.com/random/1200x680"
   loading="lazy"
   alt="Placeholder Image"
 />
