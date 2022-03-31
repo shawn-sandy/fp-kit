@@ -42,7 +42,20 @@
 
 ## Button Examples
 
+### Button
+
+You can use the button to create a button without border or background color, **styleless buttons**--useful for creating/styling buttons that look like links using of vice-versa. For links `<a>` you use `style="--btn:*"` or the `[role="button"] attribute.
+
+
+```html preview
+<button>
+Default Button
+</button>
+```
+
 ### Disabled Button
+
+Buttons that contain a disabled attribute `[disabled]`
 
 ```html preview
 <button
@@ -84,6 +97,8 @@ style="--btn-bg:red; --btn-color:white;"
 
 ### Large Button
 
+Style the button font size `--btn-fs` using the `--btn-lg` variable `--btn-sm`, `--btn-md` variable(s)
+
 ```html
 style="--btn-fs:var(--btn-lg);"
 ```
@@ -113,10 +128,16 @@ style="--btn-rds:var(--btn-pill);"
 ```
 
 ----
-## References/Additional info
+## See also
 
-[MDN GUIDELINES AND SEPCFICATIONS]()
+[MDN GUIDELINES AND SEPCFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 
-[ACCESSIBILITY GUIDE]()
+[Button Specs](https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element)
+
+[Button patterns](https://w3c.github.io/aria-practices/examples/button/button.html)
+
+[ACCESSIBILITY GUIDE](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+
+[Hidding content/button](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)
 
 ----
