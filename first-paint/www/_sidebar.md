@@ -25,4 +25,5 @@
   - [Img](/components/Img)
   - [Navbar](/components/Navbar)
   - [Table](/components/Table)
+  - [Tooltip](/components/Tooltip)
 - [Changelog](/CHANGELOG)
