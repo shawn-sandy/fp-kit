@@ -33,7 +33,7 @@ to: <%= absPath %>/<%= name %>.md
 ## Examples
 
 ----
-## References/Additional info
+## See also
 
 
 
