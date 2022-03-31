@@ -12,7 +12,7 @@
     Example modal
   </header>
 <p>
-  Some basic text inside the modal to demonstrate how it all looks and works.
+  Native HTML5 Modals (Dialogs) are finally here and available across all ever green browsers and they are fun!
 </p>
 
     <button type="button" class="btn btn-close" onclick="closeDialog(this)">

@@ -5,8 +5,8 @@
 ### Default Checkbox
 
 ```html preview
-<label for="checkbox">
-  <input type="checkbox" id="checkbox" value="" />
+<label for="checkbox1">
+  <input type="checkbox" id="checkbox1" value="" />
   Checkbox Label
 </label>
 ```
