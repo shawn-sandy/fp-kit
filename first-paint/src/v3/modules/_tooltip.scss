@@ -13,6 +13,7 @@
   --tip-rds: 0.5rem;
   --tip-cubic: cubic-bezier(0.64, 0.09, 0.08, 1);
   --tip-cursor: pointer;
+  --tip-opacity: 0.9;
   @content;
 }
 
@@ -26,7 +27,7 @@
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    content: attr(data-tooltip);
+    content: attr(aria-label);
     padding: 6px 10px;
     top: 1.4em;
     left: 50%;
@@ -39,7 +40,7 @@
   &:hover {
     &:after {
       display: block;
-      opacity: 1;
+      opacity: var(--tip-opacity);
       visibility: visible;
       transform: translateX(-50%) translateY(0);
     }

@@ -5,7 +5,7 @@
 ### Default Tooltip
 
 ```html preview
-<div role="tooltip" data-tooltip="sample tooltip">
+<div role="tooltip" data-tooltip="sample tooltip" aria-label="Sample tooltip">
 Tooltip
 </div>
 ```
