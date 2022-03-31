@@ -35,11 +35,11 @@ window.$docsify = {
     crossChapter: true,
     crossChapterText: true
   },
-  // toc: {
-  //   scope: '.markdown-section',
-  //   headings: 'h1, h2, h3, h4, h5, h6',
-  //   title: 'On This Page'
-  // },
+  toc: {
+    scope: '.markdown-section',
+    headings: 'h1, h2, h3, h4, h5, h6',
+    title: 'On This Page'
+  },
   // eslint-disable-next-line no-undef
   plugins: [
     // eslint-disable-next-line no-undef

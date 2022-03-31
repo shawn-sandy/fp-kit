@@ -12,7 +12,7 @@
   --fw: normal;
   --fst: normal;
   --lh: 1.7;
-  --spacing: 0.5rem;
+  --spc: initial;
   --mg: 0;
   --pd: 1rem;
   --cl: inherit; // font-size
@@ -82,6 +82,7 @@
   border: var(--border);
   outline: var(--line);
   border-radius: var(--rds);
+  margin: var(--spc);
 
   // prefix rules
   --clip-path: initial;
