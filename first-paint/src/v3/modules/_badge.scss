@@ -13,19 +13,23 @@
   --px: .7rem;
   --fs: .7rem;
   --bg: whitesmoke;
-  --bdr: 1px solid lightgray;
+  --bdr: none;
   --rds: 99rem;
+  --red: ;
+  --cl: inherit;
   @content;
 }
 
 @mixin rules {
   // * css rules/styles
   padding-inline: var(--px);
+  color: var(--cl);
   padding-block: var(--py);
   font-size: var(--fs);
-  background: var(--bg);
   border: var(--bdr);
   border-radius: var(--rds);
+  background-color: var(--bg);
+
   @content;
 }
 
