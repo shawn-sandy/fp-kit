@@ -35,7 +35,7 @@
     white-space: nowrap;
     z-index: 2;
     transition: opacity 0.2s var(--tip-cubic),
-      transform 0.2s var(--tip-cubic);
+    transform 0.2s var(--tip-cubic);
   }
   &:hover {
     &:after {
@@ -54,7 +54,7 @@
 }
 
 @mixin module {
-  [role="tooltip"] {
+  [role="tooltip"], [style*="--tip"] {
     @include props;
     @include rules;
   }
