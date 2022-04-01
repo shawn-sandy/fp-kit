@@ -9,6 +9,7 @@
 
 @mixin props() {
   /*  css custom properties */
+  --spc: 0;
   --mx: var(--sm-x);
   --my: 0;
   --tbl-collapse: collapse;
@@ -18,21 +19,27 @@
   --tbl-rds: .5rem;
   --tbl-td-py: 1rem;
   --tbl-td-px: 1rem;
+  --bdr: none;
+  --rds: 1rem;
 
   @content;
 }
 
 @mixin rules {
   @include props;
-
   display: table;
+
   font-size: var(--tbl-fs, 0.9em);
   font-family: var(--fs, sans-serif);
-  min-width: var(--tbl-width, 100%);
+  width: var(--tbl-width, calc(100% - 0rem));
   border-collapse: var(--tbl-collapse);
-  border: var(--tbl-bdr, none);
+  border: var(--tbl-bdr, var(--bdr));
   display: var(--tbl-dsp, table);
-  border-radius: var(--tbl-rds);
+  border-radius: var(--tbl-rds, 16px);
+  border-spacing: 0;
+  overflow: auto;
+
+
 
   thead tr {
     --text-align: left;
@@ -47,15 +54,21 @@
     padding-inline: var(--tbl-td-px);
   }
 
-  tr:nth-of-type(even) {
+  tr {
+    background-color: white;
+  &:nth-of-type(even) {
     background-color: var(--tb-bg, whitesmoke);
   }
 
-  tbody tr:last-of-type {
-    --tbl-bdr: medium solid var(--tb-bdr-color);
-    border-bottom: var(--tbl-bdr);
+  td {
+    padding: 1rem;
   }
 
+  }
+  tbody tr:last-of-type {
+    --tbl-bdr: medium solid var(--tb-bdr-color);
+    border-bottom: none;
+  }
 
   @content;
 }

@@ -1,0 +1,42 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+@mixin props() {
+  // * css custom properties
+  --pd: 0;
+  --py: .25rem;
+  --px: .7rem;
+  --fs: .7rem;
+  --bg: whitesmoke;
+  --bdr: 1px solid lightgray;
+  --rds: 99rem;
+  @content;
+}
+
+@mixin rules {
+  // * css rules/styles
+  padding-inline: var(--px);
+  padding-block: var(--py);
+  font-size: var(--fs);
+  background: var(--bg);
+  border: var(--bdr);
+  border-radius: var(--rds);
+  @content;
+}
+
+@mixin styles {
+  @content;
+}
+
+@mixin module {
+  [role="note"] {
+    @include props;
+    @include rules;
+  }
+  @include styles;
+}

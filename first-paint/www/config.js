@@ -48,7 +48,6 @@ window.$docsify = {
       // console.log(vm?.config.repo, vm)
       hook.beforeEach(function (html) {
         const path = window.location.hash
-        // const title = encodeURIComponent(`Issue ${path} :`)
         const title = encodeURIComponent(
           `Issue: ${path}`
         )
@@ -56,8 +55,8 @@ window.$docsify = {
           `<!-- Please describe related issue(s) (page - ${window.location.href}${path})? -->`
         )
         const issue = [
-          '<div role="button" class="new-git-issue" style="text-align: right">',
-          `<p><a href="${vm?.config?.repo}/issues/new/?title=${title}&body=${body}" target="_blank" style="--btn-rds: var(--btn-pill)">Open a github issue</a>.</p>`,
+          '<div class="new-git-issue" style="text-align: right">',
+          `<p><a role="button" style="--btn-bg: lightgray; --btn-rds: 99rem" href="${vm?.config?.repo}/issues/new/?title=${title}&body=${body}" target="_blank" style="--btn-rds: var(--btn-pill)">Open a github issue</a>.</p>`,
           '</div>'
         ].join('')
 
