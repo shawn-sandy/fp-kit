@@ -7,7 +7,6 @@
 
 ```html preview
 <section>
-<div style="border-radius: 1rem; overflow: auto" role="table" >
   <table>
     <thead>
       <tr>
@@ -44,7 +43,6 @@
       </tr>
     </tbody>
   </table>
-</div>
 </section>
 
 ```
@@ -79,7 +77,21 @@
 
 ## Table Examples
 
-`<div style="--tbl:*">`
+### Custom Table wrapper
+
+In this example, we use a custom table style utility to wrap the table.
+
+```css
+div[style*="--tbl"] {
+    --spc: .5rem;
+    --rds: .5rem;
+    padding: var(--spc);
+    overflow: auto;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: var(--rds);
+  }
+```
 
 ```html preview
 
@@ -128,7 +140,7 @@
 
 
 ----
-## References/Additional info
+### See also
 
 
 [MDN GUIDELINES AND SEPCFICATIONS]()

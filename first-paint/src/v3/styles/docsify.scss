@@ -53,6 +53,15 @@
     a {
       font-weight: normal;
     }
+
+    table {
+      margin: 0;
+      padding: 0;
+      tr, td, th, tr {
+        border: unset;
+        border-top: unset;
+      }
+    }
   }
 
   .demo_button demo_toggle {
@@ -116,4 +125,14 @@
 .page_toc {
   --fs: .85rem;
   line-height: 1.5;
+}
+
+div[style*="--tbl"] {
+  --spc: .5rem;
+  --rds: .5rem;
+  padding: var(--spc);
+  overflow: auto;
+  width: 100%;
+  background-color: whitesmoke;
+  border-radius: var(--rds);
 }
