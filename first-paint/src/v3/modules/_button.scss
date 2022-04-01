@@ -14,6 +14,7 @@
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
   --btn-spc: 0.25rem;
+  --btn-bg: lightgray;
   @content;
 }
 @mixin rules() {
@@ -31,9 +32,9 @@
   display: var(--btn-dsp, inline-flex);
   gap: var(--btn-gap, 1rem);
   margin: var(--btn-spc);
-
+  background-color: var(--btn-bg);
   &[type] {
-    background-color: var(--btn-bg, lightgray);
+    --btn-bg: lightgray;
     transition: all 0.2s ease !important;
   }
 
@@ -60,7 +61,7 @@
 
     &:hover {
       --btn-cl: var(--btn-cl-hover);
-      --btn-bg: var(--btn-bg-hover);
+      background-color: var(--btn-bg-hover, --btn-bg);
       filter: invert(1) hue-rotate (180deg);
       transform: scale(0.95);
 

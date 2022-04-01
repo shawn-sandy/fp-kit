@@ -48,7 +48,6 @@ window.$docsify = {
       // console.log(vm?.config.repo, vm)
       hook.beforeEach(function (html) {
         const path = window.location.hash
-        // const title = encodeURIComponent(`Issue ${path} :`)
         const title = encodeURIComponent(
           `Issue: ${path}`
         )

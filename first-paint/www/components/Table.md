@@ -80,7 +80,9 @@
 `<div style="--tbl:*">`
 
 ```html preview
+
 <div style="--tbl:*">
+<h3>Table</h3>
   <table>
     <thead>
       <tr>
@@ -117,6 +119,7 @@
       </tr>
     </tbody>
   </table>
+<footer aria-label>Footer</footer>
 </div>
 
 ```

@@ -66,7 +66,7 @@
 
 @mixin module {
  header, [role="banner"] {
-    &:not(dialog > header, div > header) {
+    &:not(dialog > header, div > header, [arial-label]) {
       @include rules;
     }
   }

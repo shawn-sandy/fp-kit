@@ -9,6 +9,7 @@
 
 @mixin props() {
   /*  css custom properties */
+  --spc: 0;
   --mx: var(--sm-x);
   --my: 0;
   --tbl-collapse: collapse;
@@ -28,7 +29,7 @@
   display: table;
   font-size: var(--tbl-fs, 0.9em);
   font-family: var(--fs, sans-serif);
-  width: var(--tbl-width, calc(100% - 1rem));
+  width: var(--tbl-width, calc(100% - 0rem));
   border-collapse: var(--tbl-collapse);
   border: var(--tbl-bdr);
   display: var(--tbl-dsp, table);
@@ -38,7 +39,7 @@
     --text-align: left;
     background-color: var(--tb-bg, whitesmoke);
     text-align: var(--text-align);
-    border-bottom: var(--tbl-bdr,  solid lightgray thin);
+    border-bottom: var(--tbl-bdr);
   }
 
   th,
@@ -58,7 +59,6 @@
     --tbl-bdr: medium solid var(--tb-bdr-color);
     border-bottom: none;
   }
-
 
   @content;
 }
