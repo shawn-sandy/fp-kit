@@ -15,7 +15,6 @@ to: <%= absPath %>/_<%= name %>.scss
 }
 
 @mixin rules {
-  @include props;
 
   // * css rules/styles
   @content;
@@ -28,6 +27,7 @@ to: <%= absPath %>/_<%= name %>.scss
 
 @mixin module {
   <%= elementName ? elementName : name %> {
+    @include props;
     @include rules;
   }
   @include styles;

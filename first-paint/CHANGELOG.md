@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.11.0...@shawnsandy/first-paint@2.12.0) (2022-04-01)
+
+
+### Bug Fixes
+
+* **alpha:** add missing button type ([4db4840](https://github.com/shawn-sandy/fp-kit/commit/4db484013c86a17d45859e182cf72ece6464fe8a))
+* **alpha:** resolve issue with card shadows ([5bb7cb4](https://github.com/shawn-sandy/fp-kit/commit/5bb7cb48814fb08a650768b94c8e0a6c3e468a85))
+* **alpha:** resolve min-width issue input component ([25de420](https://github.com/shawn-sandy/fp-kit/commit/25de4205283eca896dd4177096a357bdf7a48986))
+* **alpha:** resolve min-width issue input component ([51aa273](https://github.com/shawn-sandy/fp-kit/commit/51aa27333aa358509a87d9d118a451ea9d058159))
+* **alpha:** resolve min-width issue with select ([5ad1188](https://github.com/shawn-sandy/fp-kit/commit/5ad11887610e04e15e79f6ffe9fee344c4067b40))
+* resolves issue usine label to select ([1dfc365](https://github.com/shawn-sandy/fp-kit/commit/1dfc36590312bcaae477c8669e9b2ec1906720b0))
+
+
+### Features
+
+* **alpha:** add button --spc,  enable toc sidebar ([c3d956a](https://github.com/shawn-sandy/fp-kit/commit/c3d956a4b068a9a26a67af67a76e3604af10658a))
+* **alpha:** add class new-git-issue create issue link ([31d1cdb](https://github.com/shawn-sandy/fp-kit/commit/31d1cdb215da454045d4f9a46b9b4d60323def21))
+* **alpha:** add class new-git-issue create issue link ([b257a54](https://github.com/shawn-sandy/fp-kit/commit/b257a548f5c05b7201aa33fb350b28e742d747ca))
+* **alpha:** modify default button style no borders/bg ([c6620ee](https://github.com/shawn-sandy/fp-kit/commit/c6620eeddf16c3676a329b15f82bb1594bbe619b))
+* **alpha:** modify module(s) props ([976497f](https://github.com/shawn-sandy/fp-kit/commit/976497ffde96466e254a69403f3e1eb170d1a368))
+* **alpha:** scaffold tooltip module ([ec3c1bb](https://github.com/shawn-sandy/fp-kit/commit/ec3c1bb7f3841e71bbd37799b3fdabb421f862e6))
+* **alpha:** style issue link using --btn-* utility props ([48ff89a](https://github.com/shawn-sandy/fp-kit/commit/48ff89a5ec40ba1f8c5bffee1ffed83a6d111996))
+* **alpha:** tooltip module style and data ([3197d47](https://github.com/shawn-sandy/fp-kit/commit/3197d4750590ff424e5e3f359391b9af30577c65))
+* **alpha:** tooltip module style and data ([9534d87](https://github.com/shawn-sandy/fp-kit/commit/9534d87930378834dd75f31693c6c44429e4e223))
+* **wip:** table enhance ments ([79447e5](https://github.com/shawn-sandy/fp-kit/commit/79447e5eb38a25c19f7600deb1814c14df179df2))
+
+
+
+
+
 # [2.11.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.10.1...@shawnsandy/first-paint@2.11.0) (2022-03-25)
 
 
