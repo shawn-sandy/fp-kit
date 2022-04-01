@@ -22,6 +22,7 @@
 @use "../modules/textarea";
 @use "../components/type.scss";
 @use "../modules/tooltip";
+@use "../modules/badge";
 // @include container.module();
 @include props.module();
 @include nav.module();
@@ -39,3 +40,4 @@
 @include select.module();
 @include dialog.module();
 @include tooltip.module();
+@include badge.module();
