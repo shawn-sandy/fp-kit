@@ -77,8 +77,70 @@
 
 ## Table Examples
 
+### Custom Table wrapper
+
+In this example, we use a custom table style utility to wrap the table.
+
+```css
+div[style*="--tbl"] {
+    --spc: .5rem;
+    --rds: .5rem;
+    padding: var(--spc);
+    overflow: auto;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: var(--rds);
+  }
+```
+
+```html preview
+
+<div style="--tbl:*">
+<h3>Table</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Points</th>
+        <th>Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dom</td>
+        <td>6000</td>
+        <td>Dom</td>
+        <td>6000</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+    </tbody>
+  </table>
+<footer aria-label>Footer</footer>
+</div>
+
+```
+
+
 ----
-## References/Additional info
+### See also
 
 
 [MDN GUIDELINES AND SEPCFICATIONS]()

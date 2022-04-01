@@ -7,6 +7,7 @@
   - [Named Color Tokens](/tokens/Colornames)
   - [Scaled Color Tokens](/tokens/Color)
 - Modules
+  - [Badges](/components/Badge)
   - [Buttons](/components/button)
   - [Content Elements](/components/Content)
     - [Headings](/components/Headings)

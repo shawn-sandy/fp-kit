@@ -1,6 +1,6 @@
 # Tooltip
 
-Tooltips are CSS only components used to provide additional information (tips) to users. It uses the aria-role `tooltip` to display and style tips and the aria-label attributes to provide content for the tooltip.
+CSS only tooltip components used to provide additional information (tips) to users. It uses the aria-role `tooltip` to display and style tips and the aria-label attributes to provide content for the tooltip.
 
 !> If you cannot use `aria-role` you can use the `style="--tip:*"` attribute to enable a tooltip.
 
@@ -64,15 +64,15 @@ Tooltip
 
 ```html preview
 <div role="tooltip" aria-label="A red tooltip sample" style="--tip-bg: red">
-Tooltip
+Tooltip with red background
 </div>
 ```
 
 ### Style Attribute Option
 
 ```html preview
-<div aria-label="you can also use the style attribute" style="--tip-bg: darkblue">
-Tooltip
+<div aria-label="You can also use the style attribute" style="--tip-bg: darkblue">
+Tooltip using the `style` attribute option.
 </div>
 ```
 
