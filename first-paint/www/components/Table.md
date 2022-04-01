@@ -7,6 +7,7 @@
 
 ```html preview
 <section>
+<div style="border-radius: 1rem; overflow: auto" role="table" >
   <table>
     <thead>
       <tr>
@@ -43,6 +44,7 @@
       </tr>
     </tbody>
   </table>
+</div>
 </section>
 
 ```
