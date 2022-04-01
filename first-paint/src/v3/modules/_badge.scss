@@ -22,13 +22,13 @@
 
 @mixin rules {
   // * css rules/styles
-  padding-inline: var(--px);
-  color: var(--cl);
-  padding-block: var(--py);
-  font-size: var(--fs);
-  border: var(--bdr);
-  border-radius: var(--rds);
-  background-color: var(--bg);
+  padding-inline: var(--note-px, var(--px));
+  color: var(--note-cl, var(--cl));
+  padding-block: var(--note-cl, var(--py));
+  font-size: var(--note-fs, var(--fs));
+  border: var(--note-brd, var(--bdr));
+  border-radius: var(--note-rds, var(--rds));
+  background-color: var(--note-bg, var(--bg));
 
   @content;
 }
