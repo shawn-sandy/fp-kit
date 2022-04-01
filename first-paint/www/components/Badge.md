@@ -28,6 +28,25 @@ Badge {
 
 ## Examples
 
+### Red Badge
+
+Customize the badge background/color with the `<span role="note" style="--bg: red">Badge</span>`
+
+or use CSS a class
+
+```css
+.red-badge {
+--bg: red;
+--color: $fff;
+}
+```
+
+```html preview
+<div>
+A simple badge <span role="note" style="--bg: red; --cl: white">Badge</span>
+</div>
+```
+
 ----
 ## See also
 
