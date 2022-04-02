@@ -9,7 +9,7 @@
 @mixin props() {
   // * css custom properties
   --pd: 0;
-  --py: .25rem;
+  --py: .2rem;
   --px: .7rem;
   --fs: .7rem;
   --bg: whitesmoke;
@@ -29,6 +29,7 @@
   border: var(--note-brd, var(--bdr));
   border-radius: var(--note-rds, var(--rds));
   background-color: var(--note-bg, var(--bg));
+  // background-color: var(--red, red);
 
   @content;
 }
