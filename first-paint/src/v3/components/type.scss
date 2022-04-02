@@ -9,15 +9,14 @@ h4,
 h5,
 h6,
 p {
-
   --fw: var(--fw-medium);
   --fx-weight: var(--fw-medium);
-
 
   line-height: var(--lh);
   color: var(--cl);
   margin: var(--m);
   font-weight: var(--fw);
+  font-size: inherit;
   overflow-wrap: var(--overflow);
   word-break: var(--word-break, break-word);
   text-shadow: var(--shadow);
@@ -62,27 +61,27 @@ h6 {
   }
 }
 
-h1, h1[role="decoration"] {
+h1[role="decoration"] {
   font-size: var(--h1);
 }
 
-h2, h2[role="decoration"] {
+h2[role="decoration"] {
   font-size: var(--h2);
 }
 
-h3, h3[role="decoration"] {
+h3[role="decoration"] {
   font-size: var(--h3);
 }
 
-h4, h4[role="decoration"] {
+h4[role="decoration"] {
   font-size: var(--h4);
 }
 
-h5, h5[role="decoration"] {
+h5[role="decoration"] {
   font-size: var(--h5);
 }
 
-h6, h6[role="decoration"] {
+pCh6[role="decoration"] {
   font-size: var(--h6);
 }
 

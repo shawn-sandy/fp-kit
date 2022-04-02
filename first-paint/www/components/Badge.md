@@ -15,15 +15,28 @@ A simple badge <span role="note">Badge</span>
 ### Custom variables
 
 ```css
---color: #000;
+  --pd: 0;
+  --py: .2rem;
+  --px: .7rem;
+  --fs: .7rem;
+  --bg: whitesmoke;
+  --bdr: none;
+  --rds: 99rem;
+  --red: ;
+  --cl: inherit;
 ```
 
 ### Badge properties (rules)
 
 ```css
-Badge {
-  color: var(--color, currentColor);
-}
+ // * css rules/styles
+  padding-inline: var(--note-px, var(--px));
+  color: var(--note-cl, var(--cl));
+  padding-block: var(--note-cl, var(--py));
+  font-size: var(--note-fs, var(--fs));
+  border: var(--note-brd, var(--bdr));
+  border-radius: var(--note-rds, var(--rds));
+  background-color: var(--note-bg, var(--bg));
 ```
 
 ## Examples

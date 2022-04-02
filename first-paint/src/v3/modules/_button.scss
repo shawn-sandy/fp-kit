@@ -17,6 +17,7 @@
   --btn-bg: lightgray;
   @content;
 }
+
 @mixin rules() {
   @include props;
 
@@ -32,17 +33,11 @@
   display: var(--btn-dsp, inline-flex);
   gap: var(--btn-gap, 1rem);
   margin: var(--btn-spc);
-  background-color: var(--btn-bg);
+
   &[type] {
-    --btn-bg: lightgray;
-    transition: all 0.2s ease !important;
+    background-color: var(--btn-bg);
+    transition: all 0.2s ease;
   }
-
-   + * {
-    // margin-inline-end: var(--btn-mxs, 0.5rem);
-    // margin-block-start: var(--btn-mys, 0.5rem);
-  }
-
   @content;
 }
 
@@ -60,8 +55,9 @@
     }
 
     &:hover {
+      --btn-bg: lightgray;
       --btn-cl: var(--btn-cl-hover);
-      background-color: var(--btn-bg-hover, --btn-bg);
+      background-color: var(--btn-bg-hover, var(--btn-bg));
       filter: invert(1) hue-rotate (180deg);
       transform: scale(0.95);
 
@@ -74,6 +70,8 @@
       --btn-border: gray medium solid;
     }
   }
+
+
 }
 
 @mixin module {
