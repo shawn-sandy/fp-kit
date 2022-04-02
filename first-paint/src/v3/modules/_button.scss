@@ -34,12 +34,10 @@
   gap: var(--btn-gap, 1rem);
   margin: var(--btn-spc);
 
-  &[type], &[role="button"] {
+  &[type] {
     background-color: var(--btn-bg);
     transition: all 0.2s ease;
-
   }
-
   @content;
 }
 
@@ -51,7 +49,6 @@
   }
 
   button {
-
     &[disabled] {
       cursor: var(--btn-cursor-disabled, not-allowed);
       opacity: var(--btn-opacity-disabled, 0.5);
@@ -73,6 +70,8 @@
       --btn-border: gray medium solid;
     }
   }
+
+
 }
 
 @mixin module {
