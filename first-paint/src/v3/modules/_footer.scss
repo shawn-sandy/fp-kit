@@ -8,11 +8,13 @@
 
 @mixin props() {
   // * css custom properties
+  --fs: .9rem;
+
   @content;
 }
 
 @mixin rules {
-
+  font-size: var(--footer-fs, var(--fs));
   // * css rules/styles
   @content;
 }
@@ -23,9 +25,11 @@
 }
 
 @mixin module {
-  footer {
-    @include props;
-    @include rules;
+  footer, [role="footer"], [role="contentinfo"] {
+    &:not([aria-label]) {
+      @include props;
+      @include rules;
+    }
   }
   @include styles;
 }
