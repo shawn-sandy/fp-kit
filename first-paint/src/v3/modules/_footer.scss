@@ -15,7 +15,9 @@
 
 @mixin rules {
   font-size: var(--footer-fs, var(--fs));
-  // * css rules/styles
+  section {
+    display: grid;
+  }
   @content;
 }
 
