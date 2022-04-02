@@ -12,10 +12,10 @@
   --py: .2rem;
   --px: .7rem;
   --fs: .7rem;
-  --bg: whitesmoke;
+  --bg: lightyellow;
   --bdr: none;
   --rds: 99rem;
-  --red: ;
+  --note-red: ;
   --cl: inherit;
   @content;
 }
@@ -28,13 +28,13 @@
   font-size: var(--note-fs, var(--fs));
   border: var(--note-brd, var(--bdr));
   border-radius: var(--note-rds, var(--rds));
-  background-color: var(--note-bg, var(--bg));
-  // background-color: var(--red, red);
+  background-color:  var(--bg);
 
   @content;
 }
 
 @mixin styles {
+
   @content;
 }
 

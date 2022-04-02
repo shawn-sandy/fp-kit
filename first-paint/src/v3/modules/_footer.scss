@@ -25,8 +25,8 @@
 }
 
 @mixin module {
-  footer, [role="footer"], [role="contentinfo"] {
-    &:not([aria-label]) {
+  footer, [role="contentinfo"] {
+    &:not([aria-label], [role="footer"]) {
       @include props;
       @include rules;
     }
