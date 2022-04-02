@@ -22,6 +22,7 @@
     - [Select](/components/select)
     - [Textarea](/components/Textarea)
   - [Grid](/components/grid)
+  - [Footer](/components/Footer)
   - [Header](/components/Header)
   - [Img](/components/Img)
   - [Navbar](/components/Navbar)
