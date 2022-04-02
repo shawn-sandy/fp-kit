@@ -10,6 +10,18 @@
 <h1 style="font-size: var(--h1)">Sample H1 Header</h1>
 ```
 
+### Default headings
+
+
+```html preview
+<h1>Default H1 Heading</h1>
+<h2>Default H2 Heading</h2>
+<h3>Default H3 Heading</h3>
+<h4>Default H4 Heading</h4>
+<h5>Default H5 Heading</h5>
+<h6>Default H6 Heading</h6>
+
+```
 
 ## Paragraph
 
