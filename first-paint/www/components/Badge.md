@@ -1,4 +1,4 @@
-# Badge
+# Badge/Notes <span role="note" aria-label="status">Alpha</span>
 
 ?&gt;  _TODO_ add description
 
@@ -8,6 +8,14 @@
 <div>
 A simple badge <span role="note">Badge</span>
 </div>
+```
+
+###  Default Note
+
+```html preview
+<p role="note">
+Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat laborum. Laboris velit labore amet in do reprehenderit consectetur commodo consectetur ullamco aliqua. Nulla exercitation sunt id aliquip eiusmod ad amet laboris dolore laborum amet. Ullamco duis ex eiusmod Lorem esse mollit qui cillum laboris. Culpa aliquip quis cillum sit ipsum consectetur ipsum aute.
+</p>
 ```
 
 ## Badge Variables
@@ -39,6 +47,8 @@ A simple badge <span role="note">Badge</span>
   background-color: var(--note-bg, var(--bg));
 ```
 
+
+
 ## Examples
 
 ### Red Badge
@@ -58,6 +68,16 @@ or use CSS a class
 <div>
 A simple badge <span role="note" style="--bg: red; --cl: white">Badge</span>
 </div>
+```
+
+###  Default Note
+
+Customize the note background/color with the `<span role="note" style="--note: lightyellow">...</span>`
+
+```html preview
+<p role="note" style="--note: lightyellow">
+Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat laborum. Laboris velit labore amet in do reprehenderit consectetur commodo consectetur ullamco aliqua. Nulla exercitation sunt id aliquip eiusmod ad amet laboris dolore laborum amet. Ullamco duis ex eiusmod Lorem esse mollit qui cillum laboris. Culpa aliquip quis cillum sit ipsum consectetur ipsum aute.
+</p>
 ```
 
 ----
