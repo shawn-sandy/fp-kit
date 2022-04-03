@@ -1,20 +1,16 @@
----
-to: <%= absPath %>/<%= name %>.md
----
+# Footer
 
-# <%= name %> <span role="note" aria-label="status">Alpha</span>
+?&gt;  _TODO_ add description
 
-<%= description ? description : "?>  _TODO_ add description" %>
-
-### Default <%= name %>
+### Default Footer
 
 ```html preview
 <div>
-<%= name %>
+Footer
 </div>
 ```
 
-## <%= name %> Variables
+## Footer Variables
 
 ### Custom variables
 
@@ -22,10 +18,10 @@ to: <%= absPath %>/<%= name %>.md
 --color: #000;
 ```
 
-### <%= name %> properties (rules)
+### Footer properties (rules)
 
 ```css
-<%= name %> {
+Footer {
   color: var(--color, currentColor);
 }
 ```

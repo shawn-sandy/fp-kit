@@ -23,6 +23,7 @@
 @use "../components/type.scss";
 @use "../modules/tooltip";
 @use "../modules/badge";
+@use "../modules/footer";
 // @include container.module();
 @include props.module();
 @include nav.module();
@@ -41,3 +42,4 @@
 @include dialog.module();
 @include tooltip.module();
 @include badge.module();
+@include footer.module();

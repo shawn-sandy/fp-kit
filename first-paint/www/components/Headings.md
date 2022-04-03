@@ -4,7 +4,7 @@
 
 ### Default Headings
 
-### H1
+### H1 Heading
 
 ```html preview
 <h1 style="font-size: var(--h1)">Sample H1 Heading</h1>
@@ -55,22 +55,19 @@ h6, h6[role="decoration"] {
 
 ## Examples
 
-
-## Heading Elements
-
-### H1
+### H1 Heading
 
 ```html preview
 <h1 style="font-size: var(--h1)">Sample H1 Header</h1>
 ```
 
-### H2
+### H2 Heading
 
 ```html preview
 <h2 style="font-size: var(--h2)">Sample H2 Header</h2>
 ```
 
-### H3
+### H3 Heading
 
 ```html preview
 <h3 style="font-size: var(--h3)">Sample H3 Header</h3>
@@ -82,13 +79,13 @@ h6, h6[role="decoration"] {
 <h4 style="font-size: var(--h4)">Sample H4 Header</h4>
 ```
 
-### H5
+### H5 Heading
 
 ```html preview
 <h5 style="font-size: var(--h5)">Sample H5 Header</h5>
 ```
 
-### H6
+### H6 Heading
 
 ```html preview
 <h6 style="font-size: var(--h6)">Sample H6 Header</h6>
