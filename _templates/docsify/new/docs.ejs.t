@@ -10,7 +10,7 @@ to: <%= absPath %>/<%= name %>.md
 
 ```html preview
 <div>
-<%= name %>
+  <%= name %>
 </div>
 ```
 
