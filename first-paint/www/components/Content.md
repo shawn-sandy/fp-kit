@@ -4,13 +4,13 @@
 
 
 
-### Heading
+### Sample H1 Heading
 
 ```html preview
 <h1 style="font-size: var(--h1)">Sample H1 Header</h1>
 ```
 
-### Default headings
+### Default headings (h1-6)
 
 
 ```html preview

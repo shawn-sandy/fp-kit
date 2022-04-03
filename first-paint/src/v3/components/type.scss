@@ -11,11 +11,11 @@ h6,
 p {
   --fw: var(--fw-medium);
   --fx-weight: var(--fw-medium);
+  --fs: inherit;
 
   line-height: var(--lh);
   color: var(--cl);
   margin: var(--m);
-  font-weight: var(--fw);
   font-size: inherit;
   overflow-wrap: var(--overflow);
   word-break: var(--word-break, break-word);
@@ -81,7 +81,7 @@ h5[role="decoration"] {
   font-size: var(--h5);
 }
 
-pCh6[role="decoration"] {
+h6[role="decoration"] {
   font-size: var(--h6);
 }
 

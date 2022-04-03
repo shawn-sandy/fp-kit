@@ -7,7 +7,7 @@
   - [Named Color Tokens](/tokens/Colornames)
   - [Scaled Color Tokens](/tokens/Color)
 - Modules
-  - [Badges](/components/Badge)
+  - [Badges/Notes](/components/Badge)
   - [Buttons](/components/button)
   - [Content Elements](/components/Content)
     - [Headings](/components/Headings)
@@ -22,6 +22,7 @@
     - [Select](/components/select)
     - [Textarea](/components/Textarea)
   - [Grid](/components/grid)
+  - [Footer](/components/Footer)
   - [Header](/components/Header)
   - [Img](/components/Img)
   - [Navbar](/components/Navbar)

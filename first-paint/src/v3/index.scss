@@ -17,6 +17,8 @@
 @use "modules/textarea";
 @use "./modules/select";
 @use "./modules/tooltip";
+@use "./modules/badge";
+@use "./modules/footer";
 // components
 @use "./components/type.scss";
 // @include container.module();
@@ -36,4 +38,6 @@
 @include select.module();
 @include dialog.module();
 @include tooltip.module();
+@include badge.module();
+@include footer.module();
 
