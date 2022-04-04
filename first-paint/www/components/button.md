@@ -1,6 +1,6 @@
-# Buttons
+# Buttons <span role="note" style="--note: var(--beta)">Beta</span>
 
-?> _TODO_ add description
+Quickly, customize and style buttons to your forms, modals, menus and more. Buttons styles are activated with the `[type]` attribute, each button `type` displays a different style.
 
 ### Default Button
 
@@ -61,9 +61,9 @@
 </button>
 ```
 
-### Button
+### Button vanilla
 
-You can use the button to create a button without border or background color, **styleless buttons**--useful for creating/styling buttons that look like links using of vice-versa. For links `<a>` you use `style="--btn:*"` or the `[role="button"] attribute.
+Remove the `type` attribute to create a button without border or background color, **styleless buttons**--useful for creating/styling buttons that look like links using of vice-versa. For crating button links `<a>` you use `style="--btn:*"` or the `[role="button"] attribute.
 
 
 ```html preview
@@ -74,7 +74,7 @@ Default Button
 
 ### Disabled Button
 
-Buttons that contain a disabled attribute `[disabled]`
+For disabled buttons add a disabled attribute `[disabled]`
 
 ```html preview
 <button

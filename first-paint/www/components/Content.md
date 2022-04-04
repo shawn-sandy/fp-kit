@@ -1,6 +1,6 @@
 # Content
 
-?&gt;  _TODO_ add description
+Styles for content elememts like paragraphs, headings, lists(soon), text, etx.
 
 
 

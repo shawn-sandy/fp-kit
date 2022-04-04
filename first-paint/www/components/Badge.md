@@ -4,7 +4,8 @@ Documentation and examples for badges and notes component.
 
 ### Default Badge
 
-The default badge uses the `<small >` tag/element with it's role set to note `role="note"` as shown below.
+The default badge uses the `<small>` tag/element with it's role set to note `role="note"` as shown below.
+
 
 ```html preview
 <div>
@@ -27,10 +28,13 @@ Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat la
 ### CSS variables
 
 ```css
+  --beta: orange;
+  --stable: green;
+  --production: blue;
   --pd: 0;
-  --py: .2rem;
-  --px: .7rem;
-  --fs: .7rem;
+  --py: 0.2rem;
+  --px: 0.7rem;
+  --fs: 0.7rem;
   --bg: lightgray;
   --bdr: none;
   --rds: 99rem;
@@ -42,15 +46,15 @@ Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat la
 ### Badge properties (rules)
 
 ```css
- padding-inline: var(--note-px, var(--px));
-  padding-block: var(--note-cl, var(--py));
-  color: var(--note-cl, var(--cl));
-  font-size: var(--note-fs, var(--fs));
-  border: var(--note-brd, var(--bdr));
-  border-radius: var(--note-rds, var(--rds));
-  background-color:  var(--note, var(--bg));
-  text-decoration: var(--note-decoration, var(--decoration));
-  text-transform: var(--note-tt, var(--tt));
+    padding-inline: var(--note-px, var(--px));
+    padding-block: var(--note-cl, var(--py));
+    color: var(--note-cl, var(--cl));
+    font-size: var(--note-fs, var(--fs));
+    border: var(--note-brd, var(--bdr));
+    border-radius: var(--note-rds, var(--rds));
+    background-color:  var(--note, var(--bg));
+    text-decoration: var(--note-decoration, var(--decoration));
+    text-transform: var(--note-tt, var(--tt));
 
 ```
 
@@ -77,7 +81,8 @@ A simple badge <span role="note" style="--bg: red; --cl: white">Badge</span>
 
 ###  Default Note
 
-Customize the note background/color with the `<p role="note" style="--note: lightyellow">...</p>`
+
+Create/Customize the note background/color with the `<p role="note" style="--note: lightyellow">...</p>`
 
 ```html preview
 <p role="note" style="--note: lightyellow">
