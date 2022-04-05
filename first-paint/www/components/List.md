@@ -61,11 +61,6 @@ Sample List
 ## See also
 
 
-
-[MDN GUIDELINES AND SPECFICATIONS](https: ':_target="_blank"')
-
-[HTML SPECIFICATIONS](https:// ':_target="_blank"')
-
-[ACCESSIBILITY GUIDE](https://, ':_target="_blank"')
+[MDN GUIDELINES AND SPECFICATIONS]([https](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul): ':_target="_blank"')
 
 ----

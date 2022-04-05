@@ -41,12 +41,4 @@ Simple link example
 <a href="#" role="button">Simple Link</a>
 ```
 
-----
-## See Also
 
-
-[MDN GUIDELINES AND SEPCFICATIONS]()
-
-[ACCESSIBILITY GUIDE]()
-
-----
