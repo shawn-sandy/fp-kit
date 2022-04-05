@@ -44,6 +44,17 @@
   @content;
 }
 
+footer {
+  --dsp: flex;
+  --direction: row;
+  --justify: flex-end;
+  --py: 1rem;
+  display: var(--dsp);
+  flex-direction: var(--direction);
+  justify-content: var(--justify);
+  padding-block: var(--py);
+}
+
 @mixin styles {
   // * css style utilities
   @content;
