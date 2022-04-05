@@ -1,14 +1,7 @@
-# Content
+# Content Elements <span role="note" style="--note: var(--beta)">Beta</span>
 
 Styles for content elements like paragraphs, headings, lists(soon) etc.
 
-
-
-### Sample H1 Heading
-
-```html preview
-<h1 style="font-size: var(--h1)">Sample H1 Header</h1>
-```
 
 ### Default headings (h1-6)
 
@@ -22,7 +15,6 @@ Styles for content elements like paragraphs, headings, lists(soon) etc.
 <h6>Default H6 Heading</h6>
 
 ```
-
 ## Paragraph
 
 ```html preview

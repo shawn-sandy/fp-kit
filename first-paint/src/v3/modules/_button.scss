@@ -64,10 +64,16 @@
     }
 
     &[type="reset"],
-    &[style*="--btn: 'reset'"] {
+    &[style*="--btn-reset"] {
       --btn-bg: transparent;
       --btn-color: gray;
       --btn-border: gray medium solid;
+    }
+    &[type="submit"],
+    &[style*="--btn-submit"] {
+      --btn-bg: var(--blue-500);
+      --btn-color: rgb(231, 231, 231);
+      --btn-border: none;
     }
   }
 

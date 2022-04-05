@@ -1,6 +1,6 @@
 # Buttons <span role="note" style="--note: var(--beta)">Beta</span>
 
-Quickly, customize and style buttons to your forms, modals, menus and more. Buttons styles are activated with the `[type]` attribute, each button `type` displays a different style.
+Quickly, customize and style buttons for forms, modals, menus and more. Buttons styles are activated with the `[type]` attribute, each button `type` displays a different style.
 
 ### Default Button
 
@@ -50,14 +50,14 @@ Quickly, customize and style buttons to your forms, modals, menus and more. Butt
   Default Button
 </button>
 
-<button type="button"
+<button type="submit"
 >
-  Default Button
+  Submit Button
 </button>
 
-<button type="button"
+<button type="reset"
 >
-  Default Button
+  Reset Button
 </button>
 ```
 
