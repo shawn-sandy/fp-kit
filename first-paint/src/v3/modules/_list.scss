@@ -8,7 +8,7 @@
 
 @mixin props() {
   // * css custom properties
-  --list-off: ; // turn off list features
+  --listOff: ; // turn off list features
   --list-s: inside;
   --list-fs: .95rem;
   --list-lh: 1.5;
@@ -28,10 +28,10 @@
 
 @mixin styles {
   // * css style utilities
-  [style*="--list-off"] {
+  [style*="--listOff"] {
     // turn off several list features all at once
-    --list-s: var(--list-off, none);
-    --list-pxs: var(--list-off, 5px);
+    --list-s: var(--listOff, none);
+    --list-pxs: var(--listOff, 5px);
   }
   @content;
 }

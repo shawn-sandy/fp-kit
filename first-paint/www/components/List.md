@@ -1,6 +1,6 @@
 # List <span role="note" style="--note: var(--beta)">Beta</span>
 
-Add and style and list elements to your pages.
+> Add and style and list elements to your pages.
 
 ### Default List (unordered)
 
@@ -48,7 +48,7 @@ and set `padding-inline-start` to `0`.
 
 ```html preview
 Sample List
-<ul style="--list-off: var(--yes)">
+<ul style="--listOff: var(--yes)">
   <li>List item</li>
   <li>List item</li>
   <li>List item</li>
