@@ -18,20 +18,20 @@
 }
 
 @mixin rules {
+  // * css rules/styles
    list-style: var(--list-s);
    font-size: var(--list-fs);
    line-height: var(--list-lh);
    padding-inline-start: var(--list-pxs);
-  // * css rules/styles
   @content;
 }
 
 @mixin styles {
   // * css style utilities
   [style*="--list-off"] {
-   // turn off list features all at once
-   --list-s: var(--list-off, none);
-   --list-pxs: var(--list-off, 0);
+    // turn off several list features all at once
+    --list-s: var(--list-off, none);
+    --list-pxs: var(--list-off, 5px);
   }
   @content;
 }
