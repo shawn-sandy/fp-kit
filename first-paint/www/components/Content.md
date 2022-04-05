@@ -1,6 +1,6 @@
 # Content Elements <span role="note" style="--note: var(--beta)">Beta</span>
 
-Out of the box styles for content elements like paragraphs, headings, lists(soon), italics, bold(strong) etc.
+> Out of the box styles for content elements like paragraphs, headings, lists, italics, bold(strong) etc.
 
 
 #### Default headings (h1-6)
@@ -41,12 +41,4 @@ Simple link example
 <a href="#" role="button">Simple Link</a>
 ```
 
-----
-## See Also
 
-
-[MDN GUIDELINES AND SEPCFICATIONS]()
-
-[ACCESSIBILITY GUIDE]()
-
-----

@@ -1,6 +1,6 @@
 # Cards
 
-?&gt;  _TODO_ add description
+> Create cards to display and showcase content, news, articles, etc.
 
 ### Default Cards
 
@@ -10,11 +10,15 @@ To style a card we repurpose `role="presentation` attribute on a `div` element.
 
 <div role="presentation">
   <h3>Card Title</h3>
-  <p>
+  <article>
     Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
+  </article>
+  <footer role="footer">
+    <a href="#">Read More</a>
+  </footer>
 
+</div>
+_car
 ```
 ## Cards Variables
 
@@ -60,6 +64,9 @@ Add shadows to your cards with `style="--card:var(--cd-lg)` use the following cu
   <p>
     Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
   </p>
+  <footer role="footer">
+    <a href="#">Read More</a>
+  </footer>
 </div>
 ```
 
@@ -71,6 +78,10 @@ Add shadows to your cards with `style="--card:var(--cd-lg)` use the following cu
   <p>
     Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
   </p>
+
+  <footer role="footer">
+    <a href="#">Read More</a>
+  </footer>
 </div>
 ```
 

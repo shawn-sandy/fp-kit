@@ -1,8 +1,8 @@
-# List <span role="note" aria-label="status">Alpha</span>
+# List <span role="note" style="--note: var(--beta)">Beta</span>
 
-Add and style and list elements to your pages.
+> Add and style and list elements to your pages.
 
-### Default List
+### Default List (unordered)
 
 ```html preview
 Sample List
@@ -48,7 +48,7 @@ and set `padding-inline-start` to `0`.
 
 ```html preview
 Sample List
-<ul style="--list-off: var(--yes)">
+<ul style="--listOff: var(--yes)">
   <li>List item</li>
   <li>List item</li>
   <li>List item</li>
@@ -61,11 +61,6 @@ Sample List
 ## See also
 
 
-
-[MDN GUIDELINES AND SPECFICATIONS](https: ':_target="_blank"')
-
-[HTML SPECIFICATIONS](https:// ':_target="_blank"')
-
-[ACCESSIBILITY GUIDE](https://, ':_target="_blank"')
+[MDN GUIDELINES AND SPECFICATIONS]([https](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul): ':_target="_blank"')
 
 ----
