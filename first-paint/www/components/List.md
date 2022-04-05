@@ -1,8 +1,8 @@
-# List <span role="note" aria-label="status">Alpha</span>
+# List <span role="note" style="--note: var(--beta)">Beta</span>
 
 Add and style and list elements to your pages.
 
-### Default List
+### Default List (unordered)
 
 ```html preview
 Sample List
