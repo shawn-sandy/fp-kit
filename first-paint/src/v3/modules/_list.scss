@@ -1,0 +1,45 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+@mixin props() {
+  // * css custom properties
+  --list-off: ; // turn off list features
+  --list-s: inside;
+  --list-fs: .95rem;
+  --list-lh: 1.5;
+  --list-pxs: 1.5rem;
+
+  @content;
+}
+
+@mixin rules {
+  // * css rules/styles
+   list-style: var(--list-s);
+   font-size: var(--list-fs);
+   line-height: var(--list-lh);
+   padding-inline-start: var(--list-pxs);
+  @content;
+}
+
+@mixin styles {
+  // * css style utilities
+  [style*="--list-off"] {
+    // turn off several list features all at once
+    --list-s: var(--list-off, none);
+    --list-pxs: var(--list-off, 5px);
+  }
+  @content;
+}
+
+@mixin module {
+  ul, [style*="--list"] {
+    @include props;
+    @include rules;
+  }
+  @include styles;
+}

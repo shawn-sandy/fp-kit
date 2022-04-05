@@ -8,10 +8,13 @@
 
 @mixin props() {
   // * css custom properties
+  --beta: orange;
+  --stable: green;
+  --production: blue;
   --pd: 0;
-  --py: .2rem;
-  --px: .7rem;
-  --fs: .7rem;
+  --py: 0.2rem;
+  --px: 0.7rem;
+  --fs: 0.7rem;
   --bg: lightgray;
   --bdr: none;
   --rds: 99rem;
@@ -29,8 +32,11 @@
   font-size: var(--note-fs, var(--fs));
   border: var(--note-brd, var(--bdr));
   border-radius: var(--note-rds, var(--rds));
-  background-color:  var(--note, var(--bg));
-  text-decoration: var(--note-decoration, var(--decoration));
+  background-color: var(--note, var(--bg));
+  text-decoration: var(
+    --note-decoration,
+    var(--decoration)
+  );
   text-transform: var(--note-tt, var(--tt));
 
   @content;
@@ -39,7 +45,6 @@
 @mixin styles {
   p[role="note"] {
     @include props;
-    --fs: var(--fs-2);
     --rds: 1rem;
     --px: 1rem;
     --py: 1rem;
@@ -53,7 +58,8 @@
 }
 
 @mixin module {
-  [role="note"], p[role="note"] {
+  [role="note"],
+  p[role="note"] {
     @include props;
     @include rules;
   }

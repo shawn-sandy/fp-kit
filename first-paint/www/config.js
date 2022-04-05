@@ -16,7 +16,7 @@ window.$docsify = {
   coverpage: false,
   loadSidebar: true,
   executeScript: true,
-  subMaxLevel: 3,
+  subMaxLevel: 2,
   notFoundPage: '404.md',
   logo: 'https://res.cloudinary.com/dqjs95c7n/image/upload/v1647385126/fp-text-logo-sm_efd59g.svg',
   themeColor: '#008000', // TODO: Set your own color.
@@ -37,7 +37,7 @@ window.$docsify = {
   },
   toc: {
     scope: '.markdown-section',
-    headings: 'h1, h2, h3, h4, h5, h6',
+    headings: 'h1, h2',
     title: 'On This Page'
   },
   // eslint-disable-next-line no-undef

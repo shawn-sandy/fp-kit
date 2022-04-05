@@ -24,6 +24,7 @@
 @use "../modules/tooltip";
 @use "../modules/badge";
 @use "../modules/footer";
+@use "../modules/list";
 // @include container.module();
 @include props.module();
 @include nav.module();
@@ -43,3 +44,4 @@
 @include tooltip.module();
 @include badge.module();
 @include footer.module();
+@include list.module();

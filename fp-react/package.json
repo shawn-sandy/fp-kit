@@ -1,6 +1,6 @@
 {
   "name": "@shawnsandy/fp-react",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/shawn-sandy/fp-kit.git"
   },
   "dependencies": {
-    "@shawnsandy/first-paint": "^2.12.0",
+    "@shawnsandy/first-paint": "^2.12.1",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
