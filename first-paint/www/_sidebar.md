@@ -12,6 +12,7 @@
   - [Content Elements](/components/Content)
     - [Headings](/components/Headings)
     - [Paragraph](/components/Paragraph)
+    - [List](/components/List)
   - [Cards](/components/Cards)
   - [Dialog](/components/Dialog)
   - [Dropdowns](/components/DETAILS)

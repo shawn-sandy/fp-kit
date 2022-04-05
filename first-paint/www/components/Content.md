@@ -3,16 +3,18 @@
 Out of the box styles for content elements like paragraphs, headings, lists(soon), italics, bold(strong) etc.
 
 
-### Default headings (h1-6)
+#### Default headings (h1-6)
 
 
 ```html preview
+<div>
 <h1>Default H1 Heading</h1>
 <h2>Default H2 Heading</h2>
 <h3>Default H3 Heading</h3>
 <h4>Default H4 Heading</h4>
 <h5>Default H5 Heading</h5>
 <h6>Default H6 Heading</h6>
+</div>
 
 ```
 ## Paragraph
