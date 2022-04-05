@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.12.0...@shawnsandy/first-paint@2.12.1) (2022-04-04)
+
+
+### Bug Fixes
+
+* **alpha:** button bugs ([7da8cd0](https://github.com/shawn-sandy/fp-kit/commit/7da8cd0120f5ccfde3c0df8276f055600dffb8a9))
+* **alpha:** button bugs ([cd165ec](https://github.com/shawn-sandy/fp-kit/commit/cd165ecc625be8da7fbea31aeb16920dfd724682))
+* restyle the button element ([e6546c2](https://github.com/shawn-sandy/fp-kit/commit/e6546c27973c5cc35c97fd4119b05b126a09c5e5))
+
+
+### Features
+
+* **alpha:** add basic badge component ([44b4821](https://github.com/shawn-sandy/fp-kit/commit/44b4821ff64641aa036c207e116efd9097790f09))
+* **alpha:** add custom note props ([d25498b](https://github.com/shawn-sandy/fp-kit/commit/d25498bd5be0becae8353cc6b2a5d1dd6c3aa3c4))
+* **alpha:** add note componnet to badge module ([699f600](https://github.com/shawn-sandy/fp-kit/commit/699f600148b6df80e3bd0b2982f477e2c62eb55f))
+* **alpha:** footer scaffold ([94579b0](https://github.com/shawn-sandy/fp-kit/commit/94579b0eb6b0fab88ed13baf8b2d60fb814522d1))
+* **alpha:** footer selectors setup ([1a9a890](https://github.com/shawn-sandy/fp-kit/commit/1a9a890080628bae8e502dc1c2c6d4e8e3687374))
+* **alpha:** minor style updates ([6dd3238](https://github.com/shawn-sandy/fp-kit/commit/6dd3238e25317783c6df736ea86e52024de0211d))
+* **alpha:** minor style updates ([374168f](https://github.com/shawn-sandy/fp-kit/commit/374168f028b31ce59b21a59135d0434b255a784b))
+* **alpha:** minor style updates ([9e55ab4](https://github.com/shawn-sandy/fp-kit/commit/9e55ab470c008c2ce2396d5a8c0451a181218613))
+* **alpha:** table enhancements custom style wrapper ([b23df98](https://github.com/shawn-sandy/fp-kit/commit/b23df98464cd4722dbae5bd6f2f4b8e1e680b882))
+* **alpha:** table enhancements custom style wrapper ([5966a74](https://github.com/shawn-sandy/fp-kit/commit/5966a74f45ba47408b1506226889f92d2256044b))
+* **alpha:** table restyle w/docs ([6b66a3e](https://github.com/shawn-sandy/fp-kit/commit/6b66a3e4ad90ccf73dcf9ca057db4bfe1f5571b5))
+* enhanced table wrapper ([d777298](https://github.com/shawn-sandy/fp-kit/commit/d7772989cc35b56a6708ab7ddd278637a49f909d))
+
+
+
+
+
+
 # [2.12.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.11.0...@shawnsandy/first-paint@2.12.0) (2022-04-01)
 
 
