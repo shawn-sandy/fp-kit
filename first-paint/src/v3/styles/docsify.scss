@@ -127,6 +127,9 @@
 .page_toc {
   --fs: .85rem;
   line-height: 1.5;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 div[style*="--tbl"] {

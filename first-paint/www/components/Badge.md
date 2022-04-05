@@ -1,6 +1,8 @@
-# Badge/Notes <span role="note" aria-label="status">Alpha</span>
+# Badge/Notes <span role="note" aria-label="status" style="--note: var(--beta)">Beta</span>
 
-Documentation and examples for badges and notes component.
+Documentation and examples for using and styling `notes` role to add notes and badges to app/pages.
+
+?> The note role can be added to parenthetic or ancillary content if no other native element or other role fits the purpose
 
 ### Default Badge
 

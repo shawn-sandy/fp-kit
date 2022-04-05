@@ -1,6 +1,6 @@
 # Content
 
-Styles for content elememts like paragraphs, headings, lists(soon), text, etx.
+Styles for content elements like paragraphs, headings, lists(soon) etc.
 
 
 
