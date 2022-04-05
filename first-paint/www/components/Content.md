@@ -1,6 +1,6 @@
 # Content Elements <span role="note" style="--note: var(--beta)">Beta</span>
 
-Styles for content elements like paragraphs, headings, lists(soon) etc.
+Out of the box styles for content elements like paragraphs, headings, lists(soon), italics, bold(strong) etc.
 
 
 ### Default headings (h1-6)
