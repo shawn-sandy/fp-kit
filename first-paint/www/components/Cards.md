@@ -1,6 +1,6 @@
-# Cards
+# Cards <span role="note" style="--note: var(--beta)">Beta</span>
 
-> Create cards to display and showcase content, news, articles, etc.
+> Create cards to display and showcase content like news, articles, grid-boxes, etc.
 
 ### Default Cards
 
@@ -87,5 +87,7 @@ Add shadows to your cards with `style="--card:var(--cd-lg)` use the following cu
 
 ----
 ## See also
+
+[Using the role presenation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role ':target="_blank"')
 
 ----

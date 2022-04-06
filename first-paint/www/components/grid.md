@@ -1,6 +1,6 @@
-# Grid Component
+# Grid Component <span role="note" style="--note: var(--beta)">Beta</span>
 
-?> _TODO_ add description
+> Create and style responsive grids using the `grid`, `row`, `grid-cell` roles
 
 
 ### Default Grid
@@ -137,11 +137,11 @@ Change the grid `--grid-cols: 2` to set the number of grid columns.
 
 
 ----
-## References/Additional info
+## See also
 
 
-[MDN GUIDELINES AND SEPCFICATIONS]()
+[MDN GUIDELINES AND SEPCFICATIONS](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role 'target:="_blank"')
 
-[ACCESSIBILITY GUIDE]()
+[Best Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#grid, ':target="_blank"')
 
 ----

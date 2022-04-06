@@ -1,6 +1,6 @@
-# Tooltip
+# Tooltip <span role="note" style="--note: var(--beta)">Beta</span>
 
-CSS only tooltip components used to provide additional information (tips) to users. It uses the aria-role `tooltip` to display and style tips and the aria-label attributes to provide content for the tooltip.
+> CSS only tooltip components used to provide additional information (tips) to users. It uses the aria-role `tooltip` to display and style tips and the aria-label attributes to provide content for the tooltip.
 
 !> If you cannot use `aria-role` you can use the `style="--tip:*"` attribute to enable a tooltip.
 
@@ -79,10 +79,8 @@ Tooltip using the `style` attribute option.
 ----
 ## See also
 
-[MDN GUIDELINES AND SPECFICATIONS](https: ':_target="_blank"')
+[MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
 
-[HTML SPECIFICATIONS](https:// ':_target="_blank"')
-
-[ACCESSIBILITY GUIDE](https://, ':_target="_blank"')
+[BEST PRACTICES](https://www.w3.org/TR/wai-aria-practices/#tooltip ':_target="_blank"')
 
 ----

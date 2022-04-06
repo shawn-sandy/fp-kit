@@ -1,4 +1,4 @@
-# Guides and Tutorials
+# Guides and Tutorials  <span role="note" style="--note: var(--beta)">Beta</span>
 
 ## Landing Page
 

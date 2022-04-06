@@ -24,7 +24,7 @@
 --h6: var(--fs-5);
 ```
 
-### Custom properties (rules)
+## Custom properties (rules)
 
 ```css
 
