@@ -1,6 +1,6 @@
-# Dropdowns
+# Dropdowns/Details <span role="note" style="--note: var(--beta)">Beta</note>
 
-?>  Details disclosure element
+> Create and style dropdowns, accordions or details components using the native `<details>` element.
 
 ### Default
 
@@ -62,11 +62,10 @@ font-size: var(--summary-fs, 1.1rem);
 
 
 ----
-## References/Additional info
+## See also
 
 
-[MDN GUIDELINES AND SEPCFICATIONS]()
+[MDN GUIDELINES AND SEPCFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details ':target="blank"')
 
-[ACCESSIBILITY GUIDE]()
 
 ----

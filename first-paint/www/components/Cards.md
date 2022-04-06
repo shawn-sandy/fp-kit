@@ -18,7 +18,7 @@ To style a card we repurpose `role="presentation` attribute on a `div` element.
   </footer>
 
 </div>
-_car
+
 ```
 ## Cards Variables
 
@@ -86,11 +86,6 @@ Add shadows to your cards with `style="--card:var(--cd-lg)` use the following cu
 ```
 
 ----
-## References/Additional info
-
-
-[MDN GUIDELINES AND SEPCFICATIONS]()
-
-[ACCESSIBILITY GUIDE]()
+## See also
 
 ----

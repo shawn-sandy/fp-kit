@@ -1,4 +1,4 @@
-# Breadcrumb <span role="note" aria-label="status">Alpha</span>
+# Breadcrumb <span role="note" aria-label="status">TODO</span>
 
 > Docmentation, examples and info for using Breadcrumb component
 
@@ -37,6 +37,6 @@ Breadcrumb {
 
 [HTML SPECIFICATIONS](https:// ':_target="_blank"')
 
-[ACCESSIBILITY GUIDE](https://, ':_target="_blank"')
+[ACCESSIBILITY GUIDE](https:// ':_target="_blank"')
 
 ----

@@ -11,7 +11,7 @@
   --slt-dsp: grid;
   --slt-align: center;
   --slt-justify: space-between;
-  --slt-min-w: min(100px, 100%);
+  --slt-min-w: min(100%, 90vw);
   --slt-fs: 1rem;
   --slt-cl: currentColor;
   --slt-bdr-style: solid;
@@ -51,6 +51,7 @@
   -moz-appearance: var(--slt-appearance);
   -webkit-appearance: var(--slt-appearance);
   appearance: var(--slt-appearance);
+  padding-right: 30px;
 
   @content;
 }

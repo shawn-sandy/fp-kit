@@ -1,6 +1,6 @@
-# Checkbox
+# Checkbox <span role="note" style="--note: var(--beta)">Beta</span>
 
-?>  _TODO_ add description
+> Create and the checkbox element(s).
 
 ### Default Checkbox
 
@@ -32,8 +32,8 @@
 ## References/Additional info
 
 
-[MDN GUIDELINES AND SEPCFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox#see_also)
+[MDN GUIDELINES AND SEPCFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox ':target="_blank"')
 
-[ACCESSIBILITY GUIDE]()
+[ACCESSIBILITY GUIDE](https://webaim.org/techniques/forms/advanced ':target="_blank"')
 
 ----

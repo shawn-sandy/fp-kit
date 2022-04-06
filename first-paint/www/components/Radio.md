@@ -1,6 +1,6 @@
-# Radio
+# Radio <span role="note" style="--note: var(--beta)">Beta</span>
 
-?&gt;  _TODO_ add description
+> Create and style the radio element(s)
 
 ### Default Radio
 
