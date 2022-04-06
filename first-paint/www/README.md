@@ -3,7 +3,7 @@
 -------
 # First Paint 3.0 (beta)
 
-> A performance first, accessibility driven, easy to use CSS/SCSS, micro library that focuses on Semantic HTML structure rather than `class` heavy styling.
+> A performance first, accessibility driven, easy to use CSS/SCSS, micro library that focuses on Semantic HTML rather than `class` heavy styling.
 
 -------
 
@@ -27,9 +27,9 @@
 * Install `npm i @shawnsandy/first-paint` stable version
 * Yarn install `yarn add @shawnsandy/first-paint@next`
 
-## Quick Start
+### Quick Start
 
-Copy and add the stylesheet below into the `<head></head>` of you HTML page...
+[Read out quick start guide](/GUIDES.md)
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.css">
@@ -40,7 +40,7 @@ Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
 ?> Add usage info description
 
-## Contents
+## Modules & Docs
 ------
 
 [filename](_sidebar.md ':include')

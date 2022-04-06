@@ -40,7 +40,7 @@
   border-radius: var(--card-radius, 0.2rem);
   background-color: var(--card-bg, var(--bg, #fff));
   box-shadow: var(--card-shadow);
-  border: var(--card-border, thin solid whitesmoke);
+  border: var(--card-border, thin solid lightgray);
   @content;
 }
 

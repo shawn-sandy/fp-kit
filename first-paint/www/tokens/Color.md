@@ -1,10 +1,8 @@
-# CSS Tokens (variables)
+# CSS Named Color Tokens (variables)   <span role="note" style="--note: var(--beta)">Beta</span>
 
-?>  _TODO_ add description
+> CSS named colors as tokens
 
 ## Tokens Variables
-
-## Examples
 
 ### White
 
@@ -207,8 +205,7 @@
 
 ----
 
-
-## Color scale tokens
+## Variables
 
 ```css
 --white: rgba(255, 255, 255, 1);
@@ -361,8 +358,7 @@
 ----
 ## References/Additional info
 
-[MDN GUIDELINES AND SEPCFICATIONS]()
+[CSS TRICKS COLOR GUIDE](https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/  ':target="_blank"')
 
-[ACCESSIBILITY GUIDE]()
 
 ----

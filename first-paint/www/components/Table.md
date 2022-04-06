@@ -1,6 +1,6 @@
-# Table
+# Table <span role="note" style="--note: var(--beta)">Beta</span>
 
-?>  _TODO_ add description
+> Create and style Table components/elements
 
 
 ### Default Table

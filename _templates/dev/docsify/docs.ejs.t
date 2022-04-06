@@ -39,8 +39,6 @@ to: <%= absPath %>/<%= name %>.md
 
 [MDN GUIDELINES AND SPECFICATIONS](https: ':_target="_blank"')
 
-[HTML SPECIFICATIONS](https:// ':_target="_blank"')
-
-[ACCESSIBILITY GUIDE](https://, ':_target="_blank"')
+[ACCESSIBILITY BEST PRACTICES](https://www.w3.org/TR/wai-aria-practices-1.2/examples/landmarks/banner.html)
 
 ----
