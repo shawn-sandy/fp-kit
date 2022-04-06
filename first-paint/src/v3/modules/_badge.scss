@@ -14,7 +14,7 @@
   --pd: 0;
   --py: 0.2rem;
   --px: 0.7rem;
-  --fs: 0.7rem;
+  --fs: 0.8rem;
   --bg: lightgray;
   --bdr: none;
   --rds: 99rem;
@@ -48,10 +48,15 @@
     --rds: 1rem;
     --px: 1rem;
     --py: 1rem;
+    --note-tt: normal;
   }
 
-  [style*="--note"] {
+  [style="--note-bg"] {
     background-color: var(--note, var(--note-bg));
+  }
+
+  [style*="--note-scale"], p[style*="--note-scale"] {
+    font-size: var(--note-scale, 75%)
   }
 
   @content;
