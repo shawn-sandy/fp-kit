@@ -88,9 +88,4 @@ Add shadows to your cards with `style="--card:var(--cd-lg)` use the following cu
 ----
 ## See also
 
-
-[MDN GUIDELINES AND SEPCFICATIONS]()
-
-[ACCESSIBILITY GUIDE]()
-
 ----

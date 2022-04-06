@@ -73,6 +73,6 @@ function closeDialog (elm) {
 
 [HTML SPECIFICATIONS](https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element ':_target="_blank"')
 
-[ACCESSIBILITY GUIDE]([https://](https://www.w3.org/TR/wai-aria-practices-1.2/#dialog_modal), ':_target="_blank"')
+[ACCESSIBILITY GUIDE]([https://](https://www.w3.org/TR/wai-aria-practices-1.2/#dialog_modal) ':_target="_blank"')
 
 ----

@@ -1,6 +1,6 @@
-# Input
+# Input <span role="note">Alpha</span>
 
-?>  _TODO_ add description
+> Create and style the form input elements.
 
 
 ### Default Input

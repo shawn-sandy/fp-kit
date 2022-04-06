@@ -12,6 +12,7 @@
   --input-min-w: min(100px, 100%);
   --input-fw: normal;
   --input-bdr-style: solid;
+  --input-bdr-w: .1rem;
   --input-bdr-color: lightgray;
   --input-px: 1rem;
   --input-py: .5rem;
@@ -24,7 +25,7 @@
   background-color: var(--input-cl);
   font-size: var(--input-fs);
   font-weight: var(--input-fw);
-  border-width: var(--input-min-w);
+  border-width: var(--input-bdr-w);
   border-style: var(--input-bdr-style);
   border-color: var(--input-bdr-color);
   padding-inline: var(--input-px);

@@ -138,6 +138,6 @@ Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat la
 
 [MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/note_role ':_target="_blank"')
 
-[ACCESSIBILITY GUIDE]([https://](https://www.w3.org/TR/wai-aria-1.1/#note), ':_target="_blank"')
+[ACCESSIBILITY GUIDE]([https://](https://www.w3.org/TR/wai-aria-1.1/#note ':_target="_blank"')
 
 ----

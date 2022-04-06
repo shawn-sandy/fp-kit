@@ -17,7 +17,7 @@
   - [Cards](/components/Cards)
   - [Dialog/Modal](/components/Dialog)
   - [Dropdown/Detail](/components/DETAILS)
-  - [Forms](/components/Checkbox)
+  - Forms
     - [Checkbox](/components/Checkbox)
     - [Inputs](/components/Input)
     - [Radio](/components/Radio)

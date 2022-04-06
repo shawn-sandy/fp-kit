@@ -37,6 +37,6 @@ Breadcrumb {
 
 [HTML SPECIFICATIONS](https:// ':_target="_blank"')
 
-[ACCESSIBILITY GUIDE](https://, ':_target="_blank"')
+[ACCESSIBILITY GUIDE](https:// ':_target="_blank"')
 
 ----
