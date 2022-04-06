@@ -57,16 +57,13 @@ Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat la
     background-color:  var(--note, var(--bg));
     text-decoration: var(--note-decoration, var(--decoration));
     text-transform: var(--note-tt, var(--tt));
-
 ```
 
 ## Examples
 
 ### Red Badge
 
-Customize the badge background/color with the `<span role="note" style="--bg: red">Badge</span>`
-
-or use CSS a class
+Customize the badge background/color with the `<span role="note" style="--bg: red">Badge</span>` or use CSS a class
 
 ```css
 .red-badge {
@@ -81,13 +78,36 @@ A simple badge <span role="note" style="--bg: red; --cl: white">Badge</span>
 </div>
 ```
 
-###  Default Note
+```html preview
+<h4>
+A simple badge <span role="note">Badge</span>
+</h4>
+```
 
 
 Create/Customize the note background/color with the `<p role="note" style="--note: lightyellow">...</p>`
 
+
 ```html preview
 <p role="note" style="--note: lightyellow">
+Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat laborum. Laboris velit labore amet in do reprehenderit consectetur commodo consectetur ullamco aliqua. Nulla exercitation sunt id aliquip eiusmod ad amet laboris dolore laborum amet. Ullamco duis ex eiusmod Lorem esse mollit qui cillum laboris. Culpa aliquip quis cillum sit ipsum consectetur ipsum aute.
+</p>
+```
+
+## Notes that scale
+
+Create notes that scales with the font size to `75%` of the parent element, default.
+
+
+```html preview
+<h3>
+A simple badge <span role="note" style="--note-scale">Badge</span>
+</h3>
+```
+
+
+```html preview
+<p role="note" style="--note: lightyellow; --note-scale: var(--on)">
 Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat laborum. Laboris velit labore amet in do reprehenderit consectetur commodo consectetur ullamco aliqua. Nulla exercitation sunt id aliquip eiusmod ad amet laboris dolore laborum amet. Ullamco duis ex eiusmod Lorem esse mollit qui cillum laboris. Culpa aliquip quis cillum sit ipsum consectetur ipsum aute.
 </p>
 ```
