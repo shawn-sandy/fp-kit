@@ -3,10 +3,7 @@
 -------
 # First Paint 3.0 (beta)
 
- > ## Lightweight, Fast, Accessible, Inclusive
-
-
-?> First Paint is a performance first, easy to use CSS/SCSS micro library that contains accessibility focused lightweight, mobile aps without the need to learn a bunch of new `.classes`. Yet flexible enough to allow you to easily restyle or create your own `.classes`.
+> A performance first, accessibility driven, easy to use CSS/SCSS, micro library that focuses on Semantic HTML structure rather than `class` heavy styling.
 
 -------
 
@@ -24,13 +21,11 @@
 
 [Read more abot our features/modules and see what's new in First Paint 3.0 here](/FEATURES).
 
-## Getting Started
+## Install
 
-**Install**
-
-* Install `npm i @shawnsandy/first-paint` stable version
 * Install `npm i @shawnsandy/first-paint@next` latest version (next)
-* Yarn install `yarn add @shawnsandy/first-paint`
+* Install `npm i @shawnsandy/first-paint` stable version
+* Yarn install `yarn add @shawnsandy/first-paint@next`
 
 ## Quick Start
 
@@ -45,23 +40,10 @@ Copy and add the stylesheet below into the `<head></head>` of you HTML page...
 
 ?> Add usage info description
 
-## Tokens
+## Contents
+------
 
-- [Design Tokens](/tokens/tokens)
-- [Scaled Color Tokens](/tokens/color)
-- [Named Color Tokens](/tokens/colornames)
-
-## Modules
-
-  - [Buttons](/components/button)
-  - [Content elements](/components/content)
-  - [Cards](/components/Cards)
-  - [Checkbox](/components/Checkbox)
-  - [Details disclosure](/components/DETAILS)
-  - [Grid](/components/grid)
-  - [Img](/components/Img)
-  - [Navbar](/components/Navbar)
-  - [Table](/components/table)
+[filename](_sidebar.md ':include')
 
 ## Licence (MIT)
 
@@ -77,9 +59,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - Clone (mono)-repo `git clone https://github.com/shawn-sandy/fp-kit.git`
 - Install dependencies `npm i`
-- Symling packages `lerna bootstrap`
+- Symlink packages `lerna bootstrap`
 - CD into `/first-paint`
+- Run `npm start` to fire up the server
 - Edit code
 - Submit pull request
+- :)
 
 ## Enjoy!

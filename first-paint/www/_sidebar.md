@@ -9,14 +9,15 @@
 - Modules
   - [Badges/Notes](/components/Badge)
   - [Buttons](/components/button)
+  - [Breadcrumb](/components/Breadcrumb)
   - [Content Elements](/components/Content)
     - [Headings](/components/Headings)
     - [Paragraph](/components/Paragraph)
     - [List](/components/List)
   - [Cards](/components/Cards)
-  - [Dialog](/components/Dialog)
-  - [Dropdowns](/components/DETAILS)
-  - [Forms](/components/Checkbox)
+  - [Dialog/Modal](/components/Dialog)
+  - [Dropdown/Detail](/components/DETAILS)
+  - Forms
     - [Checkbox](/components/Checkbox)
     - [Inputs](/components/Input)
     - [Radio](/components/Radio)

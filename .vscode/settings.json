@@ -8,5 +8,15 @@
   "cSpell.words": [
     "Cpath",
     "Ctitle"
-  ]
+  ],
+  // Required: The website to display
+  "liveFrame.url": "http://localhost:4040",
+
+  // Optional: Title for the pane tab heading
+  "liveFrame.title": "First Paint 3.0",
+
+  // Optional: Which pane to open the frame in
+  "liveFrame.pane": "Beside",
+  "files.autoSave": "onFocusChange"
+
 }

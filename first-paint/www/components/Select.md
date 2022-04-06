@@ -1,4 +1,4 @@
-# Select
+# Select <span role="note" style="--note: var(--beta)">Beta</span>
 
 > A simple select component, that restyle the native element without any Javascript.
 
@@ -78,7 +78,7 @@ select {
 ## References/Additional info
 
 
-[MDN GUIDELINES AND SPECFICATIONS]()
+[MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#technical_summary ':target="_blank"')
 
 [ACCESSIBILITY GUIDE]()
 

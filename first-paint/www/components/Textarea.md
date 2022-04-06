@@ -1,6 +1,6 @@
-# Textarea
+# Textarea <span role="note" style="--note: var(--beta)">Beta</span>
 
-?&gt;  _TODO_ add description
+> Create and style the textarea element.
 
 ### Default Textarea
 
@@ -52,7 +52,7 @@ The text area HTML element represents a multi-line plain-text editing control, u
 ## References/Additional info
 
 
-[MDN GUIDELINES AND SPECFICATIONS]()
+[MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea ':target="_blank"')
 
 [ACCESSIBILITY GUIDE]()
 

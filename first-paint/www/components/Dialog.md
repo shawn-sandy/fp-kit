@@ -1,6 +1,6 @@
-# Dialog
+# Dialog (Modal) <span role="note" style="--note: var(--beta)">Beta</span>
 
-?&gt;  _TODO_ add description
+>  Create and style modals using the native dialog element (works in all evergreen browsers), the dialog element required some `javascript` to open and close, there is a sample of the  script below.
 
 ### Default Dialog
 
@@ -66,13 +66,13 @@ function closeDialog (elm) {
 ## Examples
 
 ----
-## References/Additional info
+## See also
 
 
 [MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog ':_target="_blank"')
 
 [HTML SPECIFICATIONS](https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element ':_target="_blank"')
 
-[ACCESSIBILITY GUIDE](https://, ':_target="_blank"')
+[ACCESSIBILITY GUIDE]([https://](https://www.w3.org/TR/wai-aria-practices-1.2/#dialog_modal) ':_target="_blank"')
 
 ----
