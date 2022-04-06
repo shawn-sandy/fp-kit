@@ -1,6 +1,6 @@
-# Navbar
+# Navbar <span role="note" style="--note: var(--alpha)">Alpha</span>
 
-?&gt;  _TODO_ add description
+> Create and style responsive navs/navigations
 
 ### Default Navbar
 
@@ -60,8 +60,8 @@
 ## References/Additional info
 
 
-[MDN GUIDELINES AND SEPCFICATIONS]()
+[MDN GUIDELINES AND SEPCFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav, ':target="_blank"')
 
-[ACCESSIBILITY GUIDE]()
+[ACCESSIBILITY GUIDE](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role ':target="_blank"')
 
 ----

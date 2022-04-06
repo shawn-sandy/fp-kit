@@ -1,6 +1,6 @@
-# Img
+# Img <span role="note" style="--note: var(--beta)">Beta</span>
 
-Responsive and accessible `img` componnent
+> Create responsive and accessible `img` components/elements for your apps.
 
 
 ### Default Img
@@ -80,8 +80,9 @@ Style attributes are applied to the `figure` element.
 ## References/Additional info
 
 
-[MDN GUIDELINES AND SEPCFICATIONS]()
+[MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img, ':target="_blank"')
 
-[ACCESSIBILITY GUIDE]()
+
+[Web Dev](https://web.dev/learn/design/responsive-images/, ':target="_blank"')
 
 ----

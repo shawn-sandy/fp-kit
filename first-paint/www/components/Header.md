@@ -1,6 +1,6 @@
-# Header
+# Header <span role="note" style="--note: var(--beta)">Beta</span>
 
-Creates a page Header/Cover Element for pages.
+> Create and style Header/Cover (hero) Element for pages, using the `<header>` or `banner` role.
 
 ### Default Header
 
