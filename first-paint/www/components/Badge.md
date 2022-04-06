@@ -57,16 +57,13 @@ Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat la
     background-color:  var(--note, var(--bg));
     text-decoration: var(--note-decoration, var(--decoration));
     text-transform: var(--note-tt, var(--tt));
-
 ```
 
 ## Examples
 
 ### Red Badge
 
-Customize the badge background/color with the `<span role="note" style="--bg: red">Badge</span>`
-
-or use CSS a class
+Customize the badge background/color with the `<span role="note" style="--bg: red">Badge</span>` or use CSS a class
 
 ```css
 .red-badge {
@@ -81,17 +78,15 @@ A simple badge <span role="note" style="--bg: red; --cl: white">Badge</span>
 </div>
 ```
 
-###  Default Note
-
-
-Create/Customize the note background/color with the `<p role="note" style="--note: lightyellow">...</p>`
-
-
 ```html preview
 <h4>
 A simple badge <span role="note">Badge</span>
 </h4>
 ```
+
+
+Create/Customize the note background/color with the `<p role="note" style="--note: lightyellow">...</p>`
+
 
 ```html preview
 <p role="note" style="--note: lightyellow">

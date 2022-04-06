@@ -4,7 +4,7 @@ to: <%= absPath %>/<%= name %>.md
 
 # <%= name %> <span role="note" aria-label="status">Alpha</span>
 
-<%= description ? description : "?>  _TODO_ add description" %>
+> <%= description ? description : "?> Docmentation, examples and infor for using <%= name %> component" %>
 
 ### Default <%= name %>
 
