@@ -92,6 +92,6 @@ Header with title(h2)
 
 [MDN HEADER GUIDELINES AND SPECIFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
 
-[ACCESSIBILITY GUIDELINES](https://www.w3.org/TR/wai-aria-practices-1.2/examples/landmarks/banner.html)
+<!-- [ACCESSIBILITY BEST PRACTICES](https://www.w3.org/TR/wai-aria-practices-1.2/examples/landmarks/banner.html) -->
 
 ----

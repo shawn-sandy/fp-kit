@@ -4,7 +4,7 @@
 - [Guides](/GUIDES)
 - [Design Tokens](/tokens/Tokens)
   - [Open Color Tokens](/tokens/Opencolor)
-  - [Named Color Tokens](/tokens/Colornames)
+  <!-- - [Named Color Tokens](/tokens/Colornames) -->
   - [Scaled Color Tokens](/tokens/Color)
 - Modules
   - [Badges/Notes](/components/Badge)

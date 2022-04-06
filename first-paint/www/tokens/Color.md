@@ -1,6 +1,6 @@
-# CSS Tokens (variables)
+# CSS Named Color Tokens (variables)   <span role="note" style="--note: var(--beta)">Beta</span>
 
-?>  _TODO_ add description
+> CSS named colors as tokens
 
 ## Tokens Variables
 
@@ -207,8 +207,7 @@
 
 ----
 
-
-## Color scale tokens
+## Variables
 
 ```css
 --white: rgba(255, 255, 255, 1);

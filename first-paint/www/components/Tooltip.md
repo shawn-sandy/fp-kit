@@ -81,7 +81,6 @@ Tooltip using the `style` attribute option.
 
 [MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
 
-[HTML SPECIFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) ':_target="_blank"')
-
+[BEST PRACTICES](https://www.w3.org/TR/wai-aria-practices/#tooltip ':_target="_blank"')
 
 ----

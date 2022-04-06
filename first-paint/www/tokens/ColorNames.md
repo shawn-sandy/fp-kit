@@ -2,9 +2,6 @@
 
 ?>  _TODO_ add description
 
-
-## Examples
-
 ### Gray-gainsboro
 
 

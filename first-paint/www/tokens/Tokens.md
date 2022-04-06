@@ -1,12 +1,11 @@
-# CSS Tokens (variables)
+# CSS Tokens (variables)  <span role="note" style="--note: var(--beta)">Beta</span>
 
-?>  _TODO_ add description
+> CSS Tokens (AKA Variables) as we call them allow developers to define and reuse CSS properties and values in vanilla CSS. FirstPaint leverages CSS variables for all of our components and modules adding a "Dynamic" layer of abstraction and flexibility to CSS.
 
-Here is a list of the default custom properties we use in FirstPaint.
 ## Global props
 
 ```css
- --fs: 100%;
+  --fs: 100%;
   --fw: normal;
   --fst: normal;
   --lh: 1.7;
@@ -101,18 +100,16 @@ button {
 As a style attribute
 
 ```html
-<button style="--fs: 2rem; --cl: red">...</button>
+<button type="button" style="--fs: 2rem; --cl: red">...</button>
 
 ```
 
 Example w/custom button properties
 
 ```html preview
-<button style="--btn-fs: 1.5rem; --btn-color: red">Style Attributes</button>
+<button type="button" style="--btn-fs: 1.5rem; --btn-color: red">Style Attributes</button>
 
 ```
-
-
 
 ----
 ## References/Additional info

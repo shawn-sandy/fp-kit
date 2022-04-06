@@ -37,7 +37,7 @@ window.$docsify = {
   },
   toc: {
     scope: '.markdown-section',
-    headings: 'h1, h2',
+    headings: 'h1, h2, h3',
     title: 'On This Page'
   },
   // eslint-disable-next-line no-undef

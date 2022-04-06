@@ -1,10 +1,6 @@
-# CSS Tokens (variables)
+# Open Color CSS Tokens (variables)   <span role="note" style="--note: var(--beta)">Beta</span>
 
 ?>  _TODO_ add description
-
-
-
-## Examples
 
 ### Gray-gainsboro
 

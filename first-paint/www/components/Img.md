@@ -85,4 +85,7 @@ Style attributes are applied to the `figure` element.
 
 [Web Dev](https://web.dev/learn/design/responsive-images/, ':target="_blank"')
 
+
+[BEST PRACTICES](https://www.w3.org/TR/wai-aria-practices/#aria_ex ':target="_blank"')
+
 ----

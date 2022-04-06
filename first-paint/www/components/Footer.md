@@ -1,4 +1,4 @@
-# Footer
+# Footer   <span role="note" style="--note: var(--alpha)">Alpha</span>
 
 ?&gt;  _TODO_ add description
 

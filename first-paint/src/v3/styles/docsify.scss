@@ -10,8 +10,8 @@
 }
 
 .demo_preview {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
   .demo_preview_content {
     display: flex;
     flex-direction: column;
@@ -48,7 +48,6 @@
   }
 
   .markdown-section {
-
     a {
       font-weight: normal;
     }
@@ -56,7 +55,10 @@
     table {
       margin: 0;
       padding: 0;
-      tr, td, th, tr {
+      tr,
+      td,
+      th,
+      tr {
         border: unset;
         border-top: unset;
       }
@@ -105,40 +107,49 @@
 }
 
 .demo_preview .demo_preview_content {
-  display: flex;_pro
-  > section {
+  display: flex;
+  _pro > section {
     width: 100%;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: initial;
     // font-size: initial;
   }
 }
 
-.app-sub-sidebar li{
+.app-sub-sidebar li {
   display: flex;
   &::before {
-  content: " ";
-  display: flex;
-  place-content: center;
-  place-items: center;
-}
+    content: " ";
+    display: flex;
+    place-content: center;
+    place-items: center;
+  }
 }
 
 .page_toc {
-  --fs: .85rem;
+  --fs: 0.85rem;
   line-height: 1.5;
   li + li {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
   @media (max-width: 1290px) {
+    display: none;
+  }
+
+  [href*="undefined"] {
     display: none;
   }
 }
 
 div[style*="--tbl"] {
-  --spc: .5rem;
-  --rds: .5rem;
+  --spc: 0.5rem;
+  --rds: 0.5rem;
   padding: var(--spc);
   overflow: auto;
   width: 100%;
@@ -146,11 +157,11 @@ div[style*="--tbl"] {
   border-radius: var(--rds);
 }
 
-.sidebar ul li.active>a {
+.sidebar ul li.active > a {
   width: 100%;
 }
 
-
-.markdown-section ol, .markdown-section ul {
+.markdown-section ol,
+.markdown-section ul {
   padding-left: initial;
 }

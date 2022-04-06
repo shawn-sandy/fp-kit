@@ -22,7 +22,6 @@
   </section>
 </nav>
 
-
 ```
 
 ## Navbar Variables
