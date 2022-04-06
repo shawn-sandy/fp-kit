@@ -4,8 +4,6 @@
 
 ## Tokens Variables
 
-## Examples
-
 ### White
 
 
@@ -360,8 +358,7 @@
 ----
 ## References/Additional info
 
-[MDN GUIDELINES AND SEPCFICATIONS]()
+[CSS TRICKS COLOR GUIDE](https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/  ':target="_blank"')
 
-[ACCESSIBILITY GUIDE]()
 
 ----

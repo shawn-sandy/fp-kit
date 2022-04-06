@@ -3,9 +3,9 @@
 - [Features](/FEATURES)
 - [Guides](/GUIDES)
 - [Design Tokens](/tokens/Tokens)
+  - [Scaled Color Tokens](/tokens/Color)
   - [Open Color Tokens](/tokens/Opencolor)
   <!-- - [Named Color Tokens](/tokens/Colornames) -->
-  - [Scaled Color Tokens](/tokens/Color)
 - Modules
   - [Badges/Notes](/components/Badge)
   - [Buttons](/components/button)
