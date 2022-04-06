@@ -2,6 +2,8 @@
   "recommendations": [
     "yatki.vscode-surround",
     "darkriszty.markdown-table-prettify",
-    "Tyriar.lorem-ipsum"
+    "tyriar.lorem-ipsum",
+    "jevakallio.vscode-live-frame",
+    "ms-vscode.live-server"
   ]
 }

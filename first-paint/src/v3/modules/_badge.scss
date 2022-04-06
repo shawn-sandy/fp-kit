@@ -39,15 +39,18 @@
   );
   text-transform: var(--note-tt, var(--tt));
 
+
+  --note-bg: var(--note-beta, var(--beta));
+
   @content;
 }
 
 @mixin styles {
-  p[role="note"] {
+  :not(span)[role="note"] {
     @include props;
     --rds: 1rem;
-    --px: 1rem;
-    --py: 1rem;
+    --px: 1.5rem;
+    --py: 1.5rem;
     --note-tt: normal;
   }
 
