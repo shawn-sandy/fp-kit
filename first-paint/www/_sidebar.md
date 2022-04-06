@@ -9,6 +9,7 @@
 - Modules
   - [Badges/Notes](/components/Badge)
   - [Buttons](/components/button)
+  - [Breadcrumb](/components/Breadcrumb)
   - [Content Elements](/components/Content)
     - [Headings](/components/Headings)
     - [Paragraph](/components/Paragraph)

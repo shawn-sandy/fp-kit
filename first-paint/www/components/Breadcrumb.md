@@ -1,20 +1,16 @@
----
-to: <%= absPath %>/<%= name %>.md
----
+# Breadcrumb <span role="note" aria-label="status">Alpha</span>
 
-# <%= name %> <span role="note" aria-label="status">Alpha</span>
+> Docmentation, examples and info for using Breadcrumb component
 
-> <%= description ? description : `Docmentation, examples and info for using ${name} component` %>
-
-### Default <%= name %>
+### Default Breadcrumb
 
 ```html preview
 <div>
-  <%= name %>
+  Breadcrumb
 </div>
 ```
 
-## <%= name %> Variables
+## Breadcrumb Variables
 
 ### Custom variables
 
@@ -22,10 +18,10 @@ to: <%= absPath %>/<%= name %>.md
 --color: #000;
 ```
 
-### <%= name %> properties (rules)
+### Breadcrumb properties (rules)
 
 ```css
-<%= name %> {
+Breadcrumb {
   color: var(--color, currentColor);
 }
 ```
