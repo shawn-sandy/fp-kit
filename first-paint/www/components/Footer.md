@@ -10,7 +10,7 @@
     <div
       role="row">
       <div role="gridcell">
-        <h3>Grid col</h3>
+        <h5>Grid col</h5>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
           totam dolorem nemo facere ex expedita illum laboriosam sit. Ea
@@ -18,7 +18,7 @@
         </p>
       </div>
       <div role="gridcell">
-        <h3>Grid col</h3>
+        <h5>Grid col</h5>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
           totam dolorem nemo facere ex expedita illum laboriosam sit. Ea
