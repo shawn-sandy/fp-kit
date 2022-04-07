@@ -28,6 +28,7 @@
   - [Header](/components/Header)
   - [Img](/components/Img)
   - [Navbar](/components/Navbar)
+  - [Scrollbar](/components/Scrollbar)
   - [Table](/components/Table)
   - [Tooltip](/components/Tooltip)
 - [Changelog](/CHANGELOG)
