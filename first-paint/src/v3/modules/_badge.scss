@@ -30,6 +30,7 @@
   padding-block: var(--note-cl, var(--py));
   color: var(--note-cl, var(--cl));
   font-size: var(--note-fs, var(--fs));
+  font-weight: var(--note-fw, normal);
   border: var(--note-brd, var(--bdr));
   border-radius: var(--note-rds, var(--rds));
   background-color: var(--note, var(--bg));
