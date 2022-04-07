@@ -2,7 +2,7 @@
 
 ## Landing Page
 
-<a href="/basic-sample.html" target="_blank">Open in new tab</a>
+<a role="button" style="--bg: lightgray; --btn-rds: 99rem;" href="/basic-sample.html" target="_blank">View in new tab</a>
 
 ```html preview
 <header>
