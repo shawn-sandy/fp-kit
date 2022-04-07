@@ -1,6 +1,6 @@
 # CSS Tokens (variables)  <span role="note" style="--note: var(--beta)">Beta</span>
 
-> CSS Tokens (AKA Variables) as we call them allow developers to define and reuse CSS properties and values in vanilla CSS. FirstPaint leverages CSS variables for all of our components and modules adding a "Dynamic" layer of abstraction and flexibility to CSS.
+> CSS Tokens (AKA Variables) as we call them allow developers to create and reuse CSS properties and values in vanilla CSS. FirstPaint leverages CSS variables for all of our components and modules adding a "Dynamic" layer of abstraction and flexibility to CSS.
 
 ## Global props
 
