@@ -19,6 +19,8 @@
 @use "./modules/tooltip";
 @use "./modules/badge";
 @use "./modules/footer";
+@use "./modules/list";
+@use "./modules/scrollbar";
 // components
 @use "./components/type.scss";
 // @include container.module();
@@ -40,4 +42,6 @@
 @include tooltip.module();
 @include badge.module();
 @include footer.module();
+@include list.module();
+@include scrollbar.module();
 
