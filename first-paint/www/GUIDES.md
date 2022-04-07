@@ -2,7 +2,6 @@
 
 ## Landing Page
 
-<a role="button" style="--bg: lightgray; --btn-rds: 99rem;" href="/basic-sample.html" target="_blank">View in new tab</a>
 
 ```html preview
 <header>
@@ -165,6 +164,10 @@
  <div>Copyright &copy; 2022</div>
 </footer>
 ```
+
+<p style="text-align: right">
+<a role="button" style="--bg: lightgray; --btn-rds: 99rem;" href="/basic-sample.html" target="_blank">View in new tab</a>
+<p>
 
 ## Page Source Snippets
 
