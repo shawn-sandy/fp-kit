@@ -10,18 +10,20 @@
   // * css custom properties
   --scroll-w: 0.5rem;
   --scroll-h: 0.5rem;
+  --scroll-size: thin;
   --scroll-bg: lightgray;
   --scroll-track-bg: gray;
+  --overflow-x: auto;
+  --overflow-y: auto;
 
   @content;
 }
 
 @mixin rules {
   height: var(--scroll, 40vh);
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: thin;
-  transition: color .3s ease;
+  overflow-y: var(--overflow-y);
+  overflow-x: var(--overflow-x);
+  scrollbar-width: var(--scroll-size);
 
   > * {
     padding: 10px;
@@ -43,12 +45,6 @@
     /* Background */
     background: var(--scroll-track-bg);
 
-  }
-
-  &:hover {
-    &::-webkit-scrollbar {
-      display: block;
-    }
   }
   @content;
 }

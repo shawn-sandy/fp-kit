@@ -2,7 +2,7 @@
 
 > Docmentation, examples and info for using Scrollbar component
 
-!>  Scroll bar is not supported on all browsers, [you can read more about browser support here](https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar#browser_compatibility ':target="_blank"')
+!>  This scrollbar is may be compatible with all browsers, [you can read more about browser support here](https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar#browser_compatibility ':target="_blank"')
 ### Default Scrollbar
 
 ```html preview
@@ -29,15 +29,44 @@
 ### Custom variables
 
 ```css
---color: #000;
+  --scroll-w: 0.5rem;
+  --scroll-h: 0.5rem;
+  --scroll-size: thin;
+  --scroll-bg: lightgray;
+  --scroll-track-bg: gray;
+  --overflow-x: auto;
+  --overflow-y: auto;
 ```
 
 ### Scrollbar properties (rules)
 
 ```css
-Scrollbar {
-  color: var(--color, currentColor);
-}
+ height: var(--scroll, 40vh);
+  overflow-y: var(--overflow-y);
+  overflow-x: var(--overflow-x);
+  scrollbar-width: var(--scroll-size);
+
+  > * {
+    padding: 10px;
+  }
+
+  &::-webkit-scrollbar {
+    width: var(
+      --scroll-w
+    );
+    height: var(--scroll-h);
+    transition: opacity 500ms ease;
+  }
+  &::-webkit-scrollbar-thumb {
+    /* Foreground */
+    background: var(--scroll-bg);
+
+  }
+  &::-webkit-scrollbar-track {
+    /* Background */
+    background: var(--scroll-track-bg);
+
+  }
 ```
 
 ## Examples
@@ -47,51 +76,7 @@ Scrollbar {
 
 [MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar ':_target="_blank"')
 
-[Styling scrollbars](https://webkit.org/blog/363/styling-scrollbars/
+[Styling scrollbars](https://webkit.org/blog/363/styling-scrollbars/ ':_target="_blank"')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-)
 
 ----
