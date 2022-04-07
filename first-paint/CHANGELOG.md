@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.12.1...@shawnsandy/first-paint@2.13.0) (2022-04-07)
+
+
+### Features
+
+* **alpha:** footer module layout style ([c5914d0](https://github.com/shawn-sandy/fp-kit/commit/c5914d0ae5bac5d560931a11ef0c9538f3208dcd))
+* **alpha:** footer module layout style ([746275e](https://github.com/shawn-sandy/fp-kit/commit/746275eac517b129f79e440901c0aadd1d5f6934))
+* **alpha:** scrollbar scaffold module/docs ([b82f0ad](https://github.com/shawn-sandy/fp-kit/commit/b82f0ad308eaf1961f007885b97eaf30ffdcfe14))
+* **beta:** add button type styles ([c193162](https://github.com/shawn-sandy/fp-kit/commit/c1931623252932bd17355b22b5e25851a5f8a06f))
+* **beta:** add footer default/2col examples ([cb4a9ec](https://github.com/shawn-sandy/fp-kit/commit/cb4a9ec25cea997e73204f264972e5b46c59d7d1))
+* **beta:** list component `ul` ([2ca257a](https://github.com/shawn-sandy/fp-kit/commit/2ca257a44c7b70db3395f88b077d56337dfd44fb))
+* **beta:** list component `ul` ([87f1d56](https://github.com/shawn-sandy/fp-kit/commit/87f1d56ffa7523c10c5636ac758597299db524b1))
+* **beta:** list updates ([0a0c27e](https://github.com/shawn-sandy/fp-kit/commit/0a0c27ee9e3a527ccf9450c329a2406b43f3f455))
+* **beta:** scaling font-size using --note-scale ([16ebc40](https://github.com/shawn-sandy/fp-kit/commit/16ebc40f54064d013495a3c4d082276c923b4ef4))
+* **beta:** scroll bar component/docs ([a939114](https://github.com/shawn-sandy/fp-kit/commit/a9391144bd92033a9df3c21ca52a98f3b144478f))
+* **beta:** scroll bar component/docs ([fb9ee46](https://github.com/shawn-sandy/fp-kit/commit/fb9ee46dc1310abbb6a2d3a3e25343b3e1905740))
+* update the badge emelent/add TOC ([472f859](https://github.com/shawn-sandy/fp-kit/commit/472f859b241a21489f3410d19c9c2cd493094105))
+
+
+
+
+
+
 ## [2.12.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.12.0...@shawnsandy/first-paint@2.12.1) (2022-04-04)
 
 
