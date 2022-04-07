@@ -14,9 +14,10 @@
 }
 
 @mixin rules {
+    display: flex;
+    flex-direction: column;
   font-size: var(--footer-fs, var(--fs));
   section {
-    display: grid;
   }
   @content;
 }
