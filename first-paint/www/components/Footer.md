@@ -1,11 +1,10 @@
 # Footer   <span role="note" style="--note: var(--alpha)">Alpha</span>
 
-?&gt;  _TODO_ add description
+> Create and style footer footer section of your website
 
 ### Default Footer
 
 ```html preview
-
 <footer>
   <section role="grid" style="--grid-cols: 2">
     <div

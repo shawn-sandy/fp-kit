@@ -140,4 +140,6 @@ Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat la
 
 [ACCESSIBILITY GUIDE]([https://](https://www.w3.org/TR/wai-aria-1.1/#note ':_target="_blank"')
 
+[Landmark elements](https://web.dev/use-landmarks/ ':target="_blank"')
+
 ----
