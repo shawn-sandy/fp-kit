@@ -36,9 +36,8 @@ to: <%= absPath %>/<%= name %>.md
 ## See also
 
 
+[MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element ':_target="_blank"')
 
-[MDN GUIDELINES AND SPECFICATIONS](https: ':_target="_blank"')
-
-[ACCESSIBILITY BEST PRACTICES](https://www.w3.org/TR/wai-aria-practices-1.2/examples/landmarks/banner.html)
+[ACCESSIBILITY BEST PRACTICES](https://www.w3.org/TR/wai-aria-practices-1.2/examples ':_target="_blank"')
 
 ----

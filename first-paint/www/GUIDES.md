@@ -1,8 +1,12 @@
 # Guides and Tutorials  <span role="note" style="--note: var(--beta)">Beta</span>
 
+> Use these guides to help you build and use components FP components in you apps/sites.
+
 ## Landing Page
 
-<a href="/basic-sample.html" target="_blank">Open in new tab</a>
+<p style="text-align: right">
+<a role="button" style="--bg: lightgray; --btn-rds: 99rem;" href="/basic-sample.html" target="_blank">View in new tab</a>
+<p>
 
 ```html preview
 <header>
@@ -165,6 +169,10 @@
  <div>Copyright &copy; 2022</div>
 </footer>
 ```
+
+<p style="text-align: right">
+<a role="button" style="--bg: lightgray; --btn-rds: 99rem;" href="/basic-sample.html" target="_blank">View in new tab</a>
+<p>
 
 ## Page Source Snippets
 
