@@ -1,8 +1,8 @@
 # Open Color CSS Tokens (variables)   <span role="note" style="--note: var(--beta)">Beta</span>
 
->  Open color is an open-source color scheme optimized for UI like font, background, border, etc. [read more](https://yeun.github.io/open-color/ ':target="_blank"')
+>  Open color is an open-source color scheme optimized for UI like font, background, border, etc. [Check it out here](https://yeun.github.io/open-color/ ':target="_blank"')
 
-## Exanples
+## Examples
 ### Gray-gainsboro
 
 

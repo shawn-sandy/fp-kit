@@ -14,6 +14,7 @@
   --cd-lg: 2rem;
   --cd-xl: 3rem;
   // TODO: decide which variable name works best
+  --card-pd: 2rem;
   --card-sm: 1rem;
   --card-md: 1.5rem;
   --card-lg: 2rem;
@@ -36,7 +37,7 @@
   }
   display: var(--card-dsp, flex);
   flex-direction: var(--card-direction, column);
-  padding: var(--card, var(--card-sm));
+  padding: var(--card, var(--card-pd));
   border-radius: var(--card-radius, 0.2rem);
   background-color: var(--card-bg, var(--bg, #fff));
   box-shadow: var(--card-shadow);

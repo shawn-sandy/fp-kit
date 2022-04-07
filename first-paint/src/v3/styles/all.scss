@@ -25,6 +25,7 @@
 @use "../modules/badge";
 @use "../modules/footer";
 @use "../modules/list";
+@use "../modules/scrollbar";
 // @include container.module();
 @include props.module();
 @include nav.module();
@@ -45,3 +46,4 @@
 @include badge.module();
 @include footer.module();
 @include list.module();
+@include scrollbar.module();
