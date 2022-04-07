@@ -21,6 +21,7 @@
   position: relative;
   cursor: var(--tip-cursor);
   &:after {
+    font-size: var(--tip-fs, var(--fs-2));
     background: var(--tip-bg);
     color: var(--tip-cl);
     border-radius: var(--tip-rds);

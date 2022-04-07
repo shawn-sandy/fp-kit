@@ -8,12 +8,44 @@
 
 @mixin props() {
   // * css custom properties
+  --scroll-w: 0.5rem;
+  --scroll-h: 0.5rem;
+  --scroll-size: thin;
+  --scroll-bg: lightgray;
+  --scroll-track-bg: gray;
+  --overflow-x: auto;
+  --overflow-y: auto;
+
   @content;
 }
 
 @mixin rules {
+  height: var(--scroll, 40vh);
+  overflow-y: var(--overflow-y);
+  overflow-x: var(--overflow-x);
+  scrollbar-width: var(--scroll-size);
 
-  // * css rules/styles
+  > * {
+    padding: 10px;
+  }
+
+  &::-webkit-scrollbar {
+    width: var(
+      --scroll-w
+    );
+    height: var(--scroll-h);
+    transition: opacity 500ms ease;
+  }
+  &::-webkit-scrollbar-thumb {
+    /* Foreground */
+    background: var(--scroll-bg);
+
+  }
+  &::-webkit-scrollbar-track {
+    /* Background */
+    background: var(--scroll-track-bg);
+
+  }
   @content;
 }
 
@@ -23,7 +55,7 @@
 }
 
 @mixin module {
-  div {
+  [style*="--scroll"] {
     @include props;
     @include rules;
   }

@@ -40,4 +40,6 @@ to: <%= absPath %>/<%= name %>.md
 
 [ACCESSIBILITY BEST PRACTICES](https://www.w3.org/TR/wai-aria-practices-1.2/examples ':_target="_blank"')
 
+[ACCESSIBILITY GUIDELINES](https://w3c.github.io/aria-practices/ ':_target="_blank"')
+
 ----
