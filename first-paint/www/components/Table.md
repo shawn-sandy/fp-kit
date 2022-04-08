@@ -8,6 +8,7 @@
 ```html preview
 <section>
   <table>
+    <caption>Table Caption</caption>
     <thead>
       <tr>
         <th>Name</th>
@@ -143,8 +144,9 @@ div[style*="--tbl"] {
 ### See also
 
 
-[MDN GUIDELINES AND SEPCFICATIONS]()
+[MDN GUIDELINES AND SEPCFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table ':target="_blank"')
 
-[ACCESSIBILITY GUIDE]()
+[ACCESSIBILITY GUIDE](https://www.w3.org/TR/wai-aria-practices/examples/)
 
+[BEST PRACTICES](https://www.w3.org/TR/2021/NOTE-wai-aria-practices-1.2-20211129/examples/table/table.html ':target="_blank"')
 ----

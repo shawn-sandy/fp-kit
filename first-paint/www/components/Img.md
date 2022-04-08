@@ -29,7 +29,29 @@
 ### Custom properties (rules)
 
 ```css
-  color: var(--color, currentColor);
+  max-width: 100%;
+  width: var(--img-w, auto);
+  object-fit: var(--img-obj-fit);
+  object-position: var(--img-position);
+  aspect-ratio: var(--img-ratio);
+
+  &[width] {
+    width: var(--img-w, auto);
+  }
+
+  &[width][height] {
+    height: var(--img-h, auto);
+  }
+
+  &[src$=".svg"] {
+    // width: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  + * {
+    margin-block: 1rem 0;
+  }
 ```
 
 ## Examples
@@ -44,7 +66,7 @@
   loading="lazy"
   alt="Image not found"
   style="object-fit: var(--img-fit, fill); aspect-ratio: var(--img-ratio, auto 4 / 3); width: 350px; height: 350px;"
-onerror="imgError(event)"
+  onerror="imgError(event)"
 />
 ```
 

@@ -17,8 +17,6 @@ p {
   color: var(--cl);
   margin: var(--m);
   font-size: inherit;
-  overflow-wrap: var(--overflow);
-  word-break: var(--word-break, break-word);
   text-shadow: var(--shadow);
   padding-block: var(--py, var(--p));
   padding-inline: var(--px, var(--p));
