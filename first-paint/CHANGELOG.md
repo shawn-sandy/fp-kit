@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.13.2...@shawnsandy/first-paint@2.13.3) (2022-04-08)
+
+
+### Bug Fixes
+
+* **beta:** resolve header bg issue ([7149c05](https://github.com/shawn-sandy/fp-kit/commit/7149c058770cf29d53a3cac6b26e0d5e0207bf2f))
+* **beta:** resolve issue with `p` font-sizes ([57f211e](https://github.com/shawn-sandy/fp-kit/commit/57f211eea5d8b4efe9c219413f83f9076bff7b72))
+
+
+### Features
+
+* **beta:** add table caption ([1429110](https://github.com/shawn-sandy/fp-kit/commit/1429110d1788f5b4c921ad07f8894437c4b28b83)), closes [#157](https://github.com/shawn-sandy/fp-kit/issues/157)
+
+
+
+
+
 ## [2.13.2](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.13.1...@shawnsandy/first-paint@2.13.2) (2022-04-07)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
