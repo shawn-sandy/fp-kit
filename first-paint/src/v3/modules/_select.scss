@@ -11,7 +11,7 @@
   --slt-dsp: grid;
   --slt-align: center;
   --slt-justify: space-between;
-  --slt-min-w: min(100%, 90vw);
+  --slt-min-w: var(--min-w-800)
   --slt-fs: 1rem;
   --slt-cl: currentColor;
   --slt-bdr-style: solid;
@@ -34,7 +34,7 @@
   display: var(--slt-dsp);
   place-items: var(--slt-align);
   place-content: var(--slt-justify);
-  min-width: var(--slt-min-w);
+  width: var(--min-w-800);
   min-height: 40px;
   font-size: var(--slt-fs, 1rem);
   color: var(--slt-cl, currentColor);

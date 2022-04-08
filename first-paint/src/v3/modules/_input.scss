@@ -9,7 +9,7 @@
 @mixin props() {
   // * css custom properties
   --input-appearance: none;
-  --input-min-w: min(100px, 100%);
+  --input-min-w: min(100%, calc(800rem /16));
   --input-fw: normal;
   --input-bdr-style: solid;
   --input-bdr-w: .1rem;
@@ -30,7 +30,7 @@
   border-color: var(--input-bdr-color);
   padding-inline: var(--input-px);
   padding-block: var(--input-py);
-  min-width: var(--input-min-w);
+  width: var(--input-min-w);
   border-radius: var(--input-bdr-radius);
   -webkit-appearance: var(--input-appearance);
   -moz-appearance: var(--input-appearance);

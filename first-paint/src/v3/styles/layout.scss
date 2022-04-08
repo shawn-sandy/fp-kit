@@ -6,14 +6,14 @@
  ***************************************
 */
 
+
 main, header, footer {
   font-size: var(--fs);
   > section {
-    width: min(90%, 1600px);
+    width: var(--lt-min);
     margin-inline: auto;
   }
 }
-
 
 section:not(nav) {
   margin-inline: auto;
