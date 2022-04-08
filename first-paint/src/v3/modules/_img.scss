@@ -16,7 +16,7 @@
   --img-ratio: auto 2/3;
   --img-fit: cover;
   --img-position: center center;
-  --img-w: min(100%, 80vw);
+  --img-w: 100%;
   @content;
 }
 
@@ -24,7 +24,7 @@
   @include props;
 
   max-width: 100%;
-  width: var(--img-w, auto);
+  width: var(--img-w, 100%);
   object-fit: var(--img-obj-fit);
   object-position: var(--img-position);
   aspect-ratio: var(--img-ratio);
