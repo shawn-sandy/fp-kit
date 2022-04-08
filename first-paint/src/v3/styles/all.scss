@@ -26,12 +26,14 @@
 @use "../modules/footer";
 @use "../modules/list";
 @use "../modules/scrollbar";
+@use "../modules/content";
 // @include container.module();
 @include props.module();
 @include nav.module();
 @include header.module();
 @include table.module();
 @include details-summary.module();
+@include content.module();
 @include img.module();
 @include checkbox.module();
 @include grid.module();
