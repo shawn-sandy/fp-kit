@@ -14,8 +14,6 @@
 
 @mixin rules {
   a {
-
-    // font-size: var(--link-fs, var(--fs, .9rem));
     color: var(--link-color, #0070f3);
     text-decoration: var(--link-decoration, none);
     padding-inline: var(--link-px, .5rem);
@@ -28,9 +26,14 @@
     &:active {
 
     }
-
   }
-  // * css rules/styles
+
+  form {
+    width: 100%;
+    div + div {
+      margin-block-start: 1rem
+    }
+  }
   @content;
 }
 
