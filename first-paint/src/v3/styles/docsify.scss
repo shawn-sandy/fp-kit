@@ -72,7 +72,7 @@
 
 .sidebar-toggle {
   bottom: 20px !important;
-  background-color: transparent !important;
+  // background-color: transparent !important;
 }
 
 .sidebar-toggle {
@@ -81,7 +81,6 @@
   width: 2rem;
   height: 2rem;
   border-radius: var(--sl-border-radius-medium);
-  background-color: var(--sl-color-neutral-0);
   padding: 0.5rem;
 }
 .docsify-pagination-container {
@@ -143,6 +142,9 @@
   }
 
   [href*="undefined"] {
+    display: none;
+  }
+  span:empty {
     display: none;
   }
 }

@@ -105,6 +105,7 @@
 </article>
 <hr>
  <table>
+   <caption>Table Caption</caption>
     <thead>
       <tr>
         <th>Name</th>
@@ -141,8 +142,6 @@
     </tbody>
   </table>
 </main>
-
-
 <footer>
   <section role="grid" style="--grid-cols: 2">
     <div
