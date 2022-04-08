@@ -2,7 +2,7 @@
 - [First Paint v3.0(beta)](/)
 - [Features](/FEATURES)
 - [Guides](/GUIDES)
-- [Design Tokens](/tokens/Tokens)
+- [Custom Props](/tokens/Tokens)
   - [Scaled Color Tokens](/tokens/Color)
   - [Open Color Tokens](/tokens/Opencolor)
   <!-- - [Named Color Tokens](/tokens/Colornames) -->
