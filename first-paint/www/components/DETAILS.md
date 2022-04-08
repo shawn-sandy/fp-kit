@@ -13,7 +13,7 @@
 </details>
 ```
 
-## DETAILS Variables
+## Details Variables
 
 ### Custom variables
 
