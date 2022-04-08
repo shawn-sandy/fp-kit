@@ -36,14 +36,14 @@
     height: var(--scroll-h);
     transition: opacity 500ms ease;
   }
-  &::-webkit-scrollbar-thumb {
-    /* Foreground */
-    background: var(--scroll-bg);
-
-  }
   &::-webkit-scrollbar-track {
     /* Background */
     background: var(--scroll-track-bg);
+
+  }
+  &::-webkit-scrollbar-thumb {
+    /* Foreground */
+    background: var(--scroll-bg);
 
   }
   @content;
