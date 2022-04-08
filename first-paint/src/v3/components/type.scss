@@ -5,7 +5,7 @@ h4,
 h5,
 h6,
 p {
-  --fw: var(--fw-medium);
+  --fw: var(--fw-medium, 500);
   --fx-weight: var(--fw-medium);
   --fs: inherit;
 
@@ -49,34 +49,58 @@ h3,
 h4,
 h5,
 h6 {
+  font-size: var(--fs);
 
   + p {
     margin-top: var(--rem);
   }
+  &[role="decoration"] {
+    font-weight: var(--h-fw, 500);
+  }
 }
 
-h1[role="decoration"] {
-  font-size: var(--h1);
+h1 {
+  --fs: var(--fs-7);
+  &[role="decoration"] {
+    font-size: var(--h1);
+  }
 }
 
-h2[role="decoration"] {
-  font-size: var(--h2);
+h2 {
+  --fs: var(--fs-6);
+
+  &[role="decoration"] {
+    font-size: var(--h2);
+  }
 }
 
-h3[role="decoration"] {
-  font-size: var(--h3);
+h3 {
+  --fs: var(--fs-5);
+  &[role="decoration"] {
+    font-size: var(--h3);
+  }
 }
 
-h4[role="decoration"] {
-  font-size: var(--h4);
+h4 {
+  --fs: var(--fs-4);
+
+  &[role="decoration"] {
+    font-size: var(--h4);
+  }
 }
 
-h5[role="decoration"] {
-  font-size: var(--h5);
+h5 {
+  --fs: var(--fs-3);
+  &[role="decoration"] {
+    font-size: var(--h5);
+  }
 }
 
-h6[role="decoration"] {
-  font-size: var(--h6);
+h6 {
+  --fs: var(--fs-2);
+  &[role="decoration"] {
+    font-size: var(--h6);
+  }
 }
 
 small,
