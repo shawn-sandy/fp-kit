@@ -3,7 +3,7 @@
 -------
 # First Paint 3.0 (beta)
 
-> A performance first, accessibility driven, easy to use CSS/SCSS, micro library that focuses on Semantic HTML rather than `class` heavy styling.
+> A performance first, accessibility driven, easy to use CSS/SCSS, micro library that focuses on CSS custom properties and Semantic HTML over `class` heavy styling.
 
 -------
 
