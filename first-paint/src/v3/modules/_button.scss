@@ -26,7 +26,7 @@
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
   padding-block: var(--btn-py, 0.5rem);
-  border: var(--btn-border, none);
+  border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
   font-size: var(--btn-fs, calc(13rem / 16));
@@ -39,6 +39,7 @@
 
   &[type]{
     background-color: var(--btn-bg);
+    --btn-border: solid currentColor thick;
 
   }
   @content;
