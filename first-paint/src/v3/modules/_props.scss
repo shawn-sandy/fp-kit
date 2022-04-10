@@ -29,10 +29,12 @@
   --appearance: none;
   --link-cl:  blue-royal-blue;
   --link-hover-cl: blue;
-  --lt-min: min(90%, 1600px);
+  --lt-min: min(90%, 1480px);
   --lt-max: max(90%, 1600px);
   --min-w-800: min(100%, calc(800rem /16));
   --w-800: min(100%, calc(800rem /16));
+  --align: initial;
+
 
   // * responsive fonts sizes
   --fs: 100%;
@@ -43,7 +45,7 @@
   // 14px
   --fs-2: clamp(0.5rem, 2vw - 0.5rem, 0.875rem);
   // 18px
-  --fs-3: clamp(0.563rem, 2vw - 0.25rem, 1.125rem);
+  --fs-3: clamp(0.7rem, 2vw - 0.25rem, 1.125rem);
   // 21px
   --fs-4: clamp(0.85rem, 2vw - 0.25rem, 1.313rem);
   // 25px
@@ -92,6 +94,7 @@
   background-image: var(--bg-img);
   border: var(--bdr);
   outline: var(--line);
+  text-align: var(--align);
   // border-radius: var(--rds);
   margin: var(--spc);
 

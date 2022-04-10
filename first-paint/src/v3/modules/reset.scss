@@ -95,6 +95,10 @@ iframe {
   block-size: auto;
 }
 
+svg {
+  display: block;
+}
+
 /* Inherit fonts for inputs and buttons */
 input, textarea, select{
   font-family: inherit;
