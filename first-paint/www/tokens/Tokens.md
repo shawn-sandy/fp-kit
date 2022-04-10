@@ -1,6 +1,6 @@
 # Custom Properties (variables)  <span role="note" style="--note: var(--beta)">Beta</span>
 
-> Custom Props (AKA CSS Variables) as we call them allow developers to create and reuse CSS variables, properties and values in vanilla CSS. FirstPaint leverages CSS variables for all of our components and modules adding a "Dynamic" layer of abstraction and flexibility to CSS.
+> Custom Properties (CSS Variables) AKA custom props allow developers to create and reuse CSS variables, properties and values in vanilla CSS. FirstPaint leverages CSS variables for all of our components and modules adding a "Dynamic" layer of abstraction and flexibility to CSS.
 
 ## Global props
 

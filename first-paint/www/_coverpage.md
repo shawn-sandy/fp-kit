@@ -1,10 +1,13 @@
-<h1 id="cover-heading">
-  First Paint  <!-- TODO: Update title -->
+<header style="background-color: var(--transparent)">
+<section>
+<h1 role="decoration" style="font-size: var(--h1); --fw: 500; --align: center;">
+ <img src="https://res.cloudinary.com/dqjs95c7n/image/upload/v1647442611/fp-text-logo-xl_vrsh8c.svg" data-origin="https://res.cloudinary.com/dqjs95c7n/image/upload/v1647442611/fp-text-logo-xl_vrsh8c.svg" alt="first paint logo" style="display: inline">
 </h1>
-<h3>A performance-first, accessibility-driven, SCSS/CSS micro-framework</h3>
+<h2 role="decoration" style="font-size: var(--h5); --fw: medium">A performance-first, accessibility focussed, SCSS/CSS toolkit.</h2>
 
 
-[GitHub](https://github.com/shawn-sandy/fp-kit/tree/main/docs/)
-[Getting Started](/readme)
-
+<a href="/#/readme" style="--bg: green;--btn-rds: 99rem; color: #fff; --btn-fs: var(--fs-3)">Getting Started</a>
+<a href="https://github.com/shawn-sandy/fp-kit/tree/main/docs/" style="--btn-fs: var(--fs-3); --btn-border: green solid; --btn-rds: 99rem">Github</a>
+</section>
+</header>
 

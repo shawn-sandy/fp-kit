@@ -14,14 +14,22 @@ https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.
 
 ```
 
-## Dynamic CSS
+## No Classes (optional)
 
-CSS variables can be used to dynamically change the look and feel of components/elements, whats more when you assign a CSS variable to a property you can now use the variable assigned as a property name in you rules. For example lets create a `color` and `background-color` variable for a button `--btn-cl` and `--btn-bg`. Now we can us the new variables to replace the name of the CSS properties and assign it a new value, creating `inherited properties` or what we call *css custom-props* [read more about css variables on increment](https://increment.com/frontend/a-users-guide-to-css-variables/).
+While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. FirstPaint and libraries like it that leverage semantic `HTML5`, `CSS props` and the `style` attributes are now  allowing us add a layer of `dynamic styling` to HTML/CSS with minimal effort redefining how we build web applications.
 
-[FirstPaint default custom properties](/tokens)
+We understand that this is an unconventional approach and some will frown on the approach, the beauty of it is that you are welcomed to create and use classes.
+
+## Dynamic CSS Styles (Custom Properties)
+
+CSS variables can be used to dynamically change the look and feel of components/elements, whats more when you assign a CSS variable to a property you can now use the variable assigned as a property name in you rules. For example lets create a `color` and `background-color` variable for a button `--btn-cl` and `--btn-bg`. Now we can us the new variables to replace the name of the CSS properties and assign it a new value, creating `inherited properties` or what we call *css custom-props* [read more about css variables on increment](https://increment.com/frontend/a-users-guide-to-css-variables/). [FirstPaint default custom properties](/tokens)
+
+
+### Examples
+
 
 ```css
-button {
+.btn {
   // lets assign a variable to the `button` element
   color: var(--btn-color: currentColor);
   background-color: var(--btn-bg: lightgray);
@@ -43,8 +51,7 @@ Now we can change the button color/background color using the style attribute `s
 
 !> *CSS classes can override CSS custom-props when used with inline styles, unless set globally. If you are not a fan of style attributes you can do the same thing in a class*
 
-
-## Accessible
+----
 
 
 ## Modular
@@ -90,4 +97,197 @@ Optionally load the components you need.
 @use "@shawnsandy/src/v3/components/header.scss";
 // checkbox container/styles
 @use "@shawnsandy/src/v3/components/checkbox";
+```
+
+
+## Examples
+
+### Header
+
+```html preview
+<header>
+Header Section
+</header>
+```
+
+### Section
+
+```html preview
+<section id="articles">
+  <article>
+    <h2>Sample Article 1</h2>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+      assumenda odio rem maiores ad minima doloribus. Pariatur quibusdam dolorum
+      distinctio repellendus vero natus explicabo mollitia ea, nemo sunt
+      voluptatibus eaque!
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+      assumenda odio rem maiores ad minima doloribus. Pariatur quibusdam dolorum
+      distinctio repellendus vero natus explicabo mollitia ea, nemo sunt
+      voluptatibus eaque!
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+      assumenda odio rem maiores ad minima doloribus. Pariatur quibusdam dolorum
+      distinctio repellendus vero natus explicabo mollitia ea, nemo sunt
+      voluptatibus eaque!
+    </p>
+</section>
+```
+
+### Navbar
+
+```html preview
+<nav>
+  <ul>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+  </ul>
+  <ul>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Link</a></li>
+  </ul>
+  <section>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+  </section>
+</nav>
+
+```
+
+### Page Footer
+
+```html preview
+<footer>
+    <section>
+        <p>
+            <small>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut odit expedita aliquam commodi incidunt nam
+                maiores eum sunt minima corrupti dolore, fugiat veritatis sit, nobis harum ducimus repudiandae quos
+                laboriosam?
+            </small>
+        </p>
+    </section>
+</footer>
+</body>
+
+</html>
+```
+
+### Button
+
+```html preview
+
+<button type="button">
+  Default Button
+</button>
+
+```
+
+### Checkbox
+
+```html preview
+<label for="checkbox1">
+  <input type="checkbox" id="checkbox1" value="" />
+  Checkbox Label
+</label>
+```
+
+
+### Grid (w/list)
+
+```html preview
+<section style="max-width: min(80vw, 100vw);">
+  <section role="grid">
+    <div
+      role="row">
+      <div role="gridcell">
+        <h3>Grid col</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
+          totam dolorem nemo facere ex expedita illum laboriosam sit. Ea
+          laboriosam rem omnis sit autem temporibus ipsum maxime dignissimos id.
+        </p>
+      </div>
+      <div role="gridcell">
+        <h3>Grid col</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
+          totam dolorem nemo facere ex expedita illum laboriosam sit. Ea
+          laboriosam rem omnis sit autem temporibus ipsum maxime dignissimos id.
+        </p>
+      </div>
+      <div role="gridcell">
+        <h3>Grid col</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
+          totam dolorem nemo facere ex expedita illum laboriosam sit. Ea
+          laboriosam rem omnis sit autem temporibus ipsum maxime dignissimos id.
+        </p>
+      </div>
+      <div role="gridcell">
+        <h3>Grid col</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
+          totam dolorem nemo facere ex expedita illum laboriosam sit. Ea
+          laboriosam rem omnis sit autem temporibus ipsum maxime dignissimos id.
+        </p>
+      </div>
+    </div>
+  </section>
+</section>
+
+```
+### Img
+
+```html preview
+<img
+  src="https://source.unsplash.com/random/1200x680"
+  loading="lazy"
+  alt="Placeholder Image"
+/>
+```
+
+### Table
+
+```html preview
+  <table style="display: table">
+    <thead style="background-color: var(--tbl-head-bg, #f5f5f5);">
+      <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Hannock</td>
+        <td>2000</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Hannock</td>
+        <td>1900</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+```
+
+### Dropdown
+
+```html preview
+<details
+  title="Element Title">
+  <summary>
+    Element Title
+  </summary>
+  <p>Officia excepteur sint aute labore duis tempor fugiat exercitation non elit voluptate aliquip mollit velit. Magna minim nisi dolore dolor proident nulla magna. Non nisi sint voluptate reprehenderit. Do ut incididunt aliquip aliquip commodo voluptate. Anim velit reprehenderit ad deserunt labore fugiat deserunt ipsum. Laborum reprehenderit quis labore magna exercitation commodo non nostrud id exercitation aliqua.</p>
+</details>
 ```

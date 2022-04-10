@@ -55,6 +55,7 @@ h4,
 h5,
 h6 {
   font-size: var(--fs);
+  font-weight: var(--fw);
 
   + p {
     margin-top: var(--rem);

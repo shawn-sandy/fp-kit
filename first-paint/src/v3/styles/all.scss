@@ -27,6 +27,7 @@
 @use "../modules/list";
 @use "../modules/scrollbar";
 @use "../modules/content";
+@use "../modules/fp";
 // @include container.module();
 @include props.module();
 @include nav.module();
@@ -49,3 +50,4 @@
 @include footer.module();
 @include list.module();
 @include scrollbar.module();
+@include fp.module();

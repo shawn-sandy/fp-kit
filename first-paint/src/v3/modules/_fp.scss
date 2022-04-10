@@ -1,0 +1,74 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+@mixin props() {
+  // * css custom properties
+
+  // --fp-bg: inherit;
+  // --fp-bg-img: inherit;
+  // --fp-bdr: inherit;
+  // --fp-line: inherit;
+  // --fp-rds: inherit;
+  // --fp-bdr-w: inherit;
+  // --fp-bdr-s: inherit;
+  // --fp-bdr-cl: inherit;
+  // --fp-rds: inherit;
+  // --fp-px: inherit;
+  // --fp-py: inherit;
+  // --fp-fs: inherit;
+  // --fp-fw: inherit;
+  // --fp-fst: inherit;
+  // --fp-lh: inherit;
+
+
+  @content;
+}
+
+@mixin rules {
+  background-color: var(--fp-bg);
+  color: var(--fp-cl);
+  border: var(--fp-bdr-w) var(--fp-bdr-s) var(--fp-bdr-cl);
+  outline: var(--fp-line);
+  border-radius: var(--fp-rds);
+  padding-inline: var(--fp-px);
+  padding-block: var(--fp-py);
+  font-size: var(--fp-fs);
+  font-weight: var(--fp-fw);
+  font-style: var(--fp-st);
+  line-height: var(--fp-lh);
+
+  &:hover {
+    background-color: var(--fp-bg-hover);
+    color: var(--fp-cl-hover);
+    border: var(--fp-bdr-w-hover) var(--fp-bdr-s-hover) var(--fp-bdr-cl-hover);
+    outline: var(--fp-line-hover);
+    border-radius: var(--fp-rds-hover);
+    padding-inline: var(--fp-px-hover);
+    padding-block: var(--fp-py-hover);
+    font-size: var(--fp-fs-hover);
+    font-weight: var(--fp-fw-hover);
+    font-style: var(--fp-st-hover);
+    line-height: var(--fp-lh-hover);
+  }
+
+  // * css rules/styles
+  @content;
+}
+
+@mixin styles {
+  // * css style utilities
+  @content;
+}
+
+@mixin module {
+  [style*="--fp"] {
+    @include props;
+    @include rules;
+  }
+  @include styles;
+}
