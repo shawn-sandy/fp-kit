@@ -14,6 +14,17 @@ https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.
 
 ```
 
+## No Classes (optional) 
+
+While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. Libraries that leverage semantic `HTML5`, `CSS props` and the `style` attributes are allowing us add a layer of `dynamic styling` to HTML/CSS with minimal effort. Give FP a try, I promise you will love it and if you don't we make creating you own `.classes` easy. 
+ 
+ 
+```html preview
+<button type="button">
+Sample Button
+</button> 
+```
+
 
 ## Dynamic CSS Styles (Custom Properties)
 
@@ -46,15 +57,6 @@ Now we can change the button color/background color using the style attribute `s
 
 ----
 
-## No `classes` 
-
-While not as popular as `.classes` semantic `HTML5`, `CSS props` and the `style` attributes when combined allows us add `dynamic styling` to HTML.
-
-```html preview
-<button type="button">
-Sample Button
-</button>
-```
 
 ## Modular
 
