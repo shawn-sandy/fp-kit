@@ -30,22 +30,23 @@
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
   font-size: var(--btn-fs, calc(13rem / 16));
-  color: var(--btn-color, currentColor);
+  color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
   gap: var(--btn-gap, 1rem);
   white-space: var(--btn-wspc);
   margin: var(--btn-spc);
+  transition: all 0.2s ease;
 
-  &[type] {
+  &[type]{
     background-color: var(--btn-bg);
-    transition: all 0.2s ease;
+
   }
   @content;
 }
 
 @mixin styles {
   button[type="submit"],
-  [style*="--btn: submit"] {
+  [style*="submit"] {
     --btn-bg: darkblue;
     --btn-color: white;
   }

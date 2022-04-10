@@ -1,7 +1,7 @@
 # Features <span role="note" style="--note: var(--beta)">Beta</span>
 
 ----------------
-### Easy to use
+## Easy to use
 
 Grab our styles from the CDN `https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.css` and drop into any semantic HTML5 page. FP was designed for use out of box with any semantic HTML5 markup, check out the docs for more info.
 
@@ -14,26 +14,22 @@ https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.
 
 ```
 
-## No Classes (optional) 
+## No Classes (optional)
 
-While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. Libraries that leverage semantic `HTML5`, `CSS props` and the `style` attributes are allowing us add a layer of `dynamic styling` to HTML/CSS with minimal effort. Give FP a try, I promise you will love it and if you don't we make creating you own `.classes` easy. 
- 
- 
-```html preview
-<button type="button">
-Sample Button
-</button> 
-```
+While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. FirstPaint and libraries like it that leverage semantic `HTML5`, `CSS props` and the `style` attributes are now  allowing us add a layer of `dynamic styling` to HTML/CSS with minimal effort redefining how we build web applications.
 
+We understand that this is an unconventional approach and some will frown on the approach, the beauty of it is that you are welcomed to create and use classes.
 
 ## Dynamic CSS Styles (Custom Properties)
 
-CSS variables can be used to dynamically change the look and feel of components/elements, whats more when you assign a CSS variable to a property you can now use the variable assigned as a property name in you rules. For example lets create a `color` and `background-color` variable for a button `--btn-cl` and `--btn-bg`. Now we can us the new variables to replace the name of the CSS properties and assign it a new value, creating `inherited properties` or what we call *css custom-props* [read more about css variables on increment](https://increment.com/frontend/a-users-guide-to-css-variables/).
+CSS variables can be used to dynamically change the look and feel of components/elements, whats more when you assign a CSS variable to a property you can now use the variable assigned as a property name in you rules. For example lets create a `color` and `background-color` variable for a button `--btn-cl` and `--btn-bg`. Now we can us the new variables to replace the name of the CSS properties and assign it a new value, creating `inherited properties` or what we call *css custom-props* [read more about css variables on increment](https://increment.com/frontend/a-users-guide-to-css-variables/). [FirstPaint default custom properties](/tokens)
 
-[FirstPaint default custom properties](/tokens)
+
+### Examples
+
 
 ```css
-button {
+.btn {
   // lets assign a variable to the `button` element
   color: var(--btn-color: currentColor);
   background-color: var(--btn-bg: lightgray);
@@ -104,7 +100,7 @@ Optionally load the components you need.
 ```
 
 
-## Modules
+## Examples
 
 ### Header
 
@@ -192,13 +188,6 @@ Header Section
 
 ```
 
-### Link Button
-
-```html preview
-  <a href="#" role="button" aria-label="Add word, cta action, to your button title">
-  <span>Get Started</span></a>
-```
-
 ### Checkbox
 
 ```html preview
@@ -208,13 +197,6 @@ Header Section
 </label>
 ```
 
-### Input
-
-```html preview
-
-<input id="input-id" type="text" placeholder="Text input element">
-
-```
 
 ### Grid (w/list)
 
@@ -260,8 +242,6 @@ Header Section
 </section>
 
 ```
-
-
 ### Img
 
 ```html preview
@@ -300,7 +280,7 @@ Header Section
 
 ```
 
-### Details Disclosure
+### Dropdown
 
 ```html preview
 <details

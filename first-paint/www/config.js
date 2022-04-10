@@ -13,7 +13,8 @@ window.$docsify = {
     keys: ['title', 'subtitle', 'path'],
     paths: ['/']
   },
-  coverpage: false,
+  coverpage: true,
+  onlyCover: true,
   loadSidebar: true,
   executeScript: true,
   subMaxLevel: 2,
@@ -28,7 +29,6 @@ window.$docsify = {
   remoteMarkdown: {
     tag: 'remoteMarkdownUrl'
   },
-  onlyCover: true,
   pagination: {
     previousText: 'Previous',
     nextText: 'Next',
