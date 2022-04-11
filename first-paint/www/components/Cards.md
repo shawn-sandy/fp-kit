@@ -11,11 +11,13 @@ To style a card we repurpose `role="presentation` attribute on a `div` element.
 <div role="presentation">
   <h3>Card Title</h3>
   <article>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+    <p>
+      Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+    </p>
   </article>
-  <footer role="footer">
+  <div role="footer">
     <a href="#">Read More</a>
-  </footer>
+  </div>
 
 </div>
 
@@ -64,24 +66,24 @@ Add shadows to your cards with `style="--card:var(--cd-lg)` use the following cu
   <p>
     Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
   </p>
-  <footer role="footer">
+  <div role="footer">
     <a href="#">Read More</a>
-  </footer>
+  </div>
 </div>
 ```
 
-### Shadow Card (Small)
+### Shadow small w/Button
 
 ```html preview
 <div role="presentation" style="--card:var(--cd-md); --card-shadow:var(--cd-shadow-sm);">
-  <h3>Card Title</h3>
+  <h3>Small Card</h3>
   <p>
     Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
   </p>
 
-  <footer role="footer">
-    <a href="#">Read More</a>
-  </footer>
+  <div role="footer">
+    <a href="#" style="--btn: lightgray; --btn-rds: 99rem">Read More</a>
+  </div>
 </div>
 ```
 
