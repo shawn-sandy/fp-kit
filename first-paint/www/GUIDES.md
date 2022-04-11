@@ -11,7 +11,7 @@
 A simple HTML5 example page with snippets of the components used you can copy and paste to build your own.
 
 <p>
-<a role="button" style="--bg: lightgray; --btn-rds: 99rem;" href="/basic-sample.html" target="_blank">View page</a>
+<a role="button" style="--link-bg: lightgray; --btn-rds: 99rem;" href="/basic-sample.html" target="_blank">View page</a>
 <p>
 
 
