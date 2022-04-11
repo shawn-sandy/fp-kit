@@ -6,7 +6,7 @@
 ### Default Table
 
 ```html preview
-<section>
+
   <table>
     <caption>Table Caption</caption>
     <thead>
@@ -44,7 +44,6 @@
       </tr>
     </tbody>
   </table>
-</section>
 
 ```
 
@@ -139,6 +138,100 @@ div[style*="--tbl"] {
 
 ```
 
+### Responsive Table
+
+To create a responsive `table` you wrap you table in a `section, div` with the role `region` or the `style="--scroll: 45vw"` attribute.
+
+```html preview
+<div style="--scroll: 40vh; width: 100%">
+  <table style="max-height: 300px">
+    <caption>Table Caption</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Points</th>
+        <th>Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dom</td>
+        <td>6000</td>
+        <td>Dom</td>
+        <td>6000</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+      <tr>
+        <td>Dom</td>
+        <td>6000</td>
+        <td>Dom</td>
+        <td>6000</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+      <tr>
+        <td>Dom</td>
+        <td>6000</td>
+        <td>Dom</td>
+        <td>6000</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
 
 ----
 ### See also
@@ -146,7 +239,6 @@ div[style*="--tbl"] {
 
 [MDN GUIDELINES AND SEPCFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table ':target="_blank"')
 
-[ACCESSIBILITY GUIDE](https://www.w3.org/TR/wai-aria-practices/examples/)
+[ACCESSIBILITY GUIDE](https://www.w3.org/TR/wai-aria-practices/examples/ ':target="_blank"')
 
-[BEST PRACTICES](https://www.w3.org/TR/2021/NOTE-wai-aria-practices-1.2-20211129/examples/table/table.html ':target="_blank"')
 ----

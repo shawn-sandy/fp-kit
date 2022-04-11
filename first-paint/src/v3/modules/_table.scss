@@ -7,6 +7,7 @@
  * @format
  */
 
+@use "sass:color";
 @mixin props() {
   /*  css custom properties */
   --spc: 0;
@@ -21,7 +22,8 @@
   --tbl-td-px: 1rem;
   --bdr: none;
   --rds: 1rem;
-  --tbl-cap-bg: whitesmoke;
+  --tbl-cap-bg: transparent;
+  --tbl-hd-bg: whitesmoke;
   --tbl-cap-fs: var(--fs);
   --tbl-cap-pd: 1rem;
   --tbl-cap-rds: .5rem;
@@ -38,7 +40,7 @@
   font-family: var(--fs, sans-serif);
   width: var(--tbl-width, calc(100% - 0rem));
   border-collapse: var(--tbl-collapse);
-  border: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
+  // border: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
   display: var(--tbl-dsp, table);
   border-radius: var(--tbl-rds, 16px);
   border-spacing: 0;
@@ -46,16 +48,27 @@
 
   caption {
     --fs: var(--fs-4);
+    --align: center;
+    $bg: var(--tbl-cap-bg);
     background-color: var(--tbl-cap-bg);
     padding: var(--tbl-cap-pd);
+    // border: var(--tbl-cap-bdr);
+    // filter: saturate(white-smol, 5%);
+    // border-top-left-radius: var(--tbl-cap-rds);
+    // border-top-right-radius: var(--tbl-cap-rds);
+  }
+
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     border: var(--tbl-cap-bdr);
-    border-top-left-radius: var(--tbl-cap-rds);
-    border-top-right-radius: var(--tbl-cap-rds);
   }
 
   thead tr {
     --text-align: left;
-    // background-color: var(--tb-bg, whitesmoke);
+    --fw: 500;
+    background-color: var(--tbl-hd-bg);
     text-align: var(--text-align);
     border-bottom: var(--tbl-bdr);
   }
