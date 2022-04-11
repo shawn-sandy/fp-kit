@@ -36,11 +36,11 @@
   white-space: var(--btn-wspc);
   margin: var(--btn-spc);
   transition: all 0.2s ease;
+  background-color: var(--btn);
 
   &[type]{
     background-color: var(--btn-bg);
     --btn-bdr: solid var(--btn-sg);
-
   }
   @content;
 }

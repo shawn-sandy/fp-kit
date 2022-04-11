@@ -6,7 +6,7 @@
 <h2 role="decoration" style="font-size: var(--h2); --fw: medium; --cl: black">A performance-first, accessibility focussed, SCSS/CSS toolkit.</h2>
 
 
-<a href="/#/readme" style="--btn-rds: 99rem; --link-bg: green;color: whitesmoke; --btn-fs: var(--fs-3); --btn-bdr: green solid;">Getting Started</a>
+<a href="/#/readme" style="--btn: green; --btn-rds: 99rem; color: whitesmoke; --btn-fs: var(--fs-3); --btn-bdr: green solid;">Getting Started</a>
 <a href="https://github.com/shawn-sandy/fp-kit/tree/main/docs/" style="--btn-fs: var(--fs-3); --btn-bdr: green solid; --btn-rds: 99rem" target="_blank">Github</a>
 </section>
 </header>
