@@ -112,10 +112,12 @@ Example w/custom button properties
 ```
 
 ----
-## References/Additional info
+## See also
 
-[MDN GUIDELINES AND SEPCFICATIONS]()
+[Styling with design tokens (Salesforce)](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/tokens_intro.htm, ':target="_blank"')
 
-[ACCESSIBILITY GUIDE]()
+[A guide to CSS prpsperties](https://css-tricks.com/a-complete-guide-to-custom-properties/ ':target="_blank"')
+
+[Brakfrost ](https://bradfrost.com/blog/post/atomic-web-design/ ':target="_blank"')
 
 ----

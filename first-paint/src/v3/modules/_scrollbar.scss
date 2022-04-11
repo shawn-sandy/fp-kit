@@ -20,7 +20,7 @@
 }
 
 @mixin rules {
-  height: var(--scroll, 40vh);
+  max-height: var(--scroll, 50vh);
   overflow-y: var(--overflow-y);
   overflow-x: var(--overflow-x);
   scrollbar-width: var(--scroll-size);
@@ -55,7 +55,7 @@
 }
 
 @mixin module {
-  [style*="--scroll"] {
+  [style*="--scroll"], div[role="region"] {
     @include props;
     @include rules;
   }
