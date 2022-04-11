@@ -44,6 +44,18 @@ display: var(--crumb-dsp);
 
 ## Examples
 
+### Default Breadcrumb
+
+```html preview
+<nav>
+ <ol aria-label="breadcrumb" style="--crumb-icon: '\27A4'">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Step 1</a></li>
+    <li><a href="#">Step 2</a></li>
+ </ol>
+</nav>
+```
+
 ----
 ## See also
 
