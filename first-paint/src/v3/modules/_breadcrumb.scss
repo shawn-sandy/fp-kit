@@ -9,22 +9,32 @@
 @mixin props() {
   // * css custom properties
   --crumb-dsp: flex;
+  --crumb-direction: row;
   --crumb-gap: 0.5rem;
   --crumb-style: none;
-  --crumb-fs: smaller;
+  --crumb-fs: var(--fs-2);
+  --crumb-icon: "\002F";
+  --crumb-cl: currentColor;
   @content;
 }
 
 @mixin rules {
   display: var(--crumb-dsp);
+  direction: var(--crumb-direction);
   gap: var(--crumb-gap);
   list-style: var(--crumb-style);
   list-style: none;
   font-size: var(--crumb-fs);
+  color: var(--crumb-cl);
 
-  li + li {
-    &::before {
-      content: "\002F";
+  li {
+    color: var(--crumb-cl);
+    + li {
+      color: currentColor;
+      &::before {
+        content: var(--crumb-icon, "\002F");
+        color: currentColor;
+      }
     }
   }
 
@@ -39,7 +49,7 @@
 }
 
 @mixin module {
-  nav>ol[aria-label] {
+  nav > ol[aria-label] {
     @include props;
     @include rules;
   }
