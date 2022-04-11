@@ -9,13 +9,17 @@
 @mixin props() {
   // * css custom properties
 
+
   @content;
 }
 
 @mixin rules {
   a {
+    --link-border: none;
     color: var(--link-color, #0070f3);
+    background-color: var(--link-bg);
     text-decoration: var(--link-decoration, none);
+    border: var(--link-border);
     padding-inline: var(--link-px, .5rem);
     &:hover {
       --link-decoration: underline;
@@ -24,6 +28,10 @@
 
     }
     &:active {
+
+    }
+
+    &[role="button"], &[style="--btn"] {
 
     }
   }
