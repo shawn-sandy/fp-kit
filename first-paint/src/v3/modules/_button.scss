@@ -39,7 +39,7 @@
 
   &[type]{
     background-color: var(--btn-bg);
-    --btn-border: solid currentColor thick;
+    --btn-bdr: solid var(--btn-sg);
 
   }
   @content;
@@ -71,11 +71,12 @@
     &[style*="--btn-reset"] {
       --btn-bg: transparent;
       --btn-color: gray;
-      --btn-border: gray medium solid;
+      --btn-bdr: gray medium solid;
     }
     &[type="submit"],
     &[style*="--btn-submit"] {
       --btn-bg: var(--blue-500);
+      --btn-cl: #fff;
       --btn-color: rgb(231, 231, 231);
       --btn-border: none;
     }
