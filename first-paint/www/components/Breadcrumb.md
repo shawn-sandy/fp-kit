@@ -19,15 +19,27 @@
 ### Custom variables
 
 ```css
---color: #000;
+  --crumb-dsp: flex;
+  --crumb-gap: 0.5rem;
+  --crumb-style: none;
+  --crumb-fs: smaller;
+
 ```
 
 ### Breadcrumb properties (rules)
 
 ```css
-Breadcrumb {
-  color: var(--color, currentColor);
-}
+display: var(--crumb-dsp);
+  gap: var(--crumb-gap);
+  list-style: var(--crumb-style);
+  list-style: none;
+  font-size: var(--crumb-fs);
+
+  li + li {
+    &::before {
+      content: "\002F";
+    }
+  }
 ```
 
 ## Examples
@@ -35,12 +47,6 @@ Breadcrumb {
 ----
 ## See also
 
-
-
-[MDN GUIDELINES AND SPECFICATIONS](https: ':_target="_blank"')
-
-[HTML SPECIFICATIONS](https:// ':_target="_blank"')
-
-[ACCESSIBILITY GUIDE](https:// ':_target="_blank"')
+...
 
 ----
