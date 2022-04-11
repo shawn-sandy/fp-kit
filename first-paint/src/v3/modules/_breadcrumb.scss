@@ -9,6 +9,7 @@
 @mixin props() {
   // * css custom properties
   --crumb-dsp: flex;
+  --crumb-direction: row;
   --crumb-gap: 0.5rem;
   --crumb-style: none;
   --crumb-fs: var(--fs-2);
@@ -19,6 +20,7 @@
 
 @mixin rules {
   display: var(--crumb-dsp);
+  direction: var(--crumb-direction);
   gap: var(--crumb-gap);
   list-style: var(--crumb-style);
   list-style: none;
