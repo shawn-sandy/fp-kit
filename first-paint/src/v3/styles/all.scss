@@ -28,6 +28,7 @@
 @use "../modules/scrollbar";
 @use "../modules/content";
 @use "../modules/fp";
+@use "../modules/breadcrumb";
 // @include container.module();
 @include props.module();
 @include nav.module();
@@ -50,4 +51,5 @@
 @include footer.module();
 @include list.module();
 @include scrollbar.module();
+@include breadcrumb.module();
 @include fp.module();

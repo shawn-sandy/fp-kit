@@ -1,13 +1,17 @@
-# Breadcrumb <span role="note" aria-label="status">TODO</span>
+# Breadcrumb <span role="note" style="--note: var(--beta)">Beta</span>
 
 > Docmentation, examples and info for using Breadcrumb component
 
 ### Default Breadcrumb
 
 ```html preview
-<div>
-  Breadcrumb
-</div>
+<nav>
+ <ol aria-label="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Step 1</a></li>
+    <li><a href="#">Step 2</a></li>
+ </ol>
+</nav>
 ```
 
 ## Breadcrumb Variables
