@@ -49,10 +49,10 @@ window.$docsify = {
       hook.beforeEach(function (html) {
         const path = window.location.hash
         const title = encodeURIComponent(
-          `Issue: ${path}`
+          `[Issue: ${path}]`
         )
         const body = encodeURIComponent(
-          `<!-- Please describe related issue(s) (page - ${window.location.href}${path})? -->`
+          `<!-- Please describe related issue(s) here! --> \n [${path}](${window.location.href}${path})`
         )
         const issue = [
           '<div class="new-git-issue" style="text-align: right">',
