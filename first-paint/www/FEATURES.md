@@ -56,12 +56,12 @@ Now we can change the button color/background color using the style attribute `s
 
 ## Accessible
 
-Accessibility is a core part of our style system, aria attributes (`aria-role, aria-labels`, etc.) and semantic markup are used in CSS rules and markup to encourage developers to write accessible apps.
+Accessibility matters to us and we think it should to you too so we made it a core part of our style system by adding aria attributes (`aria-role, aria-labels`, etc.) and semantic markup to CSS rules and markup to encourage developers to more write accessible apps.
 
 
 ## Lightweight and performant
 
-We have adopted a lightweight and performant first approach to our style system. We opted to use CSS custom-properties to define how we build modules and write markup. Allowing to build a library that is less than 15kb/7kb gzip).
+We have adopted a performance first approach to our style system and opted to use CSS custom-properties to define how we build modules and write markup. Allowing us to build a library that is less than 15kb/7kb gzip) yet flexible and and fast.
 
 
 ## Modular
