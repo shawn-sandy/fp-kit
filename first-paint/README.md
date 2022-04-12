@@ -2,7 +2,7 @@
 
 > Lightweight, Fast, Accessible, Inclusive
 
-First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, classless, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly digital products, websites apps and the likes.
+First Paint is an easy to use accessibility focused CSS/SCSS starter library that contains, classless, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly digital products, websites apps and the likes.
 
 ## Quick Start
 

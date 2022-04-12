@@ -5,24 +5,25 @@
 
 Grab our styles from the CDN `https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.css` and drop into any semantic HTML5 page. FP was designed for use out of box with any semantic HTML5 markup, check out the docs for more info.
 
-```html
-https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.css
-```
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@2.8.8/dist/v3/css/index.min.css">
 
 ```
 
+```html
+https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.css
+```
+
+## Dynamic CSS Styles (Custom Properties)
+
+CSS variables can be used to dynamically change the look and feel of components/elements, whats more when you assign a CSS variable to a property you can now use the variable assigned as a property name in you rules. For example lets create a `color` and `background-color` variable for a button `--btn-cl` and `--btn-bg`. Now we can us the new variables to replace the name of the CSS properties and assign it a new value, creating `inherited properties` or what we call *css custom-props* [read more about css variables on increment](https://increment.com/frontend/a-users-guide-to-css-variables/). [FirstPaint default custom properties](/tokens)
+
 ## No Classes (optional)
 
 While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. FirstPaint and libraries like it that leverage semantic `HTML5`, `CSS props` and the `style` attributes are now  allowing us add a layer of `dynamic styling` to HTML/CSS with minimal effort redefining how we build web applications.
 
 We understand that this is an unconventional approach and some will frown on the approach, the beauty of it is that you are welcomed to create and use classes.
-
-## Dynamic CSS Styles (Custom Properties)
-
-CSS variables can be used to dynamically change the look and feel of components/elements, whats more when you assign a CSS variable to a property you can now use the variable assigned as a property name in you rules. For example lets create a `color` and `background-color` variable for a button `--btn-cl` and `--btn-bg`. Now we can us the new variables to replace the name of the CSS properties and assign it a new value, creating `inherited properties` or what we call *css custom-props* [read more about css variables on increment](https://increment.com/frontend/a-users-guide-to-css-variables/). [FirstPaint default custom properties](/tokens)
 
 
 ### Examples
@@ -53,13 +54,21 @@ Now we can change the button color/background color using the style attribute `s
 
 ----
 
+## Accessible
+
+Accessibility is a core part of our style system, aria attributes (`aria-role, aria-labels`, etc.) and semantic markup are used in CSS rules and markup to encourage developers to write accessible apps.
+
+
+## Lightweight and performant
+
+We have adopted a lightweight and performant first approach to our style system. We opted to use CSS custom-properties to define how we build modules and write markup. Allowing to build a library that is less than 15kb/7kb gzip).
+
 
 ## Modular
 
-* Grab the entire library less under 8kb(gzip)/20kb(min)*
-* Use only the components you need.
+ Grab the entire library less under 8kb(gzip)/20kb(min) or use only the components you need and extend as you wish.
 
-All components
+Brab all the components
 
 ```scss
 // https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/src/v3/
@@ -85,8 +94,6 @@ All components
 Optionally load the components you need.
 
 ```scss
-// named colors variables
-@use "@shawnsandy/src/v3/tokens/colors.scss";
 // Custom properties
 @use "@shawnsandy/src/v3/components/props";
 // global styles
@@ -95,8 +102,6 @@ Optionally load the components you need.
 @use '@shawnsandy/src/v3/components/_button.scss';
 // header component/styles
 @use "@shawnsandy/src/v3/components/header.scss";
-// checkbox container/styles
-@use "@shawnsandy/src/v3/components/checkbox";
 ```
 
 
