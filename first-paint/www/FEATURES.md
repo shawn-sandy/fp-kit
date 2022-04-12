@@ -56,16 +56,19 @@ Now we can change the button color/background color using the style attribute `s
 
 ## Accessible
 
+Accessibility is a core part of our style system, aria attributes (`aria-role, aria-labels`, etc.) and semantic markup are used in CSS rules and markup to encourage developers to write accessible apps.
+
 
 ## Lightweight and performant
+
+We have adopted a lightweight and performant first approach to our style system. We opted to use CSS custom-properties to define how we build modules and write markup. Allowing to build a library that is less than 15kb/7kb gzip).
 
 
 ## Modular
 
-* Grab the entire library less under 8kb(gzip)/20kb(min)*
-* Use only the components you need.
+ Grab the entire library less under 8kb(gzip)/20kb(min) or use only the components you need and extend as you wish.
 
-All components
+Brab all the components
 
 ```scss
 // https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/src/v3/
@@ -91,8 +94,6 @@ All components
 Optionally load the components you need.
 
 ```scss
-// named colors variables
-@use "@shawnsandy/src/v3/tokens/colors.scss";
 // Custom properties
 @use "@shawnsandy/src/v3/components/props";
 // global styles
@@ -101,8 +102,6 @@ Optionally load the components you need.
 @use '@shawnsandy/src/v3/components/_button.scss';
 // header component/styles
 @use "@shawnsandy/src/v3/components/header.scss";
-// checkbox container/styles
-@use "@shawnsandy/src/v3/components/checkbox";
 ```
 
 
