@@ -9,7 +9,7 @@
 <a href="/#/readme" style="--btn: green; --btn-rds: 99rem; color: whitesmoke; --btn-fs: var(--fs-3); --btn-bdr: green solid;">Getting Started</a>
 <a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-3); --btn-bdr: green solid; --btn-rds: 99rem" target="_blank">Github</a>
 </section>
-<hr/>
+
 <section role="grid" style="--grid-cols: 3;">
     <div
       role="row">
