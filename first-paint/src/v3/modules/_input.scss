@@ -14,9 +14,10 @@
   --input-bdr-style: solid;
   --input-bdr-w: .1rem;
   --input-bdr-color: lightgray;
-  --input-px: 1rem;
-  --input-py: .5rem;
+  --input-px: .6rem;
+  --input-py: .2rem;
   --input-bdr-radius: .1rem;
+  --input-fs:  .9rem;
   @content;
 }
 
@@ -38,6 +39,7 @@
   // * css rules/styles
   &::placeholder {
     font-style: italic;
+    --input-fs: .5rem;
   }
   @content;
 }
