@@ -22,6 +22,8 @@
 @use "./modules/list";
 @use "./modules/scrollbar";
 @use "./modules/content";
+// @use "../modules/fp";
+@use "./modules/breadcrumb";
 // components
 @use "./components/type.scss";
 // @include container.module();
@@ -46,4 +48,5 @@
 @include footer.module();
 @include list.module();
 @include scrollbar.module();
+@include breadcrumb.module();
 

@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.14.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.13.4...@shawnsandy/first-paint@2.14.0) (2022-04-12)
+
+
+### Bug Fixes
+
+* **beta:** remove github-link padding ([725834e](https://github.com/shawn-sandy/fp-kit/commit/725834effcd218cacea3b156a64ae2136c3e91ca))
+* **beta:** resolve responsive table issue/update tokens description ([0ae1095](https://github.com/shawn-sandy/fp-kit/commit/0ae10953ff295dedc3cd5650a29caf5186be5036))
+* type details spelling ([2e3b472](https://github.com/shawn-sandy/fp-kit/commit/2e3b4728813b64b47f726c3da8febbb5e6bcece2))
+
+
+### Features
+
+* **beta:** bread crumb component ([8fe5d07](https://github.com/shawn-sandy/fp-kit/commit/8fe5d07f9e351f86c03b2be12c2c637817650f39))
+* **beta:** cover page link btn style ([f732eba](https://github.com/shawn-sandy/fp-kit/commit/f732ebaa4fa5ce7ceee02a46ba6fba5b585e08db))
+* **beta:** cover page slug fs-size ([1ab5f3f](https://github.com/shawn-sandy/fp-kit/commit/1ab5f3f5bbbff0864f08c0d69ce41e90db726bf8))
+* **beta:** cover page slug fs-size ([04ca72d](https://github.com/shawn-sandy/fp-kit/commit/04ca72db87c32633847a1cafb8a303e725525573))
+* **beta:** custom styles props for breadcrumb ([62943f9](https://github.com/shawn-sandy/fp-kit/commit/62943f9cd2e77d79638588d0b59c13a7d58e6d72))
+
+
+
+
+
+
 ## [2.13.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.13.3...@shawnsandy/first-paint@2.13.4) (2022-04-08)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
