@@ -1,5 +1,5 @@
 
-- [First Paint v3.0(beta)](/)
+- [First Paint v3.0(beta)](/README)
 - [Features](/FEATURES)
 - [Guides](/GUIDES)
 - [Custom Props](/tokens/Tokens)

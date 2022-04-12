@@ -38,8 +38,6 @@
 !> **Note:** you should consider the @next release as the latest beta(stable) version.
 
 
-?> Add usage info description
-
 ## Modules & Docs
 ------
 

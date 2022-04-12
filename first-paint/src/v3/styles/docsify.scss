@@ -180,3 +180,8 @@ section.cover h1 {
 .github-corner {
   padding: 0;
 }
+
+section.cover.show {
+  min-height: 100vh;
+  background: none !important;
+}
