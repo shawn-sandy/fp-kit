@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.14.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.2...@shawnsandy/first-paint@2.14.3) (2022-04-13)
+
+
+### Features
+
+* **beta:** add css-tranisition to checkbox/radio ([8811bdb](https://github.com/shawn-sandy/fp-kit/commit/8811bdb0be678b3d1fa194fb86da63a2ac8f44d7))
+* checkbox/radio outline styles ([1cd1bb4](https://github.com/shawn-sandy/fp-kit/commit/1cd1bb481b6cf60f66fed04c89eee2567dc8a60f)), closes [#228](https://github.com/shawn-sandy/fp-kit/issues/228)
+
+
+
+
+
 ## [2.14.2](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.1...@shawnsandy/first-paint@2.14.2) (2022-04-13)
 
 
