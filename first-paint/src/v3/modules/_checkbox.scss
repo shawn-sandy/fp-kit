@@ -24,14 +24,14 @@
   --lbl-me: 1rem;
   --lbl-dsp: flex;
   --lbl-fs: 1rem;
-  --lbl-align: center;
+  --lbl-align: normal;
   --lbl-gap: 0.5rem;
   --lbl-color: currentColor;
   --lbl-cursor: pointer;
   --lbl-height: auto;
   display: var(--lbl-dsp);
   flex-direction: var(--lbl-direction, row);
-  place-items: var(--lbl-align);
+  align-items: var(--lbl-align);
   margin-inline-end: var(--lbl-me);
   gap: 0.3rem;
   cursor: pointer;
@@ -44,7 +44,7 @@
   --fs: var(--chk-size);
   display: var(--lbl-dsp);
   flex-direction: var(--lbl-direction, row);
-  place-items: center;
+  place-items: end normal;
   margin-inline-end: var(--lbl-me);
   gap: 0.3rem;
   cursor: pointer;
@@ -55,6 +55,7 @@
     appearance: var(--chk-appearance);
     -webkit-appearance: var(--chk-appearance);
     -moz-appearance: var(--chk-appearance);
+    line-height: 1;
     // border-radius: var(--check-rds);
     // cursor: pointer;
     // margin: var(--chk-mg, 0);
