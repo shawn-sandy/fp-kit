@@ -47,7 +47,7 @@
       min-width: var(--rdo-size);
       min-height: var(--rdo-size);
       margin: 0;
-      border: var(--rdo-bdr, none);
+      // border: var(--rdo-bdr, none);
       border-style: var(--rdo-bdr);
       border-width: var(--rdo-bdr-w);
       border-color: var(--rdo-bdr-cl);
@@ -58,7 +58,13 @@
     &:checked {
       --rdo-appearance: none;
       &::before {
-        --rdo-bg: green;
+        --rdo-bdr-s: solid;
+        --rdo-bdr-w: thick;
+        --rdo-bdr-cl: var(--green-dark-green);
+        --rdo-bg: var(--green-yellow-green);
+        border-color: var(--rdo-bdr-cl);
+        border-width: var(--rdo-bdr-w);
+        border-style: var(--rdo-bdr-s);
       }
     }
   }

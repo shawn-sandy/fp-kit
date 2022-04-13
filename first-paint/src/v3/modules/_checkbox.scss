@@ -8,7 +8,7 @@
 
 @mixin props() {
   --chk-bdr: none;
-  --chk-bdr-w: medium;
+  --chk-bdr-w: thick;
   --chk-bdr-cl: transparent;
   --chk-accent: green;
   --chk-bg: darkgray;
@@ -66,8 +66,8 @@
     // border: thick solid gray;
 
     &::before {
-      --chk-bdr-cl: lightgray;
-      --check-bdr-w: initial;
+      --chk-bdr-cl: darkgreen;
+      --check-bdr-w: thick;
       --chk-rds: var(--rds);
       content: "";
       display: flex;
@@ -75,7 +75,6 @@
       justify-content: center;
       width: var(--chk-size);
       height: var(--chk-size);
-      border: var(--chk-bdr, none);
       border-style: var(--chk-bdr);
       border-width: var(--chk-bdr-w);
       border-color: var(--chk-bdr-cl);
@@ -86,7 +85,10 @@
     &:checked {
       --chk-appearance: none;
       &::before {
-       --chk-bg: green;
+       border-color: var(--chk-bdr-cl);
+       border-width: var(--chk-bdr-w);
+       --chk-bdr: solid;
+       --chk-bg: yellowgreen;
       }
     }
   }
