@@ -14,7 +14,8 @@
     <div
       role="row">
       <div role="gridcell">
-        <h4>Easy to use</h4>
+        <h4>
+        Easy to use</h4>
         <p>
           Drop it into you page and start customizing.
         </p>
