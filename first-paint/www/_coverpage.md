@@ -6,7 +6,7 @@
 <h2 role="decoration" style="font-size: var(--h2); --fw: medium; --cl: black">An easy to use, performance-first, SCSS/CSS toolkit.</h2>
 
 
-<a href="/#/readme" style="--btn: green; --btn-rds: 99rem; color: whitesmoke; --btn-fs: var(--fs-3); --btn-bdr: green solid;">Getting Started</a>
+<a href="/#/README" style="--btn: green; --btn-rds: 99rem; color: whitesmoke; --btn-fs: var(--fs-3); --btn-bdr: green solid;">Getting Started</a>
 <a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-3); --btn-bdr: green solid; --btn-rds: 99rem" target="_blank">Github</a>
 </section>
 
@@ -47,7 +47,7 @@
       <div role="gridcell">
         <h4>Modular</h4>
         <p>
-          Grag the entire library, only the parts you need and extend to your liking.
+          Grab the entire library, only the parts you need and extend to your liking.
         </p>
       </div>
     </div>
