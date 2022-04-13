@@ -80,6 +80,10 @@
   // h6
   --h6: var(--fs-5);
 
+  // transitions
+  // transition: <property> <duration> <timing-function> <delay>;
+  --tran-all: all .2s ease-in;
+
   @content;
 }
 
