@@ -7,8 +7,7 @@
 */
 
 @mixin props() {
-  --chk-bdr: none;
-  --chk-bdr-w: medium;
+  --chk-bdr-w: thick;
   --chk-bdr-cl: transparent;
   --chk-accent: green;
   --chk-bg: darkgray;
@@ -66,8 +65,9 @@
     // border: thick solid gray;
 
     &::before {
-      --chk-bdr-cl: lightgray;
-      --check-bdr-w: initial;
+      --chk-bdr-cl: darkgreen;
+      --check-bdr-w: thick;
+      --chk-bdr: none;
       --chk-rds: var(--rds);
       content: "";
       display: flex;
@@ -75,18 +75,22 @@
       justify-content: center;
       width: var(--chk-size);
       height: var(--chk-size);
-      border: var(--chk-bdr, none);
       border-style: var(--chk-bdr);
       border-width: var(--chk-bdr-w);
       border-color: var(--chk-bdr-cl);
       background-color: var(--chk-bg);
       border-radius: var(--chk-rds);
+      transition: var(--tran-all);
     }
 
     &:checked {
       --chk-appearance: none;
       &::before {
-       --chk-bg: green;
+      --chk-bdr: solid;
+       border-color: var(--chk-bdr-cl);
+       border-width: var(--chk-bdr-w);
+       border-style: --chk-bdr-style;
+       --chk-bg: yellowgreen;
       }
     }
   }
