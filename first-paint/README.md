@@ -29,12 +29,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Contribute
 
-- Clone (mono)-repo
+- Clone (mono)-repo `git clone https://github.com/shawn-sandy/fp-kit.git`
 - Install dependencies `npm i`
-- Symling packages `lerna bootstrap`
+- Symlink packages `lerna bootstrap`
 - CD into `/first-paint`
+- Run `npm start` to fire up the server
 - Edit code
 - Submit pull request
+- :)
 
 ## Enjoy
 

@@ -37,7 +37,15 @@
   form {
     width: 100%;
     div + div {
-      margin-block-start: 1.5rem;
+      margin-block-start: 1rem;
+    }
+  }
+
+  label[for] {
+    + input,
+    + textarea,
+    + select {
+      margin-block-start: 0.75rem;
     }
   }
 

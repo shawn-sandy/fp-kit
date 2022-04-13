@@ -60,14 +60,14 @@ h6 {
   + p {
     margin-top: var(--rem);
   }
-  &[role="decoration"] {
+   &[role="decoration"], &[role="none"] , &[role="none"] {
     font-weight: var(--h-fw, 500);
   }
 }
 
 h1 {
   --fs: var(--fs-7);
-  &[role="decoration"] {
+   &[role="decoration"], &[role="none"]  {
     font-size: var(--h1);
   }
 }
@@ -75,14 +75,14 @@ h1 {
 h2 {
   --fs: var(--fs-6);
 
-  &[role="decoration"] {
+   &[role="decoration"], &[role="none"]  {
     font-size: var(--h2);
   }
 }
 
 h3 {
   --fs: var(--fs-5);
-  &[role="decoration"] {
+   &[role="decoration"], &[role="none"]  {
     font-size: var(--h3);
   }
 }
@@ -90,21 +90,21 @@ h3 {
 h4 {
   --fs: var(--fs-4);
 
-  &[role="decoration"] {
+   &[role="decoration"], &[role="none"]  {
     font-size: var(--h4);
   }
 }
 
 h5 {
   --fs: var(--fs-3);
-  &[role="decoration"] {
+   &[role="decoration"], &[role="none"]  {
     font-size: var(--h5);
   }
 }
 
 h6 {
   --fs: var(--fs-2);
-  &[role="decoration"] {
+   &[role="decoration"], &[role="none"]  {
     font-size: var(--h6);
   }
 }
