@@ -16,12 +16,17 @@
   --rdo-bg: darkgray;
   --rdo-appearance: none;
   --rdo-rds: 99rem;
+  --rdo-size: 1.2rem;
   @content;
 }
 
 @mixin rules {
   // * css rules/styles
   @include checkbox.label();
+  max-height: var(--rdo-size);
+  + label {
+    margin-block-start: .8rem;
+  }
   :where([id][type="radio"]) {
     appearance: var(--rdo-appearance);
     -webkit-appearance: var(--rdo-appearance);
@@ -33,7 +38,7 @@
     &::before {
       --rdo-bdr-cl: lightgray;
       --rdo-bdr-w: initial;
-      --rdo-size: 1.2rem;
+
       content: "";
       display: flex;
       align-items: center;
