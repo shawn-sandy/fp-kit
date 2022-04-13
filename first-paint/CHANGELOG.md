@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.14.2](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.1...@shawnsandy/first-paint@2.14.2) (2022-04-13)
+
+
+### Bug Fixes
+
+* **beta:** checkbox/radio inputs alignment ([a80588c](https://github.com/shawn-sandy/fp-kit/commit/a80588c7b87427a97ccc8935afb8c1c01407da8c))
+* **beta:** resolve issue with height/overflow ([e5d0d0b](https://github.com/shawn-sandy/fp-kit/commit/e5d0d0b4fc82599a950b9a3b6e8f30eb72b81ece))
+
+
+### Features
+
+* **beta:** release build ([cecbe95](https://github.com/shawn-sandy/fp-kit/commit/cecbe954a573e7f0a1210bcf6f0cb058ffce98bf))
+* **beta:** update feature list on cover/features pgs ([f8ea193](https://github.com/shawn-sandy/fp-kit/commit/f8ea1938f9e9ee0c590a6c9a8900e3b8c1ff0f17))
+
+
+
+
+
 ## [2.14.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.13.4...@shawnsandy/first-paint@2.14.1) (2022-04-12)
 
 
