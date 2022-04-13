@@ -12,14 +12,15 @@
   --slt-align: center;
   --slt-justify: space-between;
   --slt-min-w: var(--min-w-800)
-  --slt-fs: .9rem;
+  --sle-min-h: 2.5rem;
   --slt-cl: currentColor;
   --slt-bdr-style: solid;
   --slt-bdr-w: thin;
   --slt-bdr-cl: lightgray;
   --slt-px: 0.5rem;
-  --slt-py: 0.1rem;
+  --slt-py: 0.3rem;
   --slt-appearance: none;
+  --slt-fs: 0.9rem;
 
   @content;
 }
@@ -36,8 +37,8 @@
   place-items: var(--slt-align);
   place-content: var(--slt-justify);
   width: var(--min-w-800);
-  min-height: 40px;
-  font-size: var(--slt-fs, 1rem);
+  min-height: var(--slt-min-h);
+  font-size: var(--slt-fs, .9rem);
   color: var(--slt-cl, currentColor);
   background-color: var(--slt-bg, whitesmoke);
   background: var(--slt-bg);
