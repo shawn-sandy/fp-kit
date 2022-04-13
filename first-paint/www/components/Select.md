@@ -24,15 +24,16 @@
   --slt-dsp: grid;
   --slt-align: center;
   --slt-justify: space-between;
-  --slt-min-w: min(350px, 100%);
-  --slt-fs: 1rem;
+  --slt-min-w: var(--min-w-800)
   --slt-cl: currentColor;
   --slt-bdr-style: solid;
   --slt-bdr-w: thin;
   --slt-bdr-cl: lightgray;
   --slt-px: 0.5rem;
-  --slt-py: 0.5rem;
+  --slt-py: 0.1rem;
   --slt-appearance: none;
+  --slt-fs: 0.9rem;
+
 ```
 
 ### SVG variables

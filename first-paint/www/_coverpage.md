@@ -1,6 +1,6 @@
-<header style="background-color: var(--transparent)">
+<header style="background-color: var(--transparent); --padding-top: 4rem">
 <section>
-<h1 role="decoration" style="font-size: var(--h1); --fw: 500; --align: center;">
+<h1 role="decoration" style="font-size: var(--h2); --fw: 500; --align: center;">
  <img src="https://res.cloudinary.com/dqjs95c7n/image/upload/v1647442611/fp-text-logo-xl_vrsh8c.svg" data-origin="https://res.cloudinary.com/dqjs95c7n/image/upload/v1647442611/fp-text-logo-xl_vrsh8c.svg" alt="first paint logo" style="display: inline">
 </h1>
 <h2 role="decoration" style="font-size: var(--h2); --fw: medium; --cl: black">An easy to use, performance-first, SCSS/CSS toolkit.</h2>
