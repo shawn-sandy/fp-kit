@@ -142,6 +142,6 @@ Change the grid `--grid-cols: 2` to set the number of grid columns.
 
 [MDN GUIDELINES AND SEPCFICATIONS](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role 'target:="_blank"')
 
-[Best Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#grid, ':target="_blank"')
+[Best Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#grid ':target="_blank"')
 
 ----

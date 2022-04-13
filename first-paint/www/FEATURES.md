@@ -56,7 +56,7 @@ Now we can change the button color/background color using the style attribute `s
 
 ## Accessible
 
-Accessibility matters to us and we think it should to you too so we made it a core part of our style system by adding aria attributes (`aria-role, aria-labels`, etc.) and semantic markup to CSS rules and markup to encourage developers to more write accessible apps.
+Accessibility matters to us and we think it should to you too so we made it a core part of our style system by adding aria attributes (`aria-role, aria-labels`, etc.) and semantic markup to CSS rules and markup to encourage developers to write accessible apps.
 
 
 ## Lightweight and performant

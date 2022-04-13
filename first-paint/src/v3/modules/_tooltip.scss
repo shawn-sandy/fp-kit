@@ -10,7 +10,7 @@
   // * css custom properties
   --tip-bg: black;
   --tip-cl: white;
-  --tip-rds: 0.5rem;
+  --tip-rds: 0.2rem;
   --tip-cubic: cubic-bezier(0.64, 0.09, 0.08, 1);
   --tip-cursor: pointer;
   --tip-opacity: 0.9;
@@ -30,7 +30,7 @@
     position: absolute;
     content: attr(aria-label);
     padding: 6px 10px;
-    top: 1.4em;
+    top: 1.4rem;
     left: 50%;
     transform: translateX(-50%) translateY(-2px);
     white-space: nowrap;

@@ -48,8 +48,8 @@
 
 
   <div>
-    <label for="input-id">Textarea label</label>
-     <textarea id="textarea" autocorrect="off">
+    <label for="textarea-id">Textarea label</label>
+     <textarea id="textarea-id" autocorrect="off">
     The text area HTML element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
     </textarea>
   </div>
