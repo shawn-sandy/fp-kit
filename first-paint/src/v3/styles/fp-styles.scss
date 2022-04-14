@@ -1,6 +1,11 @@
 @use '../modules/modules';
 
+:root {
+  @include modules.props-props;
+}
+
 .fp {
+
   &-nav {
     @include modules.nav-props;
     @include modules.nav-styles;
@@ -116,8 +121,5 @@
   //   @include modules.global-styles;
   // }
 
-  &-props {
-    @include modules.props-props;
-  }
 
 }

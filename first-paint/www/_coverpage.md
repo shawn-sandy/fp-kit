@@ -31,7 +31,7 @@
         </p>
       </div>
       <div role="gridcell">
-        <h4>No Classes</h4>
+        <h4>Classes Optional</h4>
         <p>
           CSS classes are not required but welcomed.
         </p>
