@@ -75,6 +75,10 @@
   padding-inline: var(--fcap-px, 0.5rem);
 }
 
+@mixin styles {
+
+}
+
 @mixin module {
   img {
     @include img-rules;

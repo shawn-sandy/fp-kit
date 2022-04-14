@@ -1,0 +1,123 @@
+@use '../modules/modules';
+
+.fp {
+  &-nav {
+    @include modules.nav-props;
+    @include modules.nav-styles;
+  }
+
+  &-header {
+    @include modules.header-props;
+    @include modules.header-styles;
+  }
+
+  &-container {
+    @include modules.container-props;
+    @include modules.container-styles;
+  }
+
+  &-button {
+    @include modules.button-props;
+    @include modules.button-styles;
+  }
+
+  &-checkbox {
+    @include modules.checkbox-props;
+    @include modules.checkbox-styles;
+  }
+
+  &-img {
+    @include modules.img-props;
+    @include modules.img-styles;
+  }
+
+  &-details-summary {
+    @include modules.details-summary-props;
+    @include modules.details-summary-styles;
+  }
+
+  &-nav {
+    @include modules.nav-props;
+    @include modules.nav-styles;
+  }
+
+  &-table {
+    @include modules.table-props;
+    @include modules.table-styles;
+  }
+
+  &-grid {
+    @include modules.grid-props;
+    @include modules.grid-styles;
+  }
+
+  &-cards {
+    @include modules.cards-props;
+    @include modules.cards-styles;
+  }
+
+  &-dialog {
+    @include modules.dialog-props;
+    @include modules.dialog-styles;
+  }
+
+  &-input {
+    @include modules.input-props;
+    @include modules.input-styles;
+  }
+
+  &-radio {
+    @include modules.radio-props;
+    @include modules.radio-styles;
+  }
+
+  &-textarea {
+    @include modules.textarea-props;
+    @include modules.textarea-styles;
+  }
+
+  &-select {
+    @include modules.select-props;
+    @include modules.select-styles;
+  }
+
+  &-tooltip {
+    @include modules.tooltip-props;
+    @include modules.tooltip-styles;
+  }
+
+  &-badge {
+    @include modules.badge-props;
+    @include modules.badge-styles;
+  }
+
+  &-footer {
+    @include modules.footer-props;
+    @include modules.footer-styles;
+  }
+
+  &-list {
+    @include modules.list-props;
+    @include modules.list-styles;
+  }
+
+  &-scrollbar {
+    @include modules.scrollbar-props;
+    @include modules.scrollbar-styles;
+  }
+
+  &-content {
+    @include modules.content-props;
+    @include modules.content-styles;
+  }
+
+  // &-global {
+  //   @include modules.global-props;
+  //   @include modules.global-styles;
+  // }
+
+  &-props {
+    @include modules.props-props;
+  }
+
+}

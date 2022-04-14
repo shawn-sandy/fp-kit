@@ -62,6 +62,7 @@
 <section>
 <p>
 <a href="/#/README"  style="--btn-fs: var(--fs-3)">Getting Started</a>
+<a href="/#/GUIDES"  style="--btn-fs: var(--fs-3)">Guides & Examples</a>
 <a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-3)" target="_blank">Github</a>
 </p>
 </section>

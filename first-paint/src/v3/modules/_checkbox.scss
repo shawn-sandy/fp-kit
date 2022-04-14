@@ -97,6 +97,11 @@
   @content;
 }
 
+@mixin styles {
+  // * css style utilities
+  @content;
+}
+
 @mixin module {
   :where(label[for]) {
     @include props;

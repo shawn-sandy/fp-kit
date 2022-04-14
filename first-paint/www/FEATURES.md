@@ -19,11 +19,11 @@ https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.
 
 CSS variables can be used to dynamically change the look and feel of components/elements, whats more when you assign a CSS variable to a property you can now use the variable assigned as a property name in you rules. For example lets create a `color` and `background-color` variable for a button `--btn-cl` and `--btn-bg`. Now we can us the new variables to replace the name of the CSS properties and assign it a new value, creating `inherited properties` or what we call *css custom-props* [read more about css variables on increment](https://increment.com/frontend/a-users-guide-to-css-variables/). [FirstPaint default custom properties](/tokens)
 
-## No Classes (optional)
+## Classes (optional)
 
-While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. FirstPaint and libraries like it that leverage semantic `HTML5`, `CSS props` and the `style` attributes are now  allowing us add a layer of `dynamic styling` to HTML/CSS with minimal effort redefining how we build web applications.
+While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. FirstPaint and libraries like it that leverage semantic `HTML5`, `CSS props` and the `style` attributes are now allowing us add a layer of `dynamic styling` to HTML/CSS with minimal effort redefining how we build web applications.
 
-We understand that this is an unconventional approach and some will frown on the approach, the beauty of it is that you are welcomed to create and use classes.
+We understand that this is an unconventional and some will frown on the approach, the beauty of it is that you are welcomed to create and use classes. P.S if you really have to use `.classes` you can try our *"secret"* `fp-styles` `.class` version.
 
 
 ### Examples

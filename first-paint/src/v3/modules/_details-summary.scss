@@ -73,6 +73,10 @@
   }
 }
 
+@mixin styles {
+  @content;
+}
+
 @mixin module {
   details {
     @include rules;

@@ -78,6 +78,10 @@
   @content;
 }
 
+@mixin styles {
+  @content;
+}
+
 @mixin module {
   nav {
     @include rules();
