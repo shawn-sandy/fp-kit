@@ -15,6 +15,10 @@
   --grid-cols: 4;
   --grid-min-width: calc(250rem / 16);
 
+  --list-gap: var(--grid-gap);
+  --list-cols: var(--grid-cols);
+  --list-min-width: var(--grid-min-width);
+
   --gap-count: calc(var(--grid-cols) - 1);
   --total-gap-width: calc(
     var(--gap-count) * var(--grid-gap)
@@ -22,6 +26,7 @@
   --grid-max-width: calc(
     (100% - var(--total-gap-width)) / var(--grid-cols)
   );
+  --list-max-width: var(--grid-max-width);
   @content;
 }
 
@@ -29,7 +34,7 @@
   @include props;
 
   [role="row"],
-  [style*="--row"] {
+  [style*="--row"], [role="listitem"], [style*="--listitem"] {
     --grid-cols-tpl: repeat(
     auto-fill,
     minmax(
@@ -61,7 +66,7 @@
 * tag or classname name nav, .nav
 */
 @mixin module {
-  [role="grid"] {
+  [role="grid"], [role="list"] {
     @include rules;
   }
   @include styles;

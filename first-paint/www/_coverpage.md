@@ -13,15 +13,15 @@
 </header>
 
 <main>
-
-<section role="grid" style="--grid-cols: 3;">
+<hr>
+<section role="grid" style="--grid-cols: 3; margin-block: var(--spc-6)">
     <div
       role="row">
       <div role="gridcell">
         <h4>
         Easy to use</h4>
         <p>
-          Drop it into you page and start customizing.
+          Drop it into your `html5` pages and start customizing, it's that simple.
         </p>
       </div>
       <div role="gridcell">
@@ -56,4 +56,15 @@
       </div>
     </div>
 </section>
+<hr>
 </main>
+<footer>
+<section>
+<p>
+<a href="/#/README"  style="--btn-fs: var(--fs-3)">Getting Started</a>
+<a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-3)" target="_blank">Github</a>
+</p>
+</section>
+<p> &copy; 2022 FirstPaint</p>
+</footer>
+
