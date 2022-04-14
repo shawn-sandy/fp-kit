@@ -10,6 +10,10 @@
 <a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-3); --btn-bdr: green solid; --btn-rds: 99rem" target="_blank">Github</a>
 </section>
 
+</header>
+
+<main>
+
 <section role="grid" style="--grid-cols: 3;">
     <div
       role="row">
@@ -35,13 +39,13 @@
       <div role="gridcell">
         <h4>Accessible</h4>
         <p>
-          Built with an accessibility first mindset.
+          Accessibility matters and FirstPaint is built to meet WCAG best practices.
         </p>
       </div>
       <div role="gridcell">
         <h4>Lightweight & Performant</h4>
         <p>
-          Less the 20kb size and built to ensure that you sties load quickly.
+          Less the 20kb size and built to ensure that your sties load quickly.
         </p>
       </div>
       <div role="gridcell">
@@ -52,5 +56,4 @@
       </div>
     </div>
 </section>
-</header>
-
+</main>
