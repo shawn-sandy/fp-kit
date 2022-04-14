@@ -1,10 +1,6 @@
 /**
  * **************************************
- *  FirsPaint
- *  Author: Shawn Sandy
- *
- * **************************************
- * @format
+
  */
 
 @mixin props() {
@@ -63,7 +59,7 @@
 }
 
 /**
-* tag or classname name nav, .nav
+*
 */
 @mixin module {
   [role="grid"], [role="list"] {
