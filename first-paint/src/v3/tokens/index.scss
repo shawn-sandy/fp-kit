@@ -7,3 +7,8 @@
 */
 
 @use "./colors.scss";
+@use "./layout";
+
+:root {
+  @include layout.props();
+}
