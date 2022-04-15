@@ -5,7 +5,19 @@
 /**
 *
 */
-div[role=presentation] {
+.fp-cards {
+  --cd-sm: 1rem;
+  --cd-md: 1.5rem;
+  --cd-lg: 2rem;
+  --cd-xl: 3rem;
+  --card-pd: 2rem;
+  --card-sm: 1rem;
+  --card-md: 1.5rem;
+  --card-lg: 2rem;
+  --card-xl: 3rem;
+  --cd-shadow-sm: 0 0.1rem 0.15rem rgba(0, 0, 0, 0.3);
+  --cd-shadow-md: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+  --cd-shadow-lg: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
   --cd-sm: 1rem;
   --cd-md: 1.5rem;
   --cd-lg: 2rem;
@@ -26,10 +38,10 @@ div[role=presentation] {
   box-shadow: var(--card-shadow);
   border: var(--card-border, thin solid lightgray);
 }
-div[role=presentation] h1,
-div[role=presentation] h2,
-div[role=presentation] h3,
-div[role=presentation] h4 {
+.fp-cards h1,
+.fp-cards h2,
+.fp-cards h3,
+.fp-cards h4 {
   margin: 0;
 }
 

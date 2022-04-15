@@ -1,4 +1,4 @@
-header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialog header), [style*="--hdr"]:not([arial-label], dialog header) {
+.fp-header {
   --hdr-bg: whitesmoke;
   --hdr-bg-img: none;
   --hdr-bg-pos: center center;

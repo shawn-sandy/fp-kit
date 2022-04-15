@@ -1,4 +1,15 @@
-nav {
+.fp-nav {
+  --nav-dsp: flex;
+  --nav-direction: row;
+  --nav-w: auto;
+  --nav-h: calc(50rem / 16);
+  --nav-align: center;
+  --nav-justify: space-between;
+  --nav-mx: 1rem;
+  --nav-align: center;
+  --nav-gap: 0.5rem;
+  --nav-px: 1rem;
+  --nav-bg: initial;
   --nav-dsp: flex;
   --nav-direction: row;
   --nav-w: auto;
@@ -20,12 +31,12 @@ nav {
   background-color: var(--nav-bg, var(--bg));
 }
 @media (min-width: 61.25rem) {
-  nav {
+  .fp-nav {
     --px: calc(10% - 1rem);
   }
 }
-nav > section,
-nav > ul {
+.fp-nav > section,
+.fp-nav > ul {
   --nav-dsp: flex;
   display: var(--nav-dsp, var(--dsp));
   gap: var(--nav-gap, var(--gap));
@@ -34,16 +45,16 @@ nav > ul {
   padding-inline: var(--nav-px, var(--px));
   height: 100%;
 }
-nav > section > div {
+.fp-nav > section > div {
   --py: 0;
 }
-nav ul > li {
+.fp-nav ul > li {
   --py: 0;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-nav img[alt] {
+.fp-nav img[alt] {
   --px: 0 var(--s1);
   --w: var(--brand-w, 3.6rem);
 }

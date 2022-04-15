@@ -1,4 +1,4 @@
-dialog, [role=dialog] {
+.fp-dialog {
   --diag-bg: whitesmoke;
   --diag-bg-img: none;
   --diag-x: 1.5rem;
@@ -9,9 +9,9 @@ dialog, [role=dialog] {
   padding-inline: var(--diag-x);
   padding-block: var(--diag-y);
 }
-dialog::-webkit-backdrop, [role=dialog]::-webkit-backdrop {
+.fp-dialog::-webkit-backdrop {
   background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
 }
-dialog::backdrop, [role=dialog]::backdrop {
+.fp-dialog::backdrop {
   background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
 }

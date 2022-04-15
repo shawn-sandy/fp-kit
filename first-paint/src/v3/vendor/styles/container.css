@@ -8,8 +8,7 @@
  Date: 2022-02-01
  ***************************************
 */
-:where(main, section, article, footer, header, table),
-[style*="--bx"] {
+.fp-container {
   --bx-flow: column wrap;
   --bx-align: flex-start;
   --bx-justify: flex-start;

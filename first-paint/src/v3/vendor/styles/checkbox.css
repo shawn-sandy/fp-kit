@@ -1,4 +1,4 @@
-:where(label[for]) {
+.fp-checkbox {
   --chk-bdr-w: thick;
   --chk-bdr-cl: transparent;
   --chk-accent: green;
@@ -19,13 +19,13 @@
   max-height: var(--chk-size);
   font-size: var(var(--chk-fs), var(--fs));
 }
-:where(label[for]) :where([id][type="checkbox"]) {
+.fp-checkbox :where([id][type="checkbox"]) {
   appearance: var(--chk-appearance);
   -webkit-appearance: var(--chk-appearance);
   -moz-appearance: var(--chk-appearance);
   line-height: 1;
 }
-:where(label[for]) :where([id][type="checkbox"])::before {
+.fp-checkbox :where([id][type="checkbox"])::before {
   --chk-bdr-cl: darkgreen;
   --check-bdr-w: thick;
   --chk-bdr: none;
@@ -43,10 +43,10 @@
   border-radius: var(--chk-rds);
   transition: var(--tran-all);
 }
-:where(label[for]) :where([id][type="checkbox"]):checked {
+.fp-checkbox :where([id][type="checkbox"]):checked {
   --chk-appearance: none;
 }
-:where(label[for]) :where([id][type="checkbox"]):checked::before {
+.fp-checkbox :where([id][type="checkbox"]):checked::before {
   --chk-bdr: solid;
   border-color: var(--chk-bdr-cl);
   border-width: var(--chk-bdr-w);

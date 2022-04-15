@@ -25,7 +25,7 @@ While not as popular as traditional CSS frameworks that use `.classes` in markup
 
 We understand that this is an unconventional and some will frown on the approach, the beauty of it is that you are welcomed to create and use classes.
 
-?> P.S if you really have to use `.classes` feel to try out our *"un-documented class version"* --  `css/styles/fp-styles` or individually `css/styles/module-name.css` classes 😄.
+?> P.S if you really have to use `.classes` feel to try out the *"OPTIONAL"* class based version  of FirstPaint `css/styles/fp-styles` or individually `css/styles/module-name.css` classes (documentation was also optional 😄).
 
 
 ### Examples
@@ -63,7 +63,7 @@ Accessibility matters to us and we think it should to you too so we made it a co
 
 ## Lightweight and performant
 
-We have adopted a performance first approach to our style system and opted to use CSS custom-properties to define how we build modules and write markup. Allowing us to build a library that is less than 15kb/7kb gzip) yet flexible and and fast.
+We have adopted a performance first approach to the toolkit and opted to use CSS custom-properties to define how we build modules and write markup. Allowing us to build a library that is less than 24kb/10kb gzip) yet flexible and and fast.
 
 
 ## Modular

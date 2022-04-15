@@ -1,7 +1,12 @@
 /* stylelint-disable declaration-colon-newline-after */
-button,
-[style*="--btn"],
-[role=button] {
+.fp-btn {
+  --btn-sm: calc(12rem / 16);
+  --btn-md: calc(16rem / 16);
+  --btn-lg: calc(21rem / 16);
+  --btn-pill: 100rem;
+  --btn-spc: 0.25rem;
+  --btn-bg: lightgray;
+  --btn-wspc: nowrap;
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
@@ -26,29 +31,19 @@ button,
   transition: all 0.2s ease;
   background-color: var(--btn);
 }
-button[type],
-[style*="--btn"][type],
-[role=button][type] {
+.fp-btn[type] {
   background-color: var(--btn-bg);
   --btn-bdr: solid var(--btn-sg);
 }
-button[type=submit], button[style*=submit],
-[style*="--btn"][type=submit],
-[style*="--btn"][style*=submit],
-[role=button][type=submit],
-[role=button][style*=submit] {
+.fp-btn[type=submit], .fp-btn[style*=submit] {
   --btn-bg: darkblue;
   --btn-color: white;
 }
-button[disabled],
-[style*="--btn"][disabled],
-[role=button][disabled] {
+.fp-btn[disabled] {
   cursor: var(--btn-cursor-disabled, not-allowed);
   opacity: var(--btn-opacity-disabled, 0.5);
 }
-button:hover,
-[style*="--btn"]:hover,
-[role=button]:hover {
+.fp-btn:hover {
   --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg-hover, var(--btn-bg));
@@ -57,20 +52,12 @@ button:hover,
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
-button[type=reset], button[style*="--btn-reset"],
-[style*="--btn"][type=reset],
-[style*="--btn"][style*="--btn-reset"],
-[role=button][type=reset],
-[role=button][style*="--btn-reset"] {
+.fp-btn[type=reset], .fp-btn[style*="--btn-reset"] {
   --btn-bg: transparent;
   --btn-color: gray;
   --btn-bdr: gray medium solid;
 }
-button[type=submit], button[style*="--btn-submit"],
-[style*="--btn"][type=submit],
-[style*="--btn"][style*="--btn-submit"],
-[role=button][type=submit],
-[role=button][style*="--btn-submit"] {
+.fp-btn[type=submit], .fp-btn[style*="--btn-submit"] {
   --btn-bg: var(--blue-500);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);

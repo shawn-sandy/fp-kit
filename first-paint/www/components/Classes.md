@@ -1,9 +1,9 @@
-# Classes <span role="note" aria-label="status">Alpha</span>
+# FP Styles  <span role="note" style="--note: var(--beta)">Beta</span>
 
 > Documentation, examples and info for using Classes component
 
 
-!> FP-Styles is in alpha stage.
+!> FP-Styles is in beta stage, full documentation coming soon.
 
 ### Default Classes
 
