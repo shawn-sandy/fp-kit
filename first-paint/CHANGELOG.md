@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.14.5](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.4...@shawnsandy/first-paint@2.14.5) (2022-04-15)
+
+
+### Features
+
+* **beta:** add page with examples style option ([487937d](https://github.com/shawn-sandy/fp-kit/commit/487937ddcf9354b76d98aa24053450504f810907))
+* **beta:** add page with examples style option ([1c55b41](https://github.com/shawn-sandy/fp-kit/commit/1c55b41f0829df12fea650f395af477a1e59bfc0))
+* **beta:** add page with examples style option ([9240825](https://github.com/shawn-sandy/fp-kit/commit/92408251ec554aa3b49d99f297eacc857dcff1fb))
+* **beta:** release ([abd1250](https://github.com/shawn-sandy/fp-kit/commit/abd1250ffad7662f33ca8d750627dc24e1619113))
+
+
+
+
+
 ## [2.14.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.3...@shawnsandy/first-paint@2.14.4) (2022-04-15)
 
 
