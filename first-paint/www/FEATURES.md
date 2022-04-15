@@ -19,11 +19,13 @@ https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.
 
 CSS variables can be used to dynamically change the look and feel of components/elements, whats more when you assign a CSS variable to a property you can now use the variable assigned as a property name in you rules. For example lets create a `color` and `background-color` variable for a button `--btn-cl` and `--btn-bg`. Now we can us the new variables to replace the name of the CSS properties and assign it a new value, creating `inherited properties` or what we call *css custom-props* [read more about css variables on increment](https://increment.com/frontend/a-users-guide-to-css-variables/). [FirstPaint default custom properties](/tokens)
 
-## No Classes (optional)
+## Classes (optional)
 
-While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. FirstPaint and libraries like it that leverage semantic `HTML5`, `CSS props` and the `style` attributes are now  allowing us add a layer of `dynamic styling` to HTML/CSS with minimal effort redefining how we build web applications.
+While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. FirstPaint and libraries like it that leverage semantic `HTML5`, `CSS props` and the `style` attributes allows us add a layer of `dynamic styling` to HTML/CSS with minimal effort redefining how we layout/style web applications.
 
-We understand that this is an unconventional approach and some will frown on the approach, the beauty of it is that you are welcomed to create and use classes.
+We understand that this is an unconventional and some will frown on the approach, the beauty of it is that you are welcomed to create and use classes.
+
+?> P.S if you really have to use `.classes` feel to try out the *"OPTIONAL"* class based version  of FirstPaint `css/styles/fp-styles` or individually `css/styles/module-name.css` classes (documentation was also optional 😄).
 
 
 ### Examples
@@ -61,7 +63,7 @@ Accessibility matters to us and we think it should to you too so we made it a co
 
 ## Lightweight and performant
 
-We have adopted a performance first approach to our style system and opted to use CSS custom-properties to define how we build modules and write markup. Allowing us to build a library that is less than 15kb/7kb gzip) yet flexible and and fast.
+We have adopted a performance first approach to the toolkit and opted to use CSS custom-properties to define how we build modules and write markup. Allowing us to build a library that is less than 24kb/10kb gzip) yet flexible and and fast.
 
 
 ## Modular

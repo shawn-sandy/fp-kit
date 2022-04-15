@@ -1,0 +1,7 @@
+@use "../modules/grid";
+
+.fp-grid {
+  @include grid.props;
+  @include grid.rules;
+}
+@include grid.styles;

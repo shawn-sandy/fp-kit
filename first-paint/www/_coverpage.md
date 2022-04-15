@@ -7,7 +7,7 @@
 
 
 <a href="/#/README" style="--btn: green; --btn-rds: 99rem; color: whitesmoke; --btn-fs: var(--fs-3); --btn-bdr: green solid;">Getting Started</a>
-<a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-3); --btn-bdr: green solid; --btn-rds: 99rem" target="_blank">Github</a>
+<a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-3); --btn-bdr: green solid; --btn-rds: 99rem; color: green" target="_blank">Github</a>
 </section>
 
 </header>
@@ -31,7 +31,7 @@
         </p>
       </div>
       <div role="gridcell">
-        <h4>No Classes</h4>
+        <h4>Classes Optional</h4>
         <p>
           CSS classes are not required but welcomed.
         </p>
@@ -62,6 +62,7 @@
 <section>
 <p>
 <a href="/#/README"  style="--btn-fs: var(--fs-3)">Getting Started</a>
+<a href="/#/GUIDES"  style="--btn-fs: var(--fs-3)">Guides & Examples</a>
 <a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-3)" target="_blank">Github</a>
 </p>
 </section>

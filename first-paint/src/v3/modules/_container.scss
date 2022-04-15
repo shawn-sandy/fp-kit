@@ -18,7 +18,7 @@
 }
 
 @mixin rules() {
-  @include props;
+  // @include props;
 
   display: var(--bx-dsp, var(--dsp, flex));
   margin-inline: var(--bx-x, var(--mx, initial));
@@ -73,6 +73,7 @@
 @mixin module {
   :where(main, section, article, footer, header, table),
   [style*="--bx"] {
+    @include props;
     @include rules;
   }
   @include styles;

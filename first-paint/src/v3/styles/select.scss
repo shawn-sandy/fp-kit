@@ -1,0 +1,7 @@
+@use "../modules/select";
+
+.fp-select {
+  @include select.props;
+  @include select.rules;
+}
+@include select.styles;

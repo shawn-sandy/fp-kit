@@ -1,0 +1,8 @@
+@use "../modules/button";
+
+.fp-btn {
+  @include button.props;
+  @include button.rules;
+}
+
+@include button.styles;

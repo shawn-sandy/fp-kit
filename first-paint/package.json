@@ -1,6 +1,6 @@
 {
   "name": "@shawnsandy/first-paint",
-  "version": "2.14.3",
+  "version": "2.14.4",
   "private": false,
   "description": "First Paint is an easy to use CSS/SCSS starter library that contains accessibility focused, semantic HTML elements and components for quickly scaffolding/building modern, lightweight mobile friendly websites.",
   "keywords": [
@@ -45,7 +45,7 @@
     "build": "run-s build:*",
     "watch:docs": "sass --watch --style compressed src/v3/index.scss:www/css/index.css src/v3/tokens:www/css/tokens/.  src/v3/modules:www/css/modules/. src/v3/components:www/css/components/. src/v3/styles:www/css/styles/. --load-path=node_modules --source-map",
     "watch-index": "sass --watch src/index.scss:src/index.css src/custom-styles.scss:src/custom-styles.css src/components.scss:src/components.css  src/styles:src/css/. --load-path=node_modules --no-source-map",
-    "watch:v3": "sass --watch --style compressed src/v3/index.scss:src/v3/css/index.css src/v3/tokens:src/v3/css/tokens/.  src/v3/modules:src/v3/css/modules/. src/v3/components:src/v3/css/components/. src/v3/styles:src/v3/css/styles/. --load-path=node_modules --source-map",
+    "watch:v3": "sass --watch src/v3/index.scss:src/v3/css/index.css src/v3/tokens:src/v3/css/tokens/.  src/v3/modules:src/v3/css/modules/. src/v3/components:src/v3/css/components/. src/v3/styles:src/v3/css/styles/. --load-path=node_modules --source-map",
     "build:v3": "run-s build-v3-prefix build-v3",
     "build-v3-prefix": "postcss ./src/v3/css/**/*.css --base src/v3/css --use autoprefixer -d ./src/v3/vendor --no-map",
     "build-v3": "postcss ./src/v3/**/*.css --base src/v3 -d ./dist/v3/ --ext min.css --map",
