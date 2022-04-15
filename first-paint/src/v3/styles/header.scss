@@ -1,0 +1,8 @@
+@use "../modules/header";
+
+.fp-header {
+  @include header.props;
+  @include header.rules;
+}
+
+@include header.styles;

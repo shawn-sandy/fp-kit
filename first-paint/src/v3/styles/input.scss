@@ -1,0 +1,7 @@
+@use "../modules/input";
+
+.fp-input {
+  @include input.props;
+  @include input.rules;
+}
+@include input.styles;

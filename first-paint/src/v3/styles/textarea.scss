@@ -1,0 +1,7 @@
+@use "../modules/textarea";
+
+.fp-textarea {
+  @include textarea.props;
+  @include textarea.rules;
+}
+@include textarea.styles;

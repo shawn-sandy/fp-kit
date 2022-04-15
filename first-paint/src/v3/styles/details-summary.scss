@@ -1,0 +1,7 @@
+@use "../modules/details-summary";
+
+.fp-details-summary {
+  @include details-summary.props;
+  @include details-summary.rules;
+}
+@include details-summary.styles;

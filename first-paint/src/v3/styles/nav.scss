@@ -1,0 +1,7 @@
+@use "../modules/nav";
+
+.fp-nav {
+  @include nav.props;
+  @include nav.rules;
+}
+@include nav.styles;

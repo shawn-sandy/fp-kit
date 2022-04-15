@@ -1,0 +1,7 @@
+@use "../modules/content";
+
+.fp-content {
+  @include content.props;
+  @include content.rules;
+}
+@include content.styles;

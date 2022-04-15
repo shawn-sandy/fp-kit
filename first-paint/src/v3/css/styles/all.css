@@ -943,7 +943,7 @@ nav img[alt] {
   --w: var(--brand-w, 3.6rem);
 }
 
-header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialog header) {
+header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialog header), [style*="--hdr"]:not([arial-label], dialog header) {
   --hdr-bg: whitesmoke;
   --hdr-bg-img: none;
   --hdr-bg-pos: center center;
@@ -981,31 +981,6 @@ header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialo
   padding-block: var(--hdr-py);
   padding-inline: var(--hdr-px);
   margin: var(--hdr-m);
-}
-
-[style*="--hdr"] {
-  --hdr-bg: whitesmoke;
-  --hdr-bg-img: none;
-  --hdr-bg-pos: center center;
-  --hdr-bg-size: cover;
-  --hdr-bg-repeat: no-repeat;
-  --hdr-bd: none;
-  --hdr-min-h: 40vh;
-  --hdr-w: 100%;
-  --hdr-dsp: flex;
-  --hdr-justify: center;
-  --hdr-py: 1rem;
-  --hdr-px: 1rem;
-  --hdr-place-x: center;
-  --hdr-place-y: center;
-  --hdr-align: center;
-  --hdr-px: 1rem;
-  --hdr-m: 0;
-  --hdr-fs-sm: calc(28rem / 16);
-  --hdr-fs-md: calc(36rem / 16);
-  --hdr-fs-lg: calc(68rem / 16);
-  --hdr-fs-xl: calc(80rem / 16);
-  --hdr-direction: column;
 }
 
 table {

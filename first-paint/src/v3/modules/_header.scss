@@ -29,7 +29,7 @@
 }
 
 @mixin rules {
-  @include props;
+  // @include props;
   display: var(--hdr-dsp);
   background-color: var(--hdr-bg);
   background-image: var(--hdr-bg-img);
@@ -52,15 +52,16 @@
 @mixin styles {
   // * css style utilities
   [style*="--hdr"] {
-    @include props;
+    // @include props;
   }
 
   @content;
 }
 
 @mixin module {
- header, [role="banner"] {
+ header, [role="banner"], [style*="--hdr"] {
     &:not([arial-label], dialog header) {
+      @include props;
       @include rules;
     }
   }

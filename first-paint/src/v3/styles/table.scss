@@ -1,0 +1,7 @@
+@use "../modules/table";
+
+.fp-table {
+  @include table.props;
+  @include table.rules;
+}
+@include table.styles;
