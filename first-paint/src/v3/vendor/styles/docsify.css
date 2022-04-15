@@ -1138,6 +1138,7 @@ label[for] + textarea,
 label[for] + select {
   -webkit-margin-before: 0.75rem;
           margin-block-start: 0.75rem;
+  display: block;
 }
 
 div:where([role="region"]),
