@@ -1,0 +1,9 @@
+@use "../modules/img";
+
+.fp-img {
+  @include img.props;
+  @include img.rules;
+}
+@include img.styles;
+
+

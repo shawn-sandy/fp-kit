@@ -1,0 +1,8 @@
+@use "../modules/container";
+
+.fp-container {
+  @include container.props;
+  @include container.rules;
+}
+
+@include container.styles;

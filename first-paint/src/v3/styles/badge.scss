@@ -1,0 +1,7 @@
+@use "../modules/badge";
+
+.fp-badge, .fp-note {
+  @include badge.props;
+  @include badge.rules;
+}
+@include badge.styles;

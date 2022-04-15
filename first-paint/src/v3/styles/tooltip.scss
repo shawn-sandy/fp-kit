@@ -1,0 +1,7 @@
+@use "../modules/tooltip";
+
+.fp-tooltip {
+  @include tooltip.props;
+  @include tooltip.rules;
+}
+@include tooltip.styles;

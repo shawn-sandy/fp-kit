@@ -1,1 +1,17 @@
-dialog,[role=dialog]{--diag-bg: whitesmoke;--diag-bg-img: none;--diag-x: 1.5rem;--diag-y: 1.5rem;--spc: auto;background-color:var(--diag-bg);background-image:var(--diag-bg-img);padding-inline:var(--diag-x);padding-block:var(--diag-y)}dialog::-webkit-backdrop, [role=dialog]::-webkit-backdrop{background-color:var(--bk-drop-bg, rgba(0, 0, 0, 0.7))}dialog::backdrop,[role=dialog]::backdrop{background-color:var(--bk-drop-bg, rgba(0, 0, 0, 0.7))}
+dialog, [role=dialog] {
+  --diag-bg: whitesmoke;
+  --diag-bg-img: none;
+  --diag-x: 1.5rem;
+  --diag-y: 1.5rem;
+  --spc: auto;
+  background-color: var(--diag-bg);
+  background-image: var(--diag-bg-img);
+  padding-inline: var(--diag-x);
+  padding-block: var(--diag-y);
+}
+dialog::-webkit-backdrop, [role=dialog]::-webkit-backdrop {
+  background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
+}
+dialog::backdrop, [role=dialog]::backdrop {
+  background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
+}

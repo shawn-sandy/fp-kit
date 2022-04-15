@@ -1,0 +1,7 @@
+@use "../modules/checkbox";
+
+.fp-checkbox {
+  @include checkbox.props;
+  @include checkbox.rules;
+}
+@include checkbox.styles;

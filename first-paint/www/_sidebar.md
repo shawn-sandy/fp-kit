@@ -31,4 +31,5 @@
   - [Scrollbar](/components/Scrollbar)
   - [Table](/components/Table)
   - [Tooltip](/components/Tooltip)
+- [FP-Styles](/components/Classes)
 - [Changelog](/CHANGELOG)

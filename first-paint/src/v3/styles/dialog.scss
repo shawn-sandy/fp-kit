@@ -1,0 +1,6 @@
+@use "../modules/dialog";
+.fp-dialog {
+  @include dialog.props;
+  @include dialog.rules;
+}
+@include dialog.styles;

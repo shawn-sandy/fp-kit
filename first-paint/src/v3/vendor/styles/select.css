@@ -1,0 +1,35 @@
+.fp-select {
+  --slt-dsp: grid;
+  --slt-align: center;
+  --slt-justify: space-between;
+  --slt-min-w: var(--min-w-800)
+  --sle-min-h: 2.5rem;
+  --slt-cl: currentColor;
+  --slt-bdr-style: solid;
+  --slt-bdr-w: thin;
+  --slt-bdr-cl: lightgray;
+  --slt-px: 0.5rem;
+  --slt-py: 0.3rem;
+  --slt-appearance: none;
+  --slt-fs: 0.9rem;
+  display: var(--slt-dsp);
+  place-items: var(--slt-align);
+  place-content: var(--slt-justify);
+  width: var(--min-w-800);
+  min-height: var(--slt-min-h);
+  font-size: var(--slt-fs, 0.9rem);
+  color: var(--slt-cl, currentColor);
+  background-color: var(--slt-bg, whitesmoke);
+  background: var(--slt-bg);
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  background-position: right 0.8rem top 50%;
+  border-style: var(--slt-bdr-style);
+  border-width: var(--slt-bdr-w);
+  border-color: var(--slt-bdr-cl);
+  padding-inline: var(--slt-px);
+  padding-block: var(--slt-py);
+  -webkit-appearance: var(--slt-appearance);
+  appearance: var(--slt-appearance);
+  padding-right: 30px;
+}

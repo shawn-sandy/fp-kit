@@ -1,10 +1,3 @@
-/*
- ***************************************
- FirsPaint
- Author: Shawn Sandy
- Date: 2021-04-01
- ***************************************
-*/
 
 @mixin props() {
   --img-xs: 10vw;
@@ -20,7 +13,7 @@
   @content;
 }
 
-@mixin img-rules {
+@mixin rules {
   @include props;
 
   max-width: 100%;
@@ -75,9 +68,13 @@
   padding-inline: var(--fcap-px, 0.5rem);
 }
 
+@mixin styles {
+
+}
+
 @mixin module {
   img {
-    @include img-rules;
+    @include rules;
   }
 
   picture,

@@ -1,0 +1,7 @@
+@use "../modules/breadcrumb";
+
+.fp-breadcrumb {
+  @include breadcrumb.props;
+  @include breadcrumb.rules;
+}
+@include breadcrumb.styles;

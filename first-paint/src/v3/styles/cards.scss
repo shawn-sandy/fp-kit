@@ -1,0 +1,7 @@
+@use "../modules/cards";
+
+.fp-cards {
+  @include cards.props;
+  @include cards.rules;
+}
+@include cards.styles;
