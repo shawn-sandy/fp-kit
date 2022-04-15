@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.14.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.3...@shawnsandy/first-paint@2.14.4) (2022-04-15)
+
+
+### Features
+
+* add layout variables/tokens ([3a85e6e](https://github.com/shawn-sandy/fp-kit/commit/3a85e6ed94b96ce61657f5e0df69b0e37abdccaf))
+* **alpha:** add individual styles for modules ([6368122](https://github.com/shawn-sandy/fp-kit/commit/636812273a0efc2e2b6e51eb5c8befe64576a1f8))
+* **alpha:** checkbox  class/style ([06db8b9](https://github.com/shawn-sandy/fp-kit/commit/06db8b96274a3ee63c57e2e83999dcc652079846))
+* **alpha:** radio class/style ([7650337](https://github.com/shawn-sandy/fp-kit/commit/765033741ae9a9fbdda446c4cdb094208297402a))
+* **beta:** fp-styles -- optional class cersion ([2b72336](https://github.com/shawn-sandy/fp-kit/commit/2b723361b9eb736410762782b9b5e673708b507d))
+* **beta:** site cover page updates ([77dd5b3](https://github.com/shawn-sandy/fp-kit/commit/77dd5b3ed5f669b331e8834aceedc9cf7ea5ef37))
+* padding to coverps feature section ([15cb8dd](https://github.com/shawn-sandy/fp-kit/commit/15cb8dd2e55c2750405f1e1660b6f73a2ab914a1))
+* **wip:** add fp-styles optional traditional classes ([bba5018](https://github.com/shawn-sandy/fp-kit/commit/bba5018ac7bf1283db7448e1d45eae6b9bf9e81c))
+* **wip:** add fp-styles optional traditional classes ([856811c](https://github.com/shawn-sandy/fp-kit/commit/856811c98e9d3dc87be9ccc6f6f3044b35896145))
+* **wip:** class styles ([90a0895](https://github.com/shawn-sandy/fp-kit/commit/90a0895e4002f5eeb1d4606b1d55a08147c70d00))
+
+
+
+
+
 ## [2.14.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.2...@shawnsandy/first-paint@2.14.3) (2022-04-13)
 
 
