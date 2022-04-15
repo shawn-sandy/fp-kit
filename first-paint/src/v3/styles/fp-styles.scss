@@ -1,7 +1,9 @@
 @use '../modules/modules';
+@use '../tokens/tokens';
 
 :root {
   @include modules.props-props;
+  @include tokens.layout-props;
 }
 
 .fp {
