@@ -1,0 +1,9 @@
+@use "../modules/radio";
+
+
+.fp-radio {
+  @include radio.props;
+  @include radio.rules;
+}
+
+@include radio.styles;
