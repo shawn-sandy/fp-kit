@@ -25,7 +25,7 @@ While not as popular as traditional CSS frameworks that use `.classes` in markup
 
 We understand that this is an unconventional and some will frown on the approach, the beauty of it is that you are welcomed to create and use classes.
 
-?> P.S if you really have to use `.classes` feel to try out the *"OPTIONAL"* class based version  of FirstPaint `css/styles/fp-styles` or individually `css/styles/module-name.css` classes (documentation was also optional 😄).
+?> P.S if you really have to use `.classes` feel to try out the *"OPTIONAL"* class based version  of FirstPaint `css/styles/fp-styles` or individually `css/styles/module-name.css` classes. P.S. (documentation was also optional 😄).
 
 
 ### Examples

@@ -5,6 +5,10 @@
 
 !> FP-Styles is in beta stage, full documentation coming soon.
 
+<p>
+<a role="button" style="--link-bg: lightgray; --btn-rds: 99rem;" href="/fp-styles.html" target="_blank">View page</a>
+<p>
+
 ### Default Classes
 
 ```html preview
@@ -19,6 +23,10 @@
   Sunt aliqua ullamco consectetur Lorem laboris magna. Ex quis consequat duis irure quis nisi cillum aute mollit tempor incididunt aliqua commodo. Fugiat laborum quis velit anim occaecat laboris incididunt voluptate Lorem irure. Officia cupidatat ex magna incididunt sunt aliquip irure duis nisi proident aute aute aute. Non esse laborum sint cupidatat consectetur. Qui aliqua proident esse officia nisi cillum irure incididunt. Lorem ex consequat ad proident laboris voluptate veniam pariatur do Lorem commodo.
 </p>
 ```
+
+<p>
+<a role="button" style="--link-bg: lightgray; --btn-rds: 99rem;" href="/fp-styles.html" target="_blank">View page</a>
+<p>
 
 ----
 ## See also

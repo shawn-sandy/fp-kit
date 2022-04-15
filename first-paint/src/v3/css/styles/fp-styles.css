@@ -119,6 +119,41 @@ body {
 }
 
 .fp {
+  --img-xs: 10vw;
+  --img-sm: 25vw;
+  --img-md: 50vw;
+  --img-lg: 75vw;
+  --img-xl: 90vw;
+  --img-100: 100vw;
+  --img-ratio: auto 2/3;
+  --img-fit: cover;
+  --img-position: center center;
+  --img-w: 100%;
+  max-width: var(--pic-max-w, 100%);
+  width: var(--pic-w, auto);
+  display: var(--pic-dsp, flex);
+  flex-direction: var(--pic-flex-dir, column);
+  place-content: var(--place-x, center);
+  place-items: var(--place-y, center);
+  height: var(--pic-h, auto);
+  padding-block: var(--pic-py, 0.5rem);
+  padding-inline: var(--pic-px, 0.5rem);
+  --img-xs: 10vw;
+  --img-sm: 25vw;
+  --img-md: 50vw;
+  --img-lg: 75vw;
+  --img-xl: 90vw;
+  --img-100: 100vw;
+  --img-ratio: auto 2/3;
+  --img-fit: cover;
+  --img-position: center center;
+  --img-w: 100%;
+  font-size: var(--fcap-fs, inherit);
+  display: var(--fcap-dsp, flex);
+  place-content: var(--place-x, flex-start);
+  place-items: var(--place-y, center);
+  padding-block: var(--fcap-py, 0.5rem);
+  padding-inline: var(--fcap-px, 0.5rem);
   --nav-dsp: flex;
   --nav-direction: row;
   --nav-w: auto;
@@ -275,7 +310,7 @@ body {
   box-shadow: var(--cd-shadow);
   border: var(--card-border, thin solid whitesmoke);
 }
-.fp-button {
+.fp-btn {
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
@@ -306,31 +341,31 @@ body {
   transition: all 0.2s ease;
   background-color: var(--btn);
 }
-.fp-button[type] {
+.fp-btn[type] {
   background-color: var(--btn-bg);
   --btn-bdr: solid var(--btn-sg);
 }
-.fp-button[type=submit], .fp-button[style*=submit] {
+.fp-btn[type=submit], .fp-btn[style*=submit] {
   --btn-bg: darkblue;
   --btn-color: white;
 }
-.fp-button[disabled] {
+.fp-btn[disabled] {
   cursor: var(--btn-cursor-disabled, not-allowed);
   opacity: var(--btn-opacity-disabled, 0.5);
 }
-.fp-button:hover {
+.fp-btn:hover {
   --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg-hover, var(--btn-bg));
   filter: invert(1) hue-rotate 180deg;
   transform: scale(0.95);
 }
-.fp-button[type=reset], .fp-button[style*="--btn-reset"] {
+.fp-btn[type=reset], .fp-btn[style*="--btn-reset"] {
   --btn-bg: transparent;
   --btn-color: gray;
   --btn-bdr: gray medium solid;
 }
-.fp-button[type=submit], .fp-button[style*="--btn-submit"] {
+.fp-btn[type=submit], .fp-btn[style*="--btn-submit"] {
   --btn-bg: var(--blue-500);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
@@ -401,56 +436,11 @@ body {
   --img-fit: cover;
   --img-position: center center;
   --img-w: 100%;
-  --img-xs: 10vw;
-  --img-sm: 25vw;
-  --img-md: 50vw;
-  --img-lg: 75vw;
-  --img-xl: 90vw;
-  --img-100: 100vw;
-  --img-ratio: auto 2/3;
-  --img-fit: cover;
-  --img-position: center center;
-  --img-w: 100%;
   max-width: 100%;
   width: var(--img-w, 100%);
   object-fit: var(--img-obj-fit);
   object-position: var(--img-position);
   aspect-ratio: var(--img-ratio);
-  --img-xs: 10vw;
-  --img-sm: 25vw;
-  --img-md: 50vw;
-  --img-lg: 75vw;
-  --img-xl: 90vw;
-  --img-100: 100vw;
-  --img-ratio: auto 2/3;
-  --img-fit: cover;
-  --img-position: center center;
-  --img-w: 100%;
-  max-width: var(--pic-max-w, 100%);
-  width: var(--pic-w, auto);
-  display: var(--pic-dsp, flex);
-  flex-direction: var(--pic-flex-dir, column);
-  place-content: var(--place-x, center);
-  place-items: var(--place-y, center);
-  height: var(--pic-h, auto);
-  padding-block: var(--pic-py, 0.5rem);
-  padding-inline: var(--pic-px, 0.5rem);
-  --img-xs: 10vw;
-  --img-sm: 25vw;
-  --img-md: 50vw;
-  --img-lg: 75vw;
-  --img-xl: 90vw;
-  --img-100: 100vw;
-  --img-ratio: auto 2/3;
-  --img-fit: cover;
-  --img-position: center center;
-  --img-w: 100%;
-  font-size: var(--fcap-fs, inherit);
-  display: var(--fcap-dsp, flex);
-  place-content: var(--place-x, flex-start);
-  place-items: var(--place-y, center);
-  padding-block: var(--fcap-py, 0.5rem);
-  padding-inline: var(--fcap-px, 0.5rem);
 }
 .fp-img[width] {
   width: var(--img-w, auto);
@@ -1080,6 +1070,7 @@ body {
 .fp-content label[for] + textarea,
 .fp-content label[for] + select {
   margin-block-start: 0.75rem;
+  display: block;
 }
 .fp-content div:where([role="region"]),
 .fp-content section:where([role="region"]) {
