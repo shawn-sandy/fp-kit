@@ -14,7 +14,6 @@
 }
 
 @mixin rules {
-  @include props;
 
   max-width: 100%;
   width: var(--img-w, 100%);
@@ -59,7 +58,6 @@
 
 @mixin figcaption-rules {
   @include props();
-
   font-size: var(--fcap-fs, inherit);
   display: var(--fcap-dsp, flex);
   place-content: var(--place-x, flex-start);
@@ -74,6 +72,7 @@
 
 @mixin module {
   img {
+    @include props;
     @include rules;
   }
 

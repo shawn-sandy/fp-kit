@@ -27,7 +27,7 @@
   }
   @include modules.container-styles;
 
-  &-button {
+  &-btn {
     @include modules.button-props;
     // @include modules.button-styles;
     @include modules.button-rules;
@@ -41,11 +41,11 @@
 
   &-img {
     @include modules.img-props;
-    @include modules.img-styles;
     @include modules.img-rules;
-    @include modules.img-figure-rules;
-    @include modules.img-figcaption-rules;
   }
+  @include modules.img-styles;
+  @include modules.img-figure-rules;
+  @include modules.img-figcaption-rules;
 
   &-details-summary {
     @include modules.details-summary-props;

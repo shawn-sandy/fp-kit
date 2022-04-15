@@ -22,6 +22,7 @@
 .fp-content label[for] + textarea,
 .fp-content label[for] + select {
   margin-block-start: 0.75rem;
+  display: block;
 }
 .fp-content div:where([role="region"]),
 .fp-content section:where([role="region"]) {
