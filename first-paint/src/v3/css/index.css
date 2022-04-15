@@ -646,6 +646,7 @@ label[for] + input,
 label[for] + textarea,
 label[for] + select {
   margin-block-start: 0.75rem;
+  display: block;
 }
 
 div:where([role="region"]),
