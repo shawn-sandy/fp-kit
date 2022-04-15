@@ -13,7 +13,7 @@
   @content;
 }
 
-@mixin img-rules {
+@mixin rules {
   @include props;
 
   max-width: 100%;
@@ -74,7 +74,7 @@
 
 @mixin module {
   img {
-    @include img-rules;
+    @include rules;
   }
 
   picture,

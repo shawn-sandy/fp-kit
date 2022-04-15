@@ -41,7 +41,8 @@
 
 @mixin styles {
   :not(span)[role="note"] {
-    @include props;
+    // @include props;
+    --bg: whitesmoke;
     --rds: 1rem;
     --px: 1.5rem;
     --py: 1.5rem;

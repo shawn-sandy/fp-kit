@@ -35,6 +35,39 @@
     background-color: var(--btn-bg);
     --btn-bdr: solid var(--btn-sg);
   }
+  &[type="submit"],
+  &[style*="submit"] {
+    --btn-bg: darkblue;
+    --btn-color: white;
+  }
+  &[disabled] {
+    cursor: var(--btn-cursor-disabled, not-allowed);
+    opacity: var(--btn-opacity-disabled, 0.5);
+  }
+
+  &:hover {
+    --btn-bg: lightgray;
+    --btn-cl: var(--btn-cl-hover);
+    background-color: var(--btn-bg-hover, var(--btn-bg));
+    filter: invert(1) hue-rotate (180deg);
+    transform: scale(0.95);
+
+  }
+
+  &[type="reset"],
+  &[style*="--btn-reset"] {
+    --btn-bg: transparent;
+    --btn-color: gray;
+    --btn-bdr: gray medium solid;
+  }
+  &[type="submit"],
+  &[style*="--btn-submit"] {
+    --btn-bg: var(--blue-500);
+    --btn-cl: #fff;
+    --btn-color: rgb(231, 231, 231);
+    --btn-border: none;
+  }
+
   @content;
 }
 
