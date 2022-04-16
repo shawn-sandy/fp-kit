@@ -1,4 +1,11 @@
 @use '../modules/modules';
+@use '../tokens/tokens';
+
+:root {
+  // @include modules.props-props;
+  @include tokens.layout-props;
+
+}
 
 .fp {
 
@@ -6,20 +13,23 @@
     @include modules.nav-props;
     @include modules.nav-rules;
   }
+  @include modules.nav-styles;
 
   &-header {
     @include modules.header-props;
     @include modules.header-rules;
   }
-
+  @include modules.header-styles;
 
   &-container {
     @include modules.container-props;
     @include modules.container-rules;
   }
+  @include modules.container-styles;
 
   &-btn {
     @include modules.button-props;
+    // @include modules.button-styles;
     @include modules.button-rules;
   }
 
@@ -27,17 +37,21 @@
     @include modules.checkbox-props;
     @include modules.checkbox-rules;
   }
+  @include modules.checkbox-styles;
 
   &-img {
     @include modules.img-props;
     @include modules.img-rules;
   }
+  @include modules.img-styles;
+  @include modules.img-figure-rules;
+  @include modules.img-figcaption-rules;
 
   &-details-summary {
     @include modules.details-summary-props;
     @include modules.details-summary-rules;
   }
-  // @include modules.details-summary-styles;
+  @include modules.details-summary-styles;
 
   &-nav {
     @include modules.nav-props;
@@ -55,6 +69,13 @@
     @include modules.grid-props;
     @include modules.grid-rules;
   }
+  @include modules.grid-styles;
+
+  &-cards {
+    @include modules.cards-props;
+    @include modules.cards-rules;
+  }
+  @include modules.cards-styles;
 
   &-dialog {
     @include modules.dialog-props;
@@ -87,6 +108,18 @@
   }
   @include modules.select-styles;
 
+  &-tooltip {
+    @include modules.tooltip-props;
+    @include modules.tooltip-rules;
+  }
+  @include modules.tooltip-styles;
+
+  &-badge {
+    @include modules.badge-props;
+    @include modules.badge-rules;
+  }
+  @include modules.badge-styles;
+
   &-footer {
     @include modules.footer-props;
     @include modules.footer-rules;
@@ -98,5 +131,23 @@
     @include modules.list-rules;
   }
   @include modules.list-styles;
+
+  &-scrollbar {
+    @include modules.scrollbar-props;
+    @include modules.scrollbar-rules;
+  }
+  @include modules.scrollbar-styles;
+
+  &-content {
+    @include modules.content-props;
+    @include modules.content-rules;
+  }
+  @include modules.content-styles;
+
+  // &-global {
+  //   @include modules.global-props;
+  //   @include modules.global-styles;
+  // }
+
 
 }

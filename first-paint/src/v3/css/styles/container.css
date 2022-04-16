@@ -1,13 +1,5 @@
 /* stylelint-disable declaration-colon-newline-after */
 /* stylelint-disable declaration-empty-line-before */
-/* stylelint-disable declaration-colon-newline-after */
-/*
- ***************************************
- FirsPaint
- Author: Shawn Sandy
- Date: 2022-02-01
- ***************************************
-*/
 .fp-container {
   --bx-flow: column wrap;
   --bx-align: flex-start;

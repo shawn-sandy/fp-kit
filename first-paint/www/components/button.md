@@ -72,6 +72,23 @@ Default Button
 </button>
 ```
 
+### Primary Style
+
+```html preview
+<button type="button" style="--btnPrimary: var(--y)">
+Primary Style Button
+</button>
+```
+
+### Large Style
+
+
+```html preview
+<button type="button" style="--btnLg: var(--y)">
+Large style Button
+</button>
+```
+
 ### Disabled Button
 
 For disabled buttons add a disabled attribute `[disabled]`
