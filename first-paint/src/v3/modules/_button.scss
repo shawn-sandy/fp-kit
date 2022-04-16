@@ -8,13 +8,7 @@
   --btn-pill: 100rem;
   --btn-spc: 0.25rem;
   --btn-wspc: nowrap;
-  // styles
-  // --btnPrimary: ;
-  // --btn-bg: var(--btnPrimary, blue);
-  // --btn-cl: var(--btnPrimary, white);
-  // --btnLg: ;
-  // --btn-fs: var(--btnLg, 1.5rem);
-  // --btn-py: var(--btnLg, 1rem);
+
   @content;
 }
 
@@ -33,7 +27,7 @@
   gap: var(--btn-gap, 1rem);
   white-space: var(--btn-wspc);
   margin: var(--btn-spc);
-  transition: all 0.2s ease;
+  transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
 
   &[type]{

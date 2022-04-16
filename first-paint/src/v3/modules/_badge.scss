@@ -4,23 +4,23 @@
   --beta: orange;
   --stable: green;
   --production: blue;
-  --pd: 0;
-  --py: 0.2rem;
-  --px: 0.7rem;
-  --fs: 0.8rem;
-  --bg: lightgray;
-  --bdr: none;
-  --rds: 99rem;
-  --cl: inherit;
-  --tt: capitalize;
-  --decoration: none;
+  --note-pd: 0;
+  --note-py: 0.2rem;
+  --note-px: 0.7rem;
+  --note-fs: 0.8rem;
+  --note-bg: lightgray;
+  --note-bdr: none;
+  --note-rds: 99rem;
+  --note-cl: inherit;
+  --note-tt: capitalize;
+  --note-decoration: none;
   @content;
 }
 
 @mixin rules {
   // * css rules/styles
   padding-inline: var(--note-px, var(--px));
-  padding-block: var(--note-cl, var(--py));
+  padding-block: var(--note-py, var(--py));
   color: var(--note-cl, var(--cl));
   font-size: var(--note-fs, var(--fs));
   font-weight: var(--note-fw, normal);
@@ -42,11 +42,11 @@
 @mixin styles {
   :not(span)[role="note"] {
     // @include props;
-    --bg: whitesmoke;
-    --rds: 1rem;
-    --px: 1.5rem;
-    --py: 1.5rem;
-    --note-tt: normal;
+    --note-bg: whitesmoke;
+    --note-rds: 1rem;
+    --note-px: 1.5rem;
+    --note-py: 1.5rem;
+    --note-note-tt: normal;
   }
 
   [style="--note-bg"] {

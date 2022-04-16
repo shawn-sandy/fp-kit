@@ -207,7 +207,7 @@ hr {
   gap: var(--btn-gap, 1rem);
   white-space: var(--btn-wspc);
   margin: var(--btn-spc);
-  transition: all 0.2s ease;
+  transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
 }
 .fp-btn[type] {
