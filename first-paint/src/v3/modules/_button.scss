@@ -9,12 +9,12 @@
   --btn-spc: 0.25rem;
   --btn-wspc: nowrap;
   // styles
-  --btnPrimary: ;
-  --btn-bg: var(--btnPrimary, blue);
-  --btn-cl: var(--btnPrimary, white);
-  --btnLg: ;
-  --btn-fs: var(--btnLg, 1.5rem);
-  --btn-py: var(--btnLg, 1rem);
+  // --btnPrimary: ;
+  // --btn-bg: var(--btnPrimary, blue);
+  // --btn-cl: var(--btnPrimary, white);
+  // --btnLg: ;
+  // --btn-fs: var(--btnLg, 1.5rem);
+  // --btn-py: var(--btnLg, 1rem);
   @content;
 }
 
@@ -34,10 +34,10 @@
   white-space: var(--btn-wspc);
   margin: var(--btn-spc);
   transition: all 0.2s ease;
-  background-color: var(--btn-bg, var(--btn));
+  background-color: var(--btn-bg, var(--btn, lightgray));
 
   &[type]{
-    background-color: var(--btn-bg, var(--btn));
+    background-color: var(--btn-bg, var(--btn, lightgray));
     --btn-bdr: solid var(--btn-sg);
   }
   &[type="submit"],
@@ -53,7 +53,7 @@
   &:hover {
     --btn-bg: lightgray;
     --btn-cl: var(--btn-cl-hover);
-    background-color: var(--btn-bg-hover, var(--btn-bg));
+    background-color: var(--btn-bg-over, var(--btn, lightgray));
     filter: invert(1) hue-rotate (180deg);
     transform: scale(0.95);
   }
