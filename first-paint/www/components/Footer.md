@@ -53,15 +53,24 @@
 ### Custom variables
 
 ```css
---color: #000;
+  --fs: 0.9rem;
+  --footer-fs: 0.9rem;
+  // --footer-bg: lightgray;
+  --footer-dsp: flex;
+  --footer-direction: column;
 ```
 
 ### Footer properties (rules)
 
 ```css
-Footer {
-  color: var(--color, currentColor);
-}
+  display: var(--footer-dsp);
+  flex-direction: var(--footer-direction);
+  font-size: var(--footer-fs, var(--fs));
+
+  p {
+    --p-fs: var(--footer-fs, var(--fs));
+  }
+  @content;
 ```
 
 ## Examples

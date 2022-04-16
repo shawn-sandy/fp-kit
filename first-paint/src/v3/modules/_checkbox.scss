@@ -47,14 +47,6 @@
     -webkit-appearance: var(--chk-appearance);
     -moz-appearance: var(--chk-appearance);
     line-height: 1;
-    // border-radius: var(--check-rds);
-    // cursor: pointer;
-    // margin: var(--chk-mg, 0);
-    // width: var(--chk-size);
-    // height: var(--chk-size);
-    // accent-color: var(--chk-accent);
-    // background-color: var(--chk-bg);
-    // border: thick solid gray;
 
     &::before {
       --chk-bdr-cl: darkgreen;

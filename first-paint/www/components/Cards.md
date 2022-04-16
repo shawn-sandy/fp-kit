@@ -10,11 +10,9 @@ To style a card we repurpose `role="presentation` attribute on a `div` element.
 
 <div role="presentation">
   <h3>Card Title</h3>
-  <article>
     <p>
       Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
     </p>
-  </article>
   <div role="footer">
     <a href="#">Read More</a>
   </div>

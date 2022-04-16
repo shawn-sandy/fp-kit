@@ -33,30 +33,37 @@ Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat la
   --beta: orange;
   --stable: green;
   --production: blue;
-  --pd: 0;
-  --py: 0.2rem;
-  --px: 0.7rem;
-  --fs: 0.7rem;
-  --bg: lightgray;
-  --bdr: none;
-  --rds: 99rem;
-  --cl: inherit;
-  --tt: capitalize;
-  --decoration: none;
+  --note-pd: 0;
+  --note-py: 0.2rem;
+  --note-px: 0.7rem;
+  --note-fs: 0.8rem;
+  --note-bg: lightgray;
+  --note-bdr: none;
+  --note-rds: 99rem;
+  --note-cl: inherit;
+  --note-tt: capitalize;
+  --note-decoration: none;
 ```
 
 ### Badge properties (rules)
 
 ```css
-    padding-inline: var(--note-px, var(--px));
-    padding-block: var(--note-cl, var(--py));
-    color: var(--note-cl, var(--cl));
-    font-size: var(--note-fs, var(--fs));
-    border: var(--note-brd, var(--bdr));
-    border-radius: var(--note-rds, var(--rds));
-    background-color:  var(--note, var(--bg));
-    text-decoration: var(--note-decoration, var(--decoration));
-    text-transform: var(--note-tt, var(--tt));
+  padding-inline: var(--note-px, var(--px));
+  padding-block: var(--note-py, var(--py));
+  color: var(--note-cl, var(--cl));
+  font-size: var(--note-fs, var(--fs));
+  font-weight: var(--note-fw, normal);
+  border: var(--note-brd, var(--bdr));
+  border-radius: var(--note-rds, var(--rds));
+  background-color: var(--note, var(--bg));
+  text-decoration: var(
+    --note-decoration,
+    var(--decoration)
+  );
+  text-transform: var(--note-tt, var(--tt));
+  --note-bg: var(--note-beta, var(--beta));
+
+  @content;
 ```
 
 ## Examples

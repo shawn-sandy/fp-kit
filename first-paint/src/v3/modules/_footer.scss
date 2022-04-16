@@ -2,16 +2,18 @@
 @mixin props() {
   // * css custom properties
   --fs: 0.9rem;
+  --footer-fs: 0.9rem;
+  // --footer-bg: lightgray;
+  --footer-dsp: flex;
+  --footer-direction: column;
 
   @content;
 }
 
 @mixin rules {
-  display: flex;
-  flex-direction: column;
+  display: var(--footer-dsp);
+  flex-direction: var(--footer-direction);
   font-size: var(--footer-fs, var(--fs));
-  section {
-  }
 
   p {
     --p-fs: var(--footer-fs, var(--fs));
