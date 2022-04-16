@@ -304,7 +304,7 @@ hr {
   white-space: var(--btn-wspc);
   margin: var(--btn-spc);
   transition: all 0.2s ease;
-  background-color: var(--btn-bg, var(--btn, lightgray));
+  background-color: var(--btn-bg, var(--btn));
 }
 .fp-btn[type] {
   background-color: var(--btn-bg, var(--btn, lightgray));
