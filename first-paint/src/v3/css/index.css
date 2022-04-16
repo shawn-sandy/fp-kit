@@ -827,8 +827,14 @@ button,
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
   --btn-spc: 0.25rem;
-  --btn-bg: lightgray;
   --btn-wspc: nowrap;
+  --btnPrimary: ;
+  --btn-bg: var(--btnPrimary, blue);
+  --btn-cl: var(--btnPrimary, white);
+  --btnLg: ;
+  --btn-fs: var(--btnLg, 1.5rem);
+  --btn-py: var(--btnLg, 1rem);
+  font-size: var(--btn-fs, 0.8125rem);
   min-height: 2.5rem;
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
@@ -836,19 +842,18 @@ button,
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
-  font-size: var(--btn-fs, 0.8125rem);
   color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
   gap: var(--btn-gap, 1rem);
   white-space: var(--btn-wspc);
   margin: var(--btn-spc);
   transition: all 0.2s ease;
-  background-color: var(--btn);
+  background-color: var(--btn-bg, var(--btn));
 }
 button[type],
 [style*="--btn"][type],
 [role=button][type] {
-  background-color: var(--btn-bg);
+  background-color: var(--btn-bg, var(--btn));
   --btn-bdr: solid var(--btn-sg);
 }
 button[type=submit], button[style*=submit],
@@ -905,7 +910,7 @@ button[disabled] {
   opacity: var(--btn-opacity-disabled, 0.5);
 }
 button:hover {
-  --btn-bg: lightgray;
+  --btn-bg: var(--btn-bg-hover, lightgray);
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg-hover, var(--btn-bg));
   filter: invert(1) hue-rotate 180deg;

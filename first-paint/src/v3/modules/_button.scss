@@ -7,14 +7,20 @@
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
   --btn-spc: 0.25rem;
-  --btn-bg: lightgray;
   --btn-wspc: nowrap;
+  // styles
+  --btnPrimary: ;
+  --btn-bg: var(--btnPrimary, blue);
+  --btn-cl: var(--btnPrimary, white);
+  --btnLg: ;
+  --btn-fs: var(--btnLg, 1.5rem);
+  --btn-py: var(--btnLg, 1rem);
   @content;
 }
 
 @mixin rules() {
   @include props;
-
+  font-size: var(--btn-fs, calc(13rem / 16));
   min-height: calc(40rem / 16);
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
@@ -22,17 +28,16 @@
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
-  font-size: var(--btn-fs, calc(13rem / 16));
   color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
   gap: var(--btn-gap, 1rem);
   white-space: var(--btn-wspc);
   margin: var(--btn-spc);
   transition: all 0.2s ease;
-  background-color: var(--btn);
+  background-color: var(--btn-bg, var(--btn));
 
   &[type]{
-    background-color: var(--btn-bg);
+    background-color: var(--btn-bg, var(--btn));
     --btn-bdr: solid var(--btn-sg);
   }
   &[type="submit"],
@@ -51,7 +56,6 @@
     background-color: var(--btn-bg-hover, var(--btn-bg));
     filter: invert(1) hue-rotate (180deg);
     transform: scale(0.95);
-
   }
 
   &[type="reset"],
@@ -85,7 +89,7 @@
     }
 
     &:hover {
-      --btn-bg: lightgray;
+      --btn-bg: var(--btn-bg-hover, lightgray);
       --btn-cl: var(--btn-cl-hover);
       background-color: var(--btn-bg-hover, var(--btn-bg));
       filter: invert(1) hue-rotate (180deg);
