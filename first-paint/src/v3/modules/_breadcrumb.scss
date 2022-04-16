@@ -5,7 +5,7 @@
   --crumb-direction: row;
   --crumb-gap: 0.5rem;
   --crumb-style: none;
-  --crumb-fs: var(--fs-2);
+  --crumb-fs: var(--fs-3);
   --crumb-icon: "\002F";
   --crumb-cl: currentColor;
   @content;
@@ -42,9 +42,11 @@
 }
 
 @mixin module {
-  nav > ol[aria-label] {
+  nav > {
+   :where(ol[aria-label], div[role="list"])  {
     @include props;
     @include rules;
+  }
   }
   @include styles;
 }

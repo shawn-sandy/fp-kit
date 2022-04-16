@@ -61,7 +61,7 @@
     @include props;
     @include icons;
     @include rules;
-  }
+  }_text
   select * {
     padding-inline: var(--slt-px);
   }

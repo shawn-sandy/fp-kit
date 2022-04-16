@@ -32,8 +32,6 @@
     var(--decoration)
   );
   text-transform: var(--note-tt, var(--tt));
-
-
   --note-bg: var(--note-beta, var(--beta));
 
   @content;
