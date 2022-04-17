@@ -211,6 +211,27 @@ hr {
 /**
 *
 */
+main, header, footer {
+  font-size: var(--fs);
+}
+main > section, header > section, footer > section {
+  width: var(--lt-min);
+  margin-inline: auto;
+}
+
+section:not(nav) {
+  margin-inline: auto;
+  padding-block: var(--fs-2);
+}
+
+hr {
+  width: 100%;
+  height: 0.05rem;
+  background-color: lightgray;
+  border: none;
+  margin-block: 3rem;
+}
+
 h1,
 h2,
 h3,

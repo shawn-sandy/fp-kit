@@ -24,6 +24,7 @@
 @use "./modules/content";
 // @use "../modules/fp";
 @use "./modules/breadcrumb";
+@use "./styles/layout.scss";
 // components
 @use "./components/type.scss";
 // @include container.module();
