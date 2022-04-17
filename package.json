@@ -68,6 +68,7 @@
     "@shawnsandy/first-paint": "^2.1.4",
     "@shawnsandy/ideas": "^0.3.8",
     "@shawnsandy/mix": "^0.8.10",
+    "auto": "^10.36.5",
     "auto-changelog": "^2.3.0",
     "conventional-changelog-atom": "^2.0.8",
     "cz-conventional-changelog": "^3.0.1",
