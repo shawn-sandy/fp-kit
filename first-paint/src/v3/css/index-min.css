@@ -804,11 +804,12 @@ button,
   --btn-pill: 100rem;
   --btn-spc: 0.25rem;
   --btn-wspc: nowrap;
+  --btn-fs: calc(13rem / 16);
   font-size: var(--btn-fs, 0.8125rem);
   min-height: 2.5rem;
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, 0.5rem);
+  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.8));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
