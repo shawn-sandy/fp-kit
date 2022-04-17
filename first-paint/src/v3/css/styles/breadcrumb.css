@@ -1,0 +1,28 @@
+.fp-breadcrumb {
+  --crumb-dsp: flex;
+  --crumb-direction: row;
+  --crumb-gap: 0.5rem;
+  --crumb-style: none;
+  --crumb-fs: var(--fs-3);
+  --crumb-icon: "/";
+  --crumb-cl: currentColor;
+  display: var(--crumb-dsp);
+  direction: var(--crumb-direction);
+  gap: var(--crumb-gap);
+  list-style: var(--crumb-style);
+  list-style: none;
+  font-size: var(--crumb-fs);
+  color: var(--crumb-cl);
+}
+.fp-breadcrumb li {
+  color: var(--crumb-cl);
+}
+.fp-breadcrumb li + li {
+  color: currentColor;
+}
+.fp-breadcrumb li + li::before {
+  content: var(--crumb-icon, "/");
+  color: currentColor;
+}
+
+/*# sourceMappingURL=breadcrumb.css.map */
