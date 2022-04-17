@@ -652,16 +652,29 @@ hr {
   margin-block: 3rem;
 }
 
+main, header, footer {
+  font-size: var(--fs);
+}
+main > section, header > section, footer > section {
+  width: var(--lt-min);
+  margin-inline: auto;
+}
+
+section:not(nav) {
+  margin-inline: auto;
+  padding-block: var(--fs-2);
+}
+
+hr {
+  width: 100%;
+  height: 0.05rem;
+  background-color: lightgray;
+  border: none;
+  margin-block: 3rem;
+}
+
 /* stylelint-disable declaration-colon-newline-after */
 /* stylelint-disable declaration-empty-line-before */
-/* stylelint-disable declaration-colon-newline-after */
-/*
- ***************************************
- FirsPaint
- Author: Shawn Sandy
- Date: 2022-02-01
- ***************************************
-*/
 /* stylelint-disable declaration-colon-newline-after */
 /**
  * **************************************
@@ -1146,7 +1159,7 @@ section:where([role="region"]) {
   width: 100%;
 }
 
-img {
+img[alt][width][height] {
   --img-xs: 10vw;
   --img-sm: 25vw;
   --img-md: 50vw;
@@ -1165,17 +1178,17 @@ img {
      object-position: var(--img-position);
   aspect-ratio: var(--img-ratio);
 }
-img[width] {
+img[alt][width][height][width] {
   width: var(--img-w, auto);
 }
-img[width][height] {
+img[alt][width][height][width][height] {
   height: var(--img-h, auto);
 }
-img[src$=".svg"] {
+img[alt][width][height][src$=".svg"] {
   height: auto;
   width: auto;
 }
-img + * {
+img[alt][width][height] + * {
   margin-block: 1rem 0;
 }
 
@@ -1422,30 +1435,29 @@ input[id][type]:not([type=checkbox], [type=radio])::placeholder {
 }
 
 textarea {
-  --ta-bdr-s: solid;
-  --ta-bdr-w: thin;
-  --ta-bdr-cl: lightgray;
-  --ta-px: .5rem;
-  --ta-py: .5rem;
-  --ta-fs: var(--fs);
-  --ta-min-w: var(--min-w-800);
-  --ta-min-h: calc(120rem / 16);
-  --ta-overflow: auto;
-  --ta-appearance: none;
-  --fs: .95rem;
-  border-style: var(--ta-bdr-s);
-  border-width: var(--ta-bdr-w);
-  border-color: var(--ta-bdr-cl);
-  padding-inline: var(--ta-px);
-  padding-block: var(--ta-py);
-  font-size: var(--ta-fs);
-  min-width: var(--ta-min-w);
-  min-height: var(--ta-min-h);
-  overflow-y: var(--overflow-x, var(--ta-overflow));
-  overflow-x: var(--overflow, var(--ta-overflow));
+  --txa-bdr-s: solid;
+  --txa-bdr-w: thin;
+  --txa-bdr-cl: lightgray;
+  --txa-px: .5rem;
+  --txa-py: .5rem;
+  --txa-fs: .95rem;
+  --txa-min-w: var(--min-w-800);
+  --txa-min-h: calc(120rem / 16);
+  --txa-overflow: auto;
+  --txa-appearance: none;
+  border-style: var(--txa-bdr-s);
+  border-width: var(--txa-bdr-w);
+  border-color: var(--txa-bdr-cl);
+  padding-inline: var(--txa-px);
+  padding-block: var(--txa-py);
+  font-size: var(--txa-fs, 0.95rem);
+  min-width: var(--txa-min-w);
+  min-height: var(--txa-min-h);
+  overflow-y: var(--overflow-x, var(--txa-overflow));
+  overflow-x: var(--overflow, var(--txa-overflow));
   background-clip: padding-box;
-  -webkit-appearance: var(--ta-appearance);
-  appearance: var(--ta-appearance);
+  -webkit-appearance: var(--txa-appearance);
+  appearance: var(--txa-appearance);
 }
 
 button,
@@ -1456,29 +1468,29 @@ button,
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
   --btn-spc: 0.25rem;
-  --btn-bg: lightgray;
   --btn-wspc: nowrap;
+  --btn-fs: calc(13rem / 16);
+  font-size: var(--btn-fs, 0.8125rem);
   min-height: 2.5rem;
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, 0.5rem);
+  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.8));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   -webkit-text-decoration: var(--btn-deco, none);
           text-decoration: var(--btn-deco, none);
-  font-size: var(--btn-fs, 0.8125rem);
   color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
   gap: var(--btn-gap, 1rem);
   white-space: var(--btn-wspc);
   margin: var(--btn-spc);
-  transition: all 0.2s ease;
-  background-color: var(--btn);
+  transition: var(--tran-all);
+  background-color: var(--btn-bg, var(--btn));
 }
 button[type],
 [style*="--btn"][type],
 [role=button][type] {
-  background-color: var(--btn-bg);
+  background-color: var(--btn-bg, var(--btn, lightgray));
   --btn-bdr: solid var(--btn-sg);
 }
 button[type=submit], button[style*=submit],
@@ -1500,7 +1512,7 @@ button:hover,
 [role=button]:hover {
   --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
-  background-color: var(--btn-bg-hover, var(--btn-bg));
+  background-color: var(--btn-bg-over, var(--btn, lightgray));
   -webkit-filter: invert(1) hue-rotate 180deg;
           filter: invert(1) hue-rotate 180deg;
   -webkit-transform: scale(0.95);
@@ -1520,37 +1532,6 @@ button[type=submit], button[style*="--btn-submit"],
 [style*="--btn"][style*="--btn-submit"],
 [role=button][type=submit],
 [role=button][style*="--btn-submit"] {
-  --btn-bg: var(--blue-500);
-  --btn-cl: #fff;
-  --btn-color: rgb(231, 231, 231);
-  --btn-border: none;
-}
-
-button[type=submit],
-[style*=submit] {
-  --btn-bg: darkblue;
-  --btn-color: white;
-}
-
-button[disabled] {
-  cursor: var(--btn-cursor-disabled, not-allowed);
-  opacity: var(--btn-opacity-disabled, 0.5);
-}
-button:hover {
-  --btn-bg: lightgray;
-  --btn-cl: var(--btn-cl-hover);
-  background-color: var(--btn-bg-hover, var(--btn-bg));
-  -webkit-filter: invert(1) hue-rotate 180deg;
-          filter: invert(1) hue-rotate 180deg;
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-button[type=reset], button[style*="--btn-reset"] {
-  --btn-bg: transparent;
-  --btn-color: gray;
-  --btn-bdr: gray medium solid;
-}
-button[type=submit], button[style*="--btn-submit"] {
   --btn-bg: var(--blue-500);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
@@ -1635,7 +1616,7 @@ select {
   padding-right: 30px;
 }
 
-select * {
+_text select * {
   padding-inline: var(--slt-px);
 }
 
@@ -1700,18 +1681,18 @@ p[role=note] {
   --beta: orange;
   --stable: green;
   --production: blue;
-  --pd: 0;
-  --py: 0.2rem;
-  --px: 0.7rem;
-  --fs: 0.8rem;
-  --bg: lightgray;
-  --bdr: none;
-  --rds: 99rem;
-  --cl: inherit;
-  --tt: capitalize;
-  --decoration: none;
+  --note-pd: 0;
+  --note-py: 0.2rem;
+  --note-px: 0.7rem;
+  --note-fs: 0.8rem;
+  --note-bg: lightgray;
+  --note-bdr: none;
+  --note-rds: 99rem;
+  --note-cl: inherit;
+  --note-tt: capitalize;
+  --note-decoration: none;
   padding-inline: var(--note-px, var(--px));
-  padding-block: var(--note-cl, var(--py));
+  padding-block: var(--note-py, var(--py));
   color: var(--note-cl, var(--cl));
   font-size: var(--note-fs, var(--fs));
   font-weight: var(--note-fw, normal);
@@ -1725,11 +1706,11 @@ p[role=note] {
 }
 
 :not(span)[role=note] {
-  --bg: whitesmoke;
-  --rds: 1rem;
-  --px: 1.5rem;
-  --py: 1.5rem;
-  --note-tt: normal;
+  --note-bg: whitesmoke;
+  --note-rds: 1rem;
+  --note-px: 1.5rem;
+  --note-py: 1.5rem;
+  --note-note-tt: normal;
 }
 
 [style="--note-bg"] {
@@ -1743,8 +1724,11 @@ p[role=note] {
 footer:not([aria-label], [role=footer]),
 [role=contentinfo]:not([aria-label], [role=footer]) {
   --fs: 0.9rem;
-  display: flex;
-  flex-direction: column;
+  --footer-fs: 0.9rem;
+  --footer-dsp: flex;
+  --footer-direction: column;
+  display: var(--footer-dsp);
+  flex-direction: var(--footer-direction);
   font-size: var(--footer-fs, var(--fs));
 }
 footer:not([aria-label], [role=footer]) p,
@@ -1801,12 +1785,12 @@ ul, [style*="--list"] {
   background: var(--scroll-bg);
 }
 
-nav > ol[aria-label] {
+nav > :where(ol[aria-label], div[role="list"]) {
   --crumb-dsp: flex;
   --crumb-direction: row;
   --crumb-gap: 0.5rem;
   --crumb-style: none;
-  --crumb-fs: var(--fs-2);
+  --crumb-fs: var(--fs-3);
   --crumb-icon: "/";
   --crumb-cl: currentColor;
   display: var(--crumb-dsp);
@@ -1817,13 +1801,13 @@ nav > ol[aria-label] {
   font-size: var(--crumb-fs);
   color: var(--crumb-cl);
 }
-nav > ol[aria-label] li {
+nav > :where(ol[aria-label], div[role="list"]) li {
   color: var(--crumb-cl);
 }
-nav > ol[aria-label] li + li {
+nav > :where(ol[aria-label], div[role="list"]) li + li {
   color: currentColor;
 }
-nav > ol[aria-label] li + li::before {
+nav > :where(ol[aria-label], div[role="list"]) li + li::before {
   content: var(--crumb-icon, "/");
   color: currentColor;
 }
