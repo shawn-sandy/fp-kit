@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.14.6](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.5...@shawnsandy/first-paint@2.14.6) (2022-04-17)
+
+
+### Features
+
+* **beta:** add dynamic button block-padding ([8f84cd0](https://github.com/shawn-sandy/fp-kit/commit/8f84cd09f2ce9e19fab945f83d76600c626986f3))
+* **beta:** add layout to index.scss ([32a0496](https://github.com/shawn-sandy/fp-kit/commit/32a049691bc7587196dc1a38e64c213098fa1ef4))
+* **beta:** add min styles/full stylesheets ([5d8be8b](https://github.com/shawn-sandy/fp-kit/commit/5d8be8b9d7c7dc9dcfa5f04d65783822442461a9))
+* **beta:** add min styles/full stylesheets ([0f78698](https://github.com/shawn-sandy/fp-kit/commit/0f78698dd933b5a2279e488a9c20e4a4fcac6818))
+* **beta:** minor button enhancements ([89b7dd0](https://github.com/shawn-sandy/fp-kit/commit/89b7dd08257401369ef650d77b31ed431b401c07))
+* **beta:** release build ([e3f6913](https://github.com/shawn-sandy/fp-kit/commit/e3f6913293634dd141de8e7c70331b438d980f97))
+
+
+
+
+
 ## [2.14.5](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.4...@shawnsandy/first-paint@2.14.5) (2022-04-15)
 
 
