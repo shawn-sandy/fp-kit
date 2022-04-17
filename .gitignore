@@ -117,3 +117,4 @@ fp-react/lib/
 /projects/test-package
 /components/react/fp-datatable/lib
 !/first-paint/www
+/first-paint/src/v3/css-1
