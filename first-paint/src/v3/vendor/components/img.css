@@ -1,4 +1,4 @@
-img {
+img[alt][width][height] {
   --img-xs: 10vw;
   --img-sm: 25vw;
   --img-md: 50vw;
@@ -17,17 +17,17 @@ img {
      object-position: var(--img-position);
   aspect-ratio: var(--img-ratio);
 }
-img[width] {
+img[alt][width][height][width] {
   width: var(--img-w, auto);
 }
-img[width][height] {
+img[alt][width][height][width][height] {
   height: var(--img-h, auto);
 }
-img[src$=".svg"] {
+img[alt][width][height][src$=".svg"] {
   height: auto;
   width: auto;
 }
-img + * {
+img[alt][width][height] + * {
   margin-block: 1rem 0;
 }
 
