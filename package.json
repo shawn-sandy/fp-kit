@@ -124,5 +124,11 @@
   "lint-staged": {
     "**/.*.{js,ts,jsx,tsx}": "eslint --fix",
     "**/.*.{js,jsx,ts,tsx,md,html,scss,json,md}": "prettier --write"
+  },
+  "auto": {
+    "plugins": [
+      "npm"
+    ],
+    "onlyPublishWithReleaseLabel": true
   }
 }
