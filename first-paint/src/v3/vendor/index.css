@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* https://piccalil.li/blog/a-modern-css-reset/ (modified)*/
 /* Box sizing rules */
 *,
@@ -214,27 +213,6 @@ hr {
 /**
 *
 */
-main, header, footer {
-  font-size: var(--fs);
-}
-main > section, header > section, footer > section {
-  width: var(--lt-min);
-  margin-inline: auto;
-}
-
-section:not(nav) {
-  margin-inline: auto;
-  padding-block: var(--fs-2);
-}
-
-hr {
-  width: 100%;
-  height: 0.05rem;
-  background-color: lightgray;
-  border: none;
-  margin-block: 3rem;
-}
-
 h1,
 h2,
 h3,
@@ -407,13 +385,46 @@ p + * {
   --min-w-800: min(100%, calc(800rem /16));
   --w-800: min(100%, calc(800rem /16));
   --align: initial;
+  --spc-0: 0;
+  --spc-1: 0.25rem;
+  --spc-2: 0.5rem;
+  --spc-3: 0.75rem;
+  --spc-4: 1rem;
+  --spc-5: 1.5;
+  --spc-6: 2rem;
+  --spc-7: 2.5rem;
+  --spc-8: 3rem;
+  --spc-9: 3.5rem;
+  --spc-10: 4rem;
+  --spc-11: 4.5rem;
+  --spc-12: 5rem;
+  --spc-13: 6rem;
+  --spc-14: 7rem;
+  --spc-15: 8rem;
+  --spc-16: 9rem;
+  --spc-17: 10rem;
+  --spc-18: 11rem;
+  --spc-19: 12rem;
+  --spc-20: 13rem;
+  --vw-xs: 5vw;
+  --vw-sm: 10vw;
+  --vw-md: 20vw;
+  --vw-lg: 50vw;
+  --vw-xl: 80vw;
+  --vw-xxl: 95vw;
+  --vh-xs: 5vh;
+  --vh-sm: 10vh;
+  --vh-md: 20vh;
+  --vh-lg: 50vh;
+  --vh-xl: 80vh;
+  --vh-xxl: 95vh;
   --fs: 100%;
   --fs-0: clamp(0.8rem, 4vw - 1.5rem, 1rem);
   --fs-1: clamp(0.65rem, 1.3vw + 0.25rem, 0.75rem);
-  --fs-2: clamp(0.5rem, 2vw - 0.5rem, 0.875rem);
-  --fs-3: clamp(0.7rem, 2vw - 0.25rem, 1.125rem);
-  --fs-4: clamp(0.85rem, 2vw - 0.25rem, 1.313rem);
-  --fs-5: clamp(0.95rem, 2vw - 0.25rem, 1.563rem);
+  --fs-2: clamp(0.7rem, 2vw - 0.5rem, 0.875rem);
+  --fs-3: clamp(0.8.5rem, 2vw - 0.25rem, 1.125rem);
+  --fs-4: clamp(0.95rem, 2vw - 0.25rem, 1.313rem);
+  --fs-5: clamp(0.12rem, 2vw - 0.25rem, 1.463rem);
   --fs-6: clamp(1.3rem, 2vw + 0.75rem, 2rem);
   --fs-7: clamp(1.4rem, 4vw - 0.25rem, 2.375rem);
   --fs-8: clamp(1.48rem, 4vw + 0.25rem, 3rem);
@@ -537,129 +548,6 @@ header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialo
   margin: var(--hdr-m);
 }
 
-table {
-  /*  css custom properties */
-  --spc: 0;
-  --mx: var(--sm-x);
-  --my: 0;
-  --tbl-collapse: collapse;
-  --tbl-bdr-w: thin;
-  --tbl-bdr-s: none;
-  --tbl-bdr-cl: var(--light);
-  --tbl-rds: 0.5rem;
-  --tbl-td-py: 1rem;
-  --tbl-td-px: 1rem;
-  --bdr: none;
-  --rds: 1rem;
-  --tbl-cap-bg: transparent;
-  --tbl-hd-bg: whitesmoke;
-  --tbl-cap-fs: var(--fs);
-  --tbl-cap-pd: 1rem;
-  --tbl-cap-rds: .5rem;
-  --tbl-cap-bdr: solid thin lightgray;
-  display: table;
-  font-size: var(--tbl-fs, 0.9em);
-  font-family: var(--fs, sans-serif);
-  width: var(--tbl-width, calc(100% - 0rem));
-  border-collapse: var(--tbl-collapse);
-  display: var(--tbl-dsp, table);
-  border-radius: var(--tbl-rds, 16px);
-  border-spacing: 0;
-  overflow: auto;
-}
-table caption {
-  --fs: var(--fs-4);
-  --align: center;
-  background-color: var(--tbl-cap-bg);
-  padding: var(--tbl-cap-pd);
-}
-table thead {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  border: var(--tbl-cap-bdr);
-}
-table thead tr {
-  --text-align: left;
-  --fw: 500;
-  background-color: var(--tbl-hd-bg);
-  text-align: var(--text-align);
-  border-bottom: var(--tbl-bdr);
-}
-table th,
-table td {
-  padding-block: var(--tbl-td-py);
-  padding-inline: var(--tbl-td-px);
-}
-table tr {
-  background-color: white;
-  border-bottom: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
-}
-table tr:nth-of-type(even) {
-  --tbl-bdr-s: solid;
-}
-table tr td {
-  padding: 1rem;
-}
-table tbody tr:last-of-type {
-  border-bottom: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
-}
-
-details {
-  --details-fs: 1rem;
-  --details-pd: 1rem;
-  --details-color: currentColor;
-  --details-bg: whitesmoke;
-  --details-rds: .5rem;
-  --details-w:"min(100%, 350px)";
-  --detail-cursor: pointer;
-  --summary-pd: 0 1rem 1rem 1rem;
-  --summary-fs: 1.1rem;
-  --summary-color: currentColor;
-  --summary-ls: none;
-  font-size: var(--detail-fs, 1rem);
-  color: var(--detail-color, currentColor);
-  background-color: var(--detail-bg, whitesmoke);
-  border: var(--detail-border, none);
-  border-radius: 0.5rem;
-  width: var(--details, min(100%, 350px));
-}
-details :where(div, aside, p, ul) {
-  padding: var(--summary-pd, 0 1rem 1rem 1rem);
-  background-color: var(--detail-bg);
-}
-details summary {
-  display: flex;
-  place-content: flex-start;
-  place-items: center;
-  gap: 0.7rem;
-  justify-content: space-between;
-  font-size: var(--summary-fs, 1.1rem);
-  color: var(--summary-color, currentColor);
-  padding: var(--details-pd);
-  background-color: var(--summary-bg, transparent);
-  list-style: var(--summary-ls, none);
-  cursor: var(--detail-cursor, pointer);
-  border-bottom: var(--summary-border, none);
-  transition: all 0.2s ease;
-}
-details summary::after {
-  content: "+";
-  font-size: 1.3rem;
-  color: lightgray;
-}
-details summary:hover::after {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  color: currentColor;
-}
-details[open] > summary::after {
-  content: "×";
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 a {
   --link-border: none;
   color: var(--link-color, #0070f3);
@@ -680,8 +568,8 @@ form {
   width: 100%;
 }
 form div + div {
-  -webkit-margin-before: 1rem;
-          margin-block-start: 1rem;
+  -webkit-margin-before: var(--form-spc, 1.5rem);
+          margin-block-start: var(--form-spc, 1.5rem);
 }
 
 label[for] + input,
@@ -828,43 +716,6 @@ figcaption {
   --chk-bg: yellowgreen;
 }
 
-[role=grid], [role=list] {
-  /**
-   * User input values.
-   */
-  --grid-gap: 1rem;
-  --grid-cols: 4;
-  --grid-min-width: calc(250rem / 16);
-  --list-gap: var(--grid-gap);
-  --list-cols: var(--grid-cols);
-  --list-min-width: var(--grid-min-width);
-  --gap-count: calc(var(--grid-cols) - 1);
-  --total-gap-width: calc(
-    var(--gap-count) * var(--grid-gap)
-  );
-  --grid-max-width: calc(
-    (100% - var(--total-gap-width)) / var(--grid-cols)
-  );
-  --list-max-width: var(--grid-max-width);
-}
-[role=grid] [role=row],
-[role=grid] [style*="--row"], [role=grid] [role=listitem], [role=grid] [style*="--listitem"], [role=list] [role=row],
-[role=list] [style*="--row"], [role=list] [role=listitem], [role=list] [style*="--listitem"] {
-  --grid-cols-tpl: repeat(
-    auto-fill,
-    minmax(
-      max(var(--grid-min-width), var(--grid-max-width)),
-      1fr
-    )
-  );
-  grid-template-columns: var(--grid-cols-tpl);
-  grid-gap: var(--grid-gap);
-  display: var(--grid-dsp, grid);
-}
-[role=grid] [style*="--main:"], [role=list] [style*="--main:"] {
-  flex: var(--fx-auto-size);
-}
-
 button,
 [style*="--btn"],
 [role=button] {
@@ -941,45 +792,6 @@ button[type=submit], button[style*="--btn-submit"],
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
-}
-
-div[role=presentation] {
-  --cd-sm: 1rem;
-  --cd-md: 1.5rem;
-  --cd-lg: 2rem;
-  --cd-xl: 3rem;
-  --card-pd: 2rem;
-  --card-sm: 1rem;
-  --card-md: 1.5rem;
-  --card-lg: 2rem;
-  --card-xl: 3rem;
-  --cd-shadow-sm: 0 0.1rem 0.15rem rgba(0, 0, 0, 0.3);
-  --cd-shadow-md: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
-  --cd-shadow-lg: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
-  display: var(--card-dsp, flex);
-  flex-direction: var(--card-direction, column);
-  padding: var(--card, var(--card-pd));
-  border-radius: var(--card-radius, 0.2rem);
-  background-color: var(--card-bg, var(--bg, #fff));
-  box-shadow: var(--card-shadow);
-  border: var(--card-border, thin solid lightgray);
-}
-div[role=presentation] h1,
-div[role=presentation] h2,
-div[role=presentation] h3,
-div[role=presentation] h4 {
-  margin: 0;
-}
-
-[role=footer] {
-  --dsp: flex;
-  --direction: row;
-  --justify: flex-end;
-  --py: .2rem;
-  display: var(--dsp);
-  flex-direction: var(--direction, row);
-  justify-content: var(--justify);
-  padding-block: var(--py);
 }
 
 input[id][type]:not([type=checkbox], [type=radio]) {
@@ -1158,107 +970,6 @@ _text select * {
   padding-inline: var(--slt-px);
 }
 
-dialog, [role=dialog] {
-  --diag-bg: whitesmoke;
-  --diag-bg-img: none;
-  --diag-x: 1.5rem;
-  --diag-y: 1.5rem;
-  --spc: auto;
-  background-color: var(--diag-bg);
-  background-image: var(--diag-bg-img);
-  padding-inline: var(--diag-x);
-  padding-block: var(--diag-y);
-}
-dialog::-webkit-backdrop, [role=dialog]::-webkit-backdrop {
-  background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
-}
-dialog::backdrop, [role=dialog]::backdrop {
-  background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
-}
-
-[role=tooltip], [style*="--tip"] {
-  --tip-bg: black;
-  --tip-cl: white;
-  --tip-rds: 0.2rem;
-  --tip-cubic: cubic-bezier(0.64, 0.09, 0.08, 1);
-  --tip-cursor: pointer;
-  --tip-opacity: 0.9;
-  position: relative;
-  cursor: var(--tip-cursor);
-}
-[role=tooltip]:after, [style*="--tip"]:after {
-  font-size: var(--tip-fs, var(--fs-2));
-  background: var(--tip-bg);
-  color: var(--tip-cl);
-  border-radius: var(--tip-rds);
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  content: attr(aria-label);
-  padding: 6px 10px;
-  top: 1.4rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-2px);
-          transform: translateX(-50%) translateY(-2px);
-  white-space: nowrap;
-  z-index: 2;
-  transition: opacity 0.2s var(--tip-cubic), -webkit-transform 0.2s var(--tip-cubic);
-  transition: opacity 0.2s var(--tip-cubic), transform 0.2s var(--tip-cubic);
-  transition: opacity 0.2s var(--tip-cubic), transform 0.2s var(--tip-cubic), -webkit-transform 0.2s var(--tip-cubic);
-}
-[role=tooltip]:hover:after, [style*="--tip"]:hover:after {
-  display: block;
-  opacity: var(--tip-opacity);
-  visibility: visible;
-  -webkit-transform: translateX(-50%) translateY(0);
-          transform: translateX(-50%) translateY(0);
-}
-
-[role=note],
-p[role=note] {
-  --beta: orange;
-  --stable: green;
-  --production: blue;
-  --note-pd: 0;
-  --note-py: 0.2rem;
-  --note-px: 0.7rem;
-  --note-fs: 0.8rem;
-  --note-bg: lightgray;
-  --note-bdr: none;
-  --note-rds: 99rem;
-  --note-cl: inherit;
-  --note-tt: capitalize;
-  --note-decoration: none;
-  padding-inline: var(--note-px, var(--px));
-  padding-block: var(--note-py, var(--py));
-  color: var(--note-cl, var(--cl));
-  font-size: var(--note-fs, var(--fs));
-  font-weight: var(--note-fw, normal);
-  border: var(--note-brd, var(--bdr));
-  border-radius: var(--note-rds, var(--rds));
-  background-color: var(--note, var(--bg));
-  -webkit-text-decoration: var(--note-decoration, var(--decoration));
-          text-decoration: var(--note-decoration, var(--decoration));
-  text-transform: var(--note-tt, var(--tt));
-  --note-bg: var(--note-beta, var(--beta));
-}
-
-:not(span)[role=note] {
-  --note-bg: whitesmoke;
-  --note-rds: 1rem;
-  --note-px: 1.5rem;
-  --note-py: 1.5rem;
-  --note-note-tt: normal;
-}
-
-[style="--note-bg"] {
-  background-color: var(--note, var(--note-bg));
-}
-
-[style*="--note-scale"], p[style*="--note-scale"] {
-  font-size: var(--note-scale, 75%);
-}
-
 footer:not([aria-label], [role=footer]),
 [role=contentinfo]:not([aria-label], [role=footer]) {
   --fs: 0.9rem;
@@ -1272,80 +983,4 @@ footer:not([aria-label], [role=footer]),
 footer:not([aria-label], [role=footer]) p,
 [role=contentinfo]:not([aria-label], [role=footer]) p {
   --p-fs: var(--footer-fs, var(--fs));
-}
-
-ul, [style*="--list"] {
-  --listOff: ;
-  --list-s: inside;
-  --list-fs: .95rem;
-  --list-lh: 1.5;
-  --list-pxs: 1.5rem;
-  list-style: var(--list-s);
-  font-size: var(--list-fs);
-  line-height: var(--list-lh);
-  -webkit-padding-start: var(--list-pxs);
-          padding-inline-start: var(--list-pxs);
-}
-
-[style*="--listOff"] {
-  --list-s: var(--listOff, none);
-  --list-pxs: var(--listOff, 5px);
-}
-
-[style*="--scroll"], div[role=region] {
-  --scroll-w: 0.5rem;
-  --scroll-h: 0.5rem;
-  --scroll-size: thin;
-  --scroll-bg: gray;
-  --scroll-track-bg: lightgray;
-  --overflow-x: auto;
-  --overflow-y: auto;
-  max-height: var(--scroll, 50vh);
-  overflow-y: var(--overflow-y);
-  overflow-x: var(--overflow-x);
-  scrollbar-width: var(--scroll-size);
-}
-[style*="--scroll"] > *, div[role=region] > * {
-  padding: 10px;
-}
-[style*="--scroll"]::-webkit-scrollbar, div[role=region]::-webkit-scrollbar {
-  width: var(--scroll-w);
-  height: var(--scroll-h);
-  -webkit-transition: opacity 500ms ease;
-  transition: opacity 500ms ease;
-}
-[style*="--scroll"]::-webkit-scrollbar-track, div[role=region]::-webkit-scrollbar-track {
-  /* Background */
-  background: var(--scroll-track-bg);
-}
-[style*="--scroll"]::-webkit-scrollbar-thumb, div[role=region]::-webkit-scrollbar-thumb {
-  /* Foreground */
-  background: var(--scroll-bg);
-}
-
-nav > :where(ol[aria-label], div[role="list"]) {
-  --crumb-dsp: flex;
-  --crumb-direction: row;
-  --crumb-gap: 0.5rem;
-  --crumb-style: none;
-  --crumb-fs: var(--fs-3);
-  --crumb-icon: "/";
-  --crumb-cl: currentColor;
-  display: var(--crumb-dsp);
-  direction: var(--crumb-direction);
-  gap: var(--crumb-gap);
-  list-style: var(--crumb-style);
-  list-style: none;
-  font-size: var(--crumb-fs);
-  color: var(--crumb-cl);
-}
-nav > :where(ol[aria-label], div[role="list"]) li {
-  color: var(--crumb-cl);
-}
-nav > :where(ol[aria-label], div[role="list"]) li + li {
-  color: currentColor;
-}
-nav > :where(ol[aria-label], div[role="list"]) li + li::before {
-  content: var(--crumb-icon, "/");
-  color: currentColor;
 }
