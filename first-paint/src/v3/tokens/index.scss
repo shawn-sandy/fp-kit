@@ -1,7 +1,9 @@
 
 @use "./colors.scss";
 @use "./layout";
+@use "./tokens";
 
 :root {
-  @include layout.props();
+  @include tokens.layout-props();
+  @include tokens.type-props();
 }

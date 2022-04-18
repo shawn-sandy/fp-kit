@@ -14,9 +14,8 @@
 
 <main>
 <hr>
-<section role="grid" style="--grid-cols: 3; margin-block: var(--spc-6)">
-    <div
-      role="row">
+<section role="grid" style="--grid-cols: 3; margin-block: var(--spc-6); --grid-gap: 2rem">
+    <div role="row">
       <div role="gridcell">
         <h4>
         Easy to use</h4>
@@ -45,13 +44,13 @@
       <div role="gridcell">
         <h4>Lightweight & Performant</h4>
         <p>
-          Less the 20kb size and built to ensure that your sties load quickly.
+          Less than 20kb in size and built to ensure that your sties load quickly.
         </p>
       </div>
       <div role="gridcell">
         <h4>Modular</h4>
         <p>
-          Grab the entire library, only the parts you need and extend to your liking.
+          Grab the entire library, only the parts you need or extend to your liking.
         </p>
       </div>
     </div>
