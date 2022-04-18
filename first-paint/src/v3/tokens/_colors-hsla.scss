@@ -1,6 +1,5 @@
 @mixin props {
   :root {
-    :root {
       --fp-gainsboro: hsl(0,0%,86.3%);
       --fp-light-gray: hsl(0,0%,82.7%);
       --fp-silver: hsl(0,0%,75.3%);
@@ -143,4 +142,4 @@
       --fp-medium-violet-red: hsl(322,80.9%,43.1%);
     }
   }
-}
+
