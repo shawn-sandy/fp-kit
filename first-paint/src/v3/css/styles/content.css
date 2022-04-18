@@ -16,7 +16,7 @@
   width: 100%;
 }
 .fp-content form div + div {
-  margin-block-start: 1rem;
+  margin-block-start: var(--form-spc, 1.5rem);
 }
 .fp-content label[for] + input,
 .fp-content label[for] + textarea,

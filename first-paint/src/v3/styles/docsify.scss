@@ -1,4 +1,4 @@
-@use "./all.scss";
+@use "../libs/all.scss";
 
 // customs styles for docsify
 
@@ -97,7 +97,7 @@
 
 .search {
   input {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
   }
 }
 

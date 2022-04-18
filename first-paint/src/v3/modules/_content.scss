@@ -30,7 +30,7 @@
   form {
     width: 100%;
     div + div {
-      margin-block-start: 1rem;
+      margin-block-start: var(--form-spc, 1.5rem);
     }
   }
 
