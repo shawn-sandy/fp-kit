@@ -1,1 +1,147 @@
-h1,h2,h3,h4,h5,h6,p{--fw: var(--fw-medium, 500);--fx-weight: var(--fw-medium);--fs: inherit;line-height:var(--lh);color:var(--cl);margin:var(--m);font-size:inherit;text-shadow:var(--shadow);padding-block:var(--py, var(--p));padding-inline:var(--px, var(--p));display:var(--dsp, block)}p,[style*="--p"]{--p-sm: var(--sm);--p-md: var(--md);--p-lg: var(--lg);--fw: normal;--lh: 1.7;--spacing: 0.5rem;margin:var(--p-m, 0);line-height:var(--lh, 1.6);word-spacing:.05rem;font-size:clamp(.9rem,3vw - 1.5rem,1rem)}p i,[style*="--p"] i{font-style:italic}p strong,[style*="--p"] strong{font-weight:var(--fw-medium)}article>p{font-size:clamp(.9rem,3vw - 1.5rem,1.3rem)}h1,h2,h3,h4,h5,h6{font-size:var(--fs);font-weight:var(--fw)}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p{margin-top:var(--rem)}h1[role=decoration],h1[role=none],h1[role=none],h2[role=decoration],h2[role=none],h2[role=none],h3[role=decoration],h3[role=none],h3[role=none],h4[role=decoration],h4[role=none],h4[role=none],h5[role=decoration],h5[role=none],h5[role=none],h6[role=decoration],h6[role=none],h6[role=none]{font-weight:var(--h-fw, 500)}h1{--fs: var(--fs-7)}h1[role=decoration],h1[role=none]{font-size:var(--h1)}h2{--fs: var(--fs-6)}h2[role=decoration],h2[role=none]{font-size:var(--h2)}h3{--fs: var(--fs-5)}h3[role=decoration],h3[role=none]{font-size:var(--h3)}h4{--fs: var(--fs-4)}h4[role=decoration],h4[role=none]{font-size:var(--h4)}h5{--fs: var(--fs-3)}h5[role=decoration],h5[role=none]{font-size:var(--h5)}h6{--fs: var(--fs-2)}h6[role=decoration],h6[role=none]{font-size:var(--h6)}small,time{--fs: var(--s1)}time{padding:0 0 .5rem}p+p,p+*{margin-top:var(--fs-0)}[style*="--truncate"]{--truncate-lns: 1;--clamp: var(--truncate, var(--truncate-lns));--dsp: --webkit-box;-webkit-box-orient:vertical;overflow:hidden}/*# sourceMappingURL=type.css.map */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  --fw: var(--fw-medium, 500);
+  --fx-weight: var(--fw-medium);
+  --fs: inherit;
+  line-height: var(--lh);
+  color: var(--cl);
+  margin: var(--m);
+  font-size: inherit;
+  text-shadow: var(--shadow);
+  padding-block: var(--py, var(--p));
+  padding-inline: var(--px, var(--p));
+  display: var(--dsp, block);
+}
+
+p,
+[style*="--p"] {
+  --p-sm: var(--sm);
+  --p-md: var(--md);
+  --p-lg: var(--lg);
+  --fw: normal;
+  --lh: 1.7;
+  --spacing: 0.5rem;
+  margin: var(--p-m, 0);
+  line-height: var(--lh, 1.6);
+  word-spacing: 0.05rem;
+  font-size: clamp(0.9rem, 3vw - 1.5rem, 1rem);
+}
+p i,
+[style*="--p"] i {
+  font-style: italic;
+}
+p strong,
+[style*="--p"] strong {
+  font-weight: var(--fw-medium);
+}
+
+article > p {
+  font-size: clamp(0.9rem, 3vw - 1.5rem, 1.3rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--fs);
+  font-weight: var(--fw);
+}
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: var(--rem);
+}
+h1[role=decoration], h1[role=none], h1[role=none],
+h2[role=decoration],
+h2[role=none],
+h2[role=none],
+h3[role=decoration],
+h3[role=none],
+h3[role=none],
+h4[role=decoration],
+h4[role=none],
+h4[role=none],
+h5[role=decoration],
+h5[role=none],
+h5[role=none],
+h6[role=decoration],
+h6[role=none],
+h6[role=none] {
+  font-weight: var(--h-fw, 500);
+}
+
+h1 {
+  --fs: var(--fs-7);
+}
+h1[role=decoration], h1[role=none] {
+  font-size: var(--h1);
+}
+
+h2 {
+  --fs: var(--fs-6);
+}
+h2[role=decoration], h2[role=none] {
+  font-size: var(--h2);
+}
+
+h3 {
+  --fs: var(--fs-5);
+}
+h3[role=decoration], h3[role=none] {
+  font-size: var(--h3);
+}
+
+h4 {
+  --fs: var(--fs-4);
+}
+h4[role=decoration], h4[role=none] {
+  font-size: var(--h4);
+}
+
+h5 {
+  --fs: var(--fs-3);
+}
+h5[role=decoration], h5[role=none] {
+  font-size: var(--h5);
+}
+
+h6 {
+  --fs: var(--fs-2);
+}
+h6[role=decoration], h6[role=none] {
+  font-size: var(--h6);
+}
+
+small,
+time {
+  --fs: var(--s1);
+}
+
+time {
+  padding: 0 0 0.5rem;
+}
+
+p + p,
+p + * {
+  margin-top: var(--fs-0);
+}
+
+[style*="--truncate"] {
+  --truncate-lns: 1;
+  --clamp: var(--truncate, var(--truncate-lns));
+  --dsp: --webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=type.css.map */

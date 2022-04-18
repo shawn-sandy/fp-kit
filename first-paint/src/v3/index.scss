@@ -6,9 +6,7 @@
 @use "./modules/button";
 @use "./modules/checkbox";
 @use "./modules/img";
-@use "./modules/details-summary";
 @use "./modules/nav";
-@use "./modules/table";
 @use "./modules/grid";
 @use "./modules/cards";
 @use "./modules/dialog";
@@ -16,38 +14,30 @@
 @use "./modules/radio";
 @use "./modules/textarea";
 @use "./modules/select";
-@use "./modules/tooltip";
-@use "./modules/badge";
 @use "./modules/footer";
-@use "./modules/list";
-@use "./modules/scrollbar";
 @use "./modules/content";
-// @use "../modules/fp";
-@use "./modules/breadcrumb";
-@use "./styles/layout.scss";
+// custom modules
+@forward "./modules/details-summary" as detailsSummary-*;
+@forward "./modules/tooltip" as tooltip-*;
+@forward "./modules/badge" as badge-*;
+@forward "./modules/list" as list-*;
+@forward "./modules/scrollbar" as scrollbar-*;
+@forward "./modules/breadcrumb" as breadcrumb-*;
+@forward "./modules/table" as table-*;
 // components
 @use "./components/type.scss";
-// @include container.module();
 @include props.module();
 @include nav.module();
 @include header.module();
-@include table.module();
-@include details-summary.module();
 @include content.module();
 @include img.module();
 @include checkbox.module();
-@include grid.module();
 @include button.module();
-@include cards.module();
 @include input.module();
 @include radio.module();
 @include textarea.module();
 @include select.module();
-@include dialog.module();
-@include tooltip.module();
-@include badge.module();
 @include footer.module();
-@include list.module();
-@include scrollbar.module();
-@include breadcrumb.module();
+
+
 
