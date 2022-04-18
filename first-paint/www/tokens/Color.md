@@ -1,4 +1,4 @@
-# CSS Named Color Tokens (variables)   <span role="note" style="--note: var(--beta)">Beta</span>
+# CSS HSL colors  (variables)   <span role="note" style="--note: var(--beta)">Beta</span>
 
 > CSS named colors as tokens
 

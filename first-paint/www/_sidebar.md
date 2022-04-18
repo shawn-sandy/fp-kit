@@ -3,6 +3,7 @@
 - [Features](/FEATURES)
 - [Guides](/GUIDES)
 - [Custom Props](/tokens/Tokens)
+  - [HSL Color](/tokens/ColorHSL)
   - [Scaled Color Tokens](/tokens/Color)
   - [Open Color Tokens](/tokens/Opencolor)
   <!-- - [Named Color Tokens](/tokens/Colornames) -->
