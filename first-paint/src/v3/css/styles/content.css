@@ -9,7 +9,7 @@
 }
 .fp-content a:hover {
   --link-decoration: underline;
-  filter: var(--hov-filter, invert(0.5));
+  filter: var(--filter);
 }
 .fp-content a:visited {
   color: var(--link-color, #0070f3);
