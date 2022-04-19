@@ -19,10 +19,9 @@
   font-weight: var(--note-fw, normal);
   border: var(--note-brd, var(--bdr));
   border-radius: var(--note-rds, var(--rds));
-  background-color: var(--note, var(--bg));
+  background-color: var(--note, var(--note-bg));
   text-decoration: var(--note-decoration, var(--decoration));
   text-transform: var(--note-tt, var(--tt));
-  --note-bg: var(--note-beta, var(--beta));
 }
 
 :not(span)[role=note] {
