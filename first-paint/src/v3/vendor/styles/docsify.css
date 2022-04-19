@@ -1146,7 +1146,7 @@ figcaption {
   /**
    * User input values.
    */
-  --grid-gap: 1rem;
+  --grid-gap: 1.5rem;
   --grid-cols: 4;
   --grid-min-width: calc(250rem / 16);
   --list-gap: var(--grid-gap);
@@ -1550,11 +1550,10 @@ p[role=note] {
   font-weight: var(--note-fw, normal);
   border: var(--note-brd, var(--bdr));
   border-radius: var(--note-rds, var(--rds));
-  background-color: var(--note, var(--bg));
+  background-color: var(--note, var(--note-bg));
   -webkit-text-decoration: var(--note-decoration, var(--decoration));
           text-decoration: var(--note-decoration, var(--decoration));
   text-transform: var(--note-tt, var(--tt));
-  --note-bg: var(--note-beta, var(--beta));
 }
 
 :not(span)[role=note] {

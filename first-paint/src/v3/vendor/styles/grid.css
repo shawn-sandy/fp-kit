@@ -9,7 +9,7 @@
   /**
    * User input values.
    */
-  --grid-gap: 1rem;
+  --grid-gap: 1.5rem;
   --grid-cols: 4;
   --grid-min-width: calc(250rem / 16);
   --list-gap: var(--grid-gap);
@@ -26,7 +26,7 @@
   /**
    * User input values.
    */
-  --grid-gap: 1rem;
+  --grid-gap: 1.5rem;
   --grid-cols: 4;
   --grid-min-width: calc(250rem / 16);
   --list-gap: var(--grid-gap);
