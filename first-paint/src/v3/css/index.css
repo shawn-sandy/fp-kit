@@ -468,6 +468,7 @@ nav {
   --nav-gap: 0.5rem;
   --nav-px: 1rem;
   --nav-bg: initial;
+  --nav-filter: initial;
   display: var(--nav-dsp, var(--dsp));
   flex-direction: var(--nav-direction, var(--direction));
   width: var(--nav-w, var(--w));
@@ -496,10 +497,16 @@ nav > section > div {
   --py: 0;
 }
 nav ul > li {
-  --py: 0;
+  display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  padding-inline: var(--nav-px, 0.75rem);
+}
+nav ul > li:hover {
+  background-color: var(--nav-hov-bg, whitesmoke);
 }
 nav img[alt] {
   --px: 0 var(--s1);
@@ -552,10 +559,20 @@ a {
   background-color: var(--link-bg);
   text-decoration: var(--link-decoration, none);
   border: var(--link-border);
-  padding-inline: var(--link-px, 0.5rem);
+  padding-inline: var(--link-px, 0.25rem);
+  transition: var(--tran-all);
 }
 a:hover {
   --link-decoration: underline;
+  filter: var(--hov-filter, invert(0.5));
+}
+a:visited {
+  color: var(--link-color, #0070f3);
+  background-color: var(--link-bg);
+}
+a:active {
+  color: var(--link-color, #0070f3);
+  background-color: var(--link-bg);
 }
 a[role=button], a[style="--btn"] {
   background-color: var(--link-bg);

@@ -10,6 +10,7 @@
   --nav-gap: 0.5rem;
   --nav-px: 1rem;
   --nav-bg: initial;
+  --nav-filter: initial;
   --nav-dsp: flex;
   --nav-direction: row;
   --nav-w: auto;
@@ -21,6 +22,7 @@
   --nav-gap: 0.5rem;
   --nav-px: 1rem;
   --nav-bg: initial;
+  --nav-filter: initial;
   display: var(--nav-dsp, var(--dsp));
   flex-direction: var(--nav-direction, var(--direction));
   width: var(--nav-w, var(--w));
@@ -49,10 +51,16 @@
   --py: 0;
 }
 .fp-nav ul > li {
-  --py: 0;
+  display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  padding-inline: var(--nav-px, 0.75rem);
+}
+.fp-nav ul > li:hover {
+  background-color: var(--nav-hov-bg, whitesmoke);
 }
 .fp-nav img[alt] {
   --px: 0 var(--s1);

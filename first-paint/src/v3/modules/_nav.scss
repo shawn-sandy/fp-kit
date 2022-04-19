@@ -11,6 +11,7 @@
   --nav-gap: 0.5rem;
   --nav-px: 1rem;
   --nav-bg: initial;
+  --nav-filter: initial;
   @content;
 }
 
@@ -25,6 +26,7 @@
   justify-content: var(--nav-justify, var(--justify));
   margin-inline: var(--nav-mx, var(--mx));
   background-color: var(--nav-bg, var(--bg));
+
 
   @media (min-width: calc(980rem / 16)) {
     // --max-w: var(--container-md, var(--pct-8));
@@ -57,10 +59,16 @@
   }
   ul {
     > li {
-      --py: 0;
+      display: flex;
+      align-items: center;
       list-style: none;
       margin: 0;
       padding: 0;
+      min-height: 100%;
+      padding-inline: var(--nav-px, .75rem);
+      &:hover {
+        background-color: var(--nav-hov-bg, whitesmoke);
+      }
     }
   }
 
