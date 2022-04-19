@@ -5,10 +5,21 @@
   -webkit-text-decoration: var(--link-decoration, none);
           text-decoration: var(--link-decoration, none);
   border: var(--link-border);
-  padding-inline: var(--link-px, 0.5rem);
+  padding-inline: var(--link-px, 0.25rem);
+  transition: var(--tran-all);
 }
 .fp-content a:hover {
   --link-decoration: underline;
+  -webkit-filter: var(--filter);
+          filter: var(--filter);
+}
+.fp-content a:visited {
+  color: var(--link-color, #0070f3);
+  background-color: var(--link-bg);
+}
+.fp-content a:active {
+  color: var(--link-color, #0070f3);
+  background-color: var(--link-bg);
 }
 .fp-content a[role=button], .fp-content a[style="--btn"] {
   background-color: var(--link-bg);

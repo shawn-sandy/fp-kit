@@ -29,12 +29,13 @@ p,
   --fw: normal;
   --lh: 1.7;
   --spacing: 0.5rem;
+  --p-fs: var(--fs, clamp(.9rem, 3vw - 1.5rem, 1rem););
 
 
   margin: var(--p-m, 0);
   line-height: var(--lh, 1.6);
   word-spacing: 0.05rem;
-  font-size: clamp(.9rem, 3vw - 1.5rem, 1rem);
+  font-size: var(--p-fs);
 
   i {
     font-style: italic;

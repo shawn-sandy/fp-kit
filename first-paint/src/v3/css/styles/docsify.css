@@ -541,10 +541,11 @@ p,
   --fw: normal;
   --lh: 1.7;
   --spacing: 0.5rem;
+  --p-fs: var(--fs, clamp(.9rem, 3vw - 1.5rem, 1rem););
   margin: var(--p-m, 0);
   line-height: var(--lh, 1.6);
   word-spacing: 0.05rem;
-  font-size: clamp(0.9rem, 3vw - 1.5rem, 1rem);
+  font-size: var(--p-fs);
 }
 p i,
 [style*="--p"] i {
@@ -722,9 +723,9 @@ p + * {
   --fs-0: clamp(0.8rem, 4vw - 1.5rem, 1rem);
   --fs-1: clamp(0.65rem, 1.3vw + 0.25rem, 0.75rem);
   --fs-2: clamp(0.7rem, 2vw - 0.5rem, 0.875rem);
-  --fs-3: clamp(0.8.5rem, 2vw - 0.25rem, 1.125rem);
+  --fs-3: clamp(0.85rem, 2vw - 0.25rem, 1.125rem);
   --fs-4: clamp(0.95rem, 2vw - 0.25rem, 1.313rem);
-  --fs-5: clamp(0.12rem, 2vw - 0.25rem, 1.463rem);
+  --fs-5: clamp(1.1rem, 2vw - 0.25rem, 1.463rem);
   --fs-6: clamp(1.3rem, 2vw + 0.75rem, 2rem);
   --fs-7: clamp(1.4rem, 4vw - 0.25rem, 2.375rem);
   --fs-8: clamp(1.48rem, 4vw + 0.25rem, 3rem);
@@ -767,9 +768,10 @@ nav {
   --nav-justify: space-between;
   --nav-mx: 1rem;
   --nav-align: center;
-  --nav-gap: 0.5rem;
+  --nav-gap: 0rem;
   --nav-px: 1rem;
   --nav-bg: initial;
+  --nav-filter: initial;
   display: var(--nav-dsp, var(--dsp));
   flex-direction: var(--nav-direction, var(--direction));
   width: var(--nav-w, var(--w));
@@ -798,10 +800,16 @@ nav > section > div {
   --py: 0;
 }
 nav ul > li {
-  --py: 0;
+  display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  padding-inline: var(--nav-px, 0.75rem);
+}
+nav ul > li:hover {
+  background-color: var(--nav-hov-bg, whitesmoke);
 }
 nav img[alt] {
   --px: 0 var(--s1);
@@ -974,10 +982,20 @@ a {
   background-color: var(--link-bg);
   text-decoration: var(--link-decoration, none);
   border: var(--link-border);
-  padding-inline: var(--link-px, 0.5rem);
+  padding-inline: var(--link-px, 0.25rem);
+  transition: var(--tran-all);
 }
 a:hover {
   --link-decoration: underline;
+  filter: var(--filter);
+}
+a:visited {
+  color: var(--link-color, #0070f3);
+  background-color: var(--link-bg);
+}
+a:active {
+  color: var(--link-color, #0070f3);
+  background-color: var(--link-bg);
 }
 a[role=button], a[style="--btn"] {
   background-color: var(--link-bg);

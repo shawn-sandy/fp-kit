@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.15.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.7...@shawnsandy/first-paint@2.15.0) (2022-04-19)
+
+
+### Bug Fixes
+
+* line-height/fontsizes for paragraphs tags ([c7dc699](https://github.com/shawn-sandy/fp-kit/commit/c7dc699ec16a94ca6c558946e6c0fdf24a5317c3))
+* remove filter on link ([ec19225](https://github.com/shawn-sandy/fp-kit/commit/ec19225d3f1c3814aa96d6db847fb7af15c36a56))
+
+
+
+
+
+## [2.14.7](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.6...@shawnsandy/first-paint@2.14.7) (2022-04-19)
+
+
+### Bug Fixes
+
+* resolve issue with badge-bg ([10197ad](https://github.com/shawn-sandy/fp-kit/commit/10197ad55c23361a1eb9455ded14a9a0552a5058)), closes [#249](https://github.com/shawn-sandy/fp-kit/issues/249)
+
+
+### Features
+
+* **alpha:** css hsla color codes ([39c294c](https://github.com/shawn-sandy/fp-kit/commit/39c294c4673d10e95fd558c74326b5a54dd97071))
+* **beta:** add lite/optional version of index ([1b90c5f](https://github.com/shawn-sandy/fp-kit/commit/1b90c5f1e43ad9fdd648c77187cb6bb03fa55253))
+
+
+
+
+
 ## [2.14.6](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.5...@shawnsandy/first-paint@2.14.6) (2022-04-17)
 
 
