@@ -9,7 +9,6 @@
 <a href="/#/README" style="--btn: green; --btn-rds: 99rem; color: whitesmoke; --btn-fs: var(--fs-3); --btn-bdr: green solid;">Getting Started</a>
 <a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-3); --btn-bdr: green solid; --btn-rds: 99rem; color: green" target="_blank">Github</a>
 </section>
-
 </header>
 
 <main>
@@ -20,7 +19,7 @@
         <h4>
         Easy to use</h4>
         <p>
-          Drop it into your `html5` pages and start customizing, it's that simple.
+          Drop it into your `html5` (semantic) pages and start customizing, it's that simple.
         </p>
       </div>
       <div role="gridcell">
@@ -38,7 +37,7 @@
       <div role="gridcell">
         <h4>Accessible</h4>
         <p>
-          Accessibility matters and FirstPaint is built to meet WCAG best practices.
+          Accessibility matters to us so we built FP to meet WACG standards and encourage developers to write accessible code/apps.
         </p>
       </div>
       <div role="gridcell">
