@@ -1848,4 +1848,8 @@ section.cover.show {
   background: none !important;
 }
 
+.markdown-section p {
+  line-height: 1.6;
+}
+
 /*# sourceMappingURL=docsify.css.map */
