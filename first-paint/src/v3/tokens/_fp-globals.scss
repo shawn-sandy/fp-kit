@@ -1,0 +1,38 @@
+@mixin props {
+
+  --fw: normal;
+  --fst: normal;
+  --lh: 1.7;
+  --spc: initial;
+  --mg: 0;
+  --pd: 1rem;
+  --px: initial;
+  --py: initial;
+  --cl: inherit; // font-size
+  --bg: initial;
+  --bg-img: initial;
+  --bdr: initial;
+  --line: initial;
+  --rds: initial;
+  --bdr-w: thin;
+  --bdr-s: solid;
+  --bdr-cl: lightgray;
+  --appearance: none;
+  --link-cl:  blue-royal-blue;
+  --link-hover-cl: blue;
+  --lt-min: min(90%, 1480px);
+  --lt-max: max(90%, 1600px);
+  --min-w-800: min(100%, calc(800rem /16));
+  --w-800: min(100%, calc(800rem /16));
+  --align: initial;
+
+  --fp-dark: var(--fp-black);
+  --fp-light: var(--fp-white);
+  --fp-primary: var(--fp-royal-blue);
+  --fp-secondary: var(--fp-light-gray);
+  --fp-success: var(--fp-dark-green);
+  --fp-info: var(--fp-light-blue);
+  --fp-warning: var(--fp-orange);
+  --fp-danger: var(--fp-red);
+
+}

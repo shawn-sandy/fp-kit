@@ -686,6 +686,14 @@ p + * {
   --min-w-800: min(100%, calc(800rem /16));
   --w-800: min(100%, calc(800rem /16));
   --align: initial;
+  --fp-dark: var(--fp-black);
+  --fp-light: var(--fp-white);
+  --fp-primary: var(--fp-royal-blue);
+  --fp-secondary: var(--fp-light-gray);
+  --fp-success: var(--fp-dark-green);
+  --fp-info: var(--fp-light-blue);
+  --fp-warning: var(--fp-orange);
+  --fp-danger: var(--fp-red);
   --spc-0: 0;
   --spc-1: 0.25rem;
   --spc-2: 0.5rem;
