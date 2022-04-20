@@ -461,7 +461,7 @@ p + * {
   --fp-azure: hsl(180,100%,97.1%);
   --fp-alice-blue: hsl(208,100%,97.1%);
   --fp-ghost-white: hsl(240,100%,98.6%);
-  --fp-fp-smoke: hsl(0,0%,96.1%);
+  --fp-white-smoke: hsl(0,0%,96.1%);
   --fp-sea-shell: hsl(25,100%,96.7%);
   --fp-beige: hsl(60,55.6%,91.2%);
   --fp-old-lace: hsl(39,85.2%,94.7%);
@@ -616,26 +616,14 @@ p + * {
 }
 
 nav {
-  --nav-dsp: flex;
-  --nav-direction: row;
-  --nav-w: auto;
-  --nav-h: calc(50rem / 16);
-  --nav-align: center;
-  --nav-justify: space-between;
-  --nav-mx: 1rem;
-  --nav-align: center;
-  --nav-gap: 0rem;
-  --nav-px: 1rem;
-  --nav-bg: initial;
-  --nav-filter: initial;
-  display: var(--nav-dsp, var(--dsp));
-  flex-direction: var(--nav-direction, var(--direction));
-  width: var(--nav-w, var(--w));
-  height: var(--nav-h, var(--h));
-  place-items: var(--nav-align, var(--align));
-  justify-content: var(--nav-justify, var(--justify));
-  margin-inline: var(--nav-mx, var(--mx));
-  background-color: var(--nav-bg, var(--bg));
+  display: var(--nav-dsp, flex);
+  flex-direction: var(--nav-direction, row);
+  width: var(--nav-w, auto);
+  height: var(--nav-h, 3.125rem);
+  place-items: var(--nav-align, center);
+  justify-content: var(--nav-justify, space-between);
+  margin-inline: var(--nav-mx, 1rem);
+  background-color: var(--nav-bg, initial);
 }
 @media (min-width: 61.25rem) {
   nav {
@@ -645,11 +633,11 @@ nav {
 nav > section,
 nav > ul {
   --nav-dsp: flex;
-  display: var(--nav-dsp, var(--dsp));
-  gap: var(--nav-gap, var(--gap));
+  display: var(--nav-dsp, flex);
+  gap: var(--nav-gap, 0);
   font-size: var(--nav-fs, 0.9rem);
-  align-items: var(--nav-align, var(--align));
-  padding-inline: var(--nav-px, var(--px));
+  align-items: var(--nav-align, center);
+  padding-inline: var(--nav-px, 1rem);
   height: 100%;
 }
 nav > section > div {
@@ -673,43 +661,21 @@ nav img[alt] {
 }
 
 header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialog header), [style*="--hdr"]:not([arial-label], dialog header) {
-  --hdr-bg: whitesmoke;
-  --hdr-bg-img: none;
-  --hdr-bg-pos: center center;
-  --hdr-bg-size: cover;
-  --hdr-bg-repeat: no-repeat;
-  --hdr-bd: none;
-  --hdr-min-h: 40vh;
-  --hdr-w: 100%;
-  --hdr-dsp: flex;
-  --hdr-justify: center;
-  --hdr-py: 1rem;
-  --hdr-px: 1rem;
-  --hdr-place-x: center;
-  --hdr-place-y: center;
-  --hdr-align: center;
-  --hdr-px: 1rem;
-  --hdr-m: 0;
-  --hdr-fs-sm: calc(28rem / 16);
-  --hdr-fs-md: calc(36rem / 16);
-  --hdr-fs-lg: calc(68rem / 16);
-  --hdr-fs-xl: calc(80rem / 16);
-  --hdr-direction: column;
-  display: var(--hdr-dsp);
-  background-color: var(--hdr-bg);
-  background-image: var(--hdr-bg-img);
-  background-position: var(--hdr-bg-pos);
-  background-size: var(--hdr-bg-size);
-  background-repeat: var(--hdr-bg-repeat);
-  flex-direction: var(--hdr-direction);
-  place-content: var(--hdr-place-x);
-  place-items: var(--hdr-place-y);
-  text-align: var(--hdr-align);
+  display: var(--hdr-dsp, flex);
+  background-color: var(--hdr-bg, var(--fp-white-smoke));
+  background-image: var(--hdr-bg-img, none);
+  background-position: var(--hdr-bg-pos, center center);
+  background-size: var(--hdr-bg-size, cover);
+  background-repeat: var(--hdr-bg-repeat, no-repeat);
+  flex-direction: var(--hdr-direction, column);
+  place-content: var(--hdr-place-x, center);
+  place-items: var(--hdr-place-y, center);
+  text-align: var(--hdr-align, center);
   min-height: var(--hdr-min-h, auto);
   min-width: var(--hdr-w, auto);
-  padding-block: var(--hdr-py);
-  padding-inline: var(--hdr-px);
-  margin: var(--hdr-m);
+  padding-block: var(--hdr-py, 1rem);
+  padding-inline: var(--hdr-px, 1rem);
+  margin: var(--hdr-m, 0);
 }
 
 a {
@@ -763,15 +729,11 @@ img[alt][width][height] {
   --img-lg: 75vw;
   --img-xl: 90vw;
   --img-100: 100vw;
-  --img-ratio: auto 2/3;
-  --img-fit: cover;
-  --img-position: center center;
-  --img-w: 100%;
   max-width: 100%;
   width: var(--img-w, 100%);
-  object-fit: var(--img-obj-fit);
-  object-position: var(--img-position);
-  aspect-ratio: var(--img-ratio);
+  object-fit: var(--img-obj-fit, cover);
+  object-position: var(--img-position, center center);
+  aspect-ratio: var(--img-ratio, auto 2/3);
 }
 img[alt][width][height][width] {
   width: var(--img-w, auto);
@@ -795,10 +757,6 @@ figure {
   --img-lg: 75vw;
   --img-xl: 90vw;
   --img-100: 100vw;
-  --img-ratio: auto 2/3;
-  --img-fit: cover;
-  --img-position: center center;
-  --img-w: 100%;
   max-width: var(--pic-max-w, 100%);
   width: var(--pic-w, auto);
   display: var(--pic-dsp, flex);
@@ -817,10 +775,6 @@ figcaption {
   --img-lg: 75vw;
   --img-xl: 90vw;
   --img-100: 100vw;
-  --img-ratio: auto 2/3;
-  --img-fit: cover;
-  --img-position: center center;
-  --img-w: 100%;
   font-size: var(--fcap-fs, inherit);
   display: var(--fcap-dsp, flex);
   place-content: var(--place-x, flex-start);
@@ -958,25 +912,16 @@ button[type=submit], button[style*="--btn-submit"],
 
 input[id][type]:not([type=checkbox], [type=radio]) {
   --input-appearance: none;
-  --input-min-w: min(100%, calc(800rem /16));
-  --input-fw: normal;
-  --input-bdr-style: solid;
-  --input-bdr-w: .1rem;
-  --input-bdr-color: lightgray;
-  --input-px: .6rem;
-  --input-py: .2rem;
-  --input-bdr-radius: .1rem;
-  --input-fs: .9rem;
   background-color: var(--input-cl);
-  font-size: var(--input-fs);
-  font-weight: var(--input-fw);
-  border-width: var(--input-bdr-w);
-  border-style: var(--input-bdr-style);
-  border-color: var(--input-bdr-color);
-  padding-inline: var(--input-px);
-  padding-block: var(--input-py);
-  width: var(--input-min-w);
-  border-radius: var(--input-bdr-radius);
+  font-size: var(--input-fs, 0.9rem);
+  font-weight: var(--input-fw, normal);
+  border-width: var(--input-bdr-w, thin);
+  border-style: var(--input-bdr-style, solid);
+  border-color: var(--input-bdr-color, var(--fp-light-gray));
+  padding-inline: var(--input-px, 0.6rem);
+  padding-block: var(--input-py, 0.2rem);
+  width: var(--input-min-w, min(100%, 50rem));
+  border-radius: var(--input-bdr-radius, 0.1rem);
   -webkit-appearance: var(--input-appearance);
   -moz-appearance: var(--input-appearance);
   appearance: var(--input-appearance);
@@ -1127,13 +1072,9 @@ _text select * {
 
 footer:not([aria-label], [role=footer]),
 [role=contentinfo]:not([aria-label], [role=footer]) {
-  --fs: 0.9rem;
-  --footer-fs: 0.9rem;
-  --footer-dsp: flex;
-  --footer-direction: column;
-  display: var(--footer-dsp);
-  flex-direction: var(--footer-direction);
-  font-size: var(--footer-fs, var(--fs));
+  display: var(--footer-dsp, flex);
+  flex-direction: var(--footer-direction, column);
+  font-size: var(--footer-fs, var(--fs-2));
 }
 footer:not([aria-label], [role=footer]) p,
 [role=contentinfo]:not([aria-label], [role=footer]) p {
