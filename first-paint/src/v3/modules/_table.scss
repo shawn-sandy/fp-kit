@@ -31,7 +31,6 @@
 @mixin rules {
   @include props;
   display: table;
-
   font-size: var(--tbl-fs, 0.9em);
   font-family: var(--fs, sans-serif);
   width: var(--tbl-width, calc(100% - 0rem));

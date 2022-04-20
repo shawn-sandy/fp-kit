@@ -1,11 +1,5 @@
 
 @mixin props() {
-  --img-xs: 10vw;
-  --img-sm: 25vw;
-  --img-md: 50vw;
-  --img-lg: 75vw;
-  --img-xl: 90vw;
-  --img-100: 100vw;
   @content;
 }
 
@@ -17,9 +11,9 @@
   object-position: var(--img-position, center center);
   aspect-ratio: var(--img-ratio, auto 2/3);
 
-  &[width] {
-    width: var(--img-w, auto);
-  }
+  // &[width] {
+  //   width: var(--img-w, auto);
+  // }
 
   &[width][height] {
     height: var(--img-h, auto);
