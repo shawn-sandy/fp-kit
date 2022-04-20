@@ -1,5 +1,5 @@
 @mixin props {
-  :root {
+
       --fp-gainsboro: hsl(0,0%,86.3%);
       --fp-light-gray: hsl(0,0%,82.7%);
       --fp-silver: hsl(0,0%,75.3%);
@@ -140,6 +140,19 @@
       --fp-deep-pink: hsl(328,100%,53.9%);
       --fp-pale-violet-red: hsl(340,59.8%,64.9%);
       --fp-medium-violet-red: hsl(322,80.9%,43.1%);
+
+  }
+
+  @mixin styles {
+    [style*="--hsl-bg"] {
+      background-color: hsl(var(--hsl-bg, 0), var(--hsl-bg-s, 0%), var(--hsl-bg-l, 0%));
+    }
+
+    [style*="--hsl"] {
+      --h: var(--hue, var(--hsl-cl, 0%));
+      --s: var(--sat, 20%, 0%);
+      --l: var(--light, 50%);
+      color: var(--hsl --s --l);
     }
   }
 
