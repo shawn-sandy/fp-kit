@@ -1,5 +1,5 @@
 @use "../modules/reset.scss";
-@use "./props.scss";
+@use "../modules/props";
 @use "../modules/global.scss";
 @use "../components/type.scss";
-@use "./content.scss";
+@use "../modules/content";

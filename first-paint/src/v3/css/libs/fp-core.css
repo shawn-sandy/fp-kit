@@ -1,17 +1,336 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @use "./props.scss";
- *   | ^^^^^^^^^^^^^^^^^^^
- *   '
- *   src\v3\libs\fp-core.scss 2:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @use \"./props.scss\";\a   \2502  ^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src\\v3\\libs\\fp-core.scss 2:1  root stylesheet";
+/* https://piccalil.li/blog/a-modern-css-reset/ (modified)*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+html {
+  /* Make base font-size 100% of browser font-size */
+  font-size: 100%;
+}
+
+::selection {
+  /* Optional */
+  /* It can be really hard to read highlighted text with a text-shadow, it should be removed when selected */
+  text-shadow: none;
+  /* NOTE: Using this means the color and background-color are set to transparent for selected text... */
+  /* So you can customise your styles below */
+  color: #fff;
+  background-color: #00f;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+  font-size: 100%;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  aspect-ratio: auto;
+}
+
+img,
+video,
+iframe {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+svg {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-variant: inherit;
+  line-height: inherit;
+  background-color: inherit;
+}
+
+/* Inherit fonts for inputs and buttons */
+:where(button) {
+  font-family: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+svg {
+  /* Make the SVGs fit the parent container by default */
+  height: auto;
+  width: 100%;
+  /* Optional - make the SVG's fill be the same as the inherited color */
+  fill: currentColor;
+  /* Prevent the SVG from altering cursor interaction */
+  pointer-events: none;
+}
+
+html,
+body {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+main, header, footer {
+  font-size: var(--fs);
+}
+main > section, header > section, footer > section {
+  width: var(--lt-min);
+  margin-inline: auto;
+}
+
+section:not(nav) {
+  margin-inline: auto;
+  padding-block: var(--fs-2);
+}
+
+hr {
+  width: 100%;
+  height: 0.05rem;
+  background-color: lightgray;
+  border: none;
+  margin-block: 3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  --fw: var(--fw-medium, 500);
+  --fx-weight: var(--fw-medium);
+  --fs: inherit;
+  line-height: var(--lh);
+  color: var(--cl);
+  margin: var(--m);
+  font-size: inherit;
+  text-shadow: var(--shadow);
+  padding-block: var(--py, var(--p));
+  padding-inline: var(--px, var(--p));
+  display: var(--dsp, block);
+}
+
+p,
+[style*="--p"] {
+  --p-sm: var(--sm);
+  --p-md: var(--md);
+  --p-lg: var(--lg);
+  --fw: normal;
+  --lh: 1.7;
+  --spacing: 0.5rem;
+  --p-fs: var(--fs, clamp(.9rem, 3vw - 1.5rem, 1rem););
+  margin: var(--p-m, 0);
+  line-height: var(--lh, 1.6);
+  word-spacing: 0.05rem;
+  font-size: var(--p-fs);
+}
+p i,
+[style*="--p"] i {
+  font-style: italic;
+}
+p strong,
+[style*="--p"] strong {
+  font-weight: var(--fw-medium);
+}
+
+article > p {
+  font-size: clamp(0.9rem, 3vw - 1.5rem, 1.3rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--fs);
+  font-weight: var(--fw);
+}
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: var(--rem);
+}
+h1[role=decoration], h1[role=none], h1[role=none],
+h2[role=decoration],
+h2[role=none],
+h2[role=none],
+h3[role=decoration],
+h3[role=none],
+h3[role=none],
+h4[role=decoration],
+h4[role=none],
+h4[role=none],
+h5[role=decoration],
+h5[role=none],
+h5[role=none],
+h6[role=decoration],
+h6[role=none],
+h6[role=none] {
+  font-weight: var(--h-fw, 500);
+}
+
+h1 {
+  --fs: var(--fs-7);
+}
+h1[role=decoration], h1[role=none] {
+  font-size: var(--h1);
+}
+
+h2 {
+  --fs: var(--fs-6);
+}
+h2[role=decoration], h2[role=none] {
+  font-size: var(--h2);
+}
+
+h3 {
+  --fs: var(--fs-5);
+}
+h3[role=decoration], h3[role=none] {
+  font-size: var(--h3);
+}
+
+h4 {
+  --fs: var(--fs-4);
+}
+h4[role=decoration], h4[role=none] {
+  font-size: var(--h4);
+}
+
+h5 {
+  --fs: var(--fs-3);
+}
+h5[role=decoration], h5[role=none] {
+  font-size: var(--h5);
+}
+
+h6 {
+  --fs: var(--fs-2);
+}
+h6[role=decoration], h6[role=none] {
+  font-size: var(--h6);
+}
+
+small,
+time {
+  --fs: var(--s1);
+}
+
+time {
+  padding: 0 0 0.5rem;
+}
+
+p + p,
+p + * {
+  margin-top: var(--fs-0);
+}
+
+[style*="--truncate"] {
+  --truncate-lns: 1;
+  --clamp: var(--truncate, var(--truncate-lns));
+  --dsp: --webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=fp-core.css.map */

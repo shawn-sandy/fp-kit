@@ -1195,9 +1195,6 @@ button,
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
-  --btn-spc: 0.25rem;
-  --btn-wspc: nowrap;
-  --btn-fs: calc(13rem / 16);
   font-size: var(--btn-fs, 0.8125rem);
   min-height: 2.5rem;
   place-items: var(--btn-place, center);
@@ -1209,8 +1206,8 @@ button,
   color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
   gap: var(--btn-gap, 1rem);
-  white-space: var(--btn-wspc);
-  margin: var(--btn-spc);
+  white-space: var(--btn-wspc, nowrap);
+  margin: var(--btn-spc, 0.25rem);
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
 }
@@ -1278,10 +1275,10 @@ div[role=presentation] {
   --cd-shadow-lg: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
   display: var(--card-dsp, flex);
   flex-direction: var(--card-direction, column);
-  padding: var(--card, var(--card-pd));
+  padding: var(--card, var(--card-pd, 2rem));
   border-radius: var(--card-radius, 0.2rem);
   background-color: var(--card-bg, var(--bg, #fff));
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--card-shadow, none);
   border: var(--card-border, thin solid lightgray);
 }
 div[role=presentation] h1,
@@ -1292,14 +1289,10 @@ div[role=presentation] h4 {
 }
 
 [role=footer] {
-  --dsp: flex;
-  --direction: row;
-  --justify: flex-end;
-  --py: .2rem;
-  display: var(--dsp);
+  display: var(--dsp, flex);
   flex-direction: var(--direction, row);
-  justify-content: var(--justify);
-  padding-block: var(--py);
+  justify-content: var(--justify, flex-end);
+  padding-block: var(--py, 0.2rem);
 }
 
 select {
@@ -1400,25 +1393,15 @@ p[role=note] {
   --beta: orange;
   --stable: green;
   --production: blue;
-  --note-pd: 0;
-  --note-py: 0.2rem;
-  --note-px: 0.7rem;
-  --note-fs: 0.8rem;
-  --note-bg: lightgray;
-  --note-bdr: none;
-  --note-rds: 99rem;
-  --note-cl: inherit;
-  --note-tt: capitalize;
-  --note-decoration: none;
-  padding-inline: var(--note-px, var(--px));
-  padding-block: var(--note-py, var(--py));
-  color: var(--note-cl, var(--cl));
-  font-size: var(--note-fs, var(--fs));
+  padding-inline: var(--note-px, 0.7rem);
+  padding-block: var(--note-py, 0.2rem);
+  color: var(--note-cl, inherit);
+  font-size: var(--note-fs, 0.8rem);
   font-weight: var(--note-fw, normal);
-  border: var(--note-brd, var(--bdr));
-  border-radius: var(--note-rds, var(--rds));
-  background-color: var(--note, var(--note-bg));
-  text-decoration: var(--note-decoration, var(--decoration));
+  border: var(--note-brd, none);
+  border-radius: var(--note-rds, 99rem);
+  background-color: var(--note, var(--fp-light-gray));
+  text-decoration: var(--note-decoration, none);
   text-transform: var(--note-tt, var(--tt));
 }
 
@@ -1501,20 +1484,13 @@ ul, [style*="--list"] {
 }
 
 nav > :where(ol[aria-label], div[role="list"]) {
-  --crumb-dsp: flex;
-  --crumb-direction: row;
-  --crumb-gap: 0.5rem;
-  --crumb-style: none;
-  --crumb-fs: var(--fs-3);
-  --crumb-icon: "/";
-  --crumb-cl: currentColor;
-  display: var(--crumb-dsp);
-  direction: var(--crumb-direction);
-  gap: var(--crumb-gap);
-  list-style: var(--crumb-style);
+  display: var(--crumb-dsp, flex);
+  direction: var(--crumb-direction, row);
+  gap: var(--crumb-gap, 0.5rem);
+  list-style: var(--crumb-style, none);
   list-style: none;
-  font-size: var(--crumb-fs);
-  color: var(--crumb-cl);
+  font-size: var(--crumb-fs, var(--fs-2));
+  color: var(--crumb-cl, currentColor);
 }
 nav > :where(ol[aria-label], div[role="list"]) li {
   color: var(--crumb-cl);

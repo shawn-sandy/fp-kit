@@ -1,24 +1,17 @@
 
 @mixin props() {
   // * css custom properties
-  --crumb-dsp: flex;
-  --crumb-direction: row;
-  --crumb-gap: 0.5rem;
-  --crumb-style: none;
-  --crumb-fs: var(--fs-3);
-  --crumb-icon: "\002F";
-  --crumb-cl: currentColor;
   @content;
 }
 
 @mixin rules {
-  display: var(--crumb-dsp);
-  direction: var(--crumb-direction);
-  gap: var(--crumb-gap);
-  list-style: var(--crumb-style);
+  display: var(--crumb-dsp, flex);
+  direction: var(--crumb-direction, row);
+  gap: var(--crumb-gap, 0.5rem);
+  list-style: var(--crumb-style, none);
   list-style: none;
-  font-size: var(--crumb-fs);
-  color: var(--crumb-cl);
+  font-size: var(--crumb-fs,  var(--fs-2));
+  color: var(--crumb-cl, currentColor);
 
   li {
     color: var(--crumb-cl);

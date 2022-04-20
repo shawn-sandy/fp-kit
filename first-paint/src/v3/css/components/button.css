@@ -6,9 +6,6 @@ button,
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
-  --btn-spc: 0.25rem;
-  --btn-wspc: nowrap;
-  --btn-fs: calc(13rem / 16);
   font-size: var(--btn-fs, 0.8125rem);
   min-height: 2.5rem;
   place-items: var(--btn-place, center);
@@ -20,8 +17,8 @@ button,
   color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
   gap: var(--btn-gap, 1rem);
-  white-space: var(--btn-wspc);
-  margin: var(--btn-spc);
+  white-space: var(--btn-wspc, nowrap);
+  margin: var(--btn-spc, 0.25rem);
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
 }
