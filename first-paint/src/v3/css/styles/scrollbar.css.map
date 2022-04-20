@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../styles/scrollbar.scss","../../modules/_scrollbar.scss"],"names":[],"mappings":"AAEA;ECCE;EACA;EACA;EACA;EACA;EACA;EACA;EAMA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EAGA;EACA;;AAEF;AACE;EACA;;AAGF;AACE;EACA","file":"scrollbar.css"}
+{"version":3,"sourceRoot":"","sources":["../../styles/scrollbar.scss","../../modules/_scrollbar.scss"],"names":[],"mappings":"AAEA;ECKE;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;;AAEF;AACE;EACA;;AAGF;AACE;EACA","file":"scrollbar.css"}

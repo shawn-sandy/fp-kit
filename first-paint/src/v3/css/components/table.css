@@ -29,7 +29,7 @@ table {
   font-size: var(--tbl-fs, 0.9em);
   font-family: var(--fs, sans-serif);
   width: var(--tbl-width, calc(100% - 0rem));
-  border-collapse: var(--tbl-collapse);
+  border-collapse: var(--tbl-collapse, collapse);
   display: var(--tbl-dsp, table);
   border-radius: var(--tbl-rds, 16px);
   border-spacing: 0;
