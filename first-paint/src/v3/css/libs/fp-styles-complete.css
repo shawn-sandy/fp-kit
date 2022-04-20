@@ -86,12 +86,6 @@ hr {
 }
 
 .fp {
-  --img-xs: 10vw;
-  --img-sm: 25vw;
-  --img-md: 50vw;
-  --img-lg: 75vw;
-  --img-xl: 90vw;
-  --img-100: 100vw;
   max-width: var(--pic-max-w, 100%);
   width: var(--pic-w, auto);
   display: var(--pic-dsp, flex);
@@ -101,12 +95,6 @@ hr {
   height: var(--pic-h, auto);
   padding-block: var(--pic-py, 0.5rem);
   padding-inline: var(--pic-px, 0.5rem);
-  --img-xs: 10vw;
-  --img-sm: 25vw;
-  --img-md: 50vw;
-  --img-lg: 75vw;
-  --img-xl: 90vw;
-  --img-100: 100vw;
   font-size: var(--fcap-fs, inherit);
   display: var(--fcap-dsp, flex);
   place-content: var(--place-x, flex-start);
@@ -330,20 +318,11 @@ hr {
   --chk-bg: yellowgreen;
 }
 .fp-img {
-  --img-xs: 10vw;
-  --img-sm: 25vw;
-  --img-md: 50vw;
-  --img-lg: 75vw;
-  --img-xl: 90vw;
-  --img-100: 100vw;
   max-width: 100%;
   width: var(--img-w, 100%);
   object-fit: var(--img-obj-fit, cover);
   object-position: var(--img-position, center center);
   aspect-ratio: var(--img-ratio, auto 2/3);
-}
-.fp-img[width] {
-  width: var(--img-w, auto);
 }
 .fp-img[width][height] {
   height: var(--img-h, auto);
