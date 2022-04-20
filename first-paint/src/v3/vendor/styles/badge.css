@@ -2,26 +2,16 @@
   --beta: orange;
   --stable: green;
   --production: blue;
-  --note-pd: 0;
-  --note-py: 0.2rem;
-  --note-px: 0.7rem;
-  --note-fs: 0.8rem;
-  --note-bg: lightgray;
-  --note-bdr: none;
-  --note-rds: 99rem;
-  --note-cl: inherit;
-  --note-tt: capitalize;
-  --note-decoration: none;
-  padding-inline: var(--note-px, var(--px));
-  padding-block: var(--note-py, var(--py));
-  color: var(--note-cl, var(--cl));
-  font-size: var(--note-fs, var(--fs));
+  padding-inline: var(--note-px, 0.7rem);
+  padding-block: var(--note-py, 0.2rem);
+  color: var(--note-cl, inherit);
+  font-size: var(--note-fs, 0.8rem);
   font-weight: var(--note-fw, normal);
-  border: var(--note-brd, var(--bdr));
-  border-radius: var(--note-rds, var(--rds));
-  background-color: var(--note, var(--note-bg));
-  -webkit-text-decoration: var(--note-decoration, var(--decoration));
-          text-decoration: var(--note-decoration, var(--decoration));
+  border: var(--note-brd, none);
+  border-radius: var(--note-rds, 99rem);
+  background-color: var(--note, var(--fp-light-gray));
+  -webkit-text-decoration: var(--note-decoration, none);
+          text-decoration: var(--note-decoration, none);
   text-transform: var(--note-tt, var(--tt));
 }
 

@@ -32,10 +32,10 @@
   --cd-shadow-lg: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3);
   display: var(--card-dsp, flex);
   flex-direction: var(--card-direction, column);
-  padding: var(--card, var(--card-pd));
+  padding: var(--card, var(--card-pd, 2rem));
   border-radius: var(--card-radius, 0.2rem);
   background-color: var(--card-bg, var(--bg, #fff));
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--card-shadow, none);
   border: var(--card-border, thin solid lightgray);
 }
 .fp-cards h1,
@@ -46,12 +46,8 @@
 }
 
 [role=footer] {
-  --dsp: flex;
-  --direction: row;
-  --justify: flex-end;
-  --py: .2rem;
-  display: var(--dsp);
+  display: var(--dsp, flex);
   flex-direction: var(--direction, row);
-  justify-content: var(--justify);
-  padding-block: var(--py);
+  justify-content: var(--justify, flex-end);
+  padding-block: var(--py, 0.2rem);
 }

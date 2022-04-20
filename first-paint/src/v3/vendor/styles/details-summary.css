@@ -1,32 +1,10 @@
 @charset "UTF-8";
 .fp-details-summary {
-  --details-fs: 1rem;
-  --details-pd: 1rem;
-  --details-color: currentColor;
-  --details-bg: whitesmoke;
-  --details-rds: .5rem;
-  --details-w:"min(100%, 350px)";
-  --detail-cursor: pointer;
-  --summary-pd: 0 1rem 1rem 1rem;
-  --summary-fs: 1.1rem;
-  --summary-color: currentColor;
-  --summary-ls: none;
-  --details-fs: 1rem;
-  --details-pd: 1rem;
-  --details-color: currentColor;
-  --details-bg: whitesmoke;
-  --details-rds: .5rem;
-  --details-w:"min(100%, 350px)";
-  --detail-cursor: pointer;
-  --summary-pd: 0 1rem 1rem 1rem;
-  --summary-fs: 1.1rem;
-  --summary-color: currentColor;
-  --summary-ls: none;
   font-size: var(--detail-fs, 1rem);
   color: var(--detail-color, currentColor);
   background-color: var(--detail-bg, whitesmoke);
   border: var(--detail-border, none);
-  border-radius: 0.5rem;
+  border-radius: var(--details-rds, 0.5rem);
   width: var(--details, min(100%, 350px));
 }
 .fp-details-summary :where(div, aside, p, ul) {
@@ -41,7 +19,7 @@
   justify-content: space-between;
   font-size: var(--summary-fs, 1.1rem);
   color: var(--summary-color, currentColor);
-  padding: var(--details-pd);
+  padding: var(--details-pd, 1rem);
   background-color: var(--summary-bg, transparent);
   list-style: var(--summary-ls, none);
   cursor: var(--detail-cursor, pointer);
