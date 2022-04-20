@@ -98,6 +98,8 @@
 .search {
   input {
     margin-top: 3rem;
+    border: solid thin var(--fp-light-gray) !important;
+    margin-bottom: 1rem;
   }
 }
 
