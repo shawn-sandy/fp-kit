@@ -8,15 +8,14 @@
   --chk-rds: var(--rds);
   --lbl-me: 1rem;
   --lbl-dsp: flex;
-  --fs: var(--chk-size);
   display: var(--lbl-dsp);
   flex-direction: var(--lbl-direction, row);
-  place-items: end normal;
+  align-items: normal;
   margin-inline-end: var(--lbl-me);
   gap: 0.3rem;
   cursor: pointer;
   max-height: var(--chk-size);
-  font-size: var(var(--chk-fs), var(--fs));
+  font-size: var(var(--chk-fs), 1rem);
 }
 .fp-checkbox :where([id][type="checkbox"]) {
   appearance: var(--chk-appearance);
@@ -50,7 +49,7 @@
   border-color: var(--chk-bdr-cl);
   border-width: var(--chk-bdr-w);
   border-style: --chk-bdr-style;
-  --chk-bg: yellowgreen;
+  --chk-bg: var(--fp-yellow-green);
 }
 
 /*# sourceMappingURL=checkbox.css.map */

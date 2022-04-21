@@ -541,7 +541,7 @@ p + * {
   --fp-forest-green: hsl(120,60.7%,33.9%);
   --fp-green: hsl(120,100%,25.1%);
   --fp-dark-green: hsl(120,100%,19.6%);
-  --fp-fp-green: hsl(80,60.8%,50%);
+  --fp-yellow-green: hsl(80,60.8%,50%);
   --fp-olive-drab: hsl(80,60.5%,34.7%);
   --fp-olive: hsl(60,100%,25.1%);
   --fp-dark-olive-green: hsl(82,39%,30.2%);
@@ -900,15 +900,14 @@ figcaption {
   --chk-rds: var(--rds);
   --lbl-me: 1rem;
   --lbl-dsp: flex;
-  --fs: var(--chk-size);
   display: var(--lbl-dsp);
   flex-direction: var(--lbl-direction, row);
-  place-items: end normal;
+  align-items: normal;
   margin-inline-end: var(--lbl-me);
   gap: 0.3rem;
   cursor: pointer;
   max-height: var(--chk-size);
-  font-size: var(var(--chk-fs), var(--fs));
+  font-size: var(var(--chk-fs), 1rem);
 }
 :where(label[for]) :where([id][type="checkbox"]) {
   appearance: var(--chk-appearance);
@@ -942,7 +941,7 @@ figcaption {
   border-color: var(--chk-bdr-cl);
   border-width: var(--chk-bdr-w);
   border-style: --chk-bdr-style;
-  --chk-bg: yellowgreen;
+  --chk-bg: var(--fp-yellow-green);
 }
 
 [role=grid], [role=list] {
@@ -1171,8 +1170,8 @@ input[id][type]:not([type=checkbox], [type=radio])::placeholder {
 :where(label[for]) :where([id][type="radio"]):checked::before {
   --rdo-bdr-s: solid;
   --rdo-bdr-w: thick;
-  --rdo-bdr-cl: var(--green-dark-green);
-  --rdo-bg: var(--green-yellow-green);
+  --rdo-bdr-cl: var(--fp-dark-green);
+  --rdo-bg: var(--fp-yellow-green);
   border-color: var(--rdo-bdr-cl);
   border-width: var(--rdo-bdr-w);
   border-style: var(--rdo-bdr-s);
