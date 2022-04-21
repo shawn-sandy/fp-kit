@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.15.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.15.0...@shawnsandy/first-paint@2.15.1) (2022-04-21)
+
+
+### Bug Fixes
+
+* **beta:** remove responsive image auto width ([1f1b3c0](https://github.com/shawn-sandy/fp-kit/commit/1f1b3c01d3031f767d311500660c96e56011f085))
+* **beta:** resolve issue w/style-sxample page ([a2a1061](https://github.com/shawn-sandy/fp-kit/commit/a2a1061321def8e6c4d84d141c3e7ef3dd9eb08c))
+
+
+### Features
+
+* **beta:** add default height to header module ([ffec7f1](https://github.com/shawn-sandy/fp-kit/commit/ffec7f19c123e008eedb58d16309a8e357291f36))
+* **beta:** addd global tokens ([d6d5216](https://github.com/shawn-sandy/fp-kit/commit/d6d521650259ef7669fc531a8d3c799690d7a83a))
+* **beta:** optimize img props ([dfbd32a](https://github.com/shawn-sandy/fp-kit/commit/dfbd32aa76cef9e9a225c2dcaa3f7396633604b0))
+* **beta:** remove props ([7acfb43](https://github.com/shawn-sandy/fp-kit/commit/7acfb4317e056a20c68402b639026ccc493f8a8f))
+
+
+
+
+
 # [2.15.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.14.7...@shawnsandy/first-paint@2.15.0) (2022-04-19)
 
 
