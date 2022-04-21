@@ -35,7 +35,7 @@
   --fs: var(--chk-size);
   display: var(--lbl-dsp);
   flex-direction: var(--lbl-direction, row);
-  place-items: end normal;
+  align-items: normal;
   margin-inline-end: var(--lbl-me);
   gap: 0.3rem;
   cursor: pointer;
