@@ -27,6 +27,7 @@
 }
 .fp-content form div + div {
   margin-block-start: var(--form-spc, 1.5rem);
+  display: block;
 }
 .fp-content label[for] + input,
 .fp-content label[for] + textarea,
@@ -37,6 +38,14 @@
 .fp-content div:where([role="region"]),
 .fp-content section:where([role="region"]) {
   width: 100%;
+}
+.fp-content hr {
+  width: var(--hr-w, 100%);
+  height: var(--hr-h, 0.05rem);
+  background-color: var(--hr-bg, lightgray);
+  border: none;
+  margin-block: var(--py, 3rem);
+  margin-inline: var(px, auto);
 }
 
 /*# sourceMappingURL=content.css.map */

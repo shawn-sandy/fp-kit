@@ -8,11 +8,6 @@ nav {
   margin-inline: var(--nav-mx, 1rem);
   background-color: var(--nav-bg, initial);
 }
-@media (min-width: 61.25rem) {
-  nav {
-    --px: calc(10% - 1rem);
-  }
-}
 nav > section,
 nav > ul {
   --nav-dsp: flex;

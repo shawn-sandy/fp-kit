@@ -37,6 +37,7 @@
     width: 100%;
     div + div {
       margin-block-start: var(--form-spc, 1.5rem);
+      display: block;
     }
   }
 
@@ -55,6 +56,16 @@
       width: 100%;
     }
   }
+
+hr {
+  width: var(--hr-w, 100%);
+  height: var(--hr-h, .05rem);
+  background-color: var(--hr-bg, lightgray);
+  border: none;
+  margin-block: var(--py, 3rem);
+  margin-inline: var(px, auto)
+}
+
   @content;
 }
 
