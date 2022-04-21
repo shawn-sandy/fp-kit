@@ -17,7 +17,7 @@
   place-content: var(--hdr-place-x, center);
   place-items: var(--hdr-place-y, center);
   text-align: var(--hdr-align, center);
-  min-height: var(--hdr-min-h, auto);
+  min-height: var(--hdr-min-h, var(--vw-md));
   min-width: var(--hdr-w, auto);
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);

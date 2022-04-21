@@ -49,16 +49,6 @@ hr {
 /**
 *
 */
-.fp {
-  display: var(--nav-dsp, flex);
-  flex-direction: var(--nav-direction, row);
-  width: var(--nav-w, auto);
-  height: var(--nav-h, 3.125rem);
-  place-items: var(--nav-align, center);
-  justify-content: var(--nav-justify, space-between);
-  margin-inline: var(--nav-mx, 1rem);
-  background-color: var(--nav-bg, initial);
-}
 .fp-nav {
   display: var(--nav-dsp, flex);
   flex-direction: var(--nav-direction, row);
@@ -68,11 +58,6 @@ hr {
   justify-content: var(--nav-justify, space-between);
   margin-inline: var(--nav-mx, 1rem);
   background-color: var(--nav-bg, initial);
-}
-@media (min-width: 61.25rem) {
-  .fp-nav {
-    --px: calc(10% - 1rem);
-  }
 }
 .fp-nav > section,
 .fp-nav > ul {
@@ -114,7 +99,7 @@ hr {
   place-content: var(--hdr-place-x, center);
   place-items: var(--hdr-place-y, center);
   text-align: var(--hdr-align, center);
-  min-height: var(--hdr-min-h, auto);
+  min-height: var(--hdr-min-h, var(--vw-md));
   min-width: var(--hdr-w, auto);
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
@@ -241,6 +226,24 @@ hr {
   border-style: --chk-bdr-style;
   --chk-bg: yellowgreen;
 }
+.fp-label[for] {
+  --lbl-me: 1rem;
+  --lbl-dsp: flex;
+  --lbl-fs: 1rem;
+  --lbl-align: normal;
+  --lbl-gap: 0.5rem;
+  --lbl-color: currentColor;
+  --lbl-cursor: pointer;
+  --lbl-height: auto;
+  display: var(--lbl-dsp);
+  flex-direction: var(--lbl-direction, row);
+  align-items: var(--lbl-align);
+  margin-inline-end: var(--lbl-me);
+  gap: 0.3rem;
+  cursor: pointer;
+  height: auto;
+  font-size: var(--lbl-fs, var(--fs));
+}
 .fp-img {
   max-width: 100%;
   width: var(--img-w, 100%);
@@ -297,40 +300,6 @@ hr {
 .fp-details-summary[open] > summary::after {
   content: "×";
   transform: rotate(90deg);
-}
-@media (min-width: 61.25rem) {
-  .fp {
-    --px: calc(10% - 1rem);
-  }
-}
-.fp > section,
-.fp > ul {
-  --nav-dsp: flex;
-  display: var(--nav-dsp, flex);
-  gap: var(--nav-gap, 0);
-  font-size: var(--nav-fs, 0.9rem);
-  align-items: var(--nav-align, center);
-  padding-inline: var(--nav-px, 1rem);
-  height: 100%;
-}
-.fp > section > div {
-  --py: 0;
-}
-.fp ul > li {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  padding-inline: var(--nav-px, 0.75rem);
-}
-.fp ul > li:hover {
-  background-color: var(--nav-hov-bg, whitesmoke);
-}
-.fp img[alt] {
-  --px: 0 var(--s1);
-  --w: var(--brand-w, 3.6rem);
 }
 .fp-table {
   /*  css custom properties */
