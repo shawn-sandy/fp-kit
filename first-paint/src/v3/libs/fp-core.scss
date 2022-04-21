@@ -2,8 +2,9 @@
 @use "../modules/props";
 @use "../modules/global.scss";
 @use "../components/type.scss";
-@use "../styles/layout.scss";
+@use "../modules/layout";
 @use "../modules/content";
 
 @include props.module();
 @include content.module();
+@include layout.styles();
