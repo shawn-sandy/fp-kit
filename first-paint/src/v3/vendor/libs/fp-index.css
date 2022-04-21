@@ -215,24 +215,16 @@ hr {
 *
 */
 main, header, footer {
-  font-size: var(--fs);
+  font-size: var(--fs, 1rem);
 }
 main > section, header > section, footer > section {
-  width: var(--lt-min);
+  width: var(--lt-min, min(90%, 1480px));
   margin-inline: auto;
 }
 
 section:not(nav) {
   margin-inline: auto;
-  padding-block: var(--fs-2);
-}
-
-hr {
-  width: 100%;
-  height: 0.05rem;
-  background-color: lightgray;
-  border: none;
-  margin-block: 3rem;
+  padding-block: var(--fs-2, 1rem);
 }
 
 h1,
@@ -641,40 +633,23 @@ p + * {
 }
 
 nav {
-  --nav-dsp: flex;
-  --nav-direction: row;
-  --nav-w: auto;
-  --nav-h: calc(50rem / 16);
-  --nav-align: center;
-  --nav-justify: space-between;
-  --nav-mx: 1rem;
-  --nav-align: center;
-  --nav-gap: 0rem;
-  --nav-px: 1rem;
-  --nav-bg: initial;
-  --nav-filter: initial;
-  display: var(--nav-dsp, var(--dsp));
-  flex-direction: var(--nav-direction, var(--direction));
-  width: var(--nav-w, var(--w));
-  height: var(--nav-h, var(--h));
-  place-items: var(--nav-align, var(--align));
-  justify-content: var(--nav-justify, var(--justify));
-  margin-inline: var(--nav-mx, var(--mx));
-  background-color: var(--nav-bg, var(--bg));
-}
-@media (min-width: 61.25rem) {
-  nav {
-    --px: calc(10% - 1rem);
-  }
+  display: var(--nav-dsp, flex);
+  flex-direction: var(--nav-direction, row);
+  width: var(--nav-w, auto);
+  height: var(--nav-h, 3.125rem);
+  place-items: var(--nav-align, center);
+  justify-content: var(--nav-justify, space-between);
+  margin-inline: var(--nav-mx, 1rem);
+  background-color: var(--nav-bg, initial);
 }
 nav > section,
 nav > ul {
   --nav-dsp: flex;
-  display: var(--nav-dsp, var(--dsp));
-  gap: var(--nav-gap, var(--gap));
+  display: var(--nav-dsp, flex);
+  gap: var(--nav-gap, 0);
   font-size: var(--nav-fs, 0.9rem);
-  align-items: var(--nav-align, var(--align));
-  padding-inline: var(--nav-px, var(--px));
+  align-items: var(--nav-align, center);
+  padding-inline: var(--nav-px, 1rem);
   height: 100%;
 }
 nav > section > div {
@@ -708,7 +683,7 @@ header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialo
   place-content: var(--hdr-place-x, center);
   place-items: var(--hdr-place-y, center);
   text-align: var(--hdr-align, center);
-  min-height: var(--hdr-min-h, auto);
+  min-height: var(--hdr-min-h, calc(var(--vw-md) + var(--vw-xs)));
   min-width: var(--hdr-w, auto);
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
@@ -739,7 +714,7 @@ table {
   font-size: var(--tbl-fs, 0.9em);
   font-family: var(--fs, sans-serif);
   width: var(--tbl-width, calc(100% - 0rem));
-  border-collapse: var(--tbl-collapse);
+  border-collapse: var(--tbl-collapse, collapse);
   display: var(--tbl-dsp, table);
   border-radius: var(--tbl-rds, 16px);
   border-spacing: 0;
@@ -860,6 +835,7 @@ form {
 form div + div {
   -webkit-margin-before: var(--form-spc, 1.5rem);
           margin-block-start: var(--form-spc, 1.5rem);
+  display: block;
 }
 
 label[for] + input,
@@ -875,13 +851,16 @@ section:where([role="region"]) {
   width: 100%;
 }
 
+hr {
+  width: var(--hr-w, 100%);
+  height: var(--hr-h, 0.05rem);
+  background-color: var(--hr-bg, lightgray);
+  border: none;
+  margin-block: var(--py, 3rem);
+  margin-inline: var(px, auto);
+}
+
 img[alt][width][height] {
-  --img-xs: 10vw;
-  --img-sm: 25vw;
-  --img-md: 50vw;
-  --img-lg: 75vw;
-  --img-xl: 90vw;
-  --img-100: 100vw;
   max-width: 100%;
   width: var(--img-w, 100%);
   -o-object-fit: var(--img-obj-fit, cover);
@@ -889,9 +868,6 @@ img[alt][width][height] {
   -o-object-position: var(--img-position, center center);
      object-position: var(--img-position, center center);
   aspect-ratio: var(--img-ratio, auto 2/3);
-}
-img[alt][width][height][width] {
-  width: var(--img-w, auto);
 }
 img[alt][width][height][width][height] {
   height: var(--img-h, auto);
@@ -906,12 +882,6 @@ img[alt][width][height] + * {
 
 picture,
 figure {
-  --img-xs: 10vw;
-  --img-sm: 25vw;
-  --img-md: 50vw;
-  --img-lg: 75vw;
-  --img-xl: 90vw;
-  --img-100: 100vw;
   max-width: var(--pic-max-w, 100%);
   width: var(--pic-w, auto);
   display: var(--pic-dsp, flex);
@@ -924,12 +894,6 @@ figure {
 }
 
 figcaption {
-  --img-xs: 10vw;
-  --img-sm: 25vw;
-  --img-md: 50vw;
-  --img-lg: 75vw;
-  --img-xl: 90vw;
-  --img-100: 100vw;
   font-size: var(--fcap-fs, inherit);
   display: var(--fcap-dsp, flex);
   place-content: var(--place-x, flex-start);
@@ -1407,15 +1371,11 @@ footer:not([aria-label], [role=footer]) p,
 
 ul, [style*="--list"] {
   --listOff: ;
-  --list-s: inside;
-  --list-fs: .95rem;
-  --list-lh: 1.5;
-  --list-pxs: 1.5rem;
-  list-style: var(--list-s);
-  font-size: var(--list-fs);
-  line-height: var(--list-lh);
-  -webkit-padding-start: var(--list-pxs);
-          padding-inline-start: var(--list-pxs);
+  list-style: var(--list-s, inside);
+  font-size: var(--list-fs, 0.95rem);
+  line-height: var(--list-lh, 1.5);
+  -webkit-padding-start: var(--list-pxs, 1.5rem);
+          padding-inline-start: var(--list-pxs, 1.5rem);
 }
 
 [style*="--listOff"] {
@@ -1424,34 +1384,27 @@ ul, [style*="--list"] {
 }
 
 [style*="--scroll"], div[role=region] {
-  --scroll-w: 0.5rem;
-  --scroll-h: 0.5rem;
-  --scroll-size: thin;
-  --scroll-bg: gray;
-  --scroll-track-bg: lightgray;
-  --overflow-x: auto;
-  --overflow-y: auto;
   max-height: var(--scroll, 50vh);
-  overflow-y: var(--overflow-y);
-  overflow-x: var(--overflow-x);
-  scrollbar-width: var(--scroll-size);
+  overflow-y: var(--overflow-y, auto);
+  overflow-x: var(--overflow-x, auto);
+  scrollbar-width: var(--scroll-size, thin);
 }
 [style*="--scroll"] > *, div[role=region] > * {
   padding: 10px;
 }
 [style*="--scroll"]::-webkit-scrollbar, div[role=region]::-webkit-scrollbar {
-  width: var(--scroll-w);
-  height: var(--scroll-h);
+  width: var(--scroll-w, 0.5rem);
+  height: var(--scroll-h, 0.5rem);
   -webkit-transition: opacity 500ms ease;
   transition: opacity 500ms ease;
 }
 [style*="--scroll"]::-webkit-scrollbar-track, div[role=region]::-webkit-scrollbar-track {
   /* Background */
-  background: var(--scroll-track-bg);
+  background: var(--scroll-track-bg, lightgray);
 }
 [style*="--scroll"]::-webkit-scrollbar-thumb, div[role=region]::-webkit-scrollbar-thumb {
   /* Foreground */
-  background: var(--scroll-bg);
+  background: var(--scroll-bg, gray);
 }
 
 nav > :where(ol[aria-label], div[role="list"]) {
