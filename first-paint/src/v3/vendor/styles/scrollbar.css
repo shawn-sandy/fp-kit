@@ -1,30 +1,23 @@
 .fp-scrollbar {
-  --scroll-w: 0.5rem;
-  --scroll-h: 0.5rem;
-  --scroll-size: thin;
-  --scroll-bg: gray;
-  --scroll-track-bg: lightgray;
-  --overflow-x: auto;
-  --overflow-y: auto;
   max-height: var(--scroll, 50vh);
-  overflow-y: var(--overflow-y);
-  overflow-x: var(--overflow-x);
-  scrollbar-width: var(--scroll-size);
+  overflow-y: var(--overflow-y, auto);
+  overflow-x: var(--overflow-x, auto);
+  scrollbar-width: var(--scroll-size, thin);
 }
 .fp-scrollbar > * {
   padding: 10px;
 }
 .fp-scrollbar::-webkit-scrollbar {
-  width: var(--scroll-w);
-  height: var(--scroll-h);
+  width: var(--scroll-w, 0.5rem);
+  height: var(--scroll-h, 0.5rem);
   -webkit-transition: opacity 500ms ease;
   transition: opacity 500ms ease;
 }
 .fp-scrollbar::-webkit-scrollbar-track {
   /* Background */
-  background: var(--scroll-track-bg);
+  background: var(--scroll-track-bg, lightgray);
 }
 .fp-scrollbar::-webkit-scrollbar-thumb {
   /* Foreground */
-  background: var(--scroll-bg);
+  background: var(--scroll-bg, gray);
 }
