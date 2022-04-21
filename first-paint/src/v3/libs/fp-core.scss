@@ -4,3 +4,6 @@
 @use "../components/type.scss";
 @use "../styles/layout.scss";
 @use "../modules/content";
+
+@include props.module();
+@include content.module();

@@ -625,11 +625,6 @@ nav {
   margin-inline: var(--nav-mx, 1rem);
   background-color: var(--nav-bg, initial);
 }
-@media (min-width: 61.25rem) {
-  nav {
-    --px: calc(10% - 1rem);
-  }
-}
 nav > section,
 nav > ul {
   --nav-dsp: flex;
@@ -708,6 +703,7 @@ form {
 }
 form div + div {
   margin-block-start: var(--form-spc, 1.5rem);
+  display: block;
 }
 
 label[for] + input,
@@ -720,6 +716,15 @@ label[for] + select {
 div:where([role="region"]),
 section:where([role="region"]) {
   width: 100%;
+}
+
+hr {
+  width: var(--hr-w, 100%);
+  height: var(--hr-h, 0.05rem);
+  background-color: var(--hr-bg, lightgray);
+  border: none;
+  margin-block: var(--py, 3rem);
+  margin-inline: var(px, auto);
 }
 
 img[alt][width][height] {

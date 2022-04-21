@@ -3,7 +3,7 @@
 .fp {
 
   &-nav {
-    @include modules.nav-props;
+    // @include modules.nav-props;
     @include modules.nav-rules;
   }
 
@@ -27,6 +27,12 @@
     @include modules.checkbox-props;
     @include modules.checkbox-rules;
   }
+  @include modules.checkbox-styles;
+
+  &-label[for] {
+
+    @include modules.checkbox-label;
+  }
 
   &-img {
     @include modules.img-props;
@@ -43,7 +49,7 @@
     @include modules.nav-props;
     @include modules.nav-styles;
   }
-  @include modules.nav-rules;
+
 
   &-table {
     @include modules.table-props;
