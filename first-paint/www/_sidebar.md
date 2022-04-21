@@ -2,6 +2,7 @@
 - [First Paint v3.0(beta)](/README)
 - [Features](/FEATURES)
 - [Guides](/GUIDES)
+  - [Styles Demo](components/ClassDemo)
 - [Custom Props](/tokens/Tokens)
   - [HSL Color](/tokens/ColorHSL)
   - [Scaled Color Tokens](/tokens/Color)

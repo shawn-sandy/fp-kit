@@ -223,7 +223,7 @@ hr {
   border-color: var(--chk-bdr-cl);
   border-width: var(--chk-bdr-w);
   border-style: --chk-bdr-style;
-  --chk-bg: yellowgreen;
+  --chk-bg: var(--fp-yellow-green);
 }
 .fp-label[for] {
   --lbl-me: 1rem;
@@ -529,8 +529,8 @@ hr {
 .fp-radio :where([id][type="radio"]):checked::before {
   --rdo-bdr-s: solid;
   --rdo-bdr-w: thick;
-  --rdo-bdr-cl: var(--green-dark-green);
-  --rdo-bg: var(--green-yellow-green);
+  --rdo-bdr-cl: var(--fp-dark-green);
+  --rdo-bg: var(--fp-yellow-green);
   border-color: var(--rdo-bdr-cl);
   border-width: var(--rdo-bdr-w);
   border-style: var(--rdo-bdr-s);
