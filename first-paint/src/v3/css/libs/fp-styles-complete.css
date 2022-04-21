@@ -268,7 +268,6 @@ hr {
   --chk-rds: var(--rds);
   --lbl-me: 1rem;
   --lbl-dsp: flex;
-  --fs: var(--chk-size);
   display: var(--lbl-dsp);
   flex-direction: var(--lbl-direction, row);
   align-items: normal;
@@ -276,7 +275,7 @@ hr {
   gap: 0.3rem;
   cursor: pointer;
   max-height: var(--chk-size);
-  font-size: var(var(--chk-fs), var(--fs));
+  font-size: var(var(--chk-fs), 1rem);
 }
 .fp-checkbox :where([id][type="checkbox"]) {
   appearance: var(--chk-appearance);
