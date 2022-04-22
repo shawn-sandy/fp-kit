@@ -113,7 +113,9 @@ Optionally load the components you need.
 
 ```html preview
 <header>
-Header Section
+<h1>
+FirstPaint
+</h1>
 </header>
 ```
 
