@@ -100,5 +100,5 @@
 <a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-2)" target="_blank">Github</a>
 </p>
 </section>
-<p> &copy; 2022 FirstPaint</p>
+<p> &copy; 2022 FirstPaint v3.0 <span role="note" style="--note: var(--beta); --note-scale">Beta</span></p>
 </footer>
