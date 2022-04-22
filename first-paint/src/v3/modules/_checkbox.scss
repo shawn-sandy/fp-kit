@@ -12,21 +12,21 @@
 }
 
 @mixin label() {
-  --lbl-me: 1rem;
-  --lbl-dsp: flex;
-  --lbl-fs: 1rem;
-  --lbl-align: normal;
-  --lbl-gap: 0.5rem;
-  --lbl-color: currentColor;
-  --lbl-cursor: pointer;
-  --lbl-height: auto;
-  display: var(--lbl-dsp);
+  // --lbl-me: 1rem;
+  // --lbl-dsp: flex;
+  // --lbl-fs: 1rem;
+  // --lbl-align: normal;
+  // --lbl-gap: 0.5rem;
+  // --lbl-color: currentColor;
+  // --lbl-cursor: pointer;
+  // --lbl-h: auto;
+  display: var(--lbl-dsp, flex);
   flex-direction: var(--lbl-direction, row);
-  align-items: var(--lbl-align);
-  margin-inline-end: var(--lbl-me);
-  gap: 0.3rem;
-  cursor: pointer;
-  height: auto;
+  align-items: var(--lbl-align, normal);
+  margin-inline-end: var(--lbl-me, 1rem);
+  gap: var(--lbl-gap, 0.3rem) ;
+  cursor: var(--lbl-cursor, pointer);
+  height: var(--lbl-h, auto);
   font-size: var(--lbl-fs, var(--fs));
   @content;
 }
