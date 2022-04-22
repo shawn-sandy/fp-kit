@@ -3,7 +3,7 @@
 <h1 role="decoration" style="font-size: var(--h2); --fw: 500; --align: center;">
  <img src="https://res.cloudinary.com/dqjs95c7n/image/upload/v1647442611/fp-text-logo-xl_vrsh8c.svg" data-origin="https://res.cloudinary.com/dqjs95c7n/image/upload/v1647442611/fp-text-logo-xl_vrsh8c.svg" alt="first paint logo" style="display: inline">
 </h1>
-<h2 role="decoration" style="font-size: var(--h2); --fw: medium; --cl: black">An easy to use, performance-first, CSS/SCSS toolkit.</h2>
+<h2 role="decoration" style="font-size: var(--h2); --fw: medium; --cl: black">A modern, easy to use, performance-first, CSS/SCSS micro framework.</h2>
 
 
 <a href="/#/README" style="--btn: green; --btn-rds: 99rem; color: whitesmoke; --btn-fs: var(--fs-3); --btn-bdr: green solid;">Getting Started</a>
@@ -25,13 +25,13 @@
       <div role="gridcell">
         <h4>Dynamic CSS</h4>
         <p>
-          Change the style and layout on the fly.
+          We leverage the power of CSS variables to dynamically change the style and layout of elements on the page.
         </p>
       </div>
       <div role="gridcell">
         <h4>Classes Optional</h4>
         <p>
-          CSS classes are not required but welcomed.
+          We choose CSS variables and Semantic HTML over class heavy styling. You don't need classes but are free to create and use them.
         </p>
       </div>
       <div role="gridcell">
