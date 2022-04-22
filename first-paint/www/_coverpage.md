@@ -12,7 +12,7 @@
 </header>
 
 <main>
-<hr>
+
 <section role="grid" style="--grid-cols: 3; margin-block: var(--spc-6); --grid-gap: 2rem">
     <div role="row">
       <div role="gridcell">
