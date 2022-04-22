@@ -153,7 +153,6 @@ table {
 
 svg {
   /* Make the SVGs fit the parent container by default */
-  height: auto;
   width: 100%;
   /* Optional - make the SVG's fill be the same as the inherited color */
   fill: currentColor;
@@ -681,7 +680,7 @@ header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialo
   place-items: var(--hdr-place-y, center);
   text-align: var(--hdr-align, center);
   min-height: var(--hdr-min-h, calc(var(--vw-md) + var(--vw-xs)));
-  min-width: var(--hdr-w, auto);
+  min-width: var(--hdr-w, 100%);
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);

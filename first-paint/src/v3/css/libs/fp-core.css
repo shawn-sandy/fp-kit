@@ -152,7 +152,6 @@ table {
 
 svg {
   /* Make the SVGs fit the parent container by default */
-  height: auto;
   width: 100%;
   /* Optional - make the SVG's fill be the same as the inherited color */
   fill: currentColor;

@@ -14,14 +14,9 @@ A simple HTML5 example page with snippets of the components used you can copy an
 <a role="button" style="--link-bg: lightgray; --btn-rds: 99rem;" href="/basic-sample.html" target="_blank">View Sample Page Layout</a>
 <p>
 
-#### FP STYLES
-
-FP-Styles is an optional version of FP that provides a set of classes that can be used to style your components.
-
-<a role="button" style="--link-bg: lightgray; --btn-rds: 99rem;" href="/basic-sample.html" target="_blank">View Sample Page Layout (classes)</a>
 
 
-## Snippet Page Source
+### Snippet Page Source
 
 ### HTML5 Snippet
 
@@ -293,3 +288,9 @@ FP-Styles is an optional version of FP that provides a set of classes that can b
  <div>Copyright &copy; 2022</div>
 </footer>
 ```
+
+## FP STYLES
+
+FP-Styles is an optional version of FP that provides a set of classes that can be used to style your components.
+
+<a role="button" style="--link-bg: lightgray; --btn-rds: 99rem;" href="/basic-sample.html" target="_blank">View Sample Page Layout (classes)</a>

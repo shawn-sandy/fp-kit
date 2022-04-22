@@ -3,7 +3,7 @@
 -------
 # First Paint 3.0 (beta)
 
-> A performance first, easy to use, accessible CSS/SCSS micro framework that focuses on CSS custom properties and Semantic HTML over `class` heavy styling.
+> A modern, performance first, easy to use, accessible CSS/SCSS micro framework that focuses on CSS custom properties and Semantic HTML over `class` heavy styling.
 
 -------
 
