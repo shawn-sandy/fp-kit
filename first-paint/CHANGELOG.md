@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.15.2](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.15.1...@shawnsandy/first-paint@2.15.2) (2022-04-23)
+
+
+### Bug Fixes
+
+* **beta:** checkbox/label alignment ([e7e3d46](https://github.com/shawn-sandy/fp-kit/commit/e7e3d46e25e2b0f3babb58934170f855656b1d07))
+* **beta:** checkbox/label alignment ([5fa872b](https://github.com/shawn-sandy/fp-kit/commit/5fa872bba5f1d02eabe068cfee916aa9dd1a85b7))
+* **beta:** checkbox/label alignment ([daab55f](https://github.com/shawn-sandy/fp-kit/commit/daab55f7e488d863848d8f5a34270d1245371d93))
+* **beta:** remove svg auto width ([29583b5](https://github.com/shawn-sandy/fp-kit/commit/29583b59d86ae3aa70428652a99288ffb89b4abc))
+* **wip:** add a h1 to header example ([656fe58](https://github.com/shawn-sandy/fp-kit/commit/656fe5888eec268d8be0b197ec39d779e956484d))
+
+
+### Features
+
+* **beta:** add badge (beta) to footer ([1e8b7c8](https://github.com/shawn-sandy/fp-kit/commit/1e8b7c8c3e151cab1fe2c60e8a9fccfa2cf4bd18))
+* **beta:** landing page icons ([39743bb](https://github.com/shawn-sandy/fp-kit/commit/39743bb96f2d98bff9e0a2ccd5e1d07b96125dc1))
+* **beta:** optimize the radio props/styles ([233c0f1](https://github.com/shawn-sandy/fp-kit/commit/233c0f19ee15f843c86afd0603324eefb2427e19))
+* **beta:** update site content/docs ([9e921ce](https://github.com/shawn-sandy/fp-kit/commit/9e921cedba2985b6de362fabad652af8aa84b354))
+* **beta:** update site content/docs ([69007aa](https://github.com/shawn-sandy/fp-kit/commit/69007aa55c2e8dd7f24174e0e593354bf074bf33))
+
+
+
+
+
 ## [2.15.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.15.0...@shawnsandy/first-paint@2.15.1) (2022-04-21)
 
 
