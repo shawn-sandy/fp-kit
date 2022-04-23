@@ -3,28 +3,22 @@
 
 @mixin props() {
   // * css custom properties
-  --rdo-bdr: none;
-  --rdo-bdr-w: medium;
-  --rdo-bdr-cl: transparent;
-  --rdo-bg: darkgray;
   --rdo-appearance: none;
-  --rdo-rds: 99rem;
-  --rdo-size: 1.2rem;
   @content;
 }
 
 @mixin rules {
   // * css rules/styles
   @include checkbox.label();
-  max-height: var(--rdo-size);
+  max-height: var(--rdo-size, 1.2rem);
   + label {
     margin-block-start: .8rem;
   }
   :where([id][type="radio"]) {
-    appearance: var(--rdo-appearance);
-    -webkit-appearance: var(--rdo-appearance);
-    -moz-appearance: var(--rdo-appearance);
-    border-radius: var(--check-rds);
+    appearance: var(--rdo-appearance, none);
+    -webkit-appearance: var(--rdo-appearance, none);
+    -moz-appearance: var(--rdo-appearance, none);
+    border-radius: var(--check-rds, 99rem);
     cursor: pointer;
     margin: 0;
     line-height: 1;
@@ -38,15 +32,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-width: var(--rdo-size);
-      min-height: var(--rdo-size);
+      min-width: var(--rdo-size, 1.2rem);
+      min-height: var(--rdo-size, 1.2rem);
       margin: 0;
       // border: var(--rdo-bdr, none);
-      border-style: var(--rdo-bdr);
-      border-width: var(--rdo-bdr-w);
-      border-color: var(--rdo-bdr-cl);
-      background-color: var(--rdo-bg);
-      border-radius: var(--rdo-rds);
+      border-style: var(--rdo-bdr, solid);
+      border-width: var(--rdo-bdr-w, thick);
+      border-color: var(--rdo-bdr-cl, var(--fp-light-gray));
+      background-color: var(--rdo-bg, var(--fp-light-gray));
+      border-radius: var(--rdo-rds, 99rem);
     }
 
     &:checked {
@@ -56,9 +50,9 @@
         --rdo-bdr-w: thick;
         --rdo-bdr-cl: var(--fp-dark-green);
         --rdo-bg: var(--fp-yellow-green);
-        border-color: var(--rdo-bdr-cl);
-        border-width: var(--rdo-bdr-w);
-        border-style: var(--rdo-bdr-s);
+        border-color: var(--rdo-bdr-cl, var(--fp-dark-green));
+        border-width: var(--rdo-bdr-w, thick);
+        border-style: var(--rdo-bdr-s, none);
       }
     }
   }

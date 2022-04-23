@@ -155,8 +155,6 @@ table {
 }
 
 svg {
-  /* Make the SVGs fit the parent container by default */
-  height: auto;
   width: 100%;
   /* Optional - make the SVG's fill be the same as the inherited color */
   fill: currentColor;
@@ -684,7 +682,7 @@ header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialo
   place-items: var(--hdr-place-y, center);
   text-align: var(--hdr-align, center);
   min-height: var(--hdr-min-h, calc(var(--vw-md) + var(--vw-xs)));
-  min-width: var(--hdr-w, auto);
+  min-width: var(--hdr-w, 100%);
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
@@ -903,24 +901,15 @@ figcaption {
 }
 
 :where(label[for]) {
-  --chk-bdr-w: thick;
-  --chk-bdr-cl: transparent;
-  --chk-accent: green;
-  --chk-bg: darkgray;
-  --chk-size: 1.2rem;
-  --chk-appearance: none;
-  --chk-rds: var(--rds);
-  --lbl-me: 1rem;
-  --lbl-dsp: flex;
-  display: var(--lbl-dsp);
+  display: var(--lbl-dsp, flex);
   flex-direction: var(--lbl-direction, row);
-  align-items: normal;
-  -webkit-margin-end: var(--lbl-me);
-          margin-inline-end: var(--lbl-me);
-  gap: 0.3rem;
-  cursor: pointer;
-  max-height: var(--chk-size);
-  font-size: var(var(--chk-fs), 1rem);
+  align-items: var(--chk-align, normal);
+  -webkit-margin-end: var(--lbl-me, 1rem);
+          margin-inline-end: var(--lbl-me, 1rem);
+  gap: var(--chk-gap, 0.3rem);
+  cursor: var(--lbl-cursor, pointer);
+  max-height: var(--chk-size, 1.2rem);
+  font-size: var(--chk-fs, 1rem);
 }
 :where(label[for]) :where([id][type="checkbox"]) {
   appearance: var(--chk-appearance);
@@ -929,21 +918,17 @@ figcaption {
   line-height: 1;
 }
 :where(label[for]) :where([id][type="checkbox"])::before {
-  --chk-bdr-cl: darkgreen;
-  --check-bdr-w: thick;
-  --chk-bdr: none;
-  --chk-rds: var(--rds);
   content: "";
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--chk-size);
-  height: var(--chk-size);
-  border-style: var(--chk-bdr);
-  border-width: var(--chk-bdr-w);
-  border-color: var(--chk-bdr-cl);
-  background-color: var(--chk-bg);
-  border-radius: var(--chk-rds);
+  width: var(--chk-size, 1.2rem);
+  height: var(--chk-size, 1.2rem);
+  border-style: var(--chk-bdr, none);
+  border-width: var(--chk-bdr-w, thick);
+  border-color: var(--chk-bdr-cl, var(--fp-dark-green));
+  background-color: var(--chk-bg, var(--fp-light-gray));
+  border-radius: var(--chk-rds, var(--rds));
   transition: var(--tran-all);
 }
 :where(label[for]) :where([id][type="checkbox"]):checked {
@@ -952,7 +937,7 @@ figcaption {
 :where(label[for]) :where([id][type="checkbox"]):checked::before {
   --chk-bdr: solid;
   border-color: var(--chk-bdr-cl);
-  border-width: var(--chk-bdr-w);
+  border-width: var(--chk-bdr-w, thick);
   border-style: --chk-bdr-style;
   --chk-bg: var(--fp-yellow-green);
 }
@@ -1023,41 +1008,27 @@ input[id][type]:not([type=checkbox], [type=radio])::placeholder {
 }
 
 :where(label[for]) {
-  --rdo-bdr: none;
-  --rdo-bdr-w: medium;
-  --rdo-bdr-cl: transparent;
-  --rdo-bg: darkgray;
   --rdo-appearance: none;
-  --rdo-rds: 99rem;
-  --rdo-size: 1.2rem;
-  --lbl-me: 1rem;
-  --lbl-dsp: flex;
-  --lbl-fs: 1rem;
-  --lbl-align: normal;
-  --lbl-gap: 0.5rem;
-  --lbl-color: currentColor;
-  --lbl-cursor: pointer;
-  --lbl-height: auto;
-  display: var(--lbl-dsp);
+  display: var(--lbl-dsp, flex);
   flex-direction: var(--lbl-direction, row);
-  align-items: var(--lbl-align);
-  -webkit-margin-end: var(--lbl-me);
-          margin-inline-end: var(--lbl-me);
-  gap: 0.3rem;
-  cursor: pointer;
-  height: auto;
+  align-items: var(--lbl-align, normal);
+  -webkit-margin-end: var(--lbl-me, 1rem);
+          margin-inline-end: var(--lbl-me, 1rem);
+  gap: var(--lbl-gap, 0.3rem);
+  cursor: var(--lbl-cursor, pointer);
+  height: var(--lbl-h, auto);
   font-size: var(--lbl-fs, var(--fs));
-  max-height: var(--rdo-size);
+  max-height: var(--rdo-size, 1.2rem);
 }
 :where(label[for]) + label {
   -webkit-margin-before: 0.8rem;
           margin-block-start: 0.8rem;
 }
 :where(label[for]) :where([id][type="radio"]) {
-  appearance: var(--rdo-appearance);
-  -webkit-appearance: var(--rdo-appearance);
-  -moz-appearance: var(--rdo-appearance);
-  border-radius: var(--check-rds);
+  appearance: var(--rdo-appearance, none);
+  -webkit-appearance: var(--rdo-appearance, none);
+  -moz-appearance: var(--rdo-appearance, none);
+  border-radius: var(--check-rds, 99rem);
   cursor: pointer;
   margin: 0;
   line-height: 1;
@@ -1070,14 +1041,14 @@ input[id][type]:not([type=checkbox], [type=radio])::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: var(--rdo-size);
-  min-height: var(--rdo-size);
+  min-width: var(--rdo-size, 1.2rem);
+  min-height: var(--rdo-size, 1.2rem);
   margin: 0;
-  border-style: var(--rdo-bdr);
-  border-width: var(--rdo-bdr-w);
-  border-color: var(--rdo-bdr-cl);
-  background-color: var(--rdo-bg);
-  border-radius: var(--rdo-rds);
+  border-style: var(--rdo-bdr, solid);
+  border-width: var(--rdo-bdr-w, thick);
+  border-color: var(--rdo-bdr-cl, var(--fp-light-gray));
+  background-color: var(--rdo-bg, var(--fp-light-gray));
+  border-radius: var(--rdo-rds, 99rem);
 }
 :where(label[for]) :where([id][type="radio"]):checked {
   --rdo-appearance: none;
@@ -1087,9 +1058,9 @@ input[id][type]:not([type=checkbox], [type=radio])::placeholder {
   --rdo-bdr-w: thick;
   --rdo-bdr-cl: var(--fp-dark-green);
   --rdo-bg: var(--fp-yellow-green);
-  border-color: var(--rdo-bdr-cl);
-  border-width: var(--rdo-bdr-w);
-  border-style: var(--rdo-bdr-s);
+  border-color: var(--rdo-bdr-cl, var(--fp-dark-green));
+  border-width: var(--rdo-bdr-w, thick);
+  border-style: var(--rdo-bdr-s, none);
 }
 
 textarea {
@@ -1229,45 +1200,34 @@ div[role=presentation] h4 {
 }
 
 select {
-  --slt-dsp: grid;
-  --slt-align: center;
-  --slt-justify: space-between;
-  --slt-min-w: var(--min-w-800)
-  --sle-min-h: 2.5rem;
-  --slt-cl: currentColor;
-  --slt-bdr-style: solid;
-  --slt-bdr-w: thin;
-  --slt-bdr-cl: lightgray;
-  --slt-px: 0.5rem;
-  --slt-py: 0.3rem;
   --slt-appearance: none;
   --slt-fs: 0.9rem;
   --slt-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctitle%3Eic_keyboard_arrow_down_24px%3C/title%3E%3Cg fill='%23000000'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
   --bg-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctitle%3Eic_keyboard_arrow_down_24px%3C/title%3E%3Cg fill='%23696969'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
   --bg-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctitle%3Eic_keyboard_arrow_down_24px%3C/title%3E%3Cg fill='%23f1f1f1'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-  display: var(--slt-dsp);
-  place-items: var(--slt-align);
-  place-content: var(--slt-justify);
-  width: var(--min-w-800);
-  min-height: var(--slt-min-h);
+  display: var(--slt-dsp, var(--grid-cols));
+  place-items: var(--slt-align, center);
+  place-content: var(--slt-justify, space-between);
+  width: var(--slt-min-w, var(--min-w-800));
+  min-height: var(--slt-min-h, 2.5rem);
   font-size: var(--slt-fs, 0.9rem);
   color: var(--slt-cl, currentColor);
   background-color: var(--slt-bg, whitesmoke);
   background: var(--slt-bg);
-  background-repeat: no-repeat;
+  background-repeat: var(--slt-bg-rpt, no-repeat);
   background-size: 1rem 1rem;
   background-position: right 0.8rem top 50%;
-  border-style: var(--slt-bdr-style);
-  border-width: var(--slt-bdr-w);
-  border-color: var(--slt-bdr-cl);
-  padding-inline: var(--slt-px);
-  padding-block: var(--slt-py);
+  border-style: var(--slt-bdr-style, solid);
+  border-width: var(--slt-bdr-w, thin);
+  border-color: var(--slt-bdr-cl, var(--fp-light-gray));
+  padding-inline: var(--slt-px, 0.5rem);
+  padding-block: var(--slt-py, 0.3rem);
   -webkit-appearance: var(--slt-appearance);
   appearance: var(--slt-appearance);
-  padding-right: 30px;
+  padding-right: var(--sle-pxe, 30px);
 }
 
-_text select * {
+select * {
   padding-inline: var(--slt-px);
 }
 
@@ -1455,7 +1415,8 @@ nav > :where(ol[aria-label], div[role="list"]) li + li::before {
 
 .sidebar h1 {
   display: flex;
-  place-content: center;
+  place-content: flex-start;
+  padding-inline: 1rem;
 }
 
 .demo_preview {
