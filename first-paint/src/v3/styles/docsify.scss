@@ -5,7 +5,8 @@
 .sidebar {
   h1 {
     display: flex;
-    place-content: center;
+    place-content: flex-start;
+    padding-inline: 1rem;
   }
 }
 
