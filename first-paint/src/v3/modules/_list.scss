@@ -27,7 +27,7 @@
 }
 
 @mixin module {
-  ul, [style*="--list"] {
+  ul, [style*="--list"], .fp-list {
     @include props;
     @include rules;
   }

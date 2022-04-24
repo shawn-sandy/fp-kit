@@ -22,6 +22,7 @@
 
 @mixin module {
   footer,
+  .fp-footer,
   [role="contentinfo"] {
     &:not([aria-label], [role="footer"]) {
       @include props;

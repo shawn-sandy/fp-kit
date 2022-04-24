@@ -5,7 +5,7 @@
 }
 
 @mixin rules {
-  a {
+  a, .fp-link {
     --link-border: none;
     color: var(--link-color, #0070f3);
     background-color: var(--link-bg);
@@ -33,7 +33,7 @@
     }
   }
 
-  form {
+  form, .fp-form {
     width: 100%;
     div + div {
       margin-block-start: var(--form-spc, 1.5rem);
@@ -41,7 +41,7 @@
     }
   }
 
-  label[for] {
+  .fp-label, label[for] {
     + input,
     + textarea,
     + select {

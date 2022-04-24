@@ -26,7 +26,8 @@
   background-color: var(--note, var(--note-bg));
 }
 
-[style*="--note-scale"], p[style*="--note-scale"] {
+[style*="--note-scale"],
+p[style*="--note-scale"] {
   font-size: var(--note-scale, 75%);
 }
 

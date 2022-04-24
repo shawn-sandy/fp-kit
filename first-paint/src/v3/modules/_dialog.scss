@@ -23,7 +23,7 @@
 }
 
 @mixin module {
-  dialog, [role=dialog] {
+  dialog, [role=dialog], .fp-dialog {
   @include props;
     @include rules;
 

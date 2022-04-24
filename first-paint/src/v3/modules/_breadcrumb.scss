@@ -35,7 +35,7 @@
 }
 
 @mixin module {
-  nav > {
+  nav > .fp-breadcrumb > {
    :where(ol[aria-label], div[role="list"])  {
     @include props;
     @include rules;

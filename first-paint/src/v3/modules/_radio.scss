@@ -65,7 +65,7 @@
 }
 
 @mixin module {
-  :where(label[for]) {
+.fp-radio[for], :where(label[for])  {
     @include props;
     @include rules;
   }

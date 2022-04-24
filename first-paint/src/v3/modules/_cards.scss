@@ -56,7 +56,7 @@
 *
 */
 @mixin module {
-  div[role="presentation"] {
+  div[role="presentation"], .fp-card[role="presentation"] {
     @include rules;
   }
   @include styles;

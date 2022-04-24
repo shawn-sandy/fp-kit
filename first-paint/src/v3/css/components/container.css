@@ -1,5 +1,6 @@
 /* stylelint-disable declaration-colon-newline-after */
 /* stylelint-disable declaration-empty-line-before */
+.fp-container,
 :where(main, section, article, footer, header, table),
 [style*="--bx"] {
   --bx-flow: column wrap;

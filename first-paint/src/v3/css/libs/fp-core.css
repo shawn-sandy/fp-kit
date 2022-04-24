@@ -596,7 +596,7 @@ p + * {
   color: var(--hsl --s --l);
 }
 
-a {
+a, .fp-link {
   --link-border: none;
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
@@ -605,31 +605,33 @@ a {
   padding-inline: var(--link-px, 0.25rem);
   transition: var(--tran-all);
 }
-a:hover {
+a:hover, .fp-link:hover {
   --link-decoration: underline;
   filter: var(--filter);
 }
-a:visited {
+a:visited, .fp-link:visited {
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
 }
-a:active {
+a:active, .fp-link:active {
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
 }
-a[role=button], a[style="--btn"] {
+a[role=button], a[style="--btn"], .fp-link[role=button], .fp-link[style="--btn"] {
   background-color: var(--link-bg);
 }
 
-form {
+form, .fp-form {
   width: 100%;
 }
-form div + div {
+form div + div, .fp-form div + div {
   margin-block-start: var(--form-spc, 1.5rem);
   display: block;
 }
 
-label[for] + input,
+.fp-label + input,
+.fp-label + textarea,
+.fp-label + select, label[for] + input,
 label[for] + textarea,
 label[for] + select {
   margin-block-start: 0.75rem;

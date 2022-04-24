@@ -17,7 +17,7 @@
 }
 
 @mixin module {
-  aside {
+  aside, .fp-aside {
     @include rules;
   }
   @include styles;

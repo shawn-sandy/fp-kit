@@ -762,7 +762,8 @@ hr {
 .fp [style="--note-bg"] {
   background-color: var(--note, var(--note-bg));
 }
-.fp [style*="--note-scale"], .fp p[style*="--note-scale"] {
+.fp [style*="--note-scale"],
+.fp p[style*="--note-scale"] {
   font-size: var(--note-scale, 75%);
 }
 .fp-footer {
@@ -806,7 +807,7 @@ hr {
   /* Foreground */
   background: var(--scroll-bg, gray);
 }
-.fp-content a {
+.fp-content a, .fp-content .fp-link {
   --link-border: none;
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
@@ -815,29 +816,31 @@ hr {
   padding-inline: var(--link-px, 0.25rem);
   transition: var(--tran-all);
 }
-.fp-content a:hover {
+.fp-content a:hover, .fp-content .fp-link:hover {
   --link-decoration: underline;
   filter: var(--filter);
 }
-.fp-content a:visited {
+.fp-content a:visited, .fp-content .fp-link:visited {
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
 }
-.fp-content a:active {
+.fp-content a:active, .fp-content .fp-link:active {
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
 }
-.fp-content a[role=button], .fp-content a[style="--btn"] {
+.fp-content a[role=button], .fp-content a[style="--btn"], .fp-content .fp-link[role=button], .fp-content .fp-link[style="--btn"] {
   background-color: var(--link-bg);
 }
-.fp-content form {
+.fp-content form, .fp-content .fp-form {
   width: 100%;
 }
-.fp-content form div + div {
+.fp-content form div + div, .fp-content .fp-form div + div {
   margin-block-start: var(--form-spc, 1.5rem);
   display: block;
 }
-.fp-content label[for] + input,
+.fp-content .fp-label + input,
+.fp-content .fp-label + textarea,
+.fp-content .fp-label + select, .fp-content label[for] + input,
 .fp-content label[for] + textarea,
 .fp-content label[for] + select {
   margin-block-start: 0.75rem;

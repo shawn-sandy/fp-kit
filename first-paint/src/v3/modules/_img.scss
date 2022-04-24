@@ -61,17 +61,17 @@
 }
 
 @mixin module {
-  img[alt][width][height] {
+  img[alt][width][height], .fp-image[alt][width][height] {
     @include props;
     @include rules;
   }
 
   picture,
-  figure {
+  figure, .fp-figure {
     @include figure-rules;
   }
 
-  figcaption {
+  figcaption, .fp-cations {
     @include figcaption-rules;
   }
 }

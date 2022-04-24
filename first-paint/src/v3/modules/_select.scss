@@ -46,7 +46,7 @@
 }
 
 @mixin module {
-  select {
+  select, fp-selct {
     @include props;
     @include icons;
     @include rules;

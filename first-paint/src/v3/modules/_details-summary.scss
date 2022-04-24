@@ -58,7 +58,7 @@
 }
 
 @mixin module {
-  details {
+  .fp-details-summary, details {
     @include rules;
   }
 }
