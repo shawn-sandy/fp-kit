@@ -23,7 +23,7 @@ CSS variables can be used to dynamically change the look and feel of components/
 
 While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. FirstPaint and libraries like it that leverage semantic `HTML5`, `CSS props` and the `style` attributes allows us add a layer of `dynamic styling` to HTML/CSS with minimal effort redefining how we layout/style web applications.
 
-We understand that this is an unconventional and some will frown on the approach, If you still prefer classes, you can by adding the optional `.fp-` prefix to module `.fp-button`.
+We understand that this is an unconventional and some will frown on the approach, If you prefer classes, you can use the optional class syntax by adding a `.fp-` prefix to module `.fp-button`.
 
 
 ### Examples
