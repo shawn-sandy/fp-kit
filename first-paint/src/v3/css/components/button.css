@@ -1,6 +1,7 @@
 /* stylelint-disable declaration-colon-newline-after */
 button,
 [style*="--btn"],
+.fp-button,
 [role=button] {
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
@@ -24,6 +25,7 @@ button,
 }
 button[type],
 [style*="--btn"][type],
+.fp-button[type],
 [role=button][type] {
   background-color: var(--btn-bg, var(--btn, lightgray));
   --btn-bdr: solid var(--btn-sg);
@@ -31,6 +33,8 @@ button[type],
 button[type=submit], button[style*=submit],
 [style*="--btn"][type=submit],
 [style*="--btn"][style*=submit],
+.fp-button[type=submit],
+.fp-button[style*=submit],
 [role=button][type=submit],
 [role=button][style*=submit] {
   --btn-bg: darkblue;
@@ -38,12 +42,14 @@ button[type=submit], button[style*=submit],
 }
 button[disabled],
 [style*="--btn"][disabled],
+.fp-button[disabled],
 [role=button][disabled] {
   cursor: var(--btn-cursor-disabled, not-allowed);
   opacity: var(--btn-opacity-disabled, 0.5);
 }
 button:hover,
 [style*="--btn"]:hover,
+.fp-button:hover,
 [role=button]:hover {
   --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
@@ -54,6 +60,8 @@ button:hover,
 button[type=reset], button[style*="--btn-reset"],
 [style*="--btn"][type=reset],
 [style*="--btn"][style*="--btn-reset"],
+.fp-button[type=reset],
+.fp-button[style*="--btn-reset"],
 [role=button][type=reset],
 [role=button][style*="--btn-reset"] {
   --btn-bg: transparent;
@@ -63,6 +71,8 @@ button[type=reset], button[style*="--btn-reset"],
 button[type=submit], button[style*="--btn-submit"],
 [style*="--btn"][type=submit],
 [style*="--btn"][style*="--btn-submit"],
+.fp-button[type=submit],
+.fp-button[style*="--btn-submit"],
 [role=button][type=submit],
 [role=button][style*="--btn-submit"] {
   --btn-bg: var(--blue-500);

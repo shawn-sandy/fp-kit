@@ -1,5 +1,4 @@
 @mixin props {
-
   --fw: normal;
   --fst: normal;
   --lh: 1.7;
@@ -18,21 +17,63 @@
   --bdr-s: solid;
   --bdr-cl: lightgray;
   --appearance: none;
-  --link-cl:  blue-royal-blue;
+  --link-cl: blue-royal-blue;
   --link-hover-cl: blue;
   --lt-min: min(90%, 1480px);
   --lt-max: max(90%, 1600px);
-  --min-w-800: min(100%, calc(800rem /16));
-  --w-800: min(100%, calc(800rem /16));
+  --min-w-800: min(100%, calc(800rem / 16));
+  --w-800: min(100%, calc(800rem / 16));
   --align: initial;
+  // --hue --sat --light --alpha
 
-  --fp-dark: var(--fp-black);
-  --fp-light: var(--fp-white);
-  --fp-primary: var(--fp-royal-blue);
-  --fp-secondary: var(--fp-light-gray);
-  --fp-success: var(--fp-dark-green);
-  --fp-info: var(--fp-light-blue);
-  --fp-warning: var(--fp-orange);
-  --fp-danger: var(--fp-red);
-
+  --hsla: (var(--h), var(--a));
+  --fp-dark: hsla(
+    var(210),
+    var(--s, 11%),
+    var(--l, 0%),
+    var(--a, 1)
+  );
+  --fp-light: hsla(
+    var(--light-h, 0),
+    var(--light-s, 0),
+    var(--light-l, 100%),
+    var(--light-a, 1)
+  );
+  // hsl(216deg 98% 52%)
+  --fp-primary: hsla(
+    var(--primary-h, 216),
+    var(--primary-s, 98%),
+    var(--primary-l, 52%),
+    var(--primary-a, 1)
+  );
+  --fp-secondary: hsla(
+    var(--secondary-h, 210),
+    var(--secondary-s, 14.3%),
+    var(--secondary-l, 53.3%),
+    var(--secondary-a, 1)
+  );
+  --fp-success: hsla(
+    var(--success-h, 120),
+    var(--success-s, 100%),
+    var(--success-l, 50%),
+    var(--success-a, 1)
+  );
+  --fp-info: hsla(
+    var(--info-h, 180),
+    var(--info-s, 100%),
+    var(--info-l, 50%),
+    var(--info-a, 1)
+  );
+  --fp-warning: hsla(
+    var(--warning-h, 30),
+    var(--warning-s, 100%),
+    var(--warning-l, 50%),
+    var(--warning-a, 1)
+  );
+  --fp-danger: hsla(
+    var(--h, 0),
+    var(--s, 100%),
+    var(--l, 50%),
+    var(--a, 1)
+  );
 }

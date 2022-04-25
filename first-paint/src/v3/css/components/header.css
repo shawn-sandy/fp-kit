@@ -1,4 +1,4 @@
-header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialog header), [style*="--hdr"]:not([arial-label], dialog header) {
+header:not([arial-label], dialog header), .fp-header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialog header), [style*="--hdr"]:not([arial-label], dialog header) {
   display: var(--hdr-dsp, flex);
   background-color: var(--hdr-bg, var(--fp-white-smoke));
   background-image: var(--hdr-bg-img, none);

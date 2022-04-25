@@ -103,7 +103,7 @@
 *
 */
 @mixin module {
-  table {
+  table, .fp-table {
     @include rules;
   }
   @include styles;

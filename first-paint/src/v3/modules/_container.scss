@@ -62,6 +62,7 @@
 }
 
 @mixin module {
+  .fp-container,
   :where(main, section, article, footer, header, table),
   [style*="--bx"] {
     @include props;

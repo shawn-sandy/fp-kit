@@ -41,7 +41,7 @@
 }
 
 @mixin module {
-  textarea {
+  textarea, .fp-textarea {
   @include props;
     @include rules;
   }

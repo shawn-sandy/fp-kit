@@ -1,4 +1,3 @@
-
 @mixin props() {
   // * css custom properties
   --beta: orange;
@@ -12,7 +11,7 @@
   padding-inline: var(--note-px, 0.7rem);
   padding-block: var(--note-py, 0.2rem);
   color: var(--note-cl, inherit);
-  font-size: var(--note-fs, .8rem);
+  font-size: var(--note-fs, 0.8rem);
   font-weight: var(--note-fw, normal);
   border: var(--note-brd, none);
   border-radius: var(--note-rds, 99rem);
@@ -37,8 +36,9 @@
     background-color: var(--note, var(--note-bg));
   }
 
-  [style*="--note-scale"], p[style*="--note-scale"] {
-    font-size: var(--note-scale, 75%)
+  [style*="--note-scale"],
+  p[style*="--note-scale"] {
+    font-size: var(--note-scale, 75%);
   }
 
   @content;
@@ -46,7 +46,8 @@
 
 @mixin module {
   [role="note"],
-  p[role="note"] {
+  p[role="note"],
+  .fp-note {
     @include props;
     @include rules;
   }

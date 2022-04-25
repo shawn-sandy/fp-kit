@@ -59,7 +59,7 @@
 }
 
 @mixin module {
-  nav {
+  nav, .fp-nav {
     @include rules();
   }
 }
