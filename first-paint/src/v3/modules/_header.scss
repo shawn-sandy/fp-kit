@@ -35,7 +35,7 @@
 }
 
 @mixin module {
- header, [role="banner"], [style*="--hdr"] {
+ header, .fp-header, [role="banner"], [style*="--hdr"] {
     &:not([arial-label], dialog header) {
       @include props;
       @include rules;

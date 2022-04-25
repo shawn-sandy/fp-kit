@@ -38,7 +38,7 @@
 }
 
 @mixin module {
-  [style*="--scroll"], div[role="region"] {
+  [style*="--scroll"], div[role="region"], .fp-scroll {
     @include props;
     @include rules;
   }

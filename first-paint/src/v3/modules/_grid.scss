@@ -61,7 +61,7 @@
 *
 */
 @mixin module {
-  [role="grid"], [role="list"] {
+  [role="grid"], [role="list"], .fp-grid {
     @include rules;
   }
   @include styles;

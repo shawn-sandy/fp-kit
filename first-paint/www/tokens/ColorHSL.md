@@ -1,356 +1,279 @@
-# HSL colors  (variables)   <span role="note" style="--note: var(--beta)">Beta</span>
+# Color Tokens   <span role="note" style="--note: var(--beta)">Beta</span>
 
 > CSS named colors as tokens that use the  HSL color model
 
 
 ?> HTML Colors is a set of reusable colors that can be used in the design projects or HTML/CSS by their name, Hex code or RGB value.
 
-## Tokens Variables
-
-### White
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--white)">
-  <h3>white</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Black
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--black); color: white" >
-  <h3 style=" color: white">black</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Gray 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--gray-500)">
-  <h3>gray-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Primary 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--primary-500)">
-  <h3>primary-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Error 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--error-500)">
-  <h3>error-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-
-### Warning 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--warning-500)">
-  <h3>warning-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-
-### Success 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--success-500)">
-  <h3>success-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-
-
-### Blue Gray 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--blue-gray-500)">
-  <h3>blue-gray-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Blue Light 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--blue-light-500)">
-  <h3>blue-light-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Blue 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--blue-500)">
-  <h3>blue-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Indigo 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--indigo-500)">
-  <h3>indigo-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Purple 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--purple-500)">
-  <h3>purple-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Pink 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--pink-500)">
-  <h3>pink-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Rose 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--rose-500)">
-  <h3>rose-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-### Orange 500
-
-
-```html preview
-
-<div role="presentation" style="background-color: var(--orange-500)">
-  <h3>orange-500</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
-
-----
-
-## Variables
+## Custom Color Tokens
 
 ```css
- --fp-gainsboro: hsl(0,0%,86.3%);
-      --fp-light-gray: hsl(0,0%,82.7%);
-      --fp-silver: hsl(0,0%,75.3%);
-      --fp-dark-gray: hsl(0,0%,66.3%);
-      --fp-gray: hsl(0,0%,50.2%);
-      --fp-dim-gray: hsl(0,0%,41.2%);
-      --fp-light-slate-gray: hsl(210,14.3%,53.3%);
-      --fp-slate-gray: hsl(210,12.6%,50.2%);
-      --fp-dark-slate-gray: hsl(180,25.4%,24.7%);
-      --fp-black: hsl(0,0%,0%);
-      --fp-white: hsl(0,0%,100%);
-      --fp-snow: hsl(0,100%,99%);
-      --fp-honey-dew: hsl(120,100%,97.1%);
-      --fp-mint-cream: hsl(150,100%,98%);
-      --fp-azure: hsl(180,100%,97.1%);
-      --fp-alice-blue: hsl(208,100%,97.1%);
-      --fp-ghost-white: hsl(240,100%,98.6%);
-      --fp-fp-smoke: hsl(0,0%,96.1%);
-      --fp-sea-shell: hsl(25,100%,96.7%);
-      --fp-beige: hsl(60,55.6%,91.2%);
-      --fp-old-lace: hsl(39,85.2%,94.7%);
-      --fp-floral-white: hsl(40,100%,97.1%);
-      --fp-ivory: hsl(60,100%,97.1%);
-      --fp-antique-white: hsl(34,77.8%,91.2%);
-      --fp-linen: hsl(30,66.7%,94.1%);
-      --fp-lavender-blush: hsl(340,100%,97.1%);
-      --fp-misty-rose: hsl(6,100%,94.1%);
-      --fp-light-salmon: hsl(17,100%,73.9%);
-      --fp-salmon: hsl(6,93.2%,71.4%);
-      --fp-dark-salmon: hsl(15,71.6%,69.6%);
-      --fp-light-coral: hsl(0,78.9%,72.2%);
-      --fp-indian-red: hsl(0,53.1%,58.2%);
-      --fp-crimson: hsl(348,83.3%,47.1%);
-      --fp-red: hsl(0,100%,50%);
-      --fp-fire-brick: hsl(0,67.9%,41.6%);
-      --fp-dark-red: hsl(0,100%,27.3%);
-      --fp-orange: hsl(39,100%,50%);
-      --fp-dark-orange: hsl(33,100%,50%);
-      --fp-coral: hsl(16,100%,65.7%);
-      --fp-tomato: hsl(9,100%,63.9%);
-      --fp-fp-red: hsl(16,100%,50%);
-      --fp-cornsilk: hsl(48,100%,93.1%);
-      --fp-blanched-almond: hsl(36,100%,90.2%);
-      --fp-bisque: hsl(33,100%,88.4%);
-      --fp-navajo-white: hsl(36,100%,83.9%);
-      --fp-wheat: hsl(39,76.7%,83.1%);
-      --fp-burly-wood: hsl(34,56.9%,70%);
-      --fp-tan: hsl(34,43.7%,68.6%);
-      --fp-rosy-brown: hsl(0,25.1%,64.9%);
-      --fp-sandy-brown: hsl(28,87.1%,66.7%);
-      --fp-golden-rod: hsl(43,74.4%,49%);
-      --fp-dark-golden-rod: hsl(43,88.7%,38.2%);
-      --fp-peru: hsl(30,58.7%,52.5%);
-      --fp-chocolate: hsl(25,75%,47.1%);
-      --fp-saddle-brown: hsl(25,75.9%,31%);
-      --fp-sienna: hsl(19,56.1%,40.2%);
-      --fp-brown: hsl(0,59.4%,40.6%);
-      --fp-maroon: hsl(0,100%,25.1%);
-      --fp-gold: hsl(51,100%,50%);
-      --fp-yellow: hsl(60,100%,50%);
-      --fp-light-yellow: hsl(60,100%,93.9%);
-      --fp-lemon-chiffon: hsl(54,100%,90.2%);
-      --fp-light-golden-rod-yellow: hsl(60,80%,90.2%);
-      --fp-papaya-whip: hsl(37,100%,91.8%);
-      --fp-moccasin: hsl(38,100%,85.5%);
-      --fp-peach-puff: hsl(28,100%,86.3%);
-      --fp-pale-golden-rod: hsl(55,66.7%,80%);
-      --fp-khaki: hsl(54,76.9%,74.5%);
-      --fp-dark-khaki: hsl(56,38.3%,58%);
-      --fp-green-yellow: hsl(84,100%,59.2%);
-      --fp-chartreuse: hsl(90,100%,50%);
-      --fp-lawn-green: hsl(90,100%,49.4%);
-      --fp-lime: hsl(120,100%,50%);
-      --fp-lime-green: hsl(120,60.8%,50%);
-      --fp-pale-green: hsl(120,92.5%,79%);
-      --fp-light-green: hsl(120,73.4%,74.9%);
-      --fp-medium-spring-green: hsl(157,100%,49%);
-      --fp-spring-green: hsl(150,100%,50%);
-      --fp-medium-sea-green: hsl(147,49.8%,46.9%);
-      --fp-sea-green: hsl(146,50.3%,36.3%);
-      --fp-forest-green: hsl(120,60.7%,33.9%);
-      --fp-green: hsl(120,100%,25.1%);
-      --fp-dark-green: hsl(120,100%,19.6%);
-      --fp-fp-green: hsl(80,60.8%,50%);
-      --fp-olive-drab: hsl(80,60.5%,34.7%);
-      --fp-olive: hsl(60,100%,25.1%);
-      --fp-dark-olive-green: hsl(82,39%,30.2%);
-      --fp-medium-aquamarine: hsl(160,50.7%,60.2%);
-      --fp-dark-sea-green: hsl(120,25.1%,64.9%);
-      --fp-light-sea-green: hsl(177,69.5%,41.2%);
-      --fp-dark-cyan: hsl(180,100%,27.3%);
-      --fp-teal: hsl(180,100%,25.1%);
-      --fp-aqua-cyan: hsl(180,100%,50%);
-      --fp-light-cyan: hsl(180,100%,93.9%);
-      --fp-pale-turquoise: hsl(180,64.9%,81%);
-      --fp-aquamarine: hsl(160,100%,74.9%);
-      --fp-turquoise: hsl(174,72.1%,56.5%);
-      --fp-medium-turquoise: hsl(178,59.8%,55.1%);
-      --fp-dark-turquoise: hsl(181,100%,41%);
-      --fp-cadet-blue: hsl(182,25.5%,50%);
-      --fp-steel-blue: hsl(207,44%,49%);
-      --fp-light-steel-blue: hsl(214,41.1%,78%);
-      --fp-light-blue: hsl(195,53.3%,79%);
-      --fp-powder-blue: hsl(187,51.9%,79.6%);
-      --fp-sky-blue: hsl(197,71.4%,72.5%);
-      --fp-light-sky-blue: hsl(203,92%,75.5%);
-      --fp-deep-sky-blue: hsl(195,100%,50%);
-      --fp-dodger-blue: hsl(210,100%,55.9%);
-      --fp-cornflower-blue: hsl(219,79.2%,66.1%);
-      --fp-medium-slate-blue: hsl(249,79.8%,67.1%);
-      --fp-royal-blue: hsl(225,72.7%,56.9%);
-      --fp-blue: hsl(240,100%,50%);
-      --fp-medium-blue: hsl(240,100%,40.2%);
-      --fp-dark-blue: hsl(240,100%,27.3%);
-      --fp-navy: hsl(240,100%,25.1%);
-      --fp-midnight-blue: hsl(240,63.5%,26.9%);
-      --fp-lavender: hsl(240,66.7%,94.1%);
-      --fp-thistle: hsl(300,24.3%,79.8%);
-      --fp-plum: hsl(300,47.3%,74.7%);
-      --fp-orchid: hsl(302,58.9%,64.7%);
-      --fp-violet: hsl(300,76.1%,72.2%);
-      --fp-fuchsia-magenta: hsl(300,100%,50%);
-      --fp-medium-orchid: hsl(288,58.9%,58%);
-      --fp-dark-orchid: hsl(280,60.6%,49.8%);
-      --fp-dark-violet: hsl(282,100%,41.4%);
-      --fp-fp-violet: hsl(271,75.9%,52.7%);
-      --fp-dark-magenta: hsl(300,100%,27.3%);
-      --fp-purple: hsl(300,100%,25.1%);
-      --fp-medium-purple: hsl(260,59.8%,64.9%);
-      --fp-medium-slate-blue: hsl(249,79.8%,67.1%);
-      --fp-slate-blue: hsl(248,53.5%,57.8%);
-      --fp-dark-slate-blue: hsl(248,39%,39.2%);
-      --fp-rebecca-purple: hsl(270,50%,40%);
-      --fp-indigo: hsl(275,100%,25.5%);
-      --fp-pink: hsl(350,100%,87.6%);
-      --fp-light-pink: hsl(351,100%,85.7%);
-      --fp-hot-pink: hsl(330,100%,70.6%);
-      --fp-deep-pink: hsl(328,100%,53.9%);
-      --fp-pale-violet-red: hsl(340,59.8%,64.9%);
-      --fp-medium-violet-red: hsl(322,80.9%,43.1%);
+  --fp-dark: hsla(var(210), var(--s, 11%), var(--l, 0%), var(--a, 1));
+  --fp-light: hsla(var(--light-h, 0), var(--light-s, 0), var(--light-l, 100%), var(--light-a, 1));
+  --fp-primary: hsla(var(--primary-h, 216), var(--primary-s, 98%), var(--primary-l, 52%), var(--primary-a, 1));
+  --fp-secondary: hsla(var(--secondary-h, 210), var(--secondary-s, 14.3%), var(--secondary-l, 53.3%), var(--secondary-a, 1));
+  --fp-success: hsla(var(--success-h, 120), var(--success-s, 100%), var(--success-l, 50%), var(--success-a, 1));
+  --fp-info: hsla(var(--info-h, 180), var(--info-s, 100%), var(--info-l, 50%), var(--info-a, 1));
+  --fp-warning: hsla(var(--warning-h, 30), var(--warning-s, 100%), var(--warning-l, 50%), var(--warning-a, 1));
+  --fp-danger: hsla(var(--danger-h, 0), var(--danger-s, 100%), var(--danger-l, 50%), var(--danger-a, 1));
+ ```
+
+### Light
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--fp-light)">
+  <h3>fp-light</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Dark
+
+
+```html preview
+
+<div role="presentation" style="background-color: var(--fp-black); color: white" >
+  <h3 style=" color: white">fp-black</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Primary
+
+```html preview
+
+<div role="presentation" style="background-color: var(--fp-primary)">
+  <h3>fp-primary</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Secondary
+
+```html preview
+
+<div role="presentation" style="background-color: var(--fp-secondary)">
+  <h3>fp-secondary</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Success
+
+```html preview
+
+<div role="presentation" style="background-color: var(--fp-success)">
+  <h3>fp-success</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Primary
+
+```html preview
+
+<div role="presentation" style="background-color: var(--fp-info)">
+  <h3>fp-info</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Warning
+
+```html preview
+
+<div role="presentation" style="background-color: var(--fp-warning)">
+  <h3>fp-warning</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Danger
+
+```html preview
+
+<div role="presentation" style="background-color: var(--fp-danger)">
+  <h3>fp-danger</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+### Primary
+
+```html preview
+
+<div role="presentation" style="background-color: var(--fp-primary)">
+  <h3>fp-primary</h3>
+  <p>
+    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+  </p>
+</div>
+```
+
+
+----
+## HSL colors  (variables)
+### Variables
+
+```css
+  --fp-gainsboro: hsl(0,0%,86.3%);
+  --fp-light-gray: hsl(0,0%,82.7%);
+  --fp-silver: hsl(0,0%,75.3%);
+  --fp-dark-gray: hsl(0,0%,66.3%);
+  --fp-gray: hsl(0,0%,50.2%);
+  --fp-dim-gray: hsl(0,0%,41.2%);
+  --fp-light-slate-gray: hsl(210,14.3%,53.3%);
+  --fp-slate-gray: hsl(210,12.6%,50.2%);
+  --fp-dark-slate-gray: hsl(180,25.4%,24.7%);
+  --fp-black: hsl(0,0%,0%);
+  --fp-white: hsl(0,0%,100%);
+  --fp-snow: hsl(0,100%,99%);
+  --fp-honey-dew: hsl(120,100%,97.1%);
+  --fp-mint-cream: hsl(150,100%,98%);
+  --fp-azure: hsl(180,100%,97.1%);
+  --fp-alice-blue: hsl(208,100%,97.1%);
+  --fp-ghost-white: hsl(240,100%,98.6%);
+  --fp-white-smoke: hsl(0,0%,96.1%);
+  --fp-sea-shell: hsl(25,100%,96.7%);
+  --fp-beige: hsl(60,55.6%,91.2%);
+  --fp-old-lace: hsl(39,85.2%,94.7%);
+  --fp-floral-white: hsl(40,100%,97.1%);
+  --fp-ivory: hsl(60,100%,97.1%);
+  --fp-antique-white: hsl(34,77.8%,91.2%);
+  --fp-linen: hsl(30,66.7%,94.1%);
+  --fp-lavender-blush: hsl(340,100%,97.1%);
+  --fp-misty-rose: hsl(6,100%,94.1%);
+  --fp-light-salmon: hsl(17,100%,73.9%);
+  --fp-salmon: hsl(6,93.2%,71.4%);
+  --fp-dark-salmon: hsl(15,71.6%,69.6%);
+  --fp-light-coral: hsl(0,78.9%,72.2%);
+  --fp-indian-red: hsl(0,53.1%,58.2%);
+  --fp-crimson: hsl(348,83.3%,47.1%);
+  --fp-red: hsl(0,100%,50%);
+  --fp-fire-brick: hsl(0,67.9%,41.6%);
+  --fp-dark-red: hsl(0,100%,27.3%);
+  --fp-orange: hsl(39,100%,50%);
+  --fp-dark-orange: hsl(33,100%,50%);
+  --fp-coral: hsl(16,100%,65.7%);
+  --fp-tomato: hsl(9,100%,63.9%);
+  --fp-fp-red: hsl(16,100%,50%);
+  --fp-cornsilk: hsl(48,100%,93.1%);
+  --fp-blanched-almond: hsl(36,100%,90.2%);
+  --fp-bisque: hsl(33,100%,88.4%);
+  --fp-navajo-white: hsl(36,100%,83.9%);
+  --fp-wheat: hsl(39,76.7%,83.1%);
+  --fp-burly-wood: hsl(34,56.9%,70%);
+  --fp-tan: hsl(34,43.7%,68.6%);
+  --fp-rosy-brown: hsl(0,25.1%,64.9%);
+  --fp-sandy-brown: hsl(28,87.1%,66.7%);
+  --fp-golden-rod: hsl(43,74.4%,49%);
+  --fp-dark-golden-rod: hsl(43,88.7%,38.2%);
+  --fp-peru: hsl(30,58.7%,52.5%);
+  --fp-chocolate: hsl(25,75%,47.1%);
+  --fp-saddle-brown: hsl(25,75.9%,31%);
+  --fp-sienna: hsl(19,56.1%,40.2%);
+  --fp-brown: hsl(0,59.4%,40.6%);
+  --fp-maroon: hsl(0,100%,25.1%);
+  --fp-gold: hsl(51,100%,50%);
+  --fp-yellow: hsl(60,100%,50%);
+  --fp-light-yellow: hsl(60,100%,93.9%);
+  --fp-lemon-chiffon: hsl(54,100%,90.2%);
+  --fp-light-golden-rod-yellow: hsl(60,80%,90.2%);
+  --fp-papaya-whip: hsl(37,100%,91.8%);
+  --fp-moccasin: hsl(38,100%,85.5%);
+  --fp-peach-puff: hsl(28,100%,86.3%);
+  --fp-pale-golden-rod: hsl(55,66.7%,80%);
+  --fp-khaki: hsl(54,76.9%,74.5%);
+  --fp-dark-khaki: hsl(56,38.3%,58%);
+  --fp-green-yellow: hsl(84,100%,59.2%);
+  --fp-chartreuse: hsl(90,100%,50%);
+  --fp-lawn-green: hsl(90,100%,49.4%);
+  --fp-lime: hsl(120,100%,50%);
+  --fp-lime-green: hsl(120,60.8%,50%);
+  --fp-pale-green: hsl(120,92.5%,79%);
+  --fp-light-green: hsl(120,73.4%,74.9%);
+  --fp-medium-spring-green: hsl(157,100%,49%);
+  --fp-spring-green: hsl(150,100%,50%);
+  --fp-medium-sea-green: hsl(147,49.8%,46.9%);
+  --fp-sea-green: hsl(146,50.3%,36.3%);
+  --fp-forest-green: hsl(120,60.7%,33.9%);
+  --fp-green: hsl(120,100%,25.1%);
+  --fp-dark-green: hsl(120,100%,19.6%);
+  --fp-yellow-green: hsl(80,60.8%,50%);
+  --fp-olive-drab: hsl(80,60.5%,34.7%);
+  --fp-olive: hsl(60,100%,25.1%);
+  --fp-dark-olive-green: hsl(82,39%,30.2%);
+  --fp-medium-aquamarine: hsl(160,50.7%,60.2%);
+  --fp-dark-sea-green: hsl(120,25.1%,64.9%);
+  --fp-light-sea-green: hsl(177,69.5%,41.2%);
+  --fp-dark-cyan: hsl(180,100%,27.3%);
+  --fp-teal: hsl(180,100%,25.1%);
+  --fp-aqua-cyan: hsl(180,100%,50%);
+  --fp-light-cyan: hsl(180,100%,93.9%);
+  --fp-pale-turquoise: hsl(180,64.9%,81%);
+  --fp-aquamarine: hsl(160,100%,74.9%);
+  --fp-turquoise: hsl(174,72.1%,56.5%);
+  --fp-medium-turquoise: hsl(178,59.8%,55.1%);
+  --fp-dark-turquoise: hsl(181,100%,41%);
+  --fp-cadet-blue: hsl(182,25.5%,50%);
+  --fp-steel-blue: hsl(207,44%,49%);
+  --fp-light-steel-blue: hsl(214,41.1%,78%);
+  --fp-light-blue: hsl(195,53.3%,79%);
+  --fp-powder-blue: hsl(187,51.9%,79.6%);
+  --fp-sky-blue: hsl(197,71.4%,72.5%);
+  --fp-light-sky-blue: hsl(203,92%,75.5%);
+  --fp-deep-sky-blue: hsl(195,100%,50%);
+  --fp-dodger-blue: hsl(210,100%,55.9%);
+  --fp-cornflower-blue: hsl(219,79.2%,66.1%);
+  --fp-medium-slate-blue: hsl(249,79.8%,67.1%);
+  --fp-royal-blue: hsl(225,72.7%,56.9%);
+  --fp-blue: hsl(240,100%,50%);
+  --fp-medium-blue: hsl(240,100%,40.2%);
+  --fp-dark-blue: hsl(240,100%,27.3%);
+  --fp-navy: hsl(240,100%,25.1%);
+  --fp-midnight-blue: hsl(240,63.5%,26.9%);
+  --fp-lavender: hsl(240,66.7%,94.1%);
+  --fp-thistle: hsl(300,24.3%,79.8%);
+  --fp-plum: hsl(300,47.3%,74.7%);
+  --fp-orchid: hsl(302,58.9%,64.7%);
+  --fp-violet: hsl(300,76.1%,72.2%);
+  --fp-fuchsia-magenta: hsl(300,100%,50%);
+  --fp-medium-orchid: hsl(288,58.9%,58%);
+  --fp-dark-orchid: hsl(280,60.6%,49.8%);
+  --fp-dark-violet: hsl(282,100%,41.4%);
+  --fp-fp-violet: hsl(271,75.9%,52.7%);
+  --fp-dark-magenta: hsl(300,100%,27.3%);
+  --fp-purple: hsl(300,100%,25.1%);
+  --fp-medium-purple: hsl(260,59.8%,64.9%);
+  --fp-medium-slate-blue: hsl(249,79.8%,67.1%);
+  --fp-slate-blue: hsl(248,53.5%,57.8%);
+  --fp-dark-slate-blue: hsl(248,39%,39.2%);
+  --fp-rebecca-purple: hsl(270,50%,40%);
+  --fp-indigo: hsl(275,100%,25.5%);
+  --fp-pink: hsl(350,100%,87.6%);
+  --fp-light-pink: hsl(351,100%,85.7%);
+  --fp-hot-pink: hsl(330,100%,70.6%);
+  --fp-deep-pink: hsl(328,100%,53.9%);
+  --fp-pale-violet-red: hsl(340,59.8%,64.9%);
+  --fp-medium-violet-red: hsl(322,80.9%,43.1%);
 ```
 
 
@@ -364,6 +287,8 @@
 
 
 [ColorNames](https://www.w3schools.com/colors/colors_groups.asp ':target="_blank"')
+
+[Can I Use?](https://caniuse.com/?search=hsla ':target="_blank"')
 
 
 ----
