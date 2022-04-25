@@ -1,0 +1,2 @@
+- name: semantic-pull-request
+  uses: amannn/action-semantic-pull-request@v4.4.0
