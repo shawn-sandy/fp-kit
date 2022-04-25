@@ -1,4 +1,4 @@
-:where(label[for]) {
+.fp-checkbox[for], :where(label[for]) {
   display: var(--lbl-dsp, flex);
   flex-direction: var(--lbl-direction, row);
   align-items: var(--chk-align, normal);
@@ -9,13 +9,13 @@
   max-height: var(--chk-size, 1.2rem);
   font-size: var(--chk-fs, 1rem);
 }
-:where(label[for]) :where([id][type="checkbox"]) {
+.fp-checkbox[for] :where([id][type="checkbox"]), :where(label[for]) :where([id][type="checkbox"]) {
   appearance: var(--chk-appearance);
   -webkit-appearance: var(--chk-appearance);
   -moz-appearance: var(--chk-appearance);
   line-height: 1;
 }
-:where(label[for]) :where([id][type="checkbox"])::before {
+.fp-checkbox[for] :where([id][type="checkbox"])::before, :where(label[for]) :where([id][type="checkbox"])::before {
   content: "";
   display: flex;
   align-items: center;
@@ -29,10 +29,10 @@
   border-radius: var(--chk-rds, var(--rds));
   transition: var(--tran-all);
 }
-:where(label[for]) :where([id][type="checkbox"]):checked {
+.fp-checkbox[for] :where([id][type="checkbox"]):checked, :where(label[for]) :where([id][type="checkbox"]):checked {
   --chk-appearance: none;
 }
-:where(label[for]) :where([id][type="checkbox"]):checked::before {
+.fp-checkbox[for] :where([id][type="checkbox"]):checked::before, :where(label[for]) :where([id][type="checkbox"]):checked::before {
   --chk-bdr: solid;
   border-color: var(--chk-bdr-cl);
   border-width: var(--chk-bdr-w, thick);
