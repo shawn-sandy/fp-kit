@@ -5,7 +5,7 @@
 /**
 *
 */
-table {
+table, .fp-table {
   /*  css custom properties */
   --spc: 0;
   --mx: var(--sm-x);
@@ -35,20 +35,20 @@ table {
   border-spacing: 0;
   overflow: auto;
 }
-table caption {
+table caption, .fp-table caption {
   --fs: var(--fs-4);
   --align: center;
   background-color: var(--tbl-cap-bg);
   padding: var(--tbl-cap-pd);
 }
-table thead {
+table thead, .fp-table thead {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
   border: var(--tbl-cap-bdr);
 }
-table thead tr {
+table thead tr, .fp-table thead tr {
   --text-align: left;
   --fw: 500;
   background-color: var(--tbl-hd-bg);
@@ -56,20 +56,21 @@ table thead tr {
   border-bottom: var(--tbl-bdr);
 }
 table th,
-table td {
+table td, .fp-table th,
+.fp-table td {
   padding-block: var(--tbl-td-py);
   padding-inline: var(--tbl-td-px);
 }
-table tr {
+table tr, .fp-table tr {
   background-color: white;
   border-bottom: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
 }
-table tr:nth-of-type(even) {
+table tr:nth-of-type(even), .fp-table tr:nth-of-type(even) {
   --tbl-bdr-s: solid;
 }
-table tr td {
+table tr td, .fp-table tr td {
   padding: 1rem;
 }
-table tbody tr:last-of-type {
+table tbody tr:last-of-type, .fp-table tbody tr:last-of-type {
   border-bottom: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
 }
