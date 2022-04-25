@@ -8,14 +8,14 @@
 ## Custom Color Tokens
 
 ```css
-  --fp-dark: var(--fp-black);
-  --fp-light: var(--fp-white);
-  --fp-primary: var(--fp-royal-blue);
-  --fp-secondary: var(--fp-light-gray);
-  --fp-success: var(--fp-dark-green);
-  --fp-info: var(--fp-light-blue);
-  --fp-warning: var(--fp-orange);
-  --fp-danger: var(--fp-red);
+  --fp-dark: hsla(var(210), var(--s, 11%), var(--l, 0%), var(--a, 1));
+  --fp-light: hsla(var(--light-h, 0), var(--light-s, 0), var(--light-l, 100%), var(--light-a, 1));
+  --fp-primary: hsla(var(--primary-h, 216), var(--primary-s, 98%), var(--primary-l, 52%), var(--primary-a, 1));
+  --fp-secondary: hsla(var(--secondary-h, 210), var(--secondary-s, 14.3%), var(--secondary-l, 53.3%), var(--secondary-a, 1));
+  --fp-success: hsla(var(--success-h, 120), var(--success-s, 100%), var(--success-l, 50%), var(--success-a, 1));
+  --fp-info: hsla(var(--info-h, 180), var(--info-s, 100%), var(--info-l, 50%), var(--info-a, 1));
+  --fp-warning: hsla(var(--warning-h, 30), var(--warning-s, 100%), var(--warning-l, 50%), var(--warning-a, 1));
+  --fp-danger: hsla(var(--danger-h, 0), var(--danger-s, 100%), var(--danger-l, 50%), var(--danger-a, 1));
  ```
 
 ### Light
@@ -23,7 +23,7 @@
 
 ```html preview
 
-<div role="presentation" style="background-color: var(--fp-white)">
+<div role="presentation" style="background-color: var(--fp-light)">
   <h3>fp-light</h3>
   <p>
     Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
@@ -287,6 +287,8 @@
 
 
 [ColorNames](https://www.w3schools.com/colors/colors_groups.asp ':target="_blank"')
+
+[Can I Use?](https://caniuse.com/?search=hsla ':target="_blank"')
 
 
 ----
