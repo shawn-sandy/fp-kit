@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.15.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.15.2...@shawnsandy/first-paint@2.15.3) (2022-04-25)
+
+
+### Features
+
+* **beta:** add optional class to all modules ([ddbe121](https://github.com/shawn-sandy/fp-kit/commit/ddbe121f7a1610db8306d424e5a6901c099565a3))
+* **beta:** add variables to hsla color format ([f7c100d](https://github.com/shawn-sandy/fp-kit/commit/f7c100de8fcb591a3ecbcbcb55ee223514094d94))
+* **beta:** add variables to hsla color format ([68bb57d](https://github.com/shawn-sandy/fp-kit/commit/68bb57dfe0b734502a332e782fce66abd6408a46))
+
+
+
+
+
 ## [2.15.2](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.15.1...@shawnsandy/first-paint@2.15.2) (2022-04-23)
 
 
