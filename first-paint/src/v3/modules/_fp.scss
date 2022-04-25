@@ -35,20 +35,6 @@
   font-style: var(--fp-st);
   line-height: var(--fp-lh);
 
-  &:hover {
-    background-color: var(--fp-bg-hover);
-    color: var(--fp-cl-hover);
-    border: var(--fp-bdr-w-hover) var(--fp-bdr-s-hover) var(--fp-bdr-cl-hover);
-    outline: var(--fp-line-hover);
-    border-radius: var(--fp-rds-hover);
-    padding-inline: var(--fp-px-hover);
-    padding-block: var(--fp-py-hover);
-    font-size: var(--fp-fs-hover);
-    font-weight: var(--fp-fw-hover);
-    font-style: var(--fp-st-hover);
-    line-height: var(--fp-lh-hover);
-  }
-
   // * css rules/styles
   @content;
 }
