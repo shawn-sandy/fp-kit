@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-html {
-  /* Make base font-size 100% of browser font-size */
-  font-size: 100%;
-}
-
 ::selection {
   /* Optional */
   /* It can be really hard to read highlighted text with a text-shadow, it should be removed when selected */
