@@ -1,4 +1,4 @@
-# Badge/Notes <span role="note" aria-label="status" style="--note: var(--beta)">Beta</span>
+# Badges / Notes <span role="note" aria-label="status" style="--note: var(--beta)">Beta</span>
 
 > Add badges or note styled elements/components to your apps using the aria `note` role. Badges are created using `<span role="note">`, adding `note` to other elements will create a `regular` note.
 
