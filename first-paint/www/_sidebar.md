@@ -10,7 +10,7 @@
   - [Open Color Tokens](/tokens/Opencolor) -->
   <!-- - [Named Color Tokens](/tokens/Colornames) -->
 - Modules
-  - [Badges/Notes](/components/Badge)
+  - [Badges (Notes)](/components/Badge)
   - [Buttons](/components/button)
   - [Breadcrumb](/components/Breadcrumb)
   - [Cards](/components/Cards)
