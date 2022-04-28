@@ -6,12 +6,12 @@ window.$docsify = {
   name: 'First Paint', // TODO: Update.
   repo: repoUrl,
   auto2top: true,
+  topMargin: 90, // default: 0
   search: {
     placeholder: 'Search',
     noData: 'No results found.',
     depth: 3,
     keys: ['title', 'subtitle', 'path'],
-    paths: ['/']
   },
   coverpage: true,
   onlyCover: true,
