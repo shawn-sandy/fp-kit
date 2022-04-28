@@ -98,7 +98,8 @@
 
 .search {
   input {
-    margin-top: 3rem;
+    margin: 1rem;
+    margin-top: 3.5rem;
     border: solid thin var(--fp-light-gray) !important;
     margin-bottom: 1rem;
   }
@@ -192,4 +193,14 @@ section.cover.show {
 
 .markdown-section p {
   line-height: 1.6;
+}
+
+.markdown-section pre>code {
+  max-height: 500px;
+  overflow: auto;
+}
+
+.markdown-section pre {
+  padding: 0;
+  padding-inline-start: 1rem;
 }

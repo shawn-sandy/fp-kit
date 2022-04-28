@@ -1,0 +1,28 @@
+@use "../modules/header.scss";
+@use "../modules/container";
+@use "../modules/button";
+@use "../modules/checkbox";
+@use "../modules/img";
+@use "../modules/nav";
+@use "../modules/grid";
+@use "../modules/cards";
+@use "../modules/dialog";
+@use "../modules/input";
+@use "../modules/radio";
+@use "../modules/textarea";
+@use "../modules/select";
+@use "../modules/footer";
+@use "../modules/content";
+
+
+@include nav.module();
+@include header.module();
+@include content.module();
+@include img.module();
+@include checkbox.module();
+@include button.module();
+@include input.module();
+@include radio.module();
+@include textarea.module();
+@include select.module();
+@include footer.module();
