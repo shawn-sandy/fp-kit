@@ -1,19 +1,11 @@
 # Features <span role="note" style="--note: var(--beta)">Beta</span>
 
 ----------------
+
+
 ## Easy to use
 
-Grab our styles from the CDN `https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.css` and drop into any semantic HTML5 page. FP was designed for use out of box with any semantic HTML5 markup, check out the docs for more info.
-
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@2.8.8/dist/v3/css/index.min.css">
-
-```
-
-```html
-https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.css
-```
+Grab our styles from the CDN `https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/libs/all.css` and drop into any semantic HTML5 page. FP was designed for use out of box with any semantic HTML5 markup, check out the docs for more info.
 
 ## Dynamic CSS Styles (Custom Properties)
 
