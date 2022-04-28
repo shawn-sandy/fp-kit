@@ -4,9 +4,9 @@
 
 ## Page Example
 
-<a href="/basic-sample.html" target="_blank">
+
 <img src="/images/fp-page-example.jpg" alt="Snippet Landing page">
-</a>
+
 
 A simple HTML5 example page with snippets of the components used you can copy and paste to build your own.
 
