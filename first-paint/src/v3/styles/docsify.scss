@@ -193,3 +193,13 @@ section.cover.show {
 .markdown-section p {
   line-height: 1.6;
 }
+
+.markdown-section pre>code {
+  max-height: 500px;
+  overflow: auto;
+}
+
+.markdown-section pre {
+  padding: 0;
+  padding-inline-start: 1rem;
+}
