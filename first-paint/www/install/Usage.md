@@ -2,40 +2,31 @@
 
 > Docmentation, examples and info for using Usage component
 
-### Default Usage
 
-```html preview
-<div>
-  Usage
-</div>
-```
-
-## Usage Variables
-
-### Custom variables
+## Default Version
 
 ```css
---color: #000;
+/* install the code modules */
+@use '@shawnsandy/first-paint@next/src/v3/index.scss';
+/* add components from v3/components */
+@use '@shawnsandy/first-paint@next/src/v3/components/details-summary.scss';
+@use '@shawnsandy/first-paint@next/src/v3/components/dialog.scss';
+@use '@shawnsandy/first-paint@next/src/v3/components/dialog.scss';
+@use '@shawnsandy/first-paint@next/src/v3/components/badge.scss';
+@use '@shawnsandy/first-paint@next/src/v3/components/table.scss';
+
 ```
 
-### Usage properties (rules)
+## Full Version
+
+Install and use the full version (26kb)
 
 ```css
-Usage {
-  color: var(--color, currentColor);
-}
+/* CSS link */
+@use '@shawnsandy/first-paint@next/dist/v3/css/libs/all.css';
+
+/* SCSS version */
+@use '@shawnsandy/first-paint@next/dist/v3/libs/all.scss';
 ```
 
-## Examples
 
-----
-## See also
-
-
-[MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element ':_target="_blank"')
-
-[ACCESSIBILITY BEST PRACTICES](https://www.w3.org/TR/wai-aria-practices-1.2/examples ':_target="_blank"')
-
-[ACCESSIBILITY GUIDELINES](https://w3c.github.io/aria-practices/ ':_target="_blank"')
-
-----

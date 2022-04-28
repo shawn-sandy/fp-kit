@@ -2,40 +2,41 @@
 
 > Docmentation, examples and info for using Advanced component
 
-### Default Advanced
+##  Advance Usage
 
-```html preview
-<div>
-  Advanced
-</div>
-```
+Use the advanced version to build your own custom version of FirstPaint.
 
-## Advanced Variables
-
-### Custom variables
+*The example is similar to the default version.*
 
 ```css
---color: #000;
+/* install the core modules */
+@use '@shawnsandy/first-paint@next/src/v3/libs/fp-base.scss';
+/* add components from v3/components */
+@use '@shawnsandy/first-paint@next/src/v3/libs/fp-components.scss';
+/* add extended components/modules */
+@use '@shawnsandy/first-paint@next/src/v3/libs/fp-extensions.scss';
+
+@include 'fp-extensions.tooltip.module()';
+
 ```
 
-### Advanced properties (rules)
+## Custom Version
+
+
+**The example allows you to build a totally custom verson of `FP`.**
 
 ```css
-Advanced {
-  color: var(--color, currentColor);
-}
+/* install the core modules */
+@use '@shawnsandy/first-paint@next/src/v3/libs/fp-base.scss';
+/* import the modules */
+@use '@shawnsandy/first-paint@next/src/v3/modules/modules';
+
+/* only include the modules you need */
+@include modules.header-module();
+@include modules.grid-module();
+@include modules.container-module();
+@include modules.img-module();
+@include modules.nav-module();
 ```
 
-## Examples
 
-----
-## See also
-
-
-[MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element ':_target="_blank"')
-
-[ACCESSIBILITY BEST PRACTICES](https://www.w3.org/TR/wai-aria-practices-1.2/examples ':_target="_blank"')
-
-[ACCESSIBILITY GUIDELINES](https://w3c.github.io/aria-practices/ ':_target="_blank"')
-
-----

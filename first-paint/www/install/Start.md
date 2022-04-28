@@ -311,14 +311,4 @@ https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/libs/all.c
 
 ```
 
-----
-## See also
-
-
-[MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element ':_target="_blank"')
-
-[ACCESSIBILITY BEST PRACTICES](https://www.w3.org/TR/wai-aria-practices-1.2/examples ':_target="_blank"')
-
-[ACCESSIBILITY GUIDELINES](https://w3c.github.io/aria-practices/ ':_target="_blank"')
-
-----
++
