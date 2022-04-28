@@ -1,8 +1,11 @@
 
 - [First Paint v3.0(beta)](/README)
 - [Features](/FEATURES)
+- Install
+  - [Quick Start](/install/Start)
+  - [Usage](/install/Usage)
+  - [Advanced](/install/Advanced)
 - [Guides](/GUIDES)
-  <!-- - [Styles Demo](components/ClassDemo) -->
 - Custom Props
   - [Base Tokens](/tokens/Tokens)
   - [Color Tokens](/tokens/ColorHSL)
