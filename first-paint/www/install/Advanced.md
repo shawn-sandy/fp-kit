@@ -6,7 +6,7 @@
 
 Use the advanced version to build your own custom version of FirstPaint.
 
-*The example is similar to the default version.*
+The example is similar to the default version.
 
 ```css
 /* install the core modules */
@@ -23,7 +23,7 @@ Use the advanced version to build your own custom version of FirstPaint.
 ## Custom Version
 
 
-**The example allows you to build a totally custom verson of `FP`.**
+The example allows you to build a totally custom verson of `FP`.
 
 ```css
 /* install the core modules */
@@ -37,6 +37,7 @@ Use the advanced version to build your own custom version of FirstPaint.
 @include modules.container-module();
 @include modules.img-module();
 @include modules.nav-module();
+
 ```
 
 

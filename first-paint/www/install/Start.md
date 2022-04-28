@@ -2,6 +2,7 @@
 
 > Here some quick start examples to get you started with FirstPaint. Grab `copy & paste` any of the snippets below to get you started
 
+
 ## Full Page
 
 Full Semantic HTML5 page snippet w/css of the components/modules used, you can copy and paste to get started.
@@ -292,23 +293,6 @@ CSS stylesheet link
 
 ```html
 https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/libs/all.css
-```
-
-## NPM installation
-
-
-* Install `npm i @shawnsandy/first-paint@next` latest version (next)
-* Install `npm i @shawnsandy/first-paint` stable version
-* Yarn install `yarn add @shawnsandy/first-paint@next`
-
-```css
-/* style.scss */
-@use '@shawnsandy/first-paint@next`;
-/* //optional components */
-@indlude '@shawnsandy/first-paint@next/v3/css/components/detailsSummary.scss';
-@indlude '@shawnsandy/first-paint@next/v3/css/components/badge.scss';
-@indlude '@shawnsandy/first-paint@next/v3/css/components/tooltip.scss';
-
 ```
 
 +
