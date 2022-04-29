@@ -11,7 +11,7 @@ window.$docsify = {
     placeholder: 'Search',
     noData: 'No results found.',
     depth: 3,
-    keys: ['title', 'subtitle', 'path'],
+    keys: ['title', 'subtitle', 'path']
   },
   coverpage: true,
   onlyCover: true,

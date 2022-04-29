@@ -9,6 +9,7 @@
 
 ```css
   --fp-dark: hsla(var(210), var(--s, 11%), var(--l, 0%), var(--a, 1));
+
   --fp-light: hsla(var(--light-h, 0), var(--light-s, 0), var(--light-l, 100%), var(--light-a, 1));
   --fp-primary: hsla(var(--primary-h, 216), var(--primary-s, 98%), var(--primary-l, 52%), var(--primary-a, 1));
   --fp-secondary: hsla(var(--secondary-h, 210), var(--secondary-s, 14.3%), var(--secondary-l, 53.3%), var(--secondary-a, 1));
@@ -35,9 +36,8 @@
 
 
 ```html preview
-
 <div role="presentation" style="background-color: var(--fp-black); color: white" >
-  <h3 style=" color: white">fp-black</h3>
+  <h3 style="color: var(--fp-light)">fp-black</h3>
   <p>
     Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
   </p>
@@ -116,17 +116,6 @@
 </div>
 ```
 
-### Primary
-
-```html preview
-
-<div role="presentation" style="background-color: var(--fp-primary)">
-  <h3>fp-primary</h3>
-  <p>
-    Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
-  </p>
-</div>
-```
 
 
 ----

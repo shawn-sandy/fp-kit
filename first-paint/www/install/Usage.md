@@ -9,19 +9,11 @@
 * Install `npm i @shawnsandy/first-paint` stable version
 * Yarn install `yarn add @shawnsandy/first-paint@next`
 
-```css
-/* style.scss */
-@use '@shawnsandy/first-paint@next`;
-/* //optional components */
-@indlude '@shawnsandy/first-paint@next/v3/css/components/detailsSummary.scss';
-@indlude '@shawnsandy/first-paint@next/v3/css/components/badge.scss';
-@indlude '@shawnsandy/first-paint@next/v3/css/components/tooltip.scss';
-
-```
 
 ## Default Version
 
 ```css
+/* my-styles.scss */
 /* install the code modules */
 @use '@shawnsandy/first-paint@next/src/v3/index.scss';
 /* add components from v3/components */
@@ -48,7 +40,7 @@ Install and use the full version (26kb)
 
 ## Individual Components
 
-Since all our components are self container you can use them individually.
+Since all our components are self contained you can use them individually.
 
 Button components
 

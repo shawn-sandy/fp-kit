@@ -1,8 +1,8 @@
 @mixin props() {
   // * css custom properties
-  --beta: orange;
-  --stable: green;
-  --production: blue;
+  --beta: var(--fp-orange,  orange);
+  --stable: var(--fp-green, green) ;
+  --production: var(--fp-blue, blue;)
   @content;
 }
 
@@ -45,6 +45,7 @@
 }
 
 @mixin module {
+  [style*="--badge"],
   [role="note"],
   p[role="note"],
   .fp-note {

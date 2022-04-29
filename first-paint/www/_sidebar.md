@@ -9,9 +9,6 @@
 - Custom Props
   - [Base Tokens](/tokens/Tokens)
   - [Color Tokens](/tokens/ColorHSL)
-  <!-- - [Scaled Color Tokens](/tokens/Color)
-  - [Open Color Tokens](/tokens/Opencolor) -->
-  <!-- - [Named Color Tokens](/tokens/Colornames) -->
 - Modules
   - [Badges (Notes)](/components/Badge)
   - [Buttons](/components/button)
