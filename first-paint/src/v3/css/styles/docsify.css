@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/* https://piccalil.li/blog/a-modern-css-reset/ (modified)*/
-/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -198,23 +196,11 @@ section:not(nav) {
 /* stylelint-disable declaration-empty-line-before */
 /* stylelint-disable declaration-colon-newline-after */
 /**
- * **************************************
-
- */
-/**
 *
 */
 /**
- * **************************************
-
- */
-/**
 *
 */
-/**
- * **************************************
-
- */
 /**
 *
 */

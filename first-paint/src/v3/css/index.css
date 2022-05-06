@@ -1,5 +1,3 @@
-/* https://piccalil.li/blog/a-modern-css-reset/ (modified)*/
-/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -184,23 +182,11 @@ hr {
 /* stylelint-disable declaration-empty-line-before */
 /* stylelint-disable declaration-colon-newline-after */
 /**
- * **************************************
-
- */
-/**
 *
 */
 /**
- * **************************************
-
- */
-/**
 *
 */
-/**
- * **************************************
-
- */
 /**
 *
 */
