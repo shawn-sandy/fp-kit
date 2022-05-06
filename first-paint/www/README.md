@@ -30,7 +30,7 @@
 
 ### Quick Start
 
-[Read out quick start guide](/GUIDES.md)
+[Read out quick start guide](/install/Start.md)
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.css">
@@ -55,6 +55,10 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Contribute
+
+### Contributions (Code/Documentation) are welcome and encouraged!
+
+?> Your can use the `Edit on Github` of `Open a Github issue` links to fix or report errors you find here on the site/docs.
 
 - Clone (mono)-repo `git clone https://github.com/shawn-sandy/fp-kit.git`
 - Install dependencies `npm i`

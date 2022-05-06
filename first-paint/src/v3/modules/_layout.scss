@@ -1,10 +1,11 @@
-/*
- ***************************************
- FirsPaint
- Author: Shawn Sandy
- Date: 2021-04-01
- ***************************************
-*/
+//***
+//  ***************************************
+//  FirsPaint
+//  Author: Shawn Sandy
+//  Date: 2021-04-01
+//  ***************************************
+// */
+
 
 @mixin props() {
   // * css custom properties
@@ -30,7 +31,7 @@
 
   section:not(nav) {
     margin-inline: auto;
-    padding-block: var(--fs-2, 1rem);
+    padding-block: var(--spc-4, 1rem);
   }
 
 }

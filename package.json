@@ -119,7 +119,9 @@
     "stylelint": "^14.5.3",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-scss": "^4.1.0",
-    "trash-cli": "^5.0.0"
+    "trash-cli": "^5.0.0",
+    "nx": "14.1.1",
+    "@nrwl/nx-cloud": "latest"
   },
   "lint-staged": {
     "**/.*.{js,ts,jsx,tsx}": "eslint --fix",
@@ -130,5 +132,8 @@
       "npm"
     ],
     "onlyPublishWithReleaseLabel": true
-  }
+  },
+  "workspaces": [
+    "components/react/*"
+  ]
 }

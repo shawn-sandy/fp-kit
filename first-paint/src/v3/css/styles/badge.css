@@ -1,7 +1,8 @@
 .fp-badge, .fp-note {
-  --beta: orange;
-  --stable: green;
-  --production: blue;
+  --beta: var(--fp-orange, orange);
+  --stable: var(--fp-green, green) ;
+  --production: var(--fp-blue, blue;)
+  @content;
   padding-inline: var(--note-px, 0.7rem);
   padding-block: var(--note-py, 0.2rem);
   color: var(--note-cl, inherit);
