@@ -20,13 +20,10 @@
     "test": "__tests__"
   },
   "files": [
-    "lib",
-    "components",
-    "dist",
-    "tokens",
     "index.css",
-    "/**/*.scss",
-    "/**/*.map"
+    "/dist/v3",
+    "/src/v3/**/*.scss",
+    "/src/v3/**/*.css"
   ],
   "publishConfig": {
     "access": "public"
@@ -57,7 +54,8 @@
     "clean": "trash dist/**/",
     "clean:dist": "trash dist/**",
     "release-next": "npm publish --tag next",
-    "release": "npm publish"
+    "release": "npm publish",
+    "pack": "npm pack"
   },
   "bugs": {
     "url": "https://github.com/shawn-sandy/fp-kit/issues"
