@@ -64,6 +64,7 @@
     "@commitlint/config-conventional": "^15.0.0",
     "@fortawesome/fontawesome-free": "^6.0.0",
     "@hint/configuration-accessibility": "^2.0.10",
+    "@nrwl/nx-cloud": "14.0.3",
     "@shawnsandy/bootstrap-lite": "^0.2.13",
     "@shawnsandy/first-paint": "^2.1.4",
     "@shawnsandy/ideas": "^0.3.8",
@@ -106,6 +107,7 @@
     "lodash": "^4.17.21",
     "node-fetch": "^3.2.0",
     "npm-run-all": "^4.1.5",
+    "nx": "14.1.4",
     "parcel": "^2.3.2",
     "plop": "^3.0.5",
     "pre-commit": "^1.2.2",
@@ -116,12 +118,11 @@
     "sass": "^1.49.9",
     "standard": "^16.0.4",
     "style-dictionary": "^3.7.0",
-    "stylelint": "^14.5.3",
+    "stylelint": "^14.8.2",
     "stylelint-config-standard": "^25.0.0",
+    "stylelint-prettier": "^2.0.0",
     "stylelint-scss": "^4.1.0",
-    "trash-cli": "^5.0.0",
-    "nx": "14.1.1",
-    "@nrwl/nx-cloud": "latest"
+    "trash-cli": "^5.0.0"
   },
   "lint-staged": {
     "**/.*.{js,ts,jsx,tsx}": "eslint --fix",
@@ -132,8 +133,6 @@
       "npm"
     ],
     "onlyPublishWithReleaseLabel": true
-  },
-  "workspaces": [
-    "components/react/*"
-  ]
+  }
 }
+
