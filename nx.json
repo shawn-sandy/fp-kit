@@ -23,7 +23,7 @@
         "projects": "dependencies"
       }
     ],
-    "prepare": [
+    "prepare": [_bread
       {
         "target": "prepare",
         "projects": "dependencies"

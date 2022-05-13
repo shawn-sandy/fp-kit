@@ -18,6 +18,7 @@
   list-style: none;
   font-size: var(--crumb-fs,  var(--fs-2));
   color: var(--crumb-cl, currentColor);
+  &::-webkit-details-marker {display: none; }
 
   li {
     color: var(--crumb-cl);
@@ -41,7 +42,7 @@
 }
 
 @mixin module {
-  nav > .fp-breadcrumb > {
+  nav >, .fp-breadcrumb > {
    :where(ol[aria-label], div[role="list"])  {
     @include props;
     @include rules;
