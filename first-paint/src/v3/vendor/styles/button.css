@@ -49,7 +49,7 @@
 .fp-btn[type=reset], .fp-btn[style*="--btn-reset"] {
   --btn-bg: transparent;
   --btn-color: gray;
-  --btn-bdr: gray medium solid;
+  --btn-bdr: gray thin solid;
 }
 .fp-btn[type=submit], .fp-btn[style*="--btn-submit"] {
   --btn-bg: var(--blue-500);
