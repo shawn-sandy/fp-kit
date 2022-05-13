@@ -18,6 +18,7 @@
   list-style: none;
   font-size: var(--crumb-fs,  var(--fs-2));
   color: var(--crumb-cl, currentColor);
+  &::-webkit-details-marker {display: none; }
 
   li {
     color: var(--crumb-cl);

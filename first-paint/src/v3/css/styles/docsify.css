@@ -1397,6 +1397,9 @@ nav > :where(ol[aria-label], div[role="list"]), .fp-breadcrumb > :where(ol[aria-
   font-size: var(--crumb-fs, var(--fs-2));
   color: var(--crumb-cl, currentColor);
 }
+nav > :where(ol[aria-label], div[role="list"])::-webkit-details-marker, .fp-breadcrumb > :where(ol[aria-label], div[role="list"])::-webkit-details-marker {
+  display: none;
+}
 nav > :where(ol[aria-label], div[role="list"]) li, .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) li {
   color: var(--crumb-cl);
 }
