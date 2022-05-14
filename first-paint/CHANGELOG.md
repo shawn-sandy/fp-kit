@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.16.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.15.3...@shawnsandy/first-paint@2.16.0) (2022-05-14)
+
+
+### Bug Fixes
+
+* **beta:** add missing w/h to img tag ([0c3b6c6](https://github.com/shawn-sandy/fp-kit/commit/0c3b6c6ec74351fb597aee9c047cd0e23f03eed5))
+* **beta:** hide deafult list-style in safari ([892a024](https://github.com/shawn-sandy/fp-kit/commit/892a024509ece452f9f318dd21bf65f797a9bdd7))
+* **beta:** resolve issue with selctor seperators missing comma ([01346f6](https://github.com/shawn-sandy/fp-kit/commit/01346f6ac4a887e7c7d432534995824a1a50cb65))
+* remove padding from code block ([c856b5e](https://github.com/shawn-sandy/fp-kit/commit/c856b5eb474d489d424fb0a90260de00adf995af))
+
+
+### Features
+
+* **beta:** 05-13-22 release build ([5542546](https://github.com/shawn-sandy/fp-kit/commit/55425466486cee22833a957284ecbda76d9ff331))
+* **beta:** add favicon ([1b07910](https://github.com/shawn-sandy/fp-kit/commit/1b07910b0253d086e0a9f44e4d511f897e36ea97))
+* **beta:** add fp/base/components/extensions to libs ([f24bda2](https://github.com/shawn-sandy/fp-kit/commit/f24bda21b06fd0118ac968d3b991e481aedafa48))
+* **beta:** add install/usage docs ([5baec42](https://github.com/shawn-sandy/fp-kit/commit/5baec4277299aa0aa09169a3c21defabc880a805))
+
+
+
+
+
 ## [2.15.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.15.2...@shawnsandy/first-paint@2.15.3) (2022-04-25)
 
 
