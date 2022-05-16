@@ -7,6 +7,9 @@
   font-size: var(--crumb-fs, var(--fs-2));
   color: var(--crumb-cl, currentColor);
 }
+.fp-breadcrumb::-webkit-details-marker {
+  display: none;
+}
 .fp-breadcrumb li {
   color: var(--crumb-cl);
 }

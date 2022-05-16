@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/* https://piccalil.li/blog/a-modern-css-reset/ (modified)*/
-/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -171,39 +169,28 @@ main > section, header > section, footer > section {
 }
 
 section:not(nav) {
-  margin-inline: auto;
-  padding-block: var(--fs-2);
+  margin-inline: var(--sect-y, auto);
+  padding-block: var(--sect-x, --spc-4);
 }
 
 hr {
-  width: 100%;
-  height: 0.05rem;
-  background-color: lightgray;
+  width: var(--hr-w, 100%);
+  height: var(--hr-h, 0.05rem);
+  background-color: var(--hr-bg, lightgray);
   border: none;
-  margin-block: 3rem;
+  margin-block: var(--hr-py, 3rem);
+  margin-inline: var(--hr-px, 0);
 }
 
 /* stylelint-disable declaration-colon-newline-after */
 /* stylelint-disable declaration-empty-line-before */
 /* stylelint-disable declaration-colon-newline-after */
 /**
- * **************************************
-
- */
-/**
 *
 */
 /**
- * **************************************
-
- */
-/**
 *
 */
-/**
- * **************************************
-
- */
 /**
 *
 */
@@ -489,6 +476,14 @@ p + * {
   --fs-10: clamp(2.5rem, 5vw + 2rem, 4.5rem);
   --fs-11: clamp(3rem, 5vw + 1.75rem, 5.063rem);
   --fs-12: clamp(3.5rem, 5vw + 3rem, 6.375rem);
+  --fs-xs: clamp(0.56rem, 0.14vw + 0.53rem, 0.67rem);
+  --fs-sm: clamp(0.7rem, 0.24vw + 0.64rem, 0.89rem);
+  --fs-base: clamp(0.88rem, 0.39vw + 0.78rem, 1.19rem);
+  --fs-md: clamp(1.09rem, 0.61vw + 0.94rem, 1.58rem);
+  --fs-lg: clamp(1.37rem, 0.93vw + 1.14rem, 2.11rem);
+  --fs-xl: clamp(1.71rem, 1.38vw + 1.36rem, 2.81rem);
+  --fs-xxl: clamp(2.14rem, 2.02vw + 1.63rem, 3.75rem);
+  --fs-xxxl: clamp(2.67rem, 2.91vw + 1.94rem, 5rem);
   --h1: var(--fs-10);
   --h2: var(--fs-9);
   --h3: var(--fs-8);
@@ -1090,7 +1085,7 @@ button[type=reset], button[style*="--btn-reset"],
 [role=button][style*="--btn-reset"] {
   --btn-bg: transparent;
   --btn-color: gray;
-  --btn-bdr: gray medium solid;
+  --btn-bdr: gray thin solid;
 }
 button[type=submit], button[style*="--btn-submit"],
 [style*="--btn"][type=submit],
@@ -1337,12 +1332,14 @@ dialog::backdrop, [role=dialog]::backdrop, .fp-dialog::backdrop {
           transform: translateX(-50%) translateY(0);
 }
 
+[style*="--badge"],
 [role=note],
 p[role=note],
 .fp-note {
-  --beta: orange;
-  --stable: green;
-  --production: blue;
+  --beta: var(--fp-orange, orange);
+  --stable: var(--fp-green, green) ;
+  --production: var(--fp-blue, blue;)
+  @content;
   padding-inline: var(--note-px, 0.7rem);
   padding-block: var(--note-py, 0.2rem);
   color: var(--note-cl, inherit);
@@ -1424,7 +1421,7 @@ ul, [style*="--list"], .fp-list {
   background: var(--scroll-bg, gray);
 }
 
-nav > .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) {
+nav > :where(ol[aria-label], div[role="list"]), .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) {
   display: var(--crumb-dsp, flex);
   direction: var(--crumb-direction, row);
   gap: var(--crumb-gap, 0.5rem);
@@ -1433,13 +1430,16 @@ nav > .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) {
   font-size: var(--crumb-fs, var(--fs-2));
   color: var(--crumb-cl, currentColor);
 }
-nav > .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) li {
+nav > :where(ol[aria-label], div[role="list"])::-webkit-details-marker, .fp-breadcrumb > :where(ol[aria-label], div[role="list"])::-webkit-details-marker {
+  display: none;
+}
+nav > :where(ol[aria-label], div[role="list"]) li, .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) li {
   color: var(--crumb-cl);
 }
-nav > .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) li + li {
+nav > :where(ol[aria-label], div[role="list"]) li + li, .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) li + li {
   color: currentColor;
 }
-nav > .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) li + li::before {
+nav > :where(ol[aria-label], div[role="list"]) li + li::before, .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) li + li::before {
   content: var(--crumb-icon, "/");
   color: currentColor;
 }

@@ -2,16 +2,8 @@
 /* stylelint-disable declaration-empty-line-before */
 /* stylelint-disable declaration-colon-newline-after */
 /**
- * **************************************
-
- */
-/**
 *
 */
-/**
- * **************************************
-
- */
 /**
 *
 */
@@ -288,7 +280,7 @@ button[type=reset], button[style*="--btn-reset"],
 [role=button][style*="--btn-reset"] {
   --btn-bg: transparent;
   --btn-color: gray;
-  --btn-bdr: gray medium solid;
+  --btn-bdr: gray thin solid;
 }
 button[type=submit], button[style*="--btn-submit"],
 [style*="--btn"][type=submit],
