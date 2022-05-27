@@ -226,6 +226,7 @@ button,
   margin: var(--btn-spc, 0.25rem);
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
+  outline: none;
 }
 button[type],
 [style*="--btn"][type],
@@ -251,15 +252,17 @@ button[disabled],
   cursor: var(--btn-cursor-disabled, not-allowed);
   opacity: var(--btn-opacity-disabled, 0.5);
 }
-button:hover,
-[style*="--btn"]:hover,
-.fp-button:hover,
-[role=button]:hover {
+button:is(:hover, :focus),
+[style*="--btn"]:is(:hover, :focus),
+.fp-button:is(:hover, :focus),
+[role=button]:is(:hover, :focus) {
   --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg-over, var(--btn, lightgray));
   filter: invert(1) hue-rotate 180deg;
   transform: scale(0.95);
+  outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
+  outline-offset: var(--line-offset, 5px);
 }
 button[type=reset], button[style*="--btn-reset"],
 [style*="--btn"][type=reset],

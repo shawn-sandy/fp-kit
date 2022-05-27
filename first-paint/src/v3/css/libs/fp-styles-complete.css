@@ -216,6 +216,7 @@ hr {
   margin: var(--btn-spc, 0.25rem);
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
+  outline: none;
 }
 .fp-btn[type] {
   background-color: var(--btn-bg, var(--btn, lightgray));
@@ -229,12 +230,14 @@ hr {
   cursor: var(--btn-cursor-disabled, not-allowed);
   opacity: var(--btn-opacity-disabled, 0.5);
 }
-.fp-btn:hover {
+.fp-btn:is(:hover, :focus) {
   --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg-over, var(--btn, lightgray));
   filter: invert(1) hue-rotate 180deg;
   transform: scale(0.95);
+  outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
+  outline-offset: var(--line-offset, 5px);
 }
 .fp-btn[type=reset], .fp-btn[style*="--btn-reset"] {
   --btn-bg: transparent;
@@ -321,7 +324,7 @@ hr {
   place-content: flex-start;
   place-items: center;
   gap: 0.7rem;
-  justify-content: space-between;
+  justify-content: var(--summary-justify, space-between);
   font-size: var(--summary-fs, 1.1rem);
   color: var(--summary-color, currentColor);
   padding: var(--details-pd, 1rem);

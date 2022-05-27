@@ -28,7 +28,7 @@
     place-content: flex-start;
     place-items: center;
     gap: .7rem;
-    justify-content: space-between;
+    justify-content: var(--summary-justify, space-between);
     font-size: var(--summary-fs, 1.1rem);
     color: var(--summary-color, currentColor);
     padding: var(--details-pd, 1rem);

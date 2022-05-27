@@ -1,6 +1,5 @@
 {
   "extends": "nx/presets/npm.json",
-  "npmScope": "fp-kit",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
@@ -12,7 +11,7 @@
           "package",
           "prepare"
         ],
-        "accessToken": "NDI3NDc3OWMtODVjYi00N2Y5LTgzMTItOTQ4ZWMwYmZjNGYxfHJlYWQtd3JpdGU="
+        "accessToken": "ZGEzM2NiNDItNmYzMS00NDMzLTk5MGItNTQ0MDY3ZTA3NmNhfHJlYWQtd3JpdGU="
       }
     }
   },
@@ -23,7 +22,7 @@
         "projects": "dependencies"
       }
     ],
-    "prepare": [_bread
+    "prepare": [
       {
         "target": "prepare",
         "projects": "dependencies"
@@ -47,5 +46,25 @@
     "@nrwl/js": {
       "analyzeSourceFiles": false
     }
-  }
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "defaultProject": "myapp"
 }

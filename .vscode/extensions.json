@@ -6,6 +6,7 @@
     "jevakallio.vscode-live-frame",
     "ms-vscode.live-server",
     "usernamehw.errorlens",
-    "zenclabs.previewjs"
+    "zenclabs.previewjs",
+    "firsttris.vscode-jest-runner"
   ]
 }

@@ -1,6 +1,4 @@
 {
-  "version": 2,
-  "projects": {
-    "datatable": "/components/react/fp-datatable"
-  }
+  "version": 2
+
 }
