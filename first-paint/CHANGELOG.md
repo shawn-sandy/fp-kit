@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.0...@shawnsandy/first-paint@2.16.1) (2022-05-27)
+
+
+### Features
+
+* **beta:** add is:hover:focus to button states ([cd04d31](https://github.com/shawn-sandy/fp-kit/commit/cd04d312bdea26c578cea717e1cae976fad6ec14))
+
+
+
+
+
 # [2.16.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.15.3...@shawnsandy/first-paint@2.16.0) (2022-05-14)
 
 

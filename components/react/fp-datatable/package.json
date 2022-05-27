@@ -1,6 +1,6 @@
 {
   "name": "@shawnsandy/fp-datatable",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "FP-Datable a simple react data-table use standalone or with react-datable",
   "private": true,
   "keywords": [
