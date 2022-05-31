@@ -4,7 +4,7 @@ to: <%= absPath %>/package.json
 {
   "name": "@shawnsandy/<%= componentName %>",
   "version": "0.0.1",
-  "description": "FP-Datable a simple react data-table use standalone or with react-datable",
+  "description": "<%= componentDescription || componentName %>",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -82,6 +82,7 @@ to: <%= absPath %>/package.json
   "devDependencies": {
     "@axe-core/react": "^4.4.0",
     "@etchteam/storybook-addon-status": "^4.2.0",
+    "@ladle/react": "^0.16.0",
     "@rollup/plugin-commonjs": "^21.0.2",
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@storybook/addon-a11y": "^6.4.19",
@@ -101,10 +102,10 @@ to: <%= absPath %>/package.json
     "chromatic": "^6.4.3",
     "postcss": "^8.4.7",
     "rimraf": "^3.0.2",
-    "rollup": "^2.69.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
+    "rollup": "^2.69.0",
     "sass": "^1.49.8",
     "storybook-addon-performance": "^0.16.1",
     "storybook-addon-pseudo-states": "^1.0.0",
