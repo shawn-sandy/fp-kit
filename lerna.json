@@ -1,6 +1,7 @@
 {
   "packages": [
     "projects/*",
+    "react/*",
     "fp-react/",
     "first-paint/",
     "components/react/*"

@@ -5,7 +5,7 @@ to: <%= absPath %>/src/component/index.tsx
 import React from 'react';
 
 export interface <%= componentName %>Props {
-  children: React.ReactNode
+  children?: React.ReactNode
   styles?: object
 }
 
