@@ -20,7 +20,7 @@
 * Lightweight
 * Fully Customizable CSS/SCSS
 
-[Read more abot our features/modules and see what's new in First Paint 3.0 here](/FEATURES).
+[Read more about our features/modules and see what's new in First Paint 3.0 here](/FEATURES).
 
 ## Install
 

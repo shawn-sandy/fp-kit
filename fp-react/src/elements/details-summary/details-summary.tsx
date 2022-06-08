@@ -25,13 +25,13 @@ interface DetailsProps {
  * `FpDetailsSummary` React Details Summary element
  *  * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
  */
-const Details: React.FC<DetailsProps> = ({
+const Details  = ({
   children,
   classes,
   styles = {},
   toggle,
   ...rest
-}) => {
+}: DetailsProps) => {
   const defStyles = {
     fontSize: "var(--detail-fs, 1rem)",
     color: "var(--detail-cl, currentColor)",

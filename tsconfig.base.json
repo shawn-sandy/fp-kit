@@ -16,7 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/fp-kit": ["projects/fp-kit/src/index.ts"]
+
     }
   },
   "exclude": ["node_modules", "tmp"]

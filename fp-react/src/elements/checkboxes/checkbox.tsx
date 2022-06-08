@@ -18,13 +18,13 @@ type LabelProps = {
  * * [Checkbox Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
  * * [Accessibility Info](https://www.w3.org/TR/wai-aria-practices-1.1/#checkbox)
  */
-export const Label: React.FC<LabelProps> = ({
+export const Label = ({
   name,
   classes,
   styles,
   children = "Default Checkbox",
   ...props
-}) => {
+}: LabelProps) => {
   const defStyles = {
     display: "var(--lbl-dsp, flex)",
     fontSize: "var(--chk-fs, 1rem)",
