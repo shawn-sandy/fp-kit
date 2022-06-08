@@ -16,7 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-
+      "@fp/buttons": ["libs/react/fp-button/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
