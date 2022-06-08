@@ -5,12 +5,12 @@ export interface FPButtonProps {
   styles?: object
 }
 
-const FPButton: React.FC<FPButtonProps> = ({styles, children, ...props}) => {
+const FPButton = ({styles, children, ...props}: FPButtonProps) => {
   const defStyles = {
     display: "var(--dsp, flex)"
   }
   return <div style={{...defStyles, ...styles}} {...props}>
- {children ?? FPButton}
+ {children ?? 'FPButton'}
  </div>;
 };
 
