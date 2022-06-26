@@ -1,11 +1,13 @@
 {
   "packages": [
     "projects/*",
+    "libs/react/*",
     "fp-react/",
     "first-paint/",
     "components/react/*"
   ],
   "version": "independent",
+  "useNx": true,
   "command": {
     "version": {
       "message": "chore(release): publish %s"
