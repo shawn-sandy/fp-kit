@@ -10,7 +10,8 @@ export default defineConfig({
     coverage: { // config coverage
       reporter: ['text', 'html'], // generate coverage reports
       exclude: [
-        'node_modules/'
+        'node_modules/',
+        'src/test/setup.ts'
       ],
     },
   },

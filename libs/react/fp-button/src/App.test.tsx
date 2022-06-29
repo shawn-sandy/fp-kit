@@ -11,4 +11,14 @@ describe('App renders correctly', () => {
     expect(screen).toMatchSnapshot();
 
   });
+
+  // it renders the button
+  test('renders the button', () => {
+    render(<App />);
+    expect(screen.getByText('count is: 0')).toBeInTheDocument();
+
+    const button = screen.getByRole('button');
+    expect(button).toHaveAttribute('type', 'button');
+  })
+
 })

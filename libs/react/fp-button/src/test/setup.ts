@@ -1,18 +1,7 @@
-/// <reference types="vitest" />
-/// <reference types="vite/client" />
-import { defineConfig } from 'vite'
+import '@testing-library/jest-dom'
 
-import react from '@vitejs/plugin-react'
-export default defineConfig({
-  test: {
-    globals: true,
-    environment: 'jsdom', // add jsdom
-    setupFiles: './src/test/setup.ts', // setup includes
-    coverage: { // config coverage
-      reporter: ['text', 'html'], // generate coverage reports
-      exclude: [
-        'node_modules/'
-      ],
-    },
-  },
-});
+// *SOURCE https://markus.oberlehner.net/blog/using-testing-library-jest-dom-with-vitest/?s=09&utm_source=pocket_mylist
+import matchers from '@testing-library/jest-dom/matchers';
+import { expect } from 'vitest';
+
+expect.extend(matchers);
