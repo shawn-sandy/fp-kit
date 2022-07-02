@@ -10,7 +10,6 @@ describe('App renders correctly', () => {
   test('renders without crashing', () => {
     render(<App />);
     expect(screen).toMatchSnapshot();
-
   });
 
   // it renders the button
@@ -21,12 +20,10 @@ describe('App renders correctly', () => {
     expect(button).toHaveAttribute('type', 'button');
   })
 
-
   it('should increment count on click', async () => {
     render(<App />)
     userEvent.click(screen.getByRole('button'))
     expect(await screen.findByText(/count is: 1/i)).toBeInTheDocument()
   })
-
 
 })
