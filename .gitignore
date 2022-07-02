@@ -118,3 +118,4 @@ fp-react/lib/
 /components/react/fp-datatable/lib
 !/first-paint/www
 /first-paint/src/v3/css-1
+libs/.DS_Store
