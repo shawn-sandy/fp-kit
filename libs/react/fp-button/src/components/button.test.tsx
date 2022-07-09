@@ -7,8 +7,10 @@ import userEvent from '@testing-library/user-event';
 import Button from './button';
 describe('Button renders correctly', () => {
 
-  test('Button renders without crashing', () => {
-    render(<Button>Click</Button>);
+  test('Button renders correctly without crashing', () => {
+    render(<Button buttonType='button'>Click Here</Button>);
+    const button = screen.getByRole('button');
+    expect(button).toHaveAttribute('type', 'button');
     expect(screen).toMatchSnapshot();
     screen.debug();
   } );

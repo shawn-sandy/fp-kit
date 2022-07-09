@@ -1,6 +1,6 @@
 // Vitest Snapshot v1
 
-exports[`Button renders correctly > Button renders without crashing 1`] = `
+exports[`Button renders correctly > Button renders correctly without crashing 1`] = `
 {
   "debug": [Function],
   "findAllByAltText": [Function],

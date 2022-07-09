@@ -11,7 +11,8 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --run --coverage",
-    "test:ui:coverage": "vitest --ui --coverage"
+    "test:ui:coverage": "vitest --ui --coverage",
+    "vite:snapshot": "vitest --update"
   },
   "dependencies": {
     "react": "^18.0.0",
