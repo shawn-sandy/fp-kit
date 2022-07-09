@@ -1,4 +1,3 @@
-import { type } from "os"
 import * as React from "react"
 
 export interface ButtonProps {
@@ -6,7 +5,7 @@ export interface ButtonProps {
   onClick?: () => void
   children: React.ReactNode
   styles?: object
-  disabled: boolean
+  disabled?: boolean
   classes?: string
 }
 
@@ -27,10 +26,18 @@ const Button = ({
     justifyContent: "var(--btn-justify, center)",
     cursor: "var(--btn-cursor, pointer)"
   }
+
+  const handleClick = () => {
+    if(!disabled) {
+      onClick && onClick()
+    }
+  }
+
+
   return (
     <button
       type={buttonType}
-      onClick={onClick}
+      onClick={handleClick}
       style={{ ...defStyles, ...styles }}
       aria-disabled={disabled}
       {...props}
