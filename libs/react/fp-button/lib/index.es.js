@@ -33,11 +33,29 @@ const jsx = jsxRuntime.exports.jsx;
 const Button = ({
   buttonType,
   onClick,
-  children
-}) => /* @__PURE__ */ jsx("button", {
-  type: buttonType,
-  onClick,
-  children
-});
+  children,
+  styles,
+  classes,
+  ...props
+}) => {
+  const defStyles = {
+    paddingInline: "var(--btn-px, 1.4rem)",
+    paddingBlock: "var(--btn-py, 0.8rem)",
+    display: "var(--btn-dsp, inline-flex)",
+    placeItems: "var(--btn-place, center)",
+    justifyContent: "var(--btn-justify, center)",
+    cursor: "var(--btn-cursor, pointer)"
+  };
+  return /* @__PURE__ */ jsx("button", {
+    type: buttonType,
+    onClick,
+    style: {
+      ...defStyles,
+      ...styles
+    },
+    ...props,
+    children
+  });
+};
 export { Button };
 //# sourceMappingURL=index.es.js.map

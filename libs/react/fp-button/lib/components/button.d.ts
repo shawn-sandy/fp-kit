@@ -1,8 +1,10 @@
-import * as React from 'react';
-interface ButtonProps {
+import * as React from "react";
+export interface ButtonProps {
+    buttonType: "button" | "submit" | "reset";
     onClick?: () => void;
-    buttonType: 'button' | 'submit' | 'reset';
     children: React.ReactNode;
+    styles?: object;
+    classes?: string;
 }
-declare const Button: ({ buttonType, onClick, children }: ButtonProps) => JSX.Element;
+declare const Button: ({ buttonType, onClick, children, styles, classes, ...props }: ButtonProps) => JSX.Element;
 export default Button;

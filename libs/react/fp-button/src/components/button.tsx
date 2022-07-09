@@ -1,7 +1,7 @@
 import { type } from "os"
 import * as React from "react"
 
-interface ButtonProps {
+export interface ButtonProps {
   buttonType: "button" | "submit" | "reset"
   onClick?: () => void
   children: React.ReactNode
