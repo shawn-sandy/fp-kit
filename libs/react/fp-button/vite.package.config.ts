@@ -12,7 +12,7 @@ export default defineConfig({
         logOverride: { 'this-is-undefined-in-esm': 'silent' }
       },
       build: {
-        outDir: resolve(__dirname, '../lib'),
+        outDir: resolve(__dirname, './lib'),
         sourcemap: true,
         lib: {
           entry: resolve(__dirname, 'src/components/index.ts'),
