@@ -6,6 +6,7 @@ export interface ButtonProps {
   onClick?: () => void
   children: React.ReactNode
   styles?: object
+  disabled: boolean
   classes?: string
 }
 
@@ -14,6 +15,7 @@ const Button = ({
   onClick,
   children,
   styles,
+  disabled,
   classes,
   ...props
 }: ButtonProps) => {
@@ -30,6 +32,7 @@ const Button = ({
       type={buttonType}
       onClick={onClick}
       style={{ ...defStyles, ...styles }}
+      aria-disabled={disabled}
       {...props}
     >
       {children}
