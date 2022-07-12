@@ -3,6 +3,7 @@ import * as React from "react"
 export interface ButtonProps {
   buttonType: "button" | "submit" | "reset"
   onClick?: () => void
+  mouseOver?: () => void
   children: React.ReactNode
   styles?: object
   disabled?: boolean
@@ -16,6 +17,7 @@ const Button = ({
   styles,
   disabled,
   classes,
+  mouseOver,
   ...props
 }: ButtonProps) => {
   const defStyles: object = {
@@ -33,11 +35,15 @@ const Button = ({
     }
   }
 
+  const handleMouseOver = () => {
+    mouseOver && mouseOver()
+  }
 
   return (
     <button
       type={buttonType}
       onClick={handleClick}
+      onMouseOver={handleMouseOver}
       style={{ ...defStyles, ...styles }}
       aria-disabled={disabled}
       {...props}
