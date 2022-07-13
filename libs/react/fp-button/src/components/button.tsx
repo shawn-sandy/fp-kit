@@ -2,12 +2,33 @@ import * as React from "react"
 
 /* Defining the props that the Button component will take. */
 export interface ButtonProps {
+  /**
+   * Button type (button, submit, reset)
+   */
   buttonType: "button" | "submit" | "reset"
+  /**
+   * Button onClick handler
+   */
   onClick?: () => void
+  /**
+   * Button mouseOver handler
+   */
   mouseOver?: () => void
+  /**
+   * Button label/content
+   */
   children: React.ReactNode
+  /**
+   * Button styles and props
+   */
   styles?: object
+  /**
+   * Set button as disabled
+   */
   disabled?: boolean
+  /**
+   * button classes
+   */
   classes?: string
 }
 
