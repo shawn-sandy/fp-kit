@@ -44,7 +44,7 @@
     --btn-bg: darkblue;
     --btn-color: white;
   }
-  &[disabled] {
+  &[disabled], &[aria-disabled="true"] {
     cursor: var(--btn-cursor-disabled, not-allowed);
     opacity: var(--btn-opacity-disabled, 0.5);
   }

@@ -140,7 +140,7 @@ hr {
   --btn-bg: darkblue;
   --btn-color: white;
 }
-.fp-btn[disabled] {
+.fp-btn[disabled], .fp-btn[aria-disabled=true] {
   cursor: var(--btn-cursor-disabled, not-allowed);
   opacity: var(--btn-opacity-disabled, 0.5);
 }
