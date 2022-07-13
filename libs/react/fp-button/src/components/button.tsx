@@ -1,5 +1,6 @@
 import * as React from "react"
 
+/* Defining the props that the Button component will take. */
 export interface ButtonProps {
   buttonType: "button" | "submit" | "reset"
   onClick?: () => void
