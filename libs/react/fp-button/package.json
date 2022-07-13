@@ -1,5 +1,5 @@
 {
-  "name": "@fp/fp-button",
+  "name": "@fpkit/fp-btn",
   "private": false,
   "version": "0.0.2",
   "scripts": {
@@ -12,7 +12,12 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --run --coverage",
     "test:ui:coverage": "vitest --ui --coverage",
-    "test:snapshot": "vitest --run --update"
+    "test:snapshot": "vitest --run --update",
+    "release": "npm publish",
+    "release-next": "npm publish --tag next"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "react": "^18.0.0",
@@ -35,5 +40,17 @@
     "vite": "^2.9.9",
     "vite-plugin-dts": "^1.2.0",
     "vitest": "^0.15.1"
-  }
+  },
+  "description": "FP Button kit",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "react",
+    "button",
+    "first-paint"
+  ],
+  "author": "shawn sandy",
+  "license": "MIT"
 }
