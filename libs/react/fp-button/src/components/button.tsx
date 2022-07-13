@@ -29,16 +29,23 @@ const Button = ({
     cursor: "var(--btn-cursor, pointer)"
   }
 
+ /**
+  * If the button is not disabled, then call the onClick function
+  */
   const handleClick = () => {
     if(!disabled) {
       onClick && onClick()
     }
   }
 
+/**
+ * A function that returns a function.
+ */
   const handleMouseOver = () => {
     mouseOver && mouseOver()
   }
 
+/* Returning a button element. */
   return (
     <button
       type={buttonType}
