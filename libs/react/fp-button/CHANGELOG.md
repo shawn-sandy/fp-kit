@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2](https://github.com/shawn-sandy/fp-kit/compare/@fp/fp-button@0.0.1...@fp/fp-button@0.0.2) (2022-07-13)
+
+
+### Features
+
+* 🏗️ package build ([6afd439](https://github.com/shawn-sandy/fp-kit/commit/6afd439db818ac17098e740ed149c62318f68712))
+
+
+
+
+
 ## 0.0.1 (2022-07-13)
 
 
