@@ -35,7 +35,9 @@ const Button = ({
   onClick,
   children,
   styles,
+  disabled,
   classes,
+  mouseOver,
   ...props
 }) => {
   const defStyles = {
@@ -46,13 +48,23 @@ const Button = ({
     justifyContent: "var(--btn-justify, center)",
     cursor: "var(--btn-cursor, pointer)"
   };
+  const handleClick = () => {
+    if (!disabled) {
+      onClick && onClick();
+    }
+  };
+  const handleMouseOver = () => {
+    mouseOver && mouseOver();
+  };
   return /* @__PURE__ */ jsx("button", {
     type: buttonType,
-    onClick,
+    onClick: handleClick,
+    onMouseOver: handleMouseOver,
     style: {
       ...defStyles,
       ...styles
     },
+    "aria-disabled": disabled,
     ...props,
     children
   });
