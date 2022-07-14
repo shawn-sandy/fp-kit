@@ -42,9 +42,18 @@
     "vitest": "^0.15.1"
   },
   "description": "FP Button kit",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "main": "./lib/index.umd.js",
+  "module": "./lib/index.es.js",
+  "types": "./lib/components/index.d.ts",
+  "exports": {
+      ".": {
+          "import": "./dist/my-lib.es.js",
+          "require": "./dist/my-lib.umd.js"
+      }
   },
   "keywords": [
     "react",
