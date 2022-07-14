@@ -1,0 +1,12 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 0.0.1 (2022-07-14)
+
+
+### Features
+
+* ✨ add react app to test components ([3b7b002](https://github.com/shawn-sandy/fp-kit/commit/3b7b0023075e691c71f9e969be86565e8b7e8f7e))
+* production build test ([1dbd210](https://github.com/shawn-sandy/fp-kit/commit/1dbd2108e5991c3681a47804e6f816236321e48c))
