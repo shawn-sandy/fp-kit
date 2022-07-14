@@ -9,7 +9,7 @@ Lightweight react UI primitives for building components and apps using CSS custo
 ## Install
 
  ```bash
- npm install -D @fpkit/button
+ npm install -D @fpkit/fp-btn
  ```
 
  ### Usage

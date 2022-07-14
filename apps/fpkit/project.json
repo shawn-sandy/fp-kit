@@ -1,0 +1,85 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/fpkit/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/fpkit",
+        "index": "apps/fpkit/src/index.html",
+        "baseHref": "/",
+        "main": "apps/fpkit/src/main.tsx",
+        "polyfills": "apps/fpkit/src/polyfills.ts",
+        "tsConfig": "apps/fpkit/tsconfig.app.json",
+        "assets": [
+          "apps/fpkit/src/favicon.ico",
+          "apps/fpkit/src/assets"
+        ],
+        "styles": ["apps/fpkit/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/fpkit/src/environments/environment.ts",
+              "with": "apps/fpkit/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "fpkit:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "fpkit:build:development"
+        },
+        "production": {
+          "buildTarget": "fpkit:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/fpkit/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/fpkit"],
+      "options": {
+        "jestConfig": "apps/fpkit/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
