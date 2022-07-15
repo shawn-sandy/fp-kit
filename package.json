@@ -15,7 +15,7 @@
     "build:first-paint": "lerna exec npm run build --scope=@shawnsandy/first-paint",
     "npm-release": "HUSKY=0 && lerna publish --conventional-commits -m \"chore(release): publish patch \"",
     "npm-next": "lerna publish --dist-tag next patch --conventional-commits -m \"chore(next): publish next release \"",
-    "npm-publish": "HUSKY=0 && lerna publish --yes  --dist-tag next --conventional-commits -m --no-private 'chore(next): publish @next %s'",
+    "npm-publish": "HUSKY=0 && lerna publish --yes --no-private  --dist-tag next --conventional-commits -m --no-private 'chore(next): publish @next %s'",
     "release-patch": "lerna version patch --conventional-commits --no-private",
     "release-minor": "lerna version minor --conventional-commits --no-private",
     "release": "lerna version major --conventional-commits --no-private",
