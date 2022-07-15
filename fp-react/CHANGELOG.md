@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.15.3...@shawnsandy/fp-react@0.15.4) (2022-07-15)
+
+
+### Features
+
+* ✨ addons for storybook ([8db8492](https://github.com/shawn-sandy/fp-kit/commit/8db84928d6355b3f0edecc726a64199cae7e97f7))
+
+
+
+
+
 ## [0.15.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.15.2...@shawnsandy/fp-react@0.15.3) (2022-07-13)
 
 **Note:** Version bump only for package @shawnsandy/fp-react

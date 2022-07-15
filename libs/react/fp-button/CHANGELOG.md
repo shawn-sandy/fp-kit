@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-btn@0.0.8...@fpkit/fp-btn@0.0.9) (2022-07-15)
+
+
+### Features
+
+* ✨ addons for storybook ([8db8492](https://github.com/shawn-sandy/fp-kit/commit/8db84928d6355b3f0edecc726a64199cae7e97f7))
+
+
+
+
+
 ## [0.0.8](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-btn@0.0.7...@fpkit/fp-btn@0.0.8) (2022-07-15)
 
 
