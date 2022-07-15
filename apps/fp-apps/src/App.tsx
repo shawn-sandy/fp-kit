@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
-import {Button} from '@fpkit/fp-btn'
+import { Button } from '@fpkit/fp-btn'
 
 function App() {
   const [count, setCount] = useState(0)

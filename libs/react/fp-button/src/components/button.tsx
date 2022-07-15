@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 
 /* Defining the props that the Button component will take. */
 export interface ButtonProps {

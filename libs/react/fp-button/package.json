@@ -46,13 +46,13 @@
     "lib",
     "README.md"
   ],
-  "main": "./lib/index.umd.js",
-  "module": "./lib/index.mjs",
+  "main": "./lib/index.umd.cjs",
+  "module": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "exports": {
     ".": {
-      "import": "./lib/index.mjs",
-      "require": "./lib/index.umd.js"
+      "import": "./lib/index.js",
+      "require": "./lib/index.umd.cjs"
     }
   },
   "keywords": [
@@ -60,6 +60,7 @@
     "button",
     "first-paint"
   ],
+  "type": "module",
   "author": "shawn sandy",
   "license": "MIT"
 }
