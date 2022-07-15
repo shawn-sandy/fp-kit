@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-btn@0.0.5...@fpkit/fp-btn@0.0.6) (2022-07-15)
+
+
+### Features
+
+* update props with react HTMLBUTTON types ([0ec66bc](https://github.com/shawn-sandy/fp-kit/commit/0ec66bc1367464be387c551e643273cc7b68bbb1))
+
+
+
+
+
 ## [0.0.5](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-btn@0.0.4...@fpkit/fp-btn@0.0.5) (2022-07-15)
 
 **Note:** Version bump only for package @fpkit/fp-btn
