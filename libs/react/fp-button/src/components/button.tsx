@@ -1,9 +1,12 @@
-import React from "react"
+import React, { MouseEvent } from "react"
 
 /* Defining the props that the Button component will take. */
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /**
+   * The type of the button.
+   */
+  type: "button" | "submit" | "reset"
 
-  mouseOver?: () => void
   /**
    * Button label/content
    */
@@ -25,7 +28,7 @@ const Button = ({
   disabled,
   classes,
   onClick,
-  mouseOver,
+  onMouseOver,
 
   ...props
 }: ButtonProps) => {
@@ -41,17 +44,17 @@ const Button = ({
  /**
   * If the button is not disabled, then call the onClick function
   */
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if(!disabled) {
-      onClick && onClick()
+      onClick && onClick(e)
     }
   }
 
 /**
  * A function that returns a function.
  */
-  const handleMouseOver = () => {
-    mouseOver && mouseOver()
+  const handleMouseOver = (e: React.MouseEvent<HTMLButtonElement>) => {
+    onMouseOver && onMouseOver(e)
   }
 
 /* Returning a button element. */

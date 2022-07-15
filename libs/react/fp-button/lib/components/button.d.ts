@@ -1,10 +1,9 @@
 import React from "react";
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    onClick?: () => void;
     /**
-     * Button mouseOver handler
+     * The type of the button.
      */
-    mouseOver?: () => void;
+    type: "button" | "submit" | "reset";
     /**
      * Button label/content
      */
@@ -18,5 +17,5 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
      */
     classes?: string;
 }
-declare const Button: ({ type, children, styles, disabled, classes, onClick, mouseOver, ...props }: ButtonProps) => JSX.Element;
+declare const Button: ({ type, children, styles, disabled, classes, onClick, onMouseOver, ...props }: ButtonProps) => JSX.Element;
 export default Button;
