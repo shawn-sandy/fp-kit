@@ -7,6 +7,11 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 export default {
   title: 'Elements/Buttons',
   component: Button,
+  argTypes: {
+    children: { control: 'text' },
+    type: { control: 'select', options: ['button', 'submit', 'reset'] },
+    disabled: { control: 'boolean' },
+  },
   parameters: {
     badges: [BADGE.BETA]
   }
