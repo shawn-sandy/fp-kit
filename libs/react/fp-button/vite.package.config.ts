@@ -7,7 +7,9 @@ import { resolve } from "node:path"
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [react(), dts(
+    {insertTypesEntry: true,}
+  )],
   esbuild: {
     logOverride: { "this-is-undefined-in-esm": "silent" }
   },
@@ -15,7 +17,7 @@ export default defineConfig({
     outDir: resolve(__dirname, "./lib"),
     sourcemap: true,
     lib: {
-      entry: resolve(__dirname, "src/components/index.ts"),
+      entry: resolve(__dirname, "src/index.ts"),
       name: "Link",
       fileName: "index"
     },

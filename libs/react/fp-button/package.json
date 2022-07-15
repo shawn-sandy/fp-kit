@@ -46,12 +46,13 @@
     "lib",
     "README.md"
   ],
-  "main": "./lib/index.umd.cjs",
-  "module": "./lib/index.js",
+  "main": "./lib/index.umd.js",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
   "exports": {
     ".": {
-      "import": "./lib/index.js",
-      "require": "./lib/index.umd.cjs"
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.umd.js"
     }
   },
   "keywords": [

@@ -30,7 +30,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <p>
-        <Button buttonType="button">Click me</Button>
+        <Button buttonType="button" onClick={() => setCount((count) => count + 1)}>Click me</Button>
       </p>
     </div>
   )
