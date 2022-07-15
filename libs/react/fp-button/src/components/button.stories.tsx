@@ -15,8 +15,8 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => (<Button { ...args } />)
 
-export const Default = Template.bind({})
-Default.args = {
+export const DefaultButton = Template.bind({})
+DefaultButton.args = {
   children: 'Default Button',
   onClick: () => console.log('Clicked Default Button')
 }
