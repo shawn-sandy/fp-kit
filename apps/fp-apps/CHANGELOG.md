@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](https://github.com/shawn-sandy/fp-kit/compare/fp-apps@0.0.4...fp-apps@0.0.5) (2022-07-15)
+
+
+### Features
+
+* ✅ update prop types/rules ([d35af68](https://github.com/shawn-sandy/fp-kit/commit/d35af689eb7ac195d818c42f91a9d9b26a3f91a3))
+
+
+
+
+
 ## [0.0.4](https://github.com/shawn-sandy/fp-kit/compare/fp-apps@0.0.3...fp-apps@0.0.4) (2022-07-15)
 
 

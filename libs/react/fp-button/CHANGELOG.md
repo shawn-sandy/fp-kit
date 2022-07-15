@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-btn@0.0.6...@fpkit/fp-btn@0.0.7) (2022-07-15)
+
+
+### Features
+
+* ✅ update prop types/rules ([d35af68](https://github.com/shawn-sandy/fp-kit/commit/d35af689eb7ac195d818c42f91a9d9b26a3f91a3))
+
+
+
+
+
 ## [0.0.6](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-btn@0.0.5...@fpkit/fp-btn@0.0.6) (2022-07-15)
 
 
