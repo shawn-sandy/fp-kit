@@ -1,15 +1,9 @@
 import React from "react"
 
 /* Defining the props that the Button component will take. */
-export interface ButtonProps {
-  /**
-   * Button type (button, submit, reset)
-   */
-  buttonType: "button" | "submit" | "reset"
-  /**
-   * Button onClick handler
-   */
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void
+
   /**
    * Button mouseOver handler
    */
@@ -23,23 +17,20 @@ export interface ButtonProps {
    */
   styles?: object
   /**
-   * Set button as disabled
-   */
-  disabled?: boolean
-  /**
    * button classes
    */
   classes?: string
 }
 
 const Button = ({
-  buttonType,
-  onClick,
+  type,
   children,
   styles,
   disabled,
   classes,
+  onClick,
   mouseOver,
+
   ...props
 }: ButtonProps) => {
   const defStyles: object = {
@@ -70,7 +61,7 @@ const Button = ({
 /* Returning a button element. */
   return (
     <button
-      type={buttonType}
+      type={type}
       onClick={handleClick}
       onMouseOver={handleMouseOver}
       style={{ ...defStyles, ...styles }}

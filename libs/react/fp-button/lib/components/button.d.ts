@@ -1,12 +1,5 @@
 import React from "react";
-export interface ButtonProps {
-    /**
-     * Button type (button, submit, reset)
-     */
-    buttonType: "button" | "submit" | "reset";
-    /**
-     * Button onClick handler
-     */
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     onClick?: () => void;
     /**
      * Button mouseOver handler
@@ -21,13 +14,9 @@ export interface ButtonProps {
      */
     styles?: object;
     /**
-     * Set button as disabled
-     */
-    disabled?: boolean;
-    /**
      * button classes
      */
     classes?: string;
 }
-declare const Button: ({ buttonType, onClick, children, styles, disabled, classes, mouseOver, ...props }: ButtonProps) => JSX.Element;
+declare const Button: ({ type, children, styles, disabled, classes, onClick, mouseOver, ...props }: ButtonProps) => JSX.Element;
 export default Button;

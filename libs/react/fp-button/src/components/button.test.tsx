@@ -8,7 +8,7 @@ import Button from './button';
 describe('Button renders correctly', () => {
 
   test('Button renders correctly without crashing', () => {
-    render(<Button buttonType='button'>Click Here</Button>);
+    render(<Button type='button'>Click Here</Button>);
     const button = screen.getByRole('button');
     expect(button).toHaveAttribute('type', 'button');
     expect(screen).toMatchSnapshot();
