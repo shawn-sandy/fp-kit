@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-btn@0.0.9...@fpkit/fp-btn@0.0.10) (2022-07-15)
+
+
+### Features
+
+* 🔥 add controls for button component ([e1cc884](https://github.com/shawn-sandy/fp-kit/commit/e1cc884fc814808991f3ecee1146fe239c274db6))
+
+
+
+
+
 ## [0.0.9](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-btn@0.0.8...@fpkit/fp-btn@0.0.9) (2022-07-15)
 
 
