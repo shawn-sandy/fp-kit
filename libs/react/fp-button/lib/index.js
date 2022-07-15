@@ -642,7 +642,8 @@ const sr = Oe.exports.jsx, fr = ({
       display: "var(--btn-dsp, inline-flex)",
       placeItems: "var(--btn-place, center)",
       justifyContent: "var(--btn-justify, center)",
-      cursor: "var(--btn-cursor, pointer)"
+      cursor: "var(--btn-cursor, pointer)",
+      border: "var(--btn-border, none)"
     },
     ...j
   },
