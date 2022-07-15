@@ -39,8 +39,8 @@
     "defaultBase": "main"
   },
   "workspaceLayout": {
-    "libsDir": "projects",
-    "appsDir": "projects"
+    "libsDir": "libs",
+    "appsDir": "apps"
   },
   "pluginsConfig": {
     "@nrwl/js": {

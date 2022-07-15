@@ -1,5 +1,5 @@
 const repoUrl = 'https://github.com/shawn-sandy/fp-kit' // TODO: Update.
-const editPath = repoUrl + '/tree/develop/first-paint/www/'
+const editPath = `${repoUrl}/tree/develop/first-paint/www/`
 const editMsg = '📝 Edit on GitHub'
 
 window.$docsify = {

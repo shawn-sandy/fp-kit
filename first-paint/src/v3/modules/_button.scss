@@ -44,7 +44,7 @@
     --btn-bg: darkblue;
     --btn-color: white;
   }
-  &[disabled] {
+  &[disabled], &[aria-disabled="true"] {
     cursor: var(--btn-cursor-disabled, not-allowed);
     opacity: var(--btn-opacity-disabled, 0.5);
   }
@@ -58,7 +58,6 @@
     transform: scale(0.95);
     outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
     outline-offset: var(--line-offset, 5px);
-
   }
 
   &[type="reset"],

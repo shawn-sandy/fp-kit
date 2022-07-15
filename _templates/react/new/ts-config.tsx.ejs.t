@@ -2,26 +2,11 @@
 to: <%= absPath %>/tsconfig.json
 ---
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
-    "outDir": "lib",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "declaration": true,
-    "declarationDir": "lib",
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "outDir": "./lib"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "lib", "src/**/*.test.tsx",
-    "src/**/*.stories.tsx",]
+  "include": [
+    "./src"
+  ]
 }

@@ -9,13 +9,18 @@ module.exports = {
       },
       {
         type: 'input',
+        name: 'componentDescription',
+        message: 'Component package description?'
+      },
+      {
+        type: 'input',
         name: 'dir',
-        message: 'The directory to store the component, ( default components)'
+        message: 'The directory to store the component, ( default react)'
       },
       {
         type: 'input',
         name: 'folderName',
-        message: 'The name of the component (my-component) (default react)'
+        message: 'The folder name of the component (my-component) (default component name)'
       }
     ]
     return inquirer
@@ -23,7 +28,7 @@ module.exports = {
       .then(answers => {
         const { componentName, dir, folderName } = answers
         const path = dir ? `${dir}` : `${componentName.toLowerCase()}`
-        const absPath = `${dir || 'components'}/${folderName || 'react'}/${path}`
+        const absPath = `${dir || 'react'}/${folderName || componentName.toLowerCase()}`
         return { ...answers, path, absPath }
       })
   }

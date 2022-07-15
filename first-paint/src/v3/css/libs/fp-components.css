@@ -245,10 +245,13 @@ button[type=submit], button[style*=submit],
   --btn-bg: darkblue;
   --btn-color: white;
 }
-button[disabled],
+button[disabled], button[aria-disabled=true],
 [style*="--btn"][disabled],
+[style*="--btn"][aria-disabled=true],
 .fp-button[disabled],
-[role=button][disabled] {
+.fp-button[aria-disabled=true],
+[role=button][disabled],
+[role=button][aria-disabled=true] {
   cursor: var(--btn-cursor-disabled, not-allowed);
   opacity: var(--btn-opacity-disabled, 0.5);
 }
