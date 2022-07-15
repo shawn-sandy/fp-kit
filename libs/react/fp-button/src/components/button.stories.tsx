@@ -2,14 +2,13 @@ import React from 'react'
 import Button from './button'
 
 import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
 export default {
   title: 'Elements/Buttons',
   component: Button,
   parameters: {
-    // status: {
-    //   type: 'beta',
-    // },
+    badges: [BADGE.BETA]
   }
 } as ComponentMeta<typeof Button>
 
