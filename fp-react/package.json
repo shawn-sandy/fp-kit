@@ -1,6 +1,6 @@
 {
   "name": "@shawnsandy/fp-react",
-  "version": "0.15.3",
+  "version": "0.15.4",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -90,8 +90,6 @@
     "@storybook/addon-interactions": "^6.5.5",
     "@storybook/addon-links": "^6.5.5",
     "@storybook/addon-storysource": "^6.5.5",
-    "@storybook/builder-webpack5": "^6.5.5",
-    "@storybook/manager-webpack5": "^6.5.5",
     "@storybook/node-logger": "^6.5.5",
     "@storybook/preset-create-react-app": "^4.1.1",
     "@storybook/react": "^6.5.5",
