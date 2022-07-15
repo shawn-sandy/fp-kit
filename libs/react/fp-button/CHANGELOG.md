@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.8](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-btn@0.0.7...@fpkit/fp-btn@0.0.8) (2022-07-15)
+
+
+### Features
+
+* ✨ add story for button component ([cce442c](https://github.com/shawn-sandy/fp-kit/commit/cce442c8fed0b7d45721a4ae6704e64f2b8b50d2))
+
+
+
+
+
 ## [0.0.7](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-btn@0.0.6...@fpkit/fp-btn@0.0.7) (2022-07-15)
 
 
