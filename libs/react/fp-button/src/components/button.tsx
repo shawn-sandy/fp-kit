@@ -47,7 +47,7 @@ const Button = ({
   */
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if(!disabled) {
-      onClick && onClick(e)
+      onClick?.(e)
     }
   }
 
@@ -55,7 +55,7 @@ const Button = ({
  * A function that returns a function.
  */
   const handleMouseOver = (e: React.MouseEvent<HTMLButtonElement>) => {
-    onMouseOver && onMouseOver(e)
+    onMouseOver?.(e)
   }
 
 /* Returning a button element. */
