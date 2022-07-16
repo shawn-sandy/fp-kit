@@ -24,3 +24,15 @@ DefaultButton.args = {
   children: 'Default Button',
   onClick: () => console.log('Clicked Default Button')
 }
+export const Disabled = Template.bind({})
+Disabled.args = {
+  children: 'Default Button',
+  disabled: true,
+  onClick: () => console.log('Clicked Default Button')
+}
+
+export const ClickMe = Template.bind({})
+ClickMe.args = {
+  children: 'Click Me',
+  onClick: () => alert('You Clicked Me?')
+}
