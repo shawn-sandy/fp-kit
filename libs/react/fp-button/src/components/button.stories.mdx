@@ -4,22 +4,20 @@ import { Meta } from "@storybook/addon-docs"
 
 # Button
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur error fugit quia saepe doloremque delectus libero vitae placeat obcaecati! Temporibus harum repellendus hic iure assumenda incidunt, expedita et aliquid corporis.
-
+## Description
 
 ### Install the button component
 
 ```bash
-#@next is always the latest version
-npm i @fp-kit/button@next
+npm i @fp-kit/fp-btn
 ```
 
 ```jsx
-import { Button } from "@fp-kit/button"
+import { Button } from "@fp-kit/fp-btn"
 
 ...
 <p>
-  <Button type="button" onClick={() => alert("You clicked?"}>count is: {count}</Button>
+  <Button type="button" onClick={() => setCount((count) => count + 1)}>count is: {count}</Button>
 </p>
 ```
 
@@ -56,7 +54,8 @@ const Btn = ({
   styles,
   disabled,
   classes,
-  onClick
+  onClick,
+  onMouseOver,
 
   ...props
 }: ButtonProps) => {
@@ -75,7 +74,7 @@ const Btn = ({
   */
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if(!disabled) {
-      onClick?.(e)
+      onClick && onClick(e)
     }
   }
 

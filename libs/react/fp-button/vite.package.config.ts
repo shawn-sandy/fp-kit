@@ -16,6 +16,7 @@ export default defineConfig({
   build: {
     outDir: resolve(__dirname, "./lib"),
     sourcemap: true,
+    // minify: 'terser',
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "Link",

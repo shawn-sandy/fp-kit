@@ -1,7 +1,7 @@
 {
-  "name": "@fpkit/fp-btn",
+  "name": "@fpkit/fp-button",
   "private": false,
-  "version": "0.0.9",
+  "version": "0.0.13",
   "scripts": {
     "start": "vite --open",
     "dev": "vite",
@@ -36,6 +36,8 @@
     "happy-dom": "^5.3.1",
     "jsdom": "^19.0.0",
     "react-test-renderer": "^18.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "terser": "^5.14.2",
     "typescript": "^4.6.3",
     "vite": "^3.0.0",
     "vite-plugin-dts": "^1.2.0",
@@ -44,6 +46,7 @@
   "description": "FP Button kit",
   "files": [
     "lib",
+    "src",
     "README.md"
   ],
   "main": "./lib/index.umd.cjs",

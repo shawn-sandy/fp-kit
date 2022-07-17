@@ -38,7 +38,8 @@ const Button = ({
     display: "var(--btn-dsp, inline-flex)",
     placeItems: "var(--btn-place, center)",
     justifyContent: "var(--btn-justify, center)",
-    cursor: "var(--btn-cursor, pointer)"
+    cursor: "var(--btn-cursor, pointer)",
+    border: "var(--btn-border, none)"
   }
 
  /**
@@ -46,7 +47,7 @@ const Button = ({
   */
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if(!disabled) {
-      onClick && onClick(e)
+      onClick?.(e)
     }
   }
 
@@ -54,7 +55,7 @@ const Button = ({
  * A function that returns a function.
  */
   const handleMouseOver = (e: React.MouseEvent<HTMLButtonElement>) => {
-    onMouseOver && onMouseOver(e)
+    onMouseOver?.(e)
   }
 
 /* Returning a button element. */
