@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react"
+import React from "react"
 
 /* Defining the props that the Button component will take. */
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

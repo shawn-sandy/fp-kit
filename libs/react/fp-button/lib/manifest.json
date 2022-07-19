@@ -1,0 +1,7 @@
+{
+  "src/index.ts": {
+    "file": "index.umd.cjs",
+    "src": "src/index.ts",
+    "isEntry": true
+  }
+}

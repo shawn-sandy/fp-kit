@@ -1,6 +1,6 @@
 /** @format */
 
-import { defineConfig } from "vite"
+import { defineConfig, splitVendorChunkPlugin } from "vite"
 import react from "@vitejs/plugin-react"
 import dts from "vite-plugin-dts"
 import { resolve } from "node:path"
@@ -9,14 +9,15 @@ import { resolve } from "node:path"
 export default defineConfig({
   plugins: [react(), dts(
     {insertTypesEntry: true,}
-  )],
+  ), splitVendorChunkPlugin()],
   esbuild: {
     logOverride: { "this-is-undefined-in-esm": "silent" }
   },
   build: {
     outDir: resolve(__dirname, "./lib"),
     sourcemap: true,
-    // minify: 'terser',
+    manifest: true,
+    minify: true,
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "Link",
@@ -25,7 +26,6 @@ export default defineConfig({
     rollupOptions: {
       external: ["react", "react-dom"],
       output: {
-        compact: true,
         globals: {
           react: "React",
           "react-dom": "ReactDOM"
