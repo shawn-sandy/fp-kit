@@ -1,6 +1,6 @@
 # FPKIT Button
 
-React UI primitive for creating buttons elements/components for React.
+A lightweight react UI primitive for creating React button elements/components that leverage CSS custom properties for reactive CSS.
 
 ## FPKIT
 
