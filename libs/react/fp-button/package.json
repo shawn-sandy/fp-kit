@@ -1,7 +1,7 @@
 {
   "name": "@fpkit/fp-button",
   "private": false,
-  "version": "1.0.0",
+  "version": "0.1.0",
   "scripts": {
     "start": "vite --open",
     "dev": "vite",
