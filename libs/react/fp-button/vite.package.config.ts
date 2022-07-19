@@ -17,6 +17,7 @@ export default defineConfig({
     outDir: resolve(__dirname, "./lib"),
     sourcemap: true,
     manifest: true,
+    reportCompressedSize: true,
     minify: true,
     lib: {
       entry: resolve(__dirname, "src/index.ts"),

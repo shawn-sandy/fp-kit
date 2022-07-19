@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "build:package": "tsc && vite build --config vite.package.config.ts",
+    "butli:parcel": "parcel build",
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui",
@@ -25,6 +26,8 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@parcel/packager-ts": "^2.6.2",
+    "@parcel/transformer-typescript-types": "^2.6.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.1",
@@ -51,6 +54,7 @@
     "src",
     "README.md"
   ],
+  "source": "src/index.ts",
   "main": "./lib/index.umd.cjs",
   "module": "./lib/index.js",
   "types": "./lib/index.d.ts",
