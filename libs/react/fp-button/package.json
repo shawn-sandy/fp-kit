@@ -48,7 +48,7 @@
     "vite-plugin-dts": "^1.2.0",
     "vitest": "^0.15.1"
   },
-  "description": "FP Button kit",
+  "description": "A lightweight react UI primitive for creating button elements/components that leverage CSS custom properties for reactive Styles.",
   "files": [
     "lib",
     "src",
