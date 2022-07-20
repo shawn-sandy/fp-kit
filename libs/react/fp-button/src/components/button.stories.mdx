@@ -4,7 +4,7 @@ import { Meta } from "@storybook/addon-docs"
 
 # Button
 
-## Description
+-----------------------------
 
 ### Install the button component
 
@@ -12,20 +12,24 @@ import { Meta } from "@storybook/addon-docs"
 npm i @fp-kit/fp-btn
 ```
 
-```jsx
-import { Button } from "@fp-kit/fp-btn"
+### Simple example
 
+```jsx
+
+import { Button } from "@fp-kit/fp-btn"
+const [count, setCount] = useState(0)
 ...
 <p>
   <Button type="button" onClick={() => setCount((count) => count + 1)}>count is: {count}</Button>
 </p>
+
 ```
 
 
 ### Button (src)
 
 ```jsx
-import React, { MouseEvent } from "react"
+import React from "react"
 
 /* Defining the props that the Button component will take. */
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -48,7 +52,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   classes?: string
 }
 
-const Btn = ({
+const Button = ({
   type,
   children,
   styles,
@@ -74,7 +78,7 @@ const Btn = ({
   */
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if(!disabled) {
-      onClick && onClick(e)
+      onClick?.(e)
     }
   }
 
@@ -82,7 +86,7 @@ const Btn = ({
  * A function that returns a function.
  */
   const handleMouseOver = (e: React.MouseEvent<HTMLButtonElement>) => {
-    onMouseOver && onMouseOver(e)
+    onMouseOver?.(e)
   }
 
 /* Returning a button element. */
@@ -101,4 +105,5 @@ const Btn = ({
 }
 
 export default Button
+
 ```
