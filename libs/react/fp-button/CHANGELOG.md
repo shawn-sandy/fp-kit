@@ -3,6 +3,70 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.2.1...@fpkit/fp-button@0.2.2) (2022-07-20)
+
+**Note:** Version bump only for package @fpkit/fp-button
+
+
+
+
+
+## [0.2.1](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.2.0...@fpkit/fp-button@0.2.1) (2022-07-20)
+
+**Note:** Version bump only for package @fpkit/fp-button
+
+
+
+
+
+# [0.2.0](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.1.3...@fpkit/fp-button@0.2.0) (2022-07-19)
+
+**Note:** Version bump only for package @fpkit/fp-button
+
+
+
+
+
+## [0.1.3](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.1.2...@fpkit/fp-button@0.1.3) (2022-07-19)
+
+**Note:** Version bump only for package @fpkit/fp-button
+
+
+
+
+
+## [0.1.2](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.1.1...@fpkit/fp-button@0.1.2) (2022-07-19)
+
+**Note:** Version bump only for package @fpkit/fp-button
+
+
+
+
+
+## [0.1.1](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@1.0.0...@fpkit/fp-button@0.1.1) (2022-07-19)
+
+**Note:** Version bump only for package @fpkit/fp-button
+
+
+
+
+
+# [1.0.0](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.0.13...@fpkit/fp-button@1.0.0) (2022-07-19)
+
+
+### Bug Fixes
+
+* 🔥 config import ([f17a4ad](https://github.com/shawn-sandy/fp-kit/commit/f17a4adfd238827d467046179a8c7336478ea003))
+
+
+### Performance Improvements
+
+* ⚡️ add performance checks ([45520da](https://github.com/shawn-sandy/fp-kit/commit/45520da08d8633f7096b4a5553d653041d3abdb2))
+
+
+
+
+
 ## [0.0.13](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.0.12...@fpkit/fp-button@0.0.13) (2022-07-16)
 
 **Note:** Version bump only for package @fpkit/fp-button

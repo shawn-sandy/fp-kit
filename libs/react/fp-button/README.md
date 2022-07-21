@@ -1,10 +1,14 @@
 # FPKIT Button
 
-React UI primitive for creating buttons elements/components for React.
+A lightweight react UI primitive for creating button elements/components that leverage CSS custom properties for reactive Styles.
 
-## FPKIT
+## FPKIT UI Components
 
-Lightweight react UI primitives for building components and apps using CSS custom properties libraries like [FirstPaint](https://firstpaint.dev).
+FPKIT is lightweight, modular and extensible UI component library that focuses building modern, accessible, performance first web applications.
+## FirstPaint (Addon CSS library)
+
+Built in support for FirstPaint a modern, performance first, easy to use, accessible CSS/SCSS micro framework that focuses on CSS custom properties and Semantic HTML over class heavy styling [more info](https://firstpaint.dev)
+
 
 ## Install
 
