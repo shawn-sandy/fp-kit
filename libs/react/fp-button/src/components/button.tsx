@@ -19,6 +19,10 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
    * button classes
    */
   classes?: string
+  /**
+   * default button styles
+   */
+  defaultStyles?: boolean
 }
 
 const Button = ({
@@ -29,18 +33,25 @@ const Button = ({
   classes,
   onClick,
   onMouseOver,
+  defaultStyles = true,
 
   ...props
 }: ButtonProps) => {
-  const defStyles: object = {
+  const defStyles = {
     paddingInline: "var(--btn-px, 1.4rem)",
     paddingBlock: "var(--btn-py, 0.8rem)",
     display: "var(--btn-dsp, inline-flex)",
     placeItems: "var(--btn-place, center)",
     justifyContent: "var(--btn-justify, center)",
     cursor: "var(--btn-cursor, pointer)",
-    border: "var(--btn-border, none)"
+    border: "var(--btn-border, none)",
+    color: "var(--btn-color, currentColor)",
+    backgroundColor: "var(--btn-bg, lightgray)",
   }
+
+  const stylesObj = defaultStyles ? defStyles : {};
+
+
 
  /**
   * If the button is not disabled, then call the onClick function
@@ -64,7 +75,7 @@ const Button = ({
       type={type}
       onClick={handleClick}
       onMouseOver={handleMouseOver}
-      style={{ ...defStyles, ...styles }}
+      style={{...stylesObj, ...styles }}
       aria-disabled={disabled}
       {...props}
     >

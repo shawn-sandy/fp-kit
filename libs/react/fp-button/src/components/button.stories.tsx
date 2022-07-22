@@ -10,7 +10,8 @@ export default {
   argTypes: {
     children: { control: 'text' },
     type: { control: 'select', options: ['button', 'submit', 'reset'] },
-    disabled: { control: 'boolean' },
+    disabled: { control: 'boolean', defaultValue: false },
+    defaultStyles: { control: 'boolean', defaultValue: true },
   },
   parameters: {
     badges: [BADGE.BETA]
@@ -36,3 +37,21 @@ ClickMe.args = {
   children: 'Click Me',
   onClick: () => alert('You Clicked Me?')
 }
+export const ButtonStyles = Template.bind({})
+ButtonStyles.args = {
+  children: 'Button Styles',
+  styles: { 'color': "white", 'backgroundColor': "black" },
+  onClick: () => alert('Clicked Button Styles')
+}
+
+/**
+ * Create and unStyled button
+ * set the defaultStyles to false
+ */
+export const UnStyled = Template.bind({})
+UnStyled.args = {
+  children: 'UnStyled Button',
+  defaultStyles: false,
+  onClick: () => alert('Clicked UnStyled')
+}
+
