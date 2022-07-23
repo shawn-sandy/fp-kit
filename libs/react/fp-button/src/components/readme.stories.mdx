@@ -2,32 +2,41 @@ import { Meta } from "@storybook/addon-docs"
 
 <Meta title="Elements/Buttons/Readme" />
 
-# Button
+# FPKIT Button(s)
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur error fugit quia saepe doloremque delectus libero vitae placeat obcaecati! Temporibus harum repellendus hic iure assumenda incidunt, expedita et aliquid corporis.
+> A lightweight react headless UI primitive for creating button elements/components that leverage CSS custom properties for reactive Styles
 
+## FirstPaint (Addon CSS library)
+
+Built in support for FirstPaint a modern, performance first, easy to use, accessible CSS/SCSS micro framework that focuses on CSS custom properties and Semantic HTML over class heavy styling [more info](https://firstpaint.dev)
+
+-----------------------------
 
 ### Install the button component
 
 ```bash
-#@next is always the latest version
-npm i @fp-kit/button@next
+npm i @fp-kit/fp-btn
 ```
+
+### Simple example
 
 ```jsx
-import { Button } from "@fp-kit/button"
 
+import { Button } from "@fp-kit/fp-btn"
+const [count, setCount] = useState(0)
 ...
 <p>
-  <Button type="button" onClick={() => alert("You clicked?"}>count is: {count}</Button>
+  <Button type="button" onClick={() => setCount((count) => count + 1)}>count is: {count}</Button>
 </p>
+
 ```
 
+Add Custom styles
 
 ### Button (src)
 
 ```jsx
-import React, { MouseEvent } from "react"
+import React from "react"
 
 /* Defining the props that the Button component will take. */
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -50,13 +59,14 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   classes?: string
 }
 
-const Btn = ({
+const Button = ({
   type,
   children,
   styles,
   disabled,
   classes,
-  onClick
+  onClick,
+  onMouseOver,
 
   ...props
 }: ButtonProps) => {
@@ -83,7 +93,7 @@ const Btn = ({
  * A function that returns a function.
  */
   const handleMouseOver = (e: React.MouseEvent<HTMLButtonElement>) => {
-    onMouseOver && onMouseOver(e)
+    onMouseOver?.(e)
   }
 
 /* Returning a button element. */
@@ -102,4 +112,5 @@ const Btn = ({
 }
 
 export default Button
+
 ```
