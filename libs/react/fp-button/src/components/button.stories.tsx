@@ -23,25 +23,25 @@ const Template: ComponentStory<typeof Button> = (args) => (<Button { ...args } /
 export const DefaultButton = Template.bind({})
 DefaultButton.args = {
   children: 'Default Button',
-  onClick: () => console.log('Clicked Default Button')
+  onPointerDown: () => console.log('Clicked Default Button')
 }
 export const Disabled = Template.bind({})
 Disabled.args = {
   children: 'Default Button',
   disabled: true,
-  onClick: () => console.log('Clicked Default Button')
+  onPointerDown: () => console.log('Clicked Default Button')
 }
 
 export const ClickMe = Template.bind({})
 ClickMe.args = {
   children: 'Click Me',
-  onClick: () => alert('You Clicked Me?')
+  onPointerDown: () => alert('You Clicked Me?')
 }
 export const ButtonStyles = Template.bind({})
 ButtonStyles.args = {
   children: 'Button Styles',
   styles: { 'color': "white", 'backgroundColor': "black" },
-  onClick: () => alert('Clicked Button Styles')
+  onPointerDown: () => alert('Clicked Button Styles')
 }
 
 /**
@@ -52,6 +52,6 @@ export const UnStyled = Template.bind({})
 UnStyled.args = {
   children: 'UnStyled Button',
   defaultStyles: false,
-  onClick: () => alert('Clicked UnStyled')
+  onPointerDown: () => alert('Clicked UnStyled')
 }
 
