@@ -121,3 +121,4 @@ fp-react/lib/
 libs/.DS_Store
 storybook-static/
 .parcel-cache/
+libs/
