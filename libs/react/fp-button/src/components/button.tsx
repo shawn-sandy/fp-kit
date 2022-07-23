@@ -45,7 +45,7 @@ const Button = ({
     justifyContent: "var(--btn-justify, center)",
     cursor: "var(--btn-cursor, pointer)",
     border: "var(--btn-border, none)",
-    color: "var(--btn-color, currentColor)",
+    color: "var(--btn-color, black)",
     backgroundColor: "var(--btn-bg, lightgray)",
   }
 
