@@ -34,7 +34,6 @@ const Button = ({
   onPointerDown,
   onPointerOver,
   defaultStyles = true,
-
   ...props
 }: ButtonProps) => {
   const defStyles = {
@@ -47,6 +46,7 @@ const Button = ({
     border: "var(--btn-border, none)",
     color: "var(--btn-color, black)",
     backgroundColor: "var(--btn-bg, lightgray)",
+    borderRadius: "var(--btn-radius, 0.1rem)",
   }
 
   const stylesObj = defaultStyles ? defStyles : {};
