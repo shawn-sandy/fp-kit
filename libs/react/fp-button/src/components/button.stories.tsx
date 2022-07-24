@@ -69,8 +69,8 @@ UnStyled.args = {
  * Create a pill styled button
  * set the --btn-radius to 99rem
  */
-export const Pill = Template.bind({})
-Pill.args = {
+export const PillStyle = Template.bind({})
+PillStyle.args = {
   children: 'Pill Button',
   styles: { '--btn-radius': "99rem" },
   onPointerDown: () => alert('Clicked Pill')
