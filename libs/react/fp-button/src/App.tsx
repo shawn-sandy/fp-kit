@@ -34,7 +34,7 @@ function App() {
           </a>
         </p>
         <p>
-          <Button type="button" onClick={() => setCount((count) => count + 1)}>count is: {count}</Button>
+          <Button type="button" onPointerDown={() => setCount((count) => count + 1)}>count is: {count}</Button>
         </p>
       </header>
     </div>
