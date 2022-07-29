@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.0...@fpkit/fp-button@0.4.1) (2022-07-29)
+
+
+### Bug Fixes
+
+* 🐛 replace onpointer w/onclick event ([00a80aa](https://github.com/shawn-sandy/fp-kit/commit/00a80aa7884e7ae5562bc75783a03305c08f9a57))
+
+
+
+
+
 # [0.4.0](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.3.0...@fpkit/fp-button@0.4.0) (2022-07-29)
 
 
