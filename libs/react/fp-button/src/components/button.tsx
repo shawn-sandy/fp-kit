@@ -59,7 +59,7 @@ const Button = ({
   */
   const handleClick = (e: React.PointerEvent<HTMLButtonElement>) => {
     if(!disabled) {
-      onPointerDown?.(e)
+      onClick?.(e)
     }
   }
 
