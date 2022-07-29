@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.2.2...@fpkit/fp-button@0.3.0) (2022-07-29)
+
+
+### Features
+
+* ♻️ change click events to pointer events ([f7db43a](https://github.com/shawn-sandy/fp-kit/commit/f7db43ac33c57555befe659e99c2e11971ae228a))
+* ✨ add handleClick/handlePointerDown props/mehtods ([9fd10ba](https://github.com/shawn-sandy/fp-kit/commit/9fd10baa5a5b49a7b63ca717499532aa2c6876d4))
+* ✨ add pill style button example ([2af5da1](https://github.com/shawn-sandy/fp-kit/commit/2af5da162eb57b845daf33aa6065ae304350ce4d))
+* ✨ turn on/off default inline styles ([da852c1](https://github.com/shawn-sandy/fp-kit/commit/da852c1a7f43d10a25c2cb20a331aa95e4374afc))
+* 💄 update style, code, docs ([75e81cc](https://github.com/shawn-sandy/fp-kit/commit/75e81ccc5c5f7c51b144cdac8b015dc9f341e8ef))
+
+
+
+
+
 ## [0.2.3](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.2.2...@fpkit/fp-button@0.2.3) (2022-07-29)
 
 
