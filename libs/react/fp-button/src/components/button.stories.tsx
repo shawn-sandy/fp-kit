@@ -34,13 +34,6 @@ Disabled.args = {
   onPointerDown: () => console.log('Clicked Default Button')
 }
 
-// Disabled.parameters = {
-//   docs: {
-//     description: {
-//       story: 'Some story **markdown** ....',
-//     },
-//   },
-// }
 
 export const ClickMe = Template.bind({})
 ClickMe.args = {
@@ -55,6 +48,17 @@ ButtonStyles.args = {
 }
 
 /**
+ * Create a pill styled button
+ * set the --btn-radius to 99rem
+ */
+ export const PillStyle = Template.bind({})
+ PillStyle.args = {
+   children: 'Pill Button',
+   styles: { '--btn-radius': "99rem" },
+   onPointerDown: () => alert('Clicked Pill')
+ }
+
+/**
  * Create and unStyled button
  * set the defaultStyles to false
  */
@@ -65,13 +69,3 @@ UnStyled.args = {
   onPointerDown: () => alert('Clicked UnStyled')
 }
 
-/**
- * Create a pill styled button
- * set the --btn-radius to 99rem
- */
-export const PillStyle = Template.bind({})
-PillStyle.args = {
-  children: 'Pill Button',
-  styles: { '--btn-radius': "99rem" },
-  onPointerDown: () => alert('Clicked Pill')
-}

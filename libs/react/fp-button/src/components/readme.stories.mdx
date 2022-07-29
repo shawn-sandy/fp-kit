@@ -10,7 +10,7 @@ import { Meta } from "@storybook/addon-docs"
 
 Built in support for FirstPaint a modern, performance first, easy to use, accessible CSS/SCSS micro framework that focuses on CSS custom properties and Semantic HTML over class heavy styling [more info](https://firstpaint.dev)
 
------------------------------
+---
 
 ### Install the button component
 
@@ -18,7 +18,11 @@ Built in support for FirstPaint a modern, performance first, easy to use, access
 npm i @fp-kit/fp-btn
 ```
 
-### Simple example
+### Simple example for on click event
+
+- Handles your regular `onClick` event and passes the event object to the callback function.
+- Note `onClik` events are not fully suported by all devices.
+- Use the `PointerEvent` for more consistent support.
 
 ```jsx live
 
@@ -31,11 +35,38 @@ const [count, setCount] = useState(0)
 
 ```
 
-Add Custom styles
+#### Example with PointerDown event, pointer events allows support for mobile and touch devices.
+
+- Both `PointerDown` and `onPointerOver` events are supported.
+- Pass aditional `events` using `...props`
+
+```jsx live
+import { Button } from "@fp-kit/fp-btn"
+const [count, setCount] = useState(0)
+...
+<p>
+  <Button type="button" onPointerDown={(e) => setCount((count) => count + 1)}>count is: {count}</Button>
+
+</p>
+```
+
+### Aria disabled example
+
+- Replace the button disabaled attribute with `aria-disabled` for better accessibility support.
+
+```jsx
+import { Button } from "@fp-kit/fp-btn"
+const [count, setCount] = useState(0)
+...
+<p>
+  <Button type="button" aria-disabled="true" onClick={() => setCount((count) => count + 1)}>count is: {count}</Button>
+</p>
+
+```
 
 ### Button (src)
 
-```jsx live
+```jsx
 import React from "react"
 
 /* Defining the props that the Button component will take. */
