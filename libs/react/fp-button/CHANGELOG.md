@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.3.0...@fpkit/fp-button@0.4.0) (2022-07-29)
+
+
+### Bug Fixes
+
+* 📝 fix package name typo ([5be5eb2](https://github.com/shawn-sandy/fp-kit/commit/5be5eb27a892d0b970ab1b640ac9e462c393510c))
+
+
+
+
+
 # [0.3.0](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.2.2...@fpkit/fp-button@0.3.0) (2022-07-29)
 
 
