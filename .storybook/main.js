@@ -10,7 +10,7 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
-    "@storybook/addon-interactions",
+    // "@storybook/addon-interactions",
     'storybook-addon-live-examples',
     // "@storybook/addon-storysource",
     "@geometricpanda/storybook-addon-badges"

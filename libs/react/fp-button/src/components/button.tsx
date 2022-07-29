@@ -33,6 +33,7 @@ const Button = ({
   classes,
   onPointerDown,
   onPointerOver,
+  onClick,
   defaultStyles = true,
   ...props
 }: ButtonProps) => {
@@ -45,7 +46,7 @@ const Button = ({
     cursor: "var(--btn-cursor, pointer)",
     border: "var(--btn-border, none)",
     color: "var(--btn-color, white)",
-    backgroundColor: "var(--btn-bg, dodgerblue)",
+    backgroundColor: "var(--btn-bg, royalblue)",
     borderRadius: "var(--btn-radius, 0.1rem)",
   }
 
@@ -62,11 +63,22 @@ const Button = ({
     }
   }
 
+ /**
+  *  If the button is not disabled, then call the onPointerOver function
+  */
+ const handlePointerdown = (e: React.PointerEvent<HTMLButtonElement>) => {
+  if(!disabled) {
+    onPointerOver?.(e)
+  }
+}
+
 /**
  * A function that returns a function.
  */
   const handleHover = (e: React.PointerEvent<HTMLButtonElement>) => {
+    if(!disabled) {
     onPointerOver?.(e)
+    }
   }
 
 /* Returning a button element. */
@@ -74,7 +86,8 @@ const Button = ({
     <button
       type={type}
       onPointerOver={handleHover}
-      onPointerDown={handleClick}
+      onPointerDown={handlePointerdown}
+      onClick={handleClick}
       style={{...stylesObj, ...styles }}
       aria-disabled={disabled}
       {...props}

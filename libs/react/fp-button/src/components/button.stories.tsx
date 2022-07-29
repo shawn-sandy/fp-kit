@@ -10,7 +10,7 @@ export default {
   argTypes: {
     children: { control: 'text' },
     type: { control: 'select', options: ['button', 'submit', 'reset'] },
-    disabled: { control: 'boolean', defaultValue: false },
+    disabled: { control: 'boolean', defaultValue: null },
     defaultStyles: { control: 'boolean', defaultValue: true },
   },
   parameters: {
