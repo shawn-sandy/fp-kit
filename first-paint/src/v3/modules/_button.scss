@@ -85,6 +85,7 @@
   button,
   [style*="--btn"],
   .fp-button,
+  [data-btn],
   [role="button"] {
     @include rules;
   }

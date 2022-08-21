@@ -843,6 +843,7 @@ figcaption, .fp-cations {
 button,
 [style*="--btn"],
 .fp-button,
+[data-btn],
 [role=button] {
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
@@ -868,6 +869,7 @@ button,
 button[type],
 [style*="--btn"][type],
 .fp-button[type],
+[data-btn][type],
 [role=button][type] {
   background-color: var(--btn-bg, var(--btn, lightgray));
   --btn-bdr: solid var(--btn-sg);
@@ -877,6 +879,8 @@ button[type=submit], button[style*=submit],
 [style*="--btn"][style*=submit],
 .fp-button[type=submit],
 .fp-button[style*=submit],
+[data-btn][type=submit],
+[data-btn][style*=submit],
 [role=button][type=submit],
 [role=button][style*=submit] {
   --btn-bg: darkblue;
@@ -887,6 +891,8 @@ button[disabled], button[aria-disabled=true],
 [style*="--btn"][aria-disabled=true],
 .fp-button[disabled],
 .fp-button[aria-disabled=true],
+[data-btn][disabled],
+[data-btn][aria-disabled=true],
 [role=button][disabled],
 [role=button][aria-disabled=true] {
   cursor: var(--btn-cursor-disabled, not-allowed);
@@ -895,6 +901,7 @@ button[disabled], button[aria-disabled=true],
 button:is(:hover, :focus),
 [style*="--btn"]:is(:hover, :focus),
 .fp-button:is(:hover, :focus),
+[data-btn]:is(:hover, :focus),
 [role=button]:is(:hover, :focus) {
   --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
@@ -909,6 +916,8 @@ button[type=reset], button[style*="--btn-reset"],
 [style*="--btn"][style*="--btn-reset"],
 .fp-button[type=reset],
 .fp-button[style*="--btn-reset"],
+[data-btn][type=reset],
+[data-btn][style*="--btn-reset"],
 [role=button][type=reset],
 [role=button][style*="--btn-reset"] {
   --btn-bg: transparent;
@@ -920,6 +929,8 @@ button[type=submit], button[style*="--btn-submit"],
 [style*="--btn"][style*="--btn-submit"],
 .fp-button[type=submit],
 .fp-button[style*="--btn-submit"],
+[data-btn][type=submit],
+[data-btn][style*="--btn-submit"],
 [role=button][type=submit],
 [role=button][style*="--btn-submit"] {
   --btn-bg: var(--blue-500);

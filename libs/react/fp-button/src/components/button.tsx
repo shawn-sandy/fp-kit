@@ -4,6 +4,7 @@ import React from "react"
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The type of the button.
+   * @default none
    */
   type: "button" | "submit" | "reset"
 
@@ -29,7 +30,7 @@ const Button = ({
   type,
   children,
   styles,
-  disabled,
+  disabled = false,
   classes,
   onPointerDown,
   onPointerOver,
@@ -57,7 +58,7 @@ const Button = ({
  /**
   * If the button is not disabled, then call the onClick function
   */
-  const handleClick = (e: React.PointerEvent<HTMLButtonElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if(!disabled) {
       onClick?.(e)
     }
