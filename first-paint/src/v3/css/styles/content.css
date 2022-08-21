@@ -1,5 +1,6 @@
 .fp-content a, .fp-content .fp-link {
   --link-border: none;
+  --link-bg: white-smoke;
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
   text-decoration: var(--link-decoration, none);
@@ -19,8 +20,9 @@
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
 }
-.fp-content a[role=button], .fp-content a[style="--btn"], .fp-content .fp-link[role=button], .fp-content .fp-link[style="--btn"] {
-  background-color: var(--link-bg);
+.fp-content a[role=button], .fp-content a[style="--btn"], .fp-content a[data-fp-btn], .fp-content .fp-link[role=button], .fp-content .fp-link[style="--btn"], .fp-content .fp-link[data-fp-btn] {
+  background-color: var(--link-bg, lightgray);
+  --btn-bg: var(--link-bg, lightgray);
 }
 .fp-content form, .fp-content .fp-form {
   width: 100%;

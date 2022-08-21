@@ -17,6 +17,7 @@
   - [Content Elements](/components/Content)
     - [Headings](/components/Headings)
     - [Paragraph](/components/Paragraph)
+    - [Links](/components/Links)
     - [List](/components/List)
   - [Dialog/Modal](/components/Dialog)
   - [Dropdown/Detail](/components/DETAILS)

@@ -205,7 +205,7 @@ hr {
   min-height: 2.5rem;
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.8));
+  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.2));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
@@ -249,6 +249,9 @@ hr {
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
+}
+.fp-btn[data-fp-btn~=pill] {
+  border-radius: 100rem;
 }
 .fp-checkbox {
   display: var(--lbl-dsp, flex);
@@ -802,6 +805,7 @@ hr {
 }
 .fp-content a, .fp-content .fp-link {
   --link-border: none;
+  --link-bg: white-smoke;
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
   text-decoration: var(--link-decoration, none);
@@ -821,8 +825,9 @@ hr {
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
 }
-.fp-content a[role=button], .fp-content a[style="--btn"], .fp-content .fp-link[role=button], .fp-content .fp-link[style="--btn"] {
-  background-color: var(--link-bg);
+.fp-content a[role=button], .fp-content a[style="--btn"], .fp-content a[data-fp-btn], .fp-content .fp-link[role=button], .fp-content .fp-link[style="--btn"], .fp-content .fp-link[data-fp-btn] {
+  background-color: var(--link-bg, lightgray);
+  --btn-bg: var(--link-bg, lightgray);
 }
 .fp-content form, .fp-content .fp-form {
   width: 100%;

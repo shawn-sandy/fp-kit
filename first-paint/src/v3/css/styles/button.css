@@ -12,7 +12,7 @@
   min-height: 2.5rem;
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.8));
+  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.2));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
@@ -56,6 +56,9 @@
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
+}
+.fp-btn[data-fp-btn~=pill] {
+  border-radius: 100rem;
 }
 
 /*# sourceMappingURL=button.css.map */

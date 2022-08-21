@@ -634,6 +634,7 @@ p + * {
 
 a, .fp-link {
   --link-border: none;
+  --link-bg: white-smoke;
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
   text-decoration: var(--link-decoration, none);
@@ -653,8 +654,9 @@ a:active, .fp-link:active {
   color: var(--link-color, #0070f3);
   background-color: var(--link-bg);
 }
-a[role=button], a[style="--btn"], .fp-link[role=button], .fp-link[style="--btn"] {
-  background-color: var(--link-bg);
+a[role=button], a[style="--btn"], a[data-fp-btn], .fp-link[role=button], .fp-link[style="--btn"], .fp-link[data-fp-btn] {
+  background-color: var(--link-bg, lightgray);
+  --btn-bg: var(--link-bg, lightgray);
 }
 
 form, .fp-form {
