@@ -1378,7 +1378,7 @@ footer:not([aria-label], [role=footer]) p,
   --p-fs: var(--footer-fs, var(--fs));
 }
 
-ul, [style*="--list"], .fp-list {
+ul, [style*="--list"], [data-list] {
   --listOff: ;
   list-style: var(--list-s, inside);
   font-size: var(--list-fs, 0.95rem);

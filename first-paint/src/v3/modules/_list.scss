@@ -30,11 +30,13 @@
     --list-s: var(--listOff, none);
     --list-pxs: var(--listOff, 5px);
   }
+
+  [data-fp-list~="unstyled"] {}
   @content;
 }
 
 @mixin module {
-  ul, [style*="--list"], .fp-list {
+  ul, [style*="--list"], [data-list] {
     @include props;
     @include rules;
   }
