@@ -48,7 +48,7 @@
 
   &[aria-current], &:visited[aria-current] {
     --link-color: currentColor;
-   color: var(--link-color, gray);
+  //  color: var(--link-color, gray);
    &:hover {
      text-decoration: none;
    }

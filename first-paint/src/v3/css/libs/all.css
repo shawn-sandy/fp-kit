@@ -894,7 +894,6 @@ a[role=button], a[style="--btn"], a[data-fp-btn] {
 }
 a[aria-current], a:visited[aria-current] {
   --link-color: currentColor;
-  color: var(--link-color, gray);
 }
 a[aria-current]:hover, a:visited[aria-current]:hover {
   text-decoration: none;
