@@ -39,7 +39,7 @@
 
   &[role="button"],
   /* // style --btn will soon be deprecated */
-  /* use [data-btn] instead */
+  /* use [data-fp-btn] instead */
   &[style="--btn"],
   &[data-fp-btn] {
     background-color: var(--link-bg, lightgray);
