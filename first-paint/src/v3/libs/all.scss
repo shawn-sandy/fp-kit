@@ -24,6 +24,7 @@
 @use "../modules/list";
 @use "../modules/scrollbar";
 @use "../modules/content";
+@use "../modules/links";
 @use "../modules/breadcrumb";
 @use "../modules/fp";
 // @include container.module();
@@ -33,6 +34,7 @@
 @include table.module();
 @include details-summary.module();
 @include content.module();
+@include links.module();
 @include img.module();
 @include checkbox.module();
 @include grid.module();

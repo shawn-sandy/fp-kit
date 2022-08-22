@@ -6,8 +6,8 @@
 
 ```html preview
 <nav>
- <ol aria-label="breadcrumb">
-    <li><a href="#">Home</a></li>
+ <ol data-fp-breadcrumb>
+    <li><a href="#" aria-current>Home</a></li>
     <li><a href="#">Step 1</a></li>
     <li><a href="#">Step 2</a></li>
  </ol>
@@ -76,7 +76,7 @@ Here we customize the breadcrumb by adding a custom-props `style="--crumb-icon: 
 <nav>
  <ol data-fp-breadcrumb style="--crumb-icon: '\27A4'; --crumb-cl: lightgray">
     <li><a href="#">Home</a></li>
-    <li><a href="#">Step 1</a></li>
+    <li><a href="#" aria-current>Step 1</a></li>
     <li><a href="#">Step 2</a></li>
  </ol>
 </nav>

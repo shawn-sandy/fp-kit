@@ -16,6 +16,7 @@
 @use "./modules/select";
 @use "./modules/footer";
 @use "./modules/content";
+@use "./modules/links";
 // custom modules
 @forward "./modules/details-summary" as detailsSummary-*;
 @forward "./modules/tooltip" as tooltip-*;
@@ -30,6 +31,7 @@
 @include nav.module();
 @include header.module();
 @include content.module();
+@include links.module();
 @include img.module();
 @include checkbox.module();
 @include button.module();

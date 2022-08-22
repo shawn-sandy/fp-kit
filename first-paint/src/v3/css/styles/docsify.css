@@ -351,6 +351,13 @@ p + * {
   overflow: hidden;
 }
 
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
 :root {
   --fw: normal;
   --fst: normal;
@@ -827,33 +834,6 @@ table tbody tr:last-of-type, .fp-table tbody tr:last-of-type {
   transform: rotate(90deg);
 }
 
-a, .fp-link {
-  --link-border: none;
-  --link-bg: white-smoke;
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-  text-decoration: var(--link-decoration, none);
-  border: var(--link-border);
-  padding-inline: var(--link-px, 0.25rem);
-  transition: var(--tran-all);
-}
-a:hover, .fp-link:hover {
-  --link-decoration: underline;
-  filter: var(--filter);
-}
-a:visited, .fp-link:visited {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-a:active, .fp-link:active {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-a[role=button], a[style="--btn"], a[data-fp-btn], .fp-link[role=button], .fp-link[style="--btn"], .fp-link[data-fp-btn] {
-  background-color: var(--link-bg, lightgray);
-  --btn-bg: var(--link-bg, lightgray);
-}
-
 form, .fp-form {
   width: 100%;
 }
@@ -883,6 +863,41 @@ hr {
   border: none;
   margin-block: var(--py, 3rem);
   margin-inline: var(px, auto);
+}
+
+a {
+  --link-border: none;
+  --link-bg: white-smoke;
+  --link-color: #0070f3;
+  color: var(--link-color);
+  background-color: var(--link-bg);
+  text-decoration: var(--link-decoration, none);
+  border: var(--link-border);
+  padding-inline: var(--link-px, 0.25rem);
+  transition: var(--tran-all);
+}
+a:hover {
+  --link-decoration: underline;
+  filter: var(--filter);
+}
+a:visited {
+  color: var(--link-color, #0070f3);
+  background-color: var(--link-bg);
+}
+a:active {
+  color: var(--link-color, #0070f3);
+  background-color: var(--link-bg);
+}
+a[role=button], a[style="--btn"], a[data-fp-btn] {
+  background-color: var(--link-bg, lightgray);
+  --btn-bg: var(--link-bg, lightgray);
+}
+a[aria-current], a:visited[aria-current] {
+  --link-color: currentColor;
+  color: var(--link-color, gray);
+}
+a[aria-current]:hover, a:visited[aria-current]:hover {
+  text-decoration: none;
 }
 
 img[alt][width][height], .fp-image[alt][width][height] {
@@ -1431,7 +1446,7 @@ ul, [style*="--list"], [data-fp-list] {
   background: var(--scroll-bg, gray);
 }
 
-nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb]) {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]), nav > :where(ol, [data-fp-breadcrumb]) {
   display: var(--crumb-dsp, flex);
   direction: var(--crumb-direction, row);
   gap: var(--crumb-gap, 0.5rem);
@@ -1440,16 +1455,16 @@ nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb]) {
   font-size: var(--crumb-fs, var(--fs-2));
   color: var(--crumb-cl, currentColor);
 }
-nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb])::-webkit-details-marker {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb])::-webkit-details-marker, nav > :where(ol, [data-fp-breadcrumb])::-webkit-details-marker {
   display: none;
 }
-nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb]) li {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li, nav > :where(ol, [data-fp-breadcrumb]) li {
   color: var(--crumb-cl);
 }
-nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb]) li + li {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li + li, nav > :where(ol, [data-fp-breadcrumb]) li + li {
   color: currentColor;
 }
-nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb]) li + li::before {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li + li::before, nav > :where(ol, [data-fp-breadcrumb]) li + li::before {
   content: var(--crumb-icon, "/");
   color: currentColor;
   padding-inline-end: 0.5rem;

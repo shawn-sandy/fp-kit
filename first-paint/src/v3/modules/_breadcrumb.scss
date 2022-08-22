@@ -31,6 +31,7 @@
         padding-inline-end: 0.5rem;
       }
     }
+
   }
 
   // * css rules/styles
@@ -43,8 +44,8 @@
 }
 
 @mixin module {
-  nav > {
-   :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb])  {
+  nav[aria-label~="breadcrumb"] >, nav > {
+   :where(ol, [data-fp-breadcrumb])  {
     @include props;
     @include rules;
   }

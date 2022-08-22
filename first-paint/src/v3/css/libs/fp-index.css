@@ -827,33 +827,6 @@ table tbody tr:last-of-type, .fp-table tbody tr:last-of-type {
   transform: rotate(90deg);
 }
 
-a, .fp-link {
-  --link-border: none;
-  --link-bg: white-smoke;
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-  text-decoration: var(--link-decoration, none);
-  border: var(--link-border);
-  padding-inline: var(--link-px, 0.25rem);
-  transition: var(--tran-all);
-}
-a:hover, .fp-link:hover {
-  --link-decoration: underline;
-  filter: var(--filter);
-}
-a:visited, .fp-link:visited {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-a:active, .fp-link:active {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-a[role=button], a[style="--btn"], a[data-fp-btn], .fp-link[role=button], .fp-link[style="--btn"], .fp-link[data-fp-btn] {
-  background-color: var(--link-bg, lightgray);
-  --btn-bg: var(--link-bg, lightgray);
-}
-
 form, .fp-form {
   width: 100%;
 }
@@ -1431,7 +1404,7 @@ ul, [style*="--list"], [data-fp-list] {
   background: var(--scroll-bg, gray);
 }
 
-nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb]) {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]), nav > :where(ol, [data-fp-breadcrumb]) {
   display: var(--crumb-dsp, flex);
   direction: var(--crumb-direction, row);
   gap: var(--crumb-gap, 0.5rem);
@@ -1440,16 +1413,16 @@ nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb]) {
   font-size: var(--crumb-fs, var(--fs-2));
   color: var(--crumb-cl, currentColor);
 }
-nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb])::-webkit-details-marker {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb])::-webkit-details-marker, nav > :where(ol, [data-fp-breadcrumb])::-webkit-details-marker {
   display: none;
 }
-nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb]) li {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li, nav > :where(ol, [data-fp-breadcrumb]) li {
   color: var(--crumb-cl);
 }
-nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb]) li + li {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li + li, nav > :where(ol, [data-fp-breadcrumb]) li + li {
   color: currentColor;
 }
-nav > :where(ol[aria-label], div[role="list"], [data-fp-breadcrumb]) li + li::before {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li + li::before, nav > :where(ol, [data-fp-breadcrumb]) li + li::before {
   content: var(--crumb-icon, "/");
   color: currentColor;
   padding-inline-end: 0.5rem;
