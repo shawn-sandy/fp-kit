@@ -57,9 +57,35 @@ Sample List
 </ul>
 ```
 
-----
-## See also
+### Style list using `data-list` attribute
 
+Sample List
+
+```html preview
+<ul data-fp-list="unstyled">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+```
+
+### Inline list using `data-list` attribute
+
+Sample List
+
+```html preview
+<ul data-fp-list="unstyled inline">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+```
+
+## See also
 
 [MDN GUIDELINES AND SPECFICATIONS]([https](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul): ':_target="_blank"')
 

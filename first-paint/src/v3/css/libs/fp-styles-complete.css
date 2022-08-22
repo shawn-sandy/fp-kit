@@ -776,10 +776,25 @@ hr {
   font-size: var(--list-fs, 0.95rem);
   line-height: var(--list-lh, 1.5);
   padding-inline-start: var(--list-pxs, 1.5rem);
+  display: var(--list-dsp, block);
 }
 .fp [style*="--listOff"] {
   --list-s: var(--listOff, none);
   --list-pxs: var(--listOff, 5px);
+}
+.fp [data-fp-list~=unstyled] {
+  --list-s: none;
+  --list-pxs: 0;
+}
+.fp [data-fp-list~=unstyled] li {
+  list-style: var(--list-s);
+  --list-pxs: var(--list-pxs);
+}
+.fp [data-fp-list~=inline] {
+  --list-dsp: flex;
+}
+.fp [data-fp-list~=inline] li {
+  padding-inline: var(--list-px, 1rem);
 }
 .fp-scrollbar {
   max-height: var(--scroll, 50vh);

@@ -20,6 +20,8 @@
    font-size: var(--list-fs, .95rem);
    line-height: var(--list-lh, 1.5);
    padding-inline-start: var(--list-pxs, 1.5rem);
+   display: var(--list-dsp, block);
+
   @content;
 }
 
@@ -31,7 +33,21 @@
     --list-pxs: var(--listOff, 5px);
   }
 
-  [data-fp-list~="unstyled"] {}
+  [data-fp-list~="unstyled"] {
+    --list-s: none;
+    --list-pxs: 0;
+    li {
+      list-style: var(--list-s);
+      --list-pxs: var(--list-pxs);
+    }
+  }
+
+  [data-fp-list~="inline"] {
+    --list-dsp: flex;
+    li{
+      padding-inline: var(--list-px, 1rem);
+    }
+  }
   @content;
 }
 
