@@ -55,13 +55,26 @@
 
 ## Examples
 
-### Custom Breadcrumb
+### Breadcrumb `[data-fp-breadcrumb]`
 
 Here we customize the breadcrumb by adding a custom-props `style="--crumb-icon: '\27A4'; --crumb-cl: lightgray"` to the breadcrumb.
 
 ```html preview
 <nav>
- <ol aria-label="breadcrumb" style="--crumb-icon: '\27A4'; --crumb-cl: lightgray">
+ <ol data-fp-breadcrumb >
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Step 1</a></li>
+    <li><a href="#">Step 2</a></li>
+ </ol>
+</nav>
+```
+### Custom Breadcrumb Icons
+
+Here we customize the breadcrumb by adding a custom-props `style="--crumb-icon: '\27A4'; --crumb-cl: lightgray"` to the breadcrumb.
+
+```html preview
+<nav>
+ <ol data-fp-breadcrumb style="--crumb-icon: '\27A4'; --crumb-cl: lightgray">
     <li><a href="#">Home</a></li>
     <li><a href="#">Step 1</a></li>
     <li><a href="#">Step 2</a></li>
