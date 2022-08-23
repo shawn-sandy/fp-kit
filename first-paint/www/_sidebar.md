@@ -10,6 +10,7 @@
   - [Base Tokens](/tokens/Tokens)
   - [Color Tokens](/tokens/ColorHSL)
 - Modules
+  - [Overview](/components/Overview)
   - [Badges (Notes)](/components/Badge)
   - [Buttons](/components/button)
   - [Breadcrumb](/components/Breadcrumb)
@@ -35,5 +36,8 @@
   - [Scrollbar](/components/Scrollbar)
   - [Table](/components/Table)
   - [Tooltip](/components/Tooltip)
+- Utilities
+  - [Overview](/utilities/Overview)
+  - [Layout](/utilities/Layout)
 - [FP-Styles](/components/Classes)
 - [Changelog](/CHANGELOG)

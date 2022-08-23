@@ -7,7 +7,7 @@
   width: var(--set-w, 100%);
 }
 
-[data-layout~=flex] {
+[data-layout~="flex"] {
   --set-dsp: flex;
   flex-direction: var(--fx-direction, row);
   flex-wrap: var(--fx-wrap, nowrap);
@@ -15,17 +15,18 @@
   align-items: var(--fx-align-items, stretch);
   align-content: var(--fx-align-content, stretch);
   gap: var(--fx-gap, 1rem);
-}
-[data-layout~=flex] [data-flex-item], [data-layout~=flex] > div {
-  flex: var(--fx-item, 1 1 auto);
-  align-self: var(--fx-align-self, auto);
+
+  [data-flex-item], > div {
+    flex: var(--fx-item, 1 1 auto);
+    align-self: var(--fx-align-self, auto);
+  }
 }
 
-[data-layout~=column] {
+[data-layout~="column"] {
   flex-direction: column;
 }
 
-[data-layout~=grid] {
+[data-layout~="grid"] {
   --set-dsp: grid;
   grid-template-columns: var(--grid-cols, 1fr);
   grid-template-rows: var(--grid-rows, 1fr);
@@ -46,22 +47,27 @@
   place-content: var(--grid-place-content, stretch);
   grid-template: var(--grid-template, none);
   grid: var(--grid, none);
-}
-[data-layout~=grid] [data-grid-item] {
-  grid-column: var(--grid-item-col, auto);
-  grid-row: var(--grid-item-row, auto);
-  grid-area: var(--grid-item-area, auto);
-  justify-self: var(--grid-item-justify-self, stretch);
-  align-self: var(--grid-item-align-self, stretch);
-  place-self: var(--grid-item-place-self, stretch);
+
+  [data-grid-item] {
+    grid-column: var(--grid-item-col, auto);
+    grid-row: var(--grid-item-row, auto);
+    grid-area: var(--grid-item-area, auto);
+    justify-self: var(--grid-item-justify-self, stretch);
+    align-self: var(--grid-item-align-self, stretch);
+    place-self: var(--grid-item-place-self, stretch);
+  }
 }
 
-[data-layout~=block] {
+[data-layout~="block"] {
   --set-dsp: block;
 }
 
-[data-layout~=inline] {
+[data-layout~="inline"] {
   --set-dsp: inline;
 }
 
-/*# sourceMappingURL=utilities.css.map */
+
+
+
+
+
