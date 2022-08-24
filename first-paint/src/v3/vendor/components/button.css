@@ -2,6 +2,7 @@
 button,
 [style*="--btn"],
 .fp-button,
+a[data-fp-btn],
 [role=button] {
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
@@ -11,7 +12,7 @@ button,
   min-height: 2.5rem;
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.8));
+  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.2));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   -webkit-text-decoration: var(--btn-deco, none);
@@ -23,10 +24,12 @@ button,
   margin: var(--btn-spc, 0.25rem);
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
+  outline: none;
 }
 button[type],
 [style*="--btn"][type],
 .fp-button[type],
+a[data-fp-btn][type],
 [role=button][type] {
   background-color: var(--btn-bg, var(--btn, lightgray));
   --btn-bdr: solid var(--btn-sg);
@@ -36,22 +39,30 @@ button[type=submit], button[style*=submit],
 [style*="--btn"][style*=submit],
 .fp-button[type=submit],
 .fp-button[style*=submit],
+a[data-fp-btn][type=submit],
+a[data-fp-btn][style*=submit],
 [role=button][type=submit],
 [role=button][style*=submit] {
   --btn-bg: darkblue;
   --btn-color: white;
 }
-button[disabled],
+button[disabled], button[aria-disabled=true],
 [style*="--btn"][disabled],
+[style*="--btn"][aria-disabled=true],
 .fp-button[disabled],
-[role=button][disabled] {
+.fp-button[aria-disabled=true],
+a[data-fp-btn][disabled],
+a[data-fp-btn][aria-disabled=true],
+[role=button][disabled],
+[role=button][aria-disabled=true] {
   cursor: var(--btn-cursor-disabled, not-allowed);
   opacity: var(--btn-opacity-disabled, 0.5);
 }
-button:hover,
-[style*="--btn"]:hover,
-.fp-button:hover,
-[role=button]:hover {
+button:is(:hover, :focus),
+[style*="--btn"]:is(:hover, :focus),
+.fp-button:is(:hover, :focus),
+a[data-fp-btn]:is(:hover, :focus),
+[role=button]:is(:hover, :focus) {
   --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg-over, var(--btn, lightgray));
@@ -59,12 +70,16 @@ button:hover,
           filter: invert(1) hue-rotate 180deg;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+  outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
+  outline-offset: var(--line-offset, 5px);
 }
 button[type=reset], button[style*="--btn-reset"],
 [style*="--btn"][type=reset],
 [style*="--btn"][style*="--btn-reset"],
 .fp-button[type=reset],
 .fp-button[style*="--btn-reset"],
+a[data-fp-btn][type=reset],
+a[data-fp-btn][style*="--btn-reset"],
 [role=button][type=reset],
 [role=button][style*="--btn-reset"] {
   --btn-bg: transparent;
@@ -76,10 +91,19 @@ button[type=submit], button[style*="--btn-submit"],
 [style*="--btn"][style*="--btn-submit"],
 .fp-button[type=submit],
 .fp-button[style*="--btn-submit"],
+a[data-fp-btn][type=submit],
+a[data-fp-btn][style*="--btn-submit"],
 [role=button][type=submit],
 [role=button][style*="--btn-submit"] {
   --btn-bg: var(--blue-500);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
+}
+button[data-fp-btn~=pill],
+[style*="--btn"][data-fp-btn~=pill],
+.fp-button[data-fp-btn~=pill],
+a[data-fp-btn][data-fp-btn~=pill],
+[role=button][data-fp-btn~=pill] {
+  border-radius: 100rem;
 }

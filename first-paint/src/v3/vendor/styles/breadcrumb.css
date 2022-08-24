@@ -19,4 +19,6 @@
 .fp-breadcrumb li + li::before {
   content: var(--crumb-icon, "/");
   color: currentColor;
+  -webkit-padding-end: 0.5rem;
+          padding-inline-end: 0.5rem;
 }
