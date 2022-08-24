@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.1...@fpkit/fp-button@0.4.2) (2022-08-24)
+
+
+### Features
+
+* :sparkles: add data attribute form button styles ([c802d24](https://github.com/shawn-sandy/fp-kit/commit/c802d244987d7ce9e7547224bdcad83994ee2adb))
+
+
+
+
+
 ## [0.4.1](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.0...@fpkit/fp-button@0.4.1) (2022-07-29)
 
 

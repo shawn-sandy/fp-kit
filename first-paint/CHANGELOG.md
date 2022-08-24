@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.3...@shawnsandy/first-paint@2.16.4) (2022-08-24)
+
+
+### Features
+
+* :sparkles: add data attribute form button styles ([1d6da9b](https://github.com/shawn-sandy/fp-kit/commit/1d6da9b7ee4e313b6f7c7a7ebe934920bf4416f6))
+* :sparkles: add data attribute form button styles ([c802d24](https://github.com/shawn-sandy/fp-kit/commit/c802d244987d7ce9e7547224bdcad83994ee2adb))
+* ✨ add data-breadcrumb style attribute ([e428e45](https://github.com/shawn-sandy/fp-kit/commit/e428e45a125a02c29a712a2b93b7a570d5eca035))
+* ✨ add data-fp-list style attribute ([0cfe166](https://github.com/shawn-sandy/fp-kit/commit/0cfe166ff6d4630b8f7e64645d54387bdfdd7332))
+* ✨ add firs-paint links module /_links ([ebe8cf7](https://github.com/shawn-sandy/fp-kit/commit/ebe8cf744ea487d04ba1fe55b83899e0f3d9b3f9))
+* ✨ add firs-paint links module /_links ([69b5cc3](https://github.com/shawn-sandy/fp-kit/commit/69b5cc3883abc982ff8d885a841ce3464b354376))
+* ✨ add layout utilitty ([05ada5c](https://github.com/shawn-sandy/fp-kit/commit/05ada5ce7350084f57b7b5c3af9520ec1e22ecde))
+* 🚧 add list data style attribute ([2b1637b](https://github.com/shawn-sandy/fp-kit/commit/2b1637bb42b5b4d5c1de43d696ab2283703ba66e))
+* 🚧 add list data style attribute ([f5a2f71](https://github.com/shawn-sandy/fp-kit/commit/f5a2f7129b07dc3dd560fefe4ad5f12694e19200))
+* 🚧 utility attributes ([eac86c7](https://github.com/shawn-sandy/fp-kit/commit/eac86c7531314effa32a490f95e176fa03e2f361))
+
+
+
+
+
 ## [2.16.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.2...@shawnsandy/first-paint@2.16.3) (2022-07-13)
 
 
