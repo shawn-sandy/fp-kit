@@ -26,6 +26,14 @@
   flex-direction: column;
 }
 
+[data-layout~="block"] {
+  --set-dsp: block;
+}
+
+[data-layout~="inline"] {
+  --set-dsp: inline;
+}
+
 [data-layout~="grid"] {
   --set-dsp: grid;
   grid-template-columns: var(--grid-cols, 1fr);
@@ -57,15 +65,6 @@
     place-self: var(--grid-item-place-self, stretch);
   }
 }
-
-[data-layout~="block"] {
-  --set-dsp: block;
-}
-
-[data-layout~="inline"] {
-  --set-dsp: inline;
-}
-
 
 
 
