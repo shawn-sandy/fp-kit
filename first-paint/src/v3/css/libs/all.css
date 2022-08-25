@@ -1344,20 +1344,20 @@ dialog::backdrop, [role=dialog]::backdrop, .fp-dialog::backdrop {
 
 [style*="--badge"],
 [role=note],
+[role=status],
 p[role=note],
-.fp-note {
+[data-badge] {
   --beta: var(--fp-orange, orange);
   --stable: var(--fp-green, green) ;
-  --production: var(--fp-blue, blue;)
-  @content;
+  --production: var(--fp-blue, blue);
   padding-inline: var(--note-px, 0.7rem);
   padding-block: var(--note-py, 0.2rem);
-  color: var(--note-cl, inherit);
+  color: var(--note-cl, currentColor);
   font-size: var(--note-fs, 0.8rem);
   font-weight: var(--note-fw, normal);
   border: var(--note-brd, none);
   border-radius: var(--note-rds, 99rem);
-  background-color: var(--note, var(--fp-light-gray));
+  background-color: var(--note-bg, var(--note, lightgray));
   text-decoration: var(--note-decoration, none);
   text-transform: var(--note-tt, var(--tt));
 }
@@ -1377,6 +1377,18 @@ p[role=note],
 [style*="--note-scale"],
 p[style*="--note-scale"] {
   font-size: var(--note-scale, 75%);
+}
+
+[data-badge~=beta], [data-status~=beta] {
+  background-color: var(--beta);
+}
+
+[data-badge~=stable], [data-status~=stable] {
+  --note: var(--stable);
+}
+
+[data-badge~=production], [data-status~=production] {
+  background-color: var(--production);
 }
 
 footer:not([aria-label], [role=footer]),

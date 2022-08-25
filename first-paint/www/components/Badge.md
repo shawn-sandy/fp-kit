@@ -4,7 +4,7 @@
 
 ?> The note role can be added to parenthetic or ancillary content if no other native element or other role fits the purpose
 
-## Badges
+## Default Badges
 
 The default badge uses the `<small>` tag/element with it's role set to note `role="note"` as shown below.
 
@@ -24,6 +24,15 @@ The regular `note` can be used with any `tag/element` (beside `main header foote
 Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat laborum. Laboris velit labore amet in do reprehenderit consectetur commodo consectetur ullamco aliqua. Nulla exercitation sunt id aliquip eiusmod ad amet laboris dolore laborum amet. Ullamco duis ex eiusmod Lorem esse mollit qui cillum laboris. Culpa aliquip quis cillum sit ipsum consectetur ipsum aute.
 </p>
 ```
+
+## Creating Badges / Notes
+
+You can create a **Badge** on an inline tag like `span` or `small` using one of the following tags or `attribute` selectors
+
+- With the `aria-role` attribute `note`
+- Use a `data` attribute `data-badge`
+- With the aria-role `status` for live regions
+- For notes you can use a `p` tag with the role `note`
 
 ## Badge Variables
 
@@ -112,7 +121,7 @@ A simple badge <span role="note" style="--note: var(--beta);">Beta</span>
 
 ```html preview
 <div>
-A simple badge <span role="note" style="--note: var(--stable);">Stable</span>
+A simple badge <span data-badge="stable">Stable</span>
 </div>
 ```
 
@@ -146,7 +155,7 @@ Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat la
 [MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/note_role ':_target="_blank"')
 
 [ACCESSIBILITY GUIDE]([https://](https://www.w3.org/TR/wai-aria-1.1/#note ':_target="_blank"')
-
+[LIVE REGIONS]([https://](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions ':_target="_blank"')
 [Landmark elements](https://web.dev/use-landmarks/ ':target="_blank"')
 
 ----

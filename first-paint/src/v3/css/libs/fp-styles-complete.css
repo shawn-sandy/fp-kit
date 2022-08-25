@@ -735,16 +735,15 @@ hr {
 .fp-badge {
   --beta: var(--fp-orange, orange);
   --stable: var(--fp-green, green) ;
-  --production: var(--fp-blue, blue;)
-  @content;
+  --production: var(--fp-blue, blue);
   padding-inline: var(--note-px, 0.7rem);
   padding-block: var(--note-py, 0.2rem);
-  color: var(--note-cl, inherit);
+  color: var(--note-cl, currentColor);
   font-size: var(--note-fs, 0.8rem);
   font-weight: var(--note-fw, normal);
   border: var(--note-brd, none);
   border-radius: var(--note-rds, 99rem);
-  background-color: var(--note, var(--fp-light-gray));
+  background-color: var(--note-bg, var(--note, lightgray));
   text-decoration: var(--note-decoration, none);
   text-transform: var(--note-tt, var(--tt));
 }
@@ -761,6 +760,15 @@ hr {
 .fp [style*="--note-scale"],
 .fp p[style*="--note-scale"] {
   font-size: var(--note-scale, 75%);
+}
+.fp [data-badge~=beta], .fp [data-status~=beta] {
+  background-color: var(--beta);
+}
+.fp [data-badge~=stable], .fp [data-status~=stable] {
+  --note: var(--stable);
+}
+.fp [data-badge~=production], .fp [data-status~=production] {
+  background-color: var(--production);
 }
 .fp-footer {
   display: var(--footer-dsp, flex);
