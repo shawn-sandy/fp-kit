@@ -735,7 +735,7 @@ hr {
 .fp-badge {
   --beta: var(--fp-orange, orange);
   --stable: var(--fp-green, green) ;
-  --production: var(--fp-blue, blue);
+  --production: var(--fp-blue, royalblue);
   padding-inline: var(--note-px, 0.7rem);
   padding-block: var(--note-py, 0.2rem);
   color: var(--note-cl, currentColor);
@@ -746,6 +746,21 @@ hr {
   background-color: var(--note-bg, var(--note, lightgray));
   text-decoration: var(--note-decoration, none);
   text-transform: var(--note-tt, var(--tt));
+}
+.fp-badge[data-fp-badge~=beta] {
+  background-color: var(--beta);
+}
+.fp-badge[data-fp-badge~=stable] {
+  --note-cl: white;
+  --note-bg: var(--stable);
+}
+.fp-badge[data-fp-badge~=production] {
+  --note-cl: white;
+  --note-bg: var(--production);
+}
+.fp-badge[data-props~=beta] {
+  --note-cl:white;
+  --note-bg: var(--beta);
 }
 .fp :not(span)[role=note] {
   --note-bg: whitesmoke;
@@ -760,15 +775,6 @@ hr {
 .fp [style*="--note-scale"],
 .fp p[style*="--note-scale"] {
   font-size: var(--note-scale, 75%);
-}
-.fp [data-badge~=beta], .fp [data-status~=beta] {
-  background-color: var(--beta);
-}
-.fp [data-badge~=stable], .fp [data-status~=stable] {
-  --note: var(--stable);
-}
-.fp [data-badge~=production], .fp [data-status~=production] {
-  background-color: var(--production);
 }
 .fp-footer {
   display: var(--footer-dsp, flex);

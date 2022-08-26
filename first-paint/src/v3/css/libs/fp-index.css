@@ -1305,10 +1305,10 @@ dialog::backdrop, [role=dialog]::backdrop, .fp-dialog::backdrop {
 [role=note],
 [role=status],
 p[role=note],
-[data-badge] {
+[data-fp-badge] {
   --beta: var(--fp-orange, orange);
   --stable: var(--fp-green, green) ;
-  --production: var(--fp-blue, blue);
+  --production: var(--fp-blue, royalblue);
   padding-inline: var(--note-px, 0.7rem);
   padding-block: var(--note-py, 0.2rem);
   color: var(--note-cl, currentColor);
@@ -1319,6 +1319,37 @@ p[role=note],
   background-color: var(--note-bg, var(--note, lightgray));
   text-decoration: var(--note-decoration, none);
   text-transform: var(--note-tt, var(--tt));
+}
+[style*="--badge"][data-fp-badge~=beta],
+[role=note][data-fp-badge~=beta],
+[role=status][data-fp-badge~=beta],
+p[role=note][data-fp-badge~=beta],
+[data-fp-badge][data-fp-badge~=beta] {
+  background-color: var(--beta);
+}
+[style*="--badge"][data-fp-badge~=stable],
+[role=note][data-fp-badge~=stable],
+[role=status][data-fp-badge~=stable],
+p[role=note][data-fp-badge~=stable],
+[data-fp-badge][data-fp-badge~=stable] {
+  --note-cl: white;
+  --note-bg: var(--stable);
+}
+[style*="--badge"][data-fp-badge~=production],
+[role=note][data-fp-badge~=production],
+[role=status][data-fp-badge~=production],
+p[role=note][data-fp-badge~=production],
+[data-fp-badge][data-fp-badge~=production] {
+  --note-cl: white;
+  --note-bg: var(--production);
+}
+[style*="--badge"][data-props~=beta],
+[role=note][data-props~=beta],
+[role=status][data-props~=beta],
+p[role=note][data-props~=beta],
+[data-fp-badge][data-props~=beta] {
+  --note-cl:white;
+  --note-bg: var(--beta);
 }
 
 :not(span)[role=note] {
@@ -1336,18 +1367,6 @@ p[role=note],
 [style*="--note-scale"],
 p[style*="--note-scale"] {
   font-size: var(--note-scale, 75%);
-}
-
-[data-badge~=beta], [data-status~=beta] {
-  background-color: var(--beta);
-}
-
-[data-badge~=stable], [data-status~=stable] {
-  --note: var(--stable);
-}
-
-[data-badge~=production], [data-status~=production] {
-  background-color: var(--production);
 }
 
 footer:not([aria-label], [role=footer]),

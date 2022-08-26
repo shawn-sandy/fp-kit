@@ -9,7 +9,7 @@
   // * css custom properties
   --beta: var(--fp-orange,  orange);
   --stable: var(--fp-green, green) ;
-  --production: var(--fp-blue, blue);
+  --production: var(--fp-blue, royalblue);
   @content;
 }
 
@@ -25,6 +25,25 @@
   background-color: var(--note-bg, var(--note, lightgray));
   text-decoration: var(--note-decoration, none);
   text-transform: var(--note-tt, var(--tt));
+
+  &[data-fp-badge~="beta"]{
+    background-color: var(--beta);
+  }
+
+  &[data-fp-badge~="stable"] {
+    --note-cl: white;
+    --note-bg: var(--stable);
+  }
+
+  &[data-fp-badge~="production"] {
+    --note-cl: white;
+    --note-bg: var(--production);
+  }
+
+  &[data-props~="beta"] {
+    --note-cl:white;
+    --note-bg: var(--beta);
+  }
 
   @content;
 }
@@ -48,20 +67,6 @@
     font-size: var(--note-scale, 75%);
   }
 
-  [data-badge~="beta"],[data-status~="beta"] {
-    background-color: var(--beta);
-  }
-
-  [data-badge~="stable"],[data-status~="stable"] {
-    --note: var(--stable);
-  }
-
-  [data-badge~="production"], [data-status~="production"] {
-    background-color: var(--production);
-  }
-
-
-
   @content;
 }
 
@@ -70,7 +75,7 @@
   [role="note"],
   [role="status"],
   p[role="note"],
-  [data-badge]
+  [data-fp-badge]
   {
     @include props;
     @include rules;

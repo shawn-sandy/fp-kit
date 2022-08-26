@@ -70,28 +70,15 @@ Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat la
 You can create a **Badge** on an inline tag like `span` or `small` using one of the following tags or `attribute` selectors
 
 - With the `aria-role` attribute `note`
-- Use a `data` attribute `data-badge`
+- Use a `data` attribute `data-fp-badge`
 - With the aria-role `status` for live regions
 - For notes you can use a `p` tag with the role `note`
 
 ## Examples
 
-### Red Badge
+### Default badge
 
-Customize the badge background/color with the `<span role="note" style="--bg: red">Badge</span>` or use CSS a class
-
-```css
-.red-badge {
---bg: red;
---color: $fff;
-}
-```
-
-```html preview
-<div>
-A simple badge <span role="note" style="--bg: red; --cl: white">Badge</span>
-</div>
-```
+Create a basic badge using `role="note"`
 
 ```html preview
 <h4>
@@ -117,14 +104,20 @@ A simple badge <span role="note" style="--note: var(--beta);">Beta</span>
 
 ```html preview
 <div>
-A simple badge <span data-badge="stable">Stable</span>
+A simple badge <span data-fp-badge>Stable</span>
 </div>
 ```
 
 ```html preview
-<div>
-A simple badge <span role="note" style="--note: var(--production);">Production</span>
-</div>
+<p>
+A simple badge <span data-fp-badge="production">Production</span>
+</p>
+<p>
+A simple badge <span data-fp-badge="stable">Beta</span>
+</p>
+<p>
+A simple badge <span data-fp-badge="beta">Production</span>
+</p>
 ```
 
 ## Notes that scale

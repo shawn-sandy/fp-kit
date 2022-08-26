@@ -1,7 +1,7 @@
 .fp-badge, .fp-note {
   --beta: var(--fp-orange, orange);
   --stable: var(--fp-green, green) ;
-  --production: var(--fp-blue, blue);
+  --production: var(--fp-blue, royalblue);
   padding-inline: var(--note-px, 0.7rem);
   padding-block: var(--note-py, 0.2rem);
   color: var(--note-cl, currentColor);
@@ -12,6 +12,21 @@
   background-color: var(--note-bg, var(--note, lightgray));
   text-decoration: var(--note-decoration, none);
   text-transform: var(--note-tt, var(--tt));
+}
+.fp-badge[data-fp-badge~=beta], .fp-note[data-fp-badge~=beta] {
+  background-color: var(--beta);
+}
+.fp-badge[data-fp-badge~=stable], .fp-note[data-fp-badge~=stable] {
+  --note-cl: white;
+  --note-bg: var(--stable);
+}
+.fp-badge[data-fp-badge~=production], .fp-note[data-fp-badge~=production] {
+  --note-cl: white;
+  --note-bg: var(--production);
+}
+.fp-badge[data-props~=beta], .fp-note[data-props~=beta] {
+  --note-cl:white;
+  --note-bg: var(--beta);
 }
 
 :not(span)[role=note] {
@@ -29,18 +44,6 @@
 [style*="--note-scale"],
 p[style*="--note-scale"] {
   font-size: var(--note-scale, 75%);
-}
-
-[data-badge~=beta], [data-status~=beta] {
-  background-color: var(--beta);
-}
-
-[data-badge~=stable], [data-status~=stable] {
-  --note: var(--stable);
-}
-
-[data-badge~=production], [data-status~=production] {
-  background-color: var(--production);
 }
 
 /*# sourceMappingURL=badge.css.map */
