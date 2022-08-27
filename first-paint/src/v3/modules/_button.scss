@@ -14,11 +14,11 @@
   --btn-pill: 100rem;
   --btn-height: calc(40rem / 16);
   --fs: .95rem;
-
   @content;
 }
 
 @mixin rules() {
+
   @include props;
   font-size: var(--btn-fs, calc(13rem / 16));
   font-weight: var(--btn-fw, 600);
@@ -44,11 +44,13 @@
     background-color: var(--btn-bg, var(--btn, lightgray));
     --btn-bdr: solid var(--btn-sg);
   }
+
   &[type="submit"],
   &[style*="submit"] {
     --btn-bg: darkblue;
     --btn-color: white;
   }
+
   &[disabled], &[aria-disabled="true"] {
     cursor: var(--btn-cursor-disabled, not-allowed);
     opacity: var(--btn-opacity-disabled, 0.5);
@@ -71,6 +73,7 @@
     --btn-color: gray;
     --btn-bdr: gray thin solid;
   }
+
   &[type="submit"],
   &[style*="--btn-submit"] {
     --btn-bg: var(--blue-500);
@@ -88,9 +91,8 @@
     --btn-fs: var(--fs);
     // --btn-fw: var(--fw);
   }
-
-
   @content;
+  
 }
 
 @mixin styles {
