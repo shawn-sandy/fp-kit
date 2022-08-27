@@ -111,13 +111,19 @@ hr {
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
+  --btn-height: calc(40rem / 16);
+  --fs: .95rem;
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
+  --btn-height: calc(40rem / 16);
+  --fs: .95rem;
   font-size: var(--btn-fs, 0.8125rem);
   font-weight: var(--btn-fw, 600);
-  min-height: 2.5rem;
+  min-height: var(--btn-height, 2.5rem);
+  max-height: var(--btn-height, 2.5rem);
+  height: var(--btn-height, 2.5rem);
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
   padding-block: var(--btn-py, calc(var(--btn-fs) / 1.2));
@@ -166,6 +172,11 @@ hr {
 }
 .fp-btn[data-fp-btn~=pill] {
   border-radius: 100rem;
+}
+.fp-btn[data-vars] {
+  --btn-bg: var(--bg);
+  --btn-cl: var(--cl);
+  --btn-fs: var(--fs);
 }
 .fp-checkbox {
   display: var(--lbl-dsp, flex);

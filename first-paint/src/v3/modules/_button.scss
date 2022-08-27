@@ -12,6 +12,8 @@
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
+  --btn-height: calc(40rem / 16);
+  --fs: .95rem;
 
   @content;
 }
@@ -20,7 +22,9 @@
   @include props;
   font-size: var(--btn-fs, calc(13rem / 16));
   font-weight: var(--btn-fw, 600);
-  min-height: calc(40rem / 16);
+  min-height: var(--btn-height, calc(40rem / 16));
+  max-height: var(--btn-height, calc(40rem / 16));
+  height: var(--btn-height, calc(40rem / 16));
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
   padding-block: var(--btn-py, calc(var(--btn-fs)  / 1.2 ));
@@ -76,6 +80,13 @@
   }
   &[data-fp-btn~="pill"] {
     border-radius: 100rem;
+  }
+
+  &[data-vars] {
+    --btn-bg: var(--bg);
+    --btn-cl: var(--cl);
+    --btn-fs: var(--fs);
+    // --btn-fw: var(--fw);
   }
 
 

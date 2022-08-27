@@ -67,6 +67,7 @@
 [data-vars] {
   background-color: var(--bg, whitesmoke);
   color: var(--cl, currentColor);
+  font-size: var(--fs, inherit);
 }
 
 [data-vars~=primary] {
@@ -111,43 +112,6 @@
 
 [data-vars~=dark] {
   --bg: var(--bg-dark, #212121);
-  --cl: var(--cl-dark, white);
-}
-
-button[type][data-vars~=primary], a[data-fp-btn][data-vars~=primary] {
-  --btn-bg: var(--bg-primary, #00bcd4);
-  --cl: var(--cl-primary, currentColor);
-}
-button[type][data-vars~=secondary], a[data-fp-btn][data-vars~=secondary] {
-  --btn-bg: var(--bg-secondary, #f50057);
-  --cl: var(--cl-secondary, white);
-}
-button[type][data-vars~=tertiary], a[data-fp-btn][data-vars~=tertiary] {
-  --btn-bg: var(--bg-tertiary, #ffd600);
-  --cl: var(--cl-tertiary, currentColor);
-}
-button[type][data-vars~=success], a[data-fp-btn][data-vars~=success] {
-  --btn-bg: var(--bg-success, #4caf50);
-  --cl: var(--cl-success, white);
-}
-button[type][data-vars~=danger], a[data-fp-btn][data-vars~=danger] {
-  --btn-bg: var(--bg-danger, #f44336);
-  --cl: var(--cl-danger, white);
-}
-button[type][data-vars~=warning], a[data-fp-btn][data-vars~=warning] {
-  --btn-bg: var(--bg-warning, #ff9800);
-  --cl: var(--cl-warning, white);
-}
-button[type][data-vars~=info], a[data-fp-btn][data-vars~=info] {
-  --btn-bg: var(--bg-info, #2196f3);
-  --cl: var(--cl-info, white);
-}
-button[type][data-vars~=light], a[data-fp-btn][data-vars~=light] {
-  --btn-bg: var(--bg-light, #f5f5f5);
-  --cl: var(--cl-light, black);
-}
-button[type][data-vars~=dark], a[data-fp-btn][data-vars~=dark] {
-  --btn-bg: var(--bg-dark, #212121);
   --cl: var(--cl-dark, white);
 }
 
