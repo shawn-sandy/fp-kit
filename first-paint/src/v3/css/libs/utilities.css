@@ -64,13 +64,6 @@
   place-self: var(--grid-item-place-self, stretch);
 }
 
-/*
- ***************************************
- FirsPaint
- Author: Shawn Sandy
- Date: 2021-04-01
- ***************************************
-*/
 [data-vars] {
   background-color: var(--bg, whitesmoke);
   color: var(--cl, currentColor);
@@ -157,5 +150,13 @@ button[type][data-vars~=dark], a[data-fp-btn][data-vars~=dark] {
   --btn-bg: var(--bg-dark, #212121);
   --cl: var(--cl-dark, white);
 }
+
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
 
 /*# sourceMappingURL=utilities.css.map */

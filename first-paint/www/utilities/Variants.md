@@ -4,7 +4,8 @@
 
 ## Overview
 
-### Primary Variant
+...
+### Primary Card Variant
 
 Create a primary card style by adding `data-vars="primary"` to the card.
 
@@ -14,6 +15,10 @@ Create a primary card style by adding `data-vars="primary"` to the card.
 <p><button type="button">Button</button>
 </div>
 ```
+
+### Secondary Button Variant
+
+Change the button styles to secondary theme using `data-vars="secondary"`
 
 ```html preview
 <button type="button" data-vars="secondary">Secondary Button</button>
