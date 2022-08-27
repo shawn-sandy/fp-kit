@@ -39,5 +39,6 @@
 - Utilities
   - [Overview](/utilities/Overview)
   - [Layout](/utilities/Layout)
+  - [Variants](/utilities/Variants)
 - [FP-Styles](/components/Classes)
 - [Changelog](/CHANGELOG)

@@ -1,0 +1,57 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+[data-vars] {
+  background-color: var(--bg, whitesmoke);
+  color: var(--cl, currentColor);
+}
+
+[data-vars~="primary"] {
+  --bg: var(--bg-primary, #00bcd4);
+  --cl: var(--cl-primary, currentColor);
+}
+
+[data-vars~="secondary"] {
+  --bg: var(--bg-secondary, #f50057);
+  --cl: var(--cl-secondary, white);
+}
+
+[data-vars~="tertiary"] {
+  --bg: var(--bg-tertiary, #ffd600);
+  --cl: var(--cl-tertiary, currentColor);
+}
+
+[data-vars~="success"] {
+  --bg: var(--bg-success, #4caf50);
+  --cl: var(--cl-success, white);
+}
+
+[data-vars~="danger"] {
+  --bg: var(--bg-danger, #f44336);
+  --cl: var(--cl-danger, white);
+}
+
+[data-vars~="warning"] {
+  --bg: var(--bg-warning, #ff9800);
+  --cl: var(--cl-warning, white);
+}
+
+[data-vars~="info"] {
+  --bg: var(--bg-info, #2196f3);
+  --cl: var(--cl-info, white);
+}
+
+[data-vars~="light"] {
+  --bg: var(--bg-light, #f5f5f5);
+  --cl: var(--cl-light, black);
+}
+
+[data-vars~="dark"] {
+  --bg: var(--bg-dark, #212121);
+  --cl: var(--cl-dark, white);
+}

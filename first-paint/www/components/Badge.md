@@ -1,4 +1,4 @@
-# Badges / Notes <span role="note" aria-label="status" style="--note: var(--beta)">Beta</span>
+# Badges / Notes <span role="note" aria-label="status" style="--badge: var(--beta)">Beta</span>
 
 > Add badges or note styled elements/components to your apps using the aria `note` role. Badges are created using `<span role="note">`, adding `note` to other elements will create a `regular` note.
 
@@ -32,35 +32,35 @@ Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat la
   --beta: orange;
   --stable: green;
   --production: blue;
-  --note-pd: 0;
-  --note-py: 0.2rem;
-  --note-px: 0.7rem;
-  --note-fs: 0.8rem;
-  --note-bg: lightgray;
-  --note-bdr: none;
-  --note-rds: 99rem;
-  --note-cl: inherit;
-  --note-tt: capitalize;
-  --note-decoration: none;
+  --badge-pd: 0;
+  --badge-py: 0.2rem;
+  --badge-px: 0.7rem;
+  --badge-fs: 0.8rem;
+  --badge-bg: lightgray;
+  --badge-bdr: none;
+  --badge-rds: 99rem;
+  --badge-cl: inherit;
+  --badge-tt: capitalize;
+  --badge-decoration: none;
 ```
 
 ### Badge properties (rules)
 
 ```css
-  padding-inline: var(--note-px, var(--px));
-  padding-block: var(--note-py, var(--py));
-  color: var(--note-cl, var(--cl));
-  font-size: var(--note-fs, var(--fs));
-  font-weight: var(--note-fw, normal);
-  border: var(--note-brd, var(--bdr));
-  border-radius: var(--note-rds, var(--rds));
-  background-color: var(--note, var(--bg));
+  padding-inline: var(--badge-px, var(--px));
+  padding-block: var(--badge-py, var(--py));
+  color: var(--badge-cl, var(--cl));
+  font-size: var(--badge-fs, var(--fs));
+  font-weight: var(--badge-fw, normal);
+  border: var(--badge-brd, var(--bdr));
+  border-radius: var(--badge-rds, var(--rds));
+  background-color: var(--badge, var(--bg));
   text-decoration: var(
-    --note-decoration,
+    --badge-decoration,
     var(--decoration)
   );
-  text-transform: var(--note-tt, var(--tt));
-  --note-bg: var(--note-beta, var(--beta));
+  text-transform: var(--badge-tt, var(--tt));
+  --badge-bg: var(--badge-beta, var(--beta));
 
   @content;
 ```
@@ -86,10 +86,10 @@ A simple badge <span role="note">Badge</span>
 </h4>
 ```
 
-Create/Customize the note background/color with the `<p role="note" style="--note: lightyellow">...</p>`
+Create/Customize the note background/color with the `<p role="note" style="--badge: lightyellow">...</p>`
 
 ```html preview
-<p role="note" style="--note: lightyellow">
+<p role="note" style="--badge: lightyellow">
 Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat laborum. Laboris velit labore amet in do reprehenderit consectetur commodo consectetur ullamco aliqua. Nulla exercitation sunt id aliquip eiusmod ad amet laboris dolore laborum amet. Ullamco duis ex eiusmod Lorem esse mollit qui cillum laboris. Culpa aliquip quis cillum sit ipsum consectetur ipsum aute.
 </p>
 ```
@@ -98,7 +98,7 @@ Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat la
 
 ```html preview
 <div>
-A simple badge <span role="note" style="--note: var(--beta);">Beta</span>
+A simple badge <span role="note" style="--badge: var(--beta);">Beta</span>
 </div>
 ```
 
@@ -120,18 +120,50 @@ A simple badge <span data-fp-badge="beta">Production</span>
 </p>
 ```
 
+## Note Variants (data-vars)
+
+```html preview
+<div>
+A simple badge <span role="note" data-vars="primary">Primary</span>
+</div>
+```
+
+```html preview
+<div>
+A simple badge <span role="note" data-vars="secondary">Secondary</span>
+</div>
+```
+
+```html preview
+<div>
+A simple badge <span role="note" data-vars="tertiary">Tertiary</span>
+</div>
+```
+
+```html preview
+<div>
+A simple badge <span role="note" data-vars="warning">Warning</span>
+</div>
+```
+
+```html preview
+<div>
+A simple badge <span role="note" data-vars="light">Light</span>
+</div>
+```
+
 ## Notes that scale
 
 Create notes that scales with the font size to `75%` of the parent element, default.
 
 ```html preview
 <h3>
-A simple badge <span role="note" style="--note-scale">Badge</span>
+A simple badge <span role="note" style="--badge-scale">Badge</span>
 </h3>
 ```
 
 ```html preview
-<p role="note" style="--note: lightyellow; --note-scale: var(--on)">
+<p role="note" style="--badge: lightyellow; --badge-scale: var(--on)">
 Incididunt excepteur eu non non quis. Elit non veniam occaecat sint consequat laborum. Laboris velit labore amet in do reprehenderit consectetur commodo consectetur ullamco aliqua. Nulla exercitation sunt id aliquip eiusmod ad amet laboris dolore laborum amet. Ullamco duis ex eiusmod Lorem esse mollit qui cillum laboris. Culpa aliquip quis cillum sit ipsum consectetur ipsum aute.
 </p>
 ```

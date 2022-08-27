@@ -1309,16 +1309,17 @@ p[role=note],
   --beta: var(--fp-orange, orange);
   --stable: var(--fp-green, green) ;
   --production: var(--fp-blue, royalblue);
-  padding-inline: var(--note-px, 0.7rem);
-  padding-block: var(--note-py, 0.2rem);
-  color: var(--note-cl, currentColor);
-  font-size: var(--note-fs, 0.8rem);
-  font-weight: var(--note-fw, normal);
-  border: var(--note-brd, none);
-  border-radius: var(--note-rds, 99rem);
-  background-color: var(--note-bg, var(--note, lightgray));
-  text-decoration: var(--note-decoration, none);
-  text-transform: var(--note-tt, var(--tt));
+  padding-inline: var(--badge-px, 0.7rem);
+  padding-block: var(--badge-py, 0.2rem);
+  color: var(--badge-cl, currentColor);
+  font-size: var(--badge-fs, 0.8rem);
+  font-weight: var(--badge-fw, normal);
+  border: var(--badge-brd, none);
+  border-radius: var(--badge-rds, 99rem);
+  background-color: var(--badge-bg, var(--badge, lightgray));
+  text-decoration: var(--badge-decoration, none);
+  text-transform: var(--badge-tt, var(--tt));
+  font-weight: var(--badge-fw, 700);
 }
 [style*="--badge"][data-fp-badge~=beta],
 [role=note][data-fp-badge~=beta],
@@ -1332,41 +1333,41 @@ p[role=note][data-fp-badge~=beta],
 [role=status][data-fp-badge~=stable],
 p[role=note][data-fp-badge~=stable],
 [data-fp-badge][data-fp-badge~=stable] {
-  --note-cl: white;
-  --note-bg: var(--stable);
+  --badge-cl: white;
+  --badge-bg: var(--stable);
 }
 [style*="--badge"][data-fp-badge~=production],
 [role=note][data-fp-badge~=production],
 [role=status][data-fp-badge~=production],
 p[role=note][data-fp-badge~=production],
 [data-fp-badge][data-fp-badge~=production] {
-  --note-cl: white;
-  --note-bg: var(--production);
+  --badge-cl: white;
+  --badge-bg: var(--production);
 }
 [style*="--badge"][data-props~=beta],
 [role=note][data-props~=beta],
 [role=status][data-props~=beta],
 p[role=note][data-props~=beta],
 [data-fp-badge][data-props~=beta] {
-  --note-cl:white;
-  --note-bg: var(--beta);
+  --badge-cl:white;
+  --badge-bg: var(--beta);
 }
 
 :not(span)[role=note] {
-  --note-bg: whitesmoke;
-  --note-rds: 1rem;
-  --note-px: 1.5rem;
-  --note-py: 1.5rem;
-  --note-note-tt: normal;
+  --badge-bg: whitesmoke;
+  --badge-rds: 1rem;
+  --badge-px: 1.5rem;
+  --badge-py: 1.5rem;
+  --badge-note-tt: normal;
 }
 
-[style="--note-bg"] {
-  background-color: var(--note, var(--note-bg));
+[style="--badge-bg"] {
+  background-color: var(--badge, var(--badge-bg));
 }
 
-[style*="--note-scale"],
-p[style*="--note-scale"] {
-  font-size: var(--note-scale, 75%);
+[style*="--badge-scale"],
+p[style*="--badge-scale"] {
+  font-size: var(--badge-scale, 75%);
 }
 
 footer:not([aria-label], [role=footer]),

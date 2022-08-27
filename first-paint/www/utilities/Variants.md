@@ -1,16 +1,18 @@
-# Themes <span role="note" aria-label="status">Alpha</span>
+# Variants (vars) <span role="note" aria-label="status">Alpha</span>
 
-> Color theme utility
+> Variants aka **VARS** (data-vars) are predefined style `utilities` that allow you to change a components appearance.
 
-### Default Themes
+## Overview
+
+### Default Variants
 
 ```html preview
 <div>
-  Themes
+  Variants
 </div>
 ```
 
-## Themes Variables
+## Variants Variables
 
 ### Custom variables
 
@@ -18,10 +20,10 @@
 --color: #000;
 ```
 
-### Themes properties (rules)
+### Variants properties (rules)
 
 ```css
-Themes {
+Variants {
   color: var(--color, currentColor);
 }
 ```
@@ -29,9 +31,8 @@ Themes {
 ## Examples
 
 ----
+
 ## See also
-
-
 
 [MDN GUIDELINES AND SPECFICATIONS](https: ':_target="_blank"')
 
