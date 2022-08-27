@@ -19,6 +19,7 @@
 @mixin rules() {
   @include props;
   font-size: var(--btn-fs, calc(13rem / 16));
+  font-weight: var(--btn-fw, 600);
   min-height: calc(40rem / 16);
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
@@ -51,9 +52,9 @@
 
   // TODO: add hover/focus with :if()
   &:is(:hover, :focus) {
-    --btn-bg: lightgray;
+    // --btn-bg: lightgray;
     --btn-cl: var(--btn-cl-hover);
-    background-color: var(--btn-bg-over, var(--btn, lightgray));
+    background-color: var(--btn-bg, var(--btn, lightgray));
     filter: invert(1) hue-rotate (180deg);
     transform: scale(0.95);
     outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
@@ -76,6 +77,7 @@
   &[data-fp-btn~="pill"] {
     border-radius: 100rem;
   }
+
 
   @content;
 }

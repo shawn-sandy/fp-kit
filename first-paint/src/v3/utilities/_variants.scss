@@ -55,3 +55,52 @@
   --bg: var(--bg-dark, #212121);
   --cl: var(--cl-dark, white);
 }
+
+button[type], a[data-fp-btn] {
+
+&[data-vars~="primary"] {
+  --btn-bg: var(--bg-primary, #00bcd4);
+  --cl: var(--cl-primary, currentColor);
+}
+
+&[data-vars~="secondary"] {
+  --btn-bg: var(--bg-secondary, #f50057);
+  --cl: var(--cl-secondary, white);
+}
+
+&[data-vars~="tertiary"] {
+  --btn-bg: var(--bg-tertiary, #ffd600);
+  --cl: var(--cl-tertiary, currentColor);
+}
+
+&[data-vars~="success"] {
+  --btn-bg: var(--bg-success, #4caf50);
+  --cl: var(--cl-success, white);
+}
+
+&[data-vars~="danger"] {
+  --btn-bg: var(--bg-danger, #f44336);
+  --cl: var(--cl-danger, white);
+}
+
+&[data-vars~="warning"] {
+  --btn-bg: var(--bg-warning, #ff9800);
+  --cl: var(--cl-warning, white);
+}
+
+&[data-vars~="info"] {
+  --btn-bg: var(--bg-info, #2196f3);
+  --cl: var(--cl-info, white);
+}
+
+&[data-vars~="light"] {
+  --btn-bg: var(--bg-light, #f5f5f5);
+  --cl: var(--cl-light, black);
+}
+
+&[data-vars~="dark"] {
+  --btn-bg: var(--bg-dark, #212121);
+  --cl: var(--cl-dark, white);
+}
+
+}

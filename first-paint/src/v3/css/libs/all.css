@@ -1129,6 +1129,7 @@ a[data-fp-btn],
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
   font-size: var(--btn-fs, 0.8125rem);
+  font-weight: var(--btn-fw, 600);
   min-height: 2.5rem;
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
@@ -1176,9 +1177,8 @@ button:is(:hover, :focus),
 [style*="--btn"]:is(:hover, :focus),
 a[data-fp-btn]:is(:hover, :focus),
 [role=button]:is(:hover, :focus) {
-  --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
-  background-color: var(--btn-bg-over, var(--btn, lightgray));
+  background-color: var(--btn-bg, var(--btn, lightgray));
   filter: invert(1) hue-rotate 180deg;
   transform: scale(0.95);
   outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
