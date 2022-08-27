@@ -174,9 +174,9 @@ hr {
   border-radius: 100rem;
 }
 .fp-btn[data-vars] {
-  --btn-bg: var(--bg);
-  --btn-cl: var(--cl);
-  --btn-fs: var(--fs);
+  --btn-bg: var(--vbg);
+  --btn-cl: var(--vcl);
+  --btn-fs: var(--vfs);
 }
 .fp-checkbox {
   display: var(--lbl-dsp, flex);

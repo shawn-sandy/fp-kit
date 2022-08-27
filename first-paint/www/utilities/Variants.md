@@ -11,8 +11,9 @@ Create a primary card style by adding `data-vars="primary"` to the card.
 
 ```html preview
 <div data-card data-vars="primary">
- Fugiat ipsum aliquip enim laborum labore quis sunt voluptate. Pariatur ipsum tempor adipisicing fugiat laborum. Dolore do ad id Lorem ad eiusmod exercitation excepteur et tempor. Nulla aute nisi cupidatat irure sit non culpa tempor Lorem reprehenderit. Sint qui nisi aliquip duis labore duis esse dolore consectetur dolore non adipisicing. Exercitation non id anim cupidatat anim tempor nulla nulla duis sit.
-<p><button type="button">Button</button>
+ <p>Fugiat ipsum aliquip enim laborum labore quis sunt voluptate. Pariatur ipsum tempor adipisicing fugiat laborum. Dolore do ad id Lorem ad eiusmod exercitation excepteur et tempor. Nulla aute nisi cupidatat irure sit non culpa tempor Lorem reprehenderit. Sint qui nisi aliquip duis labore duis esse dolore consectetur dolore non adipisicing. Exercitation non id anim cupidatat anim tempor nulla nulla duis sit.
+  <p>
+ <button type="button">Button</button>
 </div>
 ```
 

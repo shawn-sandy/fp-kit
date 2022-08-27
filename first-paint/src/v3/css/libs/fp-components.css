@@ -279,9 +279,9 @@ button[data-vars],
 [style*="--btn"][data-vars],
 a[data-fp-btn][data-vars],
 [role=button][data-vars] {
-  --btn-bg: var(--bg);
-  --btn-cl: var(--cl);
-  --btn-fs: var(--fs);
+  --btn-bg: var(--vbg);
+  --btn-cl: var(--vcl);
+  --btn-fs: var(--vfs);
 }
 
 input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type=checkbox], [type=radio]) {
