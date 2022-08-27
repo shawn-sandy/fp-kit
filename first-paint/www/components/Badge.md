@@ -120,7 +120,9 @@ A simple badge <span data-fp-badge="beta">Production</span>
 </p>
 ```
 
-## Note Variants (data-vars)
+## Badge Variants (data-vars)
+
+Use our utility vars to style the badge colors
 
 ```html preview
 <div>

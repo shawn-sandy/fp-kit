@@ -979,7 +979,6 @@ figcaption, .fp-cations {
 
 button,
 [style*="--btn"],
-.fp-button,
 a[data-fp-btn],
 [role=button] {
   --btn-sm: calc(12rem / 16);
@@ -1005,7 +1004,6 @@ a[data-fp-btn],
 }
 button[type],
 [style*="--btn"][type],
-.fp-button[type],
 a[data-fp-btn][type],
 [role=button][type] {
   background-color: var(--btn-bg, var(--btn, lightgray));
@@ -1014,8 +1012,6 @@ a[data-fp-btn][type],
 button[type=submit], button[style*=submit],
 [style*="--btn"][type=submit],
 [style*="--btn"][style*=submit],
-.fp-button[type=submit],
-.fp-button[style*=submit],
 a[data-fp-btn][type=submit],
 a[data-fp-btn][style*=submit],
 [role=button][type=submit],
@@ -1026,8 +1022,6 @@ a[data-fp-btn][style*=submit],
 button[disabled], button[aria-disabled=true],
 [style*="--btn"][disabled],
 [style*="--btn"][aria-disabled=true],
-.fp-button[disabled],
-.fp-button[aria-disabled=true],
 a[data-fp-btn][disabled],
 a[data-fp-btn][aria-disabled=true],
 [role=button][disabled],
@@ -1037,7 +1031,6 @@ a[data-fp-btn][aria-disabled=true],
 }
 button:is(:hover, :focus),
 [style*="--btn"]:is(:hover, :focus),
-.fp-button:is(:hover, :focus),
 a[data-fp-btn]:is(:hover, :focus),
 [role=button]:is(:hover, :focus) {
   --btn-bg: lightgray;
@@ -1051,8 +1044,6 @@ a[data-fp-btn]:is(:hover, :focus),
 button[type=reset], button[style*="--btn-reset"],
 [style*="--btn"][type=reset],
 [style*="--btn"][style*="--btn-reset"],
-.fp-button[type=reset],
-.fp-button[style*="--btn-reset"],
 a[data-fp-btn][type=reset],
 a[data-fp-btn][style*="--btn-reset"],
 [role=button][type=reset],
@@ -1064,8 +1055,6 @@ a[data-fp-btn][style*="--btn-reset"],
 button[type=submit], button[style*="--btn-submit"],
 [style*="--btn"][type=submit],
 [style*="--btn"][style*="--btn-submit"],
-.fp-button[type=submit],
-.fp-button[style*="--btn-submit"],
 a[data-fp-btn][type=submit],
 a[data-fp-btn][style*="--btn-submit"],
 [role=button][type=submit],
@@ -1077,13 +1066,12 @@ a[data-fp-btn][style*="--btn-submit"],
 }
 button[data-fp-btn~=pill],
 [style*="--btn"][data-fp-btn~=pill],
-.fp-button[data-fp-btn~=pill],
 a[data-fp-btn][data-fp-btn~=pill],
 [role=button][data-fp-btn~=pill] {
   border-radius: 100rem;
 }
 
-div[role=presentation], .fp-card[role=presentation] {
+div[role=presentation], [data-card] {
   --cd-sm: 1rem;
   --cd-md: 1.5rem;
   --cd-lg: 2rem;
@@ -1107,10 +1095,10 @@ div[role=presentation], .fp-card[role=presentation] {
 div[role=presentation] h1,
 div[role=presentation] h2,
 div[role=presentation] h3,
-div[role=presentation] h4, .fp-card[role=presentation] h1,
-.fp-card[role=presentation] h2,
-.fp-card[role=presentation] h3,
-.fp-card[role=presentation] h4 {
+div[role=presentation] h4, [data-card] h1,
+[data-card] h2,
+[data-card] h3,
+[data-card] h4 {
   margin: 0;
 }
 

@@ -87,7 +87,6 @@
 @mixin module {
   button,
   [style*="--btn"],
-  .fp-button,
   a[data-fp-btn],
   [role="button"] {
     @include rules;

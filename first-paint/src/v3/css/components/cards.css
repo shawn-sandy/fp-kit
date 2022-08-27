@@ -1,7 +1,7 @@
 /**
 *
 */
-div[role=presentation], .fp-card[role=presentation] {
+div[role=presentation], [data-card] {
   --cd-sm: 1rem;
   --cd-md: 1.5rem;
   --cd-lg: 2rem;
@@ -25,10 +25,10 @@ div[role=presentation], .fp-card[role=presentation] {
 div[role=presentation] h1,
 div[role=presentation] h2,
 div[role=presentation] h3,
-div[role=presentation] h4, .fp-card[role=presentation] h1,
-.fp-card[role=presentation] h2,
-.fp-card[role=presentation] h3,
-.fp-card[role=presentation] h4 {
+div[role=presentation] h4, [data-card] h1,
+[data-card] h2,
+[data-card] h3,
+[data-card] h4 {
   margin: 0;
 }
 
