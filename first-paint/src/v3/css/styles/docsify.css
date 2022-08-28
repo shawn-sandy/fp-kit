@@ -1468,6 +1468,9 @@ p[role=note][data-fp-badge~=beta],
 p[role=note][data-variant],
 [data-fp-badge][data-variant] {
   --vfs: .8rem;
+  --vradius: 99rem;
+  --vpx: 0.7rem;
+  --vpy: 0.2rem;
   --badge-bg: var(--vbg);
   --badge-cl: var(--vcl);
   --badge-fs: var(--vfs);
