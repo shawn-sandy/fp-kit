@@ -19,6 +19,12 @@
   --txa-overflow: auto;
   --txa-appearance: none;
 
+  &[data-vairant] {
+    --txa-fs: var(--vfs);
+    --txa-cl: var(--vcl);
+    --txa-bg: var(--vbg);
+  }
+
   @content;
 }
 

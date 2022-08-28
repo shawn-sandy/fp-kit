@@ -77,6 +77,11 @@ hr {
   --px: 0 var(--s1);
   --w: var(--brand-w, 3.6rem);
 }
+.fp-nav[data-variant] {
+  background-color: var(--nav-bg);
+  color: var(--nav-cl);
+  font-size: var(--nav-fs, 0.9rem);
+}
 .fp-header {
   display: var(--hdr-dsp, flex);
   background-color: var(--hdr-bg, var(--fp-white-smoke));
@@ -94,6 +99,11 @@ hr {
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
 }
+.fp-header[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 .fp-container {
   --bx-flow: column wrap;
   --bx-align: flex-start;
@@ -105,6 +115,11 @@ hr {
   max-width: var(--bx-max-w, 100%);
   width: var(--bx-w, var(--w, auto));
   height: var(--bx-h, var(--h, auto));
+}
+.fp-container[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
 }
 .fp-btn {
   --btn-sm: calc(12rem / 16);
@@ -218,6 +233,11 @@ hr {
   border-style: --chk-bdr-style;
   --chk-bg: var(--fp-yellow-green);
 }
+.fp-checkbox[data-variant] {
+  --lbl-fs: var(--vfs);
+  --lbl-cl: var(--vcl);
+  --lbl-bg: var(--vbg);
+}
 .fp-label[for] {
   display: var(--lbl-dsp, flex);
   flex-direction: var(--lbl-direction, row);
@@ -245,6 +265,11 @@ hr {
 .fp-img + * {
   margin-block: 1rem 0;
 }
+.fp-img[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 .fp-details-summary {
   font-size: var(--detail-fs, 1rem);
   color: var(--detail-color, currentColor);
@@ -256,6 +281,11 @@ hr {
 .fp-details-summary :where(div, aside, p, ul) {
   padding: var(--summary-pd, 0 1rem 1rem 1rem);
   background-color: var(--detail-bg);
+}
+.fp-details-summary[data-variant] {
+  --detail-fs: var(--vfs);
+  --detail-color: var(--vcl);
+  --detail-bg: var(--vbg);
 }
 .fp-details-summary summary {
   display: flex;
@@ -280,6 +310,11 @@ hr {
 .fp-details-summary summary:hover::after {
   transform: scale(1.1);
   color: currentColor;
+}
+.fp-details-summary summary[data-variant] {
+  --summary-fs: var(--vfs);
+  --summary-color: var(--vcl);
+  --summary-bg: var(--vbg);
 }
 .fp-details-summary[open] > summary::after {
   content: "×";
@@ -333,6 +368,14 @@ hr {
   border-radius: var(--tbl-rds, 16px);
   border-spacing: 0;
   overflow: auto;
+}
+.fp-table[data-variant] {
+  --tbl-fs: var(--vfs);
+  --tbl-cl: var(--vcl);
+  --tbl-bg: var(--vbg);
+  --tbl-cap-fs: var(--vfs);
+  --tbl-cap-cl: var(--vcl);
+  --tbl-cap-bg: var(--vbg);
 }
 .fp-table caption {
   --fs: var(--fs-4);
@@ -407,6 +450,16 @@ hr {
   );
   --list-max-width: var(--grid-max-width);
 }
+.fp-grid[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
+.fp-grid[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 .fp-grid [role=row],
 .fp-grid [style*="--row"], .fp-grid [role=listitem], .fp-grid [style*="--listitem"] {
   --grid-cols-tpl: repeat(
@@ -433,6 +486,12 @@ hr {
 .fp-dialog::backdrop {
   background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
 }
+.fp-dialog[data-variant] {
+  --diag-bg: var(--vbg);
+  --diag-bg-img: var(--vbg-img);
+  --diag-x: var(--vx);
+  --diag-y: var(--vy);
+}
 .fp-input {
   --input-appearance: none;
   background-color: var(--input-cl);
@@ -452,6 +511,13 @@ hr {
 .fp-input::placeholder {
   font-style: italic;
   --input-fs: .5rem;
+}
+.fp-input[data-variant] {
+  --vfs: .8rem;
+  --vcl: var(--fp-light-gray);
+  --input-fs: var(--vfs);
+  --input-cl: var(--vcl);
+  --input-bg: var(--vbg);
 }
 .fp-radio {
   --rdo-appearance: none;
@@ -532,6 +598,11 @@ hr {
   -moz-appearance: var(--txa-appearance);
   appearance: var(--txa-appearance);
 }
+.fp-textarea[data-vairant] {
+  --txa-fs: var(--vfs);
+  --txa-cl: var(--vcl);
+  --txa-bg: var(--vbg);
+}
 .fp-select {
   --slt-appearance: none;
   --slt-fs: 0.9rem;
@@ -568,6 +639,11 @@ hr {
 .fp-footer p {
   --p-fs: var(--footer-fs, var(--fs));
 }
+.fp-footer[data-variant] {
+  --footer-fs: var(--vfs);
+  --footer-cl: var(--vcl);
+  --footer-bg: var(--vbg);
+}
 .fp-list {
   --listOff: ;
   list-style: var(--list-s, inside);
@@ -575,6 +651,12 @@ hr {
   line-height: var(--list-lh, 1.5);
   padding-inline-start: var(--list-pxs, 1.5rem);
   display: var(--list-dsp, block);
+}
+.fp-list[data-variant] {
+  --list-fs: var(--vfs);
+  --list-lh: var(--vlh);
+  --list-pxs: var(--vpxs);
+  --list-dsp: var(--vdsp);
 }
 .fp [style*="--listOff"] {
   --list-s: var(--listOff, none);

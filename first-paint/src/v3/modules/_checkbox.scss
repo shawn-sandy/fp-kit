@@ -64,6 +64,12 @@
       }
     }
   }
+
+  &[data-variant] {
+    --lbl-fs: var(--vfs);
+    --lbl-cl: var(--vcl);
+    --lbl-bg: var(--vbg);
+  }
   @content;
 }
 

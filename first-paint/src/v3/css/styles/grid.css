@@ -37,6 +37,16 @@
   );
   --list-max-width: var(--grid-max-width);
 }
+.fp-grid[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
+.fp-grid[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 .fp-grid [role=row],
 .fp-grid [style*="--row"], .fp-grid [role=listitem], .fp-grid [style*="--listitem"] {
   --grid-cols-tpl: repeat(

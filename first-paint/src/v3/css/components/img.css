@@ -15,6 +15,11 @@ img[alt][width][height][src$=".svg"], .fp-image[alt][width][height][src$=".svg"]
 img[alt][width][height] + *, .fp-image[alt][width][height] + * {
   margin-block: 1rem 0;
 }
+img[alt][width][height][data-variant], .fp-image[alt][width][height][data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 
 picture,
 figure, .fp-figure {

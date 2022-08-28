@@ -53,6 +53,13 @@
      text-decoration: none;
    }
   }
+
+  &[data-variant] {
+    --link-color: var(--vcl);
+    --link-bg: var(--vbg);
+    --link-decoration: var(--vdecoration);
+    --link-fs: var(--vfs);
+  }
   @content;
 }
 

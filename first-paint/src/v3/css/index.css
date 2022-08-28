@@ -691,6 +691,11 @@ nav img[alt], .fp-nav img[alt] {
   --px: 0 var(--s1);
   --w: var(--brand-w, 3.6rem);
 }
+nav[data-variant], .fp-nav[data-variant] {
+  background-color: var(--nav-bg);
+  color: var(--nav-cl);
+  font-size: var(--nav-fs, 0.9rem);
+}
 
 header:not([arial-label], dialog header), .fp-header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialog header), [style*="--hdr"]:not([arial-label], dialog header) {
   display: var(--hdr-dsp, flex);
@@ -708,6 +713,11 @@ header:not([arial-label], dialog header), .fp-header:not([arial-label], dialog h
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
+}
+header:not([arial-label], dialog header)[data-variant], .fp-header:not([arial-label], dialog header)[data-variant], [role=banner]:not([arial-label], dialog header)[data-variant], [style*="--hdr"]:not([arial-label], dialog header)[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
 }
 
 form, .fp-form {
@@ -774,6 +784,12 @@ a[aria-current], a:visited[aria-current] {
 a[aria-current]:hover, a:visited[aria-current]:hover {
   text-decoration: none;
 }
+a[data-variant] {
+  --link-color: var(--vcl);
+  --link-bg: var(--vbg);
+  --link-decoration: var(--vdecoration);
+  --link-fs: var(--vfs);
+}
 
 img[alt][width][height], .fp-image[alt][width][height] {
   max-width: 100%;
@@ -791,6 +807,11 @@ img[alt][width][height][src$=".svg"], .fp-image[alt][width][height][src$=".svg"]
 }
 img[alt][width][height] + *, .fp-image[alt][width][height] + * {
   margin-block: 1rem 0;
+}
+img[alt][width][height][data-variant], .fp-image[alt][width][height][data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
 }
 
 picture,
@@ -854,6 +875,11 @@ figcaption, .fp-cations {
   border-width: var(--chk-bdr-w, thick);
   border-style: --chk-bdr-style;
   --chk-bg: var(--fp-yellow-green);
+}
+.fp-checkbox[for][data-variant], :where(label[for])[data-variant] {
+  --lbl-fs: var(--vfs);
+  --lbl-cl: var(--vcl);
+  --lbl-bg: var(--vbg);
 }
 
 button,
@@ -976,6 +1002,13 @@ input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type
   font-style: italic;
   --input-fs: .5rem;
 }
+input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type=checkbox], [type=radio])[data-variant] {
+  --vfs: .8rem;
+  --vcl: var(--fp-light-gray);
+  --input-fs: var(--vfs);
+  --input-cl: var(--vcl);
+  --input-bg: var(--vbg);
+}
 
 .fp-radio[for], :where(label[for]) {
   --rdo-appearance: none;
@@ -1057,6 +1090,11 @@ textarea, .fp-textarea {
   -moz-appearance: var(--txa-appearance);
   appearance: var(--txa-appearance);
 }
+textarea[data-vairant], .fp-textarea[data-vairant] {
+  --txa-fs: var(--vfs);
+  --txa-cl: var(--vcl);
+  --txa-bg: var(--vbg);
+}
 
 select, fp-selct {
   --slt-appearance: none;
@@ -1102,6 +1140,13 @@ footer:not([aria-label], [role=footer]) p,
 .fp-footer:not([aria-label], [role=footer]) p,
 [role=contentinfo]:not([aria-label], [role=footer]) p {
   --p-fs: var(--footer-fs, var(--fs));
+}
+footer:not([aria-label], [role=footer])[data-variant],
+.fp-footer:not([aria-label], [role=footer])[data-variant],
+[role=contentinfo]:not([aria-label], [role=footer])[data-variant] {
+  --footer-fs: var(--vfs);
+  --footer-cl: var(--vcl);
+  --footer-bg: var(--vbg);
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -18,5 +18,12 @@
   font-style: italic;
   --input-fs: .5rem;
 }
+.fp-input[data-variant] {
+  --vfs: .8rem;
+  --vcl: var(--fp-light-gray);
+  --input-fs: var(--vfs);
+  --input-cl: var(--vcl);
+  --input-bg: var(--vbg);
+}
 
 /*# sourceMappingURL=input.css.map */

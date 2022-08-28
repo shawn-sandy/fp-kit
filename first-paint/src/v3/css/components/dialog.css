@@ -8,5 +8,11 @@ dialog, [role=dialog], .fp-dialog {
 dialog::backdrop, [role=dialog]::backdrop, .fp-dialog::backdrop {
   background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
 }
+dialog[data-variant], [role=dialog][data-variant], .fp-dialog[data-variant] {
+  --diag-bg: var(--vbg);
+  --diag-bg-img: var(--vbg-img);
+  --diag-x: var(--vx);
+  --diag-y: var(--vy);
+}
 
 /*# sourceMappingURL=dialog.css.map */

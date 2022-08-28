@@ -38,5 +38,10 @@ nav img[alt], .fp-nav img[alt] {
   --px: 0 var(--s1);
   --w: var(--brand-w, 3.6rem);
 }
+nav[data-variant], .fp-nav[data-variant] {
+  background-color: var(--nav-bg);
+  color: var(--nav-cl);
+  font-size: var(--nav-fs, 0.9rem);
+}
 
 /*# sourceMappingURL=nav.css.map */

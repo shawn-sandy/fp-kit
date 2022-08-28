@@ -20,6 +20,11 @@
   );
   --list-max-width: var(--grid-max-width);
 }
+[role=grid][data-variant], [role=list][data-variant], .fp-grid[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 [role=grid] [role=row],
 [role=grid] [style*="--row"], [role=grid] [role=listitem], [role=grid] [style*="--listitem"], [role=list] [role=row],
 [role=list] [style*="--row"], [role=list] [role=listitem], [role=list] [style*="--listitem"], .fp-grid [role=row],

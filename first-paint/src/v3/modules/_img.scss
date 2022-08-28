@@ -35,6 +35,12 @@
     margin-block: 1rem 0;
   }
 
+  &[data-variant] {
+    background-color: var(--vbg);
+    color: var(--vcl);
+    font-size: var(--vfs);
+  }
+
 
 }
 

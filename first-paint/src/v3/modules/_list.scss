@@ -22,6 +22,13 @@
    padding-inline-start: var(--list-pxs, 1.5rem);
    display: var(--list-dsp, block);
 
+   &[data-variant] {
+     --list-fs: var(--vfs);
+     --list-lh: var(--vlh);
+     --list-pxs: var(--vpxs);
+     --list-dsp: var(--vdsp);
+   }
+
   @content;
 }
 
@@ -48,6 +55,8 @@
       padding-inline: var(--list-px, 1rem);
     }
   }
+
+
   @content;
 }
 

@@ -28,13 +28,18 @@
   width: var(--bx-w, var(--w, auto));
   height: var(--bx-h, var(--h, auto));
 
+  &[data-variant]{
+    background-color: var(--vbg);
+    color: var(--vcl);
+    font-size: var(--vfs)
+  }
+
   @content;
 }
 
 @mixin styles {
   [style*="--bx-flex"] {
     --bx-dsp: var(--bx-flex-dsp, flex);
-
     flex-flow: var(--bx-flex-flow, var(--flow));
     align-items: var(--bx-flex-align, var(--bx-align));
 

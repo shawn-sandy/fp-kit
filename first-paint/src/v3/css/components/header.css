@@ -15,5 +15,10 @@ header:not([arial-label], dialog header), .fp-header:not([arial-label], dialog h
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
 }
+header:not([arial-label], dialog header)[data-variant], .fp-header:not([arial-label], dialog header)[data-variant], [role=banner]:not([arial-label], dialog header)[data-variant], [style*="--hdr"]:not([arial-label], dialog header)[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 
 /*# sourceMappingURL=header.css.map */

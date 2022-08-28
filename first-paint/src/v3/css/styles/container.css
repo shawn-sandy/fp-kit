@@ -12,6 +12,11 @@
   width: var(--bx-w, var(--w, auto));
   height: var(--bx-h, var(--h, auto));
 }
+.fp-container[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 
 [style*="--bx-flex"] {
   --bx-dsp: var(--bx-flex-dsp, flex);

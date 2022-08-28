@@ -44,6 +44,7 @@
   -webkit-appearance: var(--slt-appearance);
   appearance: var(--slt-appearance);
   padding-right: var(--sle-pxe, 30px);
+
   @content;
 }
 

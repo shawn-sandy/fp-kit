@@ -15,5 +15,10 @@
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
 }
+.fp-header[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 
 /*# sourceMappingURL=header.css.map */

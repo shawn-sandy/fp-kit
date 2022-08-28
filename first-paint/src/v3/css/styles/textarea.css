@@ -24,5 +24,10 @@
   -moz-appearance: var(--txa-appearance);
   appearance: var(--txa-appearance);
 }
+.fp-textarea[data-vairant] {
+  --txa-fs: var(--vfs);
+  --txa-cl: var(--vcl);
+  --txa-bg: var(--vbg);
+}
 
 /*# sourceMappingURL=textarea.css.map */

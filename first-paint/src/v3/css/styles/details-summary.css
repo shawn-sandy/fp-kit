@@ -11,6 +11,11 @@
   padding: var(--summary-pd, 0 1rem 1rem 1rem);
   background-color: var(--detail-bg);
 }
+.fp-details-summary[data-variant] {
+  --detail-fs: var(--vfs);
+  --detail-color: var(--vcl);
+  --detail-bg: var(--vbg);
+}
 .fp-details-summary summary {
   display: flex;
   place-content: flex-start;
@@ -34,6 +39,11 @@
 .fp-details-summary summary:hover::after {
   transform: scale(1.1);
   color: currentColor;
+}
+.fp-details-summary summary[data-variant] {
+  --summary-fs: var(--vfs);
+  --summary-color: var(--vcl);
+  --summary-bg: var(--vbg);
 }
 .fp-details-summary[open] > summary::after {
   content: "×";

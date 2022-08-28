@@ -38,5 +38,10 @@
   border-style: --chk-bdr-style;
   --chk-bg: var(--fp-yellow-green);
 }
+.fp-checkbox[for][data-variant], :where(label[for])[data-variant] {
+  --lbl-fs: var(--vfs);
+  --lbl-cl: var(--vcl);
+  --lbl-bg: var(--vbg);
+}
 
 /*# sourceMappingURL=checkbox.css.map */

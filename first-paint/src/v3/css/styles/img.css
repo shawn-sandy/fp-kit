@@ -15,5 +15,10 @@
 .fp-img + * {
   margin-block: 1rem 0;
 }
+.fp-img[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 
 /*# sourceMappingURL=img.css.map */

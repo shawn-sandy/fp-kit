@@ -698,6 +698,11 @@ nav img[alt], .fp-nav img[alt] {
   --px: 0 var(--s1);
   --w: var(--brand-w, 3.6rem);
 }
+nav[data-variant], .fp-nav[data-variant] {
+  background-color: var(--nav-bg);
+  color: var(--nav-cl);
+  font-size: var(--nav-fs, 0.9rem);
+}
 
 header:not([arial-label], dialog header), .fp-header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialog header), [style*="--hdr"]:not([arial-label], dialog header) {
   display: var(--hdr-dsp, flex);
@@ -715,6 +720,11 @@ header:not([arial-label], dialog header), .fp-header:not([arial-label], dialog h
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
+}
+header:not([arial-label], dialog header)[data-variant], .fp-header:not([arial-label], dialog header)[data-variant], [role=banner]:not([arial-label], dialog header)[data-variant], [style*="--hdr"]:not([arial-label], dialog header)[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
 }
 
 table, .fp-table {
@@ -746,6 +756,14 @@ table, .fp-table {
   border-radius: var(--tbl-rds, 16px);
   border-spacing: 0;
   overflow: auto;
+}
+table[data-variant], .fp-table[data-variant] {
+  --tbl-fs: var(--vfs);
+  --tbl-cl: var(--vcl);
+  --tbl-bg: var(--vbg);
+  --tbl-cap-fs: var(--vfs);
+  --tbl-cap-cl: var(--vcl);
+  --tbl-cap-bg: var(--vbg);
 }
 table caption, .fp-table caption {
   --fs: var(--fs-4);
@@ -798,6 +816,11 @@ table tbody tr:last-of-type, .fp-table tbody tr:last-of-type {
   padding: var(--summary-pd, 0 1rem 1rem 1rem);
   background-color: var(--detail-bg);
 }
+.fp-details-summary[data-variant], details[data-variant] {
+  --detail-fs: var(--vfs);
+  --detail-color: var(--vcl);
+  --detail-bg: var(--vbg);
+}
 .fp-details-summary summary, details summary {
   display: flex;
   place-content: flex-start;
@@ -821,6 +844,11 @@ table tbody tr:last-of-type, .fp-table tbody tr:last-of-type {
 .fp-details-summary summary:hover::after, details summary:hover::after {
   transform: scale(1.1);
   color: currentColor;
+}
+.fp-details-summary summary[data-variant], details summary[data-variant] {
+  --summary-fs: var(--vfs);
+  --summary-color: var(--vcl);
+  --summary-bg: var(--vbg);
 }
 .fp-details-summary[open] > summary::after, details[open] > summary::after {
   content: "×";
@@ -874,6 +902,11 @@ img[alt][width][height][src$=".svg"], .fp-image[alt][width][height][src$=".svg"]
 }
 img[alt][width][height] + *, .fp-image[alt][width][height] + * {
   margin-block: 1rem 0;
+}
+img[alt][width][height][data-variant], .fp-image[alt][width][height][data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
 }
 
 picture,
@@ -938,6 +971,11 @@ figcaption, .fp-cations {
   border-style: --chk-bdr-style;
   --chk-bg: var(--fp-yellow-green);
 }
+.fp-checkbox[for][data-variant], :where(label[for])[data-variant] {
+  --lbl-fs: var(--vfs);
+  --lbl-cl: var(--vcl);
+  --lbl-bg: var(--vbg);
+}
 
 [role=grid], [role=list], .fp-grid {
   /**
@@ -957,6 +995,11 @@ figcaption, .fp-cations {
     (100% - var(--total-gap-width)) / var(--grid-cols)
   );
   --list-max-width: var(--grid-max-width);
+}
+[role=grid][data-variant], [role=list][data-variant], .fp-grid[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
 }
 [role=grid] [role=row],
 [role=grid] [style*="--row"], [role=grid] [role=listitem], [role=grid] [style*="--listitem"], [role=list] [role=row],
@@ -1135,6 +1178,13 @@ input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type
   font-style: italic;
   --input-fs: .5rem;
 }
+input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type=checkbox], [type=radio])[data-variant] {
+  --vfs: .8rem;
+  --vcl: var(--fp-light-gray);
+  --input-fs: var(--vfs);
+  --input-cl: var(--vcl);
+  --input-bg: var(--vbg);
+}
 
 .fp-radio[for], :where(label[for]) {
   --rdo-appearance: none;
@@ -1216,6 +1266,11 @@ textarea, .fp-textarea {
   -moz-appearance: var(--txa-appearance);
   appearance: var(--txa-appearance);
 }
+textarea[data-vairant], .fp-textarea[data-vairant] {
+  --txa-fs: var(--vfs);
+  --txa-cl: var(--vcl);
+  --txa-bg: var(--vbg);
+}
 
 select, fp-selct {
   --slt-appearance: none;
@@ -1260,6 +1315,12 @@ dialog, [role=dialog], .fp-dialog {
 dialog::backdrop, [role=dialog]::backdrop, .fp-dialog::backdrop {
   background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
 }
+dialog[data-variant], [role=dialog][data-variant], .fp-dialog[data-variant] {
+  --diag-bg: var(--vbg);
+  --diag-bg-img: var(--vbg-img);
+  --diag-x: var(--vx);
+  --diag-y: var(--vy);
+}
 
 [role=tooltip], [style*="--tip"] {
   --tip-bg: black;
@@ -1270,6 +1331,14 @@ dialog::backdrop, [role=dialog]::backdrop, .fp-dialog::backdrop {
   --tip-opacity: 0.9;
   position: relative;
   cursor: var(--tip-cursor);
+}
+[role=tooltip][data-variant], [style*="--tip"][data-variant] {
+  --tip-bg: var(--vbg);
+  --tip-cl: var(--vcl);
+  --tip-rds: var(--vrds);
+  --tip-cubic: var(--vcubic);
+  --tip-cursor: var(--vcursor);
+  --tip-opacity: var(--vopacity);
 }
 [role=tooltip]:after, [style*="--tip"]:after {
   font-size: var(--tip-fs, var(--fs-2));
@@ -1390,6 +1459,13 @@ footer:not([aria-label], [role=footer]) p,
 [role=contentinfo]:not([aria-label], [role=footer]) p {
   --p-fs: var(--footer-fs, var(--fs));
 }
+footer:not([aria-label], [role=footer])[data-variant],
+.fp-footer:not([aria-label], [role=footer])[data-variant],
+[role=contentinfo]:not([aria-label], [role=footer])[data-variant] {
+  --footer-fs: var(--vfs);
+  --footer-cl: var(--vcl);
+  --footer-bg: var(--vbg);
+}
 
 ul, [style*="--list"], [data-fp-list] {
   --listOff: ;
@@ -1398,6 +1474,12 @@ ul, [style*="--list"], [data-fp-list] {
   line-height: var(--list-lh, 1.5);
   padding-inline-start: var(--list-pxs, 1.5rem);
   display: var(--list-dsp, block);
+}
+ul[data-variant], [style*="--list"][data-variant], [data-fp-list][data-variant] {
+  --list-fs: var(--vfs);
+  --list-lh: var(--vlh);
+  --list-pxs: var(--vpxs);
+  --list-dsp: var(--vdsp);
 }
 
 [style*="--listOff"] {
@@ -1442,6 +1524,16 @@ ul, [style*="--list"], [data-fp-list] {
 [style*="--scroll"]::-webkit-scrollbar-thumb, div[role=region]::-webkit-scrollbar-thumb, .fp-scroll::-webkit-scrollbar-thumb {
   /* Foreground */
   background: var(--scroll-bg, gray);
+}
+[style*="--scroll"][data-variant], div[role=region][data-variant], .fp-scroll[data-variant] {
+  --scroll: var(--vscroll);
+  --overflow-y: var(--voverflow-y);
+  --overflow-x: var(--voverflow-x);
+  --scroll-size: var(--vscroll-size);
+  --scroll-w: var(--vscroll-w);
+  --scroll-h: var(--vscroll-h);
+  --scroll-track-bg: var(--vscroll-track-bg);
+  --scroll-bg: var(--vscroll-bg);
 }
 
 nav > :where(ol, [data-fp-breadcrumb]) {

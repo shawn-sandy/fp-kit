@@ -31,6 +31,14 @@ table, .fp-table {
   border-spacing: 0;
   overflow: auto;
 }
+table[data-variant], .fp-table[data-variant] {
+  --tbl-fs: var(--vfs);
+  --tbl-cl: var(--vcl);
+  --tbl-bg: var(--vbg);
+  --tbl-cap-fs: var(--vfs);
+  --tbl-cap-cl: var(--vcl);
+  --tbl-cap-bg: var(--vbg);
+}
 table caption, .fp-table caption {
   --fs: var(--fs-4);
   --align: center;
