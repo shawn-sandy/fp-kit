@@ -1485,7 +1485,7 @@ ul, [style*="--list"], [data-fp-list] {
   background: var(--scroll-bg, gray);
 }
 
-nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]), nav > :where(ol, [data-fp-breadcrumb]) {
+nav > :where(ol, [data-fp-breadcrumb]) {
   display: var(--crumb-dsp, flex);
   direction: var(--crumb-direction, row);
   gap: var(--crumb-gap, 0.5rem);
@@ -1494,19 +1494,24 @@ nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]), nav > :where(ol,
   font-size: var(--crumb-fs, var(--fs-2));
   color: var(--crumb-cl, currentColor);
 }
-nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb])::-webkit-details-marker, nav > :where(ol, [data-fp-breadcrumb])::-webkit-details-marker {
+nav > :where(ol, [data-fp-breadcrumb])::-webkit-details-marker {
   display: none;
 }
-nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li, nav > :where(ol, [data-fp-breadcrumb]) li {
+nav > :where(ol, [data-fp-breadcrumb]) li {
   color: var(--crumb-cl);
 }
-nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li + li, nav > :where(ol, [data-fp-breadcrumb]) li + li {
+nav > :where(ol, [data-fp-breadcrumb]) li + li {
   color: currentColor;
 }
-nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li + li::before, nav > :where(ol, [data-fp-breadcrumb]) li + li::before {
+nav > :where(ol, [data-fp-breadcrumb]) li + li::before {
   content: var(--crumb-icon, "/");
   color: currentColor;
   padding-inline-end: 0.5rem;
+}
+nav > :where(ol, [data-fp-breadcrumb])[data-variant] {
+  --crumb-fs: var(--vfs);
+  --crumb-cl: var(--vcl);
+  --crumb-bg: var(--vbg);
 }
 
 [style*="--fp"] {
