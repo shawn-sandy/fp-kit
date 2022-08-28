@@ -68,6 +68,14 @@
   background-color: var(--vbg);
   color: var(--vcl);
   font-size: var(--vfs);
+  font-weight: var(--vfw);
+  padding: var(--vp);
+  padding-inline: var(--vpx);
+  padding-block: var(--vpy);
+  margin: var(--vm);
+  border-radius: var(--vbr);
+  border: var(--vborder);
+  box-shadow: var(--vshadow);
 }
 
 [data-variant~=primary] {
