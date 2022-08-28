@@ -52,13 +52,13 @@
   outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
   outline-offset: var(--line-offset, 5px);
 }
-.fp-btn[type=reset], .fp-btn[style*="--btn-reset"] {
+.fp-btn[type=reset] {
   --btn-bg: transparent;
   --btn-color: gray;
   --btn-bdr: gray thin solid;
 }
-.fp-btn[type=submit], .fp-btn[style*="--btn-submit"] {
-  --btn-bg: var(--blue-500);
+.fp-btn[type=submit] {
+  --btn-bg: var(--blue-500, blue);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
@@ -66,7 +66,7 @@
 .fp-btn[data-fp-btn~=pill] {
   border-radius: 100rem;
 }
-.fp-btn[data-vars] {
+.fp-btn[data-variant] {
   --btn-bg: var(--vbg);
   --btn-cl: var(--vcl);
   --btn-fs: var(--vfs);

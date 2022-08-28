@@ -4,7 +4,22 @@
 
 ### Default Cards
 
-To style a card we repurpose `role="presentation` attribute on a `div` element.
+To style a card we use the `data-card` style attribute or  repurpose `role="presentation` attribute on a `div` element.
+
+```html preview
+
+<div data-card>
+  <h3>Card Title</h3>
+    <p>
+      Cupidatat consequat enim est et ad laboris pariatur occaecat duis esse culpa. Et reprehenderit do in Lorem do magna excepteur amet tempor laborum nisi voluptate consectetur. Qui nisi nisi cupidatat anim velit fugiat esse in.
+    </p>
+  <div role="footer">
+    <a href="#">Read More</a>
+  </div>
+
+</div>
+
+```
 
 ```html preview
 

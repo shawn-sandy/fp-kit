@@ -67,25 +67,19 @@ a[data-fp-btn]:is(:hover, :focus),
   outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
   outline-offset: var(--line-offset, 5px);
 }
-button[type=reset], button[style*="--btn-reset"],
+button[type=reset],
 [style*="--btn"][type=reset],
-[style*="--btn"][style*="--btn-reset"],
 a[data-fp-btn][type=reset],
-a[data-fp-btn][style*="--btn-reset"],
-[role=button][type=reset],
-[role=button][style*="--btn-reset"] {
+[role=button][type=reset] {
   --btn-bg: transparent;
   --btn-color: gray;
   --btn-bdr: gray thin solid;
 }
-button[type=submit], button[style*="--btn-submit"],
+button[type=submit],
 [style*="--btn"][type=submit],
-[style*="--btn"][style*="--btn-submit"],
 a[data-fp-btn][type=submit],
-a[data-fp-btn][style*="--btn-submit"],
-[role=button][type=submit],
-[role=button][style*="--btn-submit"] {
-  --btn-bg: var(--blue-500);
+[role=button][type=submit] {
+  --btn-bg: var(--blue-500, blue);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
@@ -96,10 +90,10 @@ a[data-fp-btn][data-fp-btn~=pill],
 [role=button][data-fp-btn~=pill] {
   border-radius: 100rem;
 }
-button[data-vars],
-[style*="--btn"][data-vars],
-a[data-fp-btn][data-vars],
-[role=button][data-vars] {
+button[data-variant],
+[style*="--btn"][data-variant],
+a[data-fp-btn][data-variant],
+[role=button][data-variant] {
   --btn-bg: var(--vbg);
   --btn-cl: var(--vcl);
   --btn-fs: var(--vfs);
