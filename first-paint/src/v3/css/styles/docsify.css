@@ -1379,13 +1379,27 @@ p[role=note][data-fp-badge~=production],
   --badge-cl: white;
   --badge-bg: var(--production);
 }
-[style*="--badge"][data-props~=beta],
-[role=note][data-props~=beta],
-[role=status][data-props~=beta],
-p[role=note][data-props~=beta],
-[data-fp-badge][data-props~=beta] {
+[style*="--badge"][data-fp-badge~=beta],
+[role=note][data-fp-badge~=beta],
+[role=status][data-fp-badge~=beta],
+p[role=note][data-fp-badge~=beta],
+[data-fp-badge][data-fp-badge~=beta] {
   --badge-cl:white;
   --badge-bg: var(--beta);
+}
+[style*="--badge"][data-variant],
+[role=note][data-variant],
+[role=status][data-variant],
+p[role=note][data-variant],
+[data-fp-badge][data-variant] {
+  --vfs: .8rem;
+  --badge-bg: var(--vbg);
+  --badge-cl: var(--vcl);
+  --badge-fs: var(--vfs);
+}
+
+p[role=note] {
+  --badge-fw: normal;
 }
 
 :not(span)[role=note] {

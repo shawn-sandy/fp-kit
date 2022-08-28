@@ -27,6 +27,7 @@
   text-transform: var(--badge-tt, var(--tt));
   font-weight: var(--badge-fw, 700);
 
+
   &[data-fp-badge~="beta"]{
     background-color: var(--beta);
   }
@@ -41,9 +42,16 @@
     --badge-bg: var(--production);
   }
 
-  &[data-props~="beta"] {
+  &[data-fp-badge~="beta"] {
     --badge-cl:white;
     --badge-bg: var(--beta);
+  }
+
+  &[data-variant] {
+    --vfs: .8rem;
+    --badge-bg: var(--vbg);
+    --badge-cl: var(--vcl);
+    --badge-fs: var(--vfs);
   }
 
   @content;
@@ -68,6 +76,7 @@
     font-size: var(--badge-scale, 75%);
   }
 
+
   @content;
 }
 
@@ -80,6 +89,10 @@
   {
     @include props;
     @include rules;
+  }
+
+  p[role="note"] {
+    --badge-fw: normal;
   }
   @include styles;
 }

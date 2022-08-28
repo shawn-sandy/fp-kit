@@ -25,9 +25,15 @@
   --badge-cl: white;
   --badge-bg: var(--production);
 }
-.fp-badge[data-props~=beta], .fp-note[data-props~=beta] {
+.fp-badge[data-fp-badge~=beta], .fp-note[data-fp-badge~=beta] {
   --badge-cl:white;
   --badge-bg: var(--beta);
+}
+.fp-badge[data-variant], .fp-note[data-variant] {
+  --vfs: .8rem;
+  --badge-bg: var(--vbg);
+  --badge-cl: var(--vcl);
+  --badge-fs: var(--vfs);
 }
 
 :not(span)[role=note] {

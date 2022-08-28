@@ -120,37 +120,37 @@ A simple badge <span data-fp-badge="beta">Production</span>
 </p>
 ```
 
-## Badge Variants (data-vars)
+## Badge Variants (data-variant)
 
-Use our utility vars to style the badge colors
+Use our utility variant to style the badge colors
 
 ```html preview
 <div>
-A simple badge <span role="note" data-vars="primary">Primary</span>
+A simple badge <span role="note" data-variant="primary">Primary</span>
 </div>
 ```
 
 ```html preview
 <div>
-A simple badge <span role="note" data-vars="secondary">Secondary</span>
+A simple badge <span role="note" data-variant="secondary">Secondary</span>
 </div>
 ```
 
 ```html preview
 <div>
-A simple badge <span role="note" data-vars="tertiary">Tertiary</span>
+A simple badge <span role="note" data-variant="tertiary">Tertiary</span>
 </div>
 ```
 
 ```html preview
 <div>
-A simple badge <span role="note" data-vars="warning">Warning</span>
+A simple badge <span role="note" data-variant="warning">Warning</span>
 </div>
 ```
 
 ```html preview
 <div>
-A simple badge <span role="note" data-vars="light">Light</span>
+A simple badge <span role="note" data-variant="light">Light</span>
 </div>
 ```
 
