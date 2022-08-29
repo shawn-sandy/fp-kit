@@ -38,10 +38,9 @@
 }
 
 @mixin module {
-  dialog, [role=dialog], .fp-dialog {
+  dialog, [role=dialog], [data-fp-dialog] {
   @include props;
     @include rules;
-
   }
   @include styles;
 }

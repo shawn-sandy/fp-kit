@@ -24,7 +24,7 @@
     (100% - var(--total-gap-width)) / var(--grid-cols)
   );
   --list-max-width: var(--grid-max-width);
-  
+
   &[data-variant] {
     background-color: var(--vbg);
     color: var(--vcl);
@@ -69,7 +69,7 @@
 *
 */
 @mixin module {
-  [role="grid"], [role="list"], .fp-grid {
+  [role="grid"], [role="list"], [data-grid] {
     @include rules;
   }
   @include styles;

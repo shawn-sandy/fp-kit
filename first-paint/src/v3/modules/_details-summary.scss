@@ -76,7 +76,7 @@
 }
 
 @mixin module {
-  .fp-details-summary, details {
+  .fp-details-summary, details, [data-fp-dropdown] {
     @include rules;
   }
 }
