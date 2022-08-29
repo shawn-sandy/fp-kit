@@ -64,7 +64,7 @@
 }
 
 @mixin module {
-  [role="tooltip"], [style*="--tip"] {
+  [role="tooltip"], [style*="--tip"], [data-fp-tooltip] {
     @include props;
     @include rules;
   }
