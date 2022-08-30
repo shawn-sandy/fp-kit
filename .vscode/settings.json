@@ -17,6 +17,12 @@
 
   // Optional: Which pane to open the frame in
   "liveFrame.pane": "Beside",
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange",
+  "grammarly.selectors": [
+    {
+      "language": "markdown",
+      "scheme": "file"
+    }
+  ]
 
 }
