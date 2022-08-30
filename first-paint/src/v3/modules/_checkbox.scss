@@ -79,7 +79,7 @@
 }
 
 @mixin module {
-   .fp-checkbox[for], :where(label[for]){
+    :where(label[for]){
     @include props;
     @include rules;
   }

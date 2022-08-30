@@ -115,7 +115,7 @@
 *
 */
 @mixin module {
-  table, .fp-table {
+  table {
     @include rules;
   }
   @include styles;

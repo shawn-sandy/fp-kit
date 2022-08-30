@@ -75,7 +75,7 @@
 @mixin module {
   .fp-container,
   :where(main, section, article, footer, header, table),
-  [style*="--bx"] {
+  [data-box] {
     @include props;
     @include rules;
   }

@@ -1,4 +1,4 @@
-nav, .fp-nav {
+nav, [data-fp-nav], [role=navigation] {
   display: var(--nav-dsp, flex);
   flex-direction: var(--nav-direction, row);
   width: var(--nav-w, auto);
@@ -9,8 +9,9 @@ nav, .fp-nav {
   background-color: var(--nav-bg, initial);
 }
 nav > section,
-nav > ul, .fp-nav > section,
-.fp-nav > ul {
+nav > ul, [data-fp-nav] > section,
+[data-fp-nav] > ul, [role=navigation] > section,
+[role=navigation] > ul {
   --nav-dsp: flex;
   display: var(--nav-dsp, flex);
   gap: var(--nav-gap, 0);
@@ -19,10 +20,10 @@ nav > ul, .fp-nav > section,
   padding-inline: var(--nav-px, 1rem);
   height: 100%;
 }
-nav > section > div, .fp-nav > section > div {
+nav > section > div, [data-fp-nav] > section > div, [role=navigation] > section > div {
   --py: 0;
 }
-nav ul > li, .fp-nav ul > li {
+nav ul > li, [data-fp-nav] ul > li, [role=navigation] ul > li {
   display: flex;
   align-items: center;
   list-style: none;
@@ -31,14 +32,14 @@ nav ul > li, .fp-nav ul > li {
   min-height: 100%;
   padding-inline: var(--nav-px, 0.75rem);
 }
-nav ul > li:hover, .fp-nav ul > li:hover {
+nav ul > li:hover, [data-fp-nav] ul > li:hover, [role=navigation] ul > li:hover {
   background-color: var(--nav-hov-bg, whitesmoke);
 }
-nav img[alt], .fp-nav img[alt] {
+nav img[alt], [data-fp-nav] img[alt], [role=navigation] img[alt] {
   --px: 0 var(--s1);
   --w: var(--brand-w, 3.6rem);
 }
-nav[data-variant], .fp-nav[data-variant] {
+nav[data-variant], [data-fp-nav][data-variant], [role=navigation][data-variant] {
   background-color: var(--nav-bg);
   color: var(--nav-cl);
   font-size: var(--nav-fs, 0.9rem);

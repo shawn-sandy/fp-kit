@@ -2,7 +2,7 @@
 /* stylelint-disable declaration-empty-line-before */
 .fp-container,
 :where(main, section, article, footer, header, table),
-[style*="--bx"] {
+[data-box] {
   --bx-flow: column wrap;
   --bx-align: flex-start;
   --bx-justify: flex-start;
@@ -16,7 +16,7 @@
 }
 .fp-container[data-variant],
 :where(main, section, article, footer, header, table)[data-variant],
-[style*="--bx"][data-variant] {
+[data-box][data-variant] {
   background-color: var(--vbg);
   color: var(--vcl);
   font-size: var(--vfs);

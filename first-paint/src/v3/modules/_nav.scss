@@ -72,7 +72,7 @@
 }
 
 @mixin module {
-  nav, .fp-nav {
+  nav, [data-fp-nav], [role="navigation"] {
     @include rules();
   }
 }

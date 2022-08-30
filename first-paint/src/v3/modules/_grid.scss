@@ -69,7 +69,7 @@
 *
 */
 @mixin module {
-  [role="grid"], [role="list"], [data-grid] {
+  [role="grid"], [role="list"], [data-fp-grid] {
     @include rules;
   }
   @include styles;

@@ -61,7 +61,7 @@
 }
 
 @mixin module {
-  ul, [style*="--list"], [data-fp-list] {
+  ul, [data-fp-list] {
     @include props;
     @include rules;
   }

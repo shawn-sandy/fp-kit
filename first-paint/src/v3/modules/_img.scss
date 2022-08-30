@@ -73,7 +73,7 @@
 }
 
 @mixin module {
-  img[alt][width][height], .fp-image[alt][width][height] {
+  img[alt][width][height], [data-img] {
     @include props;
     @include rules;
   }
