@@ -13,13 +13,13 @@ Built in support for FirstPaint a modern, performance first, easy to use, access
 ## Install
 
  ```bash
- npm install -D @fpkit/fp-btn
+npm i @fpkit/fp-button
  ```
 
  ### Usage
 
  ```jsx
- import {Button } from '@fpkit/button';
+ import {Button } from '@fpkit/fp-button';
 
  <Button onClick={ alert('clicked button')}>Click here</Button>
 
