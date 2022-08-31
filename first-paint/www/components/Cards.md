@@ -7,7 +7,6 @@
 To style a card we use the `data-card` style attribute or  repurpose `role="presentation` attribute on a `div` element.
 
 ```html preview
-
 <div data-card>
   <h3>Card Title</h3>
     <p>
@@ -16,9 +15,7 @@ To style a card we use the `data-card` style attribute or  repurpose `role="pres
   <div role="footer">
     <a href="#">Read More</a>
   </div>
-
 </div>
-
 ```
 
 ```html preview

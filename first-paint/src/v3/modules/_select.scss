@@ -4,14 +4,12 @@
 //  Author: Shawn Sandy
 //  Date: 2021-04-01
 //  ***************************************
-// */
+//***
 
 @mixin props() {
-  // * css custom properties
-
+  // css custom properties
   --slt-appearance: none;
   --slt-fs: 0.9rem;
-
   @content;
 }
 
