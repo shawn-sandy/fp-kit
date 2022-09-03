@@ -1,6 +1,7 @@
 import React from "react"
 
 /* Defining the props that the Button component will take. */
+
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The type of the button.
@@ -38,6 +39,7 @@ const Button = ({
   defaultStyles = true,
   ...props
 }: ButtonProps) => {
+  // ^?
   const defStyles = {
     paddingInline: "var(--btn-px, 1.4rem)",
     paddingBlock: "var(--btn-py, 0.8rem)",
@@ -51,9 +53,8 @@ const Button = ({
     borderRadius: "var(--btn-radius, 0.1rem)",
   }
 
+
   const stylesObj = defaultStyles ? defStyles : {};
-
-
 
  /**
   * If the button is not disabled, then call the onClick function
