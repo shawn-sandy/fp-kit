@@ -16,7 +16,9 @@
     "test:snapshot": "vitest --run --update",
     "release": "npm publish",
     "release-next": "npm publish --tag next",
-    "analyze": "source-map-explorer ./dist/assets/*.js"
+    "analyze": "source-map-explorer ./dist/assets/*.js",
+    "preconstruct": "preconstruct build",
+    "preconstruct:fix": "preconstruct fix"
   },
   "publishConfig": {
     "access": "public"
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@parcel/packager-ts": "^2.6.2",
     "@parcel/transformer-typescript-types": "^2.6.2",
+    "@preconstruct/cli": "^2.2.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.1",
@@ -52,18 +55,13 @@
   "files": [
     "lib",
     "src",
+    "dist",
     "README.md"
   ],
   "source": "src/index.ts",
-  "main": "./lib/index.umd.cjs",
-  "module": "./lib/index.js",
+  "main": "dist/fpkit-fp-button.cjs.js",
+  "module": "dist/fpkit-fp-button.esm.js",
   "types": "./lib/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./lib/index.js",
-      "require": "./lib/index.umd.cjs"
-    }
-  },
   "keywords": [
     "react",
     "button",
