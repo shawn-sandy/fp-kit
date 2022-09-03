@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.2...@fpkit/fp-button@0.4.3) (2022-09-03)
+
+
+### Bug Fixes
+
+* 🚧 type errors on story ([e18fe5a](https://github.com/shawn-sandy/fp-kit/commit/e18fe5a403937afe090cc9a31b92c4d4778bffb9))
+
+
+### Features
+
+* 👷 add preconstruct ([01d9103](https://github.com/shawn-sandy/fp-kit/commit/01d91036928c1a2c595bc914bda8bb0b029e4f76))
+
+
+
+
+
 ## [0.4.2](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.1...@fpkit/fp-button@0.4.2) (2022-08-24)
 
 

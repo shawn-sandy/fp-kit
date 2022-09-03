@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.6](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.5...@shawnsandy/first-paint@2.16.6) (2022-09-03)
+
+
+### Features
+
+* ✨ add base color palette ([3c4d0e4](https://github.com/shawn-sandy/fp-kit/commit/3c4d0e40ffb1e3c575be8e199f12278a20358552))
+* ✨ add data attributes to modules ([71b0249](https://github.com/shawn-sandy/fp-kit/commit/71b024993e3c0fa6c28fff8755cc14aae98a89c8))
+* ✨ add data variant to breadvrumbs ([e051ca4](https://github.com/shawn-sandy/fp-kit/commit/e051ca4cfaef9a1037650efc9c2e81b2157247e9))
+* ✨ add data variant to modules ([d81444b](https://github.com/shawn-sandy/fp-kit/commit/d81444b1a37a1a61a64ca539349c58994874f5d1))
+* ✨ add data-badge attribute to note module ([6e3cd01](https://github.com/shawn-sandy/fp-kit/commit/6e3cd0178d21b10ceaa1b8633a43cbea6740675c))
+* ✨ update badge variants ([6baa11b](https://github.com/shawn-sandy/fp-kit/commit/6baa11b5010776d22dcf6c7b6e85a22b4ece9152))
+* ✨ update badge variants ([b184eff](https://github.com/shawn-sandy/fp-kit/commit/b184eff1c1a4e7d36c3e8e59f9e1eb39cb0900c8))
+* ✨ update not styles for pragraphs ([ca7d4ae](https://github.com/shawn-sandy/fp-kit/commit/ca7d4ae481537488ac643b670b8d3d25d2b9a54f))
+* 🚧 add a folder for shared variants ([aa48097](https://github.com/shawn-sandy/fp-kit/commit/aa480978d0208d676c9c79e86ac06241d458294b))
+* 🚧 add data-vars for buttons to color schemes ([651f1ca](https://github.com/shawn-sandy/fp-kit/commit/651f1ca44256ed7436b4d141c34f6c05e3e29edc))
+* 🚧 add utility/themes coloe scheme utility ([ecf2edf](https://github.com/shawn-sandy/fp-kit/commit/ecf2edfa767f76529283d282fd98e40c5136baed))
+* 🚧 prefix variant props w/--v** ([27a3f78](https://github.com/shawn-sandy/fp-kit/commit/27a3f78c1172cfb4bd7f5072c4837d205fac2174))
+* 🚧 update padding props ([f98847f](https://github.com/shawn-sandy/fp-kit/commit/f98847fcf7230922ccbbb50f76ada3f077e708c5))
+* 🚧 update padding props ([9547589](https://github.com/shawn-sandy/fp-kit/commit/95475891d94250898a1205db95ba6bae38d0b70b))
+* 🚧 variant/badge styling ([89c2930](https://github.com/shawn-sandy/fp-kit/commit/89c2930bfdd433b246bb5d4415134e1f5ad2acd4))
+
+
+
+
+
 ## [2.16.5](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.4...@shawnsandy/first-paint@2.16.5) (2022-08-24)
 
 **Note:** Version bump only for package @shawnsandy/first-paint

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.8](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.15.7...@shawnsandy/fp-react@0.15.8) (2022-09-03)
+
+
+### Bug Fixes
+
+* 🚧 type errors on story ([e18fe5a](https://github.com/shawn-sandy/fp-kit/commit/e18fe5a403937afe090cc9a31b92c4d4778bffb9))
+
+
+### Features
+
+* ✨ add base color palette ([3c4d0e4](https://github.com/shawn-sandy/fp-kit/commit/3c4d0e40ffb1e3c575be8e199f12278a20358552))
+
+
+
+
+
 ## [0.15.7](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/fp-react@0.15.6...@shawnsandy/fp-react@0.15.7) (2022-08-24)
 
 **Note:** Version bump only for package @shawnsandy/fp-react
