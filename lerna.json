@@ -2,8 +2,8 @@
   "packages": [
     "projects/*",
     "libs/react/*",
+    "libs/types/*",
     "apps/*",
-    "fp-react/",
     "first-paint/",
     "components/react/*"
   ],
