@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.3...@fpkit/fp-button@0.4.4) (2022-09-05)
+
+
+### Reverts
+
+* ⏪️ revert preconstruct changes ([1389dd7](https://github.com/shawn-sandy/fp-kit/commit/1389dd7ede2f2869dcb6a97b5a42341cf7df59e7))
+
+
+
+
+
 ## [0.4.3](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.2...@fpkit/fp-button@0.4.3) (2022-09-03)
 
 
