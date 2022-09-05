@@ -65,18 +65,14 @@ const Button = ({
     }
   }
 
- /**
-  *  If the button is not disabled, then call the onPointerOver function
-  */
+
  const handlePointerdown = (e: React.PointerEvent<HTMLButtonElement>) => {
   if(!disabled) {
     onPointerOver?.(e)
   }
 }
 
-/**
- * A function that returns a function.
- */
+
   const handleHover = (e: React.PointerEvent<HTMLButtonElement>) => {
     if(!disabled) {
     onPointerOver?.(e)

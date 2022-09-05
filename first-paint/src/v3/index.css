@@ -901,7 +901,7 @@ a[data-fp-btn],
   max-height: var(--btn-height, 2.5rem);
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1%));
-  padding-block: var(--btn-py, calc(var(--btn-fs) + 1.1%));
+  padding-block: var(--btn-py, calc(var(--btn-fs) + 0.75%));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
@@ -928,7 +928,7 @@ a[data-fp-btn][type=submit],
 a[data-fp-btn][style*=submit],
 [role=button][type=submit],
 [role=button][style*=submit] {
-  --btn-bg: darkblue;
+  --btn-bg: royalblue;
   --btn-color: white;
 }
 button[disabled], button[aria-disabled=true],
@@ -981,7 +981,7 @@ a[data-fp-btn][data-variant],
 [role=button][data-variant] {
   --btn-bg: var(--vbg);
   --btn-cl: var(--vcl);
-  --btn-fs: var(--vfs);
+  --btn-fs: var(--vfs, .95rem);
 }
 
 input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type=checkbox], [type=radio]) {

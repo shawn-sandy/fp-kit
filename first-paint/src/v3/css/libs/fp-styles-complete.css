@@ -229,7 +229,7 @@ hr {
   max-height: var(--btn-height, 2.5rem);
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1%));
-  padding-block: var(--btn-py, calc(var(--btn-fs) + 1.1%));
+  padding-block: var(--btn-py, calc(var(--btn-fs) + 0.75%));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
@@ -247,7 +247,7 @@ hr {
   --btn-bdr: solid var(--btn-sg);
 }
 .fp-btn[type=submit], .fp-btn[style*=submit] {
-  --btn-bg: darkblue;
+  --btn-bg: royalblue;
   --btn-color: white;
 }
 .fp-btn[disabled], .fp-btn[aria-disabled=true] {
@@ -279,7 +279,7 @@ hr {
 .fp-btn[data-variant] {
   --btn-bg: var(--vbg);
   --btn-cl: var(--vcl);
-  --btn-fs: var(--vfs);
+  --btn-fs: var(--vfs, .95rem);
 }
 .fp-checkbox {
   display: var(--lbl-dsp, flex);

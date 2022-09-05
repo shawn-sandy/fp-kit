@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-colon-newline-after */
 //***
 //  ***************************************
 //  FirsPaint
@@ -5,7 +6,6 @@
 //  Date: 2021-04-01
 //  ***************************************
 // */
-/* stylelint-disable declaration-colon-newline-after */
 
 @mixin props {
   --btn-sm: calc(12rem / 16);
@@ -27,8 +27,8 @@
   min-height: var(--btn-height, calc(40rem / 16));
   max-height: var(--btn-height, calc(40rem / 16));
   place-items: var(--btn-place, center);
-  padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1% ));
-  padding-block: var(--btn-py, calc(var(--btn-fs) + 1.1%));
+  padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1%));
+  padding-block: var(--btn-py, calc(var(--btn-fs) + .75%));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
@@ -41,18 +41,19 @@
   background-color: var(--btn-bg, var(--btn));
   outline: none;
 
-  &[type]{
+  &[type] {
     background-color: var(--btn-bg, var(--btn, lightgray));
     --btn-bdr: solid var(--btn-sg);
   }
 
   &[type="submit"],
   &[style*="submit"] {
-    --btn-bg: darkblue;
+    --btn-bg: royalblue;
     --btn-color: white;
   }
 
-  &[disabled], &[aria-disabled="true"] {
+  &[disabled],
+  &[aria-disabled="true"] {
     cursor: var(--btn-cursor-disabled, not-allowed);
     opacity: var(--btn-opacity-disabled, 0.5);
   }
@@ -88,21 +89,22 @@
   &[data-variant] {
     --btn-bg: var(--vbg);
     --btn-cl: var(--vcl);
-    --btn-fs: var(--vfs);
+    --btn-fs: var(--vfs, .95rem);
   }
+
   @content;
 }
 
-@mixin styles {
-
-}
+@mixin styles {}
 
 @mixin module {
+
   button,
   [style*="--btn"],
   a[data-fp-btn],
   [role="button"] {
     @include rules;
   }
+
   @include styles;
 }
