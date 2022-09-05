@@ -1,4 +1,6 @@
 
+@mixin module {
+
 [data-variant~="primary"] {
   --vbg: var(--bg-primary, #00bcd4);
   --vcl: var(--cl-primary, currentColor);
@@ -44,3 +46,4 @@
   --vcl: var(--cl-dark, white);
 }
 
+}

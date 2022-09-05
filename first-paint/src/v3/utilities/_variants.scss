@@ -6,5 +6,8 @@
  ***************************************
 */
 
-@use './vars/base';
-@use './vars/themes';
+@use './variants/base';
+@use './variants/palettes';
+
+@include base.module;
+@include palettes.module;

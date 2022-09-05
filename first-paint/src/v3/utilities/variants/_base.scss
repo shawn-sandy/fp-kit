@@ -1,7 +1,11 @@
+@mixin module {
 [data-variant] {
   background-color: var(--vbg);
   color: var(--vcl);
   font-size: var(--vfs);
   font-weight: var(--vfw);
 }
+
+}
+
 

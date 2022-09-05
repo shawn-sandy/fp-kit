@@ -1,3 +1,5 @@
+@mixin module {
+
 [data-layout] {
   display: var(--set-dsp, flex);
   margin-inline: var(--set-mx, auto);
@@ -64,4 +66,6 @@
     align-self: var(--grid-item-align-self, stretch);
     place-self: var(--grid-item-place-self, stretch);
   }
+}
+
 }
