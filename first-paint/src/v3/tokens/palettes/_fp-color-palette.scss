@@ -1,0 +1,978 @@
+@mixin tokens {
+
+  /* Primary CSS */
+  /* Background colors */
+  .bg-primary-50 {
+    background-color: hsl(233, 90%, 96%);
+  }
+
+  .bg-primary-100 {
+    background-color: hsl(232, 90%, 92%);
+  }
+
+  .bg-primary-200 {
+    background-color: hsl(233, 90%, 84%);
+  }
+
+  .bg-primary-300 {
+    background-color: hsl(233, 90%, 76%);
+  }
+
+  .bg-primary-400 {
+    background-color: hsl(233, 90%, 68%);
+  }
+
+  .bg-primary-500 {
+    background-color: hsl(233, 90%, 60%);
+  }
+
+  .bg-primary-600 {
+    background-color: hsl(233, 60%, 48%);
+  }
+
+  .bg-primary-700 {
+    background-color: hsl(233, 60%, 36%);
+  }
+
+  .bg-primary-800 {
+    background-color: hsl(233, 61%, 24%);
+  }
+
+  .bg-primary-900 {
+    background-color: hsl(232, 61%, 12%);
+  }
+
+  /*ext colors */
+  .color-primary-50 {
+    color: hsl(233, 90%, 96%);
+  }
+
+  .color-primary-100 {
+    color: hsl(232, 90%, 92%);
+  }
+
+  .color-primary-200 {
+    color: hsl(233, 90%, 84%);
+  }
+
+  .color-primary-300 {
+    color: hsl(233, 90%, 76%);
+  }
+
+  .color-primary-400 {
+    color: hsl(233, 90%, 68%);
+  }
+
+  .color-primary-500 {
+    color: hsl(233, 90%, 60%);
+  }
+
+  .color-primary-600 {
+    color: hsl(233, 60%, 48%);
+  }
+
+  .color-primary-700 {
+    color: hsl(233, 60%, 36%);
+  }
+
+  .color-primary-800 {
+    color: hsl(233, 61%, 24%);
+  }
+
+  .color-primary-900 {
+    color: hsl(232, 61%, 12%);
+  }
+
+  /* Border colors */
+  .border-color-primary-50 {
+    border-color: hsl(233, 90%, 96%);
+  }
+
+  .border-color-primary-100 {
+    border-color: hsl(232, 90%, 92%);
+  }
+
+  .border-color-primary-200 {
+    border-color: hsl(233, 90%, 84%);
+  }
+
+  .border-color-primary-300 {
+    border-color: hsl(233, 90%, 76%);
+  }
+
+  .border-color-primary-400 {
+    border-color: hsl(233, 90%, 68%);
+  }
+
+  .border-color-primary-500 {
+    border-color: hsl(233, 90%, 60%);
+  }
+
+  .border-color-primary-600 {
+    border-color: hsl(233, 60%, 48%);
+  }
+
+  .border-color-primary-700 {
+    border-color: hsl(233, 60%, 36%);
+  }
+
+  .border-color-primary-800 {
+    border-color: hsl(233, 61%, 24%);
+  }
+
+  .border-color-primary-900 {
+    border-color: hsl(232, 61%, 12%);
+  }
+
+
+  /*Secondary CSS */
+  /* Background colors */
+  .bg-secondary-50 {
+    background-color: hsl(248, 65%, 95%);
+  }
+
+  .bg-secondary-100 {
+    background-color: hsl(248, 65%, 91%);
+  }
+
+  .bg-secondary-200 {
+    background-color: hsl(249, 66%, 82%);
+  }
+
+  .bg-secondary-300 {
+    background-color: hsl(249, 67%, 73%);
+  }
+
+  .bg-secondary-400 {
+    background-color: hsl(249, 66%, 64%);
+  }
+
+  .bg-secondary-500 {
+    background-color: hsl(249, 66%, 55%);
+  }
+
+  .bg-secondary-600 {
+    background-color: hsl(249, 55%, 44%);
+  }
+
+  .bg-secondary-700 {
+    background-color: hsl(249, 55%, 33%);
+  }
+
+  .bg-secondary-800 {
+    background-color: hsl(249, 55%, 22%);
+  }
+
+  .bg-secondary-900 {
+    background-color: hsl(248, 54%, 11%);
+  }
+
+  .bg-secondary-950 {
+    background-color: hsl(251, 57%, 5%);
+  }
+
+  /*ext colors */
+  .color-secondary-50 {
+    color: hsl(248, 65%, 95%);
+  }
+
+  .color-secondary-100 {
+    color: hsl(248, 65%, 91%);
+  }
+
+  .color-secondary-200 {
+    color: hsl(249, 66%, 82%);
+  }
+
+  .color-secondary-300 {
+    color: hsl(249, 67%, 73%);
+  }
+
+  .color-secondary-400 {
+    color: hsl(249, 66%, 64%);
+  }
+
+  .color-secondary-500 {
+    color: hsl(249, 66%, 55%);
+  }
+
+  .color-secondary-600 {
+    color: hsl(249, 55%, 44%);
+  }
+
+  .color-secondary-700 {
+    color: hsl(249, 55%, 33%);
+  }
+
+  .color-secondary-800 {
+    color: hsl(249, 55%, 22%);
+  }
+
+  .color-secondary-900 {
+    color: hsl(248, 54%, 11%);
+  }
+
+  .color-secondary-950 {
+    color: hsl(251, 57%, 5%);
+  }
+
+  /* Border colors */
+  .border-color-secondary-50 {
+    border-color: hsl(248, 65%, 95%);
+  }
+
+  .border-color-secondary-100 {
+    border-color: hsl(248, 65%, 91%);
+  }
+
+  .border-color-secondary-200 {
+    border-color: hsl(249, 66%, 82%);
+  }
+
+  .border-color-secondary-300 {
+    border-color: hsl(249, 67%, 73%);
+  }
+
+  .border-color-secondary-400 {
+    border-color: hsl(249, 66%, 64%);
+  }
+
+  .border-color-secondary-500 {
+    border-color: hsl(249, 66%, 55%);
+  }
+
+  .border-color-secondary-600 {
+    border-color: hsl(249, 55%, 44%);
+  }
+
+  .border-color-secondary-700 {
+    border-color: hsl(249, 55%, 33%);
+  }
+
+  .border-color-secondary-800 {
+    border-color: hsl(249, 55%, 22%);
+  }
+
+  .border-color-secondary-900 {
+    border-color: hsl(248, 54%, 11%);
+  }
+
+  .border-color-secondary-950 {
+    border-color: hsl(251, 57%, 5%);
+  }
+
+
+  /*ertiary CSS */
+  /* Background colors */
+  .bg-tertiary-50 {
+    background-color: hsl(192, 71%, 99%);
+  }
+
+  .bg-tertiary-100 {
+    background-color: hsl(200, 69%, 97%);
+  }
+
+  .bg-tertiary-200 {
+    background-color: hsl(194, 63%, 95%);
+  }
+
+  .bg-tertiary-300 {
+    background-color: hsl(196, 66%, 92%);
+  }
+
+  .bg-tertiary-400 {
+    background-color: hsl(194, 64%, 89%);
+  }
+
+  .bg-tertiary-500 {
+    background-color: hsl(195, 65%, 87%);
+  }
+
+  .bg-tertiary-600 {
+    background-color: hsl(194, 22%, 69%);
+  }
+
+  .bg-tertiary-700 {
+    background-color: hsl(196, 11%, 52%);
+  }
+
+  .bg-tertiary-800 {
+    background-color: hsl(194, 10%, 35%);
+  }
+
+  .bg-tertiary-900 {
+    background-color: hsl(200, 10%, 17%);
+  }
+
+  .bg-tertiary-950 {
+    background-color: hsl(195, 9%, 9%);
+  }
+
+  /*ext colors */
+  .color-tertiary-50 {
+    color: hsl(192, 71%, 99%);
+  }
+
+  .color-tertiary-100 {
+    color: hsl(200, 69%, 97%);
+  }
+
+  .color-tertiary-200 {
+    color: hsl(194, 63%, 95%);
+  }
+
+  .color-tertiary-300 {
+    color: hsl(196, 66%, 92%);
+  }
+
+  .color-tertiary-400 {
+    color: hsl(194, 64%, 89%);
+  }
+
+  .color-tertiary-500 {
+    color: hsl(195, 65%, 87%);
+  }
+
+  .color-tertiary-600 {
+    color: hsl(194, 22%, 69%);
+  }
+
+  .color-tertiary-700 {
+    color: hsl(196, 11%, 52%);
+  }
+
+  .color-tertiary-800 {
+    color: hsl(194, 10%, 35%);
+  }
+
+  .color-tertiary-900 {
+    color: hsl(200, 10%, 17%);
+  }
+
+  .color-tertiary-950 {
+    color: hsl(195, 9%, 9%);
+  }
+
+  /* Border colors */
+  .border-color-tertiary-50 {
+    border-color: hsl(192, 71%, 99%);
+  }
+
+  .border-color-tertiary-100 {
+    border-color: hsl(200, 69%, 97%);
+  }
+
+  .border-color-tertiary-200 {
+    border-color: hsl(194, 63%, 95%);
+  }
+
+  .border-color-tertiary-300 {
+    border-color: hsl(196, 66%, 92%);
+  }
+
+  .border-color-tertiary-400 {
+    border-color: hsl(194, 64%, 89%);
+  }
+
+  .border-color-tertiary-500 {
+    border-color: hsl(195, 65%, 87%);
+  }
+
+  .border-color-tertiary-600 {
+    border-color: hsl(194, 22%, 69%);
+  }
+
+  .border-color-tertiary-700 {
+    border-color: hsl(196, 11%, 52%);
+  }
+
+  .border-color-tertiary-800 {
+    border-color: hsl(194, 10%, 35%);
+  }
+
+  .border-color-tertiary-900 {
+    border-color: hsl(200, 10%, 17%);
+  }
+
+  .border-color-tertiary-950 {
+    border-color: hsl(195, 9%, 9%);
+  }
+
+
+  /*uccess CSS */
+  /* Background colors */
+  .bg-success-100 {
+    background-color: hsl(146, 44%, 94%);
+  }
+
+  .bg-success-200 {
+    background-color: hsl(145, 46%, 88%);
+  }
+
+  .bg-success-300 {
+    background-color: hsl(146, 46%, 75%);
+  }
+
+  .bg-success-400 {
+    background-color: hsl(146, 46%, 56%);
+  }
+
+  .bg-success-500 {
+    background-color: hsl(146, 75%, 38%);
+  }
+
+  .bg-success-600 {
+    background-color: hsl(146, 75%, 26%);
+  }
+
+  .bg-success-700 {
+    background-color: hsl(146, 74%, 15%);
+  }
+
+  .bg-success-800 {
+    background-color: hsl(145, 74%, 8%);
+  }
+
+  .bg-success-900 {
+    background-color: hsl(148, 79%, 4%);
+  }
+
+  /*ext colors */
+  .color-success-100 {
+    color: hsl(146, 44%, 94%);
+  }
+
+  .color-success-200 {
+    color: hsl(145, 46%, 88%);
+  }
+
+  .color-success-300 {
+    color: hsl(146, 46%, 75%);
+  }
+
+  .color-success-400 {
+    color: hsl(146, 46%, 56%);
+  }
+
+  .color-success-500 {
+    color: hsl(146, 75%, 38%);
+  }
+
+  .color-success-600 {
+    color: hsl(146, 75%, 26%);
+  }
+
+  .color-success-700 {
+    color: hsl(146, 74%, 15%);
+  }
+
+  .color-success-800 {
+    color: hsl(145, 74%, 8%);
+  }
+
+  .color-success-900 {
+    color: hsl(148, 79%, 4%);
+  }
+
+  /* Border colors */
+  .border-color-success-100 {
+    border-color: hsl(146, 44%, 94%);
+  }
+
+  .border-color-success-200 {
+    border-color: hsl(145, 46%, 88%);
+  }
+
+  .border-color-success-300 {
+    border-color: hsl(146, 46%, 75%);
+  }
+
+  .border-color-success-400 {
+    border-color: hsl(146, 46%, 56%);
+  }
+
+  .border-color-success-500 {
+    border-color: hsl(146, 75%, 38%);
+  }
+
+  .border-color-success-600 {
+    border-color: hsl(146, 75%, 26%);
+  }
+
+  .border-color-success-700 {
+    border-color: hsl(146, 74%, 15%);
+  }
+
+  .border-color-success-800 {
+    border-color: hsl(145, 74%, 8%);
+  }
+
+  .border-color-success-900 {
+    border-color: hsl(148, 79%, 4%);
+  }
+
+
+  /* Warning CSS */
+  /* Background colors */
+  .bg-warning-100 {
+    background-color: hsl(39, 100%, 96%);
+  }
+
+  .bg-warning-200 {
+    background-color: hsl(39, 100%, 92%);
+  }
+
+  .bg-warning-300 {
+    background-color: hsl(40, 100%, 84%);
+  }
+
+  .bg-warning-400 {
+    background-color: hsl(39, 100%, 73%);
+  }
+
+  .bg-warning-500 {
+    background-color: hsl(39, 100%, 61%);
+  }
+
+  .bg-warning-600 {
+    background-color: hsl(39, 64%, 43%);
+  }
+
+  .bg-warning-700 {
+    background-color: hsl(40, 65%, 24%);
+  }
+
+  .bg-warning-800 {
+    background-color: hsl(39, 65%, 12%);
+  }
+
+  .bg-warning-900 {
+    background-color: hsl(41, 61%, 6%);
+  }
+
+  /*ext colors */
+  .color-warning-100 {
+    color: hsl(39, 100%, 96%);
+  }
+
+  .color-warning-200 {
+    color: hsl(39, 100%, 92%);
+  }
+
+  .color-warning-300 {
+    color: hsl(40, 100%, 84%);
+  }
+
+  .color-warning-400 {
+    color: hsl(39, 100%, 73%);
+  }
+
+  .color-warning-500 {
+    color: hsl(39, 100%, 61%);
+  }
+
+  .color-warning-600 {
+    color: hsl(39, 64%, 43%);
+  }
+
+  .color-warning-700 {
+    color: hsl(40, 65%, 24%);
+  }
+
+  .color-warning-800 {
+    color: hsl(39, 65%, 12%);
+  }
+
+  .color-warning-900 {
+    color: hsl(41, 61%, 6%);
+  }
+
+  /* Border colors */
+  .border-color-warning-100 {
+    border-color: hsl(39, 100%, 96%);
+  }
+
+  .border-color-warning-200 {
+    border-color: hsl(39, 100%, 92%);
+  }
+
+  .border-color-warning-300 {
+    border-color: hsl(40, 100%, 84%);
+  }
+
+  .border-color-warning-400 {
+    border-color: hsl(39, 100%, 73%);
+  }
+
+  .border-color-warning-500 {
+    border-color: hsl(39, 100%, 61%);
+  }
+
+  .border-color-warning-600 {
+    border-color: hsl(39, 64%, 43%);
+  }
+
+  .border-color-warning-700 {
+    border-color: hsl(40, 65%, 24%);
+  }
+
+  .border-color-warning-800 {
+    border-color: hsl(39, 65%, 12%);
+  }
+
+  .border-color-warning-900 {
+    border-color: hsl(41, 61%, 6%);
+  }
+
+
+  /* Error CSS */
+  /* Background colors */
+  .bg-error-100 {
+    background-color: hsl(348, 77%, 95%);
+  }
+
+  .bg-error-200 {
+    background-color: hsl(347, 77%, 90%);
+  }
+
+  .bg-error-300 {
+    background-color: hsl(347, 75%, 79%);
+  }
+
+  .bg-error-400 {
+    background-color: hsl(347, 76%, 64%);
+  }
+
+  .bg-error-500 {
+    background-color: hsl(347, 82%, 48%);
+  }
+
+  .bg-error-600 {
+    background-color: hsl(347, 82%, 34%);
+  }
+
+  .bg-error-700 {
+    background-color: hsl(347, 82%, 19%);
+  }
+
+  .bg-error-800 {
+    background-color: hsl(347, 84%, 10%);
+  }
+
+  .bg-error-900 {
+    background-color: hsl(345, 83%, 5%);
+  }
+
+  /*ext colors */
+  .color-error-100 {
+    color: hsl(348, 77%, 95%);
+  }
+
+  .color-error-200 {
+    color: hsl(347, 77%, 90%);
+  }
+
+  .color-error-300 {
+    color: hsl(347, 75%, 79%);
+  }
+
+  .color-error-400 {
+    color: hsl(347, 76%, 64%);
+  }
+
+  .color-error-500 {
+    color: hsl(347, 82%, 48%);
+  }
+
+  .color-error-600 {
+    color: hsl(347, 82%, 34%);
+  }
+
+  .color-error-700 {
+    color: hsl(347, 82%, 19%);
+  }
+
+  .color-error-800 {
+    color: hsl(347, 84%, 10%);
+  }
+
+  .color-error-900 {
+    color: hsl(345, 83%, 5%);
+  }
+
+  /* Border colors */
+  .border-color-error-100 {
+    border-color: hsl(348, 77%, 95%);
+  }
+
+  .border-color-error-200 {
+    border-color: hsl(347, 77%, 90%);
+  }
+
+  .border-color-error-300 {
+    border-color: hsl(347, 75%, 79%);
+  }
+
+  .border-color-error-400 {
+    border-color: hsl(347, 76%, 64%);
+  }
+
+  .border-color-error-500 {
+    border-color: hsl(347, 82%, 48%);
+  }
+
+  .border-color-error-600 {
+    border-color: hsl(347, 82%, 34%);
+  }
+
+  .border-color-error-700 {
+    border-color: hsl(347, 82%, 19%);
+  }
+
+  .border-color-error-800 {
+    border-color: hsl(347, 84%, 10%);
+  }
+
+  .border-color-error-900 {
+    border-color: hsl(345, 83%, 5%);
+  }
+
+
+  /* Grey CSS */
+  /* Background colors */
+  .bg-grey-50 {
+    background-color: hsl(0, 0%, 99%);
+  }
+
+  .bg-grey-100 {
+    background-color: hsl(0, 0%, 96%);
+  }
+
+  .bg-grey-200 {
+    background-color: hsl(0, 0%, 93%);
+  }
+
+  .bg-grey-300 {
+    background-color: hsl(0, 0%, 88%);
+  }
+
+  .bg-grey-500 {
+    background-color: hsl(0, 0%, 62%);
+  }
+
+  .bg-grey-600 {
+    background-color: hsl(0, 0%, 46%);
+  }
+
+  .bg-grey-700 {
+    background-color: hsl(0, 0%, 38%);
+  }
+
+  .bg-grey-800 {
+    background-color: hsl(0, 0%, 26%);
+  }
+
+  .bg-grey-900 {
+    background-color: hsl(0, 0%, 19%);
+  }
+
+  .bg-grey-950 {
+    background-color: hsl(0, 0%, 13%);
+  }
+
+  /*ext colors */
+  .color-grey-50 {
+    color: hsl(0, 0%, 99%);
+  }
+
+  .color-grey-100 {
+    color: hsl(0, 0%, 96%);
+  }
+
+  .color-grey-200 {
+    color: hsl(0, 0%, 93%);
+  }
+
+  .color-grey-300 {
+    color: hsl(0, 0%, 88%);
+  }
+
+  .color-grey-500 {
+    color: hsl(0, 0%, 62%);
+  }
+
+  .color-grey-600 {
+    color: hsl(0, 0%, 46%);
+  }
+
+  .color-grey-700 {
+    color: hsl(0, 0%, 38%);
+  }
+
+  .color-grey-800 {
+    color: hsl(0, 0%, 26%);
+  }
+
+  .color-grey-900 {
+    color: hsl(0, 0%, 19%);
+  }
+
+  .color-grey-950 {
+    color: hsl(0, 0%, 13%);
+  }
+
+  /* Border colors */
+  .border-color-grey-50 {
+    border-color: hsl(0, 0%, 99%);
+  }
+
+  .border-color-grey-100 {
+    border-color: hsl(0, 0%, 96%);
+  }
+
+  .border-color-grey-200 {
+    border-color: hsl(0, 0%, 93%);
+  }
+
+  .border-color-grey-300 {
+    border-color: hsl(0, 0%, 88%);
+  }
+
+  .border-color-grey-500 {
+    border-color: hsl(0, 0%, 62%);
+  }
+
+  .border-color-grey-600 {
+    border-color: hsl(0, 0%, 46%);
+  }
+
+  .border-color-grey-700 {
+    border-color: hsl(0, 0%, 38%);
+  }
+
+  .border-color-grey-800 {
+    border-color: hsl(0, 0%, 26%);
+  }
+
+  .border-color-grey-900 {
+    border-color: hsl(0, 0%, 19%);
+  }
+
+  .border-color-grey-950 {
+    border-color: hsl(0, 0%, 13%);
+  }
+
+
+  /* Venetian Nights CSS */
+  /* Background colors */
+  .bg-venetian-nights-100 {
+    background-color: hsl(245, 92%, 95%);
+  }
+
+  .bg-venetian-nights-200 {
+    background-color: hsl(245, 92%, 90%);
+  }
+
+  .bg-venetian-nights-300 {
+    background-color: hsl(246, 93%, 84%);
+  }
+
+  .bg-venetian-nights-400 {
+    background-color: hsl(246, 93%, 77%);
+  }
+
+  .bg-venetian-nights-500 {
+    background-color: hsl(248, 94%, 67%);
+  }
+
+  .bg-venetian-nights-600 {
+    background-color: hsl(248, 69%, 60%);
+  }
+
+  .bg-venetian-nights-700 {
+    background-color: hsl(248, 50%, 52%);
+  }
+
+  .bg-venetian-nights-800 {
+    background-color: hsl(248, 47%, 42%);
+  }
+
+  .bg-venetian-nights-900 {
+    background-color: hsl(248, 47%, 30%);
+  }
+
+  /*ext colors */
+  .color-venetian-nights-100 {
+    color: hsl(245, 92%, 95%);
+  }
+
+  .color-venetian-nights-200 {
+    color: hsl(245, 92%, 90%);
+  }
+
+  .color-venetian-nights-300 {
+    color: hsl(246, 93%, 84%);
+  }
+
+  .color-venetian-nights-400 {
+    color: hsl(246, 93%, 77%);
+  }
+
+  .color-venetian-nights-500 {
+    color: hsl(248, 94%, 67%);
+  }
+
+  .color-venetian-nights-600 {
+    color: hsl(248, 69%, 60%);
+  }
+
+  .color-venetian-nights-700 {
+    color: hsl(248, 50%, 52%);
+  }
+
+  .color-venetian-nights-800 {
+    color: hsl(248, 47%, 42%);
+  }
+
+  .color-venetian-nights-900 {
+    color: hsl(248, 47%, 30%);
+  }
+
+  /* Border colors */
+  .border-color-venetian-nights-100 {
+    border-color: hsl(245, 92%, 95%);
+  }
+
+  .border-color-venetian-nights-200 {
+    border-color: hsl(245, 92%, 90%);
+  }
+
+  .border-color-venetian-nights-300 {
+    border-color: hsl(246, 93%, 84%);
+  }
+
+  .border-color-venetian-nights-400 {
+    border-color: hsl(246, 93%, 77%);
+  }
+
+  .border-color-venetian-nights-500 {
+    border-color: hsl(248, 94%, 67%);
+  }
+
+  .border-color-venetian-nights-600 {
+    border-color: hsl(248, 69%, 60%);
+  }
+
+  .border-color-venetian-nights-700 {
+    border-color: hsl(248, 50%, 52%);
+  }
+
+  .border-color-venetian-nights-800 {
+    border-color: hsl(248, 47%, 42%);
+  }
+
+  .border-color-venetian-nights-900 {
+    border-color: hsl(248, 47%, 30%);
+  }
+
+}

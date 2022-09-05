@@ -25,6 +25,11 @@
 @forward "./modules/scrollbar" as scrollbar-*;
 @forward "./modules/breadcrumb" as breadcrumb-*;
 @forward "./modules/table" as table-*;
+// tokens
+@use "./tokens/palettes/fp-color-palette" as colors;
+@use "./tokens/palettes/names";
+
+
 // components
 @use "./components/type.scss";
 @include props.module();
@@ -41,5 +46,6 @@
 @include select.module();
 @include footer.module();
 
-
+@include colors.tokens();
+@include names.tokens();
 
