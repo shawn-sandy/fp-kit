@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.5](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.4...@fpkit/fp-button@0.4.5) (2022-09-05)
+
+
+### Features
+
+* ✨ update button/variant dynamic padding ([71c4a60](https://github.com/shawn-sandy/fp-kit/commit/71c4a60f8567526d9e54fcf6a2d45a9881a5d06c))
+
+
+
+
+
 ## [0.4.4](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.3...@fpkit/fp-button@0.4.4) (2022-09-05)
 
 

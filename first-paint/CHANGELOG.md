@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.9](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.8...@shawnsandy/first-paint@2.16.9) (2022-09-05)
+
+
+### Features
+
+* ✨ update button/variant dynamic padding ([71c4a60](https://github.com/shawn-sandy/fp-kit/commit/71c4a60f8567526d9e54fcf6a2d45a9881a5d06c))
+* ✨ update/add tokens ([5bf9b4f](https://github.com/shawn-sandy/fp-kit/commit/5bf9b4f60a1e2e19d2ffe92dc401bd603d17240f))
+* ✨ update/add tokens ([0208236](https://github.com/shawn-sandy/fp-kit/commit/0208236e6544bbb381f5a2ac62a3c1cb0daf62a4))
+
+
+
+
+
 ## [2.16.8](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.7...@shawnsandy/first-paint@2.16.8) (2022-09-05)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
