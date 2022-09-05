@@ -59,8 +59,8 @@
     "README.md"
   ],
   "source": "src/index.ts",
-  "main": "dist/fpkit-fp-button.cjs.js",
-  "module": "dist/fpkit-fp-button.esm.js",
+  "main": "./lib/index.umd.cjs",
+  "module": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "keywords": [
     "react",
