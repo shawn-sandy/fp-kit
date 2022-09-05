@@ -29,7 +29,6 @@
 @use "./tokens/palettes/fp-color-palette" as colors;
 @use "./tokens/palettes/names";
 
-
 // components
 @use "./components/type.scss";
 @include props.module();
