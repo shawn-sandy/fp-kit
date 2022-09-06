@@ -1,0 +1,14 @@
+:root {
+/* Primary CSS Vars */
+--primary-50T: hsl(233, 90%, 96%);
+--primary-100T: hsl(232, 90%, 92%);
+--primary-200T: hsl(233, 90%, 84%);
+--primary-300T: hsl(233, 90%, 76%);
+--primary-400T: hsl(233, 90%, 68%);
+--primary-500(Base): hsl(233, 90%, 60%);
+--primary-600S: hsl(233, 60%, 48%);
+--primary-700S: hsl(233, 60%, 36%);
+--primary-800S: hsl(233, 61%, 24%);
+--primary-900S: hsl(232, 61%, 12%);
+
+}
