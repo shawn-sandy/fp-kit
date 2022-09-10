@@ -2,7 +2,8 @@ import React from "react"
 
 /* Defining the props that the Button component will take. */
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The type of the button.
    * @default none
@@ -36,6 +37,7 @@ const Button = ({
   onPointerDown,
   onPointerOver,
   onClick,
+  onMouseLeave,
   defaultStyles = true,
   ...props
 }: ButtonProps) => {
@@ -50,44 +52,56 @@ const Button = ({
     border: "var(--btn-border, none)",
     color: "var(--btn-color, white)",
     backgroundColor: "var(--btn-bg, royalblue)",
-    borderRadius: "var(--btn-radius, 0.1rem)",
+    borderRadius: "var(--btn-radius, 0.1rem)"
   }
 
+  const stylesObj = defaultStyles ? defStyles : {}
 
-  const stylesObj = defaultStyles ? defStyles : {};
-
- /**
-  * If the button is not disabled, then call the onClick function
-  */
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if(!disabled) {
+  /**
+   * If the button is not disabled, then call the onClick function
+   */
+  const handleClick = (
+    e: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    if (!disabled) {
       onClick?.(e)
     }
   }
 
-
- const handlePointerdown = (e: React.PointerEvent<HTMLButtonElement>) => {
-  if(!disabled) {
-    onPointerOver?.(e)
-  }
-}
-
-
-  const handleHover = (e: React.PointerEvent<HTMLButtonElement>) => {
-    if(!disabled) {
-    onPointerOver?.(e)
+  const handlePointerdown = (
+    e: React.PointerEvent<HTMLButtonElement>
+  ) => {
+    if (!disabled) {
+      onPointerDown?.(e)
     }
   }
 
-/* Returning a button element. */
+  const handleHover = (
+    e: React.PointerEvent<HTMLButtonElement>
+  ) => {
+    if (!disabled) {
+      onPointerOver?.(e)
+    }
+  }
+
+  const handleMouseLeave = (
+    e: React.PointerEvent<HTMLButtonElement>
+  ) => {
+    if (!disabled) {
+      onMouseLeave?.(e)
+    }
+  }
+
+  /* Returning a button element. */
   return (
     <button
       type={type}
       onPointerOver={handleHover}
       onPointerDown={handlePointerdown}
       onClick={handleClick}
-      style={{...stylesObj, ...styles }}
+      style={{ ...stylesObj, ...styles }}
       aria-disabled={disabled}
+      onMouseLeave={handleMouseLeave}
       {...props}
     >
       {children}
