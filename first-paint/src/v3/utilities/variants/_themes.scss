@@ -1,12 +1,12 @@
 
 
 [data-variant~="primary"] {
-  --vbg: var(--bg-primary, #00bcd4);
+  --vbg: var(--bg-primary, var(--primary-500, royalblue));
   --vcl: var(--cl-primary, currentColor);
 }
 
 [data-variant~="secondary"] {
-  --vbg: var(--bg-secondary, #f50057);
+  --vbg: var(--bg-secondary, var(--secondary-500));
   --vcl: var(--cl-secondary, white);
 }
 
@@ -16,17 +16,17 @@
 }
 
 [data-variant~="success"] {
-  --vbg: var(--bg-success, #4caf50);
+  --vbg: var(--bg-success, var(--success-500, green));
   --vcl: var(--cl-success, white);
 }
 
 [data-variant~="danger"] {
-  --vbg: var(--bg-danger, #f44336);
+  --vbg: var(--bg-danger, var(--danger-500, red));
   --vcl: var(--cl-danger, white);
 }
 
 [data-variant~="warning"] {
-  --vbg: var(--bg-warning, #ff9800);
+  --vbg: var(--bg-warning, var(--warning-500, orange));
   --vcl: var(--cl-warning, white);
 }
 

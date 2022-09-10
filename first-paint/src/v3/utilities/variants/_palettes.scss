@@ -2,22 +2,22 @@
 @mixin module {
 
 [data-variant~="primary"] {
-  --vbg: var(--bg-primary, #00bcd4);
-  --vcl: var(--cl-primary, currentColor);
+  --vbg: var(--bg-primary, var(--primary-500, royalblue));
+  --vcl: var(--cl-primary, var(--white));
 }
 
 [data-variant~="secondary"] {
-  --vbg: var(--bg-secondary, #f50057);
+  --vbg: var(--bg-secondary, var(--secondary-500));
   --vcl: var(--cl-secondary, white);
 }
-
+ß
 [data-variant~="tertiary"] {
   --vbg: var(--bg-tertiary, #ffd600);
   --vcl: var(--cl-tertiary, currentColor);
 }
 
 [data-variant~="success"] {
-  --vbg: var(--bg-success, #4caf50);
+  --vbg: var(--bg-success, var(--success-500, green));
   --vcl: var(--cl-success, white);
 }
 

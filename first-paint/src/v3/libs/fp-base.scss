@@ -1,3 +1,10 @@
+/**
+ * @fileoverview
+ * This file contains the base styles for the first-paint library.
+ * It is used to set up the global styles for the library.
+ * @author First Paint
+ */
+
 @use "../modules/reset.scss";
 @use "../modules/props";
 @use "../modules/global.scss";

@@ -29,3 +29,6 @@
 @forward "./list" as list-*;
 @forward "./scrollbar" as scrollbar-*;
 @forward "./content" as content-*;
+
+@forward "../tokens/palettes/fp-color-palette" as colors-*;
+@forward "../tokens/palettes/names" as names-*;
