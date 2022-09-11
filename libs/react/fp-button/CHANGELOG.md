@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.6](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.5...@fpkit/fp-button@0.4.6) (2022-09-11)
+
+
+### Features
+
+* ♻️ refactor button events function ([5ccfd5e](https://github.com/shawn-sandy/fp-kit/commit/5ccfd5e5cb1be182fbe0d1344814d5190f5fe692))
+* ✨ add on mouse leave handler to fp-button ([833751c](https://github.com/shawn-sandy/fp-kit/commit/833751c2eaa4cc0c0db23f2dc4cb5134f1dbc047))
+
+
+
+
+
 ## [0.4.5](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.4...@fpkit/fp-button@0.4.5) (2022-09-05)
 
 

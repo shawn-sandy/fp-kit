@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.11](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.10...@shawnsandy/first-paint@2.16.11) (2022-09-11)
+
+
+### Features
+
+* ♻️ refactor button events function ([5ccfd5e](https://github.com/shawn-sandy/fp-kit/commit/5ccfd5e5cb1be182fbe0d1344814d5190f5fe692))
+* 🎨 update color props ([b22d558](https://github.com/shawn-sandy/fp-kit/commit/b22d55867e96a0c7b9a5e3bfe67c52eb4cc57e15))
+* 🚧 color tokens and variants ([294f0fc](https://github.com/shawn-sandy/fp-kit/commit/294f0fc6fdbb311a6ed289a940cbf56cf3800fce))
+
+
+
+
+
 ## [2.16.10](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.9...@shawnsandy/first-paint@2.16.10) (2022-09-07)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
