@@ -49,8 +49,6 @@
 >
   Default Button
 </button>
-
-
 ```
 
 ```html preview
@@ -146,13 +144,6 @@ style="--btn-rds:var(--btn-pill);"
 
 ```html preview
 <button type="button" data-variant="warning">Warning Variant</button>
-
-```
-
-## Variants attributes
-
-```html preview
-<button type="button" data-variant="secondary">Secondary Button</button>
 
 ```
 
