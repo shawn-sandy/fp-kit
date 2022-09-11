@@ -71,7 +71,7 @@
 
 ### Button vanilla
 
-Remove the `type` attribute to create a button without border or background color, **styleless buttons**--useful for creating/styling buttons that look like links using of vice-versa. For crating button links `<a>` you use `style="--btn:*"` or the `[role="button"] attribute.
+Remove the `type` attribute to create a button without border or background color, **styleless buttons**--useful for creating/styling buttons that look like links using or vice-versa. For creating button links `<a>` you use `style="--btn:*"` or the `[role="button"] attribute.
 
 
 ```html preview

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ChangeEvent, ChangeEventHandler, EventHandler, PointerEventHandler, ReactEventHandler } from "react"
 
 /* Defining the props that the Button component will take. */
 
@@ -38,10 +38,10 @@ const Button = ({
   onPointerOver,
   onClick,
   onMouseLeave,
+  onPointerLeave,
   defaultStyles = true,
   ...props
 }: ButtonProps) => {
-  // ^?
   const defStyles = {
     paddingInline: "var(--btn-px, 1.4rem)",
     paddingBlock: "var(--btn-py, 0.8rem)",
@@ -57,38 +57,21 @@ const Button = ({
 
   const stylesObj = defaultStyles ? defStyles : {}
 
-  /**
-   * If the button is not disabled, then call the onClick function
-   */
-  const handleClick = (
-    e: React.MouseEvent<HTMLButtonElement>
-  ) => {
-    if (!disabled) {
-      onClick?.(e)
-    }
-  }
-
-  const handlePointerdown = (
+  const handlePointerEvents = (
     e: React.PointerEvent<HTMLButtonElement>
   ) => {
     if (!disabled) {
-      onPointerDown?.(e)
-    }
-  }
-
-  const handleHover = (
-    e: React.PointerEvent<HTMLButtonElement>
-  ) => {
-    if (!disabled) {
-      onPointerOver?.(e)
-    }
-  }
-
-  const handleMouseLeave = (
-    e: React.PointerEvent<HTMLButtonElement>
-  ) => {
-    if (!disabled) {
-      onMouseLeave?.(e)
+      switch (e.type) {
+        case 'pointerover':
+          onPointerOver?.(e)
+          break;
+        case 'pointerleave':
+          onPointerLeave?.(e)
+          break;
+        default:
+          onPointerDown?.(e)
+          break;
+      }
     }
   }
 
@@ -96,12 +79,11 @@ const Button = ({
   return (
     <button
       type={type}
-      onPointerOver={handleHover}
-      onPointerDown={handlePointerdown}
-      onClick={handleClick}
+      onPointerOver={handlePointerEvents}
+      onPointerDown={handlePointerEvents}
+      onPointerLeave={handlePointerEvents}
       style={{ ...stylesObj, ...styles }}
       aria-disabled={disabled}
-      onMouseLeave={handleMouseLeave}
       {...props}
     >
       {children}
