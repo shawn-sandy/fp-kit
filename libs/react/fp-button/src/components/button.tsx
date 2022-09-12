@@ -28,6 +28,20 @@ interface ButtonProps
   defaultStyles?: boolean
 }
 
+const defStyles = {
+  paddingInline: "var(--btn-px, 1.4rem)",
+  paddingBlock: "var(--btn-py, 0.8rem)",
+  display: "var(--btn-dsp, inline-flex)",
+  placeItems: "var(--btn-place, center)",
+  justifyContent: "var(--btn-justify, center)",
+  cursor: "var(--btn-cursor, pointer)",
+  border: "var(--btn-border, none)",
+  color: "var(--btn-color, white)",
+  backgroundColor: "var(--btn-bg, royalblue)",
+  borderRadius: "var(--btn-radius, 0.1rem)"
+}
+
+
 const Button = ({
   type,
   children,
@@ -42,21 +56,8 @@ const Button = ({
   defaultStyles = true,
   ...props
 }: ButtonProps) => {
-  const defStyles = {
-    paddingInline: "var(--btn-px, 1.4rem)",
-    paddingBlock: "var(--btn-py, 0.8rem)",
-    display: "var(--btn-dsp, inline-flex)",
-    placeItems: "var(--btn-place, center)",
-    justifyContent: "var(--btn-justify, center)",
-    cursor: "var(--btn-cursor, pointer)",
-    border: "var(--btn-border, none)",
-    color: "var(--btn-color, white)",
-    backgroundColor: "var(--btn-bg, royalblue)",
-    borderRadius: "var(--btn-radius, 0.1rem)"
-  }
 
   const stylesObj = defaultStyles ? defStyles : {}
-
   const handlePointerEvents = (
     e: React.PointerEvent<HTMLButtonElement>
   ) => {
