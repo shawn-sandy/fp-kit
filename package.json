@@ -34,20 +34,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "pre-commit": {
-    "run": [
-      "test"
-    ]
-  },
-  "directories": {
-    "lib": "dist",
-    "gulp": "gulp",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib",
-    "gulp"
-  ],
   "auto-changelog": {
     "unreleased": true,
     "template": "config/_changelog.hbs"
