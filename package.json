@@ -136,7 +136,10 @@
   },
   "lint-staged": {
     "**/.*.{js,ts,jsx,tsx}": "eslint --fix",
-    "**/.*.{js,jsx,ts,tsx,md,html,scss,json,md}": "prettier --write"
+    "**/.*.{js,jsx,ts,tsx,md,html,scss,json,md}": "prettier --write",
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*.{js,css,md}": "prettier --write"
   },
   "auto": {
     "plugins": [
