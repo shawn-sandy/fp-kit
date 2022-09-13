@@ -138,12 +138,6 @@ A simple badge <span role="note" data-variant="secondary">Secondary</span>
 
 ```html preview
 <div>
-A simple badge <span role="note" data-variant="tertiary">Tertiary</span>
-</div>
-```
-
-```html preview
-<div>
 A simple badge <span role="note" data-variant="warning">Warning</span>
 </div>
 ```

@@ -1,7 +1,7 @@
 .fp-badge, .fp-note {
-  --beta: var(--fp-orange, orange);
-  --stable: var(--fp-green, green) ;
-  --production: var(--fp-blue, royalblue);
+  --beta: var(--warning-500, orange);
+  --stable: var(--success-500, green) ;
+  --production: var(--primary-500, royalblue);
   padding-inline: var(--badge-px, 0.7rem);
   padding-block: var(--badge-py, 0.2rem);
   color: var(--badge-cl, currentColor);
@@ -9,7 +9,7 @@
   font-weight: var(--badge-fw, normal);
   border: var(--badge-brd, none);
   border-radius: var(--badge-rds, 99rem);
-  background-color: var(--badge-bg, var(--badge, lightgray));
+  background-color: var(--badge-bg, var(--badge, var(--neutral-100)));
   text-decoration: var(--badge-decoration, none);
   text-transform: var(--badge-tt, var(--tt));
   font-weight: var(--badge-fw, 700);
@@ -34,6 +34,7 @@
   --vradius: 99rem;
   --vpx: 0.7rem;
   --vpy: 0.2rem;
+  --vfw: 700;
   --badge-bg: var(--vbg);
   --badge-cl: var(--vcl);
   --badge-fs: var(--vfs);
