@@ -24,6 +24,7 @@
     "git:push": "git push",
     "commit": "run-s git:add git:cz git:push",
     "prepare": "husky install",
+    "postinstall": "husky install",
     "plop": "plop",
     "eslint": "eslint '**/src/**/*.jsx'",
     "lint-staged": "lint-staged",
