@@ -1,7 +1,7 @@
 #!/bin/sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# npm test && npm run foo
+npm test && npm run foo
 
 # echo 'Starting prettier...'
 # npx pretty-quick --staged "$1"
