@@ -50,8 +50,6 @@ const Button = ({
   classes,
   onPointerDown,
   onPointerOver,
-  onClick,
-  onMouseLeave,
   onPointerLeave,
   defaultStyles = true,
   ...props
