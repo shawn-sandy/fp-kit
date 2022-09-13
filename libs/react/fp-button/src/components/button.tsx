@@ -1,4 +1,4 @@
-import React, { ChangeEvent, ChangeEventHandler, EventHandler, PointerEventHandler, ReactEventHandler } from "react"
+import React from "react"
 
 /* Defining the props that the Button component will take. */
 

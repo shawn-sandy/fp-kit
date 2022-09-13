@@ -253,8 +253,8 @@ hr {
   --btn-color: white;
 }
 .fp-btn[disabled], .fp-btn[aria-disabled=true] {
-  cursor: var(--btn-cursor-disabled, not-allowed);
-  opacity: var(--btn-opacity-disabled, 0.5);
+  cursor: var(--btn-cursor, not-allowed);
+  opacity: var(--btn-opacity, 0.5);
 }
 .fp-btn:is(:hover, :focus) {
   --btn-cl: var(--btn-cl-hover);

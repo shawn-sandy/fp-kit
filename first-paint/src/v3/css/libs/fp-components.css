@@ -254,8 +254,8 @@ a[data-fp-btn][disabled],
 a[data-fp-btn][aria-disabled=true],
 [role=button][disabled],
 [role=button][aria-disabled=true] {
-  cursor: var(--btn-cursor-disabled, not-allowed);
-  opacity: var(--btn-opacity-disabled, 0.5);
+  cursor: var(--btn-cursor, not-allowed);
+  opacity: var(--btn-opacity, 0.5);
 }
 button:is(:hover, :focus),
 [style*="--btn"]:is(:hover, :focus),
