@@ -14,6 +14,10 @@ npx commitlint -V --edit  "$1"
 echo 'Starting lint-staged...'
 npx lint-staged "$1"
 
+# run build
+echo 'Starting lint-staged...'
+npm run build "$1"
+
 
 # If everything passes... Now we can commit
 echo '✅✅✅✅ Excellent all test passed, I am committing this now.'
