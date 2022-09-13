@@ -1,2 +1,2 @@
-# fp-kit
+# FP Kit
 A Frontend UI/UX toolkit
