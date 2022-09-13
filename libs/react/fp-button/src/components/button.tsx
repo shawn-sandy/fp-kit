@@ -1,7 +1,5 @@
 import React from "react"
 
-/* Defining the props that the Button component will take. */
-
 interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
