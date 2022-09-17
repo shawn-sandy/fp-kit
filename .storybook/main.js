@@ -3,8 +3,6 @@ module.exports = {
     "../libs/react/guides/**/*.stories.mdx",
     "../libs/react/**/*.stories.mdx",
     "../libs/react/**/*.stories.@(js|jsx|ts|tsx)",
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   "addons": [
     "@storybook/addon-links",
