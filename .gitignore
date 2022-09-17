@@ -122,3 +122,4 @@ libs/.DS_Store
 storybook-static/
 .parcel-cache/
 lib
+.DS_Store

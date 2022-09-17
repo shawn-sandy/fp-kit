@@ -38,7 +38,7 @@ function App() {
           </a>
         </p>
         <p>
-          <Button type="button" onPointerDown={handleClick}>count is: {count}</Button>
+          <Button type="button" onPointerDown={handleClick} data-variant="red">count is: {count}</Button>
         </p>
       </header>
     </div>
