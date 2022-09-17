@@ -8,10 +8,11 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
-    // "@storybook/addon-interactions",
-    // 'storybook-addon-live-examples',
-    // "@storybook/addon-storysource",
+    "@storybook/addon-interactions",
     "@geometricpanda/storybook-addon-badges"
   ],
+  features: {
+    interactionsDebugger: true, // 👈 Enable playback controls
+  },
   "framework": "@storybook/react"
 }
