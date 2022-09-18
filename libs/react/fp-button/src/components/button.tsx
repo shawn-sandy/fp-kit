@@ -12,14 +12,17 @@ interface ButtonProps
    * Button label/content
    */
   children: React.ReactNode
+
   /**
    * Button styles and props
    */
   styles?: object
+
   /**
    * button classes
    */
   classes?: string
+  
   /**
    * default button styles
    */
