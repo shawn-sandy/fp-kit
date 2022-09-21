@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/shared@0.0.2...@fpkit/shared@0.0.3) (2022-09-21)
+
+**Note:** Version bump only for package @fpkit/shared
+
+
+
+
+
 ## 0.0.2 (2022-09-21)
 
 
