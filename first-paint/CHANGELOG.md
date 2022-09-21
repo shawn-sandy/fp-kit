@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.12](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.11...@shawnsandy/first-paint@2.16.12) (2022-09-21)
+
+
+### Features
+
+* ✨ add post-css import plugin ([390c5e1](https://github.com/shawn-sandy/fp-kit/commit/390c5e1000a084566a1ba6208139d92e79137abc))
+* 💄 fist paint tokens ([2338a1a](https://github.com/shawn-sandy/fp-kit/commit/2338a1a793b01ad6cc47160a43e7cb999bae5949))
+
+
+
+
+
 ## [2.16.11](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.10...@shawnsandy/first-paint@2.16.11) (2022-09-11)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.8](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.7...@fpkit/fp-button@0.4.8) (2022-09-21)
+
+
+### Features
+
+* ✨ add shared package ([d41fb8a](https://github.com/shawn-sandy/fp-kit/commit/d41fb8a1f9df921eb59966daf2255a1bfdca9c47))
+* 💄 fist paint tokens ([2338a1a](https://github.com/shawn-sandy/fp-kit/commit/2338a1a793b01ad6cc47160a43e7cb999bae5949))
+
+
+
+
+
 ## [0.4.7](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.6...@fpkit/fp-button@0.4.7) (2022-09-12)
 
 **Note:** Version bump only for package @fpkit/fp-button
