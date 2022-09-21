@@ -22,14 +22,14 @@ interface ButtonProps
    * button classes
    */
   classes?: string
-  
+
   /**
    * default button styles
    */
   defaultStyles?: boolean
 }
 
-const defStyles = {
+export const defStyles = {
   paddingInline: "var(--btn-px, 1.4rem)",
   paddingBlock: "var(--btn-py, 0.8rem)",
   display: "var(--btn-dsp, inline-flex)",
