@@ -132,6 +132,13 @@
     "ts-node": "10.8.0",
     "tslib": "^2.4.0"
   },
+  "dependencies": {
+    "core-js": "^3.22.7",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-router-dom": "6.3.0",
+    "regenerator-runtime": "0.13.9"
+  },
   "lint-staged": {
     "**/.*.{js,ts,jsx,tsx}": "eslint --fix",
     "**/.*.{js,jsx,ts,tsx,md,html,scss,json,md}": "prettier --write",
