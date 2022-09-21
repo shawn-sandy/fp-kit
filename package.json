@@ -32,6 +32,8 @@
     "mit": "mitosis compile --to=react src/component.lite.jsx > components/react/components/component.jsx",
     "laddle": "ladle serve",
     "storybook": "start-storybook -p 6006",
+    "storybook-test": "test-storybook",
+    "storybook-test:watch": "test-storybook --watch --coverage",
     "build-storybook": "build-storybook"
   },
   "auto-changelog": {
@@ -66,10 +68,12 @@
     "@shawnsandy/ideas": "^0.3.12",
     "@shawnsandy/mix": "^0.10.32",
     "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-coverage": "^0.0.4",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.12",
     "@storybook/addon-links": "^6.5.9",
     "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/jest": "^0.0.10",
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/react": "^6.5.10",
     "@storybook/test-runner": "^0.7.2",

@@ -9,7 +9,8 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
     "@storybook/addon-interactions",
-    "@geometricpanda/storybook-addon-badges"
+    "@geometricpanda/storybook-addon-badges",
+    "@storybook/addon-coverage"
   ],
   features: {
     interactionsDebugger: true, // 👈 Enable playback controls

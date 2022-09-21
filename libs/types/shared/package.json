@@ -1,8 +1,9 @@
 {
   "name": "@fpkit/shared",
   "version": "0.0.1",
-  "description": "Shared types library",
-  "main": "index.js",
+  "description": "Shared JS libs and types library",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,6 +13,7 @@
   "license": "MIT",
   "devDependencies": {
     "@preconstruct/cli": "^2.2.1",
+    "@storybook/test-runner": "^0.7.2",
     "tsup": "^6.2.3",
     "typescript": "^4.8.3"
   },

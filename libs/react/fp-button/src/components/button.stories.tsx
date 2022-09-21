@@ -1,8 +1,12 @@
 import React from 'react'
-import Button from './button'
 
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
+
+import { within, userEvent } from '@storybook/testing-library';
+import { expect } from '@storybook/jest';
+
+import Button from './button'
 
 export default {
   title: 'Elements/Buttons',
@@ -67,5 +71,23 @@ UnStyled.args = {
   children: 'UnStyled Button',
   defaultStyles: false,
   onPointerDown: () => alert('Clicked UnStyled')
+}
+
+export const ButtonTest = Template.bind({})
+ButtonTest.args = {
+  children: 'Button Test',
+  type: 'button',
+  onPointerDown: () => console.log('Clicked Default Button')
+}
+
+ButtonTest.play = async ({ canvasElement }) => {
+  const { getByRole } = within(canvasElement)
+  const button = getByRole('button')
+  userEvent.click(button)
+  expect(button).toHaveTextContent('Button Test')
+  expect(button).toHaveAccessibleName('Button Test')
+  expect(button).toHaveAttribute('type', 'button')
+  // await userEvent.type(button, 'Hello World')
+  // await expect(button).toHaveTextContent('Hello World')
 }
 
