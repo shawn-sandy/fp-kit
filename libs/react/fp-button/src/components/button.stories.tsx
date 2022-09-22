@@ -89,7 +89,7 @@ UnStyled.args = {
   onPointerDown: () => alert("Clicked UnStyled")
 }
 
-let clicked:boolean = false
+let clicked: boolean = false
 
 UnStyled.play = async ({ canvasElement }) => {
   const button = within(canvasElement).getByRole("button")
@@ -104,6 +104,7 @@ ButtonTest.args = {
   children: "Button Test",
   type: "button",
   onPointerDown: () => {
+    clicked = false
     clicked = true
   }
 }
@@ -115,8 +116,6 @@ ButtonTest.play = async ({ args, canvasElement }) => {
   expect(button).toHaveAttribute("type", "button")
   expect(button).toHaveAttribute("style")
   expect(clicked).toBeFalsy()
-  await userEvent.click(button)
-  await waitFor(() =>
-    expect(clicked).toBeTruthy()
-  )
+  userEvent.click(button)
+  await waitFor(() => expect(clicked).toBeTruthy())
 }
