@@ -15,8 +15,6 @@ import { expect } from "@storybook/jest"
 
 import Button, { defStyles } from "./button"
 
-// const click = jest.fn();
-
 export default {
   title: "Elements/Buttons",
   component: Button,
@@ -31,7 +29,9 @@ export default {
       control: "boolean",
       defaultValue: true
     },
-    onPointerDown: { action: true }
+    onPointerDown: { action: 'down' },
+    onPointerLeave: { action: 'leave' },
+    onPointerOver: { action: 'over' }
   },
   parameters: {
     badges: [BADGE.BETA]
@@ -39,13 +39,12 @@ export default {
 } as ComponentMeta<typeof Button>
 
 const Template: ComponentStory<typeof Button> = (args) => (
-  <Button {...args} />
+  <Button {...args}>{args.children}</Button>
 )
 
 export const DefaultButton = Template.bind({})
 DefaultButton.args = {
   children: "Default Button",
-  onPointerDown: () => console.log("Clicked Default Button")
 }
 
 export const Disabled = Template.bind({})
@@ -93,29 +92,29 @@ let clicked: boolean = false
 
 UnStyled.play = async ({ canvasElement }) => {
   const button = within(canvasElement).getByRole("button")
-  userEvent.click(button)
+
   expect(button).toHaveAccessibleName("UnStyled Button")
   expect(button).not.toHaveAttribute("style")
 }
 
-export const ButtonTest = Template.bind({})
+export const ButtonInteractions = Template.bind({})
 
-ButtonTest.args = {
+ButtonInteractions.args = {
   children: "Button Test",
   type: "button",
   onPointerDown: () => {
-    clicked = false
     clicked = true
   }
 }
 
-ButtonTest.play = async ({ args, canvasElement }) => {
+ButtonInteractions.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const button = getByRole("button")
   expect(button).toHaveAccessibleName("Button Test")
   expect(button).toHaveAttribute("type", "button")
   expect(button).toHaveAttribute("style")
   expect(clicked).toBeFalsy()
+  clicked = false
   userEvent.click(button)
   await waitFor(() => expect(clicked).toBeTruthy())
 }
