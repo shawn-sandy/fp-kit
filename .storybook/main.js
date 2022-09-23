@@ -10,6 +10,7 @@ module.exports = {
     "@storybook/addon-a11y",
     "@storybook/addon-interactions",
     "@geometricpanda/storybook-addon-badges",
+    "@storybook/addon-storysource",
     "@storybook/addon-coverage"
   ],
   features: {
