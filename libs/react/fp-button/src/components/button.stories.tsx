@@ -100,7 +100,7 @@ UnStyled.play = async ({ canvasElement }) => {
 export const ButtonInteractions = Template.bind({})
 
 ButtonInteractions.args = {
-  children: "Button Test",
+  children: "Button Interaction",
   type: "button",
   onPointerDown: () => {
     clicked = true
@@ -110,11 +110,11 @@ ButtonInteractions.args = {
 ButtonInteractions.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const button = getByRole("button")
-  expect(button).toHaveAccessibleName("Button Test")
+  expect(button).toHaveAccessibleName("Button Interaction")
   expect(button).toHaveAttribute("type", "button")
   expect(button).toHaveAttribute("style")
   expect(clicked).toBeFalsy()
   clicked = false
-  userEvent.click(button)
+  userEvent.click(button )
   await waitFor(() => expect(clicked).toBeTruthy())
 }

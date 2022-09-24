@@ -1,0 +1,58 @@
+{
+  "name": "@fpkit/fp-badge",
+  "private": false,
+  "version": "0.0.1",
+  "scripts": {
+    "start": "vite --open",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:package": "tsc && vite build --mode package --config vite.package.config.ts",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --coverage --ui",
+    "test:coverage": "vitest --coverage",
+    "test:ui:coverage": "vitest --coverage --ui",
+    "test:snapshot": "vitest --run --update"
+  },
+  "dependencies": {
+    "@fpkit/fp-button": "^0.4.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "vite-plugin-dts": "^1.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.1",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/react-test-renderer": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "@vitest/ui": "^0.15.1",
+    "c8": "^7.11.3",
+    "happy-dom": "^5.3.1",
+    "jsdom": "^19.0.0",
+    "parcel": "^2.6.2",
+    "react-test-renderer": "^18.2.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9",
+    "vitest": "^0.15.1"
+  },
+  "description": "Introduction",
+  "main": "vitest.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawn-sandy/react-vite.git"
+  },
+  "author": "shawn sandy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shawn-sandy/react-vite/issues"
+  },
+  "homepage": "https://github.com/shawn-sandy/react-vite#readme",
+  "keywords": [
+    "FPKit",
+    "badge",
+    "component"
+  ]
+}
