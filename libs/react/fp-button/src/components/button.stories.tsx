@@ -16,7 +16,7 @@ import { expect } from "@storybook/jest"
 import Button, { defStyles } from "./button"
 
 export default {
-  title: "Elements/Buttons",
+  title: "Components/Buttons",
   component: Button,
   argTypes: {
     children: { control: "text" },

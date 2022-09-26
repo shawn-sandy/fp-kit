@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
-import FpBadge from './component/badge/fp-badge'
+import FPBadge from './component/badge/fp-badge'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +13,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <FpBadge element="span" role='note'>Badge</FpBadge>
+          <FPBadge element="span" role='note'>Badge</FPBadge>
         </p>
       </header>
     </div>

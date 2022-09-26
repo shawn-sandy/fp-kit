@@ -15,7 +15,7 @@ import { expect } from "@storybook/jest"
 
 import Badge from "./badge"
 export default {
-  title: "Elements/Badge",
+  title: "Components/Badge",
   component: Badge,
   argTypes: {
     children: { control: "text" },

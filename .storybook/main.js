@@ -3,6 +3,7 @@ module.exports = {
     "../libs/react/guides/**/*.stories.mdx",
     "../libs/react/**/*.stories.mdx",
     "../libs/react/**/*.stories.@(js|jsx|ts|tsx)",
+    "../src/**/*.stories.mdx",
   ],
   "addons": [
     "@storybook/addon-links",
@@ -15,6 +16,7 @@ module.exports = {
   ],
   features: {
     interactionsDebugger: true, // 👈 Enable playback controls
+    previewMdx2: true
   },
   "framework": "@storybook/react"
 }
