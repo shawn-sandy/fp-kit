@@ -1,12 +1,13 @@
 {
   "name": "@fpkit/fp",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "scripts": {
     "start": "vite --open",
     "dev": "vite",
     "build": "tsc && vite build",
     "build:package": "tsc && vite build --mode package --config vite.package.config.ts",
+    "package": "tsup --dts",
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --coverage --ui",
@@ -34,12 +35,17 @@
     "jsdom": "^19.0.0",
     "parcel": "^2.6.2",
     "react-test-renderer": "^18.2.0",
+    "tsup": "^6.2.3",
     "typescript": "^4.6.3",
     "vite": "^2.9.9",
     "vitest": "^0.15.1"
   },
   "description": "Introduction",
-  "main": "vitest.config.js",
+  "type": "module",
+  "source": "src/index.ts",
+  "main": "./lib/index.umd.cjs",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shawn-sandy/react-vite.git"

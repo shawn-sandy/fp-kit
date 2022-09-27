@@ -16,10 +16,12 @@ export default defineConfig({
   build: {
     outDir: resolve(__dirname, "./lib"),
     sourcemap: true,
-    // minify: 'terser',
+    minify: true,
+    manifest: true,
+    reportCompressedSize: true,
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "Link",
+      name: "FP",
       fileName: "index"
     },
     rollupOptions: {
@@ -30,7 +32,6 @@ export default defineConfig({
           react: "React",
           "react-dom": "ReactDOM"
         }
-
       }
     }
   }

@@ -22,7 +22,7 @@ const defStyles = {
   textTransform: "var(--badge-tt, var(--tt))"
 }
 
-export const FPBadge = ({
+export const Badge = ({
   element,
   role,
   children,
@@ -37,4 +37,4 @@ export const FPBadge = ({
   )
 }
 
-export default FPBadge
+export default Badge

@@ -13,10 +13,10 @@ import {
 } from "@storybook/testing-library"
 import { expect } from "@storybook/jest"
 
-import FPBadge from "./fp-badge"
+import Badge from "./fp-badge"
 export default {
   title: "FPKIT/Components/Badge",
-  component: FPBadge,
+  component: Badge,
   argTypes: {
     children: { control: "text" },
     role: {
@@ -27,25 +27,19 @@ export default {
   parameters: {
     badges: [BADGE.BETA]
   }
-} as ComponentMeta<typeof FPBadge>
+} as ComponentMeta<typeof Badge>
 
-const Template: ComponentStory<typeof FPBadge> = (args) => (
-  <FPBadge {...args}>{args.children}</FPBadge>
+const Template: ComponentStory<typeof Badge> = (args) => (
+  <Badge {...args}>{args.children}</Badge>
 )
 
-export const Badge = Template.bind({})
-Badge.args = {
+export const Default = Template.bind({})
+Default.args = {
   children: "Badge",
+  role: "note"
 }
 
-export const BadgeInteractions = Template.bind({})
-
-BadgeInteractions.args = {
-  children: "Badge",
-  role: "note",
-}
-
-BadgeInteractions.play = async ({ args, canvasElement }) => {
+Default.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const badge = getByRole("note")
    expect(badge).toBeInTheDocument()
