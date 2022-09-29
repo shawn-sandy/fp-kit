@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         <p>Hello Vite + React!</p>
         <p>
-          <FPBadge element="span" role='note'>Badge</FPBadge>
+          <FPBadge elm="span" role='note'>Badge</FPBadge>
         </p>
       </header>
     </div>

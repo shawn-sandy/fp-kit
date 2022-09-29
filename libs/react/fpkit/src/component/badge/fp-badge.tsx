@@ -1,7 +1,7 @@
 import FP from "../fp"
 
 export interface FpBadgeProps {
-  element: "span" | "p" | "a"
+  elm: "span" | "p" | "a"
   children: React.ReactNode
   role: "note" | "alert" | "status"
   renderStyles?: boolean
@@ -23,15 +23,21 @@ const defStyles = {
 }
 
 export const Badge = ({
-  element,
+  elm,
   role,
   children,
   renderStyles = true,
+  styles = {},
   ...props
 }: FpBadgeProps) => {
   const stylesObj = renderStyles ? defStyles : {}
   return (
-    <FP as="span" role={role} {...props} style={ stylesObj }>
+    <FP
+      as={elm}
+      role={role}
+      styl={{ stylesObj, ...styles }}
+      {...props}
+    >
       {children}
     </FP>
   )
