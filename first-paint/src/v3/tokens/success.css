@@ -1,0 +1,13 @@
+:root {
+/* Success CSS Vars */
+--success-100: hsl(135, 29%, 92%);
+--success-200: hsl(136, 30%, 83%);
+--success-300: hsl(136, 32%, 72%);
+--success-400: hsl(138, 36%, 60%);
+--success-500: hsl(146, 75%, 38%);
+--success-600: hsl(146, 76%, 34%);
+--success-700: hsl(146, 76%, 29%);
+--success-800: hsl(146, 75%, 24%);
+--success-900: hsl(146, 76%, 17%);
+
+}

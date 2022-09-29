@@ -36,6 +36,17 @@
     background: var(--scroll-bg, gray);
 
   }
+
+  &[data-variant] {
+    --scroll: var(--vscroll);
+    --overflow-y: var(--voverflow-y);
+    --overflow-x: var(--voverflow-x);
+    --scroll-size: var(--vscroll-size);
+    --scroll-w: var(--vscroll-w);
+    --scroll-h: var(--vscroll-h);
+    --scroll-track-bg: var(--vscroll-track-bg);
+    --scroll-bg: var(--vscroll-bg);
+  }
   @content;
 }
 
@@ -45,7 +56,7 @@
 }
 
 @mixin module {
-  [style*="--scroll"], div[role="region"], .fp-scroll {
+  [style*="--scroll"], div[role="region"], [data-fp-scroll] {
     @include props;
     @include rules;
   }

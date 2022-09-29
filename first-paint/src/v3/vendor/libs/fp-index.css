@@ -807,7 +807,7 @@ table tbody tr:last-of-type, .fp-table tbody tr:last-of-type {
   place-content: flex-start;
   place-items: center;
   gap: 0.7rem;
-  justify-content: space-between;
+  justify-content: var(--summary-justify, space-between);
   font-size: var(--summary-fs, 1.1rem);
   color: var(--summary-color, currentColor);
   padding: var(--details-pd, 1rem);
@@ -831,33 +831,6 @@ table tbody tr:last-of-type, .fp-table tbody tr:last-of-type {
   content: "×";
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-}
-
-a, .fp-link {
-  --link-border: none;
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-  -webkit-text-decoration: var(--link-decoration, none);
-          text-decoration: var(--link-decoration, none);
-  border: var(--link-border);
-  padding-inline: var(--link-px, 0.25rem);
-  transition: var(--tran-all);
-}
-a:hover, .fp-link:hover {
-  --link-decoration: underline;
-  -webkit-filter: var(--filter);
-          filter: var(--filter);
-}
-a:visited, .fp-link:visited {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-a:active, .fp-link:active {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-a[role=button], a[style="--btn"], .fp-link[role=button], .fp-link[style="--btn"] {
-  background-color: var(--link-bg);
 }
 
 form, .fp-form {
@@ -1018,6 +991,7 @@ figcaption, .fp-cations {
 button,
 [style*="--btn"],
 .fp-button,
+a[data-fp-btn],
 [role=button] {
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
@@ -1027,7 +1001,7 @@ button,
   min-height: 2.5rem;
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.8));
+  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.2));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   -webkit-text-decoration: var(--btn-deco, none);
@@ -1039,10 +1013,12 @@ button,
   margin: var(--btn-spc, 0.25rem);
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
+  outline: none;
 }
 button[type],
 [style*="--btn"][type],
 .fp-button[type],
+a[data-fp-btn][type],
 [role=button][type] {
   background-color: var(--btn-bg, var(--btn, lightgray));
   --btn-bdr: solid var(--btn-sg);
@@ -1052,22 +1028,30 @@ button[type=submit], button[style*=submit],
 [style*="--btn"][style*=submit],
 .fp-button[type=submit],
 .fp-button[style*=submit],
+a[data-fp-btn][type=submit],
+a[data-fp-btn][style*=submit],
 [role=button][type=submit],
 [role=button][style*=submit] {
   --btn-bg: darkblue;
   --btn-color: white;
 }
-button[disabled],
+button[disabled], button[aria-disabled=true],
 [style*="--btn"][disabled],
+[style*="--btn"][aria-disabled=true],
 .fp-button[disabled],
-[role=button][disabled] {
+.fp-button[aria-disabled=true],
+a[data-fp-btn][disabled],
+a[data-fp-btn][aria-disabled=true],
+[role=button][disabled],
+[role=button][aria-disabled=true] {
   cursor: var(--btn-cursor-disabled, not-allowed);
   opacity: var(--btn-opacity-disabled, 0.5);
 }
-button:hover,
-[style*="--btn"]:hover,
-.fp-button:hover,
-[role=button]:hover {
+button:is(:hover, :focus),
+[style*="--btn"]:is(:hover, :focus),
+.fp-button:is(:hover, :focus),
+a[data-fp-btn]:is(:hover, :focus),
+[role=button]:is(:hover, :focus) {
   --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg-over, var(--btn, lightgray));
@@ -1075,12 +1059,16 @@ button:hover,
           filter: invert(1) hue-rotate 180deg;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+  outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
+  outline-offset: var(--line-offset, 5px);
 }
 button[type=reset], button[style*="--btn-reset"],
 [style*="--btn"][type=reset],
 [style*="--btn"][style*="--btn-reset"],
 .fp-button[type=reset],
 .fp-button[style*="--btn-reset"],
+a[data-fp-btn][type=reset],
+a[data-fp-btn][style*="--btn-reset"],
 [role=button][type=reset],
 [role=button][style*="--btn-reset"] {
   --btn-bg: transparent;
@@ -1092,12 +1080,21 @@ button[type=submit], button[style*="--btn-submit"],
 [style*="--btn"][style*="--btn-submit"],
 .fp-button[type=submit],
 .fp-button[style*="--btn-submit"],
+a[data-fp-btn][type=submit],
+a[data-fp-btn][style*="--btn-submit"],
 [role=button][type=submit],
 [role=button][style*="--btn-submit"] {
   --btn-bg: var(--blue-500);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
+}
+button[data-fp-btn~=pill],
+[style*="--btn"][data-fp-btn~=pill],
+.fp-button[data-fp-btn~=pill],
+a[data-fp-btn][data-fp-btn~=pill],
+[role=button][data-fp-btn~=pill] {
+  border-radius: 100rem;
 }
 
 div[role=presentation], .fp-card[role=presentation] {
@@ -1383,18 +1380,35 @@ footer:not([aria-label], [role=footer]) p,
   --p-fs: var(--footer-fs, var(--fs));
 }
 
-ul, [style*="--list"], .fp-list {
+ul, [style*="--list"], [data-fp-list] {
   --listOff: ;
   list-style: var(--list-s, inside);
   font-size: var(--list-fs, 0.95rem);
   line-height: var(--list-lh, 1.5);
   -webkit-padding-start: var(--list-pxs, 1.5rem);
           padding-inline-start: var(--list-pxs, 1.5rem);
+  display: var(--list-dsp, block);
 }
 
 [style*="--listOff"] {
   --list-s: var(--listOff, none);
   --list-pxs: var(--listOff, 5px);
+}
+
+[data-fp-list~=unstyled] {
+  --list-s: none;
+  --list-pxs: 0;
+}
+[data-fp-list~=unstyled] li {
+  list-style: var(--list-s);
+  --list-pxs: var(--list-pxs);
+}
+
+[data-fp-list~=inline] {
+  --list-dsp: flex;
+}
+[data-fp-list~=inline] li {
+  padding-inline: var(--list-px, 1rem);
 }
 
 [style*="--scroll"], div[role=region], .fp-scroll {
@@ -1421,7 +1435,7 @@ ul, [style*="--list"], .fp-list {
   background: var(--scroll-bg, gray);
 }
 
-nav > :where(ol[aria-label], div[role="list"]), .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]), nav > :where(ol, [data-fp-breadcrumb]) {
   display: var(--crumb-dsp, flex);
   direction: var(--crumb-direction, row);
   gap: var(--crumb-gap, 0.5rem);
@@ -1430,16 +1444,18 @@ nav > :where(ol[aria-label], div[role="list"]), .fp-breadcrumb > :where(ol[aria-
   font-size: var(--crumb-fs, var(--fs-2));
   color: var(--crumb-cl, currentColor);
 }
-nav > :where(ol[aria-label], div[role="list"])::-webkit-details-marker, .fp-breadcrumb > :where(ol[aria-label], div[role="list"])::-webkit-details-marker {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb])::-webkit-details-marker, nav > :where(ol, [data-fp-breadcrumb])::-webkit-details-marker {
   display: none;
 }
-nav > :where(ol[aria-label], div[role="list"]) li, .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) li {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li, nav > :where(ol, [data-fp-breadcrumb]) li {
   color: var(--crumb-cl);
 }
-nav > :where(ol[aria-label], div[role="list"]) li + li, .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) li + li {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li + li, nav > :where(ol, [data-fp-breadcrumb]) li + li {
   color: currentColor;
 }
-nav > :where(ol[aria-label], div[role="list"]) li + li::before, .fp-breadcrumb > :where(ol[aria-label], div[role="list"]) li + li::before {
+nav[aria-label~=breadcrumb] > :where(ol, [data-fp-breadcrumb]) li + li::before, nav > :where(ol, [data-fp-breadcrumb]) li + li::before {
   content: var(--crumb-icon, "/");
   color: currentColor;
+  -webkit-padding-end: 0.5rem;
+          padding-inline-end: 0.5rem;
 }

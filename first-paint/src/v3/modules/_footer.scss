@@ -18,6 +18,11 @@
   p {
     --p-fs: var(--footer-fs, var(--fs));
   }
+  &[data-variant] {
+    --footer-fs: var(--vfs);
+    --footer-cl: var(--vcl);
+    --footer-bg: var(--vbg);
+  }
   @content;
 }
 
@@ -28,7 +33,7 @@
 
 @mixin module {
   footer,
-  .fp-footer,
+  [data-footer],
   [role="contentinfo"] {
     &:not([aria-label], [role="footer"]) {
       @include props;

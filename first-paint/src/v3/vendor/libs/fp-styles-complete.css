@@ -205,7 +205,7 @@ hr {
   min-height: 2.5rem;
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.8));
+  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.2));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   -webkit-text-decoration: var(--btn-deco, none);
@@ -217,6 +217,7 @@ hr {
   margin: var(--btn-spc, 0.25rem);
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
+  outline: none;
 }
 .fp-btn[type] {
   background-color: var(--btn-bg, var(--btn, lightgray));
@@ -226,11 +227,11 @@ hr {
   --btn-bg: darkblue;
   --btn-color: white;
 }
-.fp-btn[disabled] {
+.fp-btn[disabled], .fp-btn[aria-disabled=true] {
   cursor: var(--btn-cursor-disabled, not-allowed);
   opacity: var(--btn-opacity-disabled, 0.5);
 }
-.fp-btn:hover {
+.fp-btn:is(:hover, :focus) {
   --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg-over, var(--btn, lightgray));
@@ -238,6 +239,8 @@ hr {
           filter: invert(1) hue-rotate 180deg;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+  outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
+  outline-offset: var(--line-offset, 5px);
 }
 .fp-btn[type=reset], .fp-btn[style*="--btn-reset"] {
   --btn-bg: transparent;
@@ -249,6 +252,9 @@ hr {
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
+}
+.fp-btn[data-fp-btn~=pill] {
+  border-radius: 100rem;
 }
 .fp-checkbox {
   display: var(--lbl-dsp, flex);
@@ -327,7 +333,7 @@ hr {
   place-content: flex-start;
   place-items: center;
   gap: 0.7rem;
-  justify-content: space-between;
+  justify-content: var(--summary-justify, space-between);
   font-size: var(--summary-fs, 1.1rem);
   color: var(--summary-color, currentColor);
   padding: var(--details-pd, 1rem);
@@ -795,10 +801,25 @@ hr {
   line-height: var(--list-lh, 1.5);
   -webkit-padding-start: var(--list-pxs, 1.5rem);
           padding-inline-start: var(--list-pxs, 1.5rem);
+  display: var(--list-dsp, block);
 }
 .fp [style*="--listOff"] {
   --list-s: var(--listOff, none);
   --list-pxs: var(--listOff, 5px);
+}
+.fp [data-fp-list~=unstyled] {
+  --list-s: none;
+  --list-pxs: 0;
+}
+.fp [data-fp-list~=unstyled] li {
+  list-style: var(--list-s);
+  --list-pxs: var(--list-pxs);
+}
+.fp [data-fp-list~=inline] {
+  --list-dsp: flex;
+}
+.fp [data-fp-list~=inline] li {
+  padding-inline: var(--list-px, 1rem);
 }
 .fp-scrollbar {
   max-height: var(--scroll, 50vh);
@@ -822,32 +843,6 @@ hr {
 .fp-scrollbar::-webkit-scrollbar-thumb {
   /* Foreground */
   background: var(--scroll-bg, gray);
-}
-.fp-content a, .fp-content .fp-link {
-  --link-border: none;
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-  -webkit-text-decoration: var(--link-decoration, none);
-          text-decoration: var(--link-decoration, none);
-  border: var(--link-border);
-  padding-inline: var(--link-px, 0.25rem);
-  transition: var(--tran-all);
-}
-.fp-content a:hover, .fp-content .fp-link:hover {
-  --link-decoration: underline;
-  -webkit-filter: var(--filter);
-          filter: var(--filter);
-}
-.fp-content a:visited, .fp-content .fp-link:visited {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-.fp-content a:active, .fp-content .fp-link:active {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-.fp-content a[role=button], .fp-content a[style="--btn"], .fp-content .fp-link[role=button], .fp-content .fp-link[style="--btn"] {
-  background-color: var(--link-bg);
 }
 .fp-content form, .fp-content .fp-form {
   width: 100%;

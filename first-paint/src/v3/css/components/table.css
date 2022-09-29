@@ -1,7 +1,7 @@
 /**
 *
 */
-table, .fp-table {
+table {
   /*  css custom properties */
   --spc: 0;
   --mx: var(--sm-x);
@@ -31,19 +31,27 @@ table, .fp-table {
   border-spacing: 0;
   overflow: auto;
 }
-table caption, .fp-table caption {
+table[data-variant] {
+  --tbl-fs: var(--vfs);
+  --tbl-cl: var(--vcl);
+  --tbl-bg: var(--vbg);
+  --tbl-cap-fs: var(--vfs);
+  --tbl-cap-cl: var(--vcl);
+  --tbl-cap-bg: var(--vbg);
+}
+table caption {
   --fs: var(--fs-4);
   --align: center;
   background-color: var(--tbl-cap-bg);
   padding: var(--tbl-cap-pd);
 }
-table thead, .fp-table thead {
+table thead {
   position: sticky;
   top: 0;
   z-index: 1;
   border: var(--tbl-cap-bdr);
 }
-table thead tr, .fp-table thead tr {
+table thead tr {
   --text-align: left;
   --fw: 500;
   background-color: var(--tbl-hd-bg);
@@ -51,22 +59,21 @@ table thead tr, .fp-table thead tr {
   border-bottom: var(--tbl-bdr);
 }
 table th,
-table td, .fp-table th,
-.fp-table td {
+table td {
   padding-block: var(--tbl-td-py);
   padding-inline: var(--tbl-td-px);
 }
-table tr, .fp-table tr {
+table tr {
   background-color: white;
   border-bottom: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
 }
-table tr:nth-of-type(even), .fp-table tr:nth-of-type(even) {
+table tr:nth-of-type(even) {
   --tbl-bdr-s: solid;
 }
-table tr td, .fp-table tr td {
+table tr td {
   padding: 1rem;
 }
-table tbody tr:last-of-type, .fp-table tbody tr:last-of-type {
+table tbody tr:last-of-type {
   border-bottom: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
 }
 

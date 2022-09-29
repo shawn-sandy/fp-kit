@@ -64,6 +64,12 @@
       }
     }
   }
+
+  &[data-variant] {
+    --lbl-fs: var(--vfs);
+    --lbl-cl: var(--vcl);
+    --lbl-bg: var(--vbg);
+  }
   @content;
 }
 
@@ -73,7 +79,7 @@
 }
 
 @mixin module {
-   .fp-checkbox[for], :where(label[for]){
+    :where(label[for]){
     @include props;
     @include rules;
   }

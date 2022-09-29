@@ -2,7 +2,7 @@
 /* stylelint-disable declaration-empty-line-before */
 .fp-container,
 :where(main, section, article, footer, header, table),
-[style*="--bx"] {
+[data-box] {
   --bx-flow: column wrap;
   --bx-align: flex-start;
   --bx-justify: flex-start;
@@ -13,6 +13,13 @@
   max-width: var(--bx-max-w, 100%);
   width: var(--bx-w, var(--w, auto));
   height: var(--bx-h, var(--h, auto));
+}
+.fp-container[data-variant],
+:where(main, section, article, footer, header, table)[data-variant],
+[data-box][data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
 }
 
 [style*="--bx-flex"] {

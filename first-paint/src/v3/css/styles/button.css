@@ -4,15 +4,24 @@
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
+  --btn-height: calc(40rem / 16);
+  --fs: .95rem;
+  --btn-fs: calc(15rem / 16);
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
-  font-size: var(--btn-fs, 0.8125rem);
-  min-height: 2.5rem;
+  --btn-height: calc(40rem / 16);
+  --fs: .95rem;
+  --btn-fs: calc(15rem / 16);
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw, 600);
+  height: var(--btn-height, 2.5rem);
+  min-height: var(--btn-height, 2.5rem);
+  max-height: var(--btn-height, 2.5rem);
   place-items: var(--btn-place, center);
-  padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.8));
+  padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1%));
+  padding-block: var(--btn-py, calc(var(--btn-fs) + 0.75%));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
@@ -26,36 +35,43 @@
   outline: none;
 }
 .fp-btn[type] {
-  background-color: var(--btn-bg, var(--btn, lightgray));
+  background-color: var(--btn-bg, var(--btn, var(--neutral-100)));
   --btn-bdr: solid var(--btn-sg);
 }
 .fp-btn[type=submit], .fp-btn[style*=submit] {
-  --btn-bg: darkblue;
+  --btn-bg: var(--primary-500, royal-blue);
   --btn-color: white;
 }
 .fp-btn[disabled], .fp-btn[aria-disabled=true] {
-  cursor: var(--btn-cursor-disabled, not-allowed);
-  opacity: var(--btn-opacity-disabled, 0.5);
+  cursor: var(--btn-cursor, not-allowed);
+  opacity: var(--btn-opacity, 0.5);
 }
 .fp-btn:is(:hover, :focus) {
-  --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
-  background-color: var(--btn-bg-over, var(--btn, lightgray));
+  background-color: var(--btn-bg, var(--btn, lightgray));
   filter: invert(1) hue-rotate 180deg;
   transform: scale(0.95);
   outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
   outline-offset: var(--line-offset, 5px);
 }
-.fp-btn[type=reset], .fp-btn[style*="--btn-reset"] {
+.fp-btn[type=reset] {
   --btn-bg: transparent;
   --btn-color: gray;
   --btn-bdr: gray thin solid;
 }
-.fp-btn[type=submit], .fp-btn[style*="--btn-submit"] {
-  --btn-bg: var(--blue-500);
+.fp-btn[type=submit] {
+  --btn-bg: var(--primary-700, blue);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
+}
+.fp-btn[data-fp-btn~=pill] {
+  border-radius: 100rem;
+}
+.fp-btn[data-variant] {
+  --btn-bg: var(--vbg);
+  --btn-cl: var(--vcl);
+  --btn-fs: var(--vfs, .95rem);
 }
 
 /*# sourceMappingURL=button.css.map */

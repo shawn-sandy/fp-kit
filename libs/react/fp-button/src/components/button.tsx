@@ -1,9 +1,10 @@
 import React from "react"
 
-/* Defining the props that the Button component will take. */
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The type of the button.
+   * @default none
    */
   type: "button" | "submit" | "reset"
 
@@ -11,77 +12,84 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
    * Button label/content
    */
   children: React.ReactNode
+
   /**
    * Button styles and props
    */
   styles?: object
+
   /**
    * button classes
    */
   classes?: string
+
   /**
    * default button styles
    */
   defaultStyles?: boolean
 }
 
+export const defStyles = {
+  paddingInline: "var(--btn-px, 1.4rem)",
+  paddingBlock: "var(--btn-py, 0.8rem)",
+  display: "var(--btn-dsp, inline-flex)",
+  placeItems: "var(--btn-place, center)",
+  justifyContent: "var(--btn-justify, center)",
+  cursor: "var(--btn-cursor, pointer)",
+  border: "var(--btn-border, none)",
+  color: "var(--btn-color, white)",
+  backgroundColor: "var(--btn-bg, royalblue)",
+  borderRadius: "var(--btn-radius, 0.1rem)"
+}
+
+
 const Button = ({
   type,
   children,
   styles,
-  disabled,
+  disabled = false,
   classes,
-  onClick,
-  onMouseOver,
+  onPointerDown,
+  onPointerOver,
+  onPointerLeave,
   defaultStyles = true,
-
   ...props
 }: ButtonProps) => {
-  const defStyles = {
-    paddingInline: "var(--btn-px, 1.4rem)",
-    paddingBlock: "var(--btn-py, 0.8rem)",
-    display: "var(--btn-dsp, inline-flex)",
-    placeItems: "var(--btn-place, center)",
-    justifyContent: "var(--btn-justify, center)",
-    cursor: "var(--btn-cursor, pointer)",
-    border: "var(--btn-border, none)",
-    color: "var(--btn-color, currentColor)",
-    backgroundColor: "var(--btn-bg, lightgray)",
-  }
 
-  const stylesObj = defaultStyles ? defStyles : {};
-
-
-
- /**
-  * If the button is not disabled, then call the onClick function
-  */
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if(!disabled) {
-      onClick?.(e)
+  const stylesObj = defaultStyles ? defStyles : {}
+  const handlePointerEvents = (
+    e: React.PointerEvent<HTMLButtonElement>
+  ) => {
+    if (!disabled) {
+      switch (e.type) {
+        case 'pointerover':
+          onPointerOver?.(e)
+          break;
+        case 'pointerleave':
+          onPointerLeave?.(e)
+          break;
+        default:
+          onPointerDown?.(e)
+          break;
+      }
     }
   }
 
-/**
- * A function that returns a function.
- */
-  const handleMouseOver = (e: React.MouseEvent<HTMLButtonElement>) => {
-    onMouseOver?.(e)
-  }
-
-/* Returning a button element. */
+  /* Returning a button element. */
   return (
     <button
       type={type}
-      onClick={handleClick}
-      onMouseOver={handleMouseOver}
-      style={{...stylesObj, ...styles }}
+      onPointerOver={handlePointerEvents}
+      onPointerDown={handlePointerEvents}
+      onPointerLeave={handlePointerEvents}
+      style={{ ...stylesObj, ...styles }}
       aria-disabled={disabled}
       {...props}
     >
       {children}
     </button>
   )
+  //
 }
 
 export default Button

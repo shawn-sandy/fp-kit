@@ -5,6 +5,7 @@
 //  Date: 2021-04-01
 //  ***************************************
 // */
+
 @mixin props() {
   // * css custom properties
   @content;
@@ -27,23 +28,28 @@
       &::before {
         content: var(--crumb-icon, "\002F");
         color: currentColor;
+        padding-inline-end: 0.5rem;
       }
     }
   }
 
+  &[data-variant] {
+    --crumb-fs: var(--vfs);
+    --crumb-cl: var(--vcl);
+    --crumb-bg: var(--vbg);
+  }
   // * css rules/styles
   @content;
 }
 
 @mixin styles {
   // * css style utilities
-
   @content;
 }
 
 @mixin module {
-  nav >, .fp-breadcrumb > {
-   :where(ol[aria-label], div[role="list"])  {
+  nav > {
+   :where(ol, [data-fp-breadcrumb])  {
     @include props;
     @include rules;
   }

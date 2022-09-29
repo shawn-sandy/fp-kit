@@ -1,0 +1,14 @@
+:root {
+  /* Warning CSS Vars */
+  --warning-100: hsl(30, 100%, 95%);
+  --warning-200: hsl(33, 100%, 89%);
+  --warning-300: hsl(33, 100%, 83%);
+  --warning-400: hsl(36, 100%, 74%);
+  --warning-500: hsl(39, 100%, 61%);
+  --warning-600: hsl(39, 77%, 55%);
+  --warning-700: hsl(39, 64%, 47%);
+  --warning-800: hsl(40, 64%, 38%);
+  --warning-900: hsl(39, 64%, 27%);
+}
+
+/*# sourceMappingURL=warning.css.map */

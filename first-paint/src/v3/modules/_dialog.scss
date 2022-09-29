@@ -21,6 +21,14 @@
   &::backdrop {
     background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
   }
+
+  &[data-variant] {
+    --diag-bg: var(--vbg);
+    --diag-bg-img: var(--vbg-img);
+    --diag-x: var(--vx);
+    --diag-y: var(--vy);
+  }
+
   @content;
 }
 
@@ -30,10 +38,9 @@
 }
 
 @mixin module {
-  dialog, [role=dialog], .fp-dialog {
+  dialog, [role=dialog], [data-fp-dialog] {
   @include props;
     @include rules;
-
   }
   @include styles;
 }

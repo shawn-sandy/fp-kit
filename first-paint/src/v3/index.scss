@@ -16,6 +16,7 @@
 @use "./modules/select";
 @use "./modules/footer";
 @use "./modules/content";
+@use "./modules/links";
 // custom modules
 @forward "./modules/details-summary" as detailsSummary-*;
 @forward "./modules/tooltip" as tooltip-*;
@@ -24,12 +25,22 @@
 @forward "./modules/scrollbar" as scrollbar-*;
 @forward "./modules/breadcrumb" as breadcrumb-*;
 @forward "./modules/table" as table-*;
+// tokens
+@use "./tokens/palettes/fp-color-palette" as colors;
+@use "./tokens/palettes/names";
+
 // components
 @use "./components/type.scss";
+
+
+@include colors.tokens();
+@include names.tokens();
+
 @include props.module();
 @include nav.module();
 @include header.module();
 @include content.module();
+@include links.module();
 @include img.module();
 @include checkbox.module();
 @include button.module();
@@ -38,6 +49,4 @@
 @include textarea.module();
 @include select.module();
 @include footer.module();
-
-
 

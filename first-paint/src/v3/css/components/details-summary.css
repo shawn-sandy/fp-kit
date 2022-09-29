@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.fp-details-summary, details {
+details, [data-fp-details] {
   font-size: var(--detail-fs, 1rem);
   color: var(--detail-color, currentColor);
   background-color: var(--detail-bg, whitesmoke);
@@ -7,11 +7,16 @@
   border-radius: var(--details-rds, 0.5rem);
   width: var(--details, min(100%, 350px));
 }
-.fp-details-summary :where(div, aside, p, ul), details :where(div, aside, p, ul) {
+details :where(div, aside, p, ul), [data-fp-details] :where(div, aside, p, ul) {
   padding: var(--summary-pd, 0 1rem 1rem 1rem);
   background-color: var(--detail-bg);
 }
-.fp-details-summary summary, details summary {
+details[data-variant], [data-fp-details][data-variant] {
+  --detail-fs: var(--vfs);
+  --detail-color: var(--vcl);
+  --detail-bg: var(--vbg);
+}
+details summary, [data-fp-details] summary {
   display: flex;
   place-content: flex-start;
   place-items: center;
@@ -26,16 +31,21 @@
   border-bottom: var(--summary-border, none);
   transition: all 0.2s ease;
 }
-.fp-details-summary summary::after, details summary::after {
+details summary::after, [data-fp-details] summary::after {
   content: "+";
   font-size: 1.3rem;
   color: lightgray;
 }
-.fp-details-summary summary:hover::after, details summary:hover::after {
+details summary:hover::after, [data-fp-details] summary:hover::after {
   transform: scale(1.1);
   color: currentColor;
 }
-.fp-details-summary[open] > summary::after, details[open] > summary::after {
+details summary[data-variant], [data-fp-details] summary[data-variant] {
+  --summary-fs: var(--vfs);
+  --summary-color: var(--vcl);
+  --summary-bg: var(--vbg);
+}
+details[open] > summary::after, [data-fp-details][open] > summary::after {
   content: "×";
   transform: rotate(90deg);
 }

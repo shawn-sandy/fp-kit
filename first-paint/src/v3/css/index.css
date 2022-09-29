@@ -187,6 +187,13 @@ hr {
 /**
 *
 */
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
 /**
 *
 */
@@ -644,7 +651,7 @@ p + * {
   color: var(--hsl --s --l);
 }
 
-nav, .fp-nav {
+nav, [data-fp-nav], [role=navigation] {
   display: var(--nav-dsp, flex);
   flex-direction: var(--nav-direction, row);
   width: var(--nav-w, auto);
@@ -655,8 +662,9 @@ nav, .fp-nav {
   background-color: var(--nav-bg, initial);
 }
 nav > section,
-nav > ul, .fp-nav > section,
-.fp-nav > ul {
+nav > ul, [data-fp-nav] > section,
+[data-fp-nav] > ul, [role=navigation] > section,
+[role=navigation] > ul {
   --nav-dsp: flex;
   display: var(--nav-dsp, flex);
   gap: var(--nav-gap, 0);
@@ -665,10 +673,10 @@ nav > ul, .fp-nav > section,
   padding-inline: var(--nav-px, 1rem);
   height: 100%;
 }
-nav > section > div, .fp-nav > section > div {
+nav > section > div, [data-fp-nav] > section > div, [role=navigation] > section > div {
   --py: 0;
 }
-nav ul > li, .fp-nav ul > li {
+nav ul > li, [data-fp-nav] ul > li, [role=navigation] ul > li {
   display: flex;
   align-items: center;
   list-style: none;
@@ -677,12 +685,17 @@ nav ul > li, .fp-nav ul > li {
   min-height: 100%;
   padding-inline: var(--nav-px, 0.75rem);
 }
-nav ul > li:hover, .fp-nav ul > li:hover {
+nav ul > li:hover, [data-fp-nav] ul > li:hover, [role=navigation] ul > li:hover {
   background-color: var(--nav-hov-bg, whitesmoke);
 }
-nav img[alt], .fp-nav img[alt] {
+nav img[alt], [data-fp-nav] img[alt], [role=navigation] img[alt] {
   --px: 0 var(--s1);
   --w: var(--brand-w, 3.6rem);
+}
+nav[data-variant], [data-fp-nav][data-variant], [role=navigation][data-variant] {
+  background-color: var(--nav-bg);
+  color: var(--nav-cl);
+  font-size: var(--nav-fs, 0.9rem);
 }
 
 header:not([arial-label], dialog header), .fp-header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialog header), [style*="--hdr"]:not([arial-label], dialog header) {
@@ -702,30 +715,10 @@ header:not([arial-label], dialog header), .fp-header:not([arial-label], dialog h
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
 }
-
-a, .fp-link {
-  --link-border: none;
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-  text-decoration: var(--link-decoration, none);
-  border: var(--link-border);
-  padding-inline: var(--link-px, 0.25rem);
-  transition: var(--tran-all);
-}
-a:hover, .fp-link:hover {
-  --link-decoration: underline;
-  filter: var(--filter);
-}
-a:visited, .fp-link:visited {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-a:active, .fp-link:active {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-a[role=button], a[style="--btn"], .fp-link[role=button], .fp-link[style="--btn"] {
-  background-color: var(--link-bg);
+header:not([arial-label], dialog header)[data-variant], .fp-header:not([arial-label], dialog header)[data-variant], [role=banner]:not([arial-label], dialog header)[data-variant], [style*="--hdr"]:not([arial-label], dialog header)[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
 }
 
 form, .fp-form {
@@ -759,22 +752,67 @@ hr {
   margin-inline: var(px, auto);
 }
 
-img[alt][width][height], .fp-image[alt][width][height] {
+a {
+  --link-border: none;
+  --link-bg: white-smoke;
+  --link-color: #0070f3;
+  color: var(--link-color);
+  background-color: var(--link-bg);
+  text-decoration: var(--link-decoration, none);
+  border: var(--link-border);
+  padding-inline: var(--link-px, 0.25rem);
+  transition: var(--tran-all);
+}
+a:hover {
+  --link-decoration: underline;
+  filter: var(--filter);
+}
+a:visited {
+  color: var(--link-color, #0070f3);
+  background-color: var(--link-bg);
+}
+a:active {
+  color: var(--link-color, #0070f3);
+  background-color: var(--link-bg);
+}
+a[role=button], a[style="--btn"], a[data-fp-btn] {
+  background-color: var(--link-bg, lightgray);
+  --btn-bg: var(--link-bg, lightgray);
+}
+a[aria-current], a:visited[aria-current] {
+  --link-color: currentColor;
+}
+a[aria-current]:hover, a:visited[aria-current]:hover {
+  text-decoration: none;
+}
+a[data-variant] {
+  --link-color: var(--vcl);
+  --link-bg: var(--vbg);
+  --link-decoration: var(--vdecoration);
+  --link-fs: var(--vfs);
+}
+
+img[alt][width][height], [data-img] {
   max-width: 100%;
   width: var(--img-w, 100%);
   object-fit: var(--img-obj-fit, cover);
   object-position: var(--img-position, center center);
   aspect-ratio: var(--img-ratio, auto 2/3);
 }
-img[alt][width][height][width][height], .fp-image[alt][width][height][width][height] {
+img[alt][width][height][width][height], [data-img][width][height] {
   height: var(--img-h, auto);
 }
-img[alt][width][height][src$=".svg"], .fp-image[alt][width][height][src$=".svg"] {
+img[alt][width][height][src$=".svg"], [data-img][src$=".svg"] {
   height: auto;
   width: auto;
 }
-img[alt][width][height] + *, .fp-image[alt][width][height] + * {
+img[alt][width][height] + *, [data-img] + * {
   margin-block: 1rem 0;
+}
+img[alt][width][height][data-variant], [data-img][data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
 }
 
 picture,
@@ -799,7 +837,7 @@ figcaption, .fp-cations {
   padding-inline: var(--fcap-px, 0.5rem);
 }
 
-.fp-checkbox[for], :where(label[for]) {
+:where(label[for]) {
   display: var(--lbl-dsp, flex);
   flex-direction: var(--lbl-direction, row);
   align-items: var(--chk-align, normal);
@@ -809,13 +847,13 @@ figcaption, .fp-cations {
   max-height: var(--chk-size, 1.2rem);
   font-size: var(--chk-fs, 1rem);
 }
-.fp-checkbox[for] :where([id][type="checkbox"]), :where(label[for]) :where([id][type="checkbox"]) {
+:where(label[for]) :where([id][type="checkbox"]) {
   appearance: var(--chk-appearance);
   -webkit-appearance: var(--chk-appearance);
   -moz-appearance: var(--chk-appearance);
   line-height: 1;
 }
-.fp-checkbox[for] :where([id][type="checkbox"])::before, :where(label[for]) :where([id][type="checkbox"])::before {
+:where(label[for]) :where([id][type="checkbox"])::before {
   content: "";
   display: flex;
   align-items: center;
@@ -829,30 +867,41 @@ figcaption, .fp-cations {
   border-radius: var(--chk-rds, var(--rds));
   transition: var(--tran-all);
 }
-.fp-checkbox[for] :where([id][type="checkbox"]):checked, :where(label[for]) :where([id][type="checkbox"]):checked {
+:where(label[for]) :where([id][type="checkbox"]):checked {
   --chk-appearance: none;
 }
-.fp-checkbox[for] :where([id][type="checkbox"]):checked::before, :where(label[for]) :where([id][type="checkbox"]):checked::before {
+:where(label[for]) :where([id][type="checkbox"]):checked::before {
   --chk-bdr: solid;
   border-color: var(--chk-bdr-cl);
   border-width: var(--chk-bdr-w, thick);
   border-style: --chk-bdr-style;
   --chk-bg: var(--fp-yellow-green);
 }
+:where(label[for])[data-variant] {
+  --lbl-fs: var(--vfs);
+  --lbl-cl: var(--vcl);
+  --lbl-bg: var(--vbg);
+}
 
 button,
 [style*="--btn"],
-.fp-button,
+a[data-fp-btn],
 [role=button] {
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
-  font-size: var(--btn-fs, 0.8125rem);
-  min-height: 2.5rem;
+  --btn-height: calc(40rem / 16);
+  --fs: .95rem;
+  --btn-fs: calc(15rem / 16);
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw, 600);
+  height: var(--btn-height, 2.5rem);
+  min-height: var(--btn-height, 2.5rem);
+  max-height: var(--btn-height, 2.5rem);
   place-items: var(--btn-place, center);
-  padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.8));
+  padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.2%));
+  padding-block: var(--btn-py, calc(var(--btn-fs) + 1.2%));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
@@ -867,7 +916,7 @@ button,
 }
 button[type],
 [style*="--btn"][type],
-.fp-button[type],
+a[data-fp-btn][type],
 [role=button][type] {
   background-color: var(--btn-bg, var(--btn, lightgray));
   --btn-bdr: solid var(--btn-sg);
@@ -875,8 +924,8 @@ button[type],
 button[type=submit], button[style*=submit],
 [style*="--btn"][type=submit],
 [style*="--btn"][style*=submit],
-.fp-button[type=submit],
-.fp-button[style*=submit],
+a[data-fp-btn][type=submit],
+a[data-fp-btn][style*=submit],
 [role=button][type=submit],
 [role=button][style*=submit] {
   --btn-bg: darkblue;
@@ -885,8 +934,8 @@ button[type=submit], button[style*=submit],
 button[disabled], button[aria-disabled=true],
 [style*="--btn"][disabled],
 [style*="--btn"][aria-disabled=true],
-.fp-button[disabled],
-.fp-button[aria-disabled=true],
+a[data-fp-btn][disabled],
+a[data-fp-btn][aria-disabled=true],
 [role=button][disabled],
 [role=button][aria-disabled=true] {
   cursor: var(--btn-cursor-disabled, not-allowed);
@@ -894,38 +943,45 @@ button[disabled], button[aria-disabled=true],
 }
 button:is(:hover, :focus),
 [style*="--btn"]:is(:hover, :focus),
-.fp-button:is(:hover, :focus),
+a[data-fp-btn]:is(:hover, :focus),
 [role=button]:is(:hover, :focus) {
-  --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
-  background-color: var(--btn-bg-over, var(--btn, lightgray));
+  background-color: var(--btn-bg, var(--btn, lightgray));
   filter: invert(1) hue-rotate 180deg;
   transform: scale(0.95);
   outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
   outline-offset: var(--line-offset, 5px);
 }
-button[type=reset], button[style*="--btn-reset"],
+button[type=reset],
 [style*="--btn"][type=reset],
-[style*="--btn"][style*="--btn-reset"],
-.fp-button[type=reset],
-.fp-button[style*="--btn-reset"],
-[role=button][type=reset],
-[role=button][style*="--btn-reset"] {
+a[data-fp-btn][type=reset],
+[role=button][type=reset] {
   --btn-bg: transparent;
   --btn-color: gray;
   --btn-bdr: gray thin solid;
 }
-button[type=submit], button[style*="--btn-submit"],
+button[type=submit],
 [style*="--btn"][type=submit],
-[style*="--btn"][style*="--btn-submit"],
-.fp-button[type=submit],
-.fp-button[style*="--btn-submit"],
-[role=button][type=submit],
-[role=button][style*="--btn-submit"] {
-  --btn-bg: var(--blue-500);
+a[data-fp-btn][type=submit],
+[role=button][type=submit] {
+  --btn-bg: var(--blue-500, blue);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
+}
+button[data-fp-btn~=pill],
+[style*="--btn"][data-fp-btn~=pill],
+a[data-fp-btn][data-fp-btn~=pill],
+[role=button][data-fp-btn~=pill] {
+  border-radius: 100rem;
+}
+button[data-variant],
+[style*="--btn"][data-variant],
+a[data-fp-btn][data-variant],
+[role=button][data-variant] {
+  --btn-bg: var(--vbg);
+  --btn-cl: var(--vcl);
+  --btn-fs: var(--vfs);
 }
 
 input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type=checkbox], [type=radio]) {
@@ -948,8 +1004,15 @@ input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type
   font-style: italic;
   --input-fs: .5rem;
 }
+input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type=checkbox], [type=radio])[data-variant] {
+  --vfs: .8rem;
+  --vcl: var(--fp-light-gray);
+  --input-fs: var(--vfs);
+  --input-cl: var(--vcl);
+  --input-bg: var(--vbg);
+}
 
-.fp-radio[for], :where(label[for]) {
+:where(label[for]) {
   --rdo-appearance: none;
   display: var(--lbl-dsp, flex);
   flex-direction: var(--lbl-direction, row);
@@ -961,10 +1024,10 @@ input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type
   font-size: var(--lbl-fs, var(--fs));
   max-height: var(--rdo-size, 1.2rem);
 }
-.fp-radio[for] + label, :where(label[for]) + label {
+:where(label[for]) + label {
   margin-block-start: 0.8rem;
 }
-.fp-radio[for] :where([id][type="radio"]), :where(label[for]) :where([id][type="radio"]) {
+:where(label[for]) :where([id][type="radio"]) {
   appearance: var(--rdo-appearance, none);
   -webkit-appearance: var(--rdo-appearance, none);
   -moz-appearance: var(--rdo-appearance, none);
@@ -973,7 +1036,7 @@ input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type
   margin: 0;
   line-height: 1;
 }
-.fp-radio[for] :where([id][type="radio"])::before, :where(label[for]) :where([id][type="radio"])::before {
+:where(label[for]) :where([id][type="radio"])::before {
   --rdo-bdr-cl: lightgray;
   --rdo-bdr-w: initial;
   transition: var(--tran-all);
@@ -990,10 +1053,10 @@ input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type
   background-color: var(--rdo-bg, var(--fp-light-gray));
   border-radius: var(--rdo-rds, 99rem);
 }
-.fp-radio[for] :where([id][type="radio"]):checked, :where(label[for]) :where([id][type="radio"]):checked {
+:where(label[for]) :where([id][type="radio"]):checked {
   --rdo-appearance: none;
 }
-.fp-radio[for] :where([id][type="radio"]):checked::before, :where(label[for]) :where([id][type="radio"]):checked::before {
+:where(label[for]) :where([id][type="radio"]):checked::before {
   --rdo-bdr-s: solid;
   --rdo-bdr-w: thick;
   --rdo-bdr-cl: var(--fp-dark-green);
@@ -1003,7 +1066,7 @@ input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type
   border-style: var(--rdo-bdr-s, none);
 }
 
-textarea, .fp-textarea {
+textarea {
   --txa-bdr-s: solid;
   --txa-bdr-w: thin;
   --txa-bdr-cl: lightgray;
@@ -1029,8 +1092,13 @@ textarea, .fp-textarea {
   -moz-appearance: var(--txa-appearance);
   appearance: var(--txa-appearance);
 }
+textarea[data-vairant] {
+  --txa-fs: var(--vfs);
+  --txa-cl: var(--vcl);
+  --txa-bg: var(--vbg);
+}
 
-select, fp-selct {
+select {
   --slt-appearance: none;
   --slt-fs: 0.9rem;
   --slt-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctitle%3Eic_keyboard_arrow_down_24px%3C/title%3E%3Cg fill='%23000000'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
@@ -1064,16 +1132,23 @@ select * {
 }
 
 footer:not([aria-label], [role=footer]),
-.fp-footer:not([aria-label], [role=footer]),
+[data-footer]:not([aria-label], [role=footer]),
 [role=contentinfo]:not([aria-label], [role=footer]) {
   display: var(--footer-dsp, flex);
   flex-direction: var(--footer-direction, column);
   font-size: var(--footer-fs, var(--fs-2));
 }
 footer:not([aria-label], [role=footer]) p,
-.fp-footer:not([aria-label], [role=footer]) p,
+[data-footer]:not([aria-label], [role=footer]) p,
 [role=contentinfo]:not([aria-label], [role=footer]) p {
   --p-fs: var(--footer-fs, var(--fs));
+}
+footer:not([aria-label], [role=footer])[data-variant],
+[data-footer]:not([aria-label], [role=footer])[data-variant],
+[role=contentinfo]:not([aria-label], [role=footer])[data-variant] {
+  --footer-fs: var(--vfs);
+  --footer-cl: var(--vcl);
+  --footer-bg: var(--vbg);
 }
 
 /*# sourceMappingURL=index.css.map */

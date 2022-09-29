@@ -3,6 +3,137 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.14](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.13...@shawnsandy/first-paint@2.16.14) (2022-09-29)
+
+**Note:** Version bump only for package @shawnsandy/first-paint
+
+
+
+
+
+## [2.16.13](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.12...@shawnsandy/first-paint@2.16.13) (2022-09-29)
+
+**Note:** Version bump only for package @shawnsandy/first-paint
+
+
+
+
+
+## [2.16.12](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.11...@shawnsandy/first-paint@2.16.12) (2022-09-21)
+
+
+### Features
+
+* ✨ add post-css import plugin ([390c5e1](https://github.com/shawn-sandy/fp-kit/commit/390c5e1000a084566a1ba6208139d92e79137abc))
+* 💄 fist paint tokens ([2338a1a](https://github.com/shawn-sandy/fp-kit/commit/2338a1a793b01ad6cc47160a43e7cb999bae5949))
+
+
+
+
+
+## [2.16.11](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.10...@shawnsandy/first-paint@2.16.11) (2022-09-11)
+
+
+### Features
+
+* ♻️ refactor button events function ([5ccfd5e](https://github.com/shawn-sandy/fp-kit/commit/5ccfd5e5cb1be182fbe0d1344814d5190f5fe692))
+* 🎨 update color props ([b22d558](https://github.com/shawn-sandy/fp-kit/commit/b22d55867e96a0c7b9a5e3bfe67c52eb4cc57e15))
+* 🚧 color tokens and variants ([294f0fc](https://github.com/shawn-sandy/fp-kit/commit/294f0fc6fdbb311a6ed289a940cbf56cf3800fce))
+
+
+
+
+
+## [2.16.10](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.9...@shawnsandy/first-paint@2.16.10) (2022-09-07)
+
+**Note:** Version bump only for package @shawnsandy/first-paint
+
+
+
+
+
+## [2.16.9](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.8...@shawnsandy/first-paint@2.16.9) (2022-09-05)
+
+
+### Features
+
+* ✨ update button/variant dynamic padding ([71c4a60](https://github.com/shawn-sandy/fp-kit/commit/71c4a60f8567526d9e54fcf6a2d45a9881a5d06c))
+* ✨ update/add tokens ([5bf9b4f](https://github.com/shawn-sandy/fp-kit/commit/5bf9b4f60a1e2e19d2ffe92dc401bd603d17240f))
+* ✨ update/add tokens ([0208236](https://github.com/shawn-sandy/fp-kit/commit/0208236e6544bbb381f5a2ac62a3c1cb0daf62a4))
+
+
+
+
+
+## [2.16.8](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.7...@shawnsandy/first-paint@2.16.8) (2022-09-05)
+
+**Note:** Version bump only for package @shawnsandy/first-paint
+
+
+
+
+
+## [2.16.7](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.6...@shawnsandy/first-paint@2.16.7) (2022-09-05)
+
+**Note:** Version bump only for package @shawnsandy/first-paint
+
+
+
+
+
+## [2.16.6](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.5...@shawnsandy/first-paint@2.16.6) (2022-09-03)
+
+
+### Features
+
+* ✨ add base color palette ([3c4d0e4](https://github.com/shawn-sandy/fp-kit/commit/3c4d0e40ffb1e3c575be8e199f12278a20358552))
+* ✨ add data attributes to modules ([71b0249](https://github.com/shawn-sandy/fp-kit/commit/71b024993e3c0fa6c28fff8755cc14aae98a89c8))
+* ✨ add data variant to breadvrumbs ([e051ca4](https://github.com/shawn-sandy/fp-kit/commit/e051ca4cfaef9a1037650efc9c2e81b2157247e9))
+* ✨ add data variant to modules ([d81444b](https://github.com/shawn-sandy/fp-kit/commit/d81444b1a37a1a61a64ca539349c58994874f5d1))
+* ✨ add data-badge attribute to note module ([6e3cd01](https://github.com/shawn-sandy/fp-kit/commit/6e3cd0178d21b10ceaa1b8633a43cbea6740675c))
+* ✨ update badge variants ([6baa11b](https://github.com/shawn-sandy/fp-kit/commit/6baa11b5010776d22dcf6c7b6e85a22b4ece9152))
+* ✨ update badge variants ([b184eff](https://github.com/shawn-sandy/fp-kit/commit/b184eff1c1a4e7d36c3e8e59f9e1eb39cb0900c8))
+* ✨ update not styles for pragraphs ([ca7d4ae](https://github.com/shawn-sandy/fp-kit/commit/ca7d4ae481537488ac643b670b8d3d25d2b9a54f))
+* 🚧 add a folder for shared variants ([aa48097](https://github.com/shawn-sandy/fp-kit/commit/aa480978d0208d676c9c79e86ac06241d458294b))
+* 🚧 add data-vars for buttons to color schemes ([651f1ca](https://github.com/shawn-sandy/fp-kit/commit/651f1ca44256ed7436b4d141c34f6c05e3e29edc))
+* 🚧 add utility/themes coloe scheme utility ([ecf2edf](https://github.com/shawn-sandy/fp-kit/commit/ecf2edfa767f76529283d282fd98e40c5136baed))
+* 🚧 prefix variant props w/--v** ([27a3f78](https://github.com/shawn-sandy/fp-kit/commit/27a3f78c1172cfb4bd7f5072c4837d205fac2174))
+* 🚧 update padding props ([f98847f](https://github.com/shawn-sandy/fp-kit/commit/f98847fcf7230922ccbbb50f76ada3f077e708c5))
+* 🚧 update padding props ([9547589](https://github.com/shawn-sandy/fp-kit/commit/95475891d94250898a1205db95ba6bae38d0b70b))
+* 🚧 variant/badge styling ([89c2930](https://github.com/shawn-sandy/fp-kit/commit/89c2930bfdd433b246bb5d4415134e1f5ad2acd4))
+
+
+
+
+
+## [2.16.5](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.4...@shawnsandy/first-paint@2.16.5) (2022-08-24)
+
+**Note:** Version bump only for package @shawnsandy/first-paint
+
+
+
+
+
+## [2.16.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.3...@shawnsandy/first-paint@2.16.4) (2022-08-24)
+
+
+### Features
+
+* :sparkles: add data attribute form button styles ([1d6da9b](https://github.com/shawn-sandy/fp-kit/commit/1d6da9b7ee4e313b6f7c7a7ebe934920bf4416f6))
+* :sparkles: add data attribute form button styles ([c802d24](https://github.com/shawn-sandy/fp-kit/commit/c802d244987d7ce9e7547224bdcad83994ee2adb))
+* ✨ add data-breadcrumb style attribute ([e428e45](https://github.com/shawn-sandy/fp-kit/commit/e428e45a125a02c29a712a2b93b7a570d5eca035))
+* ✨ add data-fp-list style attribute ([0cfe166](https://github.com/shawn-sandy/fp-kit/commit/0cfe166ff6d4630b8f7e64645d54387bdfdd7332))
+* ✨ add firs-paint links module /_links ([ebe8cf7](https://github.com/shawn-sandy/fp-kit/commit/ebe8cf744ea487d04ba1fe55b83899e0f3d9b3f9))
+* ✨ add firs-paint links module /_links ([69b5cc3](https://github.com/shawn-sandy/fp-kit/commit/69b5cc3883abc982ff8d885a841ce3464b354376))
+* ✨ add layout utilitty ([05ada5c](https://github.com/shawn-sandy/fp-kit/commit/05ada5ce7350084f57b7b5c3af9520ec1e22ecde))
+* 🚧 add list data style attribute ([2b1637b](https://github.com/shawn-sandy/fp-kit/commit/2b1637bb42b5b4d5c1de43d696ab2283703ba66e))
+* 🚧 add list data style attribute ([f5a2f71](https://github.com/shawn-sandy/fp-kit/commit/f5a2f7129b07dc3dd560fefe4ad5f12694e19200))
+* 🚧 utility attributes ([eac86c7](https://github.com/shawn-sandy/fp-kit/commit/eac86c7531314effa32a490f95e176fa03e2f361))
+
+
+
+
+
 ## [2.16.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.2...@shawnsandy/first-paint@2.16.3) (2022-07-13)
 
 

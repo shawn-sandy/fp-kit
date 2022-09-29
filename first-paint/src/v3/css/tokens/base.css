@@ -1,0 +1,14 @@
+:root {
+  /* base CSS Vars */
+  --base-100: hsl(0, 0%, 99%);
+  --base-200: hsl(0, 0%, 95%);
+  --base-300: hsl(0, 0%, 90%);
+  --base-400: hsl(0, 0%, 82%);
+  --base-500: hsl(0, 0%, 72%);
+  --base-600: hsl(0, 0%, 61%);
+  --base-700: hsl(0, 0%, 47%);
+  --base-800: hsl(0, 0%, 33%);
+  --base-900: hsl(0, 0%, 18%);
+}
+
+/*# sourceMappingURL=base.css.map */

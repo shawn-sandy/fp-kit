@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../../src/v3/styles/scrollbar.scss","../../../src/v3/modules/_scrollbar.scss"],"names":[],"mappings":"AAEA,cCYE,+BACA,mCACA,mCACA,yCAEA,gBACE,aAGF,iCACE,8BACA,+BACA,8BAEF,uCAEE,6CAGF,uCAEE","file":"scrollbar.css"}
+{"version":3,"sourceRoot":"","sources":["../../../src/v3/styles/scrollbar.scss","../../../src/v3/modules/_scrollbar.scss"],"names":[],"mappings":"AAEA,cCYE,+BACA,mCACA,mCACA,yCAEA,gBACE,aAGF,iCACE,8BACA,+BACA,8BAEF,uCAEE,6CAGF,uCAEE,kCAIF,4BACE,yBACA,iCACA,iCACA,mCACA,6BACA,6BACA,2CACA","file":"scrollbar.css"}

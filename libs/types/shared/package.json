@@ -1,0 +1,28 @@
+{
+  "name": "@fpkit/shared",
+  "private": false,
+  "version": "0.0.5",
+  "description": "Shared JS libs and types library",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup --dts"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@preconstruct/cli": "^2.2.1",
+    "@storybook/test-runner": "^0.7.2",
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "4718563e4154f87525194c4428bc6d34cf7cabec"
+}

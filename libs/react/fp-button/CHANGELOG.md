@@ -3,6 +3,160 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.10](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.9...@fpkit/fp-button@0.4.10) (2022-09-29)
+
+**Note:** Version bump only for package @fpkit/fp-button
+
+
+
+
+
+## [0.4.9](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.8...@fpkit/fp-button@0.4.9) (2022-09-29)
+
+
+### Features
+
+* 📦️ add badge component ([6a609ff](https://github.com/shawn-sandy/fp-kit/commit/6a609ffad869be77f5c44ffb79a966e2248a31da))
+* 🚧 ad badge component fpkit/fp ([c8b6b7b](https://github.com/shawn-sandy/fp-kit/commit/c8b6b7b11951ce8586505a01b2658b79187e3828))
+* 🆙 update actions for button story ([b13ec5d](https://github.com/shawn-sandy/fp-kit/commit/b13ec5da1ac84a35422fe99ada4b116d35b06c7e))
+
+
+
+
+
+## [0.4.8](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.7...@fpkit/fp-button@0.4.8) (2022-09-21)
+
+
+### Features
+
+* ✨ add shared package ([d41fb8a](https://github.com/shawn-sandy/fp-kit/commit/d41fb8a1f9df921eb59966daf2255a1bfdca9c47))
+* 💄 fist paint tokens ([2338a1a](https://github.com/shawn-sandy/fp-kit/commit/2338a1a793b01ad6cc47160a43e7cb999bae5949))
+
+
+
+
+
+## [0.4.7](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.6...@fpkit/fp-button@0.4.7) (2022-09-12)
+
+**Note:** Version bump only for package @fpkit/fp-button
+
+
+
+
+
+## [0.4.6](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.5...@fpkit/fp-button@0.4.6) (2022-09-11)
+
+
+### Features
+
+* ♻️ refactor button events function ([5ccfd5e](https://github.com/shawn-sandy/fp-kit/commit/5ccfd5e5cb1be182fbe0d1344814d5190f5fe692))
+* ✨ add on mouse leave handler to fp-button ([833751c](https://github.com/shawn-sandy/fp-kit/commit/833751c2eaa4cc0c0db23f2dc4cb5134f1dbc047))
+
+
+
+
+
+## [0.4.5](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.4...@fpkit/fp-button@0.4.5) (2022-09-05)
+
+
+### Features
+
+* ✨ update button/variant dynamic padding ([71c4a60](https://github.com/shawn-sandy/fp-kit/commit/71c4a60f8567526d9e54fcf6a2d45a9881a5d06c))
+
+
+
+
+
+## [0.4.4](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.3...@fpkit/fp-button@0.4.4) (2022-09-05)
+
+
+### Reverts
+
+* ⏪️ revert preconstruct changes ([1389dd7](https://github.com/shawn-sandy/fp-kit/commit/1389dd7ede2f2869dcb6a97b5a42341cf7df59e7))
+
+
+
+
+
+## [0.4.3](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.2...@fpkit/fp-button@0.4.3) (2022-09-03)
+
+
+### Bug Fixes
+
+* 🚧 type errors on story ([e18fe5a](https://github.com/shawn-sandy/fp-kit/commit/e18fe5a403937afe090cc9a31b92c4d4778bffb9))
+
+
+### Features
+
+* 👷 add preconstruct ([01d9103](https://github.com/shawn-sandy/fp-kit/commit/01d91036928c1a2c595bc914bda8bb0b029e4f76))
+
+
+
+
+
+## [0.4.2](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.1...@fpkit/fp-button@0.4.2) (2022-08-24)
+
+
+### Features
+
+* :sparkles: add data attribute form button styles ([c802d24](https://github.com/shawn-sandy/fp-kit/commit/c802d244987d7ce9e7547224bdcad83994ee2adb))
+
+
+
+
+
+## [0.4.1](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.0...@fpkit/fp-button@0.4.1) (2022-07-29)
+
+
+### Bug Fixes
+
+* 🐛 replace onpointer w/onclick event ([00a80aa](https://github.com/shawn-sandy/fp-kit/commit/00a80aa7884e7ae5562bc75783a03305c08f9a57))
+
+
+
+
+
+# [0.4.0](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.3.0...@fpkit/fp-button@0.4.0) (2022-07-29)
+
+
+### Bug Fixes
+
+* 📝 fix package name typo ([5be5eb2](https://github.com/shawn-sandy/fp-kit/commit/5be5eb27a892d0b970ab1b640ac9e462c393510c))
+
+
+
+
+
+# [0.3.0](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.2.2...@fpkit/fp-button@0.3.0) (2022-07-29)
+
+
+### Features
+
+* ♻️ change click events to pointer events ([f7db43a](https://github.com/shawn-sandy/fp-kit/commit/f7db43ac33c57555befe659e99c2e11971ae228a))
+* ✨ add handleClick/handlePointerDown props/mehtods ([9fd10ba](https://github.com/shawn-sandy/fp-kit/commit/9fd10baa5a5b49a7b63ca717499532aa2c6876d4))
+* ✨ add pill style button example ([2af5da1](https://github.com/shawn-sandy/fp-kit/commit/2af5da162eb57b845daf33aa6065ae304350ce4d))
+* ✨ turn on/off default inline styles ([da852c1](https://github.com/shawn-sandy/fp-kit/commit/da852c1a7f43d10a25c2cb20a331aa95e4374afc))
+* 💄 update style, code, docs ([75e81cc](https://github.com/shawn-sandy/fp-kit/commit/75e81ccc5c5f7c51b144cdac8b015dc9f341e8ef))
+
+
+
+
+
+## [0.2.3](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.2.2...@fpkit/fp-button@0.2.3) (2022-07-29)
+
+
+### Features
+
+* ♻️ change click events to pointer events ([f7db43a](https://github.com/shawn-sandy/fp-kit/commit/f7db43ac33c57555befe659e99c2e11971ae228a))
+* ✨ add handleClick/handlePointerDown props/mehtods ([9fd10ba](https://github.com/shawn-sandy/fp-kit/commit/9fd10baa5a5b49a7b63ca717499532aa2c6876d4))
+* ✨ add pill style button example ([2af5da1](https://github.com/shawn-sandy/fp-kit/commit/2af5da162eb57b845daf33aa6065ae304350ce4d))
+* ✨ turn on/off default inline styles ([da852c1](https://github.com/shawn-sandy/fp-kit/commit/da852c1a7f43d10a25c2cb20a331aa95e4374afc))
+* 💄 update style, code, docs ([75e81cc](https://github.com/shawn-sandy/fp-kit/commit/75e81ccc5c5f7c51b144cdac8b015dc9f341e8ef))
+
+
+
+
+
 ## [0.2.2](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.2.1...@fpkit/fp-button@0.2.2) (2022-07-20)
 
 **Note:** Version bump only for package @fpkit/fp-button

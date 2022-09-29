@@ -8,6 +8,14 @@
   position: relative;
   cursor: var(--tip-cursor);
 }
+.fp-tooltip[data-variant] {
+  --tip-bg: var(--vbg);
+  --tip-cl: var(--vcl);
+  --tip-rds: var(--vrds);
+  --tip-cubic: var(--vcubic);
+  --tip-cursor: var(--vcursor);
+  --tip-opacity: var(--vopacity);
+}
 .fp-tooltip:after {
   font-size: var(--tip-fs, var(--fs-2));
   background: var(--tip-bg);

@@ -14,6 +14,15 @@
   --tip-cubic: cubic-bezier(0.64, 0.09, 0.08, 1);
   --tip-cursor: pointer;
   --tip-opacity: 0.9;
+
+  &[data-variant] {
+    --tip-bg: var(--vbg);
+    --tip-cl: var(--vcl);
+    --tip-rds: var(--vrds);
+    --tip-cubic: var(--vcubic);
+    --tip-cursor: var(--vcursor);
+    --tip-opacity: var(--vopacity);
+  }
   @content;
 }
 
@@ -55,7 +64,7 @@
 }
 
 @mixin module {
-  [role="tooltip"], [style*="--tip"] {
+  [role="tooltip"], [style*="--tip"], [data-fp-tooltip] {
     @include props;
     @include rules;
   }

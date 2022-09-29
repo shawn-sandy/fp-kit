@@ -4,14 +4,12 @@
 //  Author: Shawn Sandy
 //  Date: 2021-04-01
 //  ***************************************
-// */
+//***
 
 @mixin props() {
-  // * css custom properties
-
+  // css custom properties
   --slt-appearance: none;
   --slt-fs: 0.9rem;
-
   @content;
 }
 
@@ -44,6 +42,7 @@
   -webkit-appearance: var(--slt-appearance);
   appearance: var(--slt-appearance);
   padding-right: var(--sle-pxe, 30px);
+
   @content;
 }
 
@@ -53,7 +52,7 @@
 }
 
 @mixin module {
-  select, fp-selct {
+  select {
     @include props;
     @include icons;
     @include rules;

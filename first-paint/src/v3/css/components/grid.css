@@ -1,7 +1,7 @@
 /**
 *
 */
-[role=grid], [role=list], .fp-grid {
+[role=grid], [role=list], [data-fp-grid] {
   /**
    * User input values.
    */
@@ -20,10 +20,15 @@
   );
   --list-max-width: var(--grid-max-width);
 }
+[role=grid][data-variant], [role=list][data-variant], [data-fp-grid][data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 [role=grid] [role=row],
 [role=grid] [style*="--row"], [role=grid] [role=listitem], [role=grid] [style*="--listitem"], [role=list] [role=row],
-[role=list] [style*="--row"], [role=list] [role=listitem], [role=list] [style*="--listitem"], .fp-grid [role=row],
-.fp-grid [style*="--row"], .fp-grid [role=listitem], .fp-grid [style*="--listitem"] {
+[role=list] [style*="--row"], [role=list] [role=listitem], [role=list] [style*="--listitem"], [data-fp-grid] [role=row],
+[data-fp-grid] [style*="--row"], [data-fp-grid] [role=listitem], [data-fp-grid] [style*="--listitem"] {
   --grid-cols-tpl: repeat(
     auto-fill,
     minmax(
@@ -35,7 +40,7 @@
   grid-gap: var(--grid-gap);
   display: var(--grid-dsp, grid);
 }
-[role=grid] [style*="--main:"], [role=list] [style*="--main:"], .fp-grid [style*="--main:"] {
+[role=grid] [style*="--main:"], [role=list] [style*="--main:"], [data-fp-grid] [style*="--main:"] {
   flex: var(--fx-auto-size);
 }
 

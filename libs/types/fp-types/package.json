@@ -1,0 +1,25 @@
+{
+  "name": "@fpkit/types",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "entry": "src/main.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "preconstruct": "npx preconstruct build",
+    "preconstruct:fix": "npx preconstruct fix"
+  },
+  "devDependencies": {
+    "@preconstruct/cli": "^2.2.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.7"
+  },
+  "main": "dist/fpkit-types.cjs.js",
+  "module": "dist/fpkit-types.esm.js",
+  "files": [
+    "dist",
+    "src"
+  ]
+}

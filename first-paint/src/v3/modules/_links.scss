@@ -1,0 +1,77 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+@mixin props() {
+  // * css custom properties
+  @content;
+}
+
+@mixin rules {
+
+  // * css rules/styles
+  --link-border: none;
+  --link-bg: white-smoke;
+  --link-color: #0070f3;
+  color: var(--link-color);
+  background-color: var(--link-bg);
+  text-decoration: var(--link-decoration, none);
+  border: var(--link-border);
+  padding-inline: var(--link-px, 0.25rem);
+  transition: var(--tran-all);
+  &:hover {
+    --link-decoration: underline;
+    // background-color: whitesmoke;
+    filter: var(--filter);
+  }
+  &:visited {
+    color: var(--link-color, #0070f3);
+    background-color: var(--link-bg);
+  }
+  &:active {
+    color: var(--link-color, #0070f3);
+    background-color: var(--link-bg);
+  }
+
+  &[role="button"],
+  /* // style --btn will soon be deprecated */
+  /* use [data-fp-btn] instead */
+  &[style="--btn"],
+  &[data-fp-btn] {
+    background-color: var(--link-bg, lightgray);
+    --btn-bg: var(--link-bg, lightgray);
+  }
+
+  &[aria-current], &:visited[aria-current] {
+    --link-color: currentColor;
+  //  color: var(--link-color, gray);
+   &:hover {
+     text-decoration: none;
+   }
+  }
+
+  &[data-variant] {
+    --link-color: var(--vcl);
+    --link-bg: var(--vbg);
+    --link-decoration: var(--vdecoration);
+    --link-fs: var(--vfs);
+  }
+  @content;
+}
+
+@mixin styles {
+  // * css style utilities
+  @content;
+}
+
+@mixin module {
+  a {
+    @include props;
+    @include rules;
+  }
+  @include styles;
+}

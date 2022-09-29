@@ -1,27 +1,3 @@
-.fp-content a, .fp-content .fp-link {
-  --link-border: none;
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-  text-decoration: var(--link-decoration, none);
-  border: var(--link-border);
-  padding-inline: var(--link-px, 0.25rem);
-  transition: var(--tran-all);
-}
-.fp-content a:hover, .fp-content .fp-link:hover {
-  --link-decoration: underline;
-  filter: var(--filter);
-}
-.fp-content a:visited, .fp-content .fp-link:visited {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-.fp-content a:active, .fp-content .fp-link:active {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-.fp-content a[role=button], .fp-content a[style="--btn"], .fp-content .fp-link[role=button], .fp-content .fp-link[style="--btn"] {
-  background-color: var(--link-bg);
-}
 .fp-content form, .fp-content .fp-form {
   width: 100%;
 }

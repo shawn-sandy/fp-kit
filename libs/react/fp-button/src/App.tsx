@@ -6,11 +6,15 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  const handleClick = () => {
+    setCount(count + 1)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
+        <p>Hello Vite + React!!!!</p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
@@ -34,7 +38,7 @@ function App() {
           </a>
         </p>
         <p>
-          <Button type="button" onClick={() => setCount((count) => count + 1)}>count is: {count}</Button>
+          <Button type="button" onPointerDown={handleClick} data-variant="red">count is: {count}</Button>
         </p>
       </header>
     </div>

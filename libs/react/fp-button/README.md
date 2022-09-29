@@ -1,31 +1,31 @@
 # FPKIT Button
 
-A lightweight react UI primitive for creating button elements/components that leverage CSS custom properties for reactive Styles.
+A lightweight React UI primitive for creating button elements/components that leverage CSS custom properties for reactive Styles.
 
 ## FPKIT UI Components
 
-FPKIT is lightweight, modular and extensible UI component library that focuses building modern, accessible, performance first web applications.
+FPKIT is a lightweight, modular and extensible UI component library that focuses on building modern, accessible, performance-first web applications.
+
 ## FirstPaint (Addon CSS library)
 
-Built in support for FirstPaint a modern, performance first, easy to use, accessible CSS/SCSS micro framework that focuses on CSS custom properties and Semantic HTML over class heavy styling [more info](https://firstpaint.dev)
-
+Built-in support for FirstPaint a modern, performance-first, easy-to-use, accessible CSS/SCSS micro framework that focuses on CSS custom properties and Semantic HTML over class-heavy styling [more](https://firstpaint.dev) info](https://firstpaint.dev)
 
 ## Install
 
  ```bash
- npm install -D @fpkit/fp-btn
+npm i @fpkit/fp-button
  ```
 
- ### Usage
+### Usage
 
- ```jsx
- import {Button } from '@fpkit/button';
+```js
+ import {Button } from '@fpkit/fp-button';
 
  <Button onClick={ alert('clicked button')}>Click here</Button>
 
  ```
 
-## Licenced under the MIT license.
+## Licensed under the MIT license
 
 The MIT License (MIT)
 
@@ -33,4 +33,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

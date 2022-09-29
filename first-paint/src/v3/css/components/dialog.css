@@ -1,12 +1,18 @@
-dialog, [role=dialog], .fp-dialog {
+dialog, [role=dialog], [data-fp-dialog] {
   background-color: var(--diag-bg, var(--fp-snow));
   background-image: var(--diag-bg-img, none);
   padding-inline: var(--diag-x, 1.5rem);
   padding-block: var(--diag-y, 1.5rem);
   margin: var(--spc, auto);
 }
-dialog::backdrop, [role=dialog]::backdrop, .fp-dialog::backdrop {
+dialog::backdrop, [role=dialog]::backdrop, [data-fp-dialog]::backdrop {
   background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
+}
+dialog[data-variant], [role=dialog][data-variant], [data-fp-dialog][data-variant] {
+  --diag-bg: var(--vbg);
+  --diag-bg-img: var(--vbg-img);
+  --diag-x: var(--vx);
+  --diag-y: var(--vy);
 }
 
 /*# sourceMappingURL=dialog.css.map */

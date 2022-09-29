@@ -19,6 +19,12 @@
 .fp-breadcrumb li + li::before {
   content: var(--crumb-icon, "/");
   color: currentColor;
+  padding-inline-end: 0.5rem;
+}
+.fp-breadcrumb[data-variant] {
+  --crumb-fs: var(--vfs);
+  --crumb-cl: var(--vcl);
+  --crumb-bg: var(--vbg);
 }
 
 /*# sourceMappingURL=breadcrumb.css.map */

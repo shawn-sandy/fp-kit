@@ -178,6 +178,12 @@ hr {
   margin-inline: var(--hr-px, 0);
 }
 
+/**
+ * @fileoverview
+ * This file contains the base styles for the first-paint library.
+ * It is used to set up the global styles for the library.
+ * @author First Paint
+ */
 :root {
   --fw: normal;
   --fst: normal;

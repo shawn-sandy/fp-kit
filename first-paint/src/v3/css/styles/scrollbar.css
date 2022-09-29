@@ -20,5 +20,15 @@
   /* Foreground */
   background: var(--scroll-bg, gray);
 }
+.fp-scrollbar[data-variant] {
+  --scroll: var(--vscroll);
+  --overflow-y: var(--voverflow-y);
+  --overflow-x: var(--voverflow-x);
+  --scroll-size: var(--vscroll-size);
+  --scroll-w: var(--vscroll-w);
+  --scroll-h: var(--vscroll-h);
+  --scroll-track-bg: var(--vscroll-track-bg);
+  --scroll-bg: var(--vscroll-bg);
+}
 
 /*# sourceMappingURL=scrollbar.css.map */

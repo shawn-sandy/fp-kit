@@ -7,24 +7,56 @@
 // */
 @mixin props() {
   // * css custom properties
-  --beta: var(--fp-orange,  orange);
-  --stable: var(--fp-green, green) ;
-  --production: var(--fp-blue, blue;)
+  --beta: var(--warning-500,  orange);
+  --stable: var(--success-500, green) ;
+  --production: var(--primary-500, royalblue);
   @content;
 }
 
 @mixin rules {
   // * css rules/styles
-  padding-inline: var(--note-px, 0.7rem);
-  padding-block: var(--note-py, 0.2rem);
-  color: var(--note-cl, inherit);
-  font-size: var(--note-fs, 0.8rem);
-  font-weight: var(--note-fw, normal);
-  border: var(--note-brd, none);
-  border-radius: var(--note-rds, 99rem);
-  background-color: var(--note, var(--fp-light-gray));
-  text-decoration: var(--note-decoration, none);
-  text-transform: var(--note-tt, var(--tt));
+  padding-inline: var(--badge-px, 0.7rem);
+  padding-block: var(--badge-py, 0.2rem);
+  color: var(--badge-cl, currentColor);
+  font-size: var(--badge-fs, 0.8rem);
+  font-weight: var(--badge-fw, normal);
+  border: var(--badge-brd, none);
+  border-radius: var(--badge-rds, 99rem);
+  background-color: var(--badge-bg, var(--badge, var(--neutral-100)));
+  text-decoration: var(--badge-decoration, none);
+  text-transform: var(--badge-tt, var(--tt));
+  font-weight: var(--badge-fw, 700);
+
+
+  &[data-fp-badge~="beta"]{
+    background-color: var(--beta);
+  }
+
+  &[data-fp-badge~="stable"] {
+    --badge-cl: white;
+    --badge-bg: var(--stable);
+  }
+
+  &[data-fp-badge~="production"] {
+    --badge-cl: white;
+    --badge-bg: var(--production);
+  }
+
+  &[data-fp-badge~="beta"] {
+    --badge-cl:white;
+    --badge-bg: var(--beta);
+  }
+
+  &[data-variant] {
+    --vfs: .8rem;
+    --vradius: 99rem;
+    --vpx: 0.7rem;
+    --vpy: 0.2rem;
+    --vfw: 700;
+    --badge-bg: var(--vbg);
+    --badge-cl: var(--vcl);
+    --badge-fs: var(--vfs);
+  }
 
   @content;
 }
@@ -32,21 +64,22 @@
 @mixin styles {
   :not(span)[role="note"] {
     // @include props;
-    --note-bg: whitesmoke;
-    --note-rds: 1rem;
-    --note-px: 1.5rem;
-    --note-py: 1.5rem;
-    --note-note-tt: normal;
+    --badge-bg: whitesmoke;
+    --badge-rds: 1rem;
+    --badge-px: 1.5rem;
+    --badge-py: 1.5rem;
+    --badge-note-tt: normal;
   }
 
-  [style="--note-bg"] {
-    background-color: var(--note, var(--note-bg));
+  [style="--badge-bg"] {
+    background-color: var(--badge, var(--badge-bg));
   }
 
-  [style*="--note-scale"],
-  p[style*="--note-scale"] {
-    font-size: var(--note-scale, 75%);
+  [style*="--badge-scale"],
+  p[style*="--badge-scale"] {
+    font-size: var(--badge-scale, 75%);
   }
+
 
   @content;
 }
@@ -54,10 +87,16 @@
 @mixin module {
   [style*="--badge"],
   [role="note"],
+  [role="status"],
   p[role="note"],
-  .fp-note {
+  [data-fp-badge]
+  {
     @include props;
     @include rules;
+  }
+
+  p[role="note"] {
+    --badge-fw: normal;
   }
   @include styles;
 }

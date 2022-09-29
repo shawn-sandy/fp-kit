@@ -23,6 +23,12 @@
     background-color: var(--detail-bg);
   }
 
+  &[data-variant] {
+    --detail-fs: var(--vfs);
+    --detail-color: var(--vcl);
+    --detail-bg: var(--vbg);
+  }
+
   summary {
     display: flex;
     place-content: flex-start;
@@ -49,6 +55,12 @@
         color: currentColor;
       }
     }
+
+    &[data-variant] {
+      --summary-fs: var(--vfs);
+      --summary-color: var(--vcl);
+      --summary-bg: var(--vbg);
+    }
   }
 
   &[open] > summary {
@@ -64,7 +76,7 @@
 }
 
 @mixin module {
-  .fp-details-summary, details {
+  details, [data-fp-details] {
     @include rules;
   }
 }

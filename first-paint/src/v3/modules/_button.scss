@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-colon-newline-after */
 //***
 //  ***************************************
 //  FirsPaint
@@ -5,24 +6,29 @@
 //  Date: 2021-04-01
 //  ***************************************
 // */
-/* stylelint-disable declaration-colon-newline-after */
 
 @mixin props {
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
-
+  --btn-height: calc(40rem / 16);
+  --fs: .95rem;
+  --btn-fs: calc(15rem / 16);
   @content;
 }
 
 @mixin rules() {
+
   @include props;
-  font-size: var(--btn-fs, calc(13rem / 16));
-  min-height: calc(40rem / 16);
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw, 600);
+  height: var(--btn-height, calc(40rem / 16));
+  min-height: var(--btn-height, calc(40rem / 16));
+  max-height: var(--btn-height, calc(40rem / 16));
   place-items: var(--btn-place, center);
-  padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, calc(var(--btn-fs)  / 1.8 ));
+  padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1%));
+  padding-block: var(--btn-py, calc(var(--btn-fs) + .75%));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
@@ -35,58 +41,70 @@
   background-color: var(--btn-bg, var(--btn));
   outline: none;
 
-  &[type]{
-    background-color: var(--btn-bg, var(--btn, lightgray));
+  &[type] {
+    background-color: var(--btn-bg, var(--btn, var(--neutral-100)));
     --btn-bdr: solid var(--btn-sg);
   }
+
   &[type="submit"],
   &[style*="submit"] {
-    --btn-bg: darkblue;
+    --btn-bg: var(--primary-500, royal-blue);
     --btn-color: white;
   }
-  &[disabled], &[aria-disabled="true"] {
-    cursor: var(--btn-cursor-disabled, not-allowed);
-    opacity: var(--btn-opacity-disabled, 0.5);
+
+  &[disabled],
+  &[aria-disabled="true"] {
+    cursor: var(--btn-cursor, not-allowed);
+    opacity: var(--btn-opacity, 0.5);
   }
 
   // TODO: add hover/focus with :if()
   &:is(:hover, :focus) {
-    --btn-bg: lightgray;
+    // --btn-bg: lightgray;
     --btn-cl: var(--btn-cl-hover);
-    background-color: var(--btn-bg-over, var(--btn, lightgray));
+    background-color: var(--btn-bg, var(--btn, lightgray));
     filter: invert(1) hue-rotate (180deg);
     transform: scale(0.95);
     outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
     outline-offset: var(--line-offset, 5px);
   }
 
-  &[type="reset"],
-  &[style*="--btn-reset"] {
+  &[type="reset"] {
     --btn-bg: transparent;
     --btn-color: gray;
     --btn-bdr: gray thin solid;
   }
-  &[type="submit"],
-  &[style*="--btn-submit"] {
-    --btn-bg: var(--blue-500);
+
+  &[type="submit"] {
+    --btn-bg: var(--primary-700, blue);
     --btn-cl: #fff;
     --btn-color: rgb(231, 231, 231);
     --btn-border: none;
   }
 
+  &[data-fp-btn~="pill"] {
+    border-radius: 100rem;
+  }
+
+  &[data-variant] {
+    --btn-bg: var(--vbg);
+    --btn-cl: var(--vcl);
+    --btn-fs: var(--vfs, .95rem);
+  }
+
   @content;
 }
 
-@mixin styles {
-
-}
+@mixin styles {}
 
 @mixin module {
+
   button,
   [style*="--btn"],
-  .fp-button,
+  a[data-fp-btn],
   [role="button"] {
     @include rules;
   }
+
   @include styles;
 }

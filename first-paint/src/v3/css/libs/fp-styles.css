@@ -38,6 +38,8 @@ hr {
 /**
 *
 */
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable alpha-value-notation */
 .fp-nav {
   display: var(--nav-dsp, flex);
   flex-direction: var(--nav-direction, row);
@@ -77,6 +79,11 @@ hr {
   --px: 0 var(--s1);
   --w: var(--brand-w, 3.6rem);
 }
+.fp-nav[data-variant] {
+  background-color: var(--nav-bg);
+  color: var(--nav-cl);
+  font-size: var(--nav-fs, 0.9rem);
+}
 .fp-header {
   display: var(--hdr-dsp, flex);
   background-color: var(--hdr-bg, var(--fp-white-smoke));
@@ -94,6 +101,11 @@ hr {
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
 }
+.fp-header[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 .fp-container {
   --bx-flow: column wrap;
   --bx-align: flex-start;
@@ -106,20 +118,34 @@ hr {
   width: var(--bx-w, var(--w, auto));
   height: var(--bx-h, var(--h, auto));
 }
+.fp-container[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 .fp-btn {
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
+  --btn-height: calc(40rem / 16);
+  --fs: .95rem;
+  --btn-fs: calc(15rem / 16);
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
-  font-size: var(--btn-fs, 0.8125rem);
-  min-height: 2.5rem;
+  --btn-height: calc(40rem / 16);
+  --fs: .95rem;
+  --btn-fs: calc(15rem / 16);
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw, 600);
+  height: var(--btn-height, 2.5rem);
+  min-height: var(--btn-height, 2.5rem);
+  max-height: var(--btn-height, 2.5rem);
   place-items: var(--btn-place, center);
-  padding-inline: var(--btn-px, 1.4rem);
-  padding-block: var(--btn-py, calc(var(--btn-fs) / 1.8));
+  padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1%));
+  padding-block: var(--btn-py, calc(var(--btn-fs) + 0.75%));
   border: var(--btn-bdr, none);
   border-radius: var(--btn-rds, 0.15rem);
   text-decoration: var(--btn-deco, none);
@@ -133,36 +159,43 @@ hr {
   outline: none;
 }
 .fp-btn[type] {
-  background-color: var(--btn-bg, var(--btn, lightgray));
+  background-color: var(--btn-bg, var(--btn, var(--neutral-100)));
   --btn-bdr: solid var(--btn-sg);
 }
 .fp-btn[type=submit], .fp-btn[style*=submit] {
-  --btn-bg: darkblue;
+  --btn-bg: var(--primary-500, royal-blue);
   --btn-color: white;
 }
 .fp-btn[disabled], .fp-btn[aria-disabled=true] {
-  cursor: var(--btn-cursor-disabled, not-allowed);
-  opacity: var(--btn-opacity-disabled, 0.5);
+  cursor: var(--btn-cursor, not-allowed);
+  opacity: var(--btn-opacity, 0.5);
 }
 .fp-btn:is(:hover, :focus) {
-  --btn-bg: lightgray;
   --btn-cl: var(--btn-cl-hover);
-  background-color: var(--btn-bg-over, var(--btn, lightgray));
+  background-color: var(--btn-bg, var(--btn, lightgray));
   filter: invert(1) hue-rotate 180deg;
   transform: scale(0.95);
   outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
   outline-offset: var(--line-offset, 5px);
 }
-.fp-btn[type=reset], .fp-btn[style*="--btn-reset"] {
+.fp-btn[type=reset] {
   --btn-bg: transparent;
   --btn-color: gray;
   --btn-bdr: gray thin solid;
 }
-.fp-btn[type=submit], .fp-btn[style*="--btn-submit"] {
-  --btn-bg: var(--blue-500);
+.fp-btn[type=submit] {
+  --btn-bg: var(--primary-700, blue);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
+}
+.fp-btn[data-fp-btn~=pill] {
+  border-radius: 100rem;
+}
+.fp-btn[data-variant] {
+  --btn-bg: var(--vbg);
+  --btn-cl: var(--vcl);
+  --btn-fs: var(--vfs, .95rem);
 }
 .fp-checkbox {
   display: var(--lbl-dsp, flex);
@@ -204,6 +237,11 @@ hr {
   border-style: --chk-bdr-style;
   --chk-bg: var(--fp-yellow-green);
 }
+.fp-checkbox[data-variant] {
+  --lbl-fs: var(--vfs);
+  --lbl-cl: var(--vcl);
+  --lbl-bg: var(--vbg);
+}
 .fp-label[for] {
   display: var(--lbl-dsp, flex);
   flex-direction: var(--lbl-direction, row);
@@ -231,6 +269,11 @@ hr {
 .fp-img + * {
   margin-block: 1rem 0;
 }
+.fp-img[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 .fp-details-summary {
   font-size: var(--detail-fs, 1rem);
   color: var(--detail-color, currentColor);
@@ -242,6 +285,11 @@ hr {
 .fp-details-summary :where(div, aside, p, ul) {
   padding: var(--summary-pd, 0 1rem 1rem 1rem);
   background-color: var(--detail-bg);
+}
+.fp-details-summary[data-variant] {
+  --detail-fs: var(--vfs);
+  --detail-color: var(--vcl);
+  --detail-bg: var(--vbg);
 }
 .fp-details-summary summary {
   display: flex;
@@ -266,6 +314,11 @@ hr {
 .fp-details-summary summary:hover::after {
   transform: scale(1.1);
   color: currentColor;
+}
+.fp-details-summary summary[data-variant] {
+  --summary-fs: var(--vfs);
+  --summary-color: var(--vcl);
+  --summary-bg: var(--vbg);
 }
 .fp-details-summary[open] > summary::after {
   content: "×";
@@ -319,6 +372,14 @@ hr {
   border-radius: var(--tbl-rds, 16px);
   border-spacing: 0;
   overflow: auto;
+}
+.fp-table[data-variant] {
+  --tbl-fs: var(--vfs);
+  --tbl-cl: var(--vcl);
+  --tbl-bg: var(--vbg);
+  --tbl-cap-fs: var(--vfs);
+  --tbl-cap-cl: var(--vcl);
+  --tbl-cap-bg: var(--vbg);
 }
 .fp-table caption {
   --fs: var(--fs-4);
@@ -393,6 +454,16 @@ hr {
   );
   --list-max-width: var(--grid-max-width);
 }
+.fp-grid[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
+.fp-grid[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
 .fp-grid [role=row],
 .fp-grid [style*="--row"], .fp-grid [role=listitem], .fp-grid [style*="--listitem"] {
   --grid-cols-tpl: repeat(
@@ -419,6 +490,12 @@ hr {
 .fp-dialog::backdrop {
   background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
 }
+.fp-dialog[data-variant] {
+  --diag-bg: var(--vbg);
+  --diag-bg-img: var(--vbg-img);
+  --diag-x: var(--vx);
+  --diag-y: var(--vy);
+}
 .fp-input {
   --input-appearance: none;
   background-color: var(--input-cl);
@@ -438,6 +515,13 @@ hr {
 .fp-input::placeholder {
   font-style: italic;
   --input-fs: .5rem;
+}
+.fp-input[data-variant] {
+  --vfs: .8rem;
+  --vcl: var(--fp-light-gray);
+  --input-fs: var(--vfs);
+  --input-cl: var(--vcl);
+  --input-bg: var(--vbg);
 }
 .fp-radio {
   --rdo-appearance: none;
@@ -518,6 +602,11 @@ hr {
   -moz-appearance: var(--txa-appearance);
   appearance: var(--txa-appearance);
 }
+.fp-textarea[data-vairant] {
+  --txa-fs: var(--vfs);
+  --txa-cl: var(--vcl);
+  --txa-bg: var(--vbg);
+}
 .fp-select {
   --slt-appearance: none;
   --slt-fs: 0.9rem;
@@ -554,16 +643,42 @@ hr {
 .fp-footer p {
   --p-fs: var(--footer-fs, var(--fs));
 }
+.fp-footer[data-variant] {
+  --footer-fs: var(--vfs);
+  --footer-cl: var(--vcl);
+  --footer-bg: var(--vbg);
+}
 .fp-list {
   --listOff: ;
   list-style: var(--list-s, inside);
   font-size: var(--list-fs, 0.95rem);
   line-height: var(--list-lh, 1.5);
   padding-inline-start: var(--list-pxs, 1.5rem);
+  display: var(--list-dsp, block);
+}
+.fp-list[data-variant] {
+  --list-fs: var(--vfs);
+  --list-lh: var(--vlh);
+  --list-pxs: var(--vpxs);
+  --list-dsp: var(--vdsp);
 }
 .fp [style*="--listOff"] {
   --list-s: var(--listOff, none);
   --list-pxs: var(--listOff, 5px);
+}
+.fp [data-fp-list~=unstyled] {
+  --list-s: none;
+  --list-pxs: 0;
+}
+.fp [data-fp-list~=unstyled] li {
+  list-style: var(--list-s);
+  --list-pxs: var(--list-pxs);
+}
+.fp [data-fp-list~=inline] {
+  --list-dsp: flex;
+}
+.fp [data-fp-list~=inline] li {
+  padding-inline: var(--list-px, 1rem);
 }
 
 /*# sourceMappingURL=fp-styles.css.map */

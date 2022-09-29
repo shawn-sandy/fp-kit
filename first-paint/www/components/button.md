@@ -49,21 +49,27 @@
 >
   Default Button
 </button>
+```
 
+```html preview
 <button type="submit"
 >
   Submit Button
 </button>
 
-<button type="reset"
->
+```
+
+```html preview
+
+<button type="reset">
   Reset Button
 </button>
+
 ```
 
 ### Button vanilla
 
-Remove the `type` attribute to create a button without border or background color, **styleless buttons**--useful for creating/styling buttons that look like links using of vice-versa. For crating button links `<a>` you use `style="--btn:*"` or the `[role="button"] attribute.
+Remove the `type` attribute to create a button without border or background color, **styleless buttons**--useful for creating/styling buttons that look like links using or vice-versa. For creating button links `<a>` you use `style="--btn:*"` or the `[role="button"] attribute.
 
 
 ```html preview
@@ -71,24 +77,6 @@ Remove the `type` attribute to create a button without border or background colo
 Default Button
 </button>
 ```
-
-### Primary Style
-
-```html preview
-<button type="button" style="--btnPrimary: var(--y)">
-Primary Style Button
-</button>
-```
-
-### Large Style
-
-
-```html preview
-<button type="button" style="--btnLg: var(--y)">
-Large style Button
-</button>
-```
-
 ### Disabled Button
 
 For disabled buttons add a disabled attribute `[disabled]`
@@ -102,51 +90,6 @@ For disabled buttons add a disabled attribute `[disabled]`
 </button>
 ```
 
-### Red Button
-
-Change the button color using the style attribute.
-
-```html
-style="--btn-bg:red; --btn-color:white;"
-```
-
-```html preview
-<button
-  type="button"
-  style="--btn-bg:red; --btn-color:white;"
->
-  Red Custom Style
-</button>
-```
-
-#### Red Button (Disabled)
-
-```html preview
-<button
-  type="button"
-  disabled
-  style="--btn-bg:red; --btn-color:white;"
->
-  Red Disabled
-</button>
-```
-
-### Large Button
-
-Style the button font size `--btn-fs` using the `--btn-lg` variable `--btn-sm`, `--btn-md` variable(s)
-
-```html
-style="--btn-fs:var(--btn-lg);"
-```
-
-```html preview
-<button
-  type="button"
-  style="--btn-fs:var(--btn-lg);"
->
-  Large Button
-</button>
-```
 
 ### Pill Button
 
@@ -164,6 +107,46 @@ style="--btn-rds:var(--btn-pill);"
   Pill button
 </button>
 ```
+
+## Variants
+
+
+
+```html preview
+<button type="button" data-variant="dark">Dark Variant</button>
+
+```
+
+```html preview
+<button type="button" data-variant="light">Light Variant</button>
+
+```
+
+```html preview
+<button type="button" data-variant="primary">Primary Variant</button>
+
+```
+
+```html preview
+<button type="button" data-variant="secondary">Secondary Variant</button>
+
+```
+
+```html preview
+<button type="button" data-variant="tertiary">Tertiary Variant</button>
+
+```
+
+```html preview
+<button type="button" data-variant="success">Success Variant</button>
+
+```
+
+```html preview
+<button type="button" data-variant="warning">Warning Variant</button>
+
+```
+
 
 ----
 ## See also

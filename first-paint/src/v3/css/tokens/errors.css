@@ -1,0 +1,14 @@
+:root {
+  /* Errors CSS Vars */
+  --errors-100: hsl(357, 59%, 93%);
+  --errors-200: hsl(356, 63%, 86%);
+  --errors-300: hsl(354, 66%, 78%);
+  --errors-400: hsl(353, 69%, 67%);
+  --errors-500: hsl(347, 82%, 48%);
+  --errors-600: hsl(347, 83%, 43%);
+  --errors-700: hsl(347, 82%, 37%);
+  --errors-800: hsl(347, 83%, 30%);
+  --errors-900: hsl(347, 83%, 21%);
+}
+
+/*# sourceMappingURL=errors.css.map */

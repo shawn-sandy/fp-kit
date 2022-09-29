@@ -2,24 +2,21 @@
 
 ----------------
 
-
 ## Easy to use
 
-Grab our styles from the CDN `https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/libs/all.css` and drop into any semantic HTML5 page. FP was designed for use out of box with any semantic HTML5 markup, check out the docs for more info.
+Grab our styles from the CDN `https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/libs/all.css` and drop into any semantic HTML5 page. FP was designed for use out of the box with any semantic HTML5 markup, check out the docs for more info.
 
 ## Dynamic CSS Styles (Custom Properties)
 
-CSS variables can be used to dynamically change the look and feel of components/elements, whats more when you assign a CSS variable to a property you can now use the variable assigned as a property name in you rules. For example lets create a `color` and `background-color` variable for a button `--btn-cl` and `--btn-bg`. Now we can us the new variables to replace the name of the CSS properties and assign it a new value, creating `inherited properties` or what we call *css custom-props* [read more about css variables on increment](https://increment.com/frontend/a-users-guide-to-css-variables/). [FirstPaint default custom properties](/tokens)
+CSS variables can be used to dynamically change the look and feel of components/elements, what's more when you assign a CSS variable to a property you can now use the variable assigned as a property name in your rules. For example, let's create a `color` and `background-color` variable for a button `--btn-cl` and `--btn-bg`. Now we can use the new variables to replace the name of the CSS properties and assign it a new value, creating `inherited properties` or what we call CSS custom-props* [read more about CSS variables on increment](https://increment.com/frontend/a-users-guide-to-css-variables/). [FirstPaint default custom properties](/tokens)
 
-## Classes Optional
+## Classless
 
-While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. FirstPaint and libraries like it that leverage semantic `HTML5`, `CSS props` and the `style` attributes allows us add a layer of `dynamic styling` to HTML/CSS with minimal effort redefining how we layout/style web applications.
+While not as popular as traditional CSS frameworks that use `.classes` in markup to define page styles/layout. FirstPaint and libraries like it that leverage semantic `HTML5`, `CSS props`, `data-*` and the `style` attributes to allow us to add a layer of `dynamic styling` to HTML/CSS with minimal effort redefining how we layout/style web applications.
 
-We understand that this is an unconventional and some will frown on the approach, If you prefer classes, you can use the optional class syntax by adding a `.fp-` prefix to module `.fp-button`.
-
+~~We understand that this is an unconventional and some will frown on the approach, If you prefer classes, you can use the optional class syntax by adding a `.fp-` prefix to module `.fp-button`.~~
 
 ### Examples
-
 
 ```css
 .btn {
@@ -30,7 +27,6 @@ We understand that this is an unconventional and some will frown on the approach
 ```
 
 Now we can change the button color/background color using the style attribute `style="--btn-bg:red; --btn-color:white;"`, click view source below to see the code.
-
 
 ```html preview
 <button
@@ -50,15 +46,13 @@ Now we can change the button color/background color using the style attribute `s
 
 Accessibility matters to us and we think it should to you too so we made it a core part of our style system by adding aria attributes (`aria-role, aria-labels`, etc.) and semantic markup to CSS rules and markup to encourage developers to write accessible apps.
 
-
 ## Lightweight and performant
 
-We have adopted a performance first approach to the toolkit and opted to use CSS custom-properties to define how we build modules and write markup. Allowing us to build a library that is less than 24kb/10kb gzip) yet flexible and and fast.
-
+We have adopted a performance-first approach to the toolkit and opted to use CSS custom properties to define how we build modules and write markup. Allowing us to build a library that is less than 24kb/10kb gzip) yet flexible and fast.
 
 ## Modular
 
- Grab the entire library less under 8kb(gzip)/20kb(min) or use only the components you need and extend as you wish.
+ Grab the entire library less than 8kb(gzip)/20kb(min) or use only the components you need and extend as you wish.
 
 Brab all the components
 
@@ -95,9 +89,6 @@ Optionally load the components you need.
 // header component/styles
 @use "@shawnsandy/src/v3/components/header.scss";
 ```
-
-
-## Examples
 
 ### Header
 
@@ -196,7 +187,6 @@ FirstPaint
 </label>
 ```
 
-
 ### Grid (w/list)
 
 ```html preview
@@ -241,6 +231,7 @@ FirstPaint
 </section>
 
 ```
+
 ### Img
 
 ```html preview

@@ -632,31 +632,6 @@ p + * {
   color: var(--hsl --s --l);
 }
 
-a, .fp-link {
-  --link-border: none;
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-  text-decoration: var(--link-decoration, none);
-  border: var(--link-border);
-  padding-inline: var(--link-px, 0.25rem);
-  transition: var(--tran-all);
-}
-a:hover, .fp-link:hover {
-  --link-decoration: underline;
-  filter: var(--filter);
-}
-a:visited, .fp-link:visited {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-a:active, .fp-link:active {
-  color: var(--link-color, #0070f3);
-  background-color: var(--link-bg);
-}
-a[role=button], a[style="--btn"], .fp-link[role=button], .fp-link[style="--btn"] {
-  background-color: var(--link-bg);
-}
-
 form, .fp-form {
   width: 100%;
 }
