@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/shawn-sandy/react-vite/compare/@fpkit/fp@0.0.5...@fpkit/fp@0.1.0) (2022-09-29)
+
+
+### Features
+
+* ✨ make span conditional add default span tag ([c4c961a](https://github.com/shawn-sandy/react-vite/commit/c4c961a3e402a6343771a0415ac04328227fc6ac))
+
+
+
+
+
 ## [0.0.5](https://github.com/shawn-sandy/react-vite/compare/@fpkit/fp@0.0.4...@fpkit/fp@0.0.5) (2022-09-29)
 
 
