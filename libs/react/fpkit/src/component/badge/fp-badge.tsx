@@ -1,7 +1,7 @@
 import FP from "../fp"
 
 export interface FpBadgeProps {
-  elm: "span" | "p" | "a"
+  elm?: "span" | "p" | "a"
   children: React.ReactNode
   role: "note" | "alert" | "status"
   renderStyles?: boolean
@@ -23,7 +23,7 @@ const defStyles = {
 }
 
 export const Badge = ({
-  elm,
+  elm = "span",
   role,
   children,
   renderStyles = true,
