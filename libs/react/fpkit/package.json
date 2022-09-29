@@ -43,9 +43,14 @@
   "description": "Introduction",
   "type": "module",
   "source": "src/index.ts",
-  "main": "./lib/index.umd.cjs",
-  "module": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "lib",
+    "src",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shawn-sandy/react-vite.git"

@@ -1,16 +1,25 @@
-import * as React from 'react';
+import * as React from "react"
 
 type KitProps<T extends React.ElementType> = {
   as?: T
   children: React.ReactNode
   role: "note" | "alert" | "status"
   renderStyles?: boolean
-  styles?: {}
+  styl?: {}
 } & React.ComponentPropsWithoutRef<T>
 
-const FP = <T extends React.ElementType = "div">({as, children, ...props}: KitProps<T>) => {
+const FP = <T extends React.ElementType = "div">({
+  as,
+  children,
+  styl,
+  ...props
+}: KitProps<T>) => {
   const Component = as || "div"
-  return <Component {...props}>{children}</Component>
+  return (
+    <Component {...props} style={styl}>
+      {children}
+    </Component>
+  )
 }
 
 export default FP
