@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.9](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.8...@fpkit/fp-button@0.4.9) (2022-09-29)
+
+
+### Features
+
+* 📦️ add badge component ([6a609ff](https://github.com/shawn-sandy/fp-kit/commit/6a609ffad869be77f5c44ffb79a966e2248a31da))
+* 🚧 ad badge component fpkit/fp ([c8b6b7b](https://github.com/shawn-sandy/fp-kit/commit/c8b6b7b11951ce8586505a01b2658b79187e3828))
+* 🆙 update actions for button story ([b13ec5d](https://github.com/shawn-sandy/fp-kit/commit/b13ec5da1ac84a35422fe99ada4b116d35b06c7e))
+
+
+
+
+
 ## [0.4.8](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.7...@fpkit/fp-button@0.4.8) (2022-09-21)
 
 
