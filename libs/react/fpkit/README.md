@@ -15,12 +15,14 @@ npm i @fpkit/fp
 ```jsx
 import { FP, Badge } from @fpkit/fp
 
-return (
-  <p>
-  <FP as='h3'>FP KIt <Badge elm="span" role="note">Bets</Badge>
-  </FP>
-  </p>
-)
+export App () {
+  return (
+    <p>
+    <FP as='h3'>FP KIt <Badge elm="span" role="note">Bets</Badge>
+    </FP>
+    </p>
+  )
+}
 ```
 
 ### Components
