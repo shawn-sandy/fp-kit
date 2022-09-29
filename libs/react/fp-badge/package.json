@@ -56,5 +56,8 @@
     "FPKit",
     "badge",
     "component"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

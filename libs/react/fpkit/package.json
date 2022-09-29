@@ -64,5 +64,9 @@
   "keywords": [
     "React",
     "components"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "4718563e4154f87525194c4428bc6d34cf7cabec"
 }
