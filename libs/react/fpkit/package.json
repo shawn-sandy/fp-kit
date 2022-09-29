@@ -1,7 +1,7 @@
 {
   "name": "@fpkit/fp",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "start": "vite --open",
     "dev": "vite",
@@ -16,7 +16,7 @@
     "test:snapshot": "vitest --run --update"
   },
   "dependencies": {
-    "@fpkit/fp-button": "^0.4.9",
+    "@fpkit/fp-button": "^0.4.10",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "vite-plugin-dts": "^1.2.0"

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.10](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.9...@fpkit/fp-button@0.4.10) (2022-09-29)
+
+**Note:** Version bump only for package @fpkit/fp-button
+
+
+
+
+
 ## [0.4.9](https://github.com/shawn-sandy/fp-kit/compare/@fpkit/fp-button@0.4.8...@fpkit/fp-button@0.4.9) (2022-09-29)
 
 
