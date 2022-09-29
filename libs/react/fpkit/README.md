@@ -23,6 +23,8 @@ export App () {
     </p>
   )
 }
+
+export default App
 ```
 
 ### Components
