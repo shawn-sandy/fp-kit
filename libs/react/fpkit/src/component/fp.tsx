@@ -11,7 +11,7 @@ const FP = <T extends React.ElementType = "div">({
   as,
   children,
   styl,
-  renderStyles,
+  renderStyles = true,
   ...props
 }: KitProps<T>) => {
   const Component = as || "div"
