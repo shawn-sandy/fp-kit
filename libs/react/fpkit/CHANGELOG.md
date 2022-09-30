@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.1.0...@fpkit/fp@0.1.1) (2022-09-30)
+
+
+### Features
+
+* 🏗️ add button component ([8bfdf87](https://github.com/shawn-sandy/fpkit/commit/8bfdf87ce5f8e84bd4e3c51efebcf6a8664f4e16))
+
+
+
+
+
 # [0.1.0](https://github.com/shawn-sandy/react-vite/compare/@fpkit/fp@0.0.5...@fpkit/fp@0.1.0) (2022-09-29)
 
 
