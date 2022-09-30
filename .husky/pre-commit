@@ -21,4 +21,4 @@ echo 'Starting lint-staged...'
 
 # If everything passes... Now we can commit
 echo '✅✅✅✅ Excellent all test passed, I am committing this now.'
-npx lint-staged
+# npx lint-staged
