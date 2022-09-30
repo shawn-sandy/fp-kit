@@ -114,7 +114,7 @@ ButtonInteractions.play = async ({ args, canvasElement }) => {
   expect(button).toHaveAttribute("type", "button")
   expect(button).toHaveAttribute("style")
   expect(clicked).toBeFalsy()
-  clicked = false
   userEvent.click(button )
   await waitFor(() => expect(clicked).toBeTruthy())
+  userEvent.click(button)
 }
