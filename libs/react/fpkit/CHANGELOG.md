@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* ✨ set renderstyles to stur by default ([9a466ce](https://github.com/shawn-sandy/react-vite/commit/9a466ce583f87e9bccdd8ba11203b961542faa4a))
+* ✨ set renderstyles to true by default ([9a466ce](https://github.com/shawn-sandy/react-vite/commit/9a466ce583f87e9bccdd8ba11203b961542faa4a))
 
 
 

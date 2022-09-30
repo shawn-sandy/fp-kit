@@ -36,17 +36,12 @@ const Template: ComponentStory<typeof FP> = (args) => (
 
 export const Default = Template.bind({})
 Default.args = {
-  children: "FP KIt",
+  children: "FP Kit",
 }
 
-export const FPInteractions = Template.bind({})
-
-FPInteractions.args = {
-  children: "FP Test"
-}
-
-FPInteractions.play = async ({ args, canvasElement }) => {
-  const { getByRole } = within(canvasElement)
-  const FP = getByRole("note")
-  expect(FP).toHaveAccessibleName("FP Test")
+Default.play = async ({ args, canvasElement }) => {
+  const { getByText } = within(canvasElement)
+  const component  = getByText(/fp kit/i)
+   expect(component).toBeInTheDocument()
+   expect(component).not.toHaveAttribute("style");
 }

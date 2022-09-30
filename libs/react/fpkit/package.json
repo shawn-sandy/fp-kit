@@ -53,14 +53,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shawn-sandy/react-vite.git"
+    "url": "git+https://github.com/shawn-sandy/fpkit.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shawn-sandy/react-vite/issues"
+    "url": "https://github.com/shawn-sandy/fpkit/issues"
   },
-  "homepage": "https://github.com/shawn-sandy/react-vite#readme",
+  "homepage": "https://github.com/shawn-sandy/fp-kit/tree/main/libs/react/fpkit",
   "keywords": [
     "React",
     "components"

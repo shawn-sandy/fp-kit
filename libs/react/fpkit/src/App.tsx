@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 
-import FPBadge from './component/badge/fp-badge'
+import FPBadge from './components/badge/fp-badge'
 
 function App() {
   const [count, setCount] = useState(0)

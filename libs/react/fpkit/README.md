@@ -2,8 +2,6 @@
 
 A lightweight React UI library for building lightweight, modern and accessible components that leverage CSS custom properties for reactive Styles.
 
-## Introduction
-
 ### Install
 
 ```bash
@@ -18,7 +16,7 @@ import { FP, Badge } from @fpkit/fp
 export App () {
   return (
     <p>
-    <FP as='h3'>FP KIt <Badge elm="span" role="note">Bets</Badge>
+    <FP as='h3'>FP KIt <Badge elm="span" role="note">Beta</Badge>
     </FP>
     </p>
   )
@@ -52,4 +50,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
