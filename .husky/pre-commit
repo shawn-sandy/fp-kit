@@ -16,7 +16,7 @@ npx lint-staged "$1"
 
 # run build
 echo 'Starting lint-staged...'
-npm run package "$1"
+# npm run package "$1"
 
 
 # If everything passes... Now we can commit
