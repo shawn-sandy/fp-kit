@@ -1,9 +1,7 @@
 import FP from "../fp"
+import { ComponentProps } from "../../types"
 
-export interface CardProps {
-  children: React.ReactNode
-  renderStyles?: boolean
-  styl?: {}
+export interface CardProps extends ComponentProps {
   elm?: "div" | "aside"
 }
 

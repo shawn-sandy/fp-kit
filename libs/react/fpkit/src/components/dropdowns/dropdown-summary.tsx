@@ -2,8 +2,8 @@ import FP from "../fp"
 
 export interface SummaryPros {
   children: React.ReactNode
-  styl: {}
-  renderStyles: boolean
+  styl?: {}
+  renderStyles?: boolean
 }
 
 const Summary = ({ children, styl, renderStyles = true, ...props }: SummaryPros) => {
@@ -11,9 +11,6 @@ const Summary = ({ children, styl, renderStyles = true, ...props }: SummaryPros)
   return (
     <FP
       as="summary"
-      styl={{
-        ...stylesObj
-      }}
       {...props}
     >
       {children}

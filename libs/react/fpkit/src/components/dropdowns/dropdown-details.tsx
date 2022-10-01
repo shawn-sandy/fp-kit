@@ -1,11 +1,10 @@
 import FP from "../fp"
-
-export interface DropdownProps {
-  children: React.ReactNode
-  renderStyles?: boolean
-  styl?: {}
+import { ComponentProps } from "../../types"
+export interface DropdownProps extends ComponentProps {
   elm?: "div" | "aside",
-  title: string
+  title: string,
+  children: React.ReactNode,
+  onToggle?: (e: React.SyntheticEvent) => void
 }
 
 export const defaultStyles = {
@@ -13,22 +12,29 @@ export const defaultStyles = {
   backgroundColor: "var(--card-bg, white)"
 }
 
-const Dropdown = ({
+const Details = ({
+  title,
   children,
   styl,
   renderStyles = true,
+  onToggle,
   ...props
 }: DropdownProps) => {
   const styleObj = renderStyles ? styl : {}
+  const handleToggle = (e: React.SyntheticEvent) => {
+    onToggle?.(e)
+  }
   return (
     <FP
     as="details"
+    title={title}
+    onToggle={handleToggle}
       styl={{
-        ...defaultStyles
+        ...styleObj, ...styl
       }}
     >
       {children}
     </FP>
   )
 }
- export default Dropdown
+ export default Details
