@@ -27,7 +27,9 @@ export default {
   },
   parameters: {
     badges: [BADGE.BETA]
-  }
+  },
+  onToggle: { action: "toggle" },
+  onOpen: { action: "open" },
 } as ComponentMeta<typeof Dropdown>
 
 const Template: ComponentStory<typeof Dropdown> = (
@@ -42,14 +44,15 @@ const Template: ComponentStory<typeof Dropdown> = (
 
 export const DropdownComponent = Template.bind({})
 DropdownComponent.args = {
-  summary: "Dropdown",
-  children: <p>Default Component Name</p>
+  summary: "Dropdown Details",
+  children: <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores omnis blanditiis provident inventore? Laboriosam a quasi in ut quae natus sequi nemo labore recusandae numquam. Nisi quaerat perspiciatis unde fugit.</p>
 }
 DropdownComponent.play = async ({
   args,
   canvasElement
 }) => {
-  const { getByRole } = within(canvasElement)
-  // const ComponentName = getByRole("note")
-  // expect(ComponentName).toHaveAccessibleName("ComponentName Test")
+  const { getByRole, getByText } = within(canvasElement)
+  const dropdown = getByRole("group")
+  expect(dropdown).toBeInTheDocument()
+  expect(getByText(/dropdown details/i)).toBeInTheDocument()
 }
