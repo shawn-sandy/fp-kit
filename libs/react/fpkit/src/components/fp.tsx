@@ -1,6 +1,6 @@
 import * as React from "react"
 
-type KitProps<T extends React.ElementType> = {
+export type KitProps<T extends React.ElementType> = {
   as?: T
   children: React.ReactNode
   renderStyles?: boolean
