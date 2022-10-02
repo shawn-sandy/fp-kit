@@ -26,7 +26,8 @@ export default {
     onPointerDown: { action: "down" }
   },
   parameters: {
-    badges: [BADGE.BETA]
+    badges: [BADGE.BETA],
+    layout: "padded"
   },
   onToggle: { action: "toggle" },
   onOpen: { action: "open" },
@@ -54,5 +55,5 @@ DropdownComponent.play = async ({
   const { getByRole, getByText } = within(canvasElement)
   const dropdown = getByRole("group")
   expect(dropdown).toBeInTheDocument()
-  expect(getByText(/dropdown details/i)).toBeInTheDocument()
+  expect(getByText(/dropdown */i)).toBeInTheDocument()
 }

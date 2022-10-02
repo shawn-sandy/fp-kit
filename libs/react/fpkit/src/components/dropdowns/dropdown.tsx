@@ -13,15 +13,13 @@ const defaultStyles = {
   placeContent: "flex-start",
   placeItems: "center",
   gap: ".7rem",
-  justifyContent: "var(--summary-justify, space-between)",
-  color: "var(--summary-color, currentColor)",
-  padding: "var(--details-pd, 1.2rem)",
-  listStyle: "var(--summary-ls, none)",
-  cursor: "var(--detail-cursor, pointer)",
-  borderBottom: "var(--summary-border, none)",
+  border: "var(--summary-border, solid 1px #ccc)",
   transition: "all 0.2s ease",
   backgroundColor: "var(--summary-bg, whitesmoke)",
-  minWidth: "var(--summary-min-w, 80vw)"
+  padding: "var(--details-pd, 1.2rem)",
+  cursor: "var(--detail-cursor, pointer)",
+  minWidth: "var(--summary-min-w, 80vw)",
+  maxWidth: "var(--summary-min-w, 80vw)"
 }
 
 const Dropdown = ({

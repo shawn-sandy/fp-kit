@@ -1,3 +1,4 @@
+import { defStyles } from "@fpkit/fp-button/lib/components/button"
 import FP from "../fp"
 
 export interface SummaryPros {
@@ -6,11 +7,19 @@ export interface SummaryPros {
   renderStyles?: boolean
 }
 
+const defaultStyles = {
+  listStyle: "none",
+  justifyContent: "var(--summary-justify, space-between)",
+  color: "var(--summary-color, currentColor)",
+  // paddingBlock: "var(--details-pd, 1.2rem)"
+}
+
 const Summary = ({ children, styl, renderStyles = true, ...props }: SummaryPros) => {
-  const stylesObj = renderStyles ? styl : {}
+  const stylesObj = renderStyles ? defaultStyles : {}
   return (
     <FP
       as="summary"
+      styl={{ ...stylesObj, ...styl }}
       {...props}
     >
       {children}
