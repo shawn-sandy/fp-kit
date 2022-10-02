@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.0...@fpkit/fp@0.2.1) (2022-10-02)
+
+### Features
+
+- 🚧 base dropdown component ([902d945](https://github.com/shawn-sandy/fpkit/commit/902d945fd9100d5bdc266b36edad248b1a7e542f))
+- 🚧 base dropdown component ([aff9e81](https://github.com/shawn-sandy/fpkit/commit/aff9e810866f16ff4d716032c8d30f0703671abc))
+- 🚧 scaffold dropdown-details component ([3233a88](https://github.com/shawn-sandy/fpkit/commit/3233a8832085b8bcbee1d6fc97b1f1f3294b2a32))
+
 # [0.2.0](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.1.1...@fpkit/fp@0.2.0) (2022-09-30)
 
 ### Features
