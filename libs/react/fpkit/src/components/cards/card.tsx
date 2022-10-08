@@ -1,5 +1,6 @@
 import FP from "../fp"
 import { ComponentProps } from "../../types"
+import React from "react"
 
 export interface CardProps extends ComponentProps {
   elm?: "div" | "aside"
@@ -15,8 +16,10 @@ export const defaultStyles = {
   color: "var(--card-cl, black)"
 }
 
+// const cardRef = React.useRef<HTMLDivElement | null>(null)
+
 const Card = ({
-  elm,
+  elm = "div",
   styl,
   children,
   renderStyles = true,
@@ -25,11 +28,12 @@ const Card = ({
   const stylesObj = renderStyles ? defaultStyles : {}
   return (
     <FP
-      as={elm}
-      styl={{
+      as="div"
+      styles={{
         ...stylesObj,
         ...styl
       }}
+      renderStyles={renderStyles}
       {...props}
     >
       {children }

@@ -12,7 +12,6 @@ module.exports = {
     "@storybook/addon-interactions",
     "@geometricpanda/storybook-addon-badges",
     "@storybook/addon-storysource",
-    "@whitespace/storybook-addon-html",
     "@storybook/addon-coverage"
   ],
   features: {

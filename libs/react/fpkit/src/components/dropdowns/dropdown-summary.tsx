@@ -19,7 +19,7 @@ const Summary = ({ children, styl, renderStyles = true, ...props }: SummaryPros)
   return (
     <FP
       as="summary"
-      styl={{ ...stylesObj, ...styl }}
+      styles={{ ...stylesObj, ...styl }}
       {...props}
     >
       {children}

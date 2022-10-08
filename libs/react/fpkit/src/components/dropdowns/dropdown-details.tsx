@@ -29,7 +29,7 @@ const Details = ({
     as="details"
     title={title}
     onToggle={handleToggle}
-      styl={{
+      styles={{
         ...styleObj, ...styl
       }}
     >

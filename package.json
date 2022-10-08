@@ -4,8 +4,8 @@
   "private": true,
   "description": "A UI toolkit for creating and managing style-guides, design systems, pattern libraries, apps, digital products, etc.",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
     "start": "start-storybook -p 6006",
+    "test": "echo \"Error: no test specified\"",
     "serve": "eleventy --serve",
     "builds": "run-s build:*",
     "changelog": "auto-changelog -p --template config/_changelog.hbs",
