@@ -1,6 +1,6 @@
 # FP Kit
 
-A lightweight React UI library for building lightweight, modern and accessible components that leverage CSS custom properties for reactive Styles.
+A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.
 
 ### Install
 

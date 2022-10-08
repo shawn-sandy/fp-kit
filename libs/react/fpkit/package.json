@@ -1,5 +1,6 @@
 {
   "name": "@fpkit/fp",
+  "description": "A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.",
   "private": false,
   "version": "0.2.2",
   "scripts": {
@@ -16,6 +17,7 @@
     "test:snapshot": "vitest --run --update"
   },
   "dependencies": {
+    "@shawnsandy/first-paint": "^2.17.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -39,7 +41,6 @@
     "vite-plugin-dts": "^1.2.0",
     "vitest": "^0.15.1"
   },
-  "description": "Introduction",
   "type": "module",
   "source": "src/index.ts",
   "main": "./dist/index.cjs",
