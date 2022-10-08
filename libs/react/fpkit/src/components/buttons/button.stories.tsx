@@ -29,14 +29,16 @@ export default {
       control: "boolean",
       defaultValue: true
     },
-    onPointerDown: { action: 'down' },
-    onPointerLeave: { action: 'leave' },
-    onPointerOver: { action: 'over' }
+    onPointerDown: { action: "down" },
+    onPointerLeave: { action: "leave" },
+    onPointerOver: { action: "over" }
   },
   parameters: {
     badges: [BADGE.BETA]
   }
 } as ComponentMeta<typeof Button>
+
+let clicked: boolean = false
 
 const Template: ComponentStory<typeof Button> = (args) => (
   <Button {...args}>{args.children}</Button>
@@ -45,6 +47,22 @@ const Template: ComponentStory<typeof Button> = (args) => (
 export const DefaultButton = Template.bind({})
 DefaultButton.args = {
   children: "Default Button",
+  type: "button",
+  onPointerDown: () => {
+    clicked = true
+  }
+}
+
+DefaultButton.play = async ({ args, canvasElement }) => {
+  const { getByRole } = within(canvasElement)
+  const button = getByRole("button")
+  expect(button).toHaveAccessibleName("Default Button")
+  expect(button).toHaveAttribute("type", "button")
+  expect(button).toHaveAttribute("style")
+  expect(clicked).toBeFalsy()
+  userEvent.click(button)
+  await waitFor(() => expect(clicked).toBeTruthy())
+  userEvent.click(button)
 }
 
 export const Disabled = Template.bind({})
@@ -88,33 +106,9 @@ UnStyled.args = {
   onPointerDown: () => alert("Clicked UnStyled")
 }
 
-let clicked: boolean = false
-
 UnStyled.play = async ({ canvasElement }) => {
   const button = within(canvasElement).getByRole("button")
 
   expect(button).toHaveAccessibleName("UnStyled Button")
   expect(button).not.toHaveAttribute("style")
-}
-
-export const ButtonInteractions = Template.bind({})
-
-ButtonInteractions.args = {
-  children: "Button Interaction",
-  type: "button",
-  onPointerDown: () => {
-    clicked = true
-  }
-}
-
-ButtonInteractions.play = async ({ args, canvasElement }) => {
-  const { getByRole } = within(canvasElement)
-  const button = getByRole("button")
-  expect(button).toHaveAccessibleName("Button Interaction")
-  expect(button).toHaveAttribute("type", "button")
-  expect(button).toHaveAttribute("style")
-  expect(clicked).toBeFalsy()
-  userEvent.click(button )
-  await waitFor(() => expect(clicked).toBeTruthy())
-  userEvent.click(button)
 }
