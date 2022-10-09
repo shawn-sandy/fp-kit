@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.2...@fpkit/fp@0.2.3) (2022-10-09)
+
+### Features
+
+- 📝 storybooks updates ([86b3662](https://github.com/shawn-sandy/fpkit/commit/86b3662224e7f259ba4452622d6566c42a647963))
+
 ## [0.2.2](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.1...@fpkit/fp@0.2.2) (2022-10-02)
 
 **Note:** Version bump only for package @fpkit/fp
