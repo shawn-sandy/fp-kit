@@ -42,7 +42,7 @@ type FPComponent = <C extends React.ElementType = "span">(
 ) => React.ReactElement | null
 
 const FP: FPComponent = React.forwardRef(
-  <C extends React.ElementType = "span">(
+  <C extends React.ElementType = "div">(
     {
       as,
       renderStyles = true,

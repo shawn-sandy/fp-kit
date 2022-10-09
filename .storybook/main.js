@@ -15,8 +15,7 @@ module.exports = {
     "@storybook/addon-coverage"
   ],
   features: {
-    interactionsDebugger: true, // 👈 Enable playback controls
-    previewMdx2: true
+    interactionsDebugger: true // 👈 Enable playback controls
   },
   framework: "@storybook/react"
 }
