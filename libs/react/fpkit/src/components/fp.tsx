@@ -1,4 +1,5 @@
 import React from "react"
+import { ComponentProps } from "../types"
 
 type PolymorphicRef<C extends React.ElementType> =
   React.ComponentPropsWithRef<C>["ref"]
@@ -42,7 +43,7 @@ type FPComponent = <C extends React.ElementType = "span">(
 ) => React.ReactElement | null
 
 const FP: FPComponent = React.forwardRef(
-  <C extends React.ElementType = "div">(
+  <C extends React.ElementType>(
     {
       as,
       renderStyles = true,
@@ -62,5 +63,14 @@ const FP: FPComponent = React.forwardRef(
     )
   }
 )
+interface BoxProps extends ComponentProps {
+  elm?: "div",
+  renderStyles: true,
+}
+export const Box = (props: BoxProps) => {
+  return <FP as={props.elm} {...props} >
+    {props.children}
+  </FP>
+}
 
 export default FP

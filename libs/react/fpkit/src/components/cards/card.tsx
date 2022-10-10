@@ -28,7 +28,7 @@ const Card = ({
   const stylesObj = renderStyles ? defaultStyles : {}
   return (
     <FP
-      as="div"
+      as={elm}
       styles={{
         ...stylesObj,
         ...styl
