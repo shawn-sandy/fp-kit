@@ -84,6 +84,7 @@ const Button = ({
       onPointerLeave={handlePointerEvents}
       style={{ ...stylesObj, ...styles }}
       aria-disabled={disabled}
+      disabled={disabled}
       {...props}
     >
       {children}

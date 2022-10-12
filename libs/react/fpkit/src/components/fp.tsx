@@ -72,5 +72,10 @@ export const Box = (props: BoxProps) => {
     {props.children}
   </FP>
 }
+// export const Kit = (props: BoxProps) => {
+//   return <FP as={props.elm} {...props} >
+//     {props.children}
+//   </FP>
+// }
 
 export default FP
