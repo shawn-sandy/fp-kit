@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.3...@fpkit/fp@0.2.4) (2022-10-12)
+
+### Features
+
+- add a box component ([b445b5a](https://github.com/shawn-sandy/fpkit/commit/b445b5a5920b5fc892a758089b5ad325cec5bb40))
+
 ## [0.2.3](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.2...@fpkit/fp@0.2.3) (2022-10-09)
 
 ### Features
