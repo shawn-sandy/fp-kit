@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.5...@fpkit/fp@0.2.6) (2022-10-14)
+
+### Features
+
+- 🚧 update card props values ([e852d27](https://github.com/shawn-sandy/fpkit/commit/e852d2715a8597c132ccbe49c7b17615cf51d8db))
+
 ## [0.2.5](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.4...@fpkit/fp@0.2.5) (2022-10-12)
 
 **Note:** Version bump only for package @fpkit/fp
