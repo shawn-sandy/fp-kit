@@ -23,10 +23,9 @@ const defaultStyles = {
 }
 
 const Dropdown = ({
-  styl,
+  styles,
   children,
   summary,
-  title,
   toggle,
   renderStyles = true,
   ...props
@@ -34,8 +33,7 @@ const Dropdown = ({
   const stylesObj = renderStyles ? defaultStyles : {}
   return (
     <Details
-      title={title}
-      styl={{ ...stylesObj, ...styl }}
+      styles={{ ...stylesObj, ...styles }}
       onToggle={toggle}
       {...props}
     >

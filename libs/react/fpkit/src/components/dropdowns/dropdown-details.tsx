@@ -15,12 +15,12 @@ export const defaultStyles = {
 const Details = ({
   title,
   children,
-  styl,
+  styles,
   renderStyles = true,
   onToggle,
   ...props
 }: DropdownProps) => {
-  const styleObj = renderStyles ? styl : {}
+  const styleObj = renderStyles ? defaultStyles : {}
   const handleToggle = (e: React.SyntheticEvent) => {
     onToggle?.(e)
   }
@@ -30,7 +30,7 @@ const Details = ({
     title={title}
     onToggle={handleToggle}
       styles={{
-        ...styleObj, ...styl
+        ...styleObj, ...styles
       }}
     >
       {children}
