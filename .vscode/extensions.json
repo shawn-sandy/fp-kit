@@ -7,6 +7,13 @@
     "ms-vscode.live-server",
     "usernamehw.errorlens",
     "zenclabs.previewjs",
-    "firsttris.vscode-jest-runner"
+    "firsttris.vscode-jest-runner",
+    "vivaxy.vscode-conventional-commits",
+    "wattenberger.footsteps",
+    "dsznajder.es7-react-js-snippets",
+    "infeng.vscode-react-typescript",
+    "github.copilot",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
   ]
 }
