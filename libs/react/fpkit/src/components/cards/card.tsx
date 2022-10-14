@@ -3,7 +3,7 @@ import { ComponentProps } from "../../types"
 import React from "react"
 
 export interface CardProps extends ComponentProps {
-  elm?: "div" | "aside"
+  elm?: | "div" | "aside" | "section" | "article"
 }
 
 export const defaultStyles = {
@@ -20,7 +20,7 @@ export const defaultStyles = {
 
 const Card = ({
   elm = "div",
-  styl,
+  styles,
   children,
   renderStyles = true,
   ...props
@@ -31,7 +31,7 @@ const Card = ({
       as={elm}
       styles={{
         ...stylesObj,
-        ...styl
+        ...styles
       }}
       renderStyles={renderStyles}
       {...props}

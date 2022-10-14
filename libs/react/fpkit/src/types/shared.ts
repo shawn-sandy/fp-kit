@@ -1,6 +1,6 @@
 export interface ComponentProps {
   children: React.ReactNode
   renderStyles?: boolean
-  styl?: {}
+  styles?: {}
   classes?: String
 }

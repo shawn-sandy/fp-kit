@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 
 import FPBadge from './components/badge/fp-badge'
-import {Box } from './components/fp'
+import { Box } from './index'
 
 function App() {
   const [count, setCount] = useState(0)
