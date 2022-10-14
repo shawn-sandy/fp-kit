@@ -15,7 +15,7 @@ import { expect } from "@storybook/jest"
 
 import Dropdown from "./dropdown"
 export default {
-  title: "FPKIT/Components/Dropdowns",
+  title: "FPKIT/Components/DetailsDropdown",
   component: Dropdown,
   argTypes: {
     children: { control: "text" },
