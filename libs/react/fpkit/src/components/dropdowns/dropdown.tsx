@@ -17,7 +17,6 @@ const defaultStyles = {
   transition: "all 0.2s ease",
   backgroundColor: "var(--summary-bg, whitesmoke)",
   padding: "var(--details-pd, 1.2rem)",
-  cursor: "var(--detail-cursor, pointer)",
   minWidth: "var(--summary-min-w, 80vw)",
   maxWidth: "var(--summary-min-w, 80vw)"
 }
