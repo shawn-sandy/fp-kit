@@ -3,11 +3,13 @@
 <h1 role="decoration" style="font-size: var(--h2); --fw: 500; --align: center;">
  <img src="https://res.cloudinary.com/dqjs95c7n/image/upload/v1647442611/fp-text-logo-xl_vrsh8c.svg" data-origin="https://res.cloudinary.com/dqjs95c7n/image/upload/v1647442611/fp-text-logo-xl_vrsh8c.svg" alt="first paint logo" style="display: inline">
 </h1>
-<h2 role="decoration" style="font-size: var(--h2); --fw: medium; --cl: black">A modern, easy to use, performance-first, CSS/SCSS micro framework.</h2>
+<h2 role="decoration" style="font-size: var(--h2); --fw: medium; --cl: black">Modern, Performant, Accessible</h2>
+<h4 role="decoration" style="font-size: var(--h4); --fw: medium; --cl: black">A modern, easy to use, performance-first, CSS/SCSS micro framework.</h4>
 
 <a href="/#/README" style="--btn: green; --btn-rds: 99rem; color: whitesmoke; --btn-fs: var(--fs-3); --btn-bdr: green solid;">Getting Started</a>
 <a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-3); --btn-bdr: green solid; --btn-rds: 99rem; color: green" target="_blank">Github</a>
 
+<hr>
 </section>
 </header>
 
