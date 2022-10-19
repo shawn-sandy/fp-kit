@@ -3,7 +3,7 @@ import FP from "../fp"
 
 export interface SummaryPros {
   children: React.ReactNode
-  styl?: {}
+  styles?: {}
   renderStyles?: boolean
 }
 
@@ -14,12 +14,12 @@ const defaultStyles = {
   cursor: "var(--detail-cursor, pointer)"
 }
 
-const Summary = ({ children, styl, renderStyles = true, ...props }: SummaryPros) => {
+const Summary = ({ children, styles, renderStyles = true, ...props }: SummaryPros) => {
   const stylesObj = renderStyles ? defaultStyles : {}
   return (
     <FP
       as="summary"
-      styles={{ ...stylesObj, ...styl }}
+      styles={{ ...stylesObj, ...styles }}
       {...props}
     >
       {children}
