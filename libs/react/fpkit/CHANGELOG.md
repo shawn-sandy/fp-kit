@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.8](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.7...@fpkit/fp@0.2.8) (2022-10-20)
+
+### Features
+
+- 🚧 update dropdown component ([80d5006](https://github.com/shawn-sandy/fpkit/commit/80d5006607064cd80b35253ba70f706aa9bc5c91))
+
 ## [0.2.7](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.6...@fpkit/fp@0.2.7) (2022-10-14)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.1](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.0...@shawnsandy/first-paint@2.17.1) (2022-10-20)
+
+### Features
+
+- ⬆️ update the cover page ([a87751e](https://github.com/shawn-sandy/fp-kit/commit/a87751ef5aa722c0637ae5fba55ec42257b2f780))
+
 # [2.17.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.16.14...@shawnsandy/first-paint@2.17.0) (2022-09-30)
 
 ### Features
