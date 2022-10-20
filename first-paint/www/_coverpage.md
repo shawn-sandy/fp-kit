@@ -48,9 +48,9 @@
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
     </g>
 </svg>
-        Classes Optional</h4>
+        Classless</h4>
         <p>
-          We choose CSS variables and Semantic HTML over class heavy styling. You don't need classes but are free to create and use them.
+          We choose Semantic HTML, CSS variables, data and style attribute(s) over class-heavy styles and utilities.
         </p>
       </div>
       <div role="gridcell">
