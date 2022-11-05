@@ -1,0 +1,49 @@
+[role='tooltip'],
+[style*='--tip'],
+[data-fp-tooltip] {
+  --tip-bg: black;
+  --tip-cl: white;
+  --tip-rds: 0.2rem;
+  --tip-cubic: cubic-bezier(0.64, 0.09, 0.08, 1);
+  --tip-cursor: pointer;
+  --tip-opacity: 0.9;
+  position: relative;
+  cursor: var(--tip-cursor);
+}
+[role='tooltip'][data-variant],
+[style*='--tip'][data-variant],
+[data-fp-tooltip][data-variant] {
+  --tip-bg: var(--vbg);
+  --tip-cl: var(--vcl);
+  --tip-rds: var(--vrds);
+  --tip-cubic: var(--vcubic);
+  --tip-cursor: var(--vcursor);
+  --tip-opacity: var(--vopacity);
+}
+[role='tooltip']:after,
+[style*='--tip']:after,
+[data-fp-tooltip]:after {
+  font-size: var(--tip-fs, var(--fs-2));
+  background: var(--tip-bg);
+  color: var(--tip-cl);
+  border-radius: var(--tip-rds);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  content: attr(aria-label);
+  padding: 6px 10px;
+  top: 1.4rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-2px);
+  white-space: nowrap;
+  z-index: 2;
+  transition: opacity 0.2s var(--tip-cubic), transform 0.2s var(--tip-cubic);
+}
+[role='tooltip']:hover:after,
+[style*='--tip']:hover:after,
+[data-fp-tooltip]:hover:after {
+  display: block;
+  opacity: var(--tip-opacity);
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+} /*# sourceMappingURL=tooltip.css.map */

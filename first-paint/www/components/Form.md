@@ -2,6 +2,31 @@
 
 > Docmentation, examples and info for using Form component
 
+## Module usage
+
+Import `css` or `sass` to use in your project.
+
+- SASS
+
+```scss
+@use '@shawnsandy/first-paint/src/components/input';
+```
+
+- React
+
+```jsx
+@import '@shawnsandy/first-paint/src/v3/components/input'
+```
+
+- HTML
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/css/components/input.min.css"
+/>
+```
+
 ### Default Form
 
 ```html preview
@@ -75,9 +100,9 @@ Form {
 
 ## Examples
 
-----
-## See also
+---
 
+## See also
 
 [MDN GUIDELINES AND SPECFICATIONS](https://developer.mozilla.org/en-US/docs/Web/HTML/Element ':_target="_blank"')
 
@@ -85,4 +110,4 @@ Form {
 
 [ACCESSIBILITY GUIDELINES](https://w3c.github.io/aria-practices/ ':_target="_blank"')
 
-----
+---

@@ -1,4 +1,3 @@
-
 - [First Paint v3.0(beta)](/README)
 - [Features](/FEATURES)
 - Install
@@ -22,7 +21,8 @@
     - [List](/components/List)
   - [Dialog/Modal](/components/Dialog)
   - [Dropdown/Detail](/components/DETAILS)
-  - [Forms](/components/Form)
+  - Forms (Inputs)
+    - [Form](/components/Form)
     - [Checkbox](/components/Checkbox)
     - [Inputs](/components/Input)
     - [Radio](/components/Radio)

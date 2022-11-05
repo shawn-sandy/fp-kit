@@ -1,0 +1,21 @@
+footer:not([aria-label], [role='footer']),
+[data-footer]:not([aria-label], [role='footer']),
+[role='contentinfo']:not([aria-label], [role='footer']) {
+  display: var(--footer-dsp, flex);
+  flex-direction: var(--footer-direction, column);
+  font-size: var(--footer-fs, var(--fs-2));
+}
+footer:not([aria-label], [role='footer']) p,
+[data-footer]:not([aria-label], [role='footer']) p,
+[role='contentinfo']:not([aria-label], [role='footer']) p {
+  --p-fs: var(--footer-fs, var(--fs));
+}
+footer:not([aria-label], [role='footer'])[data-variant],
+[data-footer]:not([aria-label], [role='footer'])[data-variant],
+[role='contentinfo']:not([aria-label], [role='footer'])[data-variant] {
+  --footer-fs: var(--vfs);
+  --footer-cl: var(--vcl);
+  --footer-bg: var(--vbg);
+}
+
+/*# sourceMappingURL=footer.css.map */
