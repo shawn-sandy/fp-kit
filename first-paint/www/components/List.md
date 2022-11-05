@@ -2,6 +2,33 @@
 
 > Add and style and list elements to your pages.
 
+## Module usage
+
+Import `css` or `sass` to use in your project.
+
+- SASS
+
+```scss
+@use '@shawnsandy/first-paint/src/components/list';
+```
+
+- React
+
+```jsx
+@import '@shawnsandy/first-paint/src/v3/components/list'
+```
+
+- HTML
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/css/components/list.min.css"
+/>
+```
+
+### Default Form
+
 ### Default List (unordered)
 
 ```html preview
@@ -20,23 +47,23 @@ Sample List
 ### Custom variables
 
 ```css
-  --list-none: ; // turn off list features
-  --list-s: inside;
-  --list-fs: .95rem;
-  --list-lh: 1.5;
-  --list-pxs: 1.5rem;
+--list-none: ; // turn off list features
+--list-s: inside;
+--list-fs: 0.95rem;
+--list-lh: 1.5;
+--list-pxs: 1.5rem;
 ```
 
 ### List properties (rules)
 
 ```css
-   list-style: var(--list-s);
-   font-size: var(--list-fs);
-   line-height: var(--list-lh);
-   padding-inline-start: var(--list-pxs);
-   // turn off list features
-   list-style: var(--list-none, none);
-   padding-inline-start: var(--list-none, 0);
+list-style: var(--list-s);
+font-size: var(--list-fs);
+line-height: var(--list-lh);
+padding-inline-start: var(--list-pxs);
+// turn off list features
+list-style: var(--list-none, none);
+padding-inline-start: var(--list-none, 0);
 ```
 
 ## Examples
@@ -87,6 +114,6 @@ Sample List
 
 ## See also
 
-[MDN GUIDELINES AND SPECFICATIONS]([https](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul): ':_target="_blank"')
+[MDN GUIDELINES AND SPECFICATIONS](<[https](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul):> ':_target="_blank"')
 
-----
+---

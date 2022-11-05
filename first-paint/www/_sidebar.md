@@ -14,7 +14,8 @@
   - [Buttons](/components/button)
   - [Breadcrumb](/components/Breadcrumb)
   - [Cards](/components/Cards)
-  - [Content Elements](/components/Content)
+  - Content
+    - [Elements](/components/Content)
     - [Headings](/components/Headings)
     - [Paragraph](/components/Paragraph)
     - [Links](/components/Links)
