@@ -2,6 +2,33 @@
 
 > Create and the checkbox element(s).
 
+## Module usage
+
+Import `css` or `sass` to use in your project.
+
+- SASS
+
+```scss
+@use '@shawnsandy/first-paint/src/components/checkbox';
+```
+
+- React
+
+```jsx
+@import '@shawnsandy/first-paint/src/v3/components/checkbox'
+```
+
+- HTML
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/css/components/checkbox.min.css"
+/>
+```
+
+### Default Form
+
 ### Default Checkbox
 
 ```html preview
