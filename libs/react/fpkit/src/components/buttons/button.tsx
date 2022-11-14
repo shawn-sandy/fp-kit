@@ -1,4 +1,5 @@
 import React from "react"
+import '@shawnsandy/first-paint/dist/css/components/button.min.css'
 
 interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -47,12 +48,12 @@ const Button = ({
   type,
   children,
   styles,
-  disabled = false,
+  disabled = true,
   classes,
   onPointerDown,
   onPointerOver,
   onPointerLeave,
-  defaultStyles = true,
+  defaultStyles = false,
   ...props
 }: ButtonProps) => {
 

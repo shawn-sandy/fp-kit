@@ -56,8 +56,6 @@ Import `css` or `sass` to use in your project.
   officia aliqua reprehenderit laboris. Magna ullamco incididunt consequat
   occaecat aliquip voluptate qui consectetur voluptate aute elit cillum cillum.
 </p>
-
-<p></p>
 ```
 
 ## Links
