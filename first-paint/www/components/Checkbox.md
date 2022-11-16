@@ -15,8 +15,8 @@ Import `css` or `sass` to use in your project.
 - React
 
 ```jsx
-import '@shawnsandy/first-paint/src/v3/components/checkbox'
-// css
+import '@shawnsandy/first-paint/src/v3/components/checkbox.scss'
+// or scss
 import '@shawnsandy/first-paint@next/dist/css/components/checkbox.min.css'
 ```
 

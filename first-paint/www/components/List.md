@@ -15,7 +15,8 @@ Import `css` or `sass` to use in your project.
 - React
 
 ```jsx
-import '@shawnsandy/first-paint/src/v3/components/list'
+import '@shawnsandy/first-paint/src/v3/components/list.scss'
+// or scss
 import '@shawnsandy/first-paint@next/dist/css/components/links.min.css'
 ```
 

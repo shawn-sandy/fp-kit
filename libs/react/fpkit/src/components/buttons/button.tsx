@@ -1,6 +1,7 @@
 import React from "react"
 import '@shawnsandy/first-paint/dist/css/components/button.min.css'
 
+
 interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**

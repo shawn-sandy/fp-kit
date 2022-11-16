@@ -9,8 +9,8 @@
 - React
 
 ```jsx
-import '@shawnsandy/first-paint/src/v3/components/details-summary'
-// css
+import '@shawnsandy/first-paint/src/v3/components/details-summary.scss'
+// or scss
 import '@shawnsandy/first-paint@next/dist/css/components/details-summary.min.css'
 ```
 
