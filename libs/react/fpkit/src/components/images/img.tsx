@@ -1,15 +1,14 @@
+import { ComponentProps } from "src/types"
 export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string
   alt: string
   width: number
   height?: number
-  styles?: {}
   loading?: 'eager' | 'lazy'
   imgLoaded?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void
-  renderStyles?: boolean
 }
 
-type ImgProps = ImageProps
+type ImgProps = ImageProps & ComponentProps
 
 export const defaultStyles = {
   width: 'var(--img-w, 100%)',
