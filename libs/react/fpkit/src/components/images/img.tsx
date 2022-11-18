@@ -18,6 +18,11 @@ export const defaultStyles = {
   aspectRatio: 'var(--img-ratio, auto 2/3)',
 }
 
+/**
+ * This is a simple image component that can be used to display images
+ * @param param
+ * @returns
+ */
 const Img = ({
   src,
   alt,

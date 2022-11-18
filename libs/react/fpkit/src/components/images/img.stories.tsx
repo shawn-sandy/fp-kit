@@ -15,7 +15,7 @@ import { expect } from "@storybook/jest"
 
 import Img from "./img"
 export default {
-  title: "FPKIT/Components/Image",
+  title: "FPKIT Components/Image",
   component: Img,
   argTypes: {
     children: { control: "text" },
@@ -26,6 +26,11 @@ export default {
     onPointerDown: { action: 'down' }
   },
   parameters: {
+    // docs: {
+    //   description: {
+    //     component: 'Image component'
+    //   }
+    // },
     badges: [BADGE.BETA]
   }
 } as ComponentMeta<typeof Img>
