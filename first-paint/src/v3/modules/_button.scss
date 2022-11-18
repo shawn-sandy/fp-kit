@@ -59,6 +59,7 @@
     &:is(:hover, :focus) {
       transform: none;
       // background-color: var(--btn-bg, lightgray);
+      opacity: var(--btn-opacity, 0.5);
     }
   }
 

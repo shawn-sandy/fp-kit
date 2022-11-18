@@ -279,6 +279,7 @@ a[data-fp-btn][aria-disabled='true']:is(:hover, :focus),
 [role='button'][disabled]:is(:hover, :focus),
 [role='button'][aria-disabled='true']:is(:hover, :focus) {
   transform: none;
+  opacity: var(--btn-opacity, 0.5);
 }
 button:is(:hover, :focus),
 [style*='--btn']:is(:hover, :focus),
