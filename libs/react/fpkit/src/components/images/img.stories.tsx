@@ -26,11 +26,11 @@ export default {
     onPointerDown: { action: 'down' }
   },
   parameters: {
-    // docs: {
-    //   description: {
-    //     component: 'Image component'
-    //   }
-    // },
+    docs: {
+      description: {
+        component: 'Image component'
+      }
+    },
     badges: [BADGE.BETA]
   }
 } as ComponentMeta<typeof Img>
