@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.3...@shawnsandy/first-paint@2.17.4) (2022-11-18)
+
+### Features
+
+- 👆 update disabled button styles ([efad4b2](https://github.com/shawn-sandy/fp-kit/commit/efad4b2a61010142974dc5178a079e394e33cec3))
+- 👍 button disabled hover opacity ([a596006](https://github.com/shawn-sandy/fp-kit/commit/a596006ac49227f7cbef1bb681e12f41fd31741b))
+
 ## [2.17.3](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.2...@shawnsandy/first-paint@2.17.3) (2022-11-18)
 
 **Note:** Version bump only for package @shawnsandy/first-paint

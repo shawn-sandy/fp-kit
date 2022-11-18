@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.11](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.10...@fpkit/fp@0.2.11) (2022-11-18)
+
+### Features
+
+- 👆 update disabled button styles ([efad4b2](https://github.com/shawn-sandy/fpkit/commit/efad4b2a61010142974dc5178a079e394e33cec3))
+
 ## [0.2.10](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.9...@fpkit/fp@0.2.10) (2022-11-18)
 
 **Note:** Version bump only for package @fpkit/fp
