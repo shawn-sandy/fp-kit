@@ -1,6 +1,5 @@
 import React from "react"
 
-
 import {
   ComponentStory,
   ComponentMeta
@@ -35,16 +34,15 @@ export default {
     onPointerOver: { action: "over" }
   },
   parameters: {
-    badges: [BADGE.BETA]
+    badges: [BADGE.BETA],
   }
 } as ComponentMeta<typeof Button>
 
-let clicked: boolean = false
 
 const Template: ComponentStory<typeof Button> = (args) => (
   <Button {...args}>{args.children}</Button>
 )
-
+let clicked: boolean = false
 export const DefaultButton = Template.bind({})
 DefaultButton.args = {
   children: "Default Button",
@@ -57,13 +55,13 @@ DefaultButton.args = {
 DefaultButton.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const button = getByRole("button")
+  clicked = false
   expect(button).toHaveAccessibleName("Default Button")
   expect(button).toHaveAttribute("type", "button")
   expect(button).toHaveAttribute("style")
   expect(clicked).toBeFalsy()
   userEvent.click(button)
   await waitFor(() => expect(clicked).toBeTruthy())
-  userEvent.click(button)
 }
 
 export const Disabled = Template.bind({})

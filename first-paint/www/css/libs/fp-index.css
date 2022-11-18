@@ -1037,6 +1037,16 @@ a[data-fp-btn][aria-disabled='true'],
   cursor: var(--btn-cursor, not-allowed);
   opacity: var(--btn-opacity, 0.5);
 }
+button[disabled]:is(:hover, :focus),
+button[aria-disabled='true']:is(:hover, :focus),
+[style*='--btn'][disabled]:is(:hover, :focus),
+[style*='--btn'][aria-disabled='true']:is(:hover, :focus),
+a[data-fp-btn][disabled]:is(:hover, :focus),
+a[data-fp-btn][aria-disabled='true']:is(:hover, :focus),
+[role='button'][disabled]:is(:hover, :focus),
+[role='button'][aria-disabled='true']:is(:hover, :focus) {
+  transform: none;
+}
 button:is(:hover, :focus),
 [style*='--btn']:is(:hover, :focus),
 a[data-fp-btn]:is(:hover, :focus),

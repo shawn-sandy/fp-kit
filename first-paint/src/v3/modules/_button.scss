@@ -56,6 +56,10 @@
   &[aria-disabled="true"] {
     cursor: var(--btn-cursor, not-allowed);
     opacity: var(--btn-opacity, 0.5);
+    &:is(:hover, :focus) {
+      transform: none;
+      // background-color: var(--btn-bg, lightgray);
+    }
   }
 
   // TODO: add hover/focus with :if()

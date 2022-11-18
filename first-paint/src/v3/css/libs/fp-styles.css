@@ -169,6 +169,10 @@ section:not(nav) {
   cursor: var(--btn-cursor, not-allowed);
   opacity: var(--btn-opacity, 0.5);
 }
+.fp-btn[disabled]:is(:hover, :focus),
+.fp-btn[aria-disabled='true']:is(:hover, :focus) {
+  transform: none;
+}
 .fp-btn:is(:hover, :focus) {
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg, var(--btn, lightgray));
