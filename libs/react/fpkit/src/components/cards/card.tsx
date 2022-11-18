@@ -1,6 +1,5 @@
 import FP from "../fp"
 import { ComponentProps } from "../../types"
-import React from "react"
 
 export interface CardProps extends ComponentProps {
   elm?: | "div" | "aside" | "section" | "article"
