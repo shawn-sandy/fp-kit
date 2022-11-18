@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.5](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.4...@shawnsandy/first-paint@2.17.5) (2022-11-18)
+
+### Features
+
+- 👆 update disabled button styles ([7077d24](https://github.com/shawn-sandy/fp-kit/commit/7077d24b5bfa8c3dd9c6733679f62c4c3295d521))
+
 ## [2.17.4](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.3...@shawnsandy/first-paint@2.17.4) (2022-11-18)
 
 ### Features

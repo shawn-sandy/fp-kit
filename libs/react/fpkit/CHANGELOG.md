@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.12](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.11...@fpkit/fp@0.2.12) (2022-11-18)
+
+### Features
+
+- :recycle: set children pram to be optional type ([d56c336](https://github.com/shawn-sandy/fpkit/commit/d56c336cf5b1519ed1e5c0b74689bab5e6687589))
+- 🌟 add image onError ([b011d26](https://github.com/shawn-sandy/fpkit/commit/b011d26512cf1ac352a75a37697536628ed92620))
+- 🌟 add img component ([ce857d4](https://github.com/shawn-sandy/fpkit/commit/ce857d4628ea6e0e06ff1a4d59bbed036542d687))
+- add onLoad event to the image component ([84cdb1e](https://github.com/shawn-sandy/fpkit/commit/84cdb1e15f153b93edaf16f1cf41210166d8fbad))
+- merge ComponentProps into ImgProps ([1a0ce9d](https://github.com/shawn-sandy/fpkit/commit/1a0ce9d61c785de8588c5cb7766eb241120e35d1))
+
 ## [0.2.11](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.10...@fpkit/fp@0.2.11) (2022-11-18)
 
 ### Features
