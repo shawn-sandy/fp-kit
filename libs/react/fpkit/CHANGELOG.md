@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.10](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.9...@fpkit/fp@0.2.10) (2022-11-18)
+
+**Note:** Version bump only for package @fpkit/fp
+
 ## [0.2.9](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.8...@fpkit/fp@0.2.9) (2022-11-05)
 
 **Note:** Version bump only for package @fpkit/fp
