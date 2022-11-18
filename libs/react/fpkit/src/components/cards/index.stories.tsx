@@ -15,7 +15,7 @@ import { expect } from "@storybook/jest"
 
 import Card from "./card"
 export default {
-  title: "FPKIT/Components/Cards",
+  title: "FPKIT Components/Cards",
   component: Card,
   argTypes: {
     children: { control: "text" },
