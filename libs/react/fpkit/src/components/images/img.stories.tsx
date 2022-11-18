@@ -58,7 +58,7 @@ ImageError.args = {
   height: 300,
   width: 200,
   alt: "Img Broken",
-  placeholder: "https://via.placeholder.com/300?text=Error"
+  placeholder: "https://via.placeholder.com/300?text=Image+Error"
 }
 
 ImageError.play = async ({ args, canvasElement }) => {

@@ -5,6 +5,7 @@ export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   height?: number
   styles?: {}
   loading?: 'eager' | 'lazy'
+  imgLoaded?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void
   renderStyles?: boolean
 }
 
@@ -27,6 +28,7 @@ const Img = ({
   renderStyles = true,
   loading = 'lazy',
   placeholder = 'https://via.placeholder.com/150?text=PLACEHOLDER',
+  imgLoaded,
   ...props
 }: ImgProps) => {
   const stylesObj = renderStyles ? defaultStyles : {}
@@ -37,6 +39,11 @@ const Img = ({
     const img = e.currentTarget
     img.src = placeholder
   }
+
+  const handleImgLoad = (e: React.SyntheticEvent<HTMLImageElement, Event>): void => {
+    handleImgLoad?.(e)
+  }
+
   return (
     <img
       src={src}
@@ -46,6 +53,7 @@ const Img = ({
       loading={loading}
       style={{ ...styles, ...stylesObj }}
       onError={handleImgError}
+      onLoad={imgLoaded}
       {...props}
     />
   )
