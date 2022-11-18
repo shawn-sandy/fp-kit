@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm test && npm run foo
+
 
 # echo 'Starting prettier...'
 # npx pretty-quick --staged "$1"
@@ -16,9 +16,9 @@ npx lint-staged "$1"
 
 # run build
 echo 'Starting lint-staged...'
-npm run package "$1"
+# npm run package "$1"
 
 
 # If everything passes... Now we can commit
 echo '✅✅✅✅ Excellent all test passed, I am committing this now.'
-npx lint-staged
+# npx lint-staged

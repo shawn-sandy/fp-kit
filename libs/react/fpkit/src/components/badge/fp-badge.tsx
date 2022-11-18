@@ -35,7 +35,7 @@ export const Badge = ({
     <FP
       as={elm}
       role={role}
-      styl={{ ...stylesObj, ...styles }}
+      styles={{ ...stylesObj, ...styles }}
       {...props}
     >
       {children}

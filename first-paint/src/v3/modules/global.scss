@@ -28,13 +28,3 @@ section:not(nav) {
   margin-inline: var(--sect-y, auto);
   padding-block: var(--sect-x, --spc-4);
 }
-
-hr {
-  width: var(--hr-w, 100%) ;
-  height: var(--hr-h, .05rem) ;
-  background-color: var(--hr-bg, lightgray);
-  border: none;
-  margin-block: var(--hr-py, 3rem);
-  margin-inline: var(--hr-px, 0);
-}
-

@@ -1,6 +1,16 @@
-import Badge from './component/badge/fp-badge'
+import Badge from './components/badge/fp-badge'
+import Button from './components/buttons/button'
+import Card from './components/cards/card'
+import Dropdown from './components/dropdowns/dropdown'
 
-export { default as FP } from './component/fp'
+export { default as FP } from './components/fp'
+export { default as Kit } from './components/fp'
+export { default as Box } from './components/fp'
+
+
 export {
-  Badge
+  Badge,
+  Button,
+  Card,
+  Dropdown
 }

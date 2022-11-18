@@ -1,4 +1,3 @@
-
 - [First Paint v3.0(beta)](/README)
 - [Features](/FEATURES)
 - Install
@@ -15,14 +14,16 @@
   - [Buttons](/components/button)
   - [Breadcrumb](/components/Breadcrumb)
   - [Cards](/components/Cards)
-  - [Content Elements](/components/Content)
+  - Content
+    - [Elements](/components/Content)
     - [Headings](/components/Headings)
     - [Paragraph](/components/Paragraph)
     - [Links](/components/Links)
     - [List](/components/List)
   - [Dialog/Modal](/components/Dialog)
   - [Dropdown/Detail](/components/DETAILS)
-  - [Forms](/components/Form)
+  - Forms (Inputs)
+    - [Form](/components/Form)
     - [Checkbox](/components/Checkbox)
     - [Inputs](/components/Input)
     - [Radio](/components/Radio)

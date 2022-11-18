@@ -5,6 +5,7 @@
   },
   "extends": [
     "standard",
+    "eslint-config-prettier",
     "plugin:react/recommended",
     "@azimutlabs/eslint-config-jsx-a11y",
     "eslint:recommended",

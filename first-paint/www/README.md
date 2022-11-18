@@ -1,46 +1,50 @@
 ![first paint logo](https://res.cloudinary.com/dqjs95c7n/image/upload/v1647442611/fp-text-logo-xl_vrsh8c.svg)
 
--------
+---
+
 # First Paint 3.0 (beta)
 
-> A modern, performance first, easy to use, accessible CSS/SCSS micro framework that focuses on CSS custom properties and Semantic HTML over `class` heavy styling.
+> A modern, performance first, easy to use, accessible CSS/SCSS micro framework that focuses on CSS custom properties, Semantic HTML, data and style attributes over `class` heavy styling.
 
--------
+---
 
 !> Version 3.0 is currently in beta development. While we don't anticipate many breaking changes, we are constantly adding new features and improving the existing ones. Please be aware that some features may change in the future.
 
 ### [Features](/FEATURES)
 
-* Easy to use
-* Classless
-* Modular
-* Dynamic Styles
-* Responsive
-* Accessible
-* Lightweight
-* Fully Customizable CSS/SCSS
+- Easy to use
+- Classless
+- Modular
+- Dynamic Styles
+- Responsive
+- Accessible
+- Lightweight
+- Fully Customizable CSS/SCSS
 
 [Read more about our features/modules and see what's new in First Paint 3.0 here](/FEATURES).
 
 ## Install
 
-* Install `npm i @shawnsandy/first-paint@next` latest version (next)
-* Install `npm i @shawnsandy/first-paint` stable version
-* Yarn install `yarn add @shawnsandy/first-paint@next`
+- Install `npm i @shawnsandy/first-paint@next` latest version (next)
+- Install `npm i @shawnsandy/first-paint` stable version
+- Yarn install `yarn add @shawnsandy/first-paint@next`
 
 ### Quick Start
 
 [Read out quick start guide](/install/Start.md)
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/v3/css/index.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/index.min.css"
+/>
 ```
 
 !> **Note:** you should consider the @next release as the latest beta(stable) version.
 
-
 ## Modules & Docs
-------
+
+---
 
 [filename](_sidebar.md ':include')
 

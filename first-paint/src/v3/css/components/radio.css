@@ -1,0 +1,55 @@
+:where(label[for]) {
+  --rdo-appearance: none;
+  display: var(--lbl-dsp, flex);
+  flex-direction: var(--lbl-direction, row);
+  align-items: var(--lbl-align, normal);
+  margin-inline-end: var(--lbl-me, 1rem);
+  gap: var(--lbl-gap, 0.3rem);
+  cursor: var(--lbl-cursor, pointer);
+  height: var(--lbl-h, auto);
+  font-size: var(--lbl-fs, var(--fs));
+  max-height: var(--rdo-size, 1.2rem);
+}
+:where(label[for]) + label {
+  margin-block-start: 0.8rem;
+}
+:where(label[for]) :where([id][type='radio']) {
+  appearance: var(--rdo-appearance, none);
+  -webkit-appearance: var(--rdo-appearance, none);
+  -moz-appearance: var(--rdo-appearance, none);
+  border-radius: var(--check-rds, 99rem);
+  cursor: pointer;
+  margin: 0;
+  line-height: 1;
+}
+:where(label[for]) :where([id][type='radio'])::before {
+  --rdo-bdr-cl: lightgray;
+  --rdo-bdr-w: initial;
+  transition: var(--tran-all);
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--rdo-size, 1.2rem);
+  min-height: var(--rdo-size, 1.2rem);
+  margin: 0;
+  border-style: var(--rdo-bdr, solid);
+  border-width: var(--rdo-bdr-w, thick);
+  border-color: var(--rdo-bdr-cl, var(--fp-light-gray));
+  background-color: var(--rdo-bg, var(--fp-light-gray));
+  border-radius: var(--rdo-rds, 99rem);
+}
+:where(label[for]) :where([id][type='radio']):checked {
+  --rdo-appearance: none;
+}
+:where(label[for]) :where([id][type='radio']):checked::before {
+  --rdo-bdr-s: solid;
+  --rdo-bdr-w: thick;
+  --rdo-bdr-cl: var(--fp-dark-green);
+  --rdo-bg: var(--fp-yellow-green);
+  border-color: var(--rdo-bdr-cl, var(--fp-dark-green));
+  border-width: var(--rdo-bdr-w, thick);
+  border-style: var(--rdo-bdr-s, none);
+}
+
+/*# sourceMappingURL=radio.css.map */

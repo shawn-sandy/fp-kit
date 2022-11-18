@@ -2,18 +2,47 @@
 
 > Create and style the radio element(s)
 
+## Module usage
+
+Import `css` or `sass` to use in your project.
+
+- SASS
+
+```scss
+@use '@shawnsandy/first-paint/src/components/radio';
+```
+
+- React
+
+```jsx
+import '@shawnsandy/first-paint/src/v3/components/radio.scss'
+// or scss
+import '@shawnsandy/first-paint@next/dist/css/components/radio.min.css'
+```
+
+- HTML
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/css/components/radio.min.css"
+/>
+```
+
+### Default Form
+
 ### Default Radio
 
 ```html preview
 <div>
-<label for="radio1">
-  <input type="radio" id="radio1" name="radio" value="" />
-  Radio label
-</label>
-<label for="radio2">
-  <input type="radio" id="radio2" name="radio"  value="" />
-  Radio2 label
-</label>
+  <label for="radio1">
+    <input type="radio" id="radio1" name="radio" value="" />
+    Radio label
+  </label>
+  <label for="radio2">
+    <input type="radio" id="radio2" name="radio" value="" />
+    Radio2 label
+  </label>
 </div>
 ```
 
@@ -22,12 +51,12 @@
 ### Custom variables
 
 ```css
-  --rdo-bdr: none;
-  --rdo-bdr-w: medium;
-  --rdo-bdr-cl: transparent;
-  --rdo-bg: darkgray;
-  --rdo-appearance: none;
-  --rdo-rds: 99rem;
+--rdo-bdr: none;
+--rdo-bdr-w: medium;
+--rdo-bdr-cl: transparent;
+--rdo-bg: darkgray;
+--rdo-appearance: none;
+--rdo-rds: 99rem;
 ```
 
 ### Custom properties (rules)
@@ -61,12 +90,12 @@
 
 ## Examples
 
-----
-## References/Additional info
+---
 
+## References/Additional info
 
 [MDN GUIDELINES AND SPECFICATIONS]()
 
 [ACCESSIBILITY GUIDE]()
 
-----
+---

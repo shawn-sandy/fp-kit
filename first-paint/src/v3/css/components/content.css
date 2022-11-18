@@ -1,0 +1,35 @@
+form,
+.fp-form {
+  width: 100%;
+}
+form div + div,
+.fp-form div + div {
+  margin-block-start: var(--form-spc, 1.5rem);
+  display: block;
+}
+
+.fp-label + input,
+.fp-label + textarea,
+.fp-label + select,
+label[for] + input,
+label[for] + textarea,
+label[for] + select {
+  margin-block-start: 0.75rem;
+  display: block;
+}
+
+div:where([role='region']),
+section:where([role='region']) {
+  width: 100%;
+}
+
+hr {
+  width: var(--hr-w, 100%);
+  height: var(--hr-h, 0.05rem);
+  background-color: var(--hr-bg, lightgray);
+  border: none;
+  margin-block: var(--py, 3rem);
+  margin-inline: var(px, auto);
+}
+
+/*# sourceMappingURL=content.css.map */

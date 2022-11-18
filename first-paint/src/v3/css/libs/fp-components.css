@@ -7,7 +7,9 @@
 /**
 *
 */
-nav, [data-fp-nav], [role=navigation] {
+nav,
+[data-fp-nav],
+[role='navigation'] {
   display: var(--nav-dsp, flex);
   flex-direction: var(--nav-direction, row);
   width: var(--nav-w, auto);
@@ -18,9 +20,11 @@ nav, [data-fp-nav], [role=navigation] {
   background-color: var(--nav-bg, initial);
 }
 nav > section,
-nav > ul, [data-fp-nav] > section,
-[data-fp-nav] > ul, [role=navigation] > section,
-[role=navigation] > ul {
+nav > ul,
+[data-fp-nav] > section,
+[data-fp-nav] > ul,
+[role='navigation'] > section,
+[role='navigation'] > ul {
   --nav-dsp: flex;
   display: var(--nav-dsp, flex);
   gap: var(--nav-gap, 0);
@@ -29,10 +33,14 @@ nav > ul, [data-fp-nav] > section,
   padding-inline: var(--nav-px, 1rem);
   height: 100%;
 }
-nav > section > div, [data-fp-nav] > section > div, [role=navigation] > section > div {
+nav > section > div,
+[data-fp-nav] > section > div,
+[role='navigation'] > section > div {
   --py: 0;
 }
-nav ul > li, [data-fp-nav] ul > li, [role=navigation] ul > li {
+nav ul > li,
+[data-fp-nav] ul > li,
+[role='navigation'] ul > li {
   display: flex;
   align-items: center;
   list-style: none;
@@ -41,20 +49,29 @@ nav ul > li, [data-fp-nav] ul > li, [role=navigation] ul > li {
   min-height: 100%;
   padding-inline: var(--nav-px, 0.75rem);
 }
-nav ul > li:hover, [data-fp-nav] ul > li:hover, [role=navigation] ul > li:hover {
+nav ul > li:hover,
+[data-fp-nav] ul > li:hover,
+[role='navigation'] ul > li:hover {
   background-color: var(--nav-hov-bg, whitesmoke);
 }
-nav img[alt], [data-fp-nav] img[alt], [role=navigation] img[alt] {
+nav img[alt],
+[data-fp-nav] img[alt],
+[role='navigation'] img[alt] {
   --px: 0 var(--s1);
   --w: var(--brand-w, 3.6rem);
 }
-nav[data-variant], [data-fp-nav][data-variant], [role=navigation][data-variant] {
+nav[data-variant],
+[data-fp-nav][data-variant],
+[role='navigation'][data-variant] {
   background-color: var(--nav-bg);
   color: var(--nav-cl);
   font-size: var(--nav-fs, 0.9rem);
 }
 
-header:not([arial-label], dialog header), .fp-header:not([arial-label], dialog header), [role=banner]:not([arial-label], dialog header), [style*="--hdr"]:not([arial-label], dialog header) {
+header:not([arial-label], dialog header),
+.fp-header:not([arial-label], dialog header),
+[role='banner']:not([arial-label], dialog header),
+[style*='--hdr']:not([arial-label], dialog header) {
   display: var(--hdr-dsp, flex);
   background-color: var(--hdr-bg, var(--fp-white-smoke));
   background-image: var(--hdr-bg-img, none);
@@ -71,31 +88,37 @@ header:not([arial-label], dialog header), .fp-header:not([arial-label], dialog h
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
 }
-header:not([arial-label], dialog header)[data-variant], .fp-header:not([arial-label], dialog header)[data-variant], [role=banner]:not([arial-label], dialog header)[data-variant], [style*="--hdr"]:not([arial-label], dialog header)[data-variant] {
+header:not([arial-label], dialog header)[data-variant],
+.fp-header:not([arial-label], dialog header)[data-variant],
+[role='banner']:not([arial-label], dialog header)[data-variant],
+[style*='--hdr']:not([arial-label], dialog header)[data-variant] {
   background-color: var(--vbg);
   color: var(--vcl);
   font-size: var(--vfs);
 }
 
-form, .fp-form {
+form,
+.fp-form {
   width: 100%;
 }
-form div + div, .fp-form div + div {
+form div + div,
+.fp-form div + div {
   margin-block-start: var(--form-spc, 1.5rem);
   display: block;
 }
 
 .fp-label + input,
 .fp-label + textarea,
-.fp-label + select, label[for] + input,
+.fp-label + select,
+label[for] + input,
 label[for] + textarea,
 label[for] + select {
   margin-block-start: 0.75rem;
   display: block;
 }
 
-div:where([role="region"]),
-section:where([role="region"]) {
+div:where([role='region']),
+section:where([role='region']) {
   width: 100%;
 }
 
@@ -108,31 +131,37 @@ hr {
   margin-inline: var(px, auto);
 }
 
-img[alt][width][height], [data-img] {
+img[alt][width][height],
+[data-img] {
   max-width: 100%;
   width: var(--img-w, 100%);
   object-fit: var(--img-obj-fit, cover);
   object-position: var(--img-position, center center);
   aspect-ratio: var(--img-ratio, auto 2/3);
 }
-img[alt][width][height][width][height], [data-img][width][height] {
+img[alt][width][height][width][height],
+[data-img][width][height] {
   height: var(--img-h, auto);
 }
-img[alt][width][height][src$=".svg"], [data-img][src$=".svg"] {
+img[alt][width][height][src$='.svg'],
+[data-img][src$='.svg'] {
   height: auto;
   width: auto;
 }
-img[alt][width][height] + *, [data-img] + * {
+img[alt][width][height] + *,
+[data-img] + * {
   margin-block: 1rem 0;
 }
-img[alt][width][height][data-variant], [data-img][data-variant] {
+img[alt][width][height][data-variant],
+[data-img][data-variant] {
   background-color: var(--vbg);
   color: var(--vcl);
   font-size: var(--vfs);
 }
 
 picture,
-figure, .fp-figure {
+figure,
+.fp-figure {
   max-width: var(--pic-max-w, 100%);
   width: var(--pic-w, auto);
   display: var(--pic-dsp, flex);
@@ -144,7 +173,8 @@ figure, .fp-figure {
   padding-inline: var(--pic-px, 0.5rem);
 }
 
-figcaption, .fp-cations {
+figcaption,
+.fp-cations {
   font-size: var(--fcap-fs, inherit);
   display: var(--fcap-dsp, flex);
   place-content: var(--place-x, flex-start);
@@ -163,14 +193,14 @@ figcaption, .fp-cations {
   max-height: var(--chk-size, 1.2rem);
   font-size: var(--chk-fs, 1rem);
 }
-:where(label[for]) :where([id][type="checkbox"]) {
+:where(label[for]) :where([id][type='checkbox']) {
   appearance: var(--chk-appearance);
   -webkit-appearance: var(--chk-appearance);
   -moz-appearance: var(--chk-appearance);
   line-height: 1;
 }
-:where(label[for]) :where([id][type="checkbox"])::before {
-  content: "";
+:where(label[for]) :where([id][type='checkbox'])::before {
+  content: '';
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,10 +213,10 @@ figcaption, .fp-cations {
   border-radius: var(--chk-rds, var(--rds));
   transition: var(--tran-all);
 }
-:where(label[for]) :where([id][type="checkbox"]):checked {
+:where(label[for]) :where([id][type='checkbox']):checked {
   --chk-appearance: none;
 }
-:where(label[for]) :where([id][type="checkbox"]):checked::before {
+:where(label[for]) :where([id][type='checkbox']):checked::before {
   --chk-bdr: solid;
   border-color: var(--chk-bdr-cl);
   border-width: var(--chk-bdr-w, thick);
@@ -200,15 +230,15 @@ figcaption, .fp-cations {
 }
 
 button,
-[style*="--btn"],
+[style*='--btn'],
 a[data-fp-btn],
-[role=button] {
+[role='button'] {
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
   --btn-pill: 100rem;
   --btn-height: calc(40rem / 16);
-  --fs: .95rem;
+  --fs: 0.95rem;
   --btn-fs: calc(15rem / 16);
   font-size: var(--btn-fs);
   font-weight: var(--btn-fw, 600);
@@ -231,76 +261,91 @@ a[data-fp-btn],
   outline: none;
 }
 button[type],
-[style*="--btn"][type],
+[style*='--btn'][type],
 a[data-fp-btn][type],
-[role=button][type] {
+[role='button'][type] {
   background-color: var(--btn-bg, var(--btn, var(--neutral-100)));
   --btn-bdr: solid var(--btn-sg);
 }
-button[type=submit], button[style*=submit],
-[style*="--btn"][type=submit],
-[style*="--btn"][style*=submit],
-a[data-fp-btn][type=submit],
-a[data-fp-btn][style*=submit],
-[role=button][type=submit],
-[role=button][style*=submit] {
+button[type='submit'],
+button[style*='submit'],
+[style*='--btn'][type='submit'],
+[style*='--btn'][style*='submit'],
+a[data-fp-btn][type='submit'],
+a[data-fp-btn][style*='submit'],
+[role='button'][type='submit'],
+[role='button'][style*='submit'] {
   --btn-bg: var(--primary-500, royal-blue);
   --btn-color: white;
 }
-button[disabled], button[aria-disabled=true],
-[style*="--btn"][disabled],
-[style*="--btn"][aria-disabled=true],
+button[disabled],
+button[aria-disabled='true'],
+[style*='--btn'][disabled],
+[style*='--btn'][aria-disabled='true'],
 a[data-fp-btn][disabled],
-a[data-fp-btn][aria-disabled=true],
-[role=button][disabled],
-[role=button][aria-disabled=true] {
+a[data-fp-btn][aria-disabled='true'],
+[role='button'][disabled],
+[role='button'][aria-disabled='true'] {
   cursor: var(--btn-cursor, not-allowed);
   opacity: var(--btn-opacity, 0.5);
 }
+button[disabled]:is(:hover, :focus),
+button[aria-disabled='true']:is(:hover, :focus),
+[style*='--btn'][disabled]:is(:hover, :focus),
+[style*='--btn'][aria-disabled='true']:is(:hover, :focus),
+a[data-fp-btn][disabled]:is(:hover, :focus),
+a[data-fp-btn][aria-disabled='true']:is(:hover, :focus),
+[role='button'][disabled]:is(:hover, :focus),
+[role='button'][aria-disabled='true']:is(:hover, :focus) {
+  transform: none;
+  opacity: var(--btn-opacity, 0.5);
+}
 button:is(:hover, :focus),
-[style*="--btn"]:is(:hover, :focus),
+[style*='--btn']:is(:hover, :focus),
 a[data-fp-btn]:is(:hover, :focus),
-[role=button]:is(:hover, :focus) {
+[role='button']:is(:hover, :focus) {
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg, var(--btn, lightgray));
   filter: invert(1) hue-rotate 180deg;
   transform: scale(0.95);
-  outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
+  outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin)
+    var(--line-style, solid);
   outline-offset: var(--line-offset, 5px);
 }
-button[type=reset],
-[style*="--btn"][type=reset],
-a[data-fp-btn][type=reset],
-[role=button][type=reset] {
+button[type='reset'],
+[style*='--btn'][type='reset'],
+a[data-fp-btn][type='reset'],
+[role='button'][type='reset'] {
   --btn-bg: transparent;
   --btn-color: gray;
   --btn-bdr: gray thin solid;
 }
-button[type=submit],
-[style*="--btn"][type=submit],
-a[data-fp-btn][type=submit],
-[role=button][type=submit] {
+button[type='submit'],
+[style*='--btn'][type='submit'],
+a[data-fp-btn][type='submit'],
+[role='button'][type='submit'] {
   --btn-bg: var(--primary-700, blue);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
 }
-button[data-fp-btn~=pill],
-[style*="--btn"][data-fp-btn~=pill],
-a[data-fp-btn][data-fp-btn~=pill],
-[role=button][data-fp-btn~=pill] {
+button[data-fp-btn~='pill'],
+[style*='--btn'][data-fp-btn~='pill'],
+a[data-fp-btn][data-fp-btn~='pill'],
+[role='button'][data-fp-btn~='pill'] {
   border-radius: 100rem;
 }
 button[data-variant],
-[style*="--btn"][data-variant],
+[style*='--btn'][data-variant],
 a[data-fp-btn][data-variant],
-[role=button][data-variant] {
+[role='button'][data-variant] {
   --btn-bg: var(--vbg);
   --btn-cl: var(--vcl);
-  --btn-fs: var(--vfs, .95rem);
+  --btn-fs: var(--vfs, 0.95rem);
 }
 
-input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type=checkbox], [type=radio]) {
+input[id][type]:not([type='checkbox'], [type='radio'])
+  .fp-input[id][type]:not([type='checkbox'], [type='radio']) {
   --input-appearance: none;
   background-color: var(--input-cl);
   font-size: var(--input-fs, 0.9rem);
@@ -316,12 +361,14 @@ input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type
   -moz-appearance: var(--input-appearance);
   appearance: var(--input-appearance);
 }
-input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type=checkbox], [type=radio])::placeholder {
+input[id][type]:not([type='checkbox'], [type='radio'])
+  .fp-input[id][type]:not([type='checkbox'], [type='radio'])::placeholder {
   font-style: italic;
-  --input-fs: .5rem;
+  --input-fs: 0.5rem;
 }
-input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type=checkbox], [type=radio])[data-variant] {
-  --vfs: .8rem;
+input[id][type]:not([type='checkbox'], [type='radio'])
+  .fp-input[id][type]:not([type='checkbox'], [type='radio'])[data-variant] {
+  --vfs: 0.8rem;
   --vcl: var(--fp-light-gray);
   --input-fs: var(--vfs);
   --input-cl: var(--vcl);
@@ -343,7 +390,7 @@ input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type
 :where(label[for]) + label {
   margin-block-start: 0.8rem;
 }
-:where(label[for]) :where([id][type="radio"]) {
+:where(label[for]) :where([id][type='radio']) {
   appearance: var(--rdo-appearance, none);
   -webkit-appearance: var(--rdo-appearance, none);
   -moz-appearance: var(--rdo-appearance, none);
@@ -352,11 +399,11 @@ input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type
   margin: 0;
   line-height: 1;
 }
-:where(label[for]) :where([id][type="radio"])::before {
+:where(label[for]) :where([id][type='radio'])::before {
   --rdo-bdr-cl: lightgray;
   --rdo-bdr-w: initial;
   transition: var(--tran-all);
-  content: "";
+  content: '';
   display: flex;
   align-items: center;
   justify-content: center;
@@ -369,10 +416,10 @@ input[id][type]:not([type=checkbox], [type=radio]) .fp-input[id][type]:not([type
   background-color: var(--rdo-bg, var(--fp-light-gray));
   border-radius: var(--rdo-rds, 99rem);
 }
-:where(label[for]) :where([id][type="radio"]):checked {
+:where(label[for]) :where([id][type='radio']):checked {
   --rdo-appearance: none;
 }
-:where(label[for]) :where([id][type="radio"]):checked::before {
+:where(label[for]) :where([id][type='radio']):checked::before {
   --rdo-bdr-s: solid;
   --rdo-bdr-w: thick;
   --rdo-bdr-cl: var(--fp-dark-green);
@@ -386,9 +433,9 @@ textarea {
   --txa-bdr-s: solid;
   --txa-bdr-w: thin;
   --txa-bdr-cl: lightgray;
-  --txa-px: .5rem;
-  --txa-py: .5rem;
-  --txa-fs: .95rem;
+  --txa-px: 0.5rem;
+  --txa-py: 0.5rem;
+  --txa-fs: 0.95rem;
   --txa-min-w: var(--min-w-800);
   --txa-min-h: calc(120rem / 16);
   --txa-overflow: auto;
@@ -447,21 +494,21 @@ select * {
   padding-inline: var(--slt-px);
 }
 
-footer:not([aria-label], [role=footer]),
-[data-footer]:not([aria-label], [role=footer]),
-[role=contentinfo]:not([aria-label], [role=footer]) {
+footer:not([aria-label], [role='footer']),
+[data-footer]:not([aria-label], [role='footer']),
+[role='contentinfo']:not([aria-label], [role='footer']) {
   display: var(--footer-dsp, flex);
   flex-direction: var(--footer-direction, column);
   font-size: var(--footer-fs, var(--fs-2));
 }
-footer:not([aria-label], [role=footer]) p,
-[data-footer]:not([aria-label], [role=footer]) p,
-[role=contentinfo]:not([aria-label], [role=footer]) p {
+footer:not([aria-label], [role='footer']) p,
+[data-footer]:not([aria-label], [role='footer']) p,
+[role='contentinfo']:not([aria-label], [role='footer']) p {
   --p-fs: var(--footer-fs, var(--fs));
 }
-footer:not([aria-label], [role=footer])[data-variant],
-[data-footer]:not([aria-label], [role=footer])[data-variant],
-[role=contentinfo]:not([aria-label], [role=footer])[data-variant] {
+footer:not([aria-label], [role='footer'])[data-variant],
+[data-footer]:not([aria-label], [role='footer'])[data-variant],
+[role='contentinfo']:not([aria-label], [role='footer'])[data-variant] {
   --footer-fs: var(--vfs);
   --footer-cl: var(--vcl);
   --footer-bg: var(--vbg);

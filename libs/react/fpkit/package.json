@@ -1,13 +1,16 @@
 {
   "name": "@fpkit/fp",
+  "description": "A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.2.11",
+  "sideEffects": false,
   "scripts": {
-    "start": "vite --open",
-    "dev": "vite",
+    "start": "run-p package:watch dev",
+    "dev": "vite --open",
     "build": "tsc && vite build",
     "build:package": "tsc && vite build --mode package --config vite.package.config.ts",
     "package": "tsup --dts",
+    "package:watch": "tsup --watch --dts",
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --coverage --ui",
@@ -16,10 +19,9 @@
     "test:snapshot": "vitest --run --update"
   },
   "dependencies": {
-    "@fpkit/fp-button": "^0.4.10",
+    "@shawnsandy/first-paint": "^2.17.4",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "vite-plugin-dts": "^1.2.0"
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -33,14 +35,16 @@
     "c8": "^7.11.3",
     "happy-dom": "^5.3.1",
     "jsdom": "^19.0.0",
+    "npm-run-all": "^4.1.5",
     "parcel": "^2.6.2",
     "react-test-renderer": "^18.2.0",
+    "sass": "^1.56.0",
     "tsup": "^6.2.3",
     "typescript": "^4.6.3",
     "vite": "^2.9.9",
+    "vite-plugin-dts": "^1.2.0",
     "vitest": "^0.15.1"
   },
-  "description": "Introduction",
   "type": "module",
   "source": "src/index.ts",
   "main": "./dist/index.cjs",
@@ -53,14 +57,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shawn-sandy/react-vite.git"
+    "url": "git+https://github.com/shawn-sandy/fpkit.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shawn-sandy/react-vite/issues"
+    "url": "https://github.com/shawn-sandy/fpkit/issues"
   },
-  "homepage": "https://github.com/shawn-sandy/react-vite#readme",
+  "homepage": "https://github.com/shawn-sandy/fp-kit/tree/main/libs/react/fpkit",
   "keywords": [
     "React",
     "components"

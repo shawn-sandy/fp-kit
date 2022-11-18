@@ -1,15 +1,43 @@
 # Headings
 
-?&gt;  _TODO_ add description
+?&gt; _TODO_ add description
 
 ### Default Headings
+
+## Module usage
+
+Import `css` or `sass` to use in your project.
+
+- SASS
+
+```scss
+@use '@shawnsandy/first-paint/src/components/headings';
+```
+
+- React
+
+```jsx
+import '@shawnsandy/first-paint/src/v3/components/headings.scss'
+//  or css
+import '@shawnsandy/first-paint@next/dist/css/components/headings.min.css'
+```
+
+- HTML
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/css/components/headings.min.css"
+/>
+```
+
+### Default Form
 
 ### H1 Heading
 
 ```html preview
 <h1 style="font-size: var(--h1)">Sample H1 Heading</h1>
 ```
-
 
 ## Headings Variables
 
@@ -27,28 +55,33 @@
 ## Custom properties (rules)
 
 ```css
-
-h1, h1[role="decoration"] {
+h1,
+h1[role='decoration'] {
   font-size: var(--h1);
 }
 
-h2, h2[role="decoration"] {
+h2,
+h2[role='decoration'] {
   font-size: var(--h2);
 }
 
-h3, h3[role="decoration"] {
+h3,
+h3[role='decoration'] {
   font-size: var(--h3);
 }
 
-h4, h4[role="decoration"] {
+h4,
+h4[role='decoration'] {
   font-size: var(--h4);
 }
 
-h5, h5[role="decoration"] {
+h5,
+h5[role='decoration'] {
   font-size: var(--h5);
 }
 
-h6, h6[role="decoration"] {
+h6,
+h6[role='decoration'] {
   font-size: var(--h6);
 }
 ```
@@ -89,15 +122,14 @@ h6, h6[role="decoration"] {
 
 ```html preview
 <h6 style="font-size: var(--h6)">Sample H6 Header</h6>
-
 ```
 
-----
-## References/Additional info
+---
 
+## References/Additional info
 
 [MDN GUIDELINES AND SPECFICATIONS]()
 
 [ACCESSIBILITY GUIDE]()
 
-----
+---
