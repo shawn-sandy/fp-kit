@@ -7,14 +7,14 @@ export interface SummaryPros {
   renderStyles?: boolean
 }
 
-const defaultStyles = {
+export const defaultStyles = {
   listStyle: "none",
   justifyContent: "var(--summary-justify, space-between)",
   color: "var(--summary-color, currentColor)",
   cursor: "var(--detail-cursor, pointer)"
 }
 
-const Summary = ({ children, styles, renderStyles = true, ...props }: SummaryPros) => {
+export const Summary = ({ children, styles, renderStyles = true, ...props }: SummaryPros) => {
   const stylesObj = renderStyles ? defaultStyles : {}
   return (
     <FP
@@ -27,4 +27,4 @@ const Summary = ({ children, styles, renderStyles = true, ...props }: SummaryPro
   )
 }
 
-export default Summary
+Summary.displayName = "Summary"

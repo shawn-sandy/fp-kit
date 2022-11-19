@@ -12,7 +12,7 @@ export const defaultStyles = {
   backgroundColor: "var(--card-bg, white)"
 }
 
-const Details = ({
+export const Details = ({
   title,
   children,
   styles,
@@ -37,4 +37,4 @@ const Details = ({
     </FP>
   )
 }
- export default Details
+Details.displayName = "Details"
