@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.13](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.12...@fpkit/fp@0.2.13) (2022-11-19)
+
+### Reverts
+
+- 🔥 remove image value (default) ([4358210](https://github.com/shawn-sandy/fpkit/commit/435821040e56ede76c0e8c9d689471834698b508))
+
 ## [0.2.12](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.11...@fpkit/fp@0.2.12) (2022-11-18)
 
 ### Features
