@@ -2,7 +2,7 @@
   "name": "@fpkit/fp",
   "description": "A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.",
   "private": false,
-  "version": "0.2.14",
+  "version": "0.2.15",
   "sideEffects": false,
   "scripts": {
     "start": "run-p package:watch dev",
