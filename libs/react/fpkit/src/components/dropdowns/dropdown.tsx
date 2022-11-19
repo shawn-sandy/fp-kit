@@ -21,7 +21,7 @@ const defaultStyles = {
   maxWidth: "var(--summary-min-w, 80vw)"
 }
 
-const Dropdown = ({
+export const Dropdown = ({
   styles,
   children,
   summary,
@@ -42,4 +42,6 @@ const Dropdown = ({
   )
 }
 
+
 export default Dropdown
+Dropdown.displayName = "Dropdown"
