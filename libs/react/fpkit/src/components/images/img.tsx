@@ -11,7 +11,7 @@ export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 type ImgProps = ImageProps & ComponentProps
 
 export const defaultStyles = {
-  width: 'var(--img-w, 100%)',
+  maxWidth: 'var(--img-w, 100%)',
   height: 'var(--img-h, auto)',
   objectFit: 'var(--img-obj-fit, cover)',
   objectPosition: 'var(--img-position, center center)',
@@ -40,8 +40,9 @@ const Img = ({
   const handleImgError = (
     e: React.SyntheticEvent<HTMLImageElement, Event>,
   ): void => {
-    const img = e.currentTarget
-    img.src = placeholder
+    if (e.currentTarget.src !== placeholder) {
+      e.currentTarget.src = placeholder
+    }
   }
 
   const handleImgLoad = (e: React.SyntheticEvent<HTMLImageElement, Event>): void => {
