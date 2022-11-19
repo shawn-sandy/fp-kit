@@ -23,7 +23,7 @@ export const defaultStyles = {
  * @param param
  * @returns
  */
-const Img = ({
+export const Img = ({
   src,
   alt,
   width = 480,
@@ -64,4 +64,4 @@ const Img = ({
   )
 }
 
-export default Img
+Img.displayName = 'Img'

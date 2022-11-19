@@ -17,7 +17,7 @@ export const defaultStyles = {
 
 // const cardRef = React.useRef<HTMLDivElement | null>(null)
 
-const Card = ({
+export const Card = ({
   elm = "div",
   styles,
   children,
@@ -40,4 +40,4 @@ const Card = ({
   )
 }
 
-export default Card
+Card.displayName = "Card"

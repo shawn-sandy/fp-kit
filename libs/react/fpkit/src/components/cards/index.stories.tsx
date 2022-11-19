@@ -13,7 +13,7 @@ import {
 } from "@storybook/testing-library"
 import { expect } from "@storybook/jest"
 
-import Card from "./card"
+import {Card} from "./card"
 export default {
   title: "FPKIT Components/Cards",
   component: Card,

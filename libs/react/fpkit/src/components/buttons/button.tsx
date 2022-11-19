@@ -45,7 +45,7 @@ export const defStyles = {
 }
 
 
-const Button = ({
+export const Button = ({
   type,
   children,
   styles,
@@ -95,4 +95,4 @@ const Button = ({
   //
 }
 
-export default Button
+Button.displayName = 'Button'

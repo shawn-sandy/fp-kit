@@ -13,7 +13,7 @@ import {
 } from "@storybook/testing-library"
 import { expect } from "@storybook/jest"
 
-import Button, { defStyles } from "./button"
+import {Button,  defStyles } from "./button"
 
 export default {
   title: "FPKIT Components/Buttons",
