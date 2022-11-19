@@ -1031,7 +1031,6 @@ a[data-variant] {
 img[alt][width][height],
 [data-img] {
   max-width: 100%;
-  width: var(--img-w, 100%);
   object-fit: var(--img-obj-fit, cover);
   object-position: var(--img-position, center center);
   aspect-ratio: var(--img-ratio, auto 2/3);
