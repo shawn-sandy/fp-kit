@@ -46,7 +46,7 @@ const Img = ({
   }
 
   const handleImgLoad = (e: React.SyntheticEvent<HTMLImageElement, Event>): void => {
-    handleImgLoad?.(e)
+    imgLoaded?.(e)
   }
 
   return (
@@ -58,7 +58,7 @@ const Img = ({
       loading={loading}
       style={{ ...styles, ...stylesObj }}
       onError={handleImgError}
-      onLoad={imgLoaded}
+      onLoad={handleImgLoad}
       {...props}
     />
   )
