@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.14](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.13...@fpkit/fp@0.2.14) (2022-11-19)
+
+### Features
+
+- 🌟 add display name ([c387ea7](https://github.com/shawn-sandy/fpkit/commit/c387ea7ca29853bb53678629ca2a1e3061ee37da))
+
 ## [0.2.13](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.12...@fpkit/fp@0.2.13) (2022-11-19)
 
 ### Reverts
