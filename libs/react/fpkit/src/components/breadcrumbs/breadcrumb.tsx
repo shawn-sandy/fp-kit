@@ -4,7 +4,7 @@ import '@shawnsandy/first-paint/dist/css/components/breadcrumb.min.css'
 
 export interface BCProps extends ComponentProps {
   /**
-   * Style component using data-style attribute
+   * Style nav element using data-style attribute
    */
   dataStyleNav?: string
   /**
