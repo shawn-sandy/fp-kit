@@ -3,33 +3,30 @@ import { ComponentProps } from '../../types'
 import '@shawnsandy/first-paint/dist/css/components/breadcrumb.min.css'
 
 export interface BCProps extends ComponentProps {
-  children: React.ReactNode
+  children: React.ReactNode,
+  dataStyles?: string
 }
-
-export interface CBProps extends ComponentProps {}
 
 export const defaultStyles = {}
 
-export const Breadcrumb = ({ children }: BCProps) => {
+export const Breadcrumb = ({ dataStyles, children, ...props }: BCProps) => {
   return (
     <FP as="nav">
-      <ol data-fp-breadcrumb>{children}</ol>
+      <ol data-fp-breadcrumb={dataStyles} {...props}>{children}</ol>
     </FP>
   )
 }
 
-export const Crumb = ({ children }: BCProps) => {
-  return <FP as="li">{children}</FP>
+
+export interface CBProps extends ComponentProps {
+  variant?: string
+}
+
+
+export const BCItem = ({ children, variant, ...props }: CBProps) => {
+  return <FP as="li" data-variant={variant} {...props}>{children}</FP>
 }
 
 Breadcrumb.displayName = 'BreadCrumb'
 
-const List = () => {
-  return (
-    <Breadcrumb>
-      <Crumb>Home</Crumb>
-      <Crumb>Library</Crumb>
-      <Crumb>Data</Crumb>
-    </Breadcrumb>
-  )
-}
+
