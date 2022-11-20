@@ -6,11 +6,12 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges'
 import { within, userEvent, waitFor } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
-import { Breadcrumb, BCItem as BCItem } from './breadcrumb'
+import { Breadcrumb } from './breadcrumb'
+import { BCItem } from './bc-item'
 export default {
   title: 'FPKIT Components/Breadcrumb',
   component: Breadcrumb,
-  subcomponents: { Crumb: BCItem },
+  subcomponents: { BCItem },
   argTypes: {
   },
   parameters: {
@@ -42,13 +43,3 @@ DefaultBreadCrumb.play = async ({ args, canvasElement }) => {
   const BreadCrumb = getByRole('navigation')
   expect(BreadCrumb).toBeInTheDocument()
 }
-
-// export const ComponentNameInteractions = Template.bind({})
-
-// ComponentNameInteractions.args = {
-//   children: "ComponentName Test",
-//   // type: "ComponentName",
-//   onPointerDown: () => {
-//     // clicked = true
-//   }
-// }
