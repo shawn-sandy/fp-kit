@@ -12,12 +12,6 @@ export default {
   component: Breadcrumb,
   subcomponents: { Crumb },
   argTypes: {
-    children: { control: 'text' },
-    type: {
-      control: 'select',
-      options: ['ComponentName', 'submit', 'reset'],
-    },
-    onPointerDown: { action: 'down' },
   },
   parameters: {
     badges: [BADGE.BETA],
