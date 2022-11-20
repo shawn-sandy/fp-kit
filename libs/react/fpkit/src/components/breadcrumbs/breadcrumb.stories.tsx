@@ -1,4 +1,5 @@
 import React from 'react'
+import '@shawnsandy/first-paint/dist/css/components/breadcrumb.min.css'
 
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'

@@ -1,6 +1,6 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
-import '@shawnsandy/first-paint/dist/css/components/breadcrumb.min.css'
+// import '@shawnsandy/first-paint/dist/css/components/breadcrumb.min.css'
 
 export interface BCProps extends ComponentProps {
   /**
