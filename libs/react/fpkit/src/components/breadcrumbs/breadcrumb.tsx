@@ -6,7 +6,7 @@ export interface BCProps extends ComponentProps {
   /**
    * Style component using data-style attribute
    */
-  dataStyle?: string
+  dataStyleNav?: string
   /**
    * React child component
    */
@@ -15,9 +15,9 @@ export interface BCProps extends ComponentProps {
 
 export const defaultStyles = {}
 
-export const Breadcrumb = ({ dataStyle, children, ...props }: BCProps) => {
+export const Breadcrumb = ({ dataStyle, dataStyleNav, children, ...props }: BCProps) => {
   return (
-    <FP as="nav">
+    <FP as="nav" data-style={dataStyleNav}>
       <ol data-fp-breadcrumb={dataStyle} {...props}>
         {children}
       </ol>
@@ -25,4 +25,4 @@ export const Breadcrumb = ({ dataStyle, children, ...props }: BCProps) => {
   )
 }
 
-Breadcrumb.displayName = 'FP.BreadCrumb'
+// Breadcrumb.displayName = 'FP.BreadCrumb'

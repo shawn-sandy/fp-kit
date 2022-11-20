@@ -12,24 +12,21 @@ export default {
   title: 'FPKIT Components/Breadcrumb',
   component: Breadcrumb,
   subcomponents: { BCItem },
-  argTypes: {
-  },
+  argTypes: {},
   parameters: {
     badges: [BADGE.BETA],
   },
 } as ComponentMeta<typeof Breadcrumb>
 
 const Template: ComponentStory<typeof Breadcrumb> = (args) => (
-  <Breadcrumb {...args}>
-    {args.children}
-  </Breadcrumb>
+  <Breadcrumb {...args}>{args.children}</Breadcrumb>
 )
 
 const bcList = () => (
   <>
-  <BCItem>Home</BCItem>
-  <BCItem>Library</BCItem>
-  <BCItem>Data</BCItem>
+    <BCItem current="page">Home</BCItem>
+    <BCItem>Library</BCItem>
+    <BCItem>Data</BCItem>
   </>
 )
 
@@ -42,4 +39,7 @@ DefaultBreadCrumb.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const BreadCrumb = getByRole('navigation')
   expect(BreadCrumb).toBeInTheDocument()
+  // expect(BreadCrumb).toHaveAttribute('data-fp-breadcrumb')
+  const list = getByRole('listitem', { current: 'page' })
+  expect(list).toBeInTheDocument()
 }

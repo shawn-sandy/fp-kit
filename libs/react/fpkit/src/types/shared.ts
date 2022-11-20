@@ -3,4 +3,5 @@ export interface ComponentProps {
   renderStyles?: boolean
   styles?: {}
   classes?: String
+  dataStyle?: string
 }

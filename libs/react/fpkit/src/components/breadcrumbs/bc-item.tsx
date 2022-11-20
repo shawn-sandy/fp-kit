@@ -6,15 +6,15 @@ export interface CBProps extends ComponentProps {
    * Styles use data-variant attribute
    */
   variant?: string
-  current?: boolean
+  current?: "page" | "step"
 }
 
 export const BCItem = ({ children, current, variant, ...props }: CBProps) => {
   return (
-    <FP as="li" data-variant={variant} aria-current={current ? "page" : false} {...props}>
+    <li className='style' data-variant={variant} aria-current={current} {...props}>
       {children}
-    </FP>
+    </li>
   )
 }
 
-BCItem.displayName = 'FP.BreadCrumb.Item'
+// BCItem.displayName = 'FP.BreadCrumb.Item'
