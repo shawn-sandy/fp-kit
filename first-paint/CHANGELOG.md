@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.8](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.7...@shawnsandy/first-paint@2.17.8) (2022-11-20)
+
+### Features
+
+- 🚧 add base breadcrumb component ([de421d6](https://github.com/shawn-sandy/fp-kit/commit/de421d658d7c291aaea0bd8fe5ef71ab20519d3c))
+
 ## [2.17.7](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.6...@shawnsandy/first-paint@2.17.7) (2022-11-19)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
