@@ -64,7 +64,7 @@ const FP: FPComponent = React.forwardRef(
     )
   }
 )
-interface BoxProps extends ComponentProps {
+export interface BoxProps extends ComponentProps {
   elm?: "div",
   renderStyles: true,
 }
