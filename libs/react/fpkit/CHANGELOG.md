@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.18](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.17...@fpkit/fp@0.2.18) (2022-11-22)
+
+### Bug Fixes
+
+- storybook sidebar navigation ([f39bcc8](https://github.com/shawn-sandy/fpkit/commit/f39bcc855912e1b9d3100405885935e74e7e7dbc))
+
+### Features
+
+- Add content elements to storybook ([07fd928](https://github.com/shawn-sandy/fpkit/commit/07fd928585609e77fa0835ec356525da695fda2a))
+
 ## [0.2.17](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.16...@fpkit/fp@0.2.17) (2022-11-20)
 
 ### Features
