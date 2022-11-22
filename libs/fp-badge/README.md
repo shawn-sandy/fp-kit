@@ -19,9 +19,7 @@ Open the repository and run `npm init` to edit the package.json file.
 Run `npm i` to install the dependencies.
 Run `npm start` to star the dev server.
 
-
 ## Usage
-
 
 ### Quick start
 
