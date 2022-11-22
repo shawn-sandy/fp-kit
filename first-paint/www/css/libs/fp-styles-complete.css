@@ -895,6 +895,7 @@ section:not(nav) {
 }
 .fp [data-fp-list~='inline'] {
   --list-dsp: flex;
+  --list-s: none;
 }
 .fp [data-fp-list~='inline'] li {
   padding-inline: var(--list-px, 1rem);

@@ -18,11 +18,15 @@ export default {
     type: {
       control: 'select',
       options: ['FP', 'submit', 'reset'],
-    },
-    onPointerDown: { action: 'down' },
+    }
   },
   parameters: {
     badges: [BADGE.BETA],
+    docs: {
+      description: {
+        component: 'FP Component - polymorphic react component',
+      }
+    },
   },
 } as ComponentMeta<typeof FP>
 
@@ -55,10 +59,7 @@ export const Paragraphs = Template.bind({})
 Paragraphs.args = {
   as: 'p',
   children:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima minus, exercitationem aut deleniti eaque dolore eligendi quia repellat? Earum perferendis aperiam officia adipisci quos enim voluptas asperiores possimus necessitatibus harum.',
-    styles: {
-      backgroundColor: 'whitesmoke',
-    }
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima minus, exercitationem aut deleniti eaque dolore eligendi quia repellat? Earum perferendis aperiam officia adipisci quos enim voluptas asperiores possimus necessitatibus harum.'
 }
 
 Paragraphs.play = async ({ args, canvasElement }) => {
@@ -86,6 +87,9 @@ export const HorizontalRule = Template.bind({})
 HorizontalRule.args = {
   as: 'div',
   children: <hr />,
+  styles: {
+    minWidth: '50vw'
+  }
 }
 
 export const List = Template.bind({})
@@ -110,6 +114,7 @@ List.play = async ({ args, canvasElement }) => {
 export const ListUnstyled = Template.bind({})
 ListUnstyled.args = {
   as: 'ul',
+  'data-fp-list': 'unstyled',
   children: (
     <>
       <li>List item</li>
@@ -123,4 +128,20 @@ ListUnstyled.args = {
   styles: {
     '--listNone': 'var(--yes)'
   }
+}
+
+export const ListInline = Template.bind({})
+ListInline.args = {
+  as: 'ul',
+  'data-fp-list': 'unstyled inline',
+  children: (
+    <>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </>
+
+  )
 }
