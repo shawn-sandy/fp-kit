@@ -1184,7 +1184,6 @@ a[data-variant] {
 img[alt][width][height],
 [data-img] {
   max-width: 100%;
-  width: var(--img-w, 100%);
   object-fit: var(--img-obj-fit, cover);
   object-position: var(--img-position, center center);
   aspect-ratio: var(--img-ratio, auto 2/3);
@@ -1847,6 +1846,7 @@ ul[data-variant],
 
 [data-fp-list~='inline'] {
   --list-dsp: flex;
+  --list-s: none;
 }
 [data-fp-list~='inline'] li {
   padding-inline: var(--list-px, 1rem);

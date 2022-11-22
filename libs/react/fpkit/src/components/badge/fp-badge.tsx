@@ -43,4 +43,4 @@ export const Badge = ({
   )
 }
 
-export default Badge
+Badge.displayName = "Badge"

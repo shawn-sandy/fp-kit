@@ -13,7 +13,7 @@ import {
 } from "@storybook/testing-library"
 import { expect } from "@storybook/jest"
 
-import Img from "./img"
+import {Img} from "./img"
 export default {
   title: "FPKIT Components/Image",
   component: Img,

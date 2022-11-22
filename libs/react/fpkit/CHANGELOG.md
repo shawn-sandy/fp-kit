@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.17](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.16...@fpkit/fp@0.2.17) (2022-11-20)
+
+### Features
+
+- 🌟 breadcrumb component ([36685e3](https://github.com/shawn-sandy/fpkit/commit/36685e3b7cda73fd8ed4aa5966ad2eab2aac3062))
+- 🌟 update the breadcrumb listItems ([68ef1b5](https://github.com/shawn-sandy/fpkit/commit/68ef1b5aa9f653d0009ba0992745543d0dddc7fe))
+- 🪄 set the placeholder imgWidth to imgWidth ([6843943](https://github.com/shawn-sandy/fpkit/commit/6843943b10dab3e231ec58e7640894225c94da45))
+- 🚧 add base breadcrumb component ([de421d6](https://github.com/shawn-sandy/fpkit/commit/de421d658d7c291aaea0bd8fe5ef71ab20519d3c))
+- 🚧 breadcrumb component story ([0a750ee](https://github.com/shawn-sandy/fpkit/commit/0a750eebcf87c0aa7ad8bd9aa594c841d35ad692))
+
+## [0.2.16](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.15...@fpkit/fp@0.2.16) (2022-11-19)
+
+**Note:** Version bump only for package @fpkit/fp
+
+## [0.2.15](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.14...@fpkit/fp@0.2.15) (2022-11-19)
+
+**Note:** Version bump only for package @fpkit/fp
+
+## [0.2.14](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.13...@fpkit/fp@0.2.14) (2022-11-19)
+
+### Features
+
+- 🌟 add display name ([c387ea7](https://github.com/shawn-sandy/fpkit/commit/c387ea7ca29853bb53678629ca2a1e3061ee37da))
+
+## [0.2.13](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.12...@fpkit/fp@0.2.13) (2022-11-19)
+
+### Reverts
+
+- 🔥 remove image value (default) ([4358210](https://github.com/shawn-sandy/fpkit/commit/435821040e56ede76c0e8c9d689471834698b508))
+
 ## [0.2.12](https://github.com/shawn-sandy/fpkit/compare/@fpkit/fp@0.2.11...@fpkit/fp@0.2.12) (2022-11-18)
 
 ### Features

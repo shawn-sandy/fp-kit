@@ -1,6 +1,5 @@
 .fp-img {
   max-width: 100%;
-  width: var(--img-w, 100%);
   object-fit: var(--img-obj-fit, cover);
   object-position: var(--img-position, center center);
   aspect-ratio: var(--img-ratio, auto 2/3);
@@ -8,7 +7,7 @@
 .fp-img[width][height] {
   height: var(--img-h, auto);
 }
-.fp-img[src$=".svg"] {
+.fp-img[src$='.svg'] {
   height: auto;
   width: auto;
 }

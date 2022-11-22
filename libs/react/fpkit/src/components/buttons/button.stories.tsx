@@ -1,4 +1,7 @@
 import React from "react"
+import '@shawnsandy/first-paint/dist/css/components/button.min.css'
+
+
 
 import {
   ComponentStory,
@@ -13,7 +16,7 @@ import {
 } from "@storybook/testing-library"
 import { expect } from "@storybook/jest"
 
-import Button, { defStyles } from "./button"
+import {Button,  defStyles } from "./button"
 
 export default {
   title: "FPKIT Components/Buttons",

@@ -13,7 +13,7 @@ import {
 } from "@storybook/testing-library"
 import { expect } from "@storybook/jest"
 
-import Dropdown from "./dropdown"
+import {Dropdown} from "./dropdown"
 export default {
   title: "FPKIT Components/DetailsDropdown",
   component: Dropdown,

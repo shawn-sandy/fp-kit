@@ -11,7 +11,7 @@ export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 type ImgProps = ImageProps & ComponentProps
 
 export const defaultStyles = {
-  width: 'var(--img-w, 100%)',
+  maxWidth: 'var(--img-w, 100%)',
   height: 'var(--img-h, auto)',
   objectFit: 'var(--img-obj-fit, cover)',
   objectPosition: 'var(--img-position, center center)',
@@ -23,7 +23,7 @@ export const defaultStyles = {
  * @param param
  * @returns
  */
-const Img = ({
+export const Img = ({
   src,
   alt,
   width = 480,
@@ -31,7 +31,7 @@ const Img = ({
   styles,
   renderStyles = true,
   loading = 'lazy',
-  placeholder = 'https://via.placeholder.com/150?text=PLACEHOLDER',
+  placeholder,
   imgLoaded,
   ...props
 }: ImgProps) => {
@@ -40,12 +40,13 @@ const Img = ({
   const handleImgError = (
     e: React.SyntheticEvent<HTMLImageElement, Event>,
   ): void => {
-    const img = e.currentTarget
-    img.src = placeholder
+    if (e.currentTarget.src !== placeholder) {
+      e.currentTarget.src = placeholder || `https://via.placeholder.com/${width}?text=PLACEHOLDER`
+    }
   }
 
   const handleImgLoad = (e: React.SyntheticEvent<HTMLImageElement, Event>): void => {
-    handleImgLoad?.(e)
+    imgLoaded?.(e)
   }
 
   return (
@@ -57,10 +58,10 @@ const Img = ({
       loading={loading}
       style={{ ...styles, ...stylesObj }}
       onError={handleImgError}
-      onLoad={imgLoaded}
+      onLoad={handleImgLoad}
       {...props}
     />
   )
 }
 
-export default Img
+Img.displayName = 'Img'

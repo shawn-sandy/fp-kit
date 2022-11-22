@@ -12,18 +12,17 @@ Built-in support for FirstPaint a modern, performance-first, easy-to-use, access
 
 ## Install
 
- ```bash
+```bash
 npm i @fpkit/fp-button
- ```
+```
 
 ### Usage
 
 ```js
- import {Button } from '@fpkit/fp-button';
+import { Button } from '@fpkit/fp-button'
 
- <Button onClick={ alert('clicked button')}>Click here</Button>
-
- ```
+;<Button onClick={alert('clicked button')}>Click here</Button>
+```
 
 ## Licensed under the MIT license
 

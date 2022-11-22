@@ -1,5 +1,4 @@
 import React from "react"
-import '@shawnsandy/first-paint/dist/css/components/button.min.css'
 
 
 interface ButtonProps
@@ -45,7 +44,7 @@ export const defStyles = {
 }
 
 
-const Button = ({
+export const Button = ({
   type,
   children,
   styles,
@@ -95,4 +94,4 @@ const Button = ({
   //
 }
 
-export default Button
+Button.displayName = 'Button'

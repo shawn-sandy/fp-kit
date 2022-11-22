@@ -48,7 +48,8 @@ const FP: FPComponent = React.forwardRef(
       as,
       renderStyles = true,
       styles,
-      children
+      children,
+      ...props
     }: FPProps<C>,
     ref?: PolymorphicRef<C>
   ) => {
@@ -57,13 +58,13 @@ const FP: FPComponent = React.forwardRef(
     const styleObj = renderStyles ? styles : {}
 
     return (
-      <Component ref={ref} style={styleObj}>
+      <Component ref={ref} style={styleObj} {...props} >
         {children}
       </Component>
     )
   }
 )
-interface BoxProps extends ComponentProps {
+export interface BoxProps extends ComponentProps {
   elm?: "div",
   renderStyles: true,
 }

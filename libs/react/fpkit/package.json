@@ -2,7 +2,7 @@
   "name": "@fpkit/fp",
   "description": "A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.",
   "private": false,
-  "version": "0.2.12",
+  "version": "0.2.17",
   "sideEffects": false,
   "scripts": {
     "start": "run-p package:watch dev",
@@ -19,7 +19,7 @@
     "test:snapshot": "vitest --run --update"
   },
   "dependencies": {
-    "@shawnsandy/first-paint": "^2.17.5",
+    "@shawnsandy/first-paint": "^2.17.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -72,5 +72,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "4718563e4154f87525194c4428bc6d34cf7cabec"
+  "gitHead": "4f9a9fb691d3625c24ba041ca10e120ec57aeeab"
 }

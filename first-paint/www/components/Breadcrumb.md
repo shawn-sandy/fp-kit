@@ -15,9 +15,9 @@ Import `css` or `sass` to use in your project.
 - React
 
 ```jsx
-import '@shawnsandy/first-paint/src/v3/components/badge.scss'
+import '@shawnsandy/first-paint/src/v3/components/breadcrumb.scss'
 // or scss
-import '@shawnsandy/first-paint@next/dist/css/components/badge.min.css'
+import '@shawnsandy/first-paint/dist/css/components/breadcrumb.min.css'
 ```
 
 - HTML
@@ -25,7 +25,7 @@ import '@shawnsandy/first-paint@next/dist/css/components/badge.min.css'
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/css/components/badge.min.css"
+  href="https://cdn.jsdelivr.net/npm/@shawnsandy/first-paint@next/dist/css/components/breadcrumb.min.css"
 />
 ```
 
