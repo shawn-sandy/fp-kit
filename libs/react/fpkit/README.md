@@ -5,7 +5,7 @@ A lightweight React Headless UI library for building modern and accessible compo
 ## Install
 
 ```bash
-npm i @fpkit/fp
+npm i @fpkit/react
 ```
 
 ### Usage
