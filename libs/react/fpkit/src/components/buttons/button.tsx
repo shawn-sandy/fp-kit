@@ -28,6 +28,11 @@ interface ButtonProps
    * default button styles
    */
   defaultStyles?: boolean
+
+  /**
+   * Button pointer-down event (pointerOver, pointerLeave)
+   */
+  onPointerDown?: (e: React.PointerEvent) => void
 }
 
 export const defStyles = {

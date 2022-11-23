@@ -31,7 +31,7 @@ export const Img = ({
   styles,
   renderStyles = true,
   loading = 'lazy',
-  placeholder,
+  placeholder = `https://via.placeholder.com/${width}?text=PLACEHOLDER`,
   imgLoaded,
   ...props
 }: ImgProps) => {
@@ -41,7 +41,7 @@ export const Img = ({
     e: React.SyntheticEvent<HTMLImageElement, Event>,
   ): void => {
     if (e.currentTarget.src !== placeholder) {
-      e.currentTarget.src = placeholder || `https://via.placeholder.com/${width}?text=PLACEHOLDER`
+      e.currentTarget.src = placeholder
     }
   }
 
