@@ -51,7 +51,6 @@
 
   [data-fp-list~="inline"] {
     --list-dsp: flex;
-    --list-s: none;
     li{
       padding-inline: var(--list-px, 1rem);
     }

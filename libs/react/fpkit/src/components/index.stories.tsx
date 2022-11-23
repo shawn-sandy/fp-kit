@@ -11,7 +11,7 @@ import { expect } from '@storybook/jest'
 
 import FP from './fp'
 export default {
-  title: 'FPKIT Components/FP/Elements',
+  title: 'FPKIT Components/Elements',
   component: FP,
   argTypes: {
     children: { control: 'text' },
@@ -123,7 +123,6 @@ ListUnstyled.args = {
       <li>List item</li>
       <li>List item</li>
     </>
-
   ),
   styles: {
     '--listNone': 'var(--yes)'

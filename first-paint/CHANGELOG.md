@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.9](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.8...@shawnsandy/first-paint@2.17.9) (2022-11-22)
+
+### Features
+
+- Add content elements to storybook ([07fd928](https://github.com/shawn-sandy/fp-kit/commit/07fd928585609e77fa0835ec356525da695fda2a))
+
 ## [2.17.8](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.7...@shawnsandy/first-paint@2.17.8) (2022-11-20)
 
 ### Features

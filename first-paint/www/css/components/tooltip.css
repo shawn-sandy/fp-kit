@@ -1,5 +1,4 @@
 [role='tooltip'],
-[style*='--tip'],
 [data-fp-tooltip] {
   --tip-bg: black;
   --tip-cl: white;
@@ -11,7 +10,6 @@
   cursor: var(--tip-cursor);
 }
 [role='tooltip'][data-variant],
-[style*='--tip'][data-variant],
 [data-fp-tooltip][data-variant] {
   --tip-bg: var(--vbg);
   --tip-cl: var(--vcl);
@@ -21,7 +19,6 @@
   --tip-opacity: var(--vopacity);
 }
 [role='tooltip']:after,
-[style*='--tip']:after,
 [data-fp-tooltip]:after {
   font-size: var(--tip-fs, var(--fs-2));
   background: var(--tip-bg);
@@ -40,7 +37,6 @@
   transition: opacity 0.2s var(--tip-cubic), transform 0.2s var(--tip-cubic);
 }
 [role='tooltip']:hover:after,
-[style*='--tip']:hover:after,
 [data-fp-tooltip]:hover:after {
   display: block;
   opacity: var(--tip-opacity);
