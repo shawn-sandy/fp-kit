@@ -1,14 +1,16 @@
+import FP from '../fp'
 import { ComponentProps } from "src/types"
-export interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+export interface ImageProps extends ComponentProps {
   src: string
   alt: string
   width: number
   height?: number
   loading?: 'eager' | 'lazy'
+  placeholder?: string
   imgLoaded?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void
 }
 
-type ImgProps = ImageProps & ComponentProps
+// type ImgProps = ImageProps & ComponentProps
 
 export const defaultStyles = {
   maxWidth: 'var(--img-w, 100%)',
@@ -34,7 +36,7 @@ export const Img = ({
   placeholder = `https://via.placeholder.com/${width}?text=PLACEHOLDER`,
   imgLoaded,
   ...props
-}: ImgProps) => {
+}: ImageProps) => {
   const stylesObj = renderStyles ? defaultStyles : {}
 
   const handleImgError = (
@@ -50,7 +52,8 @@ export const Img = ({
   }
 
   return (
-    <img
+    <FP
+    as='img'
       src={src}
       alt={alt}
       width={width}
