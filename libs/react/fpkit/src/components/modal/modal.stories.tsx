@@ -41,11 +41,11 @@ ModalComponent.args = {
 
 ModalComponent.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
-  const buttonOpen = getByRole('button', { name: 'Open' })
+  const buttonOpen = getByRole('button', { name: "Open Modal" })
   expect(buttonOpen).toBeInTheDocument()
   await userEvent.click(buttonOpen)
   const dialog = getByRole('dialog')
-  expect(dialog).not.toBeVisible()
+  expect(dialog).toBeVisible()
   expect(dialog).toBeInTheDocument()
   const buttonClose = getByRole('button', { name: 'Close' })
   expect(buttonClose).toBeInTheDocument()
