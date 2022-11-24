@@ -4,7 +4,13 @@ import { Button } from '../buttons/button'
 import React, { MouseEventHandler } from 'react'
 
 export interface DialogProps extends ComponentProps {
+  /**
+   * Ract ref for dialog element
+   */
   modalRef: React.RefObject<HTMLDialogElement>
+  /**
+   * Handle close modal event
+   */
   closeModal?: (e: React.SyntheticEvent<HTMLDialogElement>) => void
 }
 
