@@ -12,6 +12,10 @@ export interface DialogProps extends ComponentProps {
    * Handle close modal event
    */
   closeModal?: (e: React.SyntheticEvent<HTMLDialogElement>) => void
+  /**
+   * open modal on mount
+   */
+  openOnMount?: boolean
 }
 
 const handleCloseModal = (e: React.SyntheticEvent<HTMLDialogElement>) => {
@@ -20,12 +24,13 @@ const handleCloseModal = (e: React.SyntheticEvent<HTMLDialogElement>) => {
   }
 }
 
-export const Dialog = ({ id, children, modalRef, ...props }: DialogProps) => {
+export const Dialog = ({ id, children, modalRef, openOnMount, ...props }: DialogProps) => {
   return (
     <FP
       as="dialog"
       id={id}
       ref={modalRef}
+      open={openOnMount}
       onClick={handleCloseModal}
       {...props}
     >

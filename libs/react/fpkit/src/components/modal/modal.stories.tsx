@@ -21,6 +21,12 @@ export default {
   },
   parameters: {
     badges: [BADGE.BETA],
+    docs: {
+      description: {
+        component: 'A modal component built using the dialog base component',
+      }
+    }
+
   },
 } as ComponentMeta<typeof Modal>
 

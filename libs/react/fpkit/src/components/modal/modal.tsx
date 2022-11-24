@@ -24,6 +24,10 @@ export interface ModalProps extends ComponentProps {
    * The child component/content for modal body
    */
   children: React.ReactNode
+  /**
+   * Open modal on mount when set to true
+   */
+  showOpen?: boolean
 }
 export const Modal = ({
   openChild,
@@ -31,6 +35,7 @@ export const Modal = ({
   modalHeader,
   modalFooter,
   children,
+  showOpen = false,
   ...props
 }: ModalProps) => {
   const dialogRef = React.useRef<HTMLDialogElement>(null)
@@ -46,7 +51,7 @@ export const Modal = ({
   }
   return (
     <>
-      <Dialog modalRef={dialogRef} {...props}>
+      <Dialog modalRef={dialogRef} openOnMount={showOpen} {...props}>
         <section>
           {modalHeader}
           {children}
