@@ -633,10 +633,13 @@ section:not(nav) {
 .fp-dialog {
   background-color: var(--diag-bg, var(--fp-snow));
   background-image: var(--diag-bg-img, none);
-  padding-inline: var(--diag-x, 1.5rem);
-  padding-block: var(--diag-y, 1.5rem);
   width: var(--diag-w, clamp(18.75rem, 60vw, 46.25rem));
   margin: var(--spc, auto);
+  padding: 0;
+}
+.fp-dialog > :where(div, section, header, footer) {
+  padding-inline: var(--diag-x, 1.5rem);
+  padding-block: var(--diag-y, 1.5rem);
 }
 .fp-dialog::backdrop {
   background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
