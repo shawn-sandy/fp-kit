@@ -7,7 +7,7 @@ export interface DialogProps extends ComponentProps {
   modalRef: React.RefObject<HTMLDialogElement>
 }
 
-export const Dialog = ({ id, children, modalRef, ..props }: DialogProps) => {
+export const Dialog = ({ id, children, modalRef, ...props }: DialogProps) => {
   return (
     <FP as="dialog" id={id} ref={modalRef} {...props}>
       {children}
