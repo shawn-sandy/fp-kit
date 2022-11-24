@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.21](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.20...@fpkit/react@0.2.21) (2022-11-24)
+
+### Bug Fixes
+
+- 🐛 tsc/lint fix errors ([411df9a](https://github.com/shawn-sandy/fpkit/commit/411df9a5e86739430f36ff8aa7f072d166dd6b34))
+
 ## [0.2.20](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.19...@fpkit/react@0.2.20) (2022-11-24)
 
 ### Bug Fixes
