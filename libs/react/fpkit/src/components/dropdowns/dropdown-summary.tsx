@@ -1,4 +1,4 @@
-import { defStyles } from "@fpkit/fp-button/lib/components/button"
+// import { defStyles } from "@fpkit/fp-button/lib/components/button"
 import FP from "../fp"
 
 export interface SummaryPros {

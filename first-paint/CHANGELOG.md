@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.12](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.11...@shawnsandy/first-paint@2.17.12) (2022-11-24)
+
+### Features
+
+- 🌟 add responsive width to modal component ([c087f9f](https://github.com/shawn-sandy/fp-kit/commit/c087f9f8f1220023a5d5240dea2f88f0d7c177b5))
+
+## [2.17.11](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.10...@shawnsandy/first-paint@2.17.11) (2022-11-24)
+
+### Features
+
+- 🚧 modal/dialog components ([1f7366b](https://github.com/shawn-sandy/fp-kit/commit/1f7366beca0ffddc9033b8f7719cbcdd641424ed))
+
+## [2.17.10](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.9...@shawnsandy/first-paint@2.17.10) (2022-11-23)
+
+**Note:** Version bump only for package @shawnsandy/first-paint
+
 ## [2.17.9](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.8...@shawnsandy/first-paint@2.17.9) (2022-11-22)
 
 ### Features

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 
-import FPBadge from './components/badge/fp-badge'
+import { Badge } from './components/badge/fp-badge'
 import { Box } from './index'
 
 function App() {
@@ -12,10 +12,14 @@ function App() {
       <header className="App-header">
         <p>Hello Vite + React!</p>
         <p>
-          <FPBadge elm="span" role='note'>Badge</FPBadge>
+          <Badge elm="span" role="note">
+            Badge
+          </Badge>
         </p>
-        <Box as='section'>
-          <FPBadge elm="span" role='note'>Badge</FPBadge>
+        <Box as="section">
+          <Badge elm="span" role="note">
+            Badge
+          </Badge>
         </Box>
       </header>
     </div>
