@@ -43,7 +43,7 @@ FpModal.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const buttonOpen = getByRole('button', { name: 'Open' })
   expect(buttonOpen).toBeInTheDocument()
-  userEvent.click(buttonOpen)
+  await userEvent.click(buttonOpen)
   const dialog = getByRole('dialog')
   expect(dialog).toBeInTheDocument()
   const buttonClose = getByRole('button', { name: 'Close' })
