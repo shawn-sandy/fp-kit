@@ -1,15 +1,15 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
 import { Button } from '../buttons/button'
-import React, { useEffect } from 'react'
+import React from 'react'
 
 export interface DialogProps extends ComponentProps {
   modalRef: React.RefObject<HTMLDialogElement>
 }
 
-export const Dialog = ({ id, children, modalRef }: DialogProps) => {
+export const Dialog = ({ id, children, modalRef, ..props }: DialogProps) => {
   return (
-    <FP as="dialog" id={id} ref={modalRef}>
+    <FP as="dialog" id={id} ref={modalRef} {...props}>
       {children}
     </FP>
   )
@@ -20,7 +20,7 @@ export interface ModalProps extends ComponentProps {
   closeChild: React.ReactNode
 }
 
-export const Modal = ({ openChild, closeChild, children }: ModalProps) => {
+export const Modal = ({ openChild, closeChild, children, ...props }: ModalProps) => {
   const dialogRef = React.useRef<HTMLDialogElement>(null)
   const openMod = (): void => {
     if (dialogRef.current) {
@@ -34,7 +34,7 @@ export const Modal = ({ openChild, closeChild, children }: ModalProps) => {
   }
   return (
     <>
-      <Dialog modalRef={dialogRef}>
+      <Dialog modalRef={dialogRef} {...props}>
         {children}
         <footer>
           <Button
@@ -55,3 +55,4 @@ export const Modal = ({ openChild, closeChild, children }: ModalProps) => {
 }
 
 Dialog.displayName = 'Dialog'
+Modal.displayName = 'Modal'
