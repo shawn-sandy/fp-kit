@@ -8,6 +8,7 @@ export interface ModalProps extends ComponentProps {
   closeChild?: React.ReactNode
   modalHeader?: React.ReactNode
   modalFooter?: React.ReactNode
+  children: React.ReactNode
 }
 export const Modal = ({
   openChild,
@@ -31,20 +32,22 @@ export const Modal = ({
   return (
     <>
       <Dialog modalRef={dialogRef} {...props}>
-        {modalHeader}
-        <section>{children}</section>
-        {modalFooter ?? (
-          <footer>
-            <Button
-              type="button"
-              pointerDown={() => {
-                closeModal()
-              }}
-            >
-              {closeChild || 'Close'}
-            </Button>{' '}
-          </footer>
-        )}
+        <section>
+          {modalHeader}
+          {children}
+          {modalFooter ?? (
+            <footer>
+              <Button
+                type="button"
+                pointerDown={() => {
+                  closeModal()
+                }}
+              >
+                {closeChild || 'Close'}
+              </Button>{' '}
+            </footer>
+          )}
+        </section>
       </Dialog>
       <Button type="button" pointerDown={openModal}>
         {openChild || 'Open'}
