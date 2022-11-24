@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.20](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.19...@fpkit/react@0.2.20) (2022-11-24)
+
+### Bug Fixes
+
+- 🐛 tsc/lint fix errors ([8f439ea](https://github.com/shawn-sandy/fpkit/commit/8f439eaa357726ec78000cd3b2f889faf108f5ff))
+- 🐛 tsc/lint fix errors ([bfdf0d1](https://github.com/shawn-sandy/fpkit/commit/bfdf0d1b4131bc50e214c607c883ce9171a727e9))
+
+### Features
+
+- 🚧 modal/dialog components ([1f7366b](https://github.com/shawn-sandy/fpkit/commit/1f7366beca0ffddc9033b8f7719cbcdd641424ed))
+- 🚧 stub out the modal component function ([8473097](https://github.com/shawn-sandy/fpkit/commit/84730971e9646fd24fc6af669242890a374c7ded))
+
 ## 0.2.19 (2022-11-23)
 
 ### Bug Fixes

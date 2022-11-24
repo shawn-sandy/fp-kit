@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.11](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.10...@shawnsandy/first-paint@2.17.11) (2022-11-24)
+
+### Features
+
+- 🚧 modal/dialog components ([1f7366b](https://github.com/shawn-sandy/fp-kit/commit/1f7366beca0ffddc9033b8f7719cbcdd641424ed))
+
 ## [2.17.10](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.9...@shawnsandy/first-paint@2.17.10) (2022-11-23)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
