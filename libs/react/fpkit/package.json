@@ -9,7 +9,7 @@
     "dev": "vite --open",
     "build": "tsc && vite build",
     "build:package": "tsc && vite build --mode package --config vite.package.config.ts",
-    "package": "tsup --dts",
+    "package": "tsc && tsup --dts",
     "package:watch": "tsup --watch --dts",
     "preview": "vite preview",
     "test": "vitest",

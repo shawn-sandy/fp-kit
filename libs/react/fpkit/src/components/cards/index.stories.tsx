@@ -26,7 +26,7 @@ export default {
 } as ComponentMeta<typeof Card>
 
 const Template: ComponentStory<typeof Card> = (args) => (
-  <Card {...args} data-testid="cards" classNames="test">{args.children}</Card>
+  <Card {...args} data-testid="cards">{args.children}</Card>
 )
 
 const content = () => (
