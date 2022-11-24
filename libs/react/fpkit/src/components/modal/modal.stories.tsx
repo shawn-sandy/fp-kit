@@ -7,7 +7,7 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges'
 import { within, userEvent, waitFor } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
-import { Modal } from './dialog'
+import { Modal } from './modal'
 export default {
   title: 'FPKIT Components/Modal',
   component: Modal,
