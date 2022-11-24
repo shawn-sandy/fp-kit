@@ -4,10 +4,25 @@ import { Button } from '../buttons/button'
 import { Dialog } from './dialog'
 
 export interface ModalProps extends ComponentProps {
+  /**
+   * The child component/content for open button
+   */
   openChild?: React.ReactNode
+  /**
+   * The child component/content for close button
+   */
   closeChild?: React.ReactNode
+  /**
+   * The child component/content for modal header
+   */
   modalHeader?: React.ReactNode
+  /**
+   * The child component/content for modal footer
+   */
   modalFooter?: React.ReactNode
+  /**
+   * The child component/content for modal body
+   */
   children: React.ReactNode
 }
 export const Modal = ({
@@ -50,7 +65,7 @@ export const Modal = ({
         </section>
       </Dialog>
       <Button type="button" pointerDown={openModal}>
-        {openChild || 'Open'}
+        {openChild || 'Open Modal'}
       </Button>
     </>
   )

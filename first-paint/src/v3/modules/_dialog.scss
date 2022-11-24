@@ -15,15 +15,15 @@
   // * css rules/styles
   background-color: var(--diag-bg, var(--fp-snow));
   background-image: var(--diag-bg-img, none);
-
-  // max-width: var(--diag-max-w, max(50vw, calc(740rem /16)));
-  // min-width: var(--diag-min-w,  min(calc(300rem / 16), calc(500rem /16)));
   width: var(--diag-w, clamp(calc(300rem / 16), 60vw, calc(740rem / 16)));
   margin: var(--spc, auto);
+
   padding: 0;
+  border: var(--diag-border, 1px solid var(--fp-snow));
   & > :where(div, section, header, footer) {
     padding-inline: var(--diag-x, 1.5rem);
     padding-block: var(--diag-y, 1.5rem);
+    display: var(--diag-display, block);
   }
   &::backdrop {
     background-color: var(--bk-drop-bg, rgba(0, 0, 0, 0.7));
