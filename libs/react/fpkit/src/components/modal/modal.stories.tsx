@@ -28,8 +28,8 @@ const Template: ComponentStory<typeof Modal> = (args) => (
   <Modal {...args}>{args.children}</Modal>
 )
 
-export const FpModal = Template.bind({})
-FpModal.args = {
+export const ModalComponent = Template.bind({})
+ModalComponent.args = {
   children: (
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta explicabo
@@ -39,7 +39,7 @@ FpModal.args = {
   ),
 }
 
-FpModal.play = async ({ args, canvasElement }) => {
+ModalComponent.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const buttonOpen = getByRole('button', { name: 'Open' })
   expect(buttonOpen).toBeInTheDocument()
