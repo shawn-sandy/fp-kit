@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.22](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.21...@fpkit/react@0.2.22) (2022-11-24)
+
+### Bug Fixes
+
+- 🚨 typo ..props ([3f90dc5](https://github.com/shawn-sandy/fpkit/commit/3f90dc585aba24dca60100d8383fe0e517884a34))
+
+### Features
+
+- 🌟 add support for rest props on modal/dialog ([a7b27ba](https://github.com/shawn-sandy/fpkit/commit/a7b27ba4f2ffa9851b5c9681473c2acaa7842b92))
+
 ## [0.2.21](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.20...@fpkit/react@0.2.21) (2022-11-24)
 
 ### Bug Fixes

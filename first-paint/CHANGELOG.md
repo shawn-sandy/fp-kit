@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.12](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.11...@shawnsandy/first-paint@2.17.12) (2022-11-24)
+
+### Features
+
+- 🌟 add responsive width to modal component ([c087f9f](https://github.com/shawn-sandy/fp-kit/commit/c087f9f8f1220023a5d5240dea2f88f0d7c177b5))
+
 ## [2.17.11](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.10...@shawnsandy/first-paint@2.17.11) (2022-11-24)
 
 ### Features
