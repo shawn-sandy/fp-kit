@@ -32,7 +32,17 @@ interface ButtonProps
   /**
    * Button pointer-down event (pointerOver, pointerLeave)
    */
-  onPointerDown?: (e: React.PointerEvent) => void
+  pointerDown?: (e: React.PointerEvent) => void
+
+  /**
+   * Button pointer-down event (pointerOver, pointerLeave)
+   */
+  pointerOver?: (e: React.PointerEvent) => void
+
+  /**
+   * Button pointer-down event (pointerOver, pointerLeave)
+   */
+  pointerLeave?: (e: React.PointerEvent) => void
 }
 
 export const defStyles = {
@@ -45,7 +55,7 @@ export const defStyles = {
   border: "var(--btn-border, none)",
   color: "var(--btn-color, white)",
   backgroundColor: "var(--btn-bg, royalblue)",
-  borderRadius: "var(--btn-radius, 0.1rem)"
+  borderRadius: "var(--btn-radius, 0.2rem)"
 }
 
 
@@ -53,12 +63,12 @@ export const Button = ({
   type,
   children,
   styles,
-  disabled = true,
+  disabled = false,
   classes,
-  onPointerDown,
-  onPointerOver,
-  onPointerLeave,
-  defaultStyles = false,
+  pointerDown,
+  pointerOver,
+  pointerLeave,
+  defaultStyles = true,
   ...props
 }: ButtonProps) => {
 
@@ -66,16 +76,17 @@ export const Button = ({
   const handlePointerEvents = (
     e: React.PointerEvent<HTMLButtonElement>
   ) => {
+    let eventType:String = e.type
     if (!disabled) {
       switch (e.type) {
         case 'pointerover':
-          onPointerOver?.(e)
+          pointerOver?.(e)
           break;
         case 'pointerleave':
-          onPointerLeave?.(e)
+          pointerLeave?.(e)
           break;
         default:
-          onPointerDown?.(e)
+          pointerDown?.(e)
           break;
       }
     }

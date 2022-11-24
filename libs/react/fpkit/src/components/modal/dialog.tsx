@@ -1,40 +1,57 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
 import { Button } from '../buttons/button'
+import React, { useEffect } from 'react'
 
 export interface DialogProps extends ComponentProps {
-  open: Boolean
-  header: React.ReactNode
-  footer: React.ReactNode
   modalRef: React.RefObject<HTMLDialogElement>
 }
 
-export const Dialog = ({ id, children }: DialogProps) => {
+export const Dialog = ({ id, children, modalRef }: DialogProps) => {
   return (
-    <FP as="dialog" id={id}>
+    <FP as="dialog" id={id} ref={modalRef}>
       {children}
     </FP>
   )
 }
 
-export interface childDialogProps extends ComponentProps {
-  modalRef: React.RefObject<HTMLDialogElement>
+export interface ModalProps extends ComponentProps {
+  openChild: React.ReactNode
+  closeChild: React.ReactNode
 }
 
-export const closeDialog = ({ modalRef, children }: childDialogProps) => {
+export const Modal = ({ openChild, closeChild, children }: ModalProps) => {
+  const dialogRef = React.useRef<HTMLDialogElement>(null)
+  const openMod = (): void => {
+    if (dialogRef.current) {
+      dialogRef.current.showModal()
+    }
+  }
+  const closeMod = () => {
+    if (dialogRef.current) {
+      dialogRef.current.close()
+    }
+  }
   return (
-    <Button type="button" onPointerDown={() => modalRef.current?.close()}>
-      {children}
-    </Button>
+    <>
+      <Dialog modalRef={dialogRef}>
+        {children}
+        <footer>
+          <Button
+            type="button"
+            pointerDown={() => {
+              closeMod()
+            }}
+          >
+            {closeChild || 'Close'}
+          </Button>
+        </footer>
+      </Dialog>
+      <Button type="button" pointerDown={openMod}>
+        {openChild || 'Open'}
+      </Button>
+    </>
   )
 }
 
-export const openDialog = ({ modalRef, children }: childDialogProps) => {
-  return (
-    <Button type="button" onPointerDown={() => modalRef.current?.showModal()}>
-      {children}
-    </Button>
-  )
-}
-
-export default Dialog
+Dialog.displayName = 'Dialog'
