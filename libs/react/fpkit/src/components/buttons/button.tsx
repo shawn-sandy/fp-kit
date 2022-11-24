@@ -85,8 +85,10 @@ export const Button = ({
         case 'pointerleave':
           pointerLeave?.(e)
           break;
-        default:
+        case 'pointerdown':
+          if (e.button === 0)
           pointerDown?.(e)
+        default:
           break;
       }
     }
