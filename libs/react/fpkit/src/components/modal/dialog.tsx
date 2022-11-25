@@ -17,7 +17,9 @@ export interface DialogProps extends ComponentProps {
    */
   openOnMount?: boolean
 }
-
+/**
+ * Dialog component
+ */
 export const Dialog = ({
   id,
   children,

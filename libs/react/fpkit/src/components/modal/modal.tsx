@@ -41,6 +41,9 @@ export const Modal = ({
   const dialogRef = React.useRef<HTMLDialogElement>(null)
   const openModal = (): void => {
     if (dialogRef.current) {
+      if(showOpen)
+      dialogRef.current.show()
+      else
       dialogRef.current.showModal()
     }
   }
@@ -70,9 +73,11 @@ export const Modal = ({
           )}
         </section>
       </Dialog>
+      { !showOpen && (
       <Button type="button" pointerDown={openModal}>
         {openChild || 'Open Modal'}
       </Button>
+      )}
     </>
   )
 }
