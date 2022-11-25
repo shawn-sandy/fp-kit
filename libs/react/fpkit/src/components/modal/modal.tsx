@@ -49,6 +49,7 @@ export const Modal = ({
       dialogRef.current.close()
     }
   }
+
   return (
     <>
       <Dialog modalRef={dialogRef} openOnMount={showOpen} {...props}>

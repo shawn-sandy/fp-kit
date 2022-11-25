@@ -1,11 +1,11 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
 import { Button } from '../buttons/button'
-import React, { MouseEventHandler } from 'react'
+import React, { MouseEventHandler, useEffect } from 'react'
 
 export interface DialogProps extends ComponentProps {
   /**
-   * Ract ref for dialog element
+   * React ref for dialog element
    */
   modalRef: React.RefObject<HTMLDialogElement>
   /**
@@ -18,13 +18,20 @@ export interface DialogProps extends ComponentProps {
   openOnMount?: boolean
 }
 
-const handleCloseModal = (e: React.SyntheticEvent<HTMLDialogElement>) => {
-  if (e.currentTarget === e.target) {
-    e.currentTarget.close()
-  }
-}
+export const Dialog = ({
+  id,
+  children,
+  modalRef,
+  openOnMount,
+  ...props
+}: DialogProps) => {
 
-export const Dialog = ({ id, children, modalRef, openOnMount, ...props }: DialogProps) => {
+  const handleCloseModal = (e: React.SyntheticEvent<HTMLDialogElement>) => {
+    if (e.currentTarget === e.target) {
+      e.currentTarget.close()
+    }
+  }
+
   return (
     <FP
       as="dialog"
