@@ -57,10 +57,10 @@ ModalComponent.play = async ({ args, canvasElement }) => {
   const dialog = getByRole('dialog')
   expect(dialog).toBeVisible(), expect(dialog).toBeInTheDocument()
   const buttonClose = getByRole('button', { name: 'Close' })
+  expect(buttonClose).toBeInTheDocument()
   await waitFor(() => {
-    expect(buttonClose).toBeInTheDocument(), { buttonClose, timeout: 2000 }
+    userEvent.click(buttonClose), { timeout: 2000 }
   })
-  userEvent.click(buttonClose)
   expect(dialog).not.toBeVisible()
 }
 
