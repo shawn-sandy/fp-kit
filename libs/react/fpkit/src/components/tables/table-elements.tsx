@@ -35,7 +35,7 @@ export const Td = ({ children, ...props }: ComponentProps) => (
   </FP>
 )
 
-export const Table = ({ id, dataStyle, children, ...props }: TableProps) => {
+export const Table = ({ id, dataStyle, children, ...props }: ComponentProps) => {
   return (
     <FP
       as="section"
