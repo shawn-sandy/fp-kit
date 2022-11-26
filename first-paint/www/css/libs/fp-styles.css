@@ -375,14 +375,13 @@ section:not(nav) {
   position: sticky;
   top: 0;
   z-index: 1;
-  border: var(--tbl-cap-bdr);
 }
 .fp-table thead tr {
   --text-align: left;
   --fw: 500;
   background-color: var(--tbl-hd-bg);
   text-align: var(--text-align);
-  border-bottom: var(--tbl-bdr);
+  border: var(--tbl-bdr);
 }
 .fp-table th,
 .fp-table td {

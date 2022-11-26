@@ -69,7 +69,6 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    border: var(--tbl-cap-bdr);
   }
 
   thead tr {
@@ -77,7 +76,7 @@
     --fw: 500;
     background-color: var(--tbl-hd-bg);
     text-align: var(--text-align);
-    border-bottom: var(--tbl-bdr);
+    border: var(--tbl-bdr);
   }
 
   th,

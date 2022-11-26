@@ -45,6 +45,7 @@
     "watch:v3": "sass --watch src/v3/index.scss:src/v3/index.css src/v3/tokens:src/v3/css/tokens/.  src/v3/modules:src/v3/css/modules/. src/v3/components:src/v3/css/components/. src/v3/styles:src/v3/css/styles/. src/v3/libs:src/v3/css/libs/. src/v3/utilities:src/v3/css/utilities/. --load-path=node_modules",
     "build:v3": "run-p build-v3 build-v3-index",
     "build-v3": "postcss ./src/v3/css/**/*.css --base src/v3/ -d ./dist/ --ext min.css --map",
+    "watch:build-v3": "postcss ./src/v3/css/**/*.css --base src/v3/ -d ./dist/ --ext min.css --map --watch",
     "build-v3-index": "postcss ./src/v3/index.css --base src/v3/ -d ./dist/ --ext min.css --map",
     "watch-components": "sass --watch src/v2/components:src/v2/css/components/. --load-path=node_modules --source-map",
     "watch-scss": "sass --style --update compressed src/components:dist/css/. src/index.scss:dist/css/index.css src/styles:src/styles/. --load-path=node_modules --color",
