@@ -7,6 +7,8 @@ export interface TableProps extends ComponentProps {
   tblCaption?: React.ReactNode
 }
 
+export type dataType = {id: number, items: string[]}[]
+
 /**
  * Render the `thead` by passing an array of names
  */
@@ -20,14 +22,16 @@ export const RenderHead = (data: []) => {
 /**
  * Render the table body `tr`, `td` with the data provided
  */
-export const RenderBody = (data: []) => {
-  const rows = data?.map((items: []) => {
-    const cells = items?.map( item => {
-      return <Td>{item}</Td>
-    })
-    return <Tr>{cells}</Tr>
+export const RenderBody = (data: {}[]) => {
+  const rec = data.map((item, index) => {
+    return (
+      <tr key={index}>
+        {/* <td>{item?.id}</td>
+        <td>{item?.items}</td> */}
+      </tr>
+    )
   })
-  return (<Tbody>{data}</Tbody>)
+  return (<Tbody>{rec}</Tbody>)
 }
 
 /**

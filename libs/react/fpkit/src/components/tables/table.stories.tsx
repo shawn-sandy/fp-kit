@@ -1,105 +1,78 @@
 import React from 'react'
-import '@shawnsandy/first-paint/dist/css/components/table.min.css'
 
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
+
 import { within, userEvent, waitFor } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
-import { Table, Caption, Thead, Tbody, Td, Tr } from './table-elements'
+import { RenderTable, RenderHead, RenderBody } from './table'
 export default {
-  title: 'FPKIT Components/Table/Elements',
-  component: Table,
-  subcomponents: { Caption, Thead, Tbody, Tr, Td },
+  title: 'Elements/Table',
+  component: RenderTable,
+  subcomponent: { RenderHead, RenderBody },
   argTypes: {
     children: { control: 'text' },
+    // type: {
+    //   control: "select",
+    //   options: ["Table", "submit", "reset"]
+    // },
+    // onPointerDown: { action: 'down' }
   },
   parameters: {
     badges: [BADGE.BETA],
     docs: {
       description: {
-        component: 'A collection of elements for creating a responsive table components',
+        component: 'Component description',
       },
     },
   },
-} as ComponentMeta<typeof Table>
+} as ComponentMeta<typeof RenderTable>
 
-const displayTable = () => (
-  <>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Points</th>
-        <th>Name</th>
-        <th>Points</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Dom</td>
-        <td>6000</td>
-        <td>Dom</td>
-        <td>6000</td>
-      </tr>
-      <tr>
-        <td>Melissa</td>
-        <td>5150</td>
-        <td>Melissa</td>
-        <td>5150</td>
-      </tr>
-      <tr>
-        <td>Melissa</td>
-        <td>5150</td>
-        <td>Melissa</td>
-        <td>5150</td>
-      </tr>
-      <tr>
-        <td>Melissa</td>
-        <td>5150</td>
-        <td>Melissa</td>
-        <td>5150</td>
-      </tr>
-      <tr>
-        <td>Dom</td>
-        <td>6000</td>
-        <td>Dom</td>
-        <td>6000</td>
-      </tr>
-      <tr>
-        <td>Dom</td>
-        <td>6000</td>
-        <td>Dom</td>
-        <td>6000</td>
-      </tr>
-      <tr>
-        <td>Dom</td>
-        <td>6000</td>
-        <td>Dom</td>
-        <td>6000</td>
-      </tr>
-    </tbody>
-  </>
+const tbodyData = [
+  {
+    id: "1",
+    items: ["John", "john@email.com", "01/01/2021"]
+  },
+  {
+    id: "2",
+    items: ["Sally", "sally@email.com", "12/24/2020"]
+  },
+  {
+    id: "3",
+    items: ["Maria", "maria@email.com", "12/01/2020"]
+  },
+  ]
+
+const TB = () => (
+  <RenderBody data={tbodyData} />
 )
 
-const Template: ComponentStory<typeof Table> = (args) => (
-  <Table {...args}>{args.children}</Table>
-)
+const Template: ComponentStory<typeof RenderTable> = (args) => (
+  <RenderTable {...args}>
 
-export const TableElement = Template.bind({})
-TableElement.args = {
-  children: displayTable(),
+  </RenderTable>
+)
+/**
+ *
+ */
+export const TableComponent = Template.bind({})
+TableComponent.args = {
+  tblCaption: 'Table Caption',
+  tblHead: ['Name', 'Email', 'Date'],
+  tblBody: TB(),
 }
 
-TableElement.play = async ({ args, canvasElement }) => {
+TableComponent.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
-  const Table = getByRole('table')
-  expect(Table).toBeInTheDocument()
+  const tbl = getByRole('table')
+  expect(tbl).toBeInTheDocument()
 }
 
-TableElement.parameters = {
+TableComponent.parameters = {
   docs: {
     description: {
-      story: 'The `table` element is a wrapper that creates a responsive `<section><table>{children}</table></section>`',
+      story: 'Some story **markdown**',
     },
   },
 }
