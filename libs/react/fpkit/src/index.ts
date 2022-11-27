@@ -6,7 +6,7 @@ export { Img } from './components/images/img'
 export { Dialog } from './components/modal/dialog'
 export { Modal } from './components/modal/modal'
 export { Table, Caption, Thead, Tbody, Td, Tr } from "./components/tables/table-elements"
-export { TBL } from './components/tables/table'
+export { RenderTable as TBL } from './components/tables/table'
 
 export { default as FP } from './components/fp'
 export { default as Kit } from './components/fp'
