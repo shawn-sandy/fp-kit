@@ -38,6 +38,11 @@ export default {
   },
   parameters: {
     badges: [BADGE.BETA],
+    docs: {
+      description: {
+        component: "A headless button component"
+      }
+    }
   }
 } as ComponentMeta<typeof Button>
 
@@ -46,8 +51,8 @@ const Template: ComponentStory<typeof Button> = (args) => (
   <Button {...args}>{args.children}</Button>
 )
 let clicked: boolean = false
-export const DefaultButton = Template.bind({})
-DefaultButton.args = {
+export const ButtonComponent = Template.bind({})
+ButtonComponent.args = {
   children: "Default Button",
   type: "button",
   onPointerDown: () => {
@@ -55,7 +60,7 @@ DefaultButton.args = {
   }
 }
 
-DefaultButton.play = async ({ args, canvasElement }) => {
+ButtonComponent.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const button = getByRole("button")
   clicked = false

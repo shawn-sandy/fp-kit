@@ -4,11 +4,30 @@ import { Button } from '../buttons/button'
 import { Dialog } from './dialog'
 
 export interface ModalProps extends ComponentProps {
+  /**
+   * The child component/content for open button
+   */
   openChild?: React.ReactNode
+  /**
+   * The child component/content for close button
+   */
   closeChild?: React.ReactNode
+  /**
+   * The child component/content for modal header
+   */
   modalHeader?: React.ReactNode
+  /**
+   * The child component/content for modal footer
+   */
   modalFooter?: React.ReactNode
+  /**
+   * The child component/content for modal body
+   */
   children: React.ReactNode
+  /**
+   * Open modal on mount when set to true
+   */
+  showOpen?: boolean
 }
 export const Modal = ({
   openChild,
@@ -16,11 +35,15 @@ export const Modal = ({
   modalHeader,
   modalFooter,
   children,
+  showOpen = false,
   ...props
 }: ModalProps) => {
   const dialogRef = React.useRef<HTMLDialogElement>(null)
   const openModal = (): void => {
     if (dialogRef.current) {
+      if(showOpen)
+      dialogRef.current.show()
+      else
       dialogRef.current.showModal()
     }
   }
@@ -29,9 +52,10 @@ export const Modal = ({
       dialogRef.current.close()
     }
   }
+
   return (
     <>
-      <Dialog modalRef={dialogRef} {...props}>
+      <Dialog modalRef={dialogRef} openOnMount={showOpen} {...props}>
         <section>
           {modalHeader}
           {children}
@@ -49,9 +73,11 @@ export const Modal = ({
           )}
         </section>
       </Dialog>
+      { !showOpen && (
       <Button type="button" pointerDown={openModal}>
-        {openChild || 'Open'}
+        {openChild || 'Open Modal'}
       </Button>
+      )}
     </>
   )
 }

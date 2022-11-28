@@ -19,7 +19,7 @@
   --tbl-hd-bg: whitesmoke;
   --tbl-cap-fs: var(--fs);
   --tbl-cap-pd: 1rem;
-  --tbl-cap-rds: .5rem;
+  --tbl-cap-rds: 0.5rem;
   --tbl-cap-bdr: solid thin lightgray;
   /*  css custom properties */
   --spc: 0;
@@ -38,7 +38,7 @@
   --tbl-hd-bg: whitesmoke;
   --tbl-cap-fs: var(--fs);
   --tbl-cap-pd: 1rem;
-  --tbl-cap-rds: .5rem;
+  --tbl-cap-rds: 0.5rem;
   --tbl-cap-bdr: solid thin lightgray;
   display: table;
   font-size: var(--tbl-fs, 0.9em);
@@ -60,7 +60,7 @@
 }
 .fp-table caption {
   --fs: var(--fs-4);
-  --align: center;
+  --align: left;
   background-color: var(--tbl-cap-bg);
   padding: var(--tbl-cap-pd);
 }
@@ -68,14 +68,13 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  border: var(--tbl-cap-bdr);
 }
 .fp-table thead tr {
   --text-align: left;
   --fw: 500;
   background-color: var(--tbl-hd-bg);
   text-align: var(--text-align);
-  border-bottom: var(--tbl-bdr);
+  border: var(--tbl-bdr);
 }
 .fp-table th,
 .fp-table td {

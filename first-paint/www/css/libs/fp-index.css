@@ -714,7 +714,7 @@ table[data-variant] {
 }
 table caption {
   --fs: var(--fs-4);
-  --align: center;
+  --align: left;
   background-color: var(--tbl-cap-bg);
   padding: var(--tbl-cap-pd);
 }
@@ -722,14 +722,13 @@ table thead {
   position: sticky;
   top: 0;
   z-index: 1;
-  border: var(--tbl-cap-bdr);
 }
 table thead tr {
   --text-align: left;
   --fw: 500;
   background-color: var(--tbl-hd-bg);
   text-align: var(--text-align);
-  border-bottom: var(--tbl-bdr);
+  border: var(--tbl-bdr);
 }
 table th,
 table td {
@@ -1281,12 +1280,14 @@ dialog,
   width: var(--diag-w, clamp(18.75rem, 60vw, 46.25rem));
   margin: var(--spc, auto);
   padding: 0;
+  border: var(--diag-border, 1px solid var(--fp-snow));
 }
 dialog > :where(div, section, header, footer),
 [role='dialog'] > :where(div, section, header, footer),
 [data-fp-dialog] > :where(div, section, header, footer) {
   padding-inline: var(--diag-x, 1.5rem);
   padding-block: var(--diag-y, 1.5rem);
+  display: var(--diag-display, block);
 }
 dialog::backdrop,
 [role='dialog']::backdrop,

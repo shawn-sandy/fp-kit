@@ -147,6 +147,7 @@
     "regenerator-runtime": "0.13.9"
   },
   "lint-staged": {
+    "**/.*.{ts,jsx,tsx}": "tsc --noEmit",
     "**/.*.{js,ts,jsx,tsx}": "eslint --fix",
     "**/.*.{js,jsx,ts,tsx,md,html,scss,json,md}": "prettier --write",
     "*.js": "eslint --cache --fix",

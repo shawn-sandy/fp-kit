@@ -5,7 +5,6 @@ interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The type of the button.
-   * @default none
    */
   type: "button" | "submit" | "reset"
 
