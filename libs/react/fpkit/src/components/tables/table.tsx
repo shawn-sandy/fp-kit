@@ -16,7 +16,11 @@ export const RenderHead = (data: []) => {
   const head = data.map((item, index) => {
     return <th key={index}>{item}</th>
   })
-  return
+  return (
+    <tr>
+      {head}
+    </tr>
+  )
 }
 
 /**

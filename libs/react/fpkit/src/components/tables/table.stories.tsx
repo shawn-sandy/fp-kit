@@ -8,7 +8,7 @@ import { expect } from '@storybook/jest'
 
 import { RenderTable, RenderHead, RenderBody } from './table'
 export default {
-  title: 'Elements/Table',
+  title: 'FPKIT Components/Table/TableComponent',
   component: RenderTable,
   subcomponent: { RenderHead, RenderBody },
   argTypes: {
@@ -31,36 +31,58 @@ export default {
 
 const tbodyData = [
   {
-    id: "1",
-    items: ["John", "john@email.com", "01/01/2021"]
+    id: '1',
+    items: ['John', 'john@email.com', '01/01/2021'],
   },
   {
-    id: "2",
-    items: ["Sally", "sally@email.com", "12/24/2020"]
+    id: '2',
+    items: ['Sally', 'sally@email.com', '12/24/2020'],
   },
   {
-    id: "3",
-    items: ["Maria", "maria@email.com", "12/01/2020"]
+    id: '3',
+    items: ['Maria', 'maria@email.com', '12/01/2020'],
   },
-  ]
-
-const TB = () => (
-  <RenderBody data={tbodyData} />
-)
+]
 
 const Template: ComponentStory<typeof RenderTable> = (args) => (
-  <RenderTable {...args}>
-
-  </RenderTable>
+  <RenderTable {...args}></RenderTable>
 )
 /**
  *
  */
 export const TableComponent = Template.bind({})
 TableComponent.args = {
-  tblCaption: 'Table Caption',
-  tblHead: ['Name', 'Email', 'Date'],
-  tblBody: TB(),
+  tblCaption: 'A Simple Table Example',
+  tblHead: (
+    <>
+      <th>Name</th>
+      <th>Points</th>
+      <th>Name</th>
+      <th>Points</th>
+    </>
+  ),
+  tblBody: (
+    <>
+      <tr>
+        <td>Dom</td>
+        <td>6000</td>
+        <td>Dom</td>
+        <td>6000</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+      <tr>
+        <td>Melissa</td>
+        <td>5150</td>
+        <td>Melissa</td>
+        <td>5150</td>
+      </tr>
+    </>
+  ),
 }
 
 TableComponent.play = async ({ args, canvasElement }) => {

@@ -367,7 +367,7 @@ section:not(nav) {
 }
 .fp-table caption {
   --fs: var(--fs-4);
-  --align: center;
+  --align: left;
   background-color: var(--tbl-cap-bg);
   padding: var(--tbl-cap-pd);
 }
