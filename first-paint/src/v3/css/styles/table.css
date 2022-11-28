@@ -95,4 +95,12 @@
   border-bottom: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
 }
 
+[data-style~='table-section'] {
+  min-width: var(--tbls-mw, 80vw);
+  height: var(--tbls-h, 50vh);
+  overflow: var(--tbls-overflow, auto);
+  margin: var(--tbls-m, 1rem);
+  padding: var(--tbls-p, 0px);
+}
+
 /*# sourceMappingURL=table.css.map */

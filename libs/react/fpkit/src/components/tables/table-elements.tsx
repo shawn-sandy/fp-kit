@@ -41,13 +41,6 @@ export const Table = ({ id, dataStyle, children, ...props }: ComponentProps) => 
       as="section"
       id={id}
       {...props}
-      styles={{
-        minWidth: '80vw',
-        height: '50vh',
-        overflow: 'auto',
-        margin: '1rem',
-        padding: '0',
-      }}
       data-style="table-section"
     >
       <table>{children}</table>
