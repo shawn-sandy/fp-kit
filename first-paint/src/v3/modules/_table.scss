@@ -107,12 +107,12 @@
 }
 
 @mixin styles {
-  [data-style~="table-section"] {
-    min-width: var(--tbls-mw, 80vw);
-    height: var(--tbls-h, 50vh);
-    overflow: var(--tbls-overflow, auto);
-    margin: var(--tbls-m, 1rem);
-    padding: var(--tbls-p, 0px);
+  [data-style~="table-wrapper"] {
+    min-width: var(--tbl-wrap-mw, 90vw);
+    height: var(--tbl-wrap-h, 50vh);
+    overflow: var(--tbl-wrap-overflow, auto);
+    margin: var(--tbl-wrap-m, 1rem);
+    padding: var(--tbl-wrap-p, 0px);
   }
   @content;
 }

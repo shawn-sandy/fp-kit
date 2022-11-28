@@ -41,7 +41,7 @@ export const Table = ({ id, dataStyle, children, ...props }: ComponentProps) => 
       as="section"
       id={id}
       {...props}
-      data-style="table-section"
+      data-style="table-wrapper"
     >
       <table>{children}</table>
     </FP>
