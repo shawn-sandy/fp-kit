@@ -30,6 +30,19 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
    * Input is required or not
    */
   required?: boolean
+  /**
+   * Input id attribute
+   */
+  id: string
+  /**
+   * Set the element as disabled
+   */
+  disabled?: boolean
+  /**
+   * ref to the input element
+   */
+  inputRef?: React.RefObject<HTMLInputElement>
+
 }
 
 export const defaultStyles = {}
@@ -42,18 +55,20 @@ export const Input = ({
   id,
   inputChange,
   inputBlur,
+  disabled,
   required,
+  inputRef,
   ...props
 }: InputProps) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (inputChange) {
+    if (inputChange && !disabled) {
       inputChange?.(e)
     }
   }
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    if(inputBlur) {
+    if(inputBlur && !disabled) {
       inputBlur?.(e)
     }
   }
@@ -67,7 +82,12 @@ export const Input = ({
       styles={{ ...defaultStyles }}
       onChange={handleChange}
       onBlur={handleBlur}
+      value={value}
+      name={name}
+      ref={inputRef}
+      aria-disables={disabled}
       {...props}
+
     />
   )
 }
