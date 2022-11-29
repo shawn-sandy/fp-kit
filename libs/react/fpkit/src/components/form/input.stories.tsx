@@ -30,7 +30,9 @@ export default {
 } as ComponentMeta<typeof Input>
 
 const Template: ComponentStory<typeof Input> = (args) => (
-  <Input {...args} />
+  <section style={{ minWidth: '80vw'}}>
+    <Input {...args} />
+  </section>
 )
 /**
  *
@@ -90,6 +92,26 @@ EmailInput.parameters = {
   docs: {
     description: {
       story: 'Create a email input',
+    },
+  }
+}
+
+export const SearchInput = Template.bind({})
+SearchInput.args = {
+  type: 'search',
+  placeholder: 'Search the site',
+}
+
+SearchInput.play = async ({ args, canvasElement }) => {
+  const { getByRole } = within(canvasElement)
+  const ComponentName = getByRole('input')
+  expect(ComponentName).toBeInTheDocument()
+}
+
+SearchInput.parameters = {
+  docs: {
+    description: {
+      story: 'Create a search input',
     },
   }
 }
