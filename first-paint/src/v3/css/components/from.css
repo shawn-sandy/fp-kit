@@ -2,13 +2,13 @@ input[type]:not([type='checkbox'], [type='radio']),
 .fp-input[id][type]:not([type='checkbox'], [type='radio']) {
   --input-appearance: none;
   background-color: var(--input-cl);
-  font-size: var(--input-fs, 0.9rem);
+  font-size: var(--input-fs, 0.95rem);
   font-weight: var(--input-fw, normal);
   border-width: var(--input-bdr-w, thin);
   border-style: var(--input-bdr-style, solid);
   border-color: var(--input-bdr-color, var(--fp-light-gray));
   padding-inline: var(--input-px, 0.6rem);
-  padding-block: var(--input-py, 0.2rem);
+  padding-block: var(--input-py, 0.4rem);
   width: var(--input-min-w, min(100%, 50rem));
   border-radius: var(--input-bdr-radius, 0.1rem);
   -webkit-appearance: var(--input-appearance);

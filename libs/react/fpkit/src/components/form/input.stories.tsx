@@ -44,7 +44,7 @@ TextInput.args = {
 
 TextInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
-  const ComponentName = getByRole('input')
+  const ComponentName = getByRole('textbox')
   expect(ComponentName).toBeInTheDocument()
 }
 
@@ -64,7 +64,7 @@ PasswordInput.args = {
 
 PasswordInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
-  const ComponentName = getByRole('input')
+  const ComponentName = getByRole('textbox')
   expect(ComponentName).toBeInTheDocument()
 }
 
@@ -84,7 +84,7 @@ EmailInput.args = {
 
 EmailInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
-  const ComponentName = getByRole('input')
+  const ComponentName = getByRole('textbox')
   expect(ComponentName).toBeInTheDocument()
 }
 
@@ -104,7 +104,7 @@ SearchInput.args = {
 
 SearchInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
-  const ComponentName = getByRole('input')
+  const ComponentName = getByRole('textbox')
   expect(ComponentName).toBeInTheDocument()
 }
 
