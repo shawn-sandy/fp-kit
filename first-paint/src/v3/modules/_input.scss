@@ -15,7 +15,7 @@
 @mixin rules {
 
   background-color: var(--input-cl);
-  font-size: var(--input-fs, .95rem);
+  font-size: var(--input-fs, 1rem);
   font-weight: var(--input-fw, normal);
   border-width: var(--input-bdr-w, thin);
   border-style: var(--input-bdr-style, solid);
