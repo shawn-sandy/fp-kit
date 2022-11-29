@@ -1,24 +1,19 @@
-import React from "react"
+import React from 'react'
 
-import {
-  ComponentStory,
-  ComponentMeta
-} from "@storybook/react"
-import { BADGE } from "@geometricpanda/storybook-addon-badges"
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
-import {
-  within,
-  userEvent,
-  waitFor
-} from "@storybook/testing-library"
-import { expect } from "@storybook/jest"
+import { within, userEvent, waitFor } from '@storybook/testing-library'
+import { expect } from '@storybook/jest'
 
-import {Field} from "./fileds"
+import { Field } from './fields'
+import { Input } from './inputs'
 export default {
-  title: "FP.React Components/Form/Fields",
+  title: 'FP.React Components/Form/Fields',
   component: Field,
+  subcomponent: { Input },
   argTypes: {
-    children: { control: "text" },
+    children: { control: 'text' },
     // type: {
     //   control: "select",
     //   options: ["Field", "submit", "reset"]
@@ -29,10 +24,10 @@ export default {
     badges: [BADGE.BETA],
     docs: {
       description: {
-        component: "Wrapper for form fields",
+        component: 'Wrapper for form fields',
       },
-    }
-  }
+    },
+  },
 } as ComponentMeta<typeof Field>
 
 const Template: ComponentStory<typeof Field> = (args) => (
@@ -43,13 +38,14 @@ const Template: ComponentStory<typeof Field> = (args) => (
  */
 export const FieldWrapper = Template.bind({})
 FieldWrapper.args = {
-  labelFor: "name",
-  children: "Default Field",
+  labelFor: 'name',
+  label: 'Field Wrapper',
+  children: <Input type="text" id="name" placeholder="Placeholder" />,
 }
 
 FieldWrapper.play = async ({ args, canvasElement }) => {
   const { getByLabelText } = within(canvasElement)
-  const Field = getByLabelText("args.labelFor")
+  const Field = getByLabelText(args.label)
   expect(Field).toBeInTheDocument()
 }
 

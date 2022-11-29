@@ -29,7 +29,7 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
   /**
    * Function prop to handle input keydown events
    */
-  inputDown: (e: React.KeyboardEvent<HTMLInputElement>) => void
+  inputDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
   /**
    * Input is required or not
    */
