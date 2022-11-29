@@ -9,7 +9,7 @@ import { expect } from '@storybook/jest'
 
 import { Modal } from './modal'
 export default {
-  title: 'FPKIT Components/Modal',
+  title: 'FP.React Components/Modal',
   component: Modal,
   argTypes: {
     children: { control: 'text' },

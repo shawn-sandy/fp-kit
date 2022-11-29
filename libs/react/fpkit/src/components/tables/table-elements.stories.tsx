@@ -8,7 +8,7 @@ import { expect } from '@storybook/jest'
 
 import { Table, Caption, Thead, Tbody, Td, Tr } from './table-elements'
 export default {
-  title: 'FPKIT Components/Table/Elements',
+  title: 'FP.React Components/Table/Elements',
   component: Table,
   subcomponents: { Caption, Thead, Tbody, Tr, Td },
   argTypes: {

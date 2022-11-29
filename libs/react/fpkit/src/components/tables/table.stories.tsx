@@ -8,7 +8,7 @@ import { expect } from '@storybook/jest'
 
 import { RenderTable, RenderHead, RenderBody } from './table'
 export default {
-  title: 'FPKIT Components/Table/TableComponent',
+  title: 'FP.React Components/Table',
   component: RenderTable,
   subcomponent: { RenderHead, RenderBody },
   argTypes: {
@@ -50,9 +50,9 @@ const Template: ComponentStory<typeof RenderTable> = (args) => (
 /**
  *
  */
-export const TableComponent = Template.bind({})
-TableComponent.args = {
-  tblCaption: 'A Simple Table Example',
+export const StaticTable = Template.bind({})
+StaticTable.args = {
+  tblCaption: 'Static Table Demo',
   tblHead: (
     <>
       <th>Name</th>
@@ -85,13 +85,13 @@ TableComponent.args = {
   ),
 }
 
-TableComponent.play = async ({ args, canvasElement }) => {
+StaticTable.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const tbl = getByRole('table')
   expect(tbl).toBeInTheDocument()
 }
 
-TableComponent.parameters = {
+StaticTable.parameters = {
   docs: {
     description: {
       story: 'Some story **markdown**',

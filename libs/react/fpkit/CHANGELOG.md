@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.23](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.22...@fpkit/react@0.2.23) (2022-11-29)
+
+### Bug Fixes
+
+- 🧰 change table proptype ([0e13bab](https://github.com/shawn-sandy/fpkit/commit/0e13babce7a3ffdb66133422e4ddaeeb85b642d2))
+
+### Features
+
+- ✨ add input component (alpha) ([f8f1424](https://github.com/shawn-sandy/fpkit/commit/f8f14247d34a8008c72200dcb66c6d112301f55c))
+- ✨ extract modal to own component ([9edebc8](https://github.com/shawn-sandy/fpkit/commit/9edebc8aa1bbbf3fc0385a7716f250dfb6a0c653))
+- 🌟 update table story title/caption ([c153550](https://github.com/shawn-sandy/fpkit/commit/c153550ec9d24014458685c575d56a9cf39af69d))
+- 🏗️ first prototype of input elements ([205b91b](https://github.com/shawn-sandy/fpkit/commit/205b91bcd1dd6583d0806c87cdbefae0f40e48f1))
+- 👷‍♂️add descriptions to props ([5720224](https://github.com/shawn-sandy/fpkit/commit/57202241e327f472cb23d8ea9ce213cdf7c5c62a))
+- 👷‍♂️wrap modal content in section ([3b6b2eb](https://github.com/shawn-sandy/fpkit/commit/3b6b2eb33a7ad09f0a23ee761e5da8edb72c5375))
+- 💃 add data-style for table-wrapper ([e7d055e](https://github.com/shawn-sandy/fpkit/commit/e7d055e98745b943c73326eb096b016eae10cb77))
+- 🧑‍🏫 demo set up for nextra ([17a54b6](https://github.com/shawn-sandy/fpkit/commit/17a54b63b0bde6e3e031a5238a76dd2aec477275))
+- 🚆 beta input component ([8667d71](https://github.com/shawn-sandy/fpkit/commit/8667d71fb5cf99b47c342c96371f9889e966a0df))
+- 🚧 add components for rendering table ([7b7ba64](https://github.com/shawn-sandy/fpkit/commit/7b7ba647df592d288b8e8d2a97cbe0e2c0c95065))
+- 🚧 add description to modal props ([6a8f794](https://github.com/shawn-sandy/fpkit/commit/6a8f7947833d3484bc9d0c06c18768df9168634d))
+- 🚧 add dialog example to the modal component ([1ee966a](https://github.com/shawn-sandy/fpkit/commit/1ee966ae73b53d311b1c9b0e6c974167d60456b6))
+- 🚧 add input component w/story ([f9e4d79](https://github.com/shawn-sandy/fpkit/commit/f9e4d79a03b08983054915da9a14fae5bef2b46f))
+- 🚧 add inputChange, inputBlur events props ([4ae193f](https://github.com/shawn-sandy/fpkit/commit/4ae193fb725d80c0f9d2431af545c6dd94399f00))
+- 🚧 add react child props header/footer ([8c853fd](https://github.com/shawn-sandy/fpkit/commit/8c853fdf87c24cfd88a6db5d9d72d4041c60746e))
+- 🚧 add showOnOpen prop to dialog ([4261e1a](https://github.com/shawn-sandy/fpkit/commit/4261e1ad1ac6d763e9c3dd361d32a70248dbc497))
+- 🚧 add table-elements/table component ([6b148bb](https://github.com/shawn-sandy/fpkit/commit/6b148bbcc4ec0b9ac15800d0cdcb96985e4f5bd8))
+- 🚧 rename story title sidebar arrangement ([839d6d0](https://github.com/shawn-sandy/fpkit/commit/839d6d014353a5d9938066d9135032cbfc79a5cb))
+- 🚧 set type as required ([60f1931](https://github.com/shawn-sandy/fpkit/commit/60f193169b5e72d5bd8d4db932dc54dcbbafeb26))
+- 🚧 table component ([011774e](https://github.com/shawn-sandy/fpkit/commit/011774e9218300f384e44b883a966fd37005bb54))
+- 🚧 update modal interaction test ([8a9f2eb](https://github.com/shawn-sandy/fpkit/commit/8a9f2eb5623eee7bd6dde4ad7030f001f4c14229))
+- 🚧 update the table components ([6eac088](https://github.com/shawn-sandy/fpkit/commit/6eac08849cddfb939385406ed72137c95ba9ae1a))
+- table render components ([058e7e2](https://github.com/shawn-sandy/fpkit/commit/058e7e2189c41b27f96a6bc7ea42a36caeeb5be6))
+
 ## [0.2.22](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.21...@fpkit/react@0.2.22) (2022-11-24)
 
 ### Bug Fixes

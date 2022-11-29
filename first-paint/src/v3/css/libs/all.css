@@ -1043,6 +1043,14 @@ table tbody tr:last-of-type {
   border-bottom: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
 }
 
+[data-style~='table-wrapper'] {
+  min-width: var(--tbl-wrap-mw, 90vw);
+  height: var(--tbl-wrap-h, 50vh);
+  overflow: var(--tbl-wrap-overflow, auto);
+  margin: var(--tbl-wrap-m, 1rem);
+  padding: var(--tbl-wrap-p, 0px);
+}
+
 details,
 [data-fp-details] {
   font-size: var(--detail-fs, 1rem);
@@ -1327,30 +1335,30 @@ figcaption,
   flex: var(--fx-auto-size);
 }
 
-input[id][type]:not([type='checkbox'], [type='radio'])
-  .fp-input[id][type]:not([type='checkbox'], [type='radio']) {
+input[type]:not([type='checkbox'], [type='radio']),
+.fp-input[id][type]:not([type='checkbox'], [type='radio']) {
   --input-appearance: none;
   background-color: var(--input-cl);
-  font-size: var(--input-fs, 0.9rem);
+  font-size: var(--input-fs, 1rem);
   font-weight: var(--input-fw, normal);
   border-width: var(--input-bdr-w, thin);
   border-style: var(--input-bdr-style, solid);
   border-color: var(--input-bdr-color, var(--fp-light-gray));
   padding-inline: var(--input-px, 0.6rem);
-  padding-block: var(--input-py, 0.2rem);
+  padding-block: var(--input-py, 0.4rem);
   width: var(--input-min-w, min(100%, 50rem));
   border-radius: var(--input-bdr-radius, 0.1rem);
   -webkit-appearance: var(--input-appearance);
   -moz-appearance: var(--input-appearance);
   appearance: var(--input-appearance);
 }
-input[id][type]:not([type='checkbox'], [type='radio'])
-  .fp-input[id][type]:not([type='checkbox'], [type='radio'])::placeholder {
+input[type]:not([type='checkbox'], [type='radio'])::placeholder,
+.fp-input[id][type]:not([type='checkbox'], [type='radio'])::placeholder {
   font-style: italic;
   --input-fs: 0.5rem;
 }
-input[id][type]:not([type='checkbox'], [type='radio'])
-  .fp-input[id][type]:not([type='checkbox'], [type='radio'])[data-variant] {
+input[type]:not([type='checkbox'], [type='radio'])[data-variant],
+.fp-input[id][type]:not([type='checkbox'], [type='radio'])[data-variant] {
   --vfs: 0.8rem;
   --vcl: var(--fp-light-gray);
   --input-fs: var(--vfs);
