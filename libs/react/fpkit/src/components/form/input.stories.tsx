@@ -35,21 +35,61 @@ const Template: ComponentStory<typeof Input> = (args) => (
 /**
  *
  */
-export const DefaultComponentName = Template.bind({})
-DefaultComponentName.args = {
-  placeholder: 'Default ComponentName',
+export const TextInput = Template.bind({})
+TextInput.args = {
+  placeholder: 'Placeholder',
 }
 
-DefaultComponentName.play = async ({ args, canvasElement }) => {
+TextInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const ComponentName = getByRole('input')
   expect(ComponentName).toBeInTheDocument()
 }
 
-DefaultComponentName.parameters = {
+TextInput.parameters = {
   docs: {
     description: {
-      story: 'Some story **markdown**',
+      story: 'Create a text input',
     },
   },
+}
+
+export const PasswordInput = Template.bind({})
+PasswordInput.args = {
+  type: 'password',
+  placeholder: 'Password',
+}
+
+PasswordInput.play = async ({ args, canvasElement }) => {
+  const { getByRole } = within(canvasElement)
+  const ComponentName = getByRole('input')
+  expect(ComponentName).toBeInTheDocument()
+}
+
+PasswordInput.parameters = {
+  docs: {
+    description: {
+      story: 'Create a password input',
+    },
+  }
+}
+
+export const EmailInput = Template.bind({})
+EmailInput.args = {
+  type: 'email',
+  placeholder: 'name@somewhere.com',
+}
+
+EmailInput.play = async ({ args, canvasElement }) => {
+  const { getByRole } = within(canvasElement)
+  const ComponentName = getByRole('input')
+  expect(ComponentName).toBeInTheDocument()
+}
+
+EmailInput.parameters = {
+  docs: {
+    description: {
+      story: 'Create a email input',
+    },
+  }
 }
