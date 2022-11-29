@@ -49,7 +49,7 @@
 }
 
 @mixin module {
-  input[id][type]:not([type="checkbox"], [type="radio"])
+  input[type]:not([type="checkbox"], [type="radio"]),
   .fp-input[id][type]:not([type="checkbox"], [type="radio"])
    {
     @include props;
