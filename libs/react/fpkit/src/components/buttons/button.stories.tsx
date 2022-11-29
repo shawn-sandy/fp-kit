@@ -19,7 +19,7 @@ import { expect } from "@storybook/jest"
 import {Button,  defStyles } from "./button"
 
 export default {
-  title: "FPKIT Components/Buttons",
+  title: "FP.React Components/Buttons",
   component: Button,
   argTypes: {
     children: { control: "text" },

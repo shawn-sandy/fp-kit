@@ -11,7 +11,7 @@ import { expect } from '@storybook/jest'
 
 import FP from './fp'
 export default {
-  title: 'FPKIT Components/Elements',
+  title: 'FP.React Components/Elements',
   component: FP,
   argTypes: {
     children: { control: 'text' },

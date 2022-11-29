@@ -10,7 +10,7 @@ import { expect } from '@storybook/jest'
 import { Breadcrumb } from './breadcrumb'
 import { BCItem } from './bc-item'
 export default {
-  title: 'FPKIT Components/Breadcrumb',
+  title: 'FP.React Components/Breadcrumb',
   component: Breadcrumb,
   subcomponents: { BCItem },
   argTypes: {},

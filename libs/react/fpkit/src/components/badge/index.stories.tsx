@@ -16,7 +16,7 @@ import { expect } from "@storybook/jest"
 
 import {Badge} from "./fp-badge"
 export default {
-  title: "FPKIT Components/Badge",
+  title: "FP.React Components/Badge",
   component: Badge,
   argTypes: {
     children: { control: "text" },

@@ -8,7 +8,7 @@ import { expect } from '@storybook/jest'
 
 import { RenderTable, RenderHead, RenderBody } from './table'
 export default {
-  title: 'FPKIT Components/Table/Components',
+  title: 'FP.React Components/Table',
   component: RenderTable,
   subcomponent: { RenderHead, RenderBody },
   argTypes: {

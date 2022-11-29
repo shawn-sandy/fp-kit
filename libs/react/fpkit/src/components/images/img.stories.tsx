@@ -15,7 +15,7 @@ import { expect } from "@storybook/jest"
 
 import {Img} from "./img"
 export default {
-  title: "FPKIT Components/Image",
+  title: "FP.React Components/Image",
   component: Img,
   argTypes: {
     children: { control: "text" },
