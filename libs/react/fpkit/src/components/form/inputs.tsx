@@ -5,7 +5,7 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
   /**
    * The type of the input.
    */
-  type: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url' | 'search'
+  type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url' | 'search'
   /**
    * The input name
    */
@@ -27,6 +27,10 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
    */
   inputBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
   /**
+   * Function prop to handle input keydown events
+   */
+  inputDown: (e: React.KeyboardEvent<HTMLInputElement>) => void
+  /**
    * Input is required or not
    */
   required?: boolean
@@ -39,6 +43,10 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
    */
   disabled?: boolean
   /**
+   * Set the element as readonly
+   */
+  readonly?: boolean
+  /**
    * ref to the input element
    */
   inputRef?: React.RefObject<HTMLInputElement>
@@ -48,16 +56,18 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
 export const defaultStyles = {}
 
 export const Input = ({
-  type,
+  type = 'text',
   name,
   value,
   placeholder,
   id,
-  inputChange,
-  inputBlur,
   disabled,
+  readonly,
   required,
   inputRef,
+  inputChange,
+  inputBlur,
+  inputDown,
   ...props
 }: InputProps) => {
 
@@ -73,6 +83,13 @@ export const Input = ({
     }
   }
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if(inputDown && !disabled) {
+      e.preventDefault()
+      inputDown?.(e)
+    }
+  }
+
   return (
     <FP
       as="input"
@@ -82,12 +99,15 @@ export const Input = ({
       styles={{ ...defaultStyles }}
       onChange={handleChange}
       onBlur={handleBlur}
+      onKeyDown={handleKeyDown}
       value={value}
       name={name}
       ref={inputRef}
-      aria-disables={disabled}
+      aria-disabled={disabled}
+      tab-index={disabled ? -1 : undefined}
+      aria-readonly={readonly}
+      readOnly={readonly}
       {...props}
-
     />
   )
 }

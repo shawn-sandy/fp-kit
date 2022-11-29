@@ -9,15 +9,15 @@ import { expect } from '@storybook/jest'
 
 import { Input } from './inputs'
 export default {
-  title: 'FP.React Components/FormInputs',
+  title: 'FP.React Components/Form/Inputs',
   component: Input,
   argTypes: {
     children: { control: 'text' },
     // type: {
     //   control: "select",
-    //   options: ["ComponentName", "submit", "reset"]
+    //   options: ["inputElm", "submit", "reset"]
     // },
-    // onPointerDown: { action: 'down' }
+    onChange: { action: 'down' }
   },
   parameters: {
     badges: [BADGE.BETA],
@@ -31,7 +31,7 @@ export default {
 
 const Template: ComponentStory<typeof Input> = (args) => (
   <section style={{ minWidth: '80vw'}}>
-    <Input {...args} />
+    <Input {...args} data-testid="input" />
   </section>
 )
 /**
@@ -43,9 +43,11 @@ TextInput.args = {
 }
 
 TextInput.play = async ({ args, canvasElement }) => {
-  const { getByRole } = within(canvasElement)
-  const ComponentName = getByRole('textbox')
-  expect(ComponentName).toBeInTheDocument()
+  const { getByRole, getAllByPlaceholderText } = within(canvasElement)
+  const inputElm = getByRole('textbox')
+  expect(inputElm).toBeInTheDocument()
+  expect(inputElm).toHaveAttribute('type')
+  expect(inputElm).toHaveAttribute('placeholder', args.placeholder)
 }
 
 TextInput.parameters = {
@@ -63,9 +65,10 @@ PasswordInput.args = {
 }
 
 PasswordInput.play = async ({ args, canvasElement }) => {
-  const { getByRole } = within(canvasElement)
-  // const ComponentName = getByRole('textbox')
-  // expect(ComponentName).toBeInTheDocument()
+  const { getByTestId } = within(canvasElement)
+  const inputElm = getByTestId('input')
+  expect(inputElm).toBeInTheDocument()
+  expect(inputElm).toHaveAttribute('type', 'password')
 }
 
 PasswordInput.parameters = {
@@ -84,8 +87,8 @@ EmailInput.args = {
 
 EmailInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
-  const ComponentName = getByRole('textbox')
-  expect(ComponentName).toBeInTheDocument()
+  const inputElm = getByRole('textbox')
+  expect(inputElm).toBeInTheDocument()
 }
 
 EmailInput.parameters = {
@@ -104,8 +107,8 @@ SearchInput.args = {
 
 SearchInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
-  const ComponentName = getByRole('searchbox')
-  expect(ComponentName).toBeInTheDocument()
+  const inputElm = getByRole('searchbox')
+  expect(inputElm).toBeInTheDocument()
 }
 
 SearchInput.parameters = {
@@ -114,4 +117,39 @@ SearchInput.parameters = {
       story: 'Create a search input',
     },
   }
+}
+
+export const DisabledInput = Template.bind({})
+DisabledInput.args = {
+  disabled: true,
+  placeholder: 'Disabled',
+}
+
+DisabledInput.play = async ({ args, canvasElement }) => {
+  const { getByRole } = within(canvasElement)
+  const inputElm = getByRole('textbox')
+  expect(inputElm).toBeInTheDocument()
+  expect(inputElm).toHaveAttribute('aria-disabled')
+}
+
+DisabledInput.parameters = {
+  docs: {
+    description: {
+      story: 'Create a disabled input',
+    },
+  }
+}
+
+export const ReadonlyInput = Template.bind({})
+ReadonlyInput.args = {
+  readonly: true,
+  placeholder: 'Readonly',
+}
+
+ReadonlyInput.play = async ({ args, canvasElement }) => {
+  const { getByRole } = within(canvasElement)
+  const inputElm = getByRole('textbox')
+  expect(inputElm).toBeInTheDocument()
+  expect(inputElm).toHaveAttribute('readonly')
+  expect(inputElm).toHaveAttribute('aria-readonly')
 }
