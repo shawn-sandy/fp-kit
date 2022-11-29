@@ -5,7 +5,7 @@ export interface FieldProps extends ComponentProps {
   /**
    * Defines the for attribute of the label element
    */
-  forId: string
+  labelFor: string
   /**
    * The label content
    */
@@ -15,7 +15,7 @@ export interface FieldProps extends ComponentProps {
 export const defaultStyles = {}
 
 export const Field = ({
-  forId,
+  labelFor,
   styles,
   label,
   children,
@@ -23,7 +23,7 @@ export const Field = ({
 }: FieldProps) => {
   return (
     <FP as="div" styles={{ ...defaultStyles }} data-style="fields">
-      <label htmlFor={forId}>{label}</label>
+      <label htmlFor={labelFor}>{label}</label>
       {children}
     </FP>
   )
