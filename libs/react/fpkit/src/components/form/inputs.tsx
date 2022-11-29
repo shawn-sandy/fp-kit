@@ -1,7 +1,7 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
 
-export interface InputProps extends ComponentProps {
+export interface InputProps extends Omit<ComponentProps, 'children'> {
   type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url'
   name?: string
   value?: string
@@ -18,7 +18,15 @@ export const Input = ({
   placeholder,
   ...props
 }: InputProps) => {
-  return <FP as='input' type={type} styles={{ ...defaultStyles }} />
+  return (
+    <FP
+      as="input"
+      type={type}
+      placeholder={placeholder}
+      styles={{ ...defaultStyles }}
+      {...props}
+    />
+  )
 }
 
 Input.displayName = 'Input'
