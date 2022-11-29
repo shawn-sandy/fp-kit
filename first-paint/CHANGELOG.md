@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.13](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.12...@shawnsandy/first-paint@2.17.13) (2022-11-29)
+
+### Bug Fixes
+
+- 📝 typo on input styles ([5c86ecc](https://github.com/shawn-sandy/fp-kit/commit/5c86eccebae27d660effeb3694ff585645026b8c))
+
+### Features
+
+- ♻️ remove padding on dialog/modal ([0905003](https://github.com/shawn-sandy/fp-kit/commit/090500398ced67916cdd3aeb520f2a3c154becdd))
+- ♻️ set input fs to 1rem ([e9e419a](https://github.com/shawn-sandy/fp-kit/commit/e9e419ac88dc2f4b366d442d6c2070cfa52f0ba4))
+- 💃 add data-style for table-wrapper ([e7d055e](https://github.com/shawn-sandy/fp-kit/commit/e7d055e98745b943c73326eb096b016eae10cb77))
+- 🚧 add description to modal props ([6a8f794](https://github.com/shawn-sandy/fp-kit/commit/6a8f7947833d3484bc9d0c06c18768df9168634d))
+- 🚧 add table-elements/table component ([6b148bb](https://github.com/shawn-sandy/fp-kit/commit/6b148bbcc4ec0b9ac15800d0cdcb96985e4f5bd8))
+- 🚧 table component ([011774e](https://github.com/shawn-sandy/fp-kit/commit/011774e9218300f384e44b883a966fd37005bb54))
+- 🚧 update the table components ([6eac088](https://github.com/shawn-sandy/fp-kit/commit/6eac08849cddfb939385406ed72137c95ba9ae1a))
+
 ## [2.17.12](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.11...@shawnsandy/first-paint@2.17.12) (2022-11-24)
 
 ### Features
