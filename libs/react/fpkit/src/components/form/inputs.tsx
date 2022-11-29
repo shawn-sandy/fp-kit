@@ -5,7 +5,7 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
   /**
    * The type of the input.
    */
-  type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url' | 'search'
+  type: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url' | 'search'
   /**
    * The input name
    */
@@ -48,7 +48,7 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
 export const defaultStyles = {}
 
 export const Input = ({
-  type = 'text',
+  type,
   name,
   value,
   placeholder,
