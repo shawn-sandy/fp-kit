@@ -45,7 +45,7 @@ FieldWrapper.args = {
 
 FieldWrapper.play = async ({ args, canvasElement }) => {
   const { getByLabelText } = within(canvasElement)
-  const Field = getByLabelText(args.label)
+  const Field = getByLabelText(/field label/i)
   expect(Field).toBeInTheDocument()
 }
 
