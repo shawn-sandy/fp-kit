@@ -47,13 +47,14 @@ const Template: ComponentStory<typeof Textarea> = (args) => (
  */
 export const TextareaInput = Template.bind({})
 TextareaInput.args = {
-  // children: "Default ComponentName",
+  rows: 8,
 }
 
 TextareaInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const ComponentName = getByRole("textbox")
   expect(ComponentName).toBeInTheDocument()
+  expect(ComponentName).toHaveAttribute("rows")
 }
 
 TextareaInput.parameters = {
