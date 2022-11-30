@@ -1,4 +1,3 @@
-import { Input } from './components/form/inputs';
 export { Badge } from './components/badge/fp-badge'
 export { Button } from './components/buttons/button'
 export { Card } from './components/cards/card'
