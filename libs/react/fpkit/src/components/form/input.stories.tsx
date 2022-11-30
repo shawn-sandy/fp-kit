@@ -17,7 +17,8 @@ export default {
     //   control: "select",
     //   options: ["inputElm", "submit", "reset"]
     // },
-    onChange: { action: 'down' }
+    onChange: { action: 'change' },
+    onBlur: { action: 'blur' }
   },
   parameters: {
     badges: [BADGE.BETA],
@@ -48,6 +49,7 @@ TextInput.play = async ({ args, canvasElement }) => {
   expect(inputElm).toBeInTheDocument()
   expect(inputElm).toHaveAttribute('type')
   expect(inputElm).toHaveAttribute('placeholder', args.placeholder)
+  expect(inputElm).toHaveAttribute('type','text')
 }
 
 TextInput.parameters = {
@@ -89,6 +91,7 @@ EmailInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const inputElm = getByRole('textbox')
   expect(inputElm).toBeInTheDocument()
+  expect (inputElm).toHaveAttribute('type', 'email')
 }
 
 EmailInput.parameters = {
@@ -109,6 +112,7 @@ SearchInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const inputElm = getByRole('searchbox')
   expect(inputElm).toBeInTheDocument()
+  expect(inputElm).toHaveAttribute('type', 'search')
 }
 
 SearchInput.parameters = {

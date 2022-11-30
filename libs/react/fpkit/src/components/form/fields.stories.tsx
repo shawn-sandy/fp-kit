@@ -39,7 +39,7 @@ const Template: ComponentStory<typeof Field> = (args) => (
 export const FieldWrapper = Template.bind({})
 FieldWrapper.args = {
   labelFor: 'name',
-  label: 'Field Wrapper',
+  label: 'Field Label',
   children: <Input type="text" id="name" placeholder="Placeholder" />,
 }
 
