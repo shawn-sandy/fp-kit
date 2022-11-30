@@ -44,27 +44,29 @@ export const Textarea = ({
   cols,
   id,
   required,
+  disabled,
+  readonly,
   textareaBlur,
   textareaChange,
   textareaDown,
   textareaRef,
   ...props
 }: TextareaProps) => {
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    if (textareaChange) {
+    if (textareaChange && !disabled) {
       textareaChange(e)
     }
   }
 
   const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement>) => {
-    if (textareaBlur) {
+    if (textareaBlur && !disabled) {
       textareaBlur?.(e)
     }
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (textareaDown) {
+    if (textareaDown && !disabled) {
       textareaDown?.(e)
     }
   }
@@ -80,6 +82,8 @@ export const Textarea = ({
       id={id}
       required={required}
       value={value}
+      aria-disabled={disabled}
+      readOnly={readonly}
       onChange={handleChange}
       onBlur={handleBlur}
       onKeyDown={handleKeyDown}
