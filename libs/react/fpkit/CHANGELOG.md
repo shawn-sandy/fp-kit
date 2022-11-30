@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.24](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.23...@fpkit/react@0.2.24) (2022-11-30)
+
+### Features
+
+- 🚧 add from field wrapper ([d1e7056](https://github.com/shawn-sandy/fpkit/commit/d1e70565bfcde5d392002e0649a976d99bddbc4d))
+- 🚧 add interaction to field story ([5fe4938](https://github.com/shawn-sandy/fpkit/commit/5fe4938753a1e131bd2b1edd666c7ebf72e7426a))
+- 🚧 add props, events to textarea ([2efdbae](https://github.com/shawn-sandy/fpkit/commit/2efdbae110a5c33bb3335d3dfdf227689083c30e))
+- 🚧 add readonly, disabled props ([c96a75f](https://github.com/shawn-sandy/fpkit/commit/c96a75f0e04e1ba26ee703a4b2791288eb07361f))
+- 🚧 add story for textarea component ([9dcdf3e](https://github.com/shawn-sandy/fpkit/commit/9dcdf3eb402f25c3356d558bd3de8520b82a54a4))
+- 🚧 add story interaction for textarea ([88b08f5](https://github.com/shawn-sandy/fpkit/commit/88b08f550ca34d7689b4a95c06c27c73a5e1af9c))
+- 🚧 add story interaction for textarea ([d048a31](https://github.com/shawn-sandy/fpkit/commit/d048a31ce15b32b3d0a95040aaf4f36dbff8ed7b))
+- 🚧 field element - input wrapper ([cbf87f9](https://github.com/shawn-sandy/fpkit/commit/cbf87f9f9fd5d1e0b9041f85c15b328dd47d914c))
+- 🚧 update forms fields, input components ([7b6cdf6](https://github.com/shawn-sandy/fpkit/commit/7b6cdf6774847c2e27d2dcebed0c249ce86f586d))
+
 ## [0.2.23](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.22...@fpkit/react@0.2.23) (2022-11-29)
 
 ### Bug Fixes

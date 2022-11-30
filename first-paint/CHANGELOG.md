@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.14](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.13...@shawnsandy/first-paint@2.17.14) (2022-11-30)
+
+### Features
+
+- 🚧 add story for textarea component ([9dcdf3e](https://github.com/shawn-sandy/fp-kit/commit/9dcdf3eb402f25c3356d558bd3de8520b82a54a4))
+
 ## [2.17.13](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.12...@shawnsandy/first-paint@2.17.13) (2022-11-29)
 
 ### Bug Fixes
