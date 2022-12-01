@@ -17,7 +17,7 @@ Import `css` or `sass` to use in your project.
 ```jsx
 import '@shawnsandy/first-paint/src/v3/components/select.scss'
 // or css
-import '@shawnsandy/first-paint@next/dist/css/components/select.min.css'
+import '@shawnsandy/first-paint/dist/css/components/select.min.css'
 ```
 
 - HTML

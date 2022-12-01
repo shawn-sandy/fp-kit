@@ -1,3 +1,1 @@
-import {ComponentProps} from './shared'
-
-export type { ComponentProps }
+export type { ComponentProps, SharedInputProps } from './shared'
