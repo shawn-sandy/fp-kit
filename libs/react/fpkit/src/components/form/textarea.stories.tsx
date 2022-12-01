@@ -50,17 +50,13 @@ TextareaInput.args = {
   rows: 8,
 }
 
+const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, voluptas? Nam natus fuga nostrum necessitatibus magnam vel deleniti autem! Expedita deserunt eum, quae officiis totam quo facere est minus consequatur"
+
 TextareaInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const ComponentName = getByRole("textbox")
   expect(ComponentName).toBeInTheDocument()
   expect(ComponentName).toHaveAttribute("rows")
-}
-
-TextareaInput.parameters = {
-  docs: {
-    description: {
-      story: 'Some story **markdown**',
-    },
-  },
+  userEvent.type(ComponentName, text)
+  expect(ComponentName).toHaveValue(text)
 }
