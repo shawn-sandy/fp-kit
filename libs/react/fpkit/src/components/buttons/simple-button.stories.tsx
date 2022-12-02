@@ -16,3 +16,9 @@ export default {
 }
 
 export const Default = {}
+export const Primary = {
+  args: {
+    children: "Primary Button",
+    type: "submit",
+  }
+}
