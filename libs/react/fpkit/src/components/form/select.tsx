@@ -6,6 +6,10 @@ export interface SelectProps extends SharedInputProps {
    * Select onChange event props
    */
   selectChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void
+  /**
+   * Select ref
+   */
+  selectRef?: React.RefObject<HTMLSelectElement>
 }
 
 export interface SelectOptionsProps {
@@ -23,6 +27,7 @@ export const Select = ({
   disabled,
   children,
   required,
+  selectRef,
   selectChange,
   ...props
 }: SelectProps) => {
@@ -35,6 +40,7 @@ export const Select = ({
   return (
     <FP
       as="select"
+      ref={selectRef}
       onChange={handleChange}
       required={required}
       aria-disabled={disabled ? true : undefined}
