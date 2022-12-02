@@ -38,10 +38,10 @@ export default {
 
 const options = (
   <>
-  <option value="">Apples</option>
-  <option value="">Bananas</option>
-  <option value="">Grapes</option>
-  <option value="">Oranges</option>
+  <option value="1">Apples</option>
+  <option value="2">Bananas</option>
+  <option value="3">Grapes</option>
+  <option value="4">Oranges</option>
   </>
 )
 

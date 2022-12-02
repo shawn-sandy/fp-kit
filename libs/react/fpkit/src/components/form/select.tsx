@@ -21,7 +21,6 @@ const options = ({ selectValue, selectLabel }: SelectOptionsProps) => {
 
 export const Select = ({
   disabled,
-  readonly,
   children,
   required,
   selectChange,
@@ -34,7 +33,13 @@ export const Select = ({
   }
 
   return (
-    <FP as="select" onChange={handleChange} styles={{ ...defaultStyles }}>
+    <FP
+      as="select"
+      onChange={handleChange}
+      required={required}
+      aria-disabled={disabled ? true : undefined}
+      style={{ ...defaultStyles }}
+    >
       {children || <option value="1">Option 1</option>}
     </FP>
   )
