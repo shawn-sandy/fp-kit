@@ -37,11 +37,14 @@ export const Select = ({
     }
   }
 
+
+
   return (
     <FP
       as="select"
       ref={selectRef}
       onChange={handleChange}
+      onBlur={handleChange}
       required={required}
       aria-disabled={disabled ? true : undefined}
       style={{ ...defaultStyles }}
