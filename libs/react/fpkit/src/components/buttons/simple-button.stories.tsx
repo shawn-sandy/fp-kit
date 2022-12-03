@@ -38,12 +38,13 @@ export const Primary = {
     children: "Primary Button",
     type: "submit",
   },
-  play: async ( ) => {
+  play: async ( args: any ) => {
     // const canvas = within(canvasElement)
   const button = screen.getByRole("button")
     userEvent.click(button)
     await waitFor(() => {
       expect(button).toBeInTheDocument()
+      expect(button).toHaveAccessibleName(args.children)
     })
   }
 }
