@@ -22,6 +22,7 @@ const buttonProps = {
 const meta: Meta<typeof Button> = {
   title: 'FP.React Components/Buttons',
   component: Button,
+
 }
 
 /**
@@ -35,6 +36,9 @@ export const AdvButton: Story = {
     // @ts-ignore
     children: buttonProps.children,
     type: buttonProps.type,
+    onPointerDown: { action: "down" },
+    onPointerLeave: { action: "leave" },
+    onPointerOver: { action: "over" }
   }
 }
 
@@ -44,6 +48,7 @@ export const AdvButton: Story = {
  */
 export const ButtonInteractions: Story = {
 
+  ...AdvButton,
   args: {...AdvButton.args},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
@@ -51,5 +56,6 @@ export const ButtonInteractions: Story = {
     expect(button).toBeInTheDocument()
     expect(button).toHaveAccessibleName(buttonProps.children)
     expect(button).toHaveAttribute('type', buttonProps.type)
+    await userEvent.click(button)
   },
 }
