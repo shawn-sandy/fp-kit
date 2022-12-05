@@ -1,15 +1,8 @@
 import FP from '../fp'
 import { InputProps } from './inputs'
+import { SharedInputProps } from '../../types'
 
-export interface TextareaProps
-  extends Omit<
-    InputProps,
-    'type' | 'children' | 'inputBlur' | 'inputChange' | 'inputDown'
-  > {
-  /**
-   * The textarea value
-   */
-  value?: string
+export interface TextareaProps extends SharedInputProps {
   /**
    * The number of lines in textarea
    */
@@ -52,7 +45,6 @@ export const Textarea = ({
   textareaRef,
   ...props
 }: TextareaProps) => {
-
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     if (textareaChange && !disabled) {
       textareaChange(e)
