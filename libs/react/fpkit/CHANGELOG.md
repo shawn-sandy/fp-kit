@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.25](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.24...@fpkit/react@0.2.25) (2022-12-05)
+
+### Features
+
+- 🌟 add onBlur on select ([ee97f19](https://github.com/shawn-sandy/fpkit/commit/ee97f19b94b5202a3aafba0d53570aaa2b340b48))
+- 🌟 add story using CSF 3.0 ([51a9773](https://github.com/shawn-sandy/fpkit/commit/51a9773e8cc9a13682d5d176869b9bc51ae290dd))
+- 🚧 add input select component ([ba0ff9f](https://github.com/shawn-sandy/fpkit/commit/ba0ff9f877ff4079915302bca3440649e3d09c59))
+- 🚧 add play feature to CSF3 story demo ([8eaf4ac](https://github.com/shawn-sandy/fpkit/commit/8eaf4ac1cd470b77b2487257060f88caef9d05d2))
+- 🚧 add play feature to CSF3 story demo ([f025055](https://github.com/shawn-sandy/fpkit/commit/f025055d08afa1657796142c1432530d278a788c))
+- 🚧 add play feature to CSF3 story demo ([ef84d34](https://github.com/shawn-sandy/fpkit/commit/ef84d34c427262aaa5b67c341220cf707f2a3332))
+- 🚧 add ref prop to the select component ([be1ba9f](https://github.com/shawn-sandy/fpkit/commit/be1ba9f11bb54b3fbe77743adcc903f392fe7897))
+- 🚧 CSF3 button ([a870617](https://github.com/shawn-sandy/fpkit/commit/a870617c67e5438f3c5fa67f623820ba0961560b))
+- 🚧 set textarea userEvent delay ([6b9ad09](https://github.com/shawn-sandy/fpkit/commit/6b9ad09defd8648c64680135ddf3a4b291b7126f))
+- 🚧 set textarea userEvent delay ([8095151](https://github.com/shawn-sandy/fpkit/commit/80951514a0a14bfd24eddc4c86520b2896ea4681))
+- 🚧 update input select component ([b88b3ad](https://github.com/shawn-sandy/fpkit/commit/b88b3ad253929d227d238e1e9d4f8552536d88ef))
+- 🚧 update play feature to CSF3 story demo ([b45294e](https://github.com/shawn-sandy/fpkit/commit/b45294e45a4260023e735de6a072b5c0794cb2a9))
+- 🚧 update the CSF stories ([4b084aa](https://github.com/shawn-sandy/fpkit/commit/4b084aae8c9b6e1bb4e350efb39090d08ae57f21))
+- 🚧 update the CSF stories ([28efad8](https://github.com/shawn-sandy/fpkit/commit/28efad854789de2277d814764f0dd80ef7e65bd7))
+
 ## [0.2.24](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.23...@fpkit/react@0.2.24) (2022-11-30)
 
 ### Features

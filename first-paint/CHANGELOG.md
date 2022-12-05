@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.15](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.14...@shawnsandy/first-paint@2.17.15) (2022-12-05)
+
+### Features
+
+- 🚧 add input select component ([ba0ff9f](https://github.com/shawn-sandy/fp-kit/commit/ba0ff9f877ff4079915302bca3440649e3d09c59))
+
 ## [2.17.14](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.13...@shawnsandy/first-paint@2.17.14) (2022-11-30)
 
 ### Features
