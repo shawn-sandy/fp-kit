@@ -57,6 +57,6 @@ TextareaInput.play = async ({ args, canvasElement }) => {
   const ComponentName = getByRole("textbox")
   expect(ComponentName).toBeInTheDocument()
   expect(ComponentName).toHaveAttribute("rows")
-  userEvent.type(ComponentName, text)
+  userEvent.type(ComponentName, text, { delay: 10 })
   expect(ComponentName).toHaveValue(text)
 }
