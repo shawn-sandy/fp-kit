@@ -8,7 +8,7 @@ addons.setConfig({
   isFullscreen: false,
   showNav: true,
   showPanel: true,
-  panelPosition: 'bottom',
+  panelPosition: 'right',
   enableShortcuts: true,
   isToolshown: true,
   selectedPanel: undefined,
@@ -19,10 +19,10 @@ addons.setConfig({
     collapsedRoots: ['other'],
   },
   toolbar: {
-    title: { hidden: false, },
-    zoom: { hidden: true, },
-    eject: { hidden: false, },
-    copy: { hidden: false, },
-    fullscreen: { hidden: true, }
-  }
+    title: { hidden: false },
+    zoom: { hidden: true },
+    eject: { hidden: false },
+    copy: { hidden: false },
+    fullscreen: { hidden: true },
+  },
 })
