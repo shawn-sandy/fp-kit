@@ -14,7 +14,7 @@ import {
 } from "@storybook/testing-library"
 import { expect } from "@storybook/jest"
 
-import {Select }from "./select"
+import { Select }from "./select"
 export default {
   title: "FP.React Components/Form/Inputs",
   component: Select,
