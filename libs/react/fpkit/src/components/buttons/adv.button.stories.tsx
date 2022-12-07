@@ -21,7 +21,7 @@ const buttonProps = {
  */
 const meta: Meta<typeof Button> = {
   title: 'FP.React Components/Buttons',
-  component: Button,
+  component: Button
 }
 
 /**
