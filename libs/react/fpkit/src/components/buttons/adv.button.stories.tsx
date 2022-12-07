@@ -1,7 +1,14 @@
+/**
+ * Import Storybook and component dependencies
+ */
 import type { Meta, StoryObj } from '@storybook/react'
-
+/**
+ * Import testing library dependencies
+ */
 import { within, userEvent } from '@storybook/testing-library'
-
+/**
+ * Import jest matchers
+ */
 import { expect } from '@storybook/jest'
 /**
  * import component(s)
