@@ -9,19 +9,11 @@ import { expect } from '@storybook/jest'
 import { Button } from './button'
 
 /**
- * Add object with test prop values
- */
-const buttonProps = {
-  children: 'Default Button',
-  type: 'button',
-}
-
-/**
  * Set component meta data
  */
 const meta: Meta<typeof Button> = {
   title: 'FP.React Components/Buttons',
-  component: Button
+  component: Button,
 }
 
 /**
@@ -30,25 +22,32 @@ const meta: Meta<typeof Button> = {
 export default meta
 type Story = StoryObj<typeof Button>
 
+/**
+ * Add object with test prop values
+ */
+const buttonProps = {
+  children: 'Default Button',
+  type: 'button',
+}
+
 export const AdvButton: Story = {
   args: {
     // @ts-ignore
     children: buttonProps.children,
     type: buttonProps.type,
-    onPointerDown: { action: "down" },
-    onPointerLeave: { action: "leave" },
-    onPointerOver: { action: "over" }
-  }
+    onPointerDown: { action: 'down' },
+    onPointerLeave: { action: 'leave' },
+    onPointerOver: { action: 'over' },
+  },
 }
 
 /**
- * create story with inherited story args
+ * extend Advbutton story args
  * (AdvButton.args)
  */
 export const ButtonInteractions: Story = {
-
   ...AdvButton,
-  args: {...AdvButton.args},
+  // add play params/object to interact with component
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const button = canvas.getByRole('button')
