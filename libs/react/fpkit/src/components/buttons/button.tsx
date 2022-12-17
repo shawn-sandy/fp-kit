@@ -1,7 +1,7 @@
 import React from "react"
 
 
-interface ButtonProps
+export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The type of the button.

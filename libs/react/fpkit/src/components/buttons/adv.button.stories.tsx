@@ -2,10 +2,12 @@
  * Import Storybook and component dependencies
  */
 import type { Meta, StoryObj } from '@storybook/react'
+
 /**
  * Import testing library dependencies
  */
 import { within, userEvent } from '@storybook/testing-library'
+
 /**
  * Import jest matchers
  */
@@ -49,10 +51,11 @@ export const AdvButton: Story = {
 }
 
 /**
- * extend Advbutton story args
+ * extend AdvButton story args
  * (AdvButton.args)
  */
 export const ButtonInteractions: Story = {
+  // inherit AdvButton args
   ...AdvButton,
   // add play params/object to interact with component
   play: async ({ canvasElement }) => {
