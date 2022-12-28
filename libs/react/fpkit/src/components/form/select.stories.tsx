@@ -20,10 +20,6 @@ export default {
   component: Select,
   argTypes: {
     children: { control: "text" },
-    // type: {
-    //   control: "select",
-    //   options: ["ComponentName", "submit", "reset"]
-    // },
     onChange: { action: 'Change' }
   },
   parameters: {

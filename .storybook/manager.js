@@ -8,7 +8,6 @@ addons.setConfig({
   isFullscreen: false,
   showNav: true,
   showPanel: true,
-  panelPosition: 'right',
   enableShortcuts: true,
   isToolshown: true,
   selectedPanel: undefined,
