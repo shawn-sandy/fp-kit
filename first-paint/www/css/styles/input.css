@@ -13,7 +13,8 @@
   -webkit-appearance: var(--input-appearance);
   -moz-appearance: var(--input-appearance);
   appearance: var(--input-appearance);
-  border: var(--input-bdr-color);
+  border: var(--input-bdr-color, currentColor) var(--input-bdr-style, solid)
+    var(--input-bdr-w, thin);
 }
 .fp-input::placeholder {
   font-style: italic;

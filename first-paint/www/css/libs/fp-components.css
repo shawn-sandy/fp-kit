@@ -339,7 +339,8 @@ input[type]:not([type='checkbox'], [type='radio']),
   -webkit-appearance: var(--input-appearance);
   -moz-appearance: var(--input-appearance);
   appearance: var(--input-appearance);
-  border: var(--input-bdr-color);
+  border: var(--input-bdr-color, currentColor) var(--input-bdr-style, solid)
+    var(--input-bdr-w, thin);
 }
 input[type]:not([type='checkbox'], [type='radio'])::placeholder,
 .fp-input[id][type]:not([type='checkbox'], [type='radio'])::placeholder {
