@@ -1239,7 +1239,7 @@ input[type]:not([type='checkbox'], [type='radio']),
   font-weight: var(--input-fw, normal);
   border-width: var(--input-bdr-w, thin);
   border-style: var(--input-bdr-style, solid);
-  border-color: var(--input-bdr-color, var(--fp-light-gray));
+  border-color: var(--input-bdr-color, var(--fp-light-gray, currentColor));
   padding-inline: var(--input-px, 0.6rem);
   padding-block: var(--input-py, 0.4rem);
   width: var(--input-min-w, min(100%, 50rem));
@@ -1247,6 +1247,7 @@ input[type]:not([type='checkbox'], [type='radio']),
   -webkit-appearance: var(--input-appearance);
   -moz-appearance: var(--input-appearance);
   appearance: var(--input-appearance);
+  border: var(--input-bdr-color);
 }
 input[type]:not([type='checkbox'], [type='radio'])::placeholder,
 .fp-input[id][type]:not([type='checkbox'], [type='radio'])::placeholder {
