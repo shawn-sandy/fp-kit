@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.17](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.16...@shawnsandy/first-paint@2.17.17) (2022-12-30)
+
+### Features
+
+- 🌟 load all css ([fbd449e](https://github.com/shawn-sandy/fp-kit/commit/fbd449eb009a9ec9ecfddc2bb30021452bda4060))
+
 ## [2.17.16](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.15...@shawnsandy/first-paint@2.17.16) (2022-12-30)
 
 ### Bug Fixes
