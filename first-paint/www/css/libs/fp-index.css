@@ -1134,6 +1134,7 @@ div[role='presentation'] h4,
   justify-content: var(--justify, flex-end);
   padding-block: var(--py, 0.2rem);
 }
+input[type],
 input[type]:not([type='checkbox'], [type='radio']),
 .fp-input[id][type]:not([type='checkbox'], [type='radio']) {
   --input-appearance: none;
@@ -1153,11 +1154,13 @@ input[type]:not([type='checkbox'], [type='radio']),
   border: var(--input-bdr-color, currentColor) var(--input-bdr-style, solid)
     var(--input-bdr-w, thin);
 }
+input[type]::placeholder,
 input[type]:not([type='checkbox'], [type='radio'])::placeholder,
 .fp-input[id][type]:not([type='checkbox'], [type='radio'])::placeholder {
   font-style: italic;
   --input-fs: 0.5rem;
 }
+input[type][data-variant],
 input[type]:not([type='checkbox'], [type='radio'])[data-variant],
 .fp-input[id][type]:not([type='checkbox'], [type='radio'])[data-variant] {
   --vfs: 0.8rem;
