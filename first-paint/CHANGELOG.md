@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.16](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.15...@shawnsandy/first-paint@2.17.16) (2022-12-30)
+
+### Bug Fixes
+
+- 🏁 resolve issue with input color ([d64721c](https://github.com/shawn-sandy/fp-kit/commit/d64721c22af3453507afd642f160d633da449953))
+
+### Features
+
+- 🌟 first-paint updates ([e5b8032](https://github.com/shawn-sandy/fp-kit/commit/e5b803257262bfb2cb8fc5b6e541d35fd7c69228))
+
 ## [2.17.15](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.14...@shawnsandy/first-paint@2.17.15) (2022-12-05)
 
 ### Features
