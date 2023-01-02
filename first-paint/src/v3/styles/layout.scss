@@ -1,7 +1,7 @@
 main, header, footer {
   font-size: var(--fs, 1rem);
   > section {
-    width: var(--lt-min, min(90%, 1480px));
+    width: var(--lt-min, var(--content-w, 100%));
     margin-inline: auto;
   }
 }

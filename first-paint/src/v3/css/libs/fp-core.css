@@ -169,6 +169,7 @@ main > section,
 header > section,
 footer > section {
   margin-inline: auto;
+  width: var(--lt-w, var(--content-w));
 }
 
 section:not(nav) {

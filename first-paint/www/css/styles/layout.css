@@ -1,1 +1,15 @@
-main,header,footer{font-size:var(--fs, 1rem)}main>section,header>section,footer>section{width:var(--lt-min, min(90%, 1480px));margin-inline:auto}section:not(nav){margin-inline:auto;padding-block:var(--fs-2, 1rem)}/*# sourceMappingURL=layout.css.map */
+main,
+header,
+footer {
+  font-size: var(--fs, 1rem);
+}
+main > section,
+header > section,
+footer > section {
+  width: var(--lt-min, var(--content-w, 100%));
+  margin-inline: auto;
+}
+section:not(nav) {
+  margin-inline: auto;
+  padding-block: var(--fs-2, 1rem);
+} /*# sourceMappingURL=layout.css.map */
