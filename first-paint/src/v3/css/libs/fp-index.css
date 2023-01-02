@@ -1394,7 +1394,6 @@ a[data-fp-btn],
   font-weight: var(--btn-fw, 600);
   height: var(--btn-height, 2.5rem);
   min-height: var(--btn-height, 2.5rem);
-  max-height: var(--btn-height, 2.5rem);
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1%));
   padding-block: var(--btn-py, calc(var(--btn-fs) + 0.75%));
@@ -1404,7 +1403,7 @@ a[data-fp-btn],
   color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
   gap: var(--btn-gap, 1rem);
-  white-space: var(--btn-wspc, nowrap);
+  white-space: var(--btn-wspc, inherit);
   margin: var(--btn-spc, 0.25rem);
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
