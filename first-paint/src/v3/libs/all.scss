@@ -1,5 +1,5 @@
-@use "../modules/reset.scss";
 @use "../modules/props";
+@use "../modules/reset.scss";
 @use "../modules/global.scss";
 @use "../styles/layout.scss";
 @use "../modules/header.scss";
@@ -30,7 +30,7 @@
 // @include container.module();
 // tokens
 @use "../tokens/colors.scss";
-@include props.module();
+// @include props.module();
 @include nav.module();
 @include header.module();
 @include table.module();

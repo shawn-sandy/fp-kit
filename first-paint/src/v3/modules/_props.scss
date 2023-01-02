@@ -57,3 +57,5 @@
   @include styles;
   @include tokens.hsl-styles;
 }
+
+@include module();
