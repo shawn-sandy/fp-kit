@@ -1306,4 +1306,9 @@ footer:not([aria-label], [role='footer'])[data-variant],
   --footer-fs: var(--vfs);
   --footer-cl: var(--vcl);
   --footer-bg: var(--vbg);
+}
+footer:not([aria-label], [role='footer']) > section,
+[data-footer]:not([aria-label], [role='footer']) > section,
+[role='contentinfo']:not([aria-label], [role='footer']) > section {
+  width: var(--lt-w, var(--content-w));
 } /*# sourceMappingURL=index.css.map */

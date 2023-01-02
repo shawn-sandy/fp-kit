@@ -656,6 +656,9 @@ section:not(nav) {
   --footer-cl: var(--vcl);
   --footer-bg: var(--vbg);
 }
+.fp-footer > section {
+  width: var(--lt-w, var(--content-w));
+}
 .fp-list {
   --listOff: ;
   list-style: var(--list-s, inside);

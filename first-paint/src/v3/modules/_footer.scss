@@ -23,6 +23,9 @@
     --footer-cl: var(--vcl);
     --footer-bg: var(--vbg);
   }
+  >section {
+    width: var(--lt-w, var(--content-w));
+  }
   @content;
 }
 
