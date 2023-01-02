@@ -5,8 +5,8 @@
  * @author First Paint
  */
 
+ @use "../modules/props";
 @use "../modules/reset.scss";
-@use "../modules/props";
 @use "../modules/global.scss";
 
-@include props.module();
+// @include props.module();
