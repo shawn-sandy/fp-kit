@@ -15,7 +15,7 @@ main > section,
 header > section,
 footer > section {
   margin-inline: auto;
-  width: var(--lt-w, var(--content-w));
+  width: var(--content-w, 80%);
 }
 
 section:not(nav) {
@@ -909,7 +909,7 @@ section:not(nav) {
   --footer-bg: var(--vbg);
 }
 .fp-footer > section {
-  width: var(--lt-w, var(--content-w));
+  width: var(--content-w);
 }
 .fp-list {
   --listOff: ;

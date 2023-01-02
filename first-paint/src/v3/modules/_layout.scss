@@ -23,7 +23,7 @@
   main, header, footer {
     font-size: var(--fs, 1rem);
     > section {
-      width: var(--lt-min, var(--content-w));
+      width:  var(--content-w);
       margin-inline: auto;
     }
   }

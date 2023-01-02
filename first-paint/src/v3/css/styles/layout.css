@@ -6,7 +6,7 @@ footer {
 main > section,
 header > section,
 footer > section {
-  width: var(--lt-min, var(--content-w, 100%));
+  width: var(--content-w, 80%);
   margin-inline: auto;
 }
 

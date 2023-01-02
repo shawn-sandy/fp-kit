@@ -20,7 +20,7 @@ main, header, footer {
   font-size: var(--fs);
   > section {
     margin-inline: auto;
-    width: var(--lt-w, var(--content-w));
+    width: var(--content-w, 80%);
   }
 }
 

@@ -24,7 +24,7 @@
     --footer-bg: var(--vbg);
   }
   >section {
-    width: var(--lt-w, var(--content-w));
+    width: var(--content-w);
   }
   @content;
 }

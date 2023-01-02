@@ -20,7 +20,7 @@ footer:not([aria-label], [role='footer'])[data-variant],
 footer:not([aria-label], [role='footer']) > section,
 [data-footer]:not([aria-label], [role='footer']) > section,
 [role='contentinfo']:not([aria-label], [role='footer']) > section {
-  width: var(--lt-w, var(--content-w));
+  width: var(--content-w);
 }
 
 /*# sourceMappingURL=footer.css.map */

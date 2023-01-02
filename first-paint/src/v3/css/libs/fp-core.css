@@ -471,7 +471,7 @@ main > section,
 header > section,
 footer > section {
   margin-inline: auto;
-  width: var(--lt-w, var(--content-w));
+  width: var(--content-w, 80%);
 }
 
 section:not(nav) {
@@ -978,7 +978,7 @@ footer {
 main > section,
 header > section,
 footer > section {
-  width: var(--lt-min, var(--content-w));
+  width: var(--content-w);
   margin-inline: auto;
 }
 
