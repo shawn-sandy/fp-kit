@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.20](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.19...@shawnsandy/first-paint@2.17.20) (2023-01-02)
+
+### Features
+
+- 🌟 update the content section width ([ee725b3](https://github.com/shawn-sandy/fp-kit/commit/ee725b3cd273951b4e2752600451e1bfb12caa6a))
+
 ## [2.17.19](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.18...@shawnsandy/first-paint@2.17.19) (2023-01-02)
 
 ### Features
