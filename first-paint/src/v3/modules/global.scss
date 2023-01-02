@@ -19,7 +19,6 @@ body {
 main, header, footer {
   font-size: var(--fs);
   > section {
-    width: var(--lt-min);
     margin-inline: auto;
   }
 }

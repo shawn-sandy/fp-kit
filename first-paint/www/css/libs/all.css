@@ -127,7 +127,6 @@ footer {
 main > section,
 header > section,
 footer > section {
-  width: var(--lt-min);
   margin-inline: auto;
 }
 section:not(nav) {
@@ -514,6 +513,7 @@ p + * {
   --min-w-800: min(100%, calc(800rem / 16));
   --w-800: min(100%, calc(800rem / 16));
   --align: initial;
+  --content-w: clamp(80vw, 90vw, 75vw);
   --hsla: (var(--h), var(--a));
   --fp-dark: hsla(var(210), var(--s, 11%), var(--l, 0%), var(--a, 1));
   --fp-light: hsla(

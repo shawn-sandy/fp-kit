@@ -12,7 +12,6 @@ footer {
 main > section,
 header > section,
 footer > section {
-  width: var(--lt-min);
   margin-inline: auto;
 }
 section:not(nav) {
