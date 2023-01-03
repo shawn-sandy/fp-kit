@@ -128,7 +128,7 @@ data-grid="cols-2"
           laboriosam rem omnis sit autem temporibus ipsum maxime dignissimos id.
         </p>
       </div>
-      <div role="gridcell">
+      <div data-grid-cell="gridcell">
         <h3>Grid col</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
@@ -136,7 +136,7 @@ data-grid="cols-2"
           laboriosam rem omnis sit autem temporibus ipsum maxime dignissimos id.
         </p>
       </div>
-      <div role="gridcell">
+      <div data-grid-cell="gridcell">
         <h3>Grid col</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
@@ -144,7 +144,7 @@ data-grid="cols-2"
           laboriosam rem omnis sit autem temporibus ipsum maxime dignissimos id.
         </p>
       </div>
-      <div role="gridcell">
+      <div data-grid-cell="gridcell">
         <h3>Grid col</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
