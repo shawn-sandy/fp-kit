@@ -34,6 +34,7 @@
 
   [role="row"],
   [data-grid-row],
+
   [style*="--row"], [role="listitem"], [style*="--listitem"] {
     --grid-cols-tpl: repeat(
     auto-fill,
