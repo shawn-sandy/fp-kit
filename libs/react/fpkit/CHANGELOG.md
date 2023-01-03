@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.36](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.35...@fpkit/react@0.2.36) (2023-01-03)
+
+### Features
+
+- new data-grid attribute w/cols-12 ([195b969](https://github.com/shawn-sandy/fpkit/commit/195b969eb316ed46716bc5ccd71ab87a427fe819))
+
 ## [0.2.35](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.34...@fpkit/react@0.2.35) (2023-01-03)
 
 **Note:** Version bump only for package @fpkit/react
