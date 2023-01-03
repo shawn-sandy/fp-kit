@@ -1245,6 +1245,12 @@ figcaption,
 [data-grid~='cols-8'] {
   --grid-cols: 8;
 }
+[data-grid~='cols-9'] {
+  --grid-cols: 9;
+}
+[data-grid~='cols-10'] {
+  --grid-cols: 10;
+}
 input[type],
 input[type]:not([type='checkbox'], [type='radio']),
 .fp-input[id][type]:not([type='checkbox'], [type='radio']) {

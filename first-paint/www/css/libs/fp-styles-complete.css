@@ -579,6 +579,12 @@ section:not(nav) {
 .fp [data-grid~='cols-8'] {
   --grid-cols: 8;
 }
+.fp [data-grid~='cols-9'] {
+  --grid-cols: 9;
+}
+.fp [data-grid~='cols-10'] {
+  --grid-cols: 10;
+}
 .fp-cards {
   --cd-sm: 1rem;
   --cd-md: 1.5rem;

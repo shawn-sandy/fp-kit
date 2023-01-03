@@ -1407,6 +1407,14 @@ figcaption,
   --grid-cols: 8;
 }
 
+[data-grid~='cols-9'] {
+  --grid-cols: 9;
+}
+
+[data-grid~='cols-10'] {
+  --grid-cols: 10;
+}
+
 button,
 [style*='--btn'],
 a[data-fp-btn],
