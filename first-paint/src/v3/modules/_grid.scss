@@ -33,6 +33,7 @@
   @include props;
 
   [role="row"],
+  [data-gird-row],
   [style*="--row"], [role="listitem"], [style*="--listitem"] {
     --grid-cols-tpl: repeat(
     auto-fill,
@@ -47,6 +48,7 @@
   }
 
   [role="gridcell"],
+  [data-grid-cell],
   [style*="--gridcell"] {
 
   }

@@ -1304,14 +1304,17 @@ figcaption,
   --list-max-width: var(--grid-max-width);
 }
 [role='grid'] [role='row'],
+[role='grid'] [data-gird-row],
 [role='grid'] [style*='--row'],
 [role='grid'] [role='listitem'],
 [role='grid'] [style*='--listitem'],
 [role='list'] [role='row'],
+[role='list'] [data-gird-row],
 [role='list'] [style*='--row'],
 [role='list'] [role='listitem'],
 [role='list'] [style*='--listitem'],
 [data-fp-grid] [role='row'],
+[data-fp-grid] [data-gird-row],
 [data-fp-grid] [style*='--row'],
 [data-fp-grid] [role='listitem'],
 [data-fp-grid] [style*='--listitem'] {

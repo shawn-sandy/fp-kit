@@ -566,6 +566,7 @@ section:not(nav) {
   --list-max-width: var(--grid-max-width);
 }
 .fp-grid [role='row'],
+.fp-grid [data-gird-row],
 .fp-grid [style*='--row'],
 .fp-grid [role='listitem'],
 .fp-grid [style*='--listitem'] {
