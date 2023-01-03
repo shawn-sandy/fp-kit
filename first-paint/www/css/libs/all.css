@@ -1192,13 +1192,6 @@ figcaption,
   --grid-max-width: calc((100% - var(--total-gap-width)) / var(--grid-cols));
   --list-max-width: var(--grid-max-width);
 }
-[role='grid'][data-variant],
-[role='list'][data-variant],
-[data-fp-grid][data-variant] {
-  background-color: var(--vbg);
-  color: var(--vcl);
-  font-size: var(--vfs);
-}
 [role='grid'] [role='row'],
 [role='grid'] [style*='--row'],
 [role='grid'] [role='listitem'],
@@ -1223,6 +1216,34 @@ figcaption,
 [role='list'] [style*='--main:'],
 [data-fp-grid] [style*='--main:'] {
   flex: var(--fx-auto-size);
+}
+[role='grid'][data-variant],
+[role='list'][data-variant],
+[data-fp-grid][data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
+[data-grid~='cols-2'] {
+  --grid-cols: 2;
+}
+[data-grid~='cols-3'] {
+  --grid-cols: 3;
+}
+[data-grid~='cols-4'] {
+  --grid-cols: 4;
+}
+[data-grid~='cols-5'] {
+  --grid-cols: 5;
+}
+[data-grid~='cols-6'] {
+  --grid-cols: 6;
+}
+[data-grid~='cols-7'] {
+  --grid-cols: 7;
+}
+[data-grid~='cols-8'] {
+  --grid-cols: 8;
 }
 input[type],
 input[type]:not([type='checkbox'], [type='radio']),

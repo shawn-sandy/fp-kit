@@ -110,9 +110,15 @@ Change the grid `--grid-cols: 2` to set the number of grid columns.
 style="--grid-cols: 2"
 ```
 
+or using `data-grid` attribute
+
+```html
+data-grid="cols-2"
+```
+
 ```html preview
 <section style="max-width: min(80vw, 100vw);">
-  <section role="grid" style="--grid-cols: 2">
+  <section role="grid" data-grid="cols-2">
     <div role="row">
       <div role="gridcell">
         <h3>Grid col</h3>

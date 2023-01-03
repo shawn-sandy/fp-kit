@@ -12,12 +12,8 @@
   --list-cols: var(--grid-cols);
   --list-min-width: var(--grid-min-width);
   --gap-count: calc(var(--grid-cols) - 1);
-  --total-gap-width: calc(
-    var(--gap-count) * var(--grid-gap)
-  );
-  --grid-max-width: calc(
-    (100% - var(--total-gap-width)) / var(--grid-cols)
-  );
+  --total-gap-width: calc(var(--gap-count) * var(--grid-gap));
+  --grid-max-width: calc((100% - var(--total-gap-width)) / var(--grid-cols));
   --list-max-width: var(--grid-max-width);
   /**
    * User input values.
@@ -29,39 +25,57 @@
   --list-cols: var(--grid-cols);
   --list-min-width: var(--grid-min-width);
   --gap-count: calc(var(--grid-cols) - 1);
-  --total-gap-width: calc(
-    var(--gap-count) * var(--grid-gap)
-  );
-  --grid-max-width: calc(
-    (100% - var(--total-gap-width)) / var(--grid-cols)
-  );
+  --total-gap-width: calc(var(--gap-count) * var(--grid-gap));
+  --grid-max-width: calc((100% - var(--total-gap-width)) / var(--grid-cols));
   --list-max-width: var(--grid-max-width);
 }
-.fp-grid[data-variant] {
-  background-color: var(--vbg);
-  color: var(--vcl);
-  font-size: var(--vfs);
-}
-.fp-grid[data-variant] {
-  background-color: var(--vbg);
-  color: var(--vcl);
-  font-size: var(--vfs);
-}
-.fp-grid [role=row],
-.fp-grid [style*="--row"], .fp-grid [role=listitem], .fp-grid [style*="--listitem"] {
+.fp-grid [role='row'],
+.fp-grid [style*='--row'],
+.fp-grid [role='listitem'],
+.fp-grid [style*='--listitem'] {
   --grid-cols-tpl: repeat(
     auto-fill,
-    minmax(
-      max(var(--grid-min-width), var(--grid-max-width)),
-      1fr
-    )
+    minmax(max(var(--grid-min-width), var(--grid-max-width)), 1fr)
   );
   grid-template-columns: var(--grid-cols-tpl);
   grid-gap: var(--grid-gap);
   display: var(--grid-dsp, grid);
 }
-.fp-grid [style*="--main:"] {
+.fp-grid [style*='--main:'] {
   flex: var(--fx-auto-size);
+}
+.fp-grid[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
+
+[data-grid~='cols-2'] {
+  --grid-cols: 2;
+}
+
+[data-grid~='cols-3'] {
+  --grid-cols: 3;
+}
+
+[data-grid~='cols-4'] {
+  --grid-cols: 4;
+}
+
+[data-grid~='cols-5'] {
+  --grid-cols: 5;
+}
+
+[data-grid~='cols-6'] {
+  --grid-cols: 6;
+}
+
+[data-grid~='cols-7'] {
+  --grid-cols: 7;
+}
+
+[data-grid~='cols-8'] {
+  --grid-cols: 8;
 }
 
 /*# sourceMappingURL=grid.css.map */

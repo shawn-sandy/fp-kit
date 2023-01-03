@@ -455,16 +455,6 @@ section:not(nav) {
   --grid-max-width: calc((100% - var(--total-gap-width)) / var(--grid-cols));
   --list-max-width: var(--grid-max-width);
 }
-.fp-grid[data-variant] {
-  background-color: var(--vbg);
-  color: var(--vcl);
-  font-size: var(--vfs);
-}
-.fp-grid[data-variant] {
-  background-color: var(--vbg);
-  color: var(--vcl);
-  font-size: var(--vfs);
-}
 .fp-grid [role='row'],
 .fp-grid [style*='--row'],
 .fp-grid [role='listitem'],
@@ -479,6 +469,11 @@ section:not(nav) {
 }
 .fp-grid [style*='--main:'] {
   flex: var(--fx-auto-size);
+}
+.fp-grid[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
 }
 .fp-dialog {
   background-color: var(--diag-bg, var(--fp-snow));
