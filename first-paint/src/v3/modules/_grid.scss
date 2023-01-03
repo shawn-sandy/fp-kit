@@ -33,7 +33,7 @@
   @include props;
 
   [role="row"],
-  [data-gird-row],
+  [data-grid-row],
   [style*="--row"], [role="listitem"], [style*="--listitem"] {
     --grid-cols-tpl: repeat(
     auto-fill,
@@ -47,11 +47,6 @@
   display: var(--grid-dsp, grid);
   }
 
-  [role="gridcell"],
-  [data-grid-cell],
-  [style*="--gridcell"] {
-
-  }
 
   [style*="--main:"] {
     flex: var(--fx-auto-size);
@@ -68,47 +63,47 @@
 
 @mixin styles {
 
-  [data-grid~="cols-2"] {
+  [data-fp-grid~="cols-2"] {
     --grid-cols: 2;
   }
 
-  [data-grid~="cols-3"] {
+  [data-fp-grid~="cols-3"] {
     --grid-cols: 3;
   }
 
-  [data-grid~="cols-4"] {
+  [data-fp-grid~="cols-4"] {
     --grid-cols: 4;
   }
 
-  [data-grid~="cols-5"] {
+  [data-fp-grid~="cols-5"] {
     --grid-cols: 5;
   }
 
-  [data-grid~="cols-6"] {
+  [data-fp-grid~="cols-6"] {
     --grid-cols: 6;
   }
 
-  [data-grid~="cols-7"] {
+  [data-fp-grid~="cols-7"] {
     --grid-cols: 7;
   }
 
-  [data-grid~="cols-8"] {
+  [data-fp-grid~="cols-8"] {
     --grid-cols: 8;
   }
 
-  [data-grid~="cols-9"] {
+  [data-fp-grid~="cols-9"] {
     --grid-cols: 9;
   }
 
-  [data-grid~="cols-10"] {
+  [data-fp-grid~="cols-10"] {
     --grid-cols: 10;
   }
 
-  [data-grid~="cols-11"] {
+  [data-fp-grid~="cols-11"] {
     --grid-cols: 11;
   }
 
-  [data-grid~="cols-12"] {
+  [data-fp-grid~="cols-12"] {
     --grid-cols: 12;
   }
 
@@ -120,7 +115,7 @@
 *
 */
 @mixin module {
-  [role="grid"], [role="list"], [data-fp-grid] {
+  [role="grid"], [role="list"], [data-fp-grid], [data-grid] {
     @include rules;
   }
   @include styles;

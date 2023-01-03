@@ -118,9 +118,9 @@ data-grid="cols-2"
 
 ```html preview
 <section style="max-width: min(80vw, 100vw);">
-  <section role="grid" data-grid="cols-2">
-    <div role="row">
-      <div role="gridcell">
+  <section data-fp-grid="cols-2">
+    <div data-grid-row>
+      <div data-grid="gridcell">
         <h3>Grid col</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla

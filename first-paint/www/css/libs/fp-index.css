@@ -1237,7 +1237,8 @@ figcaption,
 }
 [role='grid'],
 [role='list'],
-[data-fp-grid] {
+[data-fp-grid],
+[data-grid] {
   --grid-gap: 1.5rem;
   --grid-cols: 4;
   --grid-min-width: calc(250rem / 16);
@@ -1250,20 +1251,25 @@ figcaption,
   --list-max-width: var(--grid-max-width);
 }
 [role='grid'] [role='row'],
-[role='grid'] [data-gird-row],
+[role='grid'] [data-grid-row],
 [role='grid'] [style*='--row'],
 [role='grid'] [role='listitem'],
 [role='grid'] [style*='--listitem'],
 [role='list'] [role='row'],
-[role='list'] [data-gird-row],
+[role='list'] [data-grid-row],
 [role='list'] [style*='--row'],
 [role='list'] [role='listitem'],
 [role='list'] [style*='--listitem'],
 [data-fp-grid] [role='row'],
-[data-fp-grid] [data-gird-row],
+[data-fp-grid] [data-grid-row],
 [data-fp-grid] [style*='--row'],
 [data-fp-grid] [role='listitem'],
-[data-fp-grid] [style*='--listitem'] {
+[data-fp-grid] [style*='--listitem'],
+[data-grid] [role='row'],
+[data-grid] [data-grid-row],
+[data-grid] [style*='--row'],
+[data-grid] [role='listitem'],
+[data-grid] [style*='--listitem'] {
   --grid-cols-tpl: repeat(
     auto-fill,
     minmax(max(var(--grid-min-width), var(--grid-max-width)), 1fr)
@@ -1274,47 +1280,49 @@ figcaption,
 }
 [role='grid'] [style*='--main:'],
 [role='list'] [style*='--main:'],
-[data-fp-grid] [style*='--main:'] {
+[data-fp-grid] [style*='--main:'],
+[data-grid] [style*='--main:'] {
   flex: var(--fx-auto-size);
 }
 [role='grid'][data-variant],
 [role='list'][data-variant],
-[data-fp-grid][data-variant] {
+[data-fp-grid][data-variant],
+[data-grid][data-variant] {
   background-color: var(--vbg);
   color: var(--vcl);
   font-size: var(--vfs);
 }
-[data-grid~='cols-2'] {
+[data-fp-grid~='cols-2'] {
   --grid-cols: 2;
 }
-[data-grid~='cols-3'] {
+[data-fp-grid~='cols-3'] {
   --grid-cols: 3;
 }
-[data-grid~='cols-4'] {
+[data-fp-grid~='cols-4'] {
   --grid-cols: 4;
 }
-[data-grid~='cols-5'] {
+[data-fp-grid~='cols-5'] {
   --grid-cols: 5;
 }
-[data-grid~='cols-6'] {
+[data-fp-grid~='cols-6'] {
   --grid-cols: 6;
 }
-[data-grid~='cols-7'] {
+[data-fp-grid~='cols-7'] {
   --grid-cols: 7;
 }
-[data-grid~='cols-8'] {
+[data-fp-grid~='cols-8'] {
   --grid-cols: 8;
 }
-[data-grid~='cols-9'] {
+[data-fp-grid~='cols-9'] {
   --grid-cols: 9;
 }
-[data-grid~='cols-10'] {
+[data-fp-grid~='cols-10'] {
   --grid-cols: 10;
 }
-[data-grid~='cols-11'] {
+[data-fp-grid~='cols-11'] {
   --grid-cols: 11;
 }
-[data-grid~='cols-12'] {
+[data-fp-grid~='cols-12'] {
   --grid-cols: 12;
 }
 button,
