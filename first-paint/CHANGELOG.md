@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.24](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.23...@shawnsandy/first-paint@2.17.24) (2023-01-03)
+
+### Features
+
+- new data-grid attribute w/cols-1-8 ([a4d1bf1](https://github.com/shawn-sandy/fp-kit/commit/a4d1bf1a740d46714675e5f5b36afe24f15725b0))
+
 ## [2.17.23](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.22...@shawnsandy/first-paint@2.17.23) (2023-01-03)
 
 ### Features
