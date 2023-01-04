@@ -1506,9 +1506,14 @@ a[data-fp-btn]:is(:hover, :focus),
   background-color: var(--btn-bg, var(--btn, lightgray));
   filter: invert(1) hue-rotate 180deg;
   transform: scale(0.95);
-  outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin)
-    var(--line-style, solid);
   outline-offset: var(--line-offset, 5px);
+}
+button:is(:hover, :focus)[aria-disabled='true'],
+[style*='--btn']:is(:hover, :focus)[aria-disabled='true'],
+a[data-fp-btn]:is(:hover, :focus)[aria-disabled='true'],
+[role='button']:is(:hover, :focus)[aria-disabled='true'] {
+  transform: none;
+  opacity: var(--btn-opacity, 0.5);
 }
 button[type='reset'],
 [style*='--btn'][type='reset'],
@@ -1542,7 +1547,6 @@ a[data-fp-btn][data-variant],
   --btn-fs: var(--vfs, 0.95rem);
 }
 
-input[type],
 input[type]:not([type='checkbox'], [type='radio']),
 .fp-input[id][type]:not([type='checkbox'], [type='radio']) {
   --input-appearance: none;
@@ -1562,13 +1566,11 @@ input[type]:not([type='checkbox'], [type='radio']),
   border: var(--input-bdr-color, currentColor) var(--input-bdr-style, solid)
     var(--input-bdr-w, thin);
 }
-input[type]::placeholder,
 input[type]:not([type='checkbox'], [type='radio'])::placeholder,
 .fp-input[id][type]:not([type='checkbox'], [type='radio'])::placeholder {
   font-style: italic;
   --input-fs: 0.5rem;
 }
-input[type][data-variant],
 input[type]:not([type='checkbox'], [type='radio'])[data-variant],
 .fp-input[id][type]:not([type='checkbox'], [type='radio'])[data-variant] {
   --vfs: 0.8rem;

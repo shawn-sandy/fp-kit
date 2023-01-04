@@ -76,9 +76,14 @@ a[data-fp-btn]:is(:hover, :focus),
   background-color: var(--btn-bg, var(--btn, lightgray));
   filter: invert(1) hue-rotate 180deg;
   transform: scale(0.95);
-  outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin)
-    var(--line-style, solid);
   outline-offset: var(--line-offset, 5px);
+}
+button:is(:hover, :focus)[aria-disabled='true'],
+[style*='--btn']:is(:hover, :focus)[aria-disabled='true'],
+a[data-fp-btn]:is(:hover, :focus)[aria-disabled='true'],
+[role='button']:is(:hover, :focus)[aria-disabled='true'] {
+  transform: none;
+  opacity: var(--btn-opacity, 0.5);
 }
 button[type='reset'],
 [style*='--btn'][type='reset'],
