@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.26](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.25...@shawnsandy/first-paint@2.17.26) (2023-01-04)
+
+### Code Refactoring
+
+- 🔨 add/replace role=gird\* data-grid ([e33bb30](https://github.com/shawn-sandy/fp-kit/commit/e33bb30288df6dc28810d77d3ff5fe5fda24a0cb))
+- 🔨 add/replace role=gird\* data-grid ([6ede06d](https://github.com/shawn-sandy/fp-kit/commit/6ede06de0351e5e9a62ba01cc20c6d76995d82d5))
+- 🔨 add/replace role=gird\* data-grid ([0458eea](https://github.com/shawn-sandy/fp-kit/commit/0458eea3b4bf6a7f502a64e950deac8c9f74fabe))
+
+### Features
+
+- 🌟 add data-grid-row/cell attrs ([8ca649e](https://github.com/shawn-sandy/fp-kit/commit/8ca649efecf6f17c5c8bca4c6c7a885440d6abb9))
+
+### BREAKING CHANGES
+
+-
+-
+-
+
 ## [2.17.25](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.24...@shawnsandy/first-paint@2.17.25) (2023-01-03)
 
 ### Features
