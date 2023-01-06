@@ -12,12 +12,22 @@
 }
 
 @mixin rules {
-  > section {
-    display: var(--main-display, grid);
-    + [sidebar], + aside {
-      width: var(--sidebar-w, clamp(100%, 20rem, 30%));
+
+
+  [data-content] {
+    display: var(--main-display, flex);
+    gap: var(--main-gap, 1rem);
+
+    article {
+      min-width: min(calc(720rem / 16), 100%);
+    }
+
+    [sidebar],
+    aside {
+      width: var(--sidebar-w, clamp(100%, 20%, 30%));
     }
   }
+
   // * css rules/styles
   @content;
 }
@@ -32,5 +42,6 @@
     @include props;
     @include rules;
   }
+
   @include styles;
 }

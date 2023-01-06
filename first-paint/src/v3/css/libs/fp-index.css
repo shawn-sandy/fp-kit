@@ -1063,12 +1063,16 @@ header:not([arial-label], dialog header)[data-variant],
   font-size: var(--vfs);
 }
 
-main > section {
-  display: var(--main-display, grid);
+main [data-content] {
+  display: var(--main-display, flex);
+  gap: var(--main-gap, 1rem);
 }
-main > section + [sidebar],
-main > section + aside {
-  width: var(--sidebar-w, clamp(100%, 20rem, 30%));
+main [data-content] article {
+  min-width: min(45rem, 100%);
+}
+main [data-content] [sidebar],
+main [data-content] aside {
+  width: var(--sidebar-w, 100%);
 }
 
 table {

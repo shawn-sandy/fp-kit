@@ -26,10 +26,35 @@ Layout {
 
 ## Examples
 
+### Main layout
+
 ```html preview
 <main>
-  <section>content</section>
-  <aside>Sidebar</aside>
+  <section>
+    <article>
+      <article>
+        <p>
+          Irure exercitation anim consectetur enim pariatur quis quis. Ipsum
+          tempor ea aliqua cupidatat. Sit sit id nisi dolor laboris duis
+          voluptate sint officia mollit excepteur consectetur. Aute ea duis
+          irure veniam. Esse sit veniam non laborum et magna Lorem consectetur
+          voluptate commodo sunt. Occaecat cupidatat minim consectetur
+          consectetur ut. Irure ad sunt voluptate nisi.
+        </p>
+      </article>
+      <aside>
+        <p>
+          Voluptate non adipisicing laboris ipsum qui exercitation aliqua id.
+          Voluptate elit est ex aute exercitation nisi eu anim sunt mollit ea.
+          Cillum aliquip quis proident tempor ullamco sunt aliquip eiusmod id
+          tempor aliqua fugiat do sint. Ad eu velit dolore do esse mollit Lorem
+          laborum ea veniam et. Eu magna nulla cillum do ut. Veniam sit
+          consectetur commodo proident cupidatat aute ut eu minim sunt id
+          excepteur.
+        </p>
+      </aside>
+    </article>
+  </section>
 </main>
 ```
 
