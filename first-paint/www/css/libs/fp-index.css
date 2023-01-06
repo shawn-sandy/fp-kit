@@ -975,15 +975,18 @@ header:not([arial-label], dialog header)[data-variant],
   font-size: var(--vfs);
 }
 main [data-content] {
-  display: var(--main-display, flex);
-  gap: var(--main-gap, 1rem);
+  display: var(--main-display, block);
+  gap: var(--main-gap, 2rem);
 }
-main [data-content] article {
-  min-width: min(45rem, 100%);
+@media (min-width: 768px) {
+  main [data-content] {
+    display: block;
+  }
 }
 main [data-content] [sidebar],
 main [data-content] aside {
   width: var(--sidebar-w, 100%);
+  min-width: 30vw;
 }
 table {
   --spc: 0;

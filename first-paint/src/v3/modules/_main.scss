@@ -15,16 +15,16 @@
 
 
   [data-content] {
-    display: var(--main-display, flex);
-    gap: var(--main-gap, 1rem);
-
-    article {
-      min-width: min(calc(720rem / 16), 100%);
+    @media (min-width: 768px) {
+      display: block;
     }
+    display: var(--main-display, block);
+    gap: var(--main-gap, 2rem);
 
     [sidebar],
     aside {
       width: var(--sidebar-w, clamp(100%, 20%, 30%));
+      min-width: 30vw;
     }
   }
 
