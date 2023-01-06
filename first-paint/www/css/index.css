@@ -1157,6 +1157,13 @@ header:not([arial-label], dialog header)[data-variant],
   color: var(--vcl);
   font-size: var(--vfs);
 }
+main > section {
+  display: var(--main-display, grid);
+}
+main > section + [sidebar],
+main > section + aside {
+  width: var(--sidebar-w, clamp(100%, 20rem, 30%));
+}
 form,
 .fp-form {
   width: 100%;

@@ -497,6 +497,13 @@ section:not(nav) {
   padding-block: var(--fs-2, 1rem);
 }
 
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
 /* stylelint-disable declaration-colon-newline-after */
 /* stylelint-disable declaration-empty-line-before */
 /* stylelint-disable declaration-colon-newline-after */
@@ -967,6 +974,14 @@ header:not([arial-label], dialog header)[data-variant],
   background-color: var(--vbg);
   color: var(--vcl);
   font-size: var(--vfs);
+}
+
+main > section {
+  display: var(--main-display, grid);
+}
+main > section + [sidebar],
+main > section + aside {
+  width: var(--sidebar-w, clamp(100%, 20rem, 30%));
 }
 
 table {

@@ -900,19 +900,4 @@ hr {
   border: none;
   margin-block: var(--py, 3rem);
   margin-inline: var(px, auto);
-}
-main,
-header,
-footer {
-  font-size: var(--fs, 1rem);
-}
-main > section,
-header > section,
-footer > section {
-  width: var(--content-w);
-  margin-inline: auto;
-}
-section:not(nav) {
-  margin-inline: auto;
-  padding-block: var(--spc-4, 1rem);
 } /*# sourceMappingURL=fp-core.css.map */

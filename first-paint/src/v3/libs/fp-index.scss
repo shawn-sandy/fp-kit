@@ -2,6 +2,7 @@
 @use "../modules/props";
 @use "../modules/global.scss";
 @use "../modules/header.scss";
+@use "../modules/main.scss";
 @use "../modules/container";
 @use "../modules/button";
 @use "../modules/checkbox";
@@ -31,6 +32,7 @@
 @include props.module();
 @include nav.module();
 @include header.module();
+@include main.module();
 @include table.module();
 @include details-summary.module();
 @include content.module();
@@ -50,4 +52,3 @@
 @include list.module();
 @include scrollbar.module();
 @include breadcrumb.module();
-

@@ -5,9 +5,7 @@
 ### Default Layout
 
 ```html preview
-<div>
-  Layout
-</div>
+<div>Layout</div>
 ```
 
 ## Layout Variables
@@ -28,10 +26,16 @@ Layout {
 
 ## Examples
 
-----
+```html preview
+<main>
+  <section>content</section>
+  <aside>Sidebar</aside>
+</main>
+```
+
+---
+
 ## See also
-
-
 
 [MDN GUIDELINES AND SPECFICATIONS](https: ':_target="_blank"')
 
@@ -39,4 +43,4 @@ Layout {
 
 [ACCESSIBILITY GUIDE](https://, ':_target="_blank"')
 
-----
+---

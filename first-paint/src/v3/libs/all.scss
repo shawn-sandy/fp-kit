@@ -3,6 +3,7 @@
 @use "../modules/global.scss";
 @use "../styles/layout.scss";
 @use "../modules/header.scss";
+@use "../modules/main.scss";
 @use "../modules/container";
 @use "../modules/button";
 @use "../modules/checkbox";
@@ -33,6 +34,7 @@
 // @include props.module();
 @include nav.module();
 @include header.module();
+@include main.module();
 @include table.module();
 @include details-summary.module();
 @include content.module();
