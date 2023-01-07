@@ -1,8 +1,10 @@
 @use './layout';
 
 @use './variants/base';
+@use './variants/fluid';
 @use './variants/palettes';
 
 @include base.module;
+@include fluid.module;
 @include palettes.module;
 @include layout.module;

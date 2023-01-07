@@ -31,7 +31,7 @@ Layout {
 ```html preview
 <main>
   <section>
-    <article>
+    <artpicle data-fluid>
       <article>
         <p>
           Irure exercitation anim consectetur enim pariatur quis quis. Ipsum
@@ -53,7 +53,7 @@ Layout {
           excepteur.
         </p>
       </aside>
-    </article>
+    </artpicle>
   </section>
 </main>
 ```

@@ -975,15 +975,9 @@ header:not([arial-label], dialog header)[data-variant],
   font-size: var(--vfs);
 }
 main [data-content] {
-  display: var(--main-display, block);
   gap: var(--main-gap, 2rem);
 }
-@media (min-width: 768px) {
-  main [data-content] {
-    display: block;
-  }
-}
-main [data-content] [sidebar],
+main [data-content] [data-sidebar],
 main [data-content] aside {
   width: var(--sidebar-w, 100%);
   min-width: 30vw;

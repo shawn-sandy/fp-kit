@@ -15,15 +15,10 @@
 
 
   [data-content] {
-    @media (min-width: 768px) {
-      display: block;
-    }
-    display: var(--main-display, block);
     gap: var(--main-gap, 2rem);
-
-    [sidebar],
+    [data-sidebar],
     aside {
-      width: var(--sidebar-w, clamp(100%, 20%, 30%));
+      width: var(--sidebar-w, clamp(100%, 30%, 25%));
       min-width: 30vw;
     }
   }
