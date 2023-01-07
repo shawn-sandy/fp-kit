@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.27](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.26...@shawnsandy/first-paint@2.17.27) (2023-01-07)
+
+### Features
+
+- 👷‍♂️ add module to style main-content ([a00bcea](https://github.com/shawn-sandy/fp-kit/commit/a00bcea615ccce57f1194e5cda61d7ea8de5c4b7))
+- 👷‍♂️ add module to style main-content ([4ad7e19](https://github.com/shawn-sandy/fp-kit/commit/4ad7e199d9c02cc5aad2a5da6189db7679476e7b))
+- 👷‍♂️ add module to style main-content ([b867e70](https://github.com/shawn-sandy/fp-kit/commit/b867e70f8542d04671ba7d62c9febda21230a13b))
+- 👷‍♂️ add module to style main-content ([61afe33](https://github.com/shawn-sandy/fp-kit/commit/61afe331f4cf83cc4e8173250c6cb84736b0672c))
+- 🚧 content styles ([e39af75](https://github.com/shawn-sandy/fp-kit/commit/e39af75f13e77168676318975813abd062470c6f))
+- 🚧 main module ([b00bf18](https://github.com/shawn-sandy/fp-kit/commit/b00bf18d28928e533a8fa8cdf33092e95681546a))
+
 ## [2.17.26](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.25...@shawnsandy/first-paint@2.17.26) (2023-01-04)
 
 ### Code Refactoring
