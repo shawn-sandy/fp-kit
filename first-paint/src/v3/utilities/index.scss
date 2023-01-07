@@ -3,6 +3,7 @@
 @use './variants/base';
 @use './variants/fluid';
 @use './variants/palettes';
+@use './variants/styles';
 
 @include base.module;
 @include fluid.module;
