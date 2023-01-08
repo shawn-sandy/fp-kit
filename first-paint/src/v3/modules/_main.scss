@@ -15,11 +15,12 @@
 
 
   [data-content] {
+    display: var(--main-dsp, grid);
     gap: var(--main-gap, 2rem);
-    [data-sidebar],
-    aside {
-      width: var(--sidebar-w, clamp(100%, 30%, 25%));
-      min-width: 30vw;
+    grid-template-columns: var(--main-grid-cols, 2fr 1fr);
+
+    @media (max-width: 768px) {
+      --main-grid-cols: 1fr;
     }
   }
 

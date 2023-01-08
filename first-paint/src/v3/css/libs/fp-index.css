@@ -1064,12 +1064,14 @@ header:not([arial-label], dialog header)[data-variant],
 }
 
 main [data-content] {
+  display: var(--main-dsp, grid);
   gap: var(--main-gap, 2rem);
+  grid-template-columns: var(--main-grid-cols, 2fr 1fr);
 }
-main [data-content] [data-sidebar],
-main [data-content] aside {
-  width: var(--sidebar-w, 100%);
-  min-width: 30vw;
+@media (max-width: 768px) {
+  main [data-content] {
+    --main-grid-cols: 1fr;
+  }
 }
 
 table {

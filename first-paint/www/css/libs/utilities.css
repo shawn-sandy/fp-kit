@@ -70,6 +70,11 @@
     display: var(--scale-dsp, flex);
   }
 }
+@media (max-width: 769px) {
+  [data-fluid] {
+    --scale-dsp: block;
+  }
+}
 [data-fluid~='block'] {
   --scale-dsp: block;
 }
