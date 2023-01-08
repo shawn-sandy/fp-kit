@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.28](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.27...@shawnsandy/first-paint@2.17.28) (2023-01-08)
+
+### Features
+
+- 🚧 change data-content to grid ([44796de](https://github.com/shawn-sandy/fp-kit/commit/44796de936371585f5dd3de6b3b74655856a54f1))
+- 🚧 change data-content to grid ([45877b1](https://github.com/shawn-sandy/fp-kit/commit/45877b15a9805c59bd3feb794d804978d9c3e439))
+
 ## [2.17.27](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.26...@shawnsandy/first-paint@2.17.27) (2023-01-07)
 
 ### Features
