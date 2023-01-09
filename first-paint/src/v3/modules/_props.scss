@@ -30,9 +30,22 @@
   background-color: var(--bg);
   background-image: var(--bg-img);
   border: var(--bdr);
+  border-top: var(--bdr-t);
+  border-bottom: var(--bdr-b);
+  border-left: var(--bdr-l);
+  border-right: var(--bdr-r);
+  border-radius: var(--rds);
   outline: var(--line);
   text-align: var(--align);
   margin: var(--spc);
+  padding-inline: var(--px);
+  padding-block: var(--py);
+  margin: var(--m, 0);
+  margin-block: var(--my, 0);
+  margin-inline: var(--mx, 0);
+  margin-top: var(--mt, 0);
+  margin-bottom: var(--mb, 0);
+
 
   // prefix rules
   --clip-path: initial;

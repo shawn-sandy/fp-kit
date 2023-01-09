@@ -4,9 +4,16 @@
   --lh: 1.7;
   --spc: initial;
   --mg: 0;
-  --pd: 1rem;
-  --px: initial;
-  --py: initial;
+  --m: 0;
+  --mx: 0;
+  --my: 0;
+  --pd: 0;
+  --px: 0;
+  --py: 0;
+  --py-s: 0;
+  --px-s: 0;
+  --py-e: 0;
+  --px-e: 0;
   --cl: inherit; // font-size
   --bg: initial;
   --bg-img: initial;
@@ -16,6 +23,10 @@
   --bdr-w: thin;
   --bdr-s: solid;
   --bdr-cl: lightgray;
+  --bdr-t: inherit;
+  --bdr-b: inherit;
+  --bdr-l: inherit;
+  --bdr-r: inherit;
   --appearance: none;
   --link-cl: blue-royal-blue;
   --link-hover-cl: blue;
@@ -24,57 +35,42 @@
   --min-w-800: min(100%, calc(800rem / 16));
   --w-800: min(100%, calc(800rem / 16));
   --align: initial;
-  --content-w:  clamp(90vw, 80vw, 70vw);
+  --content-w: clamp(90vw, 80vw, 70vw);
+
   // --hue --sat --light --alpha
 
   --hsla: (var(--h), var(--a));
-  --fp-dark: hsla(
-    var(210),
-    var(--s, 11%),
-    var(--l, 0%),
-    var(--a, 1)
-  );
-  --fp-light: hsla(
-    var(--light-h, 0),
-    var(--light-s, 0),
-    var(--light-l, 100%),
-    var(--light-a, 1)
-  );
+  --fp-dark: hsla(var(210),
+      var(--s, 11%),
+      var(--l, 0%),
+      var(--a, 1));
+  --fp-light: hsla(var(--light-h, 0),
+      var(--light-s, 0),
+      var(--light-l, 100%),
+      var(--light-a, 1));
   // hsl(216deg 98% 52%)
-  --fp-primary: hsla(
-    var(--primary-h, 216),
-    var(--primary-s, 98%),
-    var(--primary-l, 52%),
-    var(--primary-a, 1)
-  );
-  --fp-secondary: hsla(
-    var(--secondary-h, 210),
-    var(--secondary-s, 14.3%),
-    var(--secondary-l, 53.3%),
-    var(--secondary-a, 1)
-  );
-  --fp-success: hsla(
-    var(--success-h, 120),
-    var(--success-s, 100%),
-    var(--success-l, 50%),
-    var(--success-a, 1)
-  );
-  --fp-info: hsla(
-    var(--info-h, 180),
-    var(--info-s, 100%),
-    var(--info-l, 50%),
-    var(--info-a, 1)
-  );
-  --fp-warning: hsla(
-    var(--warning-h, 30),
-    var(--warning-s, 100%),
-    var(--warning-l, 50%),
-    var(--warning-a, 1)
-  );
-  --fp-danger: hsla(
-    var(--h, 0),
-    var(--s, 100%),
-    var(--l, 50%),
-    var(--a, 1)
-  );
+  --fp-primary: hsla(var(--primary-h, 216),
+      var(--primary-s, 98%),
+      var(--primary-l, 52%),
+      var(--primary-a, 1));
+  --fp-secondary: hsla(var(--secondary-h, 210),
+      var(--secondary-s, 14.3%),
+      var(--secondary-l, 53.3%),
+      var(--secondary-a, 1));
+  --fp-success: hsla(var(--success-h, 120),
+      var(--success-s, 100%),
+      var(--success-l, 50%),
+      var(--success-a, 1));
+  --fp-info: hsla(var(--info-h, 180),
+      var(--info-s, 100%),
+      var(--info-l, 50%),
+      var(--info-a, 1));
+  --fp-warning: hsla(var(--warning-h, 30),
+      var(--warning-s, 100%),
+      var(--warning-l, 50%),
+      var(--warning-a, 1));
+  --fp-danger: hsla(var(--h, 0),
+      var(--s, 100%),
+      var(--l, 50%),
+      var(--a, 1));
 }
