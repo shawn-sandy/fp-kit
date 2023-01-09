@@ -19,6 +19,10 @@
     gap: var(--main-gap, 2rem);
     grid-template-columns: var(--main-grid-cols, 2fr 1fr);
 
+    aside {
+      min-width: var(--sidebar-min-width, 25vw);
+    }
+
     @media (max-width: 768px) {
       --main-grid-cols: 1fr;
     }
