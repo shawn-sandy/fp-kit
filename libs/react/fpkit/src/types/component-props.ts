@@ -16,6 +16,10 @@ export interface ComponentProps {
    */
   styles?: {}
   /**
+   * Default styles object
+   */
+  defaultStyles?: {}
+  /**
    * Component class attribute
    */
   classes?: String

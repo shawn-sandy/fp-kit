@@ -49,13 +49,14 @@ const FP: FPComponent = React.forwardRef(
       renderStyles = true,
       styles,
       children,
+      defaultStyles,
       ...props
     }: FPProps<C>,
     ref?: PolymorphicRef<C>
   ) => {
     const Component = as || "div"
 
-    const styleObj = renderStyles ? styles : {} as React.CSSProperties
+    const styleObj = renderStyles ? {...defaultStyles, ...styles} : {} as React.CSSProperties
 
     return (
       <Component ref={ref} style={styleObj} {...props} >
