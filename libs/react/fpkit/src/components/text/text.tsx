@@ -5,7 +5,7 @@ export interface TextProps extends ComponentProps {
   /**
    * HTML element
    */
-  elem?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div' | 'a';
+  elem?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'a' | 'strong' | 'em' | 'small' | 's' | 'cite' | 'q' | 'dfn' | 'abbr' | 'time' | 'code' | 'var' | 'samp' | 'kbd' | 'sub' | 'sup' | 'i' | 'b' | 'u' | 'mark' | 'ruby' | 'rt' | 'rp' | 'bdi' | 'bdo' | 'span' | 'br' | 'wbr' | 'blockquote';
 }
 
 export const Text = ({ elem = 'p', id, children, ...props }: TextProps) => {
