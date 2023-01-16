@@ -37,12 +37,11 @@ import '@shawnsandy/first-paint/dist/css/components/dialog.min.css'
     Open Dialog
   </button>
   <dialog id="dialog-elm">
-    <header>Example modal</header>
+    <h3>Example modal</h3>
     <p>
       Native HTML5 Modals (Dialogs) are finally here and available across all
       ever green browsers and they are fun!
     </p>
-
     <button type="button" class="btn btn-close" onclick="closeDialog(this)">
       Close
     </button>
@@ -55,11 +54,9 @@ import '@shawnsandy/first-paint/dist/css/components/dialog.min.css'
 ```javascript
 // eslint-disable-next-line no-unused-vars
 function openDialog(target, elm) {
-  console.log(target, elm)
   document.querySelector(target).showModal()
 }
 
-// eslint-disable-next-line no-unused-vars
 function closeDialog(elm) {
   elm.closest('dialog').close()
 }

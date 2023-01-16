@@ -62,7 +62,7 @@ export const Button = ({
   type,
   children,
   styles,
-  disabled = false,
+  disabled,
   classes,
   pointerDown,
   pointerOver,

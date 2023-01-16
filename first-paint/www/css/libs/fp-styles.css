@@ -457,7 +457,7 @@ section:not(nav) {
   background-image: var(--diag-bg-img, none);
   width: var(--diag-w, clamp(18.75rem, 60vw, 46.25rem));
   margin: var(--spc, auto);
-  padding: 0;
+  padding: var(--diag-p, 1.5rem);
   border: var(--diag-border, 1px solid var(--fp-snow));
 }
 .fp-dialog > :where(div, section, header, footer) {

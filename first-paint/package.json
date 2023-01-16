@@ -14,8 +14,8 @@
   "author": "shawn-sandy <creative@shawnsandy.com>",
   "homepage": "https://firstpaint.dev",
   "license": "MIT",
-  "style": "/v3/css/first-paint.min.css",
-  "main": "/v3/css/first-paint.min.css",
+  "style": "/v3/css/index.min.css",
+  "main": "/v3/css/index.min.css",
   "directories": {
     "lib": "dist"
   },

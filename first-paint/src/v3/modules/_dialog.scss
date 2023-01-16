@@ -18,7 +18,7 @@
   width: var(--diag-w, clamp(calc(300rem / 16), 60vw, calc(740rem / 16)));
   margin: var(--spc, auto);
 
-  padding: 0;
+  padding: var(--diag-p, 1.5rem);
   border: var(--diag-border, 1px solid var(--fp-snow));
   & > :where(div, section, header, footer) {
     padding-inline: var(--diag-x, 1.5rem);
