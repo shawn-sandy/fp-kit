@@ -9,18 +9,18 @@ import { within, userEvent } from '@storybook/testing-library'
  */
 import { expect } from '@storybook/jest'
 
-import { Header } from './landmarks'
+import { Main } from './landmarks'
 
-const meta: Meta<typeof Header> = {
+const meta: Meta<typeof Main> = {
   title: 'FP.React Components/Layout/Header',
-  component: Header,
+  component: Main,
   args: {
-    children: 'Default Header',
-    'data-testid': 'banner'
+    children: 'Main Landmark',
+    'data-testid': 'main'
   },
 }
 
-const headerChildren = () => (
+const mainChildren = () => (
   <>
     <h2>Header Title</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, unde?</p>
@@ -28,18 +28,18 @@ const headerChildren = () => (
 )
 
 export default meta
-type Story = StoryObj<typeof Header>
+type Story = StoryObj<typeof Main>
 
-export const Default: Story = {}
+export const MainLandmark: Story = {}
 
-export const HeaderWithChildren: Story = {
+export const MainWithChildren: Story = {
   args: {
-    children: headerChildren(),
+    children: mainChildren(),
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
-    const header = canvas.getByRole('banner')
-    expect(header).toBeInTheDocument()
+    const main = canvas.getByRole('main')
+    expect(main).toBeInTheDocument()
     const title = canvas.getByRole('heading')
     expect(title).toBeInTheDocument()
     expect(title).toHaveTextContent('Header Title')

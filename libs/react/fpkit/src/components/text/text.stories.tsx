@@ -1,13 +1,27 @@
-import { StoryObj, Meta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react'
 
-import {Text} from './text';
+import { Text, Title } from './text'
 
 const meta: Meta<typeof Text> = {
-    title: 'FP.React Components/Text',
-    component: Text
-};
+  title: 'FP.React Components/TextComponents',
+  component: Text,
+  subcomponents: { Title },
+}
 
-export default meta;
-type Story = StoryObj<typeof Text>;
+export default meta
+type Story = StoryObj<typeof Text>
 
-export const TextComponent: Story = {};
+export const Default: Story = {
+  args: {
+    text: 'Default Text'
+  },
+}
+
+export const TitleText: Story = {
+  render: () => (
+    <>
+      <Text elm="h1">Default Title</Text>
+      {/* <Title>Default Title</Title> */}
+    </>
+  ),
+}
