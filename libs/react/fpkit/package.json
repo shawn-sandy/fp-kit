@@ -16,7 +16,8 @@
     "test:ui": "vitest --coverage --ui",
     "test:coverage": "vitest --coverage",
     "test:ui:coverage": "vitest --coverage --ui",
-    "test:snapshot": "vitest --run --update"
+    "test:snapshot": "vitest --run --update",
+    "release": "npm publish"
   },
   "dependencies": {
     "@shawnsandy/first-paint": "^2.17.30",
@@ -81,5 +82,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "94d4e7fe5e4e2dfe5b067f1408389f24bd511785"
+  "gitHead": "ef8ae321875dd11b2844e4b4328092a5cee1d55d"
 }
