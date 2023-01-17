@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.42](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.41...@fpkit/react@0.2.42) (2023-01-17)
+
+### Features
+
+- 🌟 add text/title component to index.ts ([92c9dcc](https://github.com/shawn-sandy/fpkit/commit/92c9dcc9652df8be962506c8eea03e79ce5caa68))
+- 📄 add text/title component to index.ts ([2b318f6](https://github.com/shawn-sandy/fpkit/commit/2b318f670e887ed1edd9859a96e9796b7e9eb545))
+
 ## [0.2.41](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.40...@fpkit/react@0.2.41) (2023-01-17)
 
 ### Bug Fixes
