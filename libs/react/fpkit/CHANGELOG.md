@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.41](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.40...@fpkit/react@0.2.41) (2023-01-17)
+
+### Bug Fixes
+
+- ❌ add [@ts-ignore](https://github.com/ts-ignore) to landmarks/main.stories.tsx ([00aa221](https://github.com/shawn-sandy/fpkit/commit/00aa221a5d3043848772e698ddf4ae8e18064970))
+
+### Features
+
+- ♻️ update the padding of the dialog component ([e985563](https://github.com/shawn-sandy/fpkit/commit/e9855634cd9f64bfc4725dede6f2ac549dd603cb))
+- ➕ add landmark component to modules ([5c4120b](https://github.com/shawn-sandy/fpkit/commit/5c4120b791338b978eec30d8476b3427bac84b66))
+- 🏗️ update layout components/stories ([82335a4](https://github.com/shawn-sandy/fpkit/commit/82335a49c1259b8ca5a99fa56838449c75be02f3))
+- 🚧 add landmarks and text components ([1c81f84](https://github.com/shawn-sandy/fpkit/commit/1c81f8433ea75e5f376058644012ff89c18c2c1e))
+- 🚧 add text component ([66e76ca](https://github.com/shawn-sandy/fpkit/commit/66e76caf77d356fa157f90e9c1ffff9de2bc9c5b))
+- 🚧 update several default props ([d05f9d4](https://github.com/shawn-sandy/fpkit/commit/d05f9d42fac0277153597fb7bbc68d6630cb8138))
+- 🚧 update several default props ([22e96f2](https://github.com/shawn-sandy/fpkit/commit/22e96f2df5f56fad95134155aa3e0a66f483ac8d))
+- render the styleObj as react.CSSProperties ([b9a995d](https://github.com/shawn-sandy/fpkit/commit/b9a995de301a7cd8fb0235d56288af604f4059a9))
+
 ## [0.2.40](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.39...@fpkit/react@0.2.40) (2023-01-09)
 
 **Note:** Version bump only for package @fpkit/react

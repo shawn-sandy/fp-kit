@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.30](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.29...@shawnsandy/first-paint@2.17.30) (2023-01-17)
+
+### Features
+
+- ♻️ update the padding of the dialog component ([e985563](https://github.com/shawn-sandy/fp-kit/commit/e9855634cd9f64bfc4725dede6f2ac549dd603cb))
+- 🚧 update several default props ([fd71338](https://github.com/shawn-sandy/fp-kit/commit/fd71338db40a55e11e21a3b9f364a55ff7bf6340))
+- 🚧 update several default props ([30dbfb2](https://github.com/shawn-sandy/fp-kit/commit/30dbfb20b35ef5dd9369c312a0db86d609f58727))
+
 ## [2.17.29](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.28...@shawnsandy/first-paint@2.17.29) (2023-01-09)
 
 ### Features
