@@ -15,6 +15,7 @@ const meta: Meta<typeof Header> = {
   title: 'FP.React Components/Layout/Header',
   component: Header,
   args: {
+    // @ts-ignore
     children: 'Default Header',
     'data-testid': 'banner'
   },
@@ -34,7 +35,8 @@ export const Default: Story = {}
 
 export const HeaderWithChildren: Story = {
   args: {
-    children: headerChildren(),
+    // @ts-ignore
+    children: headerChildren()
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)

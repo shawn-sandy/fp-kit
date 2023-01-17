@@ -15,6 +15,7 @@ const meta: Meta<typeof Main> = {
   title: 'FP.React Components/Layout/Header',
   component: Main,
   args: {
+    // @ts-ignore
     children: 'Main Landmark',
     'data-testid': 'main'
   },
@@ -34,6 +35,7 @@ export const MainLandmark: Story = {}
 
 export const MainWithChildren: Story = {
   args: {
+    // @ts-ignore
     children: mainChildren(),
   },
   play: async ({ canvasElement }) => {
