@@ -44,3 +44,10 @@ export const Section = ({ children, ...props }: { children: React.ReactNode }) =
 export const Article = ({ children, ...props }: { children: React.ReactNode }) => {
   return <FP as="article" {...props}>{children}</FP>;
 };
+
+Header.displayName = "Header";
+Main.displayName = "Main";
+Footer.displayName = "Footer";
+Aside.displayName = "Aside";
+Section.displayName = "Section";
+Article.displayName = "Article";
