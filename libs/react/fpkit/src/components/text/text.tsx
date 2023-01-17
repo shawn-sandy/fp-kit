@@ -58,10 +58,10 @@ export interface TitleProps extends TextProps {
   /**
    * HTML headings
    */
-  elm?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  elm?: | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
-export const Title = ({ elm = 'h3', children, ...props }: TitleProps) => {
+export const Title = ({ elm, children, ...props }: TitleProps) => {
   return <Text elm={elm} {...props}>{children}</Text>
 }
 
