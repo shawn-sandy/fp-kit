@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.31](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.30...@shawnsandy/first-paint@2.17.31) (2023-01-17)
+
+### Features
+
+- ♻️ set th border radius to 0 ([8faf26f](https://github.com/shawn-sandy/fp-kit/commit/8faf26fc6d5e0d79e66e0f1a17c1219472a7dbd1))
+
 ## [2.17.30](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.29...@shawnsandy/first-paint@2.17.30) (2023-01-17)
 
 ### Features
