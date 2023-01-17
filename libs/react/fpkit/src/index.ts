@@ -11,7 +11,7 @@ export { RenderTable as TBL } from './components/tables/table'
 export { Input } from './components/form/inputs'
 export { Field } from './components/form/fields'
 export { Textarea } from './components/form/textarea'
-// export {Text, Title} from './components/text/text'
+export {Text, Title} from './components/text/text'
 export { Header, Main, Footer, Article, Aside, Section } from './components/layout/landmarks'
 
 export { default as FP } from './components/fp'
