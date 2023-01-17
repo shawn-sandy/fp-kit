@@ -13,7 +13,7 @@ module.exports = {
     '@geometricpanda/storybook-addon-badges',
     '@storybook/addon-storysource',
     '@storybook/addon-coverage',
-    '@storybook/preset-scss',
+    'storybook-addon-sass-postcss',
   ],
   features: {
     interactionsDebugger: true, // 👈 Enable playback controls
