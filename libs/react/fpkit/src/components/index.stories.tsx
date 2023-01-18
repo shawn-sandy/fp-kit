@@ -1,7 +1,7 @@
 import React from 'react'
-import '@shawnsandy/first-paint/dist/css/components/content.min.css'
-import '@shawnsandy/first-paint/dist/css/components/list.min.css'
-import '@shawnsandy/first-paint/dist/css/libs/fp-core.min.css'
+// import '@shawnsandy/first-paint/dist/css/components/content.min.css'
+// import '@shawnsandy/first-paint/dist/css/components/list.min.css'
+// import '@shawnsandy/first-paint/dist/css/libs/fp-core.min.css'
 
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'

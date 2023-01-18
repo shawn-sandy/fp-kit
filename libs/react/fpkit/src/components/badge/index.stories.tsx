@@ -1,5 +1,5 @@
 import React from "react"
-import '@shawnsandy/first-paint/dist/css/components/badge.min.css'
+// import '@shawnsandy/first-paint/dist/css/components/badge.min.css'
 import { BADGE } from "@geometricpanda/storybook-addon-badges"
 
 import {
