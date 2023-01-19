@@ -1,6 +1,8 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
 
+// import 
+
 export interface InputProps extends Omit<ComponentProps, 'children'> {
   /**
    * The type of the input.

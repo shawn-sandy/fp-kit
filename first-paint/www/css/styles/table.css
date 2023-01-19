@@ -10,7 +10,7 @@
   --tbl-td-py: 1rem;
   --tbl-td-px: 1rem;
   --bdr: none;
-  --rds: 1rem;
+  --rds: 0rem;
   --tbl-cap-bg: transparent;
   --tbl-hd-bg: whitesmoke;
   --tbl-cap-fs: var(--fs);
@@ -28,7 +28,7 @@
   --tbl-td-py: 1rem;
   --tbl-td-px: 1rem;
   --bdr: none;
-  --rds: 1rem;
+  --rds: 0rem;
   --tbl-cap-bg: transparent;
   --tbl-hd-bg: whitesmoke;
   --tbl-cap-fs: var(--fs);

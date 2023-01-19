@@ -1,5 +1,7 @@
 import React from "react"
-// import '@shawnsandy/first-paint/dist/css/components/select.min.css'
+// import '@shawnsandy/first-paint/src/v3/components/_select.scss'
+import '@shawnsandy/first-paint/src/v3/components/select.scss'
+
 
 import {
   ComponentStory,

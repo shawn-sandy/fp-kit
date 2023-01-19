@@ -1,6 +1,8 @@
 import FP from '../fp'
 import { SharedInputProps } from '../../types'
 
+import './style.scss'
+
 export interface SelectProps extends SharedInputProps {
   /**
    * Select onChange event props
