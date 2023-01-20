@@ -31,7 +31,7 @@ const headerChildren = () => (
 export default meta
 type Story = StoryObj<typeof Header>
 
-export const DefaultHeader: Story = {}
+export const LandmarkDefault: Story = {}
 
 export const HeaderWithChildren: Story = {
   args: {
@@ -44,6 +44,6 @@ export const HeaderWithChildren: Story = {
     expect(header).toBeInTheDocument()
     const title = canvas.getByRole('heading')
     expect(title).toBeInTheDocument()
-    expect(title).toHaveTextContent('Header Title')
-  },
+    expect(title).toHaveTextContent(/header title/i)
+  }
 }

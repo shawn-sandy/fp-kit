@@ -23,7 +23,7 @@ export const Main = ({ children, ...props }: { children: React.ReactNode }) => {
 export const Footer = ({ children, ...props }: { children: React.ReactNode }) => {
   return (
     <FP as="footer" {...props}>
-      <FP as="section">{children}</FP>
+      <FP as="section">{children || "Copyright © 2022"}</FP>
     </FP>
   );
 };
