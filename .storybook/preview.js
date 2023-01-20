@@ -1,4 +1,5 @@
-// import './style.css'
+import './style.css'
+import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

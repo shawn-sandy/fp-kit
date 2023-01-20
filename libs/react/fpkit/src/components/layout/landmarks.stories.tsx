@@ -12,7 +12,7 @@ import { expect } from '@storybook/jest'
 import { Header } from './landmarks'
 
 const meta: Meta<typeof Header> = {
-  title: 'FP.React Components/Layout/Header',
+  title: 'FP.React Components/Layout/Landmarks',
   component: Header,
   args: {
     // @ts-ignore
@@ -31,7 +31,7 @@ const headerChildren = () => (
 export default meta
 type Story = StoryObj<typeof Header>
 
-export const Default: Story = {}
+export const DefaultHeader: Story = {}
 
 export const HeaderWithChildren: Story = {
   args: {

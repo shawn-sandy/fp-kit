@@ -12,7 +12,7 @@ import { expect } from '@storybook/jest'
 import {Title} from './text';
 
 const meta: Meta<typeof Title> = {
-    title: 'FP.React Components/Title',
+    title: 'FP.React Components/Content/Titles',
     component: Title
 };
 

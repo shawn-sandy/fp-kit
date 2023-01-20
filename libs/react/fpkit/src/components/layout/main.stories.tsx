@@ -12,7 +12,7 @@ import { expect } from '@storybook/jest'
 import { Main } from './landmarks'
 
 const meta: Meta<typeof Main> = {
-  title: 'FP.React Components/Layout/Header',
+  title: 'FP.React Components/Layout/Landmarks',
   component: Main,
   args: {
     // @ts-ignore
