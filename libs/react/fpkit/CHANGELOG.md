@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.46](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.45...@fpkit/react@0.2.46) (2023-01-21)
+
+### Features
+
+- 🌟 add styles props to text/landmarks components ([4ce8ab4](https://github.com/shawn-sandy/fpkit/commit/4ce8ab43241350728b89e010ed67e38e4a7d4bc6))
+
 ## [0.2.45](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.44...@fpkit/react@0.2.45) (2023-01-21)
 
 **Note:** Version bump only for package @fpkit/react
