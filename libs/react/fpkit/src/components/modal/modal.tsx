@@ -60,7 +60,7 @@ export const Modal = ({
           {modalHeader}
           {children}
           {modalFooter ?? (
-            <footer>
+            <div>
               <Button
                 type="button"
                 pointerDown={() => {
@@ -69,7 +69,7 @@ export const Modal = ({
               >
                 {closeChild || 'Close'}
               </Button>{' '}
-            </footer>
+            </div>
           )}
         </section>
       </Dialog>

@@ -16,22 +16,28 @@ const meta: Meta<typeof Main> = {
   component: Main,
   args: {
     // @ts-ignore
-    children: 'Main Landmark',
+    children: (<section>The main HTML element represents the dominant content of the body of a document.</section>),
     'data-testid': 'main'
   },
 }
 
 const mainChildren = () => (
-  <>
+  <section>
     <h2>Header Title</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, unde?</p>
-  </>
+  </section>
 )
 
 export default meta
 type Story = StoryObj<typeof Main>
 
-export const MainLandmark: Story = {}
+export const MainLandmark: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const main = canvas.getByRole('main')
+    expect(main).toBeInTheDocument()
+  }
+}
 
 export const MainWithChildren: Story = {
   args: {
