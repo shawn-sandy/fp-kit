@@ -55,7 +55,7 @@
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react": "15.5.1",
     "@nrwl/web": "15.5.1",
-    "@shawnsandy/first-paint": "^2.17.31",
+    "@shawnsandy/first-paint": "^2.17.32",
     "@storybook/addon-a11y": "^6.5.12",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-coverage": "^0.0.4",
@@ -179,5 +179,8 @@
     },
     "postcss": "8.4.19"
   },
-  "sideEffects": ["*.css", "*.scss"]
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ]
 }
