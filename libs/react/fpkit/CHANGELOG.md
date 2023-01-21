@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.44](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.43...@fpkit/react@0.2.44) (2023-01-21)
+
+### Bug Fixes
+
+- :lab_coat: error loading css files in storybook ([b6113ca](https://github.com/shawn-sandy/fpkit/commit/b6113ca75dbf4b4140dfef28d01278c0d0b2f9d1))
+- ❌ error loading css files in storybook ([886f394](https://github.com/shawn-sandy/fpkit/commit/886f394adf5c5534e168ba74ce58e0fcf972bd35))
+
+### Features
+
+- add story for footer component ([14e8a7b](https://github.com/shawn-sandy/fpkit/commit/14e8a7b8eb23b0b16f115f47de314a747c3ad2bf))
+- storybook global css, landmark, text update ([643535e](https://github.com/shawn-sandy/fpkit/commit/643535e0afc6012950e39f2894ba7e612e0bd905))
+
 ## [0.2.43](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.42...@fpkit/react@0.2.43) (2023-01-17)
 
 **Note:** Version bump only for package @fpkit/react

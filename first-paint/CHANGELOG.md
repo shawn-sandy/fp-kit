@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.32](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.31...@shawnsandy/first-paint@2.17.32) (2023-01-21)
+
+### Bug Fixes
+
+- :lab_coat: error loading css files in storybook ([b6113ca](https://github.com/shawn-sandy/fp-kit/commit/b6113ca75dbf4b4140dfef28d01278c0d0b2f9d1))
+
 ## [2.17.31](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.30...@shawnsandy/first-paint@2.17.31) (2023-01-17)
 
 ### Features
