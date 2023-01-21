@@ -4,45 +4,56 @@
 
 import FP from "../fp";
 
-export const Header = ({ children, ...props }: { children: React.ReactNode }) => {
+
+
+export interface LandmarkProps {
+  children: React.ReactNode;
+  styles?: {};
+}
+
+const getStyles = (styles: any) => {
+  return styles as React.CSSProperties;
+}
+
+export const Header = ({ children, styles, ...props }: LandmarkProps) => {
   return (
-    <FP as="header" {...props}>
+    <FP as="header" {...props} style={getStyles(styles)}>
       <FP as="section">{children}</FP>
     </FP>
   );
 };
 
-export const Main = ({ children, ...props }: { children: React.ReactNode }) => {
+export const Main = ({ children, styles, ...props }: LandmarkProps) => {
   return (
-    <FP as="main" {...props}>
+    <FP as="main" style={getStyles(styles)} {...props}>
       {children}
     </FP>
   );
 };
 
-export const Footer = ({ children, ...props }: { children: React.ReactNode }) => {
+export const Footer = ({ children, styles, ...props }: LandmarkProps) => {
   return (
-    <FP as="footer" {...props}>
+    <FP as="footer" style={getStyles(styles)} {...props}>
       <FP as="section">{children || "Copyright © 2022"}</FP>
     </FP>
   );
 };
 
-export const Aside = ({ children, ...props }: { children: React.ReactNode }) => {
+export const Aside = ({ children, styles, ...props }: LandmarkProps) => {
   return (
-    <FP as="aside" {...props}>
+    <FP as="aside" style={getStyles(styles)} {...props}>
       <FP as="section">{children}</FP>
     </FP>
   );
 };
 
-export const Section = ({ children, ...props }: { children: React.ReactNode }) => {
-  return <FP as="section" {...props}>{children}</FP>;
+export const Section = ({ children, styles, ...props }: LandmarkProps) => {
+  return <FP as="section" style={getStyles(styles)} {...props}>{children}</FP>;
 };
 
 
-export const Article = ({ children, ...props }: { children: React.ReactNode }) => {
-  return <FP as="article" {...props}>{children}</FP>;
+export const Article = ({ children, styles, ...props }: LandmarkProps) => {
+  return <FP as="article" style={getStyles(styles)} {...props}>{children}</FP>;
 };
 
 Header.displayName = "Header";

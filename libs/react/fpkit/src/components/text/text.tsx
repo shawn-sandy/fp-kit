@@ -1,6 +1,7 @@
+import React from 'react'
 import FP from '../fp'
 
-export interface TextProps  {
+export interface TextProps {
   /**
    * HTML element
    */
@@ -41,14 +42,22 @@ export interface TextProps  {
     | 'span'
     | 'br'
     | 'wbr'
-    | 'blockquote';
-    children?: any;
-    text?: any;
+    | 'blockquote'
+  children?: any
+  text?: any
+  styles?: {}
 }
 
-export const Text = ({ elm = 'p', text, children, ...props }: TextProps) => {
+export const Text = ({
+  elm = 'p',
+  text,
+  styles,
+  children,
+  ...props
+}: TextProps) => {
+  const style = styles as React.CSSProperties
   return (
-    <FP as={elm} {...props}>
+    <FP as={elm} {...props} style={style}>
       {children || text}
     </FP>
   )
@@ -58,11 +67,15 @@ export interface TitleProps extends TextProps {
   /**
    * HTML headings
    */
-  elm?: | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  elm?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
-export const Title = ({ elm, children, ...props }: TitleProps) => {
-  return <Text elm={elm} {...props}>{children}</Text>
+export const Title = ({ elm, children, styles, ...props }: TitleProps) => {
+  return (
+    <Text elm={elm} styles={styles as React.CSSProperties} {...props}>
+      {children}
+    </Text>
+  )
 }
 
 export default Text
