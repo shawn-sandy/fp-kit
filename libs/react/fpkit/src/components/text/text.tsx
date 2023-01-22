@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import FP, { fpStyles } from '../fp'
 
 export interface TextProps {
@@ -6,12 +6,6 @@ export interface TextProps {
    * HTML element
    */
   elm?:
-    | 'h1'
-    | 'h2'
-    | 'h3'
-    | 'h4'
-    | 'h5'
-    | 'h6'
     | 'p'
     | 'span'
     | 'a'
@@ -20,13 +14,8 @@ export interface TextProps {
     | 'small'
     | 's'
     | 'cite'
-    | 'q'
-    | 'dfn'
-    | 'abbr'
     | 'time'
     | 'code'
-    | 'var'
-    | 'samp'
     | 'kbd'
     | 'sub'
     | 'sup'
@@ -34,14 +23,8 @@ export interface TextProps {
     | 'b'
     | 'u'
     | 'mark'
-    | 'ruby'
-    | 'rt'
-    | 'rp'
-    | 'bdi'
-    | 'bdo'
     | 'span'
     | 'br'
-    | 'wbr'
     | 'blockquote'
   children?: any
   text?: any
@@ -56,24 +39,26 @@ export const Text = ({
   ...props
 }: TextProps) => {
   return (
-    <FP as={elm} {...props} styles={styles}>
+    <FP as={elm} styles={styles} {...props}>
       {children || text}
     </FP>
   )
 }
 
-export interface TitleProps extends TextProps {
+export interface TitleProps {
   /**
    * HTML headings
    */
-  elm?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  elm?: | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  children?: ReactNode
+  styles?: {}
 }
 
-export const Title = ({ elm, children, styles = {}, ...props }: TitleProps) => {
+export const Title = ({ elm = 'h3', children, styles = {}, ...props }: TitleProps) => {
   return (
-    <Text elm={elm} styles={styles}>
+    <FP as={elm} styles={styles} {...props}>
       {children}
-    </Text>
+    </FP>
   )
 }
 
