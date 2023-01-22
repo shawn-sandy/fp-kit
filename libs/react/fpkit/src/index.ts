@@ -17,3 +17,4 @@ export { Header, Main, Footer, Article, Aside, Section } from './components/layo
 export { default as FP } from './components/fp'
 export { default as Kit } from './components/fp'
 export { default as Box } from './components/fp'
+export { fpStyles } from './components/fp'

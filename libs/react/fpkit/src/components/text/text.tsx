@@ -1,5 +1,5 @@
 import React from 'react'
-import FP from '../fp'
+import FP, { fpStyles } from '../fp'
 
 export interface TextProps {
   /**
@@ -70,9 +70,9 @@ export interface TitleProps extends TextProps {
   elm?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
-export const Title = ({ elm, children, styles, ...props }: TitleProps) => {
+export const Title = ({ elm, children, styles = {}, ...props }: TitleProps) => {
   return (
-    <Text elm={elm} styles={styles as React.CSSProperties} {...props}>
+    <Text elm={elm} styles={ fpStyles(styles)} {...props}>
       {children}
     </Text>
   )

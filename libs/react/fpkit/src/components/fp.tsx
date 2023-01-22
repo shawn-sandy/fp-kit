@@ -1,46 +1,50 @@
-import React from "react"
-import { ComponentProps } from "../types"
+import React from 'react'
+import { ComponentProps } from '../types'
 
 type PolymorphicRef<C extends React.ElementType> =
-  React.ComponentPropsWithRef<C>["ref"]
+  React.ComponentPropsWithRef<C>['ref']
 
 type AsProp<C extends React.ElementType> = {
   as?: C
 }
 
-type PropsToOmit<
-  C extends React.ElementType,
-  P
-> = keyof (AsProp<C> & P)
+type PropsToOmit<C extends React.ElementType, P> = keyof (AsProp<C> & P)
 
 type PolymorphicComponentProp<
   C extends React.ElementType,
-  Props = {}
+  Props = {},
 > = React.PropsWithChildren<Props & AsProp<C>> &
-  Omit<
-    React.ComponentPropsWithoutRef<C>,
-    PropsToOmit<C, Props>
-  >
+  Omit<React.ComponentPropsWithoutRef<C>, PropsToOmit<C, Props>>
 
 type PolymorphicComponentPropWithRef<
   C extends React.ElementType,
-  Props = {}
+  Props = {},
 > = PolymorphicComponentProp<C, Props> & {
   ref?: PolymorphicRef<C>
 }
 
-type FPProps<C extends React.ElementType> =
-  PolymorphicComponentPropWithRef<
-    C,
-    {
-      renderStyles?: boolean
-      styles?: {}
-    }
-  >
+type FPProps<C extends React.ElementType> = PolymorphicComponentPropWithRef<
+  C,
+  {
+    renderStyles?: boolean
+    styles?: {}
+  }
+>
 
-type FPComponent = <C extends React.ElementType = "span">(
-  props: FPProps<C>
+type FPComponent = <C extends React.ElementType = 'span'>(
+  props: FPProps<C>,
 ) => React.ReactElement | null
+
+// create an object type and make it optional
+type styl = {
+  styles?: {}
+}
+
+export const fpStyles = (styles: styl) => {
+  // if styles is undefined, return an empty object
+  if (styles.styles === undefined) return {} as React.CSSProperties
+  return styles as React.CSSProperties
+}
 
 const FP: FPComponent = React.forwardRef(
   <C extends React.ElementType>(
@@ -52,22 +56,24 @@ const FP: FPComponent = React.forwardRef(
       defaultStyles,
       ...props
     }: FPProps<C>,
-    ref?: PolymorphicRef<C>
+    ref?: PolymorphicRef<C>,
   ) => {
-    const Component = as || "div"
+    const Component = as || 'div'
 
-    const styleObj = renderStyles ? {...defaultStyles, ...styles} : {} as React.CSSProperties
+    const styleObj = renderStyles
+      ? { ...defaultStyles, ...styles }
+      : ({} as React.CSSProperties)
 
     return (
-      <Component ref={ref} style={styleObj} {...props} >
+      <Component ref={ref} style={styleObj} {...props}>
         {children}
       </Component>
     )
-  }
+  },
 )
 export interface BoxProps extends ComponentProps {
-  elm?: "div",
-  renderStyles: true,
+  elm?: 'div'
+  renderStyles: true
 }
 
 export default FP

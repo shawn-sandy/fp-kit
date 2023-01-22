@@ -2,13 +2,13 @@
  * @fileoverview Landmarks components
  */
 
-import FP from "../fp";
+import FP, { fpStyles } from "../fp";
 
 
 
 export interface LandmarkProps {
   children: React.ReactNode;
-  styles?: {};
+  styles: {};
 }
 
 const getStyles = (styles: any) => {
@@ -25,7 +25,7 @@ export const Header = ({ children, styles, ...props }: LandmarkProps) => {
 
 export const Main = ({ children, styles, ...props }: LandmarkProps) => {
   return (
-    <FP as="main" style={getStyles(styles)} {...props}>
+    <FP as="main" style={fpStyles(styles)} {...props}>
       {children}
     </FP>
   );
