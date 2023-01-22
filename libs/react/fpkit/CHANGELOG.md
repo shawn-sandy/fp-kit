@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.50](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.49...@fpkit/react@0.2.50) (2023-01-22)
+
+### Bug Fixes
+
+- 🚨 style props error ([8c5f173](https://github.com/shawn-sandy/fpkit/commit/8c5f173a69e70c69eeb1bd4a39bb8c59d587c9fc))
+
 ## [0.2.49](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.48...@fpkit/react@0.2.49) (2023-01-22)
 
 ### Bug Fixes

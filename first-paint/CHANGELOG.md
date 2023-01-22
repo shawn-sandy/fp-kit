@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.33](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.32...@shawnsandy/first-paint@2.17.33) (2023-01-22)
+
+### Bug Fixes
+
+- 🚨 style props error ([8c5f173](https://github.com/shawn-sandy/fp-kit/commit/8c5f173a69e70c69eeb1bd4a39bb8c59d587c9fc))
+
 ## [2.17.32](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.31...@shawnsandy/first-paint@2.17.32) (2023-01-21)
 
 ### Bug Fixes
