@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.47](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.46...@fpkit/react@0.2.47) (2023-01-22)
+
+### Features
+
+- 🌟 fpStyles method that returns React.CssProperties ([a1a138b](https://github.com/shawn-sandy/fpkit/commit/a1a138b45a2f206ed6e3c9ae6fa2cbe54770033e))
+
 ## [0.2.46](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.45...@fpkit/react@0.2.46) (2023-01-21)
 
 ### Features
