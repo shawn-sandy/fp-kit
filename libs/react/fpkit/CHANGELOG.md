@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.48](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.47...@fpkit/react@0.2.48) (2023-01-22)
+
+### Bug Fixes
+
+- 🚨 remove getStyles replace fpStyles ([f85fdf7](https://github.com/shawn-sandy/fpkit/commit/f85fdf75404d3536821978233393b5c02f7814bf))
+
 ## [0.2.47](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.46...@fpkit/react@0.2.47) (2023-01-22)
 
 ### Features
