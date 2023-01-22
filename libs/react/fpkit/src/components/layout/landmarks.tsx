@@ -2,14 +2,12 @@
  * @fileoverview Landmarks components
  */
 
-import FP, { fpStyles } from "../fp";
+import FP from "../fp";
+import { ComponentProps } from "../../types";
 
 
 
-export interface LandmarkProps {
-  children: React.ReactNode;
-  styles?: {};
-}
+export interface LandmarkProps extends ComponentProps {}
 
 const getStyles = (styles: any) => {
   return styles as React.CSSProperties;
@@ -17,7 +15,7 @@ const getStyles = (styles: any) => {
 
 export const Header = ({ children, styles ={}, ...props }: LandmarkProps) => {
   return (
-    <FP as="header" {...props} style={fpStyles(styles)}>
+    <FP as="header" {...props} styles={styles}>
       <FP as="section">{children}</FP>
     </FP>
   );
@@ -25,7 +23,7 @@ export const Header = ({ children, styles ={}, ...props }: LandmarkProps) => {
 
 export const Main = ({ children, styles = {}, ...props }: LandmarkProps) => {
   return (
-    <FP as="main" style={fpStyles(styles)} {...props}>
+    <FP as="main" styles={styles} {...props}>
       {children}
     </FP>
   );
@@ -33,7 +31,7 @@ export const Main = ({ children, styles = {}, ...props }: LandmarkProps) => {
 
 export const Footer = ({ children, styles = {}, ...props }: LandmarkProps) => {
   return (
-    <FP as="footer" style={fpStyles(styles)} {...props}>
+    <FP as="footer" styles={styles} {...props}>
       <FP as="section">{children || "Copyright © 2022"}</FP>
     </FP>
   );
@@ -41,19 +39,19 @@ export const Footer = ({ children, styles = {}, ...props }: LandmarkProps) => {
 
 export const Aside = ({ children, styles = {}, ...props }: LandmarkProps) => {
   return (
-    <FP as="aside" style={fpStyles(styles)} {...props}>
+    <FP as="aside" styles={styles} {...props}>
       <FP as="section">{children}</FP>
     </FP>
   );
 };
 
 export const Section = ({ children, styles = {}, ...props }: LandmarkProps) => {
-  return <FP as="section" style={fpStyles(styles)} {...props}>{children}</FP>;
+  return <FP as="section" styles={styles} {...props}>{children}</FP>;
 };
 
 
 export const Article = ({ children, styles = {}, ...props }: LandmarkProps) => {
-  return <FP as="article" style={fpStyles(styles)} {...props}>{children}</FP>;
+  return <FP as="article" styles={styles} {...props}>{children}</FP>;
 };
 
 Header.displayName = "Header";

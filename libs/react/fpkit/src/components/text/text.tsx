@@ -55,9 +55,8 @@ export const Text = ({
   children,
   ...props
 }: TextProps) => {
-  const style = styles as React.CSSProperties
   return (
-    <FP as={elm} {...props} style={style}>
+    <FP as={elm} {...props} styles={styles}>
       {children || text}
     </FP>
   )
@@ -72,7 +71,7 @@ export interface TitleProps extends TextProps {
 
 export const Title = ({ elm, children, styles = {}, ...props }: TitleProps) => {
   return (
-    <Text elm={elm} styles={ fpStyles(styles)} {...props}>
+    <Text elm={elm} styles={styles}>
       {children}
     </Text>
   )
