@@ -90,7 +90,7 @@
     --btn-border: none;
   }
 
-  &[data-fp-btn~="pill"] {
+  &[data-fp-btn~="pill"][data-btn~="pill"] {
     border-radius: 100rem;
   }
 
