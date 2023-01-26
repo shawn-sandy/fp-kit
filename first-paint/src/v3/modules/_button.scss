@@ -15,6 +15,7 @@
   --btn-height: calc(40rem / 16);
   --fs: .95rem;
   --btn-fs: calc(15rem / 16);
+  --btn-bg: lightgray
   @content;
 }
 
@@ -109,7 +110,8 @@
 
   button,
   [style*="--btn"],
-  a[data-fp-btn],
+  [data-fp-btn],
+  [data-btn],
   [role="button"] {
     @include rules;
   }

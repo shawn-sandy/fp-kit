@@ -57,7 +57,6 @@ export const defStyles = {
   borderRadius: "var(--btn-radius, 0.2rem)"
 }
 
-
 export const Button = ({
   type,
   children,
@@ -67,9 +66,11 @@ export const Button = ({
   pointerDown,
   pointerOver,
   pointerLeave,
-  defaultStyles = true,
+  defaultStyles = false,
   ...props
 }: ButtonProps) => {
+
+  const defStyles = {}
 
   const stylesObj = defaultStyles ? defStyles : {}
   const handlePointerEvents = (
