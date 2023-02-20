@@ -13,7 +13,8 @@
 
 @mixin rules {
 
-
+  padding-block: var(--main-py, 2rem);
+  padding-inline: var(--main-px);
   [data-content] {
     display: var(--main-dsp, grid);
     gap: var(--main-gap, 2rem);

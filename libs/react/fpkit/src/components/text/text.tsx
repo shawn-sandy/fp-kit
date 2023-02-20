@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import FP, { fpStyles } from '../fp'
 
 export interface TextProps {
@@ -49,12 +49,12 @@ export interface TitleProps {
   /**
    * HTML headings
    */
-  elm?: | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-  children?: ReactNode
+  elm?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  children?: React.ReactNode
   styles?: {}
 }
 
-export const Title = ({ elm = 'h3', children, styles = {}, ...props }: TitleProps) => {
+export const Title = ({ elm = 'h3', children, styles, ...props }: TitleProps) => {
   return (
     <FP as={elm} styles={styles} {...props}>
       {children}

@@ -1109,6 +1109,10 @@ header:not([arial-label], dialog header)[data-variant],
   font-size: var(--vfs);
 }
 
+main {
+  padding-block: var(--main-py, 2rem);
+  padding-inline: var(--main-px);
+}
 main [data-content] {
   display: var(--main-dsp, grid);
   gap: var(--main-gap, 2rem);
@@ -1503,7 +1507,8 @@ figcaption,
 
 button,
 [style*='--btn'],
-a[data-fp-btn],
+[data-fp-btn],
+[data-btn],
 [role='button'] {
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
@@ -1512,6 +1517,7 @@ a[data-fp-btn],
   --btn-height: calc(40rem / 16);
   --fs: 0.95rem;
   --btn-fs: calc(15rem / 16);
+  --btn-bg: lightgray @content;
   font-size: var(--btn-fs);
   font-weight: var(--btn-fw, 600);
   height: var(--btn-height, 2.5rem);
@@ -1533,7 +1539,8 @@ a[data-fp-btn],
 }
 button[type],
 [style*='--btn'][type],
-a[data-fp-btn][type],
+[data-fp-btn][type],
+[data-btn][type],
 [role='button'][type] {
   background-color: var(--btn-bg, var(--btn, var(--neutral-100)));
   --btn-bdr: solid var(--btn-sg);
@@ -1542,8 +1549,10 @@ button[type='submit'],
 button[style*='submit'],
 [style*='--btn'][type='submit'],
 [style*='--btn'][style*='submit'],
-a[data-fp-btn][type='submit'],
-a[data-fp-btn][style*='submit'],
+[data-fp-btn][type='submit'],
+[data-fp-btn][style*='submit'],
+[data-btn][type='submit'],
+[data-btn][style*='submit'],
 [role='button'][type='submit'],
 [role='button'][style*='submit'] {
   --btn-bg: var(--primary-500, royal-blue);
@@ -1553,8 +1562,10 @@ button[disabled],
 button[aria-disabled='true'],
 [style*='--btn'][disabled],
 [style*='--btn'][aria-disabled='true'],
-a[data-fp-btn][disabled],
-a[data-fp-btn][aria-disabled='true'],
+[data-fp-btn][disabled],
+[data-fp-btn][aria-disabled='true'],
+[data-btn][disabled],
+[data-btn][aria-disabled='true'],
 [role='button'][disabled],
 [role='button'][aria-disabled='true'] {
   cursor: var(--btn-cursor, not-allowed);
@@ -1564,8 +1575,10 @@ button[disabled]:is(:hover, :focus),
 button[aria-disabled='true']:is(:hover, :focus),
 [style*='--btn'][disabled]:is(:hover, :focus),
 [style*='--btn'][aria-disabled='true']:is(:hover, :focus),
-a[data-fp-btn][disabled]:is(:hover, :focus),
-a[data-fp-btn][aria-disabled='true']:is(:hover, :focus),
+[data-fp-btn][disabled]:is(:hover, :focus),
+[data-fp-btn][aria-disabled='true']:is(:hover, :focus),
+[data-btn][disabled]:is(:hover, :focus),
+[data-btn][aria-disabled='true']:is(:hover, :focus),
 [role='button'][disabled]:is(:hover, :focus),
 [role='button'][aria-disabled='true']:is(:hover, :focus) {
   transform: none;
@@ -1573,7 +1586,8 @@ a[data-fp-btn][aria-disabled='true']:is(:hover, :focus),
 }
 button:is(:hover, :focus),
 [style*='--btn']:is(:hover, :focus),
-a[data-fp-btn]:is(:hover, :focus),
+[data-fp-btn]:is(:hover, :focus),
+[data-btn]:is(:hover, :focus),
 [role='button']:is(:hover, :focus) {
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg, var(--btn, lightgray));
@@ -1583,14 +1597,16 @@ a[data-fp-btn]:is(:hover, :focus),
 }
 button:is(:hover, :focus)[aria-disabled='true'],
 [style*='--btn']:is(:hover, :focus)[aria-disabled='true'],
-a[data-fp-btn]:is(:hover, :focus)[aria-disabled='true'],
+[data-fp-btn]:is(:hover, :focus)[aria-disabled='true'],
+[data-btn]:is(:hover, :focus)[aria-disabled='true'],
 [role='button']:is(:hover, :focus)[aria-disabled='true'] {
   transform: none;
   opacity: var(--btn-opacity, 0.5);
 }
 button[type='reset'],
 [style*='--btn'][type='reset'],
-a[data-fp-btn][type='reset'],
+[data-fp-btn][type='reset'],
+[data-btn][type='reset'],
 [role='button'][type='reset'] {
   --btn-bg: transparent;
   --btn-color: gray;
@@ -1598,22 +1614,25 @@ a[data-fp-btn][type='reset'],
 }
 button[type='submit'],
 [style*='--btn'][type='submit'],
-a[data-fp-btn][type='submit'],
+[data-fp-btn][type='submit'],
+[data-btn][type='submit'],
 [role='button'][type='submit'] {
   --btn-bg: var(--primary-700, blue);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
 }
-button[data-fp-btn~='pill'],
-[style*='--btn'][data-fp-btn~='pill'],
-a[data-fp-btn][data-fp-btn~='pill'],
-[role='button'][data-fp-btn~='pill'] {
+button[data-fp-btn~='pill'][data-btn~='pill'],
+[style*='--btn'][data-fp-btn~='pill'][data-btn~='pill'],
+[data-fp-btn][data-fp-btn~='pill'][data-btn~='pill'],
+[data-btn][data-fp-btn~='pill'][data-btn~='pill'],
+[role='button'][data-fp-btn~='pill'][data-btn~='pill'] {
   border-radius: 100rem;
 }
 button[data-variant],
 [style*='--btn'][data-variant],
-a[data-fp-btn][data-variant],
+[data-fp-btn][data-variant],
+[data-btn][data-variant],
 [role='button'][data-variant] {
   --btn-bg: var(--vbg);
   --btn-cl: var(--vcl);
