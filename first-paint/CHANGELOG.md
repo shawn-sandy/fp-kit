@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.34](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.33...@shawnsandy/first-paint@2.17.34) (2023-02-20)
+
+### Features
+
+- 🌟 update btn/turn off inline styles ([75d86a8](https://github.com/shawn-sandy/fp-kit/commit/75d86a8ae5b31e68353d6f29e1b4d3ffa37cfbb8))
+- 🚧 data-btn=pill, storyshots ([3cb669c](https://github.com/shawn-sandy/fp-kit/commit/3cb669ca22670be181d4e63038cf7415f11f9aaa))
+
 ## [2.17.33](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.32...@shawnsandy/first-paint@2.17.33) (2023-01-22)
 
 ### Bug Fixes

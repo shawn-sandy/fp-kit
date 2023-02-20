@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.51](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.50...@fpkit/react@0.2.51) (2023-02-20)
+
+### Features
+
+- 🌟 update btn/turn off inline styles ([75d86a8](https://github.com/shawn-sandy/fpkit/commit/75d86a8ae5b31e68353d6f29e1b4d3ffa37cfbb8))
+- 🚧 data-btn=pill, storyshots ([3cb669c](https://github.com/shawn-sandy/fpkit/commit/3cb669ca22670be181d4e63038cf7415f11f9aaa))
+- 🚧 replace landmark w/ComponentProps ([bf535ae](https://github.com/shawn-sandy/fpkit/commit/bf535aec0e5d4d12aae88fb7cd7b910efc624f62))
+- 🚧 replace landmark w/ComponentProps ([1f41d69](https://github.com/shawn-sandy/fpkit/commit/1f41d69a92d351866c44bc6cc44644eacad17239))
+- update props on text/title components ([465aa67](https://github.com/shawn-sandy/fpkit/commit/465aa67f85b9a3c6303232382282db7a13b3c0da))
+
 ## [0.2.50](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.49...@fpkit/react@0.2.50) (2023-01-22)
 
 ### Bug Fixes
