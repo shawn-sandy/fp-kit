@@ -110,7 +110,7 @@ section:not(nav) {
   --btn-height: calc(40rem / 16);
   --fs: 0.95rem;
   --btn-fs: calc(15rem / 16);
-  --btn-bg: lightgray @content;
+  --btn-bg: lightgray;
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
   --btn-lg: calc(21rem / 16);
@@ -118,7 +118,7 @@ section:not(nav) {
   --btn-height: calc(40rem / 16);
   --fs: 0.95rem;
   --btn-fs: calc(15rem / 16);
-  --btn-bg: lightgray @content;
+  --btn-bg: lightgray;
   font-size: var(--btn-fs);
   font-weight: var(--btn-fw, 600);
   height: var(--btn-height, 2.5rem);
@@ -139,7 +139,7 @@ section:not(nav) {
   outline: none;
 }
 .fp-btn[type] {
-  background-color: var(--btn-bg, var(--btn, var(--neutral-100)));
+  background-color: var(--btn-bg, var(--neutral-300));
   --btn-bdr: solid var(--btn-sg);
 }
 .fp-btn[type='submit'],
@@ -179,13 +179,25 @@ section:not(nav) {
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
 }
-.fp-btn[data-fp-btn~='pill'][data-btn~='pill'] {
-  border-radius: 100rem;
+.fp-btn[data-fp-btn~='pill'],
+.fp-btn[data-btn~='pill'],
+.fp-btn[data-style~='pill'] {
+  border-radius: 50%;
 }
-.fp-btn[data-variant] {
+.fp-btn[data-variant],
+.fp-btn[data-style] {
   --btn-bg: var(--vbg);
   --btn-cl: var(--vcl);
   --btn-fs: var(--vfs, 0.95rem);
+}
+.fp-btn[data-style~='sm'] {
+  --btn-fs: var(--btn-sm);
+}
+.fp-btn[data-style~='md'] {
+  --btn-fs: var(--btn-md);
+}
+.fp-btn[data-style~='lg'] {
+  --btn-fs: var(--btn-lg);
 }
 .fp-checkbox {
   display: var(--lbl-dsp, flex);

@@ -11,7 +11,7 @@ button,
   --btn-height: calc(40rem / 16);
   --fs: 0.95rem;
   --btn-fs: calc(15rem / 16);
-  --btn-bg: lightgray @content;
+  --btn-bg: lightgray;
   font-size: var(--btn-fs);
   font-weight: var(--btn-fw, 600);
   height: var(--btn-height, 2.5rem);
@@ -36,7 +36,7 @@ button[type],
 [data-fp-btn][type],
 [data-btn][type],
 [role='button'][type] {
-  background-color: var(--btn-bg, var(--btn, var(--neutral-100)));
+  background-color: var(--btn-bg, var(--neutral-300));
   --btn-bdr: solid var(--btn-sg);
 }
 button[type='submit'],
@@ -116,21 +116,57 @@ button[type='submit'],
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
 }
-button[data-fp-btn~='pill'][data-btn~='pill'],
-[style*='--btn'][data-fp-btn~='pill'][data-btn~='pill'],
-[data-fp-btn][data-fp-btn~='pill'][data-btn~='pill'],
-[data-btn][data-fp-btn~='pill'][data-btn~='pill'],
-[role='button'][data-fp-btn~='pill'][data-btn~='pill'] {
-  border-radius: 100rem;
+button[data-fp-btn~='pill'],
+button[data-btn~='pill'],
+button[data-style~='pill'],
+[style*='--btn'][data-fp-btn~='pill'],
+[style*='--btn'][data-btn~='pill'],
+[style*='--btn'][data-style~='pill'],
+[data-fp-btn][data-fp-btn~='pill'],
+[data-fp-btn][data-btn~='pill'],
+[data-fp-btn][data-style~='pill'],
+[data-btn][data-fp-btn~='pill'],
+[data-btn][data-btn~='pill'],
+[data-btn][data-style~='pill'],
+[role='button'][data-fp-btn~='pill'],
+[role='button'][data-btn~='pill'],
+[role='button'][data-style~='pill'] {
+  border-radius: 50%;
 }
 button[data-variant],
+button[data-style],
 [style*='--btn'][data-variant],
+[style*='--btn'][data-style],
 [data-fp-btn][data-variant],
+[data-fp-btn][data-style],
 [data-btn][data-variant],
-[role='button'][data-variant] {
+[data-btn][data-style],
+[role='button'][data-variant],
+[role='button'][data-style] {
   --btn-bg: var(--vbg);
   --btn-cl: var(--vcl);
   --btn-fs: var(--vfs, 0.95rem);
+}
+button[data-style~='sm'],
+[style*='--btn'][data-style~='sm'],
+[data-fp-btn][data-style~='sm'],
+[data-btn][data-style~='sm'],
+[role='button'][data-style~='sm'] {
+  --btn-fs: var(--btn-sm);
+}
+button[data-style~='md'],
+[style*='--btn'][data-style~='md'],
+[data-fp-btn][data-style~='md'],
+[data-btn][data-style~='md'],
+[role='button'][data-style~='md'] {
+  --btn-fs: var(--btn-md);
+}
+button[data-style~='lg'],
+[style*='--btn'][data-style~='lg'],
+[data-fp-btn][data-style~='lg'],
+[data-btn][data-style~='lg'],
+[role='button'][data-style~='lg'] {
+  --btn-fs: var(--btn-lg);
 }
 
 /*# sourceMappingURL=button.css.map */

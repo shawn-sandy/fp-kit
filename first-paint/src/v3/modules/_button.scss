@@ -15,7 +15,7 @@
   --btn-height: calc(40rem / 16);
   --fs: .95rem;
   --btn-fs: calc(15rem / 16);
-  --btn-bg: lightgray
+  --btn-bg: lightgray;
   @content;
 }
 
@@ -42,7 +42,7 @@
   outline: none;
 
   &[type] {
-    background-color: var(--btn-bg, var(--btn, var(--neutral-100)));
+    background-color: var(--btn-bg, var(--neutral-300));
     --btn-bdr: solid var(--btn-sg);
   }
 
@@ -91,14 +91,26 @@
     --btn-border: none;
   }
 
-  &[data-fp-btn~="pill"][data-btn~="pill"] {
-    border-radius: 100rem;
+  &[data-fp-btn~="pill"], &[data-btn~="pill"], &[data-style~="pill"] {
+    border-radius: 50%;
   }
 
-  &[data-variant] {
+  &[data-variant], &[data-style] {
     --btn-bg: var(--vbg);
     --btn-cl: var(--vcl);
     --btn-fs: var(--vfs, .95rem);
+  }
+
+  &[data-style~='sm'] {
+    --btn-fs: var(--btn-sm);
+  }
+
+  &[data-style~='md'] {
+    --btn-fs: var(--btn-md);
+  }
+
+  &[data-style~='lg'] {
+    --btn-fs: var(--btn-lg);
   }
 
   @content;
