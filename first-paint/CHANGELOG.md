@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.36](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.35...@shawnsandy/first-paint@2.17.36) (2023-02-23)
+
+### Features
+
+- 🌟 update btn styles ([4445836](https://github.com/shawn-sandy/fp-kit/commit/4445836f29beb03139008efb65cd031dd45b8ac2))
+
 ## [2.17.35](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.34...@shawnsandy/first-paint@2.17.35) (2023-02-22)
 
 ### Features
