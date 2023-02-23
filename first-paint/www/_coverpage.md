@@ -97,9 +97,9 @@
 <footer>
 <section>
 <p>
-<a href="/#/README"  style="--btn-fs: var(--fs-2)">Getting Started</a>
-<a href="/#/GUIDES"  style="--btn-fs: var(--fs-2)">Guides & Examples</a>
-<a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" style="--btn-fs: var(--fs-2)" target="_blank">Github</a>
+<a href="/#/README" >Getting Started</a>
+<a href="/#/GUIDES" >Guides & Examples</a>
+<a href="https://github.com/shawn-sandy/fp-kit/tree/main/first-paint" target="_blank">Github</a>
 </p>
 </section>
 <p> &copy; 2022 FirstPaint v3.0 <span role="note" style="--note: var(--beta); --note-scale">Beta</span></p>
