@@ -30,7 +30,7 @@
   padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1%));
   padding-block: var(--btn-py, calc(var(--btn-fs) + .75%));
   border: var(--btn-bdr, none);
-  border-radius: var(--btn-rds, calc(3rem / 16));
+  border-radius: var(--btn-rds, calc(6rem / 16));
   text-decoration: var(--btn-deco, none);
   color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
@@ -92,7 +92,7 @@
   }
 
   &[data-fp-btn~="pill"], &[data-btn~="pill"], &[data-style~="pill"] {
-    border-radius: 50%;
+    border-radius: var(--btn-pill, 100rem);
   }
 
   &[data-variant], &[data-style] {

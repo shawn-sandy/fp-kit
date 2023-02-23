@@ -108,6 +108,12 @@ style="--btn-rds:var(--btn-pill);"
 <button type="button" style="--btn-rds: var(--btn-pill);">Pill button</button>
 ```
 
+Button with a pill style/shape `data-style="pill lg"`
+
+```html preview
+<button type="button" data-style="pill lg">Pill button</button>
+```
+
 ## Variants
 
 ```html preview

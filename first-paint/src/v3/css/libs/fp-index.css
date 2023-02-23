@@ -1526,7 +1526,7 @@ button,
   padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1%));
   padding-block: var(--btn-py, calc(var(--btn-fs) + 0.75%));
   border: var(--btn-bdr, none);
-  border-radius: var(--btn-rds, 0.1875rem);
+  border-radius: var(--btn-rds, 0.375rem);
   text-decoration: var(--btn-deco, none);
   color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
@@ -1637,7 +1637,7 @@ button[data-style~='pill'],
 [role='button'][data-fp-btn~='pill'],
 [role='button'][data-btn~='pill'],
 [role='button'][data-style~='pill'] {
-  border-radius: 50%;
+  border-radius: var(--btn-pill, 100rem);
 }
 button[data-variant],
 button[data-style],
