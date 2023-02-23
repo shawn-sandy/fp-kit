@@ -41,7 +41,7 @@
   /* // style --btn will soon be deprecated */
   /* use [data-fp-btn] instead */
   &[style="--btn"],
-  &[data-fp-btn] {
+  &[data-btn] {
     background-color: var(--link-bg, lightgray);
     --btn-bg: var(--link-bg, lightgray);
   }

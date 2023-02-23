@@ -1432,7 +1432,7 @@ a:active {
 }
 a[role='button'],
 a[style='--btn'],
-a[data-fp-btn] {
+a[data-btn] {
   background-color: var(--link-bg, lightgray);
   --btn-bg: var(--link-bg, lightgray);
 }

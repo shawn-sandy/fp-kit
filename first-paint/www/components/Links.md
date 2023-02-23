@@ -57,22 +57,22 @@ Links {
 
 ## Examples
 
-### Button Styled Links `[data-fp-btn]`
+### Button Styled Links `[data-btn]`
 
 Default button style link
 
 ```html preview
-<a href="https://google.com" data-fp-btn style="--link-bg: lightgray;"
+<a href="https://google.com" data-btn style="--link-bg: lightgray;"
   >Search Google</a
 >
 ```
 
-### Link buttons pill(rounded) `[data-fp-btn="pill"]`
+### Link buttons pill(rounded) `[data-btn="pill"]`
 
 Create rounded or pill styled buttons using `pill` attribute.
 
 ```html preview
-<a href="https://google.com" data-fp-btn="pill" style="--link-bg: lightgray"
+<a href="https://google.com" data-btn="pill" style="--link-bg: lightgray"
   >Search Google</a
 >
 ```
