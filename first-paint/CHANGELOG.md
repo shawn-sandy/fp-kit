@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.37](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.36...@shawnsandy/first-paint@2.17.37) (2023-02-23)
+
+### Bug Fixes
+
+- 🚨 broken button on home page ([5643344](https://github.com/shawn-sandy/fp-kit/commit/56433445d5dc17085c588149e3697ecbc1b9bc7b))
+- 🚨 broken button on home page ([907a7e0](https://github.com/shawn-sandy/fp-kit/commit/907a7e03ab5508a50e3e2737c811ba7e9835be5d))
+
+### Features
+
+- 🌟 add data-badge attribute ([5815ceb](https://github.com/shawn-sandy/fp-kit/commit/5815ceb9559f974216eec364797e67937402b1db))
+- 🌟 add data-badge attribute ([cac7628](https://github.com/shawn-sandy/fp-kit/commit/cac7628d9746519f5c1452bbc1e6a1c94e7ad40b))
+- 🌟 update links css/module ([673edee](https://github.com/shawn-sandy/fp-kit/commit/673edeef3620505be254981f9d9a8f96047b977b))
+
 ## [2.17.36](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.35...@shawnsandy/first-paint@2.17.36) (2023-02-23)
 
 ### Features
