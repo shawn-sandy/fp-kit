@@ -1959,7 +1959,7 @@ div[role='presentation'],
   display: var(--card-dsp, flex);
   flex-direction: var(--card-direction, column);
   padding: var(--card, var(--card-pd, 2rem));
-  border-radius: var(--card-radius, 0.2rem);
+  border-radius: var(--card-radius, 0.375rem);
   background-color: var(--card-bg, var(--bg, #fff));
   box-shadow: var(--card-shadow, none);
   border: var(--card-border, thin solid lightgray);
@@ -1973,6 +1973,22 @@ div[role='presentation'] h4,
 [data-card] h3,
 [data-card] h4 {
   margin: 0;
+}
+div[role='presentation'][data-style~='shadow-sm'],
+[data-card][data-style~='shadow-sm'] {
+  box-shadow: var(--cd-shadow-sm);
+}
+div[role='presentation'][data-style~='shadow-md'],
+[data-card][data-style~='shadow-md'] {
+  box-shadow: var(--cd-shadow-md);
+}
+div[role='presentation'][data-style~='shadow-lg'],
+[data-card][data-style~='shadow-lg'] {
+  box-shadow: var(--cd-shadow-lg);
+}
+div[role='presentation'][data-style~='shadow-none'],
+[data-card][data-style~='shadow-none'] {
+  box-shadow: none;
 }
 
 [role='footer'] {

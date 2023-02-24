@@ -663,7 +663,7 @@ section:not(nav) {
   display: var(--card-dsp, flex);
   flex-direction: var(--card-direction, column);
   padding: var(--card, var(--card-pd, 2rem));
-  border-radius: var(--card-radius, 0.2rem);
+  border-radius: var(--card-radius, 0.375rem);
   background-color: var(--card-bg, var(--bg, #fff));
   box-shadow: var(--card-shadow, none);
   border: var(--card-border, thin solid lightgray);
@@ -673,6 +673,18 @@ section:not(nav) {
 .fp-cards h3,
 .fp-cards h4 {
   margin: 0;
+}
+.fp-cards[data-style~='shadow-sm'] {
+  box-shadow: var(--cd-shadow-sm);
+}
+.fp-cards[data-style~='shadow-md'] {
+  box-shadow: var(--cd-shadow-md);
+}
+.fp-cards[data-style~='shadow-lg'] {
+  box-shadow: var(--cd-shadow-lg);
+}
+.fp-cards[data-style~='shadow-none'] {
+  box-shadow: none;
 }
 .fp [role='footer'] {
   display: var(--dsp, flex);
