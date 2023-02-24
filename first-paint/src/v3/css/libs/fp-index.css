@@ -2146,7 +2146,7 @@ div[role='region'][data-variant],
   --scroll-bg: var(--vscroll-bg);
 }
 
-nav > :where(ol, [data-fp-breadcrumb]) {
+nav > :where(ol, [data-fp-breadcrumb], [data-breadcrumb]) {
   display: var(--crumb-dsp, flex);
   direction: var(--crumb-direction, row);
   gap: var(--crumb-gap, 0.5rem);
@@ -2155,21 +2155,26 @@ nav > :where(ol, [data-fp-breadcrumb]) {
   font-size: var(--crumb-fs, var(--fs-2));
   color: var(--crumb-cl, currentColor);
 }
-nav > :where(ol, [data-fp-breadcrumb])::-webkit-details-marker {
+nav
+  > :where(
+    ol,
+    [data-fp-breadcrumb],
+    [data-breadcrumb]
+  )::-webkit-details-marker {
   display: none;
 }
-nav > :where(ol, [data-fp-breadcrumb]) li {
+nav > :where(ol, [data-fp-breadcrumb], [data-breadcrumb]) li {
   color: var(--crumb-cl);
 }
-nav > :where(ol, [data-fp-breadcrumb]) li + li {
+nav > :where(ol, [data-fp-breadcrumb], [data-breadcrumb]) li + li {
   color: currentColor;
 }
-nav > :where(ol, [data-fp-breadcrumb]) li + li::before {
+nav > :where(ol, [data-fp-breadcrumb], [data-breadcrumb]) li + li::before {
   content: var(--crumb-icon, '/');
   color: currentColor;
   padding-inline-end: 0.5rem;
 }
-nav > :where(ol, [data-fp-breadcrumb])[data-variant] {
+nav > :where(ol, [data-fp-breadcrumb], [data-breadcrumb])[data-variant] {
   --crumb-fs: var(--vfs);
   --crumb-cl: var(--vcl);
   --crumb-bg: var(--vbg);

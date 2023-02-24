@@ -33,7 +33,7 @@ import '@shawnsandy/first-paint/dist/css/components/breadcrumb.min.css'
 
 ```html preview
 <nav>
-  <ol data-fp-breadcrumb>
+  <ol data-breadcrumb>
     <li><a href="#" aria-current>Home</a></li>
     <li><a href="#">Step 1</a></li>
     <li><a href="#">Step 2</a></li>
@@ -80,13 +80,13 @@ li {
 
 ## Examples
 
-### Breadcrumb `[data-fp-breadcrumb]`
+### Breadcrumb `[data-breadcrumb]`
 
 Here we customize the breadcrumb by adding a custom-props `style="--crumb-icon: '\27A4'; --crumb-cl: lightgray"` to the breadcrumb.
 
 ```html preview
 <nav>
-  <ol data-fp-breadcrumb>
+  <ol data-breadcrumb>
     <li><a href="#">Home</a></li>
     <li><a href="#">Step 1</a></li>
     <li><a href="#">Step 2</a></li>
@@ -100,7 +100,7 @@ Here we customize the breadcrumb by adding a custom-props `style="--crumb-icon: 
 
 ```html preview
 <nav>
-  <ol data-fp-breadcrumb style="--crumb-icon: '\27A4'; --crumb-cl: lightgray">
+  <ol data-breadcrumb style="--crumb-icon: '\27A4'; --crumb-cl: lightgray">
     <li><a href="#">Home</a></li>
     <li><a href="#" aria-current>Step 1</a></li>
     <li><a href="#">Step 2</a></li>

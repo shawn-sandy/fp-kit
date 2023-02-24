@@ -49,7 +49,7 @@
 
 @mixin module {
   nav > {
-   :where(ol, [data-fp-breadcrumb])  {
+   :where(ol, [data-fp-breadcrumb], [data-breadcrumb])  {
     @include props;
     @include rules;
   }
