@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.38](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.37...@shawnsandy/first-paint@2.17.38) (2023-02-25)
+
+### Features
+
+- 🌟 breadcrumb add data-breadcrumb ([ab34b8a](https://github.com/shawn-sandy/fp-kit/commit/ab34b8aeb2f43ea745a51f6441816b99efce144e))
+- 🚧 card/data-card module updates ([71657a7](https://github.com/shawn-sandy/fp-kit/commit/71657a7e4b9cdc948a10b970ff67d089066275eb))
+- 🚧 update main module updates ([e758a28](https://github.com/shawn-sandy/fp-kit/commit/e758a28aa6e755c16f2a664a55cf075911078c61))
+
 ## [2.17.37](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.36...@shawnsandy/first-paint@2.17.37) (2023-02-23)
 
 ### Bug Fixes
