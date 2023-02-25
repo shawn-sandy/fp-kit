@@ -1118,8 +1118,8 @@ main [data-content] {
   gap: var(--main-gap, 2rem);
   grid-template-columns: var(--main-grid-cols, 2fr 1fr);
 }
-main [data-content] aside {
-  min-width: var(--sidebar-min-width, 25vw);
+main [data-content] > aside {
+  min-width: var(--sidebar-min-w, 20vw);
 }
 @media (max-width: 768px) {
   main [data-content] {
