@@ -1110,13 +1110,16 @@ header:not([arial-label], dialog header)[data-variant],
 }
 
 main {
+  /* Set variables for padding-block and padding-inline */
   padding-block: var(--main-py, 2rem);
   padding-inline: var(--main-px);
+  /* Set variables for data-content display, grid gap and columns */
 }
 main [data-content] {
   display: var(--main-dsp, grid);
   gap: var(--main-gap, 2rem);
   grid-template-columns: var(--main-grid-cols, 2fr 1fr);
+  /* Set variables for main grid columns when screen width is less than 768px */
 }
 main [data-content] > aside {
   min-width: var(--sidebar-min-w, 20vw);
