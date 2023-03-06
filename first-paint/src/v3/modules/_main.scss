@@ -21,12 +21,10 @@
   [data-content] {
     display: var(--main-dsp, grid);
     gap: var(--main-gap, 2rem);
-    grid-template-columns: var(--main-grid-cols, 2fr 1fr);
-
+    grid-template-columns: var(--main-grid-cols, 3fr 1fr);
     > aside {
       min-width: var(--sidebar-min-w, 20vw);
     }
-
     /* Set variables for main grid columns when screen width is less than 768px */
     @media (max-width: 768px) {
       --main-grid-cols: 1fr;

@@ -1237,7 +1237,7 @@ main {
 main [data-content] {
   display: var(--main-dsp, grid);
   gap: var(--main-gap, 2rem);
-  grid-template-columns: var(--main-grid-cols, 2fr 1fr);
+  grid-template-columns: var(--main-grid-cols, 3fr 1fr);
   /* Set variables for main grid columns when screen width is less than 768px */
 }
 main [data-content] > aside {

@@ -949,7 +949,7 @@ main {
 main [data-content] {
   display: var(--main-dsp, grid);
   gap: var(--main-gap, 2rem);
-  grid-template-columns: var(--main-grid-cols, 2fr 1fr);
+  grid-template-columns: var(--main-grid-cols, 3fr 1fr);
 }
 main [data-content] > aside {
   min-width: var(--sidebar-min-w, 20vw);
