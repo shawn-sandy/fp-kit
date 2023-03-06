@@ -19,30 +19,30 @@ p {
 }
 
 p,
-[style*="--p"] {
+[style*='--p'] {
   --p-sm: var(--sm);
   --p-md: var(--md);
   --p-lg: var(--lg);
   --fw: normal;
   --lh: 1.7;
   --spacing: 0.5rem;
-  --p-fs: var(--fs, clamp(.9rem, 3vw - 1.5rem, 1rem););
+  --p-fs: var(--fs, clamp(0.9rem, 3vw - 1.5rem, 1rem) ;);
   margin: var(--p-m, 0);
   line-height: var(--lh, 1.6);
   word-spacing: 0.05rem;
   font-size: var(--p-fs);
 }
 p i,
-[style*="--p"] i {
+[style*='--p'] i {
   font-style: italic;
 }
 p strong,
-[style*="--p"] strong {
+[style*='--p'] strong {
   font-weight: var(--fw-medium);
 }
 
 article > p {
-  font-size: clamp(0.9rem, 3vw - 1.5rem, 1.3rem);
+  font-size: var(--fs-3);
 }
 
 h1,
@@ -62,64 +62,72 @@ h5 + p,
 h6 + p {
   margin-top: var(--rem);
 }
-h1[role=decoration], h1[role=none], h1[role=none],
-h2[role=decoration],
-h2[role=none],
-h2[role=none],
-h3[role=decoration],
-h3[role=none],
-h3[role=none],
-h4[role=decoration],
-h4[role=none],
-h4[role=none],
-h5[role=decoration],
-h5[role=none],
-h5[role=none],
-h6[role=decoration],
-h6[role=none],
-h6[role=none] {
+h1[role='decoration'],
+h1[role='none'],
+h1[role='none'],
+h2[role='decoration'],
+h2[role='none'],
+h2[role='none'],
+h3[role='decoration'],
+h3[role='none'],
+h3[role='none'],
+h4[role='decoration'],
+h4[role='none'],
+h4[role='none'],
+h5[role='decoration'],
+h5[role='none'],
+h5[role='none'],
+h6[role='decoration'],
+h6[role='none'],
+h6[role='none'] {
   font-weight: var(--h-fw, 500);
 }
 
 h1 {
   --fs: var(--fs-7);
 }
-h1[role=decoration], h1[role=none] {
+h1[role='decoration'],
+h1[role='none'] {
   font-size: var(--h1);
 }
 
 h2 {
   --fs: var(--fs-6);
 }
-h2[role=decoration], h2[role=none] {
+h2[role='decoration'],
+h2[role='none'] {
   font-size: var(--h2);
 }
 
 h3 {
   --fs: var(--fs-5);
 }
-h3[role=decoration], h3[role=none] {
+h3[role='decoration'],
+h3[role='none'] {
   font-size: var(--h3);
 }
 
 h4 {
   --fs: var(--fs-4);
 }
-h4[role=decoration], h4[role=none] {
+h4[role='decoration'],
+h4[role='none'] {
   font-size: var(--h4);
 }
 
 h5 {
   --fs: var(--fs-3);
 }
-h5[role=decoration], h5[role=none] {
+h5[role='decoration'],
+h5[role='none'] {
   font-size: var(--h5);
 }
 
 h6 {
   --fs: var(--fs-2);
 }
-h6[role=decoration], h6[role=none] {
+h6[role='decoration'],
+h6[role='none'] {
   font-size: var(--h6);
 }
 
@@ -137,7 +145,7 @@ p + * {
   margin-top: var(--fs-0);
 }
 
-[style*="--truncate"] {
+[style*='--truncate'] {
   --truncate-lns: 1;
   --clamp: var(--truncate, var(--truncate-lns));
   --dsp: --webkit-box;

@@ -16,6 +16,7 @@
    /* Set variables for padding-block and padding-inline */
   padding-block: var(--main-py, 2rem);
   padding-inline: var(--main-px);
+  font-size: var(--fs-0);
 
   /* Set variables for data-content display, grid gap and columns */
   [data-content] {

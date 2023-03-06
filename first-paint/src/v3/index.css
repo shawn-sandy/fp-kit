@@ -535,7 +535,7 @@ p strong,
 }
 
 article > p {
-  font-size: clamp(0.9rem, 3vw - 1.5rem, 1.3rem);
+  font-size: var(--fs-3);
 }
 
 h1,
@@ -1232,6 +1232,7 @@ main {
   /* Set variables for padding-block and padding-inline */
   padding-block: var(--main-py, 2rem);
   padding-inline: var(--main-px);
+  font-size: var(--fs-0);
   /* Set variables for data-content display, grid gap and columns */
 }
 main [data-content] {

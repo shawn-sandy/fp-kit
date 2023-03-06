@@ -473,7 +473,7 @@ p strong,
   font-weight: var(--fw-medium);
 }
 article > p {
-  font-size: clamp(0.9rem, 3vw - 1.5rem, 1.3rem);
+  font-size: var(--fs-3);
 }
 h1,
 h2,
@@ -945,6 +945,7 @@ header:not([arial-label], dialog header)[data-variant],
 main {
   padding-block: var(--main-py, 2rem);
   padding-inline: var(--main-px);
+  font-size: var(--fs-0);
 }
 main [data-content] {
   display: var(--main-dsp, grid);

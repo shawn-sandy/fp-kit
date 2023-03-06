@@ -507,7 +507,7 @@ p strong,
 }
 
 article > p {
-  font-size: clamp(0.9rem, 3vw - 1.5rem, 1.3rem);
+  font-size: var(--fs-3);
 }
 
 h1,
