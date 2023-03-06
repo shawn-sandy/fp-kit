@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.40](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.39...@shawnsandy/first-paint@2.17.40) (2023-03-06)
+
+### Bug Fixes
+
+- 🚨 change content width ([ddb4988](https://github.com/shawn-sandy/fp-kit/commit/ddb4988d1e2fd00f8ce0696b13b294dca377219b))
+
+### Features
+
+- 🚧 update font-size on main content ([7a11cd8](https://github.com/shawn-sandy/fp-kit/commit/7a11cd85d3c24ab0960e094a44d49eee9d9e02c2))
+- 🚧 update main module updates ([2263f72](https://github.com/shawn-sandy/fp-kit/commit/2263f72c1512991540a3e97ef32d33be47a128c7))
+- set content template cols to 3/1 fr ([aaf8aba](https://github.com/shawn-sandy/fp-kit/commit/aaf8aba33ef34933bf94685510da2b27073c418b))
+
 ## [2.17.39](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.38...@shawnsandy/first-paint@2.17.39) (2023-02-26)
 
 ### Features
