@@ -1135,8 +1135,11 @@ main [data-content] {
   gap: var(--main-gap, 2rem);
   grid-template-columns: var(--main-grid-cols, 3fr 1fr);
 }
+main [data-content] > article {
+  flex-grow: 1;
+}
 main [data-content] > aside {
-  min-width: var(--sidebar-min-w, 20vw);
+  width: max(100%, 18.75rem);
 }
 @media (max-width: 768px) {
   main [data-content] {
@@ -1221,7 +1224,7 @@ img[alt][width][height],
   max-width: 100%;
   object-fit: var(--img-obj-fit, cover);
   object-position: var(--img-position, center center);
-  aspect-ratio: var(--img-ratio, auto 2/3);
+  aspect-ratio: var(--img-ratio, 16/9);
 }
 img[alt][width][height][width][height],
 [data-img][width][height] {

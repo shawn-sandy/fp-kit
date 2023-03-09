@@ -352,7 +352,7 @@ section:not(nav) {
   max-width: 100%;
   object-fit: var(--img-obj-fit, cover);
   object-position: var(--img-position, center center);
-  aspect-ratio: var(--img-ratio, auto 2/3);
+  aspect-ratio: var(--img-ratio, 16/9);
 }
 .fp-img[width][height] {
   height: var(--img-h, auto);
