@@ -57,6 +57,14 @@
   --spc-18: 11rem;
   --spc-19: 12rem;
   --spc-20: 13rem;
+  --spc: var(--spc-4);
+  --spc-xs: var(--spc-1);
+  --spc-sm: var(--spc-3);
+  --spc-base: var(--spc-5);
+  --spc-md: var(--spc-7);
+  --spc-lg: var(--spc-9);
+  --spc-xl: var(--spc-11);
+  --spc-xxl: var(--spc-13);
   --vw-xs: 5vw;
   --vw-sm: 10vw;
   --vw-md: 20vw;

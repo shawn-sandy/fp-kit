@@ -670,6 +670,7 @@ section:not(nav) {
 }
 .fp-footer > section {
   width: var(--content-w);
+  --py: var(--footer-py, var(--spc-3));
 }
 .fp-list {
   --listOff: ;
