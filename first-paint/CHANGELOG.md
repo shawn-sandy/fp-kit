@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.42](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.41...@shawnsandy/first-paint@2.17.42) (2023-03-11)
+
+### Features
+
+- 👷 refine footer spc ([7b3087e](https://github.com/shawn-sandy/fp-kit/commit/7b3087e911fce6d1c1a1906112a3e5329d5148b0))
+- 👷 refine layout on main content ([b2ea6ed](https://github.com/shawn-sandy/fp-kit/commit/b2ea6eda0b895bf0d87181410b03dd88a71da758))
+- 👷 refine layout on main content ([acf1220](https://github.com/shawn-sandy/fp-kit/commit/acf12205f41401ef851257cb5e1c9b51c9558c59))
+
 ## [2.17.41](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.40...@shawnsandy/first-paint@2.17.41) (2023-03-09)
 
 ### Features
