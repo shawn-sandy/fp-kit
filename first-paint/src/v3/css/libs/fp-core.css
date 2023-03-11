@@ -489,7 +489,7 @@ p,
   --p-md: var(--md);
   --p-lg: var(--lg);
   --fw: normal;
-  --lh: 1.7;
+  --lh: 1.8;
   --spacing: 0.5rem;
   --p-fs: var(--fs, clamp(0.9rem, 3vw - 1.5rem, 1rem) ;);
   margin: var(--p-m, 0);
