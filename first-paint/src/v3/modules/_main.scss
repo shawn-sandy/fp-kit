@@ -14,24 +14,22 @@
 @mixin rules {
 
    /* Set variables for padding-block and padding-inline */
-  padding-block: var(--main-py, 2rem);
+  padding-block: var(--main-py, 0rem);
   padding-inline: var(--main-px);
   font-size: var(--fs-0);
 
   /* Set variables for data-content display, grid gap and columns */
   [data-content] {
-    display: var(--main-dsp, grid);
-    gap: var(--main-gap, 2rem);
-    grid-template-columns: var(--main-grid-cols, 3fr 1fr);
-    > article {
-      flex-grow: 1;
-    }
+    display: var(--content-dsp, grid);
+    gap: var(--content-gap, 2rem);
+    grid-template-columns: var(--content-grid-cols, 3fr 1fr);
+    --py: var(--content-py, 1rem);
     > aside {
-      width: max(100%, calc(300rem/16));
+      width: clamp(100%, calc(300rem/16), 100%);
     }
     /* Set variables for main grid columns when screen width is less than 768px */
     @media (max-width: 768px) {
-      --main-grid-cols: 1fr;
+      --content-grid-cols: 1fr;
     }
   }
   // * css rules/styles
