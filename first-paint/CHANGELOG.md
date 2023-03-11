@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.43](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.42...@shawnsandy/first-paint@2.17.43) (2023-03-11)
+
+### Features
+
+- 👷 refine content spc ([31bb309](https://github.com/shawn-sandy/fp-kit/commit/31bb3097c39f9de617f214ecf304d520f833d408))
+- 👷 refine content spc ([e1237aa](https://github.com/shawn-sandy/fp-kit/commit/e1237aab0786cfb30702b662178decf10ac713f6))
+
 ## [2.17.42](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.41...@shawnsandy/first-paint@2.17.42) (2023-03-11)
 
 ### Features
