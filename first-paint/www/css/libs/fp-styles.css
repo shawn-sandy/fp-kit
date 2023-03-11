@@ -644,7 +644,7 @@ section:not(nav) {
 }
 .fp-footer > section {
   width: var(--content-w);
-  --py: var(--footer-py, var(--spc-3));
+  padding-block: var(--footer-py, var(--spc-md));
 }
 .fp-list {
   --listOff: ;

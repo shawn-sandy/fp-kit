@@ -23,7 +23,7 @@
     display: var(--content-dsp, grid);
     gap: var(--content-gap, 2rem);
     grid-template-columns: var(--content-grid-cols, 3fr 1fr);
-    --py: var(--content-py, 1rem);
+    padding-block: var(--content-px, var(--spc-6));
     > aside {
       width: clamp(100%, calc(300rem/16), 100%);
     }
