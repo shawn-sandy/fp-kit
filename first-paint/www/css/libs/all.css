@@ -1061,7 +1061,7 @@ main [data-content] {
   padding-block: var(--content-px, var(--spc-6));
 }
 main [data-content] > aside {
-  width: clamp(100%, 18.75rem, 100%);
+  width: clamp(100%, 18.75rem, 12.5rem);
 }
 @media (max-width: 768px) {
   main [data-content] {

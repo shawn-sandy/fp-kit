@@ -25,7 +25,7 @@
     grid-template-columns: var(--content-grid-cols, 3fr 1fr);
     padding-block: var(--content-px, var(--spc-6));
     > aside {
-      width: clamp(100%, calc(300rem/16), 100%);
+      width: clamp(100%, calc(300rem/16), calc(200rem/16));
     }
     /* Set variables for main grid columns when screen width is less than 768px */
     @media (max-width: 768px) {
