@@ -110,10 +110,10 @@ section:where([role='region']) {
 }
 hr {
   width: var(--hr-w, 100%);
-  height: var(--hr-h, 0.05rem);
-  background-color: var(--hr-bg, lightgray);
+  height: var(--hr-h, 0.01rem);
+  background-color: var(--hr-bg, gray);
   border: none;
-  margin-block: var(--py, 3rem);
+  margin-block: var(--hr-py, 3rem);
   margin-inline: var(px, auto);
 }
 img[alt][width][height],

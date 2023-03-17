@@ -41,6 +41,10 @@ div[role='presentation'][data-style~='shadow-md'],
 [data-card][data-style~='shadow-md'] {
   box-shadow: var(--cd-shadow-md);
 }
+div[role='presentation'][data-style~='shadow-md'],
+[data-card][data-style~='shadow-md'] {
+  box-shadow: var(--cd-shadow-md);
+}
 div[role='presentation'][data-style~='shadow-lg'],
 [data-card][data-style~='shadow-lg'] {
   box-shadow: var(--cd-shadow-lg);

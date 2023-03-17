@@ -50,6 +50,10 @@
     box-shadow: var(--cd-shadow-md);
   }
 
+  &[data-style~="shadow-md"] {
+    box-shadow: var(--cd-shadow-md);
+  }
+
   &[data-style~="shadow-lg"] {
     box-shadow: var(--cd-shadow-lg);
   }
@@ -57,7 +61,6 @@
   &[data-style~="shadow-none"] {
     box-shadow: none;
   }
-
 
   @content;
 }

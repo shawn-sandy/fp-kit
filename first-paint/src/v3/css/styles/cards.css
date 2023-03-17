@@ -46,6 +46,9 @@
 .fp-cards[data-style~='shadow-md'] {
   box-shadow: var(--cd-shadow-md);
 }
+.fp-cards[data-style~='shadow-md'] {
+  box-shadow: var(--cd-shadow-md);
+}
 .fp-cards[data-style~='shadow-lg'] {
   box-shadow: var(--cd-shadow-lg);
 }

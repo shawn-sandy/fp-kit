@@ -661,6 +661,9 @@ section:not(nav) {
 .fp-cards[data-style~='shadow-md'] {
   box-shadow: var(--cd-shadow-md);
 }
+.fp-cards[data-style~='shadow-md'] {
+  box-shadow: var(--cd-shadow-md);
+}
 .fp-cards[data-style~='shadow-lg'] {
   box-shadow: var(--cd-shadow-lg);
 }
@@ -1036,9 +1039,9 @@ section:not(nav) {
 }
 .fp-content hr {
   width: var(--hr-w, 100%);
-  height: var(--hr-h, 0.05rem);
-  background-color: var(--hr-bg, lightgray);
+  height: var(--hr-h, 0.01rem);
+  background-color: var(--hr-bg, gray);
   border: none;
-  margin-block: var(--py, 3rem);
+  margin-block: var(--hr-py, 3rem);
   margin-inline: var(px, auto);
 } /*# sourceMappingURL=fp-styles-complete.css.map */
