@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.61](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.60...@fpkit/react@0.2.61) (2023-03-18)
+
+**Note:** Version bump only for package @fpkit/react
+
 ## [0.2.60](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.59...@fpkit/react@0.2.60) (2023-03-11)
 
 **Note:** Version bump only for package @fpkit/react
