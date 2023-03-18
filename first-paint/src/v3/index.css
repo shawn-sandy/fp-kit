@@ -1297,7 +1297,7 @@ hr {
   height: var(--hr-h, 0.01rem);
   background-color: var(--hr-bg, gray);
   border: none;
-  margin-block: var(--hr-py, 3rem);
+  margin-block: var(--hr-py, 2rem);
   margin-inline: var(px, auto);
 }
 
