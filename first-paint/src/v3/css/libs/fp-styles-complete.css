@@ -1069,7 +1069,7 @@ section:not(nav) {
 .fp-content hr {
   width: var(--hr-w, 100%);
   height: var(--hr-h, 0.01rem);
-  background-color: var(--hr-bg, gray);
+  background-color: var(--hr-bg, lightgray);
   border: none;
   margin-block: var(--hr-py, 2rem);
   margin-inline: var(px, auto);
