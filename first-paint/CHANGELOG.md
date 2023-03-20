@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.45](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.44...@shawnsandy/first-paint@2.17.45) (2023-03-20)
+
+### Bug Fixes
+
+- 👄 change the block padding on hr ([770c207](https://github.com/shawn-sandy/fp-kit/commit/770c207695f5b1a03a566fabd76b7a23926d4444))
+
+### Features
+
+- 🚧 add alias Tag to FP exports ([1954a92](https://github.com/shawn-sandy/fp-kit/commit/1954a92c2b57bc74d755b6773999b20d31163f2b))
+
 ## [2.17.44](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.43...@shawnsandy/first-paint@2.17.44) (2023-03-18)
 
 **Note:** Version bump only for package @shawnsandy/first-paint

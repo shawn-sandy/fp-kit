@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.62](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.61...@fpkit/react@0.2.62) (2023-03-20)
+
+### Features
+
+- 🚧 add alias Tag to FP exports ([1954a92](https://github.com/shawn-sandy/fpkit/commit/1954a92c2b57bc74d755b6773999b20d31163f2b))
+
 ## [0.2.61](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.60...@fpkit/react@0.2.61) (2023-03-18)
 
 **Note:** Version bump only for package @fpkit/react
