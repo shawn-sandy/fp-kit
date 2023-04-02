@@ -441,8 +441,8 @@ p {
   text-shadow: var(--shadow);
   padding-block: var(--py, var(--p));
   padding-inline: var(--px, var(--p));
-  margin-block-end: var(--my-end, inherit);
-  margin-block-start: var(--my-start, 0);
+  margin-block-end: var(--hm-end, inherit);
+  margin-block-start: var(--hm-start, 0);
   display: var(--dsp, block);
 }
 h1[data-variant~='my-spacer'],
@@ -452,7 +452,7 @@ h4[data-variant~='my-spacer'],
 h5[data-variant~='my-spacer'],
 h6[data-variant~='my-spacer'],
 p[data-variant~='my-spacer'] {
-  --my-end: min(1rem, 1.3rem);
+  --hm-end: min(1rem, 1.3rem);
 }
 article h1,
 article h2,
@@ -460,12 +460,12 @@ article h3,
 article h4,
 article h5,
 article h6 {
-  --my-end: min(1.2rem, 1.5rem);
+  --hm-end: min(1.2rem, 1.5rem);
 }
 article h4,
 article h5,
 article h6 {
-  --my-end: 1.2rem;
+  --hm-end: 1.2rem;
 }
 p,
 [style*='--p'] {
