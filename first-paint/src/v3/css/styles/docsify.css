@@ -2240,7 +2240,7 @@ footer:not([aria-label], [role='footer']) > section,
 ul,
 [data-fp-list] {
   --listOff: ;
-  list-style: var(--list-s, inside);
+  list-style: var(--list-s, outside);
   font-size: var(--list-fs, 0.95rem);
   line-height: var(--list-lh, 1.5);
   padding-inline-start: var(--list-pxs, 1.5rem);
@@ -2259,11 +2259,13 @@ ul[data-variant],
   --list-pxs: var(--listOff, 5px);
 }
 
-[data-fp-list~='unstyled'] {
+[data-fp-list~='unstyled'],
+[data-variant~='unstyled'] {
   --list-s: none;
   --list-pxs: 0;
 }
-[data-fp-list~='unstyled'] li {
+[data-fp-list~='unstyled'] li,
+[data-variant~='unstyled'] li {
   list-style: var(--list-s);
   --list-pxs: var(--list-pxs);
 }
