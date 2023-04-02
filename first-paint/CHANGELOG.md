@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.47](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.46...@shawnsandy/first-paint@2.17.47) (2023-04-02)
+
+**Note:** Version bump only for package @shawnsandy/first-paint
+
 ## [2.17.46](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.45...@shawnsandy/first-paint@2.17.46) (2023-04-02)
 
 ### Features
