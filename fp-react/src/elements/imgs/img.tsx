@@ -36,6 +36,8 @@ export interface FpImgProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   ariaLabel?: string
 }
 
+// build fixed ratio image
+
 /**
  * `FpImage` React Image element
  * `FpCaption` : Adds a caption to an image

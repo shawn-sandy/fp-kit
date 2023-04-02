@@ -8,7 +8,7 @@ import FpTable, {
   FpTableRow,
   FpTableCell
 } from "./components/table/fp-table"
-import FpFig, { FpCaption } from "./elements/imgs/figure"
+import FpFig, { FpCaption } from "./elements/imgs/figure"'
 import Details, {
   Summary
 } from "./elements/details-summary/details-summary"
@@ -16,6 +16,7 @@ import Navbar from "./elements/nav/navbar"
 import FpLinks, { OpenTab } from './elements/content/links'
 import Input from "./elements/input/input"
 // import { Textarea } from './elements/textarea/textarea'
+// img fix
 
 export {
   Button,
