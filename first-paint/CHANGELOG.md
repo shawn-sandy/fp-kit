@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.46](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.45...@shawnsandy/first-paint@2.17.46) (2023-04-02)
+
+### Features
+
+- 🌟 add margin bottom spacer to headings ([97ad61f](https://github.com/shawn-sandy/fp-kit/commit/97ad61f3643dabc5f964e5e0a1dba189c8fa810c))
+- 🌟 add padding-y to the article paragraphs ([29c41c5](https://github.com/shawn-sandy/fp-kit/commit/29c41c53db369bfd63e7ca5f8da83b4148e70d9c))
+- 🌟 update margin styles hm-end/start ([f55f5d4](https://github.com/shawn-sandy/fp-kit/commit/f55f5d43ba18fcd64050b5008425758888062d8b))
+- 🌟 update my for h1-3/3-6 ([e19658e](https://github.com/shawn-sandy/fp-kit/commit/e19658e17bdbeace53c3793297cd80e0f5b1e4db))
+
 ## [2.17.45](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.44...@shawnsandy/first-paint@2.17.45) (2023-03-20)
 
 ### Bug Fixes
