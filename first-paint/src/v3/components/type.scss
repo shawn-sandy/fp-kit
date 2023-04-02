@@ -25,7 +25,16 @@ p {
   text-shadow: var(--shadow);
   padding-block: var(--py, var(--p));
   padding-inline: var(--px, var(--p));
+  margin-block-end: var(--my-end, inherit);
   display: var(--dsp, block);
+
+  &[data-variant~="my-spacer"] {
+    --my-end: min(1rem, 1.3rem);
+  }
+}
+
+article> :where(h1, h2, h3, h4, h5, h6) {
+  --my-end: 1.5rem;
 }
 
 p,
@@ -36,7 +45,7 @@ p,
   --fw: normal;
   --lh: 1.8;
   --spacing: 0.5rem;
-  --p-fs: var(--fs, clamp(.9rem, 3vw - 1.5rem, 1rem););
+  --p-fs: var(--fs, clamp(.9rem, 3vw - 1.5rem, 1rem); );
 
 
   margin: var(--p-m, 0);
@@ -53,7 +62,7 @@ p,
   }
 }
 
-article > p {
+article>p {
   font-size: var(--fs-3);
 
 }
@@ -67,17 +76,22 @@ h6 {
   font-size: var(--fs);
   font-weight: var(--fw);
 
-  + p {
+  +p {
     margin-top: var(--rem);
   }
-   &[role="decoration"], &[role="none"] , &[role="none"] {
+
+  &[role="decoration"],
+  &[role="none"],
+  &[role="none"] {
     font-weight: var(--h-fw, 500);
   }
 }
 
 h1 {
   --fs: var(--fs-7);
-   &[role="decoration"], &[role="none"]  {
+
+  &[role="decoration"],
+  &[role="none"] {
     font-size: var(--h1);
   }
 }
@@ -85,14 +99,17 @@ h1 {
 h2 {
   --fs: var(--fs-6);
 
-   &[role="decoration"], &[role="none"]  {
+  &[role="decoration"],
+  &[role="none"] {
     font-size: var(--h2);
   }
 }
 
 h3 {
   --fs: var(--fs-5);
-   &[role="decoration"], &[role="none"]  {
+
+  &[role="decoration"],
+  &[role="none"] {
     font-size: var(--h3);
   }
 }
@@ -100,21 +117,26 @@ h3 {
 h4 {
   --fs: var(--fs-4);
 
-   &[role="decoration"], &[role="none"]  {
+  &[role="decoration"],
+  &[role="none"] {
     font-size: var(--h4);
   }
 }
 
 h5 {
   --fs: var(--fs-3);
-   &[role="decoration"], &[role="none"]  {
+
+  &[role="decoration"],
+  &[role="none"] {
     font-size: var(--h5);
   }
 }
 
 h6 {
   --fs: var(--fs-2);
-   &[role="decoration"], &[role="none"]  {
+
+  &[role="decoration"],
+  &[role="none"] {
     font-size: var(--h6);
   }
 }
@@ -128,8 +150,8 @@ time {
   padding: 0 0 0.5rem;
 }
 
-p + p,
-p + * {
+p+p,
+p+* {
   margin-top: var(--fs-0);
 }
 

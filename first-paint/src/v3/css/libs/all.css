@@ -739,7 +739,21 @@ p {
   text-shadow: var(--shadow);
   padding-block: var(--py, var(--p));
   padding-inline: var(--px, var(--p));
+  margin-block-end: var(--my-end, inherit);
   display: var(--dsp, block);
+}
+h1[data-variant~='my-spacer'],
+h2[data-variant~='my-spacer'],
+h3[data-variant~='my-spacer'],
+h4[data-variant~='my-spacer'],
+h5[data-variant~='my-spacer'],
+h6[data-variant~='my-spacer'],
+p[data-variant~='my-spacer'] {
+  --my-end: min(1rem, 1.3rem);
+}
+
+article > :where(h1, h2, h3, h4, h5, h6) {
+  --my-end: 1.5rem;
 }
 
 p,
