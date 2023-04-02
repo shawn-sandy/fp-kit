@@ -477,6 +477,7 @@ p,
   --spacing: 0.5rem;
   --p-fs: var(--fs, clamp(0.9rem, 3vw - 1.5rem, 1rem) ;);
   margin: var(--p-m, 0);
+  padding: var(--p-p);
   line-height: var(--lh, 1.6);
   word-spacing: 0.05rem;
   font-size: var(--p-fs);
@@ -491,6 +492,7 @@ p strong,
 }
 article > p {
   font-size: var(--fs-3);
+  padding-inline: var(--ap, 0.5rem);
 }
 h1,
 h2,

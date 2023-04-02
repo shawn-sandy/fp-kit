@@ -56,6 +56,7 @@
   &[aria-disabled="true"] {
     cursor: var(--btn-cursor, not-allowed);
     opacity: var(--btn-opacity, 0.5);
+
     &:is(:hover, :focus) {
       transform: none;
       // background-color: var(--btn-bg, lightgray);
@@ -72,6 +73,7 @@
     transform: scale(0.95);
     // outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
     outline-offset: var(--line-offset, 5px);
+
     &[aria-disabled="true"] {
       transform: none;
       opacity: var(--btn-opacity, 0.5);
@@ -91,11 +93,14 @@
     --btn-border: none;
   }
 
-  &[data-fp-btn~="pill"], &[data-btn~="pill"], &[data-style~="pill"] {
+  &[data-fp-btn~="pill"],
+  &[data-btn~="pill"],
+  &[data-style~="pill"] {
     border-radius: var(--btn-pill, 100rem);
   }
 
-  &[data-variant], &[data-style] {
+  &[data-variant],
+  &[data-style] {
     --btn-bg: var(--vbg);
     --btn-cl: var(--vcl);
     --btn-fs: var(--vfs, .95rem);

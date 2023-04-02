@@ -64,6 +64,7 @@ p,
 
 
   margin: var(--p-m, 0);
+  padding: var(--p-p);
   line-height: var(--lh, 1.6);
   word-spacing: 0.05rem;
   font-size: var(--p-fs);
@@ -79,6 +80,7 @@ p,
 
 article>p {
   font-size: var(--fs-3);
+  padding-inline: var(--ap, max(.5rem, .25rem));
 
 }
 
