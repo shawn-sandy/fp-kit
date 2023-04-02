@@ -19,5 +19,8 @@
   color: var(--vcl);
   font-size: var(--vfs);
 }
+.fp-img[data-variant~='my-spacer'] {
+  margin-block-end: 1rem;
+}
 
 /*# sourceMappingURL=img.css.map */

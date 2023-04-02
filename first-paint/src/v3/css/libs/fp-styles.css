@@ -293,6 +293,9 @@ section:not(nav) {
   color: var(--vcl);
   font-size: var(--vfs);
 }
+.fp-img[data-variant~='my-spacer'] {
+  margin-block-end: 1rem;
+}
 .fp-details-summary {
   font-size: var(--detail-fs, 1rem);
   color: var(--detail-color, currentColor);
