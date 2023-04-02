@@ -1,7 +1,6 @@
-import * as React from "react"
+import * as React from 'react'
 
-export interface FpImgProps
-  extends React.ImgHTMLAttributes<HTMLImageElement> {
+export interface FpImgProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   /**
    * set the object-fit style on the image
    */
@@ -45,7 +44,7 @@ export interface FpImgProps
  */
 const FpImg: React.VFC<FpImgProps> = ({
   src,
-  alt = "",
+  alt = '',
   fit,
   width,
   height,
@@ -53,35 +52,29 @@ const FpImg: React.VFC<FpImgProps> = ({
   classes,
   imgError,
   imgLoaded,
-  loading = "lazy",
-  ratio = "auto 4 / 3",
-  imgPlaceholder = "https://via.placeholder.com/800",
+  loading = 'lazy',
+  ratio = '16/9',
+  imgPlaceholder = 'https://via.placeholder.com/800',
   ariaLabel,
   ...props
 }) => {
-  const _onError = (
-    e: React.SyntheticEvent<HTMLImageElement, Event>
-  ) => {
+  const _onError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     if (e.currentTarget.src !== imgPlaceholder) {
       e.currentTarget.src = imgPlaceholder // imgError = null
       imgError = () => null
     }
-    return new Error(
-      `Error loading image - ${e.currentTarget.src}`
-    )
+    return new Error(`Error loading image - ${e.currentTarget.src}`)
   }
 
-  const _onLoad = (
-    e: React.SyntheticEvent<HTMLImageElement, Event>
-  ) => {
-    console.log("Image loaded", e.currentTarget.src)
+  const _onLoad = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    console.log('Image loaded', e.currentTarget.src)
   }
 
   const defStyles = {
     objectFit: `var(--img-fit, ${fit})`,
     aspectRatio: `var(--img-ratio, ${ratio})`,
-    width: "var(--img-w, 100%)",
-    height: "var(--img-h, auto)"
+    width: 'var(--img-w, 100%)',
+    height: 'var(--img-h, auto)',
   }
 
   return (
