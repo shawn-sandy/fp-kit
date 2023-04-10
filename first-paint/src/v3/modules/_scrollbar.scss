@@ -62,7 +62,7 @@
 
   [style*="--scroll"],
   div[role="region"],
-  [data-fp-scroll],
+  [],
   [data-scroll] {
     @include props;
     @include rules;
