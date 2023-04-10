@@ -1,4 +1,3 @@
-import Fp from '../../base/fp/fp'
 import * as React from 'react'
 
 export interface ListProps {

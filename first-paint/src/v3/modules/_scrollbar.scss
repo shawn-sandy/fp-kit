@@ -17,7 +17,7 @@
   overflow-x: var(--overflow-x, auto);
   scrollbar-width: var(--scroll-size, thin);
 
-  > * {
+  >* {
     padding: 10px;
   }
 
@@ -26,11 +26,13 @@
     height: var(--scroll-h, 0.5rem);
     transition: opacity 500ms ease;
   }
+
   &::-webkit-scrollbar-track {
     /* Background */
     background: var(--scroll-track-bg, lightgray);
 
   }
+
   &::-webkit-scrollbar-thumb {
     /* Foreground */
     background: var(--scroll-bg, gray);
@@ -47,6 +49,7 @@
     --scroll-track-bg: var(--vscroll-track-bg);
     --scroll-bg: var(--vscroll-bg);
   }
+
   @content;
 }
 
@@ -56,9 +59,14 @@
 }
 
 @mixin module {
-  [style*="--scroll"], div[role="region"], [data-fp-scroll] {
+
+  [style*="--scroll"],
+  div[role="region"],
+  [data-fp-scroll],
+  [data-scroll] {
     @include props;
     @include rules;
   }
+
   @include styles;
 }
