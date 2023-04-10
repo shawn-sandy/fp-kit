@@ -7,6 +7,7 @@
 // */
 
 @use "sass:color";
+
 @mixin props() {
   /*  css custom properties */
   --spc: 0;
@@ -26,7 +27,8 @@
   --tbl-cap-fs: var(--fs);
   --tbl-cap-pd: 1rem;
   --tbl-cap-rds: .5rem;
-  --tbl-cap-bdr: solid thin lightgray;;
+  --tbl-cap-bdr: solid thin lightgray;
+  ;
 
   @content;
 }
@@ -88,6 +90,7 @@
   tr {
     background-color: white;
     border-bottom: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
+
     // border-bottom: solid 1px black;
     &:nth-of-type(even) {
       //background-color: var(--tb-bg, whitesmoke);
@@ -98,6 +101,7 @@
       padding: 1rem;
     }
   }
+
   tbody tr:last-of-type {
     border-bottom: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
     // border-bottom: none;
@@ -107,13 +111,16 @@
 }
 
 @mixin styles {
-  [data-style~="table-wrapper"] {
+
+  [data-style~="table-wrapper"],
+  [data-wrapper] {
     min-width: var(--tbl-wrap-mw, 90vw);
-    height: var(--tbl-wrap-h, 50vh);
+    height: var(--tbl-wrap-h, 60vh);
     overflow: var(--tbl-wrap-overflow, auto);
     margin: var(--tbl-wrap-m, 1rem);
     padding: var(--tbl-wrap-p, 0px);
   }
+
   @content;
 }
 
@@ -124,5 +131,6 @@
   table {
     @include rules;
   }
+
   @include styles;
 }

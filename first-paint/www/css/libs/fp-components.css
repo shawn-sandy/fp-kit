@@ -536,6 +536,11 @@ footer:not([aria-label], [role='footer']),
   flex-direction: var(--footer-direction, column);
   font-size: var(--footer-fs, var(--fs-2));
 }
+footer:not([aria-label], [role='footer']) > p,
+[data-footer]:not([aria-label], [role='footer']) > p,
+[role='contentinfo']:not([aria-label], [role='footer']) > p {
+  text-align: var(--fp-align, center);
+}
 footer:not([aria-label], [role='footer']) p,
 [data-footer]:not([aria-label], [role='footer']) p,
 [role='contentinfo']:not([aria-label], [role='footer']) p {

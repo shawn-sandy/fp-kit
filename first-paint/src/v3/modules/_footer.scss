@@ -15,18 +15,25 @@
   flex-direction: var(--footer-direction, column);
   font-size: var(--footer-fs, var(--fs-2));
 
+  >p {
+    text-align: var(--fp-align, center);
+  }
+
   p {
     --p-fs: var(--footer-fs, var(--fs));
   }
+
   &[data-variant] {
     --footer-fs: var(--vfs);
     --footer-cl: var(--vcl);
     --footer-bg: var(--vbg);
   }
+
   >section {
     width: var(--content-w);
     padding-block: var(--footer-py, var(--spc-md));
   }
+
   @content;
 }
 
@@ -36,6 +43,7 @@
 }
 
 @mixin module {
+
   footer,
   [data-footer],
   [role="contentinfo"] {
@@ -44,5 +52,6 @@
       @include rules;
     }
   }
+
   @include styles;
 }
