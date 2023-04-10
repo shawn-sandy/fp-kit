@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.49](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.48...@shawnsandy/first-paint@2.17.49) (2023-04-10)
+
+### Features
+
+- 🤩 add data-wrapper style attribute to table ([19656e2](https://github.com/shawn-sandy/fp-kit/commit/19656e2e7ffe8a6ada5999b0b5a063b67e97404d))
+
 ## [2.17.48](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.47...@shawnsandy/first-paint@2.17.48) (2023-04-02)
 
 ### Features
