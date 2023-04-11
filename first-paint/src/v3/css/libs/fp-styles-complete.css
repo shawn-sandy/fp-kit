@@ -1022,7 +1022,8 @@ section:not(nav) {
   padding-inline: var(--list-px, 1rem);
 }
 .fp-scrollbar {
-  max-height: var(--scroll, 50vh);
+  max-height: var(--scroll, 40vh);
+  max-width: var(--scroll-w, 100%);
   overflow-y: var(--overflow-y, auto);
   overflow-x: var(--overflow-x, auto);
   scrollbar-width: var(--scroll-size, thin);
@@ -1052,6 +1053,26 @@ section:not(nav) {
   --scroll-h: var(--vscroll-h);
   --scroll-track-bg: var(--vscroll-track-bg);
   --scroll-bg: var(--vscroll-bg);
+}
+.fp [data-scroll~='horizontal'] {
+  --overflow-x: hidden;
+  --overflow-y: auto;
+}
+.fp [data-scroll~='vertical'] {
+  --overflow-x: auto;
+  --overflow-y: hidden;
+}
+.fp [data-scroll~='sm'] {
+  --scroll: 20vh;
+}
+.fp [data-scroll~='md'] {
+  --scroll: 40vh;
+}
+.fp [data-scroll~='lg'] {
+  --scroll: 60vh;
+}
+.fp [data-scroll~='xl'] {
+  --scroll: 80vh;
 }
 .fp-content form,
 .fp-content .fp-form {

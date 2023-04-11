@@ -1,5 +1,6 @@
 .fp-scrollbar {
-  max-height: var(--scroll, 50vh);
+  max-height: var(--scroll, 40vh);
+  max-width: var(--scroll-w, 100%);
   overflow-y: var(--overflow-y, auto);
   overflow-x: var(--overflow-x, auto);
   scrollbar-width: var(--scroll-size, thin);
@@ -29,6 +30,32 @@
   --scroll-h: var(--vscroll-h);
   --scroll-track-bg: var(--vscroll-track-bg);
   --scroll-bg: var(--vscroll-bg);
+}
+
+[data-scroll~='horizontal'] {
+  --overflow-x: hidden;
+  --overflow-y: auto;
+}
+
+[data-scroll~='vertical'] {
+  --overflow-x: auto;
+  --overflow-y: hidden;
+}
+
+[data-scroll~='sm'] {
+  --scroll: 20vh;
+}
+
+[data-scroll~='md'] {
+  --scroll: 40vh;
+}
+
+[data-scroll~='lg'] {
+  --scroll: 60vh;
+}
+
+[data-scroll~='xl'] {
+  --scroll: 80vh;
 }
 
 /*# sourceMappingURL=scrollbar.css.map */

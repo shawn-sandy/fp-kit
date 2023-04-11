@@ -1,18 +1,79 @@
-/* Error: Expected identifier.
- *    ,
- * 65 |   [],
- *    |    ^
- *    '
- *   src/v3/modules/_scrollbar.scss 65:4   module()
- *   src/v3/components/scrollbar.scss 2:1  root stylesheet */
-
-body::before {
-  font-family: 'Source Code Pro', 'SF Mono', Monaco, Inconsolata, 'Fira Mono',
-    'Droid Sans Mono', monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: Expected identifier.\a    \2577 \a 65 \2502    [],\a    \2502     ^\a    \2575 \a   src/v3/modules/_scrollbar.scss 65:4   module()\a   src/v3/components/scrollbar.scss 2:1  root stylesheet';
+[style*='--scroll'],
+div[role='region'],
+[data-fp-scroll],
+[data-scroll] {
+  max-height: var(--scroll, 40vh);
+  max-width: var(--scroll-w, 100%);
+  overflow-y: var(--overflow-y, auto);
+  overflow-x: var(--overflow-x, auto);
+  scrollbar-width: var(--scroll-size, thin);
 }
+[style*='--scroll'] > *,
+div[role='region'] > *,
+[data-fp-scroll] > *,
+[data-scroll] > * {
+  padding: 10px;
+}
+[style*='--scroll']::-webkit-scrollbar,
+div[role='region']::-webkit-scrollbar,
+[data-fp-scroll]::-webkit-scrollbar,
+[data-scroll]::-webkit-scrollbar {
+  width: var(--scroll-w, 0.5rem);
+  height: var(--scroll-h, 0.5rem);
+  transition: opacity 500ms ease;
+}
+[style*='--scroll']::-webkit-scrollbar-track,
+div[role='region']::-webkit-scrollbar-track,
+[data-fp-scroll]::-webkit-scrollbar-track,
+[data-scroll]::-webkit-scrollbar-track {
+  /* Background */
+  background: var(--scroll-track-bg, lightgray);
+}
+[style*='--scroll']::-webkit-scrollbar-thumb,
+div[role='region']::-webkit-scrollbar-thumb,
+[data-fp-scroll]::-webkit-scrollbar-thumb,
+[data-scroll]::-webkit-scrollbar-thumb {
+  /* Foreground */
+  background: var(--scroll-bg, gray);
+}
+[style*='--scroll'][data-variant],
+div[role='region'][data-variant],
+[data-fp-scroll][data-variant],
+[data-scroll][data-variant] {
+  --scroll: var(--vscroll);
+  --overflow-y: var(--voverflow-y);
+  --overflow-x: var(--voverflow-x);
+  --scroll-size: var(--vscroll-size);
+  --scroll-w: var(--vscroll-w);
+  --scroll-h: var(--vscroll-h);
+  --scroll-track-bg: var(--vscroll-track-bg);
+  --scroll-bg: var(--vscroll-bg);
+}
+
+[data-scroll~='horizontal'] {
+  --overflow-x: hidden;
+  --overflow-y: auto;
+}
+
+[data-scroll~='vertical'] {
+  --overflow-x: auto;
+  --overflow-y: hidden;
+}
+
+[data-scroll~='sm'] {
+  --scroll: 20vh;
+}
+
+[data-scroll~='md'] {
+  --scroll: 40vh;
+}
+
+[data-scroll~='lg'] {
+  --scroll: 60vh;
+}
+
+[data-scroll~='xl'] {
+  --scroll: 80vh;
+}
+
+/*# sourceMappingURL=scrollbar.css.map */
