@@ -13,7 +13,7 @@ a {
   background-color: var(--link-bg);
   text-decoration: var(--link-decoration, none);
   border: var(--link-border);
-  padding-inline: var(--link-px, 0.25rem);
+  padding-inline: var(--link-px, 0);
   transition: var(--tran-all);
 }
 a:hover {
