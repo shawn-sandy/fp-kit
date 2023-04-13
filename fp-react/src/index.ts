@@ -8,7 +8,7 @@ import FpTable, {
   FpTableRow,
   FpTableCell
 } from "./components/table/fp-table"
-import FpFig, { FpCaption } from "./elements/imgs/figure"'
+import FpFig, { FpCaption } from "./elements/imgs/figure"
 import Details, {
   Summary
 } from "./elements/details-summary/details-summary"

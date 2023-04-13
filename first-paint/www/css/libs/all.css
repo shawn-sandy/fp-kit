@@ -1167,14 +1167,6 @@ table tr td {
 table tbody tr:last-of-type {
   border-bottom: var(--bdr-s) var(--bdr-cl) var(--bdr-w);
 }
-[data-style~='table-wrapper'],
-[data-wrapper] {
-  min-width: var(--tbl-wrap-mw, 90vw);
-  height: var(--tbl-wrap-h, 60vh);
-  overflow: var(--tbl-wrap-overflow, auto);
-  margin: var(--tbl-wrap-m, 1rem);
-  padding: var(--tbl-wrap-p, 0px);
-}
 details,
 [data-fp-details] {
   font-size: var(--detail-fs, 1rem);
