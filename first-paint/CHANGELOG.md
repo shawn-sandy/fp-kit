@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.50](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.49...@shawnsandy/first-paint@2.17.50) (2023-04-21)
+
+### Features
+
+- 🏗️ update scroll start ([886541e](https://github.com/shawn-sandy/fp-kit/commit/886541e5f3581253828048f34144c43d2c0558f5))
+- 🏗️ update the scrollbar module/style ([5bda9b0](https://github.com/shawn-sandy/fp-kit/commit/5bda9b03f0bd5fd1ff14a823ef65d725f571926e))
+- 🤩 add t-shirt size to the user scrollbar module ([0c920ab](https://github.com/shawn-sandy/fp-kit/commit/0c920ab546938bfb7a800d0d7b7e3c55dfc9ff82))
+- 🤩 remove inline padding on links ([93a00b6](https://github.com/shawn-sandy/fp-kit/commit/93a00b64afe7f7f7134cb62f3b0570211d31a542))
+
 ## [2.17.49](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.48...@shawnsandy/first-paint@2.17.49) (2023-04-10)
 
 ### Features
