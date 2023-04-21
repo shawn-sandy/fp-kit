@@ -2083,11 +2083,13 @@ ul[data-variant],
   list-style: var(--list-s);
   --list-pxs: var(--list-pxs);
 }
-[data-fp-list~='inline'] {
+[data-fp-list~='inline'],
+[data-list~='inline'] {
   --list-dsp: flex;
 }
-[data-fp-list~='inline'] li {
-  padding-inline: var(--list-px, 1rem);
+[data-fp-list~='inline'] li + li,
+[data-list~='inline'] li + li {
+  padding-inline: var(--list-px, 0.5rem);
 }
 [style*='--scroll'],
 div[role='region'],

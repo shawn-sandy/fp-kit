@@ -706,11 +706,13 @@ section:not(nav) {
   list-style: var(--list-s);
   --list-pxs: var(--list-pxs);
 }
-.fp [data-fp-list~='inline'] {
+.fp [data-fp-list~='inline'],
+.fp [data-list~='inline'] {
   --list-dsp: flex;
 }
-.fp [data-fp-list~='inline'] li {
-  padding-inline: var(--list-px, 1rem);
+.fp [data-fp-list~='inline'] li + li,
+.fp [data-list~='inline'] li + li {
+  padding-inline: var(--list-px, 0.5rem);
 }
 
 /*# sourceMappingURL=fp-styles.css.map */

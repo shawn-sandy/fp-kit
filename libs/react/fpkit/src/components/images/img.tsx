@@ -1,12 +1,13 @@
 import FP from '../fp'
-import { ComponentProps } from "src/types"
+import { ComponentProps } from 'src/types'
 export interface ImageProps extends ComponentProps {
-  src: string
+  src?: string
   alt: string
   width: number
   height?: number
   loading?: 'eager' | 'lazy'
   placeholder?: string
+  imgError?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void
   imgLoaded?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void
 }
 
@@ -35,6 +36,7 @@ export const Img = ({
   loading = 'lazy',
   placeholder = `https://via.placeholder.com/${width}?text=PLACEHOLDER`,
   imgLoaded,
+  imgError,
   ...props
 }: ImageProps) => {
   const stylesObj = renderStyles ? defaultStyles : {}
@@ -42,22 +44,28 @@ export const Img = ({
   const handleImgError = (
     e: React.SyntheticEvent<HTMLImageElement, Event>,
   ): void => {
+    if (imgError) {
+      imgError?.(e)
+      return
+    }
     if (e.currentTarget.src !== placeholder) {
       e.currentTarget.src = placeholder
     }
   }
 
-  const handleImgLoad = (e: React.SyntheticEvent<HTMLImageElement, Event>): void => {
+  const handleImgLoad = (
+    e: React.SyntheticEvent<HTMLImageElement, Event>,
+  ): void => {
     imgLoaded?.(e)
   }
 
   return (
     <FP
-    as='img'
+      as="img"
       src={src}
       alt={alt}
       width={width}
-      height={height || width}
+      height={height || 'auto'}
       loading={loading}
       style={{ ...styles, ...stylesObj }}
       onError={handleImgError}

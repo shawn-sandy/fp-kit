@@ -82,13 +82,11 @@
   }
 
   picture,
-  figure,
-  .fp-figure {
+  figure {
     @include figure-rules;
   }
 
-  figcaption,
-  .fp-cations {
+  figcaption {
     @include figcaption-rules;
   }
 }
