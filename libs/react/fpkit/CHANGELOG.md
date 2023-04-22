@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.72](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.71...@fpkit/react@0.2.72) (2023-04-22)
+
+### Features
+
+- 🤩 add method to handle the onPointerDown event ([82d1877](https://github.com/shawn-sandy/fpkit/commit/82d18773b570d9ad261f1023bba6290be13010cc))
+- modify href to be required ([b391e9b](https://github.com/shawn-sandy/fpkit/commit/b391e9bbeb2c0024bda2ce3e4ca21d59fcf14904))
+
 ## [0.2.71](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.70...@fpkit/react@0.2.71) (2023-04-22)
 
 ### Features
