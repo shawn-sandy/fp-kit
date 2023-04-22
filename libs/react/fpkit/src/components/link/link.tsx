@@ -3,7 +3,7 @@ import { ComponentProps } from '../../types'
 // export interface LinkProps {
 
 export type LinkProps = Partial<ComponentProps> & {
-  href?: string
+  href: string
   target?: string
   rel?: string
   children: React.ReactNode
