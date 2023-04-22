@@ -2,8 +2,8 @@ import FP from '../fp'
 import { ComponentProps } from '../../types'
 // export interface LinkProps {
 
-export type LinkProps = ComponentProps & {
-  href: string
+export type LinkProps = Partial<ComponentProps> & {
+  href?: string
   target?: string
   rel?: string
   children: React.ReactNode
@@ -21,10 +21,17 @@ export const Link = ({
 }: LinkProps) => {
   let relValue = rel
   if (target === '_blank')
-    relValue = `noopener noreferrer ${!!prefetch ?? 'prefetch'}`
+    relValue = `noopener noreferrer ${!!prefetch ? 'prefetch' : ''}`
   return (
-    <FP as="a" href={href} target={target} styles={styles} {...props}>
-      {children}
+    <FP
+      as="a"
+      href={href}
+      target={target}
+      styles={styles}
+      rel={relValue}
+      {...props}
+    >
+      {children ?? 'Link'}
     </FP>
   )
 }
