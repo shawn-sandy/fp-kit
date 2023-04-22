@@ -1,6 +1,5 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
-// export interface LinkProps {
 
 export type LinkProps = Partial<ComponentProps> & {
   href: string
