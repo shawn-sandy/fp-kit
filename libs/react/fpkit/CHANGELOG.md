@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.71](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.70...@fpkit/react@0.2.71) (2023-04-22)
+
+### Features
+
+- 🏗️ add link component ([168d00c](https://github.com/shawn-sandy/fpkit/commit/168d00ca971c1b0e991b364f3995edcf2ec31dd8))
+- 🏗️ add story for link component ([a65513f](https://github.com/shawn-sandy/fpkit/commit/a65513f90385eb31bf0b3a5c4a476ef5a92bb897))
+- 🤩 first release link component ([899cc06](https://github.com/shawn-sandy/fpkit/commit/899cc0649f114b0048cab2617d8228c6c35ad55a))
+
 ## [0.2.70](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.69...@fpkit/react@0.2.70) (2023-04-21)
 
 **Note:** Version bump only for package @fpkit/react
