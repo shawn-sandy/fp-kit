@@ -8,6 +8,7 @@ export type LinkProps = Partial<ComponentProps> & {
   rel?: string
   children: React.ReactNode
   prefetch?: boolean
+  onPointerDown?: (e: React.PointerEvent<HTMLAnchorElement>) => void
 }
 
 export const Link = ({
@@ -17,11 +18,18 @@ export const Link = ({
   children,
   styles = {},
   prefetch = true,
+  onPointerDown,
   ...props
 }: LinkProps) => {
   let relValue = rel
+
   if (target === '_blank')
     relValue = `noopener noreferrer ${!!prefetch ? 'prefetch' : ''}`
+
+  const handleOnpointerDown = (e: React.PointerEvent<HTMLAnchorElement>) => {
+    if (onPointerDown) onPointerDown?.(e)
+  }
+
   return (
     <FP
       as="a"
@@ -29,6 +37,7 @@ export const Link = ({
       target={target}
       styles={styles}
       rel={relValue}
+      onPointerDown={handleOnpointerDown}
       {...props}
     >
       {children ?? 'Link'}
