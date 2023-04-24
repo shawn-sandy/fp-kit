@@ -7,6 +7,8 @@ export interface ImageProps extends ComponentProps {
   height?: number
   loading?: 'eager' | 'lazy'
   placeholder?: string
+  fetchpriority?: 'high' | 'low'
+  decoding?: 'sync' | 'async' | 'auto'
   imgError?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void
   imgLoaded?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void
 }
@@ -35,6 +37,8 @@ export const Img = ({
   renderStyles = true,
   loading = 'lazy',
   placeholder = `https://via.placeholder.com/${width}?text=PLACEHOLDER`,
+  fetchpriority = 'low',
+  decoding = 'auto',
   imgLoaded,
   imgError,
   ...props
