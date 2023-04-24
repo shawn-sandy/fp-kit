@@ -147,8 +147,7 @@ img[alt][data-variant~='my-spacer'],
   margin-block-end: 1rem;
 }
 picture,
-figure,
-.fp-figure {
+figure {
   max-width: var(--pic-max-w, 100%);
   width: var(--pic-w, auto);
   display: var(--pic-dsp, flex);
@@ -159,8 +158,7 @@ figure,
   padding-block: var(--pic-py, 0.5rem);
   padding-inline: var(--pic-px, 0.5rem);
 }
-figcaption,
-.fp-cations {
+figcaption {
   font-size: var(--fcap-fs, inherit);
   display: var(--fcap-dsp, flex);
   place-content: var(--place-x, flex-start);

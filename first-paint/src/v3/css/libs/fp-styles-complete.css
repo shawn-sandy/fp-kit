@@ -989,7 +989,7 @@ section:not(nav) {
 .fp-list {
   --listOff: ;
   list-style: var(--list-s, outside);
-  font-size: var(--list-fs, 0.95rem);
+  font-size: var(--list-fs, 0.98rem);
   line-height: var(--list-lh, 1.5);
   padding-inline-start: var(--list-pxs, 1.5rem);
   display: var(--list-dsp, block);

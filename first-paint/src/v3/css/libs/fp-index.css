@@ -586,7 +586,6 @@ p strong,
 
 article > p {
   font-size: var(--fs-3);
-  padding-inline: var(--ap, 0.5rem);
 }
 
 h1,
@@ -1304,8 +1303,7 @@ img[alt][data-variant~='my-spacer'],
 }
 
 picture,
-figure,
-.fp-figure {
+figure {
   max-width: var(--pic-max-w, 100%);
   width: var(--pic-w, auto);
   display: var(--pic-dsp, flex);
@@ -1317,8 +1315,7 @@ figure,
   padding-inline: var(--pic-px, 0.5rem);
 }
 
-figcaption,
-.fp-cations {
+figcaption {
   font-size: var(--fcap-fs, inherit);
   display: var(--fcap-dsp, flex);
   place-content: var(--place-x, flex-start);
@@ -2063,16 +2060,20 @@ footer:not([aria-label], [role='footer']) > section,
 }
 
 ul,
-[data-fp-list] {
+ol,
+[data-fp-list],
+[data-list] {
   --listOff: ;
   list-style: var(--list-s, outside);
-  font-size: var(--list-fs, 0.95rem);
+  font-size: var(--list-fs, 0.98rem);
   line-height: var(--list-lh, 1.5);
   padding-inline-start: var(--list-pxs, 1.5rem);
   display: var(--list-dsp, block);
 }
 ul[data-variant],
-[data-fp-list][data-variant] {
+ol[data-variant],
+[data-fp-list][data-variant],
+[data-list][data-variant] {
   --list-fs: var(--vfs);
   --list-lh: var(--vlh);
   --list-pxs: var(--vpxs);
