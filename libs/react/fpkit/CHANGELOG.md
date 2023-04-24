@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.73](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.72...@fpkit/react@0.2.73) (2023-04-24)
+
+### Features
+
+- 🤩 add decoding, fetchpriority to img component ([3021c99](https://github.com/shawn-sandy/fpkit/commit/3021c996938ce04cc9e875008c5eee7c53e8cf9a))
+
 ## [0.2.72](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.71...@fpkit/react@0.2.72) (2023-04-22)
 
 ### Features
