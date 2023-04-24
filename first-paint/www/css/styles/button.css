@@ -29,7 +29,7 @@
   display: var(--btn-dsp, inline-flex);
   gap: var(--btn-gap, 1rem);
   white-space: var(--btn-wspc, inherit);
-  margin: var(--btn-spc, 0.25rem);
+  margin: var(--btn-spc, 0);
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
   outline: none;
