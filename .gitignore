@@ -123,3 +123,5 @@ storybook-static/
 .parcel-cache/
 lib
 .DS_Store
+libs/react/fuse-search/src/data.js
+libs/react/fuse-search/
