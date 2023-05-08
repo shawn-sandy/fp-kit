@@ -290,7 +290,8 @@ section:not(nav) {
 }
 .fp-img[src$='.svg'] {
   height: auto;
-  width: auto;
+  max-width: auto;
+  object-fit: var(--img-obj-fit, auto);
 }
 .fp-img + * {
   margin-block: 1rem 0;

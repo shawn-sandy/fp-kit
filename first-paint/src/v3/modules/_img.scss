@@ -25,9 +25,9 @@
   }
 
   &[src$=".svg"] {
-    // width: 100%;
     height: auto;
-    width: auto;
+    max-width: auto;
+    object-fit: var(--img-obj-fit, auto);
   }
 
   +* {

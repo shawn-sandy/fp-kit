@@ -1285,7 +1285,8 @@ img[alt][width][height],
 img[alt][src$='.svg'],
 [data-img][src$='.svg'] {
   height: auto;
-  width: auto;
+  max-width: auto;
+  object-fit: var(--img-obj-fit, auto);
 }
 img[alt] + *,
 [data-img] + * {
