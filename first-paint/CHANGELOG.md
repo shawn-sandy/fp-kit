@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.52](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.51...@shawnsandy/first-paint@2.17.52) (2023-05-08)
+
+### Bug Fixes
+
+- 🚑 remove width from svg style ([a2b8acd](https://github.com/shawn-sandy/fp-kit/commit/a2b8acd0b8588a751f005bde66cb72859e7d5d65))
+
 ## [2.17.51](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.50...@shawnsandy/first-paint@2.17.51) (2023-04-24)
 
 **Note:** Version bump only for package @shawnsandy/first-paint
