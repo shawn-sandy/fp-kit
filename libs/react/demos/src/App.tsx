@@ -24,6 +24,10 @@ function App() {
       <p>
         <ListNavigation items={['Item 1', 'Item 2', 'Item 3', 'Item 4']} />
       </p>
+      <div className="divider">
+        <span>A</span>
+        <hr />
+      </div>
       <p>
         <ListNavigation items={['Item 1', 'Item 2', 'Item 3', 'Item 4']} />
       </p>

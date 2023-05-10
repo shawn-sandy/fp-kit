@@ -40,3 +40,26 @@
 .read-the-docs {
   color: #888;
 }
+
+.divider {
+  position: relative;
+  text-align: center;
+  /* padding-bottom: 20px; adjust as needed */
+  height: 16px; /* adjust as needed */
+}
+.divider span {
+  background-color: #fff;
+  padding: 0 10px;
+  font-size: 16px;
+  position: relative;
+  /* top: -12px; */
+  z-index: 1; /* bring text to the front */
+  line-height: 1;
+}
+.divider hr {
+  position: absolute;
+  top: 12px;
+  width: 100%;
+  margin-top: 0px; /*half of height */
+  background-color: lightgray;
+}
