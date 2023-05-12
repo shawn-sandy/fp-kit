@@ -3,6 +3,7 @@ import React from 'react'
 
 import './App.css'
 import ListNavigation from './list-navigation/ListNav'
+import ElementNav from './arrow-nav/ElementNav'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,14 +23,14 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <p>
-        <ListNavigation items={['Item 1', 'Item 2', 'Item 3', 'Item 4']} />
+        {/* <ListNavigation items={['Item 1', 'Item 2', 'Item 3', 'Item 4']} /> */}
       </p>
       <div className="divider">
         <span>A</span>
         <hr />
       </div>
       <p>
-        <ListNavigation items={['Item 1', 'Item 2', 'Item 3', 'Item 4']} />
+        <ElementNav />
       </p>
     </>
   )
