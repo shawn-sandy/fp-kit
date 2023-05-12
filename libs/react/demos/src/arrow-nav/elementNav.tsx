@@ -3,9 +3,9 @@ import useArrowNavigation from './useArrowNavigation'
 
 function ElementNav() {
   const parentRef = useRef<HTMLDivElement>(null)
-  const itemsRef = useRef<(HTMLDivElement | HTMLButtonElement | null)[]>([null])
+  const itemsRef = useRef<(HTMLButtonElement | null)[]>([null])
   const [activeIndex, setActiveIndex] = useArrowNavigation(
-    itemsRef.current.filter((item) => item !== null) as HTMLDivElement[],
+    itemsRef.current.filter((item) => item !== null) as HTMLButtonElement[],
   )
   const items = ['Item 1', 'Item 2', 'Item 3']
   return (
