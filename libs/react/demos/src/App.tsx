@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import React from 'react'
 
+import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
 import './App.css'
-import ListNavigation from './list-navigation/ListNav'
+// import ListNavigation from './list-navigation/ListNav'
 import ElementNav from './arrow-nav/ElementNav'
+import { MultipleSelectExample } from './down-shift/down-shift'
+import { MultipleCombo } from './down-shift/multibox-combo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,7 +33,8 @@ function App() {
         <hr />
       </div>
       <p>
-        <ElementNav />
+        {/* <MultipleSelectExample /> */}
+        <MultipleCombo />
       </p>
     </>
   )
