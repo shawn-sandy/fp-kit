@@ -18,6 +18,8 @@ export const MultipleCombo = (options: options[] = atsSelfReportOptions) => {
     atsSelfReportOptions[1],
   ]
 
+  const inputRef = React.useRef<HTMLInputElement>(null)
+
   function getFilteredBooks(selectedItems: any, inputValue: string) {
     const lowerCasedInputValue = inputValue.toLowerCase()
 
@@ -119,15 +121,20 @@ export const MultipleCombo = (options: options[] = atsSelfReportOptions) => {
     })
 
     return (
-      <div className="w-[592px]">
-        <div>
-          <section
-            style={{ textAlign: 'left', position: 'relative', width: '600px' }}
+      <section className="w-[592px]">
+        <section>
+          <div
+            style={{
+              textAlign: 'left',
+              position: 'relative',
+              width: 'clamp(200px, 500px, 100%)',
+            }}
           >
             <label htmlFor="multiple-combo-box" {...getLabelProps()}>
               Pick some books:
             </label>
             <input
+              ref={inputRef}
               id="multiple-combo-input"
               type="text"
               placeholder="Best book ever"
@@ -149,7 +156,7 @@ export const MultipleCombo = (options: options[] = atsSelfReportOptions) => {
               }}
             >
               <ul
-                style={{ position: 'relative' }}
+                style={{ position: 'relative', margin: '0', padding: '0' }}
                 data-variant="unstyled"
                 // style={{ all: 'unset', overflow: 'auto' }}
                 {...getMenuProps()}
@@ -157,54 +164,53 @@ export const MultipleCombo = (options: options[] = atsSelfReportOptions) => {
                 {isOpen &&
                   items.map((item, index) => (
                     <li
+                      style={{ padding: '0.5rem' }}
                       key={`item-${index}`}
                       {...getItemProps({ item, index })}
                       className={highlightedIndex === index ? 'selected' : ''}
                     >
                       <span>{item.displayName}</span>
-                      <span className="text-sm text-gray-700">
-                        {item.displayName}
-                      </span>
+                      <span>{item.displayName}</span>
                     </li>
                   ))}
                 {console.log({ items })}
               </ul>
             </div>
-          </section>
-        </div>
-        <div>
-          {selectedItems.map(function renderSelectedItem(
-            selectedItemForRender,
-            index,
-          ) {
-            return (
-              <span
-                role="note"
-                key={`selected-item-${index}`}
-                {...getSelectedItemProps({
-                  selectedItem: selectedItemForRender,
-                  index,
-                })}
-              >
-                {selectedItemForRender.displayName}
-                <button
-                  style={{
-                    all: 'unset',
-                    paddingInline: '0.5rem',
-                    display: 'inline-block',
-                  }}
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    removeSelectedItem(selectedItemForRender)
-                  }}
+          </div>
+          <div>
+            {selectedItems.map(function renderSelectedItem(
+              selectedItemForRender,
+              index,
+            ) {
+              return (
+                <span
+                  role="note"
+                  key={`selected-item-${index}`}
+                  {...getSelectedItemProps({
+                    selectedItem: selectedItemForRender,
+                    index,
+                  })}
                 >
-                  &#10005;
-                </button>
-              </span>
-            )
-          })}
-        </div>
-      </div>
+                  {selectedItemForRender.displayName}
+                  <button
+                    style={{
+                      all: 'unset',
+                      paddingInline: '0.5rem',
+                      display: 'inline-block',
+                    }}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      removeSelectedItem(selectedItemForRender)
+                    }}
+                  >
+                    &#10005;
+                  </button>
+                </span>
+              )
+            })}
+          </div>
+        </section>
+      </section>
     )
   }
   return <MultipleComboBox />
