@@ -7,23 +7,30 @@ import useArrowNavigation from './useArrowNavigation'
  * @returns
  */
 const NavigationComponent: React.FC = () => {
-  const sectionRef = useRef<HTMLUListElement>(null)
+  const sectionRef = useRef<HTMLDivElement>(null)
   const currentSelection = useArrowNavigation(7, sectionRef)
 
+  const handleOnKeyDownEvent = (event: KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      console.log('Enter key pressed')
+    }
+  }
+
   return (
-    <ul ref={sectionRef} tabIndex={0}>
+    <section ref={sectionRef} tabIndex={0}>
       {Array.from({ length: 7 }, (_, index) => (
-        <li
+        <div
           key={index}
           className={currentSelection === index ? 'selected' : ''}
           onClick={() => {
             console.log('clicked')
           }}
+          onKeyUp={handleOnKeyDownEvent}
         >
           {`Element ${index + 1}`}
-        </li>
+        </div>
       ))}
-    </ul>
+    </section>
   )
 }
 

@@ -33,7 +33,7 @@ function App() {
         <hr />
       </div>
       <p>
-        <MultipleSelectExample />
+        {/* <MultipleSelectExample /> */}
         <NavigationComponent />
       </p>
     </>

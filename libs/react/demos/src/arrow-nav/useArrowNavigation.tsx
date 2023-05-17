@@ -11,6 +11,7 @@ const useArrowNavigation = (
    * The number of items in the list
    */
   itemCount: number,
+
   /**
    * The ref of the section that contains the list
    * @example const sectionRef = useRef<HTMLUListElement>(null)
