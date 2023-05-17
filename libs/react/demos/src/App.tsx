@@ -4,9 +4,8 @@ import React from 'react'
 import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
 import './App.css'
 // import ListNavigation from './list-navigation/ListNav'
-import ElementNav from './arrow-nav/ElementNav'
-import { MultipleSelectExample } from './down-shift/down-shift'
-import { MultipleCombo } from './down-shift/multibox-combo'
+// import MultipleSelectExample from './multiple-select/MultipleSelectExample'
+import NavigationComponent from './arrow-nav/navigation-component'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -34,17 +33,8 @@ function App() {
       </div>
       <p>
         {/* <MultipleSelectExample /> */}
-        <MultipleCombo />
+        <NavigationComponent />
       </p>
-      <section>
-        <div>Element 1</div>
-        <div>Element 2</div>
-        <div>Element 3</div>
-        <div>Element 4</div>
-        <div>Element 5</div>
-        <div>Element 6</div>
-        <div>Element 7</div>
-      </section>
     </>
   )
 }
