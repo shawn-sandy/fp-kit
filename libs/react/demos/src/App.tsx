@@ -36,6 +36,15 @@ function App() {
         {/* <MultipleSelectExample /> */}
         <MultipleCombo />
       </p>
+      <section>
+        <div>Element 1</div>
+        <div>Element 2</div>
+        <div>Element 3</div>
+        <div>Element 4</div>
+        <div>Element 5</div>
+        <div>Element 6</div>
+        <div>Element 7</div>
+      </section>
     </>
   )
 }

@@ -1,31 +1,24 @@
 import { useEffect, useState } from 'react'
 
-function useArrowNavigation<T extends HTMLElement>(
-  items: T[],
-): [number, React.Dispatch<React.SetStateAction<number>>] {
-  const [activeIndex, setActiveIndex] = useState<number>(0)
+const useArrowNavigation = (itemCount: number) => {
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
-    function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === 'ArrowUp' && activeIndex > 0) {
-        // Up arrow
-        setActiveIndex(activeIndex - 1)
-      } else if (e.key === 'ArrowDown' && activeIndex < items.length - 1) {
-        // Down arrow
-        setActiveIndex(activeIndex + 1)
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowDown') {
+        setCurrentIndex((prevState) => (prevState + 1) % itemCount)
+      } else if (event.key === 'ArrowUp') {
+        setCurrentIndex((prevState) => (prevState - 1 + itemCount) % itemCount)
       }
     }
 
-    // Add event listener for arrow keys
-    document.addEventListener('keydown', handleKeyDown)
-
-    // Clean up event listener on unmount
+    window.addEventListener('keydown', handleKeyPress)
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
+      window.removeEventListener('keydown', handleKeyPress)
     }
-  }, [activeIndex, items])
+  }, [itemCount])
 
-  return [activeIndex, setActiveIndex]
+  return currentIndex
 }
 
 export default useArrowNavigation
