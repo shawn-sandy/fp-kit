@@ -6,6 +6,7 @@ import './App.css'
 // import ListNavigation from './list-navigation/ListNav'
 // import MultipleSelectExample from './multiple-select/MultipleSelectExample'
 import NavigationComponent from './arrow-nav/navigation-component'
+import { MultipleSelectExample } from './down-shift/down-shift'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,7 +33,7 @@ function App() {
         <hr />
       </div>
       <p>
-        {/* <MultipleSelectExample /> */}
+        <MultipleSelectExample />
         <NavigationComponent />
       </p>
     </>
