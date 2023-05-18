@@ -19,7 +19,7 @@ const Popover: React.FC = () => {
         <>
           <div
             style={{
-              display: 'block',
+              display: isVisible ? 'block' : 'none',
               position: 'absolute',
               background: '#000',
               border: '1px solid #ccc',
@@ -27,6 +27,8 @@ const Popover: React.FC = () => {
               color: '#fff',
               top: popoverPosition.top,
               left: popoverPosition.left,
+              // add a display transition to smooth the animation
+              transition: 'display 2s fade-in',
             }}
           >
             This is a popover.
