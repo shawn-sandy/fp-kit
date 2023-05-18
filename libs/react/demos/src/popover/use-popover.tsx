@@ -36,7 +36,6 @@ const usePopover = (height: number) => {
         left: popoverLeft,
       })
       setIsVisible(true)
-      console.log('clicked')
     }
   }
 
