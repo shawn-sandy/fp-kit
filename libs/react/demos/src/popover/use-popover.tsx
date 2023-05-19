@@ -1,17 +1,24 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, RefObject } from 'react'
 
 type Position = {
   top: number
   left: number
 }
 
-const usePopover = (height: number) => {
+type DivButtonSpanRef = RefObject<
+  HTMLDivElement | HTMLButtonElement | HTMLSpanElement
+>
+
+const usePopover = (
+  height: number,
+  buttonRef: React.RefObject<HTMLElement>,
+) => {
   const [isVisible, setIsVisible] = useState(false)
   const [popoverPosition, setPopoverPosition] = useState<Position>({
     top: 0,
     left: 0,
   })
-  const buttonRef = useRef<HTMLButtonElement>(null)
+  // const buttonRef: DivButtonSpanRef = useRef(null)
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event?.stopPropagation()
@@ -26,8 +33,8 @@ const usePopover = (height: number) => {
       let adjustedTop = popoverTop
       if (popoverBottom > scrollY + innerHeight) {
         adjustedTop = Math.max(
-          scrollY + innerHeight - popoverHeight - 10,
-          scrollY + 10,
+          scrollY + innerHeight - popoverHeight - height,
+          scrollY + height,
         )
       }
 
