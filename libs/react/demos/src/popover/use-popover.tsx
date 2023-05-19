@@ -5,13 +5,9 @@ type Position = {
   left: number
 }
 
-type DivButtonSpanRef = RefObject<
-  HTMLDivElement | HTMLButtonElement | HTMLSpanElement
->
-
 const usePopover = (
   height: number,
-  buttonRef: React.RefObject<HTMLElement>,
+  elementRef: React.RefObject<HTMLElement>,
 ) => {
   const [isVisible, setIsVisible] = useState(false)
   const [popoverPosition, setPopoverPosition] = useState<Position>({
@@ -22,8 +18,8 @@ const usePopover = (
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event?.stopPropagation()
-    if (buttonRef.current) {
-      const rect = buttonRef.current.getBoundingClientRect()
+    if (elementRef.current) {
+      const rect = elementRef.current.getBoundingClientRect()
       const { scrollY, scrollX, innerHeight, innerWidth } = window
       const popoverTop = rect.bottom + scrollY + 5
       const popoverLeft = rect.left + scrollX + 5
@@ -51,7 +47,7 @@ const usePopover = (
   }
 
   return {
-    buttonRef,
+    buttonRef: elementRef,
     isVisible,
     popoverPosition,
     handleClick,
