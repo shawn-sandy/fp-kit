@@ -21,18 +21,30 @@ const usePopover = (
     if (elementRef.current) {
       const rect = elementRef.current.getBoundingClientRect()
       const { scrollY, scrollX, innerHeight, innerWidth } = window
+      // console.log({ scrollY, scrollX, innerHeight, innerWidth })
+
       const popoverTop = rect.bottom + scrollY + 5
       const popoverLeft = rect.left + scrollX + 5
       const popoverBottom = popoverTop + height // Adjust the popover height as needed
       const popoverHeight = height // Adjust the popover height as needed
 
       let adjustedTop = popoverTop
+      // if (popoverBottom > scrollY + innerHeight) {
+      //   adjustedTop = Math.max(
+      //     scrollY + innerHeight - popoverHeight - height,
+      //     scrollY + height,
+      //   )
+      // }
+
       if (popoverBottom > scrollY + innerHeight) {
-        adjustedTop = Math.max(
-          scrollY + innerHeight - popoverHeight - height,
-          scrollY + height,
-        )
+        adjustedTop =
+          Math.max(
+            scrollY + innerHeight - popoverHeight - height,
+            scrollY + height,
+          ) - height
       }
+
+      console.log({ adjustedTop })
 
       setPopoverPosition({
         top: adjustedTop,

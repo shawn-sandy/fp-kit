@@ -7,27 +7,29 @@ const Popover: React.FC = () => {
     usePopover(40, hoverRef)
 
   return (
-    <span onMouseOut={handleOutsideClick}>
+    <div onMouseOut={handleOutsideClick}>
       <button ref={hoverRef} onMouseOver={handleClick}>
         Click me
       </button>
       {isVisible && (
-        <div
-          style={{
-            display: 'block',
-            position: 'absolute',
-            background: '#000',
-            border: '1px solid #ccc',
-            padding: '10px',
-            color: '#fff',
-            top: popoverPosition.top,
-            left: popoverPosition.left,
-          }}
-        >
-          This is a popover.
-        </div>
+        <>
+          <div
+            style={{
+              display: 'block',
+              position: 'absolute',
+              background: '#000',
+              border: '1px solid #ccc',
+              padding: '10px',
+              color: '#fff',
+              top: popoverPosition.top,
+              left: popoverPosition.left,
+            }}
+          >
+            This is a popover.
+          </div>
+        </>
       )}
-    </span>
+    </div>
   )
 }
 
