@@ -11,24 +11,24 @@ const Popover: React.FC = () => {
       <button ref={hoverRef} onMouseOver={handleClick}>
         Click me
       </button>
-      {isVisible && (
-        <>
-          <div
-            style={{
-              display: 'block',
-              position: 'absolute',
-              background: '#000',
-              border: '1px solid #ccc',
-              padding: '10px',
-              color: '#fff',
-              top: popoverPosition.top,
-              left: popoverPosition.left,
-            }}
-          >
-            This is a popover.
-          </div>
-        </>
-      )}
+
+      <div
+        style={{
+          display: 'block',
+          position: 'absolute',
+          background: '#000',
+          border: '1px solid #ccc',
+          padding: '10px',
+          color: '#fff',
+          top: popoverPosition.top,
+          left: popoverPosition.left,
+          transition: 'opacity .5s ease-in-out',
+          opacity: isVisible ? 1 : 0,
+          transform: `translateY(${isVisible ? '0px' : '-50px'})`,
+        }}
+      >
+        This is a popover.
+      </div>
     </div>
   )
 }
