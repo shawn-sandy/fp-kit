@@ -39,6 +39,12 @@ function App() {
       </p>
       <div>
         <Popover />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          maxime commodi, possimus, ipsum nihil accusantium corrupti minima
+          distinctio fuga molestiae quae ipsa, quibusdam atque unde et voluptas?
+          Consectetur, asperiores laudantium?
+        </p>
       </div>
     </>
   )

@@ -9,11 +9,11 @@ const Popover: React.FC = () => {
   // add a useEffect to handle the isVisible state
 
   return (
-    <span onMouseOut={handleOutsideClick}>
+    <div onMouseOut={handleOutsideClick}>
       <button
         ref={hoverRef}
         onMouseOver={handleClick}
-        onMouseOut={handleOutsideClick}
+        // onMouseOut={handleOutsideClick}
       >
         Click me
       </button>
@@ -31,12 +31,13 @@ const Popover: React.FC = () => {
             transition: 'opacity .5s ease-in-out',
             opacity: isVisible ? 1 : 0,
             transform: `translateY(${isVisible ? '0px' : '-50px'})`,
+            zIndex: 999,
           }}
         >
           This is a popover.
         </div>
       )}
-    </span>
+    </div>
   )
 }
 

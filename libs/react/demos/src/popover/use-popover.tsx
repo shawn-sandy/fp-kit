@@ -20,7 +20,6 @@ const usePopover = (
     if (elementRef.current) {
       const rect = elementRef.current.getBoundingClientRect()
       const { scrollY, scrollX, innerHeight, innerWidth } = window
-      // console.log({ scrollY, scrollX, innerHeight, innerWidth })
 
       const popoverTop = rect.bottom + scrollY + 5
       const popoverLeft = rect.left + scrollX + 5
