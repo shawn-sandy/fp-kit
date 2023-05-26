@@ -21,8 +21,8 @@ const usePopover = (
       const rect = elementRef.current.getBoundingClientRect()
       const { scrollY, scrollX, innerHeight, innerWidth } = window
 
-      const popoverTop = rect.bottom + scrollY + 5
-      const popoverLeft = rect.left + scrollX + 5
+      const popoverTop = rect.bottom + scrollY + 2
+      const popoverLeft = rect.left + scrollX
       const popoverBottom = popoverTop + height // Adjust the popover height as needed
       const popoverHeight = height // Adjust the popover height as needed
 
@@ -30,7 +30,7 @@ const usePopover = (
         popoverBottom > scrollY + innerHeight
           ? Math.max(scrollY + innerHeight - popoverHeight - height, scrollY) -
             height -
-            5
+            -8
           : popoverTop
 
       console.log({ adjustedTop })
