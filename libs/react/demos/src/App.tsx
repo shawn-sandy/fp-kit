@@ -7,6 +7,7 @@ import './App.css'
 // import MultipleSelectExample from './multiple-select/MultipleSelectExample'
 import NavigationComponent from './arrow-nav/navigation-component'
 import { MultipleSelectExample } from './down-shift/down-shift'
+import Popover from './popover/popover'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,6 +37,9 @@ function App() {
         {/* <MultipleSelectExample /> */}
         <NavigationComponent />
       </p>
+      <div>
+        <Popover />
+      </div>
     </>
   )
 }

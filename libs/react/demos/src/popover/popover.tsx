@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import usePopover from './use-popover'
 
 const Popover: React.FC = () => {
@@ -6,30 +6,37 @@ const Popover: React.FC = () => {
   const { isVisible, popoverPosition, handleClick, handleOutsideClick } =
     usePopover(40, hoverRef)
 
+  // add a useEffect to handle the isVisible state
+
   return (
-    <div onMouseOut={handleOutsideClick}>
-      <button ref={hoverRef} onMouseOver={handleClick}>
+    <span onMouseOut={handleOutsideClick}>
+      <button
+        ref={hoverRef}
+        onMouseOver={handleClick}
+        onMouseOut={handleOutsideClick}
+      >
         Click me
       </button>
-
-      <div
-        style={{
-          display: 'block',
-          position: 'absolute',
-          background: '#000',
-          border: '1px solid #ccc',
-          padding: '10px',
-          color: '#fff',
-          top: popoverPosition.top,
-          left: popoverPosition.left,
-          transition: 'opacity .5s ease-in-out',
-          opacity: isVisible ? 1 : 0,
-          transform: `translateY(${isVisible ? '0px' : '-50px'})`,
-        }}
-      >
-        This is a popover.
-      </div>
-    </div>
+      {isVisible && (
+        <div
+          style={{
+            display: 'block',
+            position: 'absolute',
+            background: '#000',
+            border: '1px solid #ccc',
+            padding: '10px',
+            color: '#fff',
+            top: popoverPosition.top,
+            left: popoverPosition.left,
+            transition: 'opacity .5s ease-in-out',
+            opacity: isVisible ? 1 : 0,
+            transform: `translateY(${isVisible ? '0px' : '-50px'})`,
+          }}
+        >
+          This is a popover.
+        </div>
+      )}
+    </span>
   )
 }
 
