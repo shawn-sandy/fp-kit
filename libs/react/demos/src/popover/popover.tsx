@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import usePopover from './use-popover'
 
 const Popover: React.FC = () => {

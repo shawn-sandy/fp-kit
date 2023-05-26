@@ -27,17 +27,12 @@ const usePopover = (
       const popoverBottom = popoverTop + height // Adjust the popover height as needed
       const popoverHeight = height // Adjust the popover height as needed
 
-      let adjustedTop = popoverTop
-
-      if (popoverBottom > scrollY + innerHeight) {
-        adjustedTop =
-          Math.max(
-            scrollY + innerHeight - popoverHeight - height,
-            scrollY + height,
-          ) -
-          height -
-          5
-      }
+      const adjustedTop =
+        popoverBottom > scrollY + innerHeight
+          ? Math.max(scrollY + innerHeight - popoverHeight - height, scrollY) -
+            height -
+            5
+          : popoverTop
 
       console.log({ adjustedTop })
 
