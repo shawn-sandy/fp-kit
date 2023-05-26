@@ -24,6 +24,7 @@ const Configuration = {
     ],
     'body-max-length': [1, 'always', 200],
     'body-max-line-length': [1, 'always', 200],
+    'header-max-length': [1, 'always', 100],
   },
 
   /*
