@@ -7,7 +7,6 @@ type Position = {
 
 const usePopover = (
   elementRef: React.RefObject<HTMLElement>,
-  height: number = 40,
   spacing: number = 0,
 ) => {
   const [isVisible, setIsVisible] = useState(false)
@@ -18,6 +17,7 @@ const usePopover = (
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event?.stopPropagation()
+    const height = elementRef.current?.offsetHeight || 40
     if (elementRef.current) {
       const rect = elementRef.current.getBoundingClientRect()
       const { scrollY, scrollX, innerHeight, innerWidth } = window
@@ -37,7 +37,7 @@ const usePopover = (
             spacing
           : popoverTop
 
-      console.log({ adjustedTop })
+      // console.log({ adjustedTop })
 
       setPopoverPosition({
         top: adjustedTop,
