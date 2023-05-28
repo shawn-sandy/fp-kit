@@ -8,7 +8,7 @@ type Position = {
 const usePopover = (
   elementRef: React.RefObject<HTMLElement>,
   hoverRef: React.RefObject<HTMLElement>,
-  spacing: number = 0,
+  spacing: number = 1,
 ) => {
   const [isVisible, setIsVisible] = useState(false)
   const [popoverPosition, setPopoverPosition] = useState<Position>({
@@ -30,7 +30,10 @@ const usePopover = (
 
       const adjustedTop =
         popoverBottom > scrollY + innerHeight
-          ? Math.max(scrollY + innerHeight - popoverHeight - height, scrollY) -
+          ? Math.max(
+              scrollY + innerHeight - popoverHeight - height - spacing,
+              scrollY,
+            ) -
             height -
             spacing
           : popoverTop

@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@shawnsandy/first-paint": "^2.17.52",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "downshift": "^7.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
