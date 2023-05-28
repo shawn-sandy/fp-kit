@@ -3,8 +3,9 @@ import usePopover from './use-popover'
 
 const Popover: React.FC = () => {
   const hoverRef = React.useRef(null)
+  const popOverRef = React.useRef(null)
   const { isVisible, popoverPosition, handleClick, handleOutsideClick } =
-    usePopover(hoverRef)
+    usePopover(hoverRef, popOverRef)
 
   // add a useEffect to handle the isVisible state
 
@@ -19,6 +20,7 @@ const Popover: React.FC = () => {
       </button>
       {isVisible && (
         <div
+          ref={popOverRef}
           style={{
             display: 'block',
             position: 'absolute',
@@ -35,6 +37,9 @@ const Popover: React.FC = () => {
           }}
         >
           This is a popover.
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          </p>
         </div>
       )}
     </div>
