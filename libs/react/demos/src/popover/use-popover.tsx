@@ -30,10 +30,7 @@ const usePopover = (
 
       const adjustedTop =
         popoverBottom > scrollY + innerHeight
-          ? Math.max(
-              scrollY + innerHeight - popoverHeight - height / 1.6,
-              scrollY,
-            ) -
+          ? Math.max(scrollY + innerHeight - popoverHeight - height, scrollY) -
             height -
             spacing
           : popoverTop
