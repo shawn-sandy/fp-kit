@@ -33,10 +33,8 @@ function App() {
         <span>A</span>
         <hr />
       </div>
-      <p>
-        {/* <MultipleSelectExample /> */}
-        <NavigationComponent />
-      </p>
+      {/* <MultipleSelectExample /> */}
+      <NavigationComponent />
       <div>
         <Popover />
         <p>

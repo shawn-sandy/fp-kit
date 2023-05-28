@@ -4,7 +4,7 @@ import usePopover from './use-popover'
 const Popover: React.FC = () => {
   const hoverRef = React.useRef(null)
   const { isVisible, popoverPosition, handleClick, handleOutsideClick } =
-    usePopover(40, hoverRef)
+    usePopover(hoverRef)
 
   // add a useEffect to handle the isVisible state
 
