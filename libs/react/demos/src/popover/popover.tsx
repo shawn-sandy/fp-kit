@@ -7,8 +7,6 @@ const Popover: React.FC = () => {
   const { isVisible, popoverPosition, handleClick, handleOutsideClick } =
     usePopover(hoverRef, popOverRef)
 
-  // add a useEffect to handle the isVisible state
-
   return (
     <div onMouseOut={handleOutsideClick}>
       <button

@@ -18,10 +18,7 @@ const useArrowNavigation = (
    * @example const currentSelection = useArrowNavigation(7, sectionRef)
    * @example <ul ref={sectionRef} tabIndex={0}>
    */
-  sectionRef:
-    | React.RefObject<HTMLElement>
-    | React.RefObject<HTMLDivElement>
-    | React.RefObject<HTMLUListElement>,
+  sectionRef: React.RefObject<HTMLElement>,
 ) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 

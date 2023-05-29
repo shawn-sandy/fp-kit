@@ -10,6 +10,6 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': 'warn',
+    complexity: ['error', 10],
   },
-  complexity: ['error', { max: 2 }],
 }

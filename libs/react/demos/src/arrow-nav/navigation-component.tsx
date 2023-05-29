@@ -10,12 +10,6 @@ const NavigationComponent: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null)
   const currentSelection = useArrowNavigation(7, sectionRef)
 
-  const handleOnKeyDownEvent = (event: KeyboardEvent) => {
-    if (event.key === 'Enter') {
-      console.log('Enter key pressed')
-    }
-  }
-
   return (
     <section ref={sectionRef} tabIndex={0}>
       {Array.from({ length: 7 }, (_, index) => (
@@ -25,7 +19,6 @@ const NavigationComponent: React.FC = () => {
           onClick={() => {
             console.log('clicked')
           }}
-          onKeyUp={handleOnKeyDownEvent}
         >
           {`Element ${index + 1}`}
         </div>

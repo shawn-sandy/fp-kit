@@ -10,7 +10,6 @@ export function useListNavigation(items: string[]) {
       setSelectedIndex(selectedIndex - 1) // Up arrow key
     } else if (event.key === 'ArrowDown' && selectedIndex < items.length - 1) {
       setSelectedIndex(selectedIndex + 1) // Down arrow key
-      console.log(event.key, 'down')
     }
   }
 

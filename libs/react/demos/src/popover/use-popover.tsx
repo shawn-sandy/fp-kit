@@ -38,8 +38,6 @@ const usePopover = (
             spacing
           : popoverTop
 
-      // console.log({ adjustedTop })
-
       setPopoverPosition({
         top: adjustedTop,
         left: popoverLeft,
