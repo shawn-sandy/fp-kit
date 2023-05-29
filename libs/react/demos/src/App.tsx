@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import React from 'react'
+import React, { useState } from 'react'
 
 import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
 import './App.css'
