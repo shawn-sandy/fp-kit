@@ -8,7 +8,7 @@ type Position = {
 const usePopover = (
   elementRef: React.RefObject<HTMLElement>,
   hoverRef: React.RefObject<HTMLElement>,
-  spacing: number = 1,
+  spacing = 1,
 ) => {
   const [isVisible, setIsVisible] = useState(false)
   const [popoverPosition, setPopoverPosition] = useState<Position>({

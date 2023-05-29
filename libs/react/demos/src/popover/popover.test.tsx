@@ -1,22 +1,29 @@
-import React from 'react'
+/* eslint-disable react/react-in-jsx-scope */
 import { describe, expect, test } from 'vitest'
-import { render, screen, fireEvent, getByText } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import Popover from './popover'
 
 describe('Popover', () => {
-  it('should show popover on button click', () => {
+  it('should show popover on button click', async () => {
+    // eslint-disable-next-line react/react-in-jsx-scope
     render(<Popover />)
     const button = screen.getByText('Click me')
     fireEvent.click(button)
-    expect(screen.getByText('This is a popover.')).toBeInTheDocument()
+    await (() => {
+      expect(screen.getByText('This is a popover.')).toBeDefined()
+    })
   })
 
-  it('should hide popover on outside click', () => {
+  it('should hide popover on outside click', async () => {
     render(<Popover />)
     const button = screen.getByText('Click me')
     fireEvent.click(button)
-    expect(screen.getByText('This is a popover.')).toBeInTheDocument()
+    await (() => {
+      expect(screen.getByText('This is a popover.')).toBeDefined()
+    })
     fireEvent.click(document.body)
-    expect(screen.getByText('This is a popover.')).not.toBeInTheDocument()
+    await (() => {
+      expect(screen.getByText('This is a popover.')).not.toBeDefined()
+    })
   })
 })

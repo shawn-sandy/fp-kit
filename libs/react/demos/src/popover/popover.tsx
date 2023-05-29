@@ -35,9 +35,6 @@ const Popover: React.FC = () => {
           }}
         >
           This is a popover.
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-          </p>
         </div>
       )}
     </div>
