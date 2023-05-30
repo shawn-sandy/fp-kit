@@ -32,7 +32,7 @@
     "storybook-test:watch": "test-storybook --url http://localhost:9006 --watch --coverage",
     "build-storybook": "build-storybook",
     "test:storybook": "storybook.test.js",
-    "oc": "git add . && oc"
+    "oco": "git add . && oc"
   },
   "auto-changelog": {
     "unreleased": true,

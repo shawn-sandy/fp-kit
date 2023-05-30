@@ -11,5 +11,6 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
     complexity: ['error', 10],
+    'jsx-quotes': ['warn', 'prefer-double'],
   },
 }
