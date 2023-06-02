@@ -7,15 +7,15 @@ import Popover from './popover'
 describe('Popover', () => {
   it('should show popover on button click', async () => {
     // eslint-disable-next-line react/react-in-jsx-scope
-    render(<Popover />)
+    const component = render(<Popover />)
     const button = screen.getByText('Click me')
     fireEvent.mouseOver(button)
     expect(screen.getByText('This is a popover.')).toBeDefined()
-    screen.debug()
+    expect(component).toMatchSnapshot()
   })
 
   it('should hide popover on outside click', async () => {
-    render(<Popover />)
+    const component = render(<Popover />)
     const button = screen.getByText('Click me')
     fireEvent.mouseOver(button)
 
@@ -25,5 +25,6 @@ describe('Popover', () => {
 
     fireEvent.mouseOut(container)
     expect(screen.queryByText('This is a popover.')).toBeNull()
+    expect(component).toMatchSnapshot()
   })
 })
