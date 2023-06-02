@@ -10,7 +10,7 @@ describe('Popover', () => {
     render(<Popover />)
     const button = screen.getByText('Click me')
     fireEvent.mouseOver(button)
-    await expect(screen.getByText('This is a popover.')).toBeDefined()
+    expect(screen.getByText('This is a popover.')).toBeDefined()
     screen.debug()
   })
 
