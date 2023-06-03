@@ -7,7 +7,8 @@ describe('Popover', () => {
   it('should show popover on button click', async () => {
     // eslint-disable-next-line react/react-in-jsx-scope
     const component = render(<Popover />)
-    const button = screen.getByText('Click me')
+    expect(component).toBeDefined()
+    const button = screen.getByText('Hover here')
     fireEvent.pointerEnter(button)
     expect(screen.getByText('This is a popover.')).toBeDefined()
     expect(component).toMatchSnapshot()
@@ -16,7 +17,7 @@ describe('Popover', () => {
   it('should hide popover on outside click', async () => {
     const component = render(<Popover />)
     expect(component).toBeDefined()
-    const button = screen.getByText('Click me')
+    const button = screen.getByText('Hover here')
     fireEvent.pointerEnter(button)
 
     expect(screen.getByText('This is a popover.')).toBeDefined()

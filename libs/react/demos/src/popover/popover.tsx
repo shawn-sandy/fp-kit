@@ -15,7 +15,7 @@ const Popover: React.FC = () => {
         onFocus={handleOutsideClick}
         onPointerLeave={handleOutsideClick}
       >
-        Click me
+        Hover here
       </button>
       {isVisible && (
         <div
