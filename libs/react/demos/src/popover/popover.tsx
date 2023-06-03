@@ -8,11 +8,12 @@ const Popover: React.FC = () => {
     usePopover(hoverRef, popOverRef)
 
   return (
-    <div onMouseOut={handleOutsideClick} data-testid="popover">
+    <div data-testid="popover">
       <button
         ref={hoverRef}
-        onMouseOver={handleClick}
-        // onMouseOut={handleOutsideClick}
+        onPointerEnter={handleClick}
+        onFocus={handleOutsideClick}
+        onPointerLeave={handleOutsideClick}
       >
         Click me
       </button>
