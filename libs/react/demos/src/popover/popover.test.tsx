@@ -5,7 +5,6 @@ import Popover from './popover'
 
 describe('Popover', () => {
   it('should show popover on button click', async () => {
-    // eslint-disable-next-line react/react-in-jsx-scope
     const component = render(<Popover />)
     expect(component).toBeDefined()
     const button = screen.getByText('Hover here')

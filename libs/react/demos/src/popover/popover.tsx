@@ -12,7 +12,7 @@ const Popover: React.FC = () => {
       <button
         ref={hoverRef}
         onPointerEnter={handleClick}
-        onFocus={handleOutsideClick}
+        onFocus={handleClick}
         onPointerLeave={handleOutsideClick}
       >
         Hover here

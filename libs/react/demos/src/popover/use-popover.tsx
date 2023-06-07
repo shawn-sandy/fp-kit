@@ -21,7 +21,7 @@ const usePopover = (
     const height = elementRef.current?.offsetHeight || 40
     if (elementRef.current) {
       const rect = elementRef.current.getBoundingClientRect()
-      const { scrollY, scrollX, innerHeight, innerWidth } = window
+      const { scrollY, scrollX, innerHeight } = window
 
       const popoverTop = rect.bottom + scrollY + spacing
       const popoverLeft = rect.left + scrollX
