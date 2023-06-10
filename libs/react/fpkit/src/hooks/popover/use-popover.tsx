@@ -5,7 +5,6 @@ type Position = {
   left: number
 }
 
-// write docs comment here
 /**
  *  A hook that returns the position of the popover and a function to toggle the popover
  * @param elementRef  The element that will trigger the popover
