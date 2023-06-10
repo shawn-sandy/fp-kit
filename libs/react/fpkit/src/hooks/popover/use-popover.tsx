@@ -5,12 +5,18 @@ type Position = {
   left: number
 }
 
+// document usePopover hook
 /**
- *  A hook that returns the position of the popover and a function to toggle the popover
- * @param elementRef  The element that will trigger the popover
- * @param hoverRef  The element that will be the popover
- * @param spacing  The spacing between the popover and the element
- * @returns  An object with the following properties:
+ * This hook is used to show a popover on hover of an element.
+ * @param elementRef - This is the ref of the element on which the popover should be shown.
+ * @param hoverRef - This is the ref of the element on which the popover should be shown.
+ * @param spacing - This is the spacing between the element and the popover.
+ * @example - const { isVisible, popoverPosition, handlePointerEvent, handlePointerLeave } = usePopover(hoverRef, popOverRe
+ * @returns - isVisible - This is the boolean value to show/hide the popover.
+ * @returns - popoverPosition - This is the position of the popover.
+ * @returns - handlePointerEvent - This is the function to handle the pointer event.
+ * @returns - handlePointerLeave - This is the function to handle the pointer leave event.
+ * @returns
  */
 export const usePopover = (
   elementRef: React.RefObject<HTMLElement>,
