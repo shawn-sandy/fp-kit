@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.75](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.74...@fpkit/react@0.2.75) (2023-06-10)
+
+### Features
+
+- **popover:** add popover component and usePopover hook to display a popover on button hover ([55b168d](https://github.com/shawn-sandy/fpkit/commit/55b168d73aeefc1b43c36bbe23ccf7aa8d3fa4ba))
+- **use-popover:** add usePopover hook ([f649e15](https://github.com/shawn-sandy/fpkit/commit/f649e159c4240041cea7b90af626889a5b05e5d2))
+
 ## [0.2.74](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.73...@fpkit/react@0.2.74) (2023-05-08)
 
 **Note:** Version bump only for package @fpkit/react
