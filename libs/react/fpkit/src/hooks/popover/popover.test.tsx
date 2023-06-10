@@ -1,4 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
+import React from 'react'
 import { describe, expect } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import Popover from './popover'

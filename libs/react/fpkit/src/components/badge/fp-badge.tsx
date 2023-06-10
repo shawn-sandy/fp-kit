@@ -1,27 +1,27 @@
-import FP from "../fp"
+import FP from '../fp'
+import React from 'react'
 
 export interface FpBadgeProps {
-  elm?: "span" | "p" | "a"
+  elm?: 'span' | 'p' | 'a'
   children: React.ReactNode
-  role: "note" | "alert" | "status"
+  role: 'note' | 'alert' | 'status'
   renderStyles?: boolean
   styles?: {}
 }
 
 const defStyles = {
-  paddingInline: "var(--badge-px, 0.7rem)",
-  paddingBlock: "var(--badge-py, 0.2rem)",
-  color: "var(--badge-cl, black)",
-  fontSize: "var(--badge-fs, 0.8rem)",
-  fontWeight: "var(--badge-fw, normal)",
-  fontFamily: "var(--badge-ff, sans-serif)",
-  border: "var(--badge-brd, none)",
-  borderRadius: "var(--badge-rds, 99rem)",
-  backgroundColor: "var(--badge-bg, lightgray)",
-  textDecoration: "var(--badge-decoration, none)",
-  textTransform: "var(--badge-tt, var(--tt))"
+  paddingInline: 'var(--badge-px, 0.7rem)',
+  paddingBlock: 'var(--badge-py, 0.2rem)',
+  color: 'var(--badge-cl, black)',
+  fontSize: 'var(--badge-fs, 0.8rem)',
+  fontWeight: 'var(--badge-fw, normal)',
+  fontFamily: 'var(--badge-ff, sans-serif)',
+  border: 'var(--badge-brd, none)',
+  borderRadius: 'var(--badge-rds, 99rem)',
+  backgroundColor: 'var(--badge-bg, lightgray)',
+  textDecoration: 'var(--badge-decoration, none)',
+  textTransform: 'var(--badge-tt, var(--tt))',
 }
-
 
 /**
  * @description Creates a Badge component that wraps a child element with a badge.
@@ -34,7 +34,7 @@ const defStyles = {
  * @returns {any} - returns the Badge component
  */
 export const Badge = ({
-  elm = "span",
+  elm = 'span',
   role,
   children,
   renderStyles = true,
@@ -43,15 +43,10 @@ export const Badge = ({
 }: FpBadgeProps) => {
   const stylesObj = renderStyles ? defStyles : {}
   return (
-    <FP
-      as={elm}
-      role={role}
-      styles={{ ...stylesObj, ...styles }}
-      {...props}
-    >
+    <FP as={elm} role={role} styles={{ ...stylesObj, ...styles }} {...props}>
       {children}
     </FP>
   )
 }
 
-Badge.displayName = "Badge"
+Badge.displayName = 'Badge'

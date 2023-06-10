@@ -5,6 +5,14 @@ type Position = {
   left: number
 }
 
+// write docs comment here
+/**
+ *  A hook that returns the position of the popover and a function to toggle the popover
+ * @param elementRef  The element that will trigger the popover
+ * @param hoverRef  The element that will be the popover
+ * @param spacing  The spacing between the popover and the element
+ * @returns  An object with the following properties:
+ */
 const usePopover = (
   elementRef: React.RefObject<HTMLElement>,
   hoverRef: React.RefObject<HTMLElement>,
@@ -16,7 +24,7 @@ const usePopover = (
     left: 0,
   })
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handlePointerEvent = (event: React.MouseEvent<HTMLButtonElement>) => {
     event?.stopPropagation()
     const height = elementRef.current?.offsetHeight || 40
     if (elementRef.current) {
@@ -46,15 +54,15 @@ const usePopover = (
     }
   }
 
-  const handleOutsideClick = () => {
+  const handlePointerLeave = () => {
     setIsVisible(false)
   }
 
   return {
     isVisible,
     popoverPosition,
-    handleClick,
-    handleOutsideClick,
+    handlePointerEvent,
+    handlePointerLeave,
   }
 }
 
