@@ -4,16 +4,16 @@ import usePopover from './use-popover'
 const Popover: React.FC = () => {
   const hoverRef = React.useRef(null)
   const popOverRef = React.useRef(null)
-  const { isVisible, popoverPosition, handleClick, handleOutsideClick } =
+  const { isVisible, popoverPosition, handlePointerEvent, handlePointerLeave } =
     usePopover(hoverRef, popOverRef)
 
   return (
     <div data-testid="popover">
       <button
         ref={hoverRef}
-        onPointerEnter={handleClick}
-        onFocus={handleClick}
-        onPointerLeave={handleOutsideClick}
+        onPointerEnter={handlePointerEvent}
+        onFocus={handlePointerEvent}
+        onPointerLeave={handlePointerLeave}
       >
         Hover here
       </button>
