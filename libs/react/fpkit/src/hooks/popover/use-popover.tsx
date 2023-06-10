@@ -13,7 +13,7 @@ type Position = {
  * @param spacing  The spacing between the popover and the element
  * @returns  An object with the following properties:
  */
-const usePopover = (
+export const usePopover = (
   elementRef: React.RefObject<HTMLElement>,
   hoverRef: React.RefObject<HTMLElement>,
   spacing = 1,

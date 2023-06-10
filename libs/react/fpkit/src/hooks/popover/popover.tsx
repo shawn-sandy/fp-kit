@@ -1,7 +1,7 @@
 import React from 'react'
 import usePopover from './use-popover'
 
-const Popover: React.FC = () => {
+export const Popover: React.FC = () => {
   const hoverRef = React.useRef(null)
   const popOverRef = React.useRef(null)
   const { isVisible, popoverPosition, handlePointerEvent, handlePointerLeave } =
