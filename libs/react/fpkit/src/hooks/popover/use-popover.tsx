@@ -1,7 +1,15 @@
 import { useState } from 'react'
 
 type Position = {
+  /**
+   * @description This is the top position of the popover.
+   * @default 0
+   */
   top: number
+  /**
+   * @description This is the left position of the popover.
+   * @default 0
+   */
   left: number
 }
 
