@@ -1,0 +1,12 @@
+[data-text] {
+  font-size: var(--size, 1rem);
+  font-weight: var(--weight, 400);
+  font-family: var(--family, var(--fp-font-family));
+  color: var(--color, var(--fp-black));
+  text-align: var(--align, left);
+  text-transform: var(--transform, none);
+  text-decoration: var(--decoration, none);
+  text-shadow: var(--shadow, none);
+  line-height: var(--line-height, 1.5);
+  letter-spacing: var(--spacing, normal);
+}

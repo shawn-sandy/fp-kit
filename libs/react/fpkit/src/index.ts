@@ -24,4 +24,4 @@ export { default as Tag } from './components/fp'
 export { fpStyles } from './components/fp'
 
 // hooks
-export { usePopover } from './hooks/popover/use-popover'
+

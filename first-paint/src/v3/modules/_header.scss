@@ -38,20 +38,28 @@
 }
 
 @mixin styles {
+
   // * css style utilities
-  [style*="--hdr"] {
+  [style*="--hdr"],
+  [data-header] {
     // @include props;
+
   }
 
   @content;
 }
 
 @mixin module {
- header, .fp-header, [role="banner"], [style*="--hdr"] {
+
+  header,
+  .fp-header,
+  [role="banner"],
+  [style*="--hdr"] {
     &:not([arial-label], dialog header) {
       @include props;
       @include rules;
     }
   }
+
   @include styles;
 }
