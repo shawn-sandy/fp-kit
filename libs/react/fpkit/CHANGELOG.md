@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.76](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.75...@fpkit/react@0.2.76) (2023-06-13)
+
+### Features
+
+- **text.scss:** add text utility class to set text properties ([a0d93ea](https://github.com/shawn-sandy/fpkit/commit/a0d93ea4be39e4ada96f49c17e4ac8a2586b3eb0))
+
 ## [0.2.75](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.74...@fpkit/react@0.2.75) (2023-06-10)
 
 ### Features

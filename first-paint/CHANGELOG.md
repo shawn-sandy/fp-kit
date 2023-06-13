@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.53](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.52...@shawnsandy/first-paint@2.17.53) (2023-06-13)
+
+### Features
+
+- **text.scss:** add text utility class to set text properties ([a0d93ea](https://github.com/shawn-sandy/fp-kit/commit/a0d93ea4be39e4ada96f49c17e4ac8a2586b3eb0))
+
 ## [2.17.52](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.51...@shawnsandy/first-paint@2.17.52) (2023-05-08)
 
 ### Bug Fixes
