@@ -3,7 +3,6 @@
   "description": "A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.",
   "private": false,
   "version": "0.2.76",
-  "sideEffects": false,
   "scripts": {
     "start": "run-p package:watch dev",
     "dev": "vite --open",

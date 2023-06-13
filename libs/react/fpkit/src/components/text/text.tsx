@@ -45,6 +45,19 @@ export const Text = ({
   )
 }
 
+export const Span = ({
+  elm = 'span',
+  children,
+  styles,
+  ...props
+}: TextProps) => {
+  return (
+    <FP as={elm} styles={styles} {...props}>
+      {children}
+    </FP>
+  )
+}
+
 export interface TitleProps {
   /**
    * HTML headings
@@ -54,7 +67,12 @@ export interface TitleProps {
   styles?: {}
 }
 
-export const Title = ({ elm = 'h3', children, styles, ...props }: TitleProps) => {
+export const Title = ({
+  elm = 'h3',
+  children,
+  styles,
+  ...props
+}: TitleProps) => {
   return (
     <FP as={elm} styles={styles} {...props}>
       {children}
@@ -66,3 +84,4 @@ export default Text
 
 Text.displayName = 'Text'
 Title.displayName = 'Title'
+Span.displayName = 'Span'
