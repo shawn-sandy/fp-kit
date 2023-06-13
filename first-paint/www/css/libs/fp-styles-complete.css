@@ -153,6 +153,12 @@ section:not(nav) {
   color: var(--vcl);
   font-size: var(--vfs);
 }
+.fp-header section h2 {
+  --title-fs: var(--fs-10, calc(80rem / 16));
+}
+.fp-header section p {
+  --text-fs: var(--fs-6, calc(80rem / 16));
+}
 .fp-container {
   --bx-flow: column wrap;
   --bx-align: flex-start;

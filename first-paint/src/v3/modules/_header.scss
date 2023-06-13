@@ -34,25 +34,29 @@
     font-size: var(--vfs);
   }
 
-  @content;
-}
+  section {
+    h2 {
+      --title-fs: var(--fs-10, calc(80rem / 16));
+    }
 
-@mixin styles {
-
-  // * css style utilities
-  [style*="--hdr"],
-  [data-header] {
-    // @include props;
+    p {
+      --text-fs: var(--fs-6, calc(80rem / 16));
+    }
 
   }
 
   @content;
 }
 
+@mixin styles {
+
+  // * css style utilities
+  @content;
+}
+
 @mixin module {
 
   header,
-  .fp-header,
   [role="banner"],
   [style*="--hdr"] {
     &:not([arial-label], dialog header) {

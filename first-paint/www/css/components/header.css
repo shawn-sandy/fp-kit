@@ -1,1 +1,36 @@
-header:not([arial-label],dialog header),.fp-header:not([arial-label],dialog header),[role=banner]:not([arial-label],dialog header),[style*="--hdr"]:not([arial-label],dialog header){display:var(--hdr-dsp, flex);background-color:var(--hdr-bg, var(--fp-white-smoke));background-image:var(--hdr-bg-img, none);background-position:var(--hdr-bg-pos, center center);background-size:var(--hdr-bg-size, cover);background-repeat:var(--hdr-bg-repeat, no-repeat);flex-direction:var(--hdr-direction, column);place-content:var(--hdr-place-x, center);place-items:var(--hdr-place-y, center);text-align:var(--hdr-align, center);min-height:var(--hdr-min-h, calc(var(--vw-md) + var(--vw-xs)));min-width:var(--hdr-w, 100%);padding-block:var(--hdr-py, 1rem);padding-inline:var(--hdr-px, 1rem);margin:var(--hdr-m, 0)}header:not([arial-label],dialog header)[data-variant],.fp-header:not([arial-label],dialog header)[data-variant],[role=banner]:not([arial-label],dialog header)[data-variant],[style*="--hdr"]:not([arial-label],dialog header)[data-variant]{background-color:var(--vbg);color:var(--vcl);font-size:var(--vfs)}/*# sourceMappingURL=header.css.map */
+header:not([arial-label], dialog header),
+[role='banner']:not([arial-label], dialog header),
+[style*='--hdr']:not([arial-label], dialog header) {
+  display: var(--hdr-dsp, flex);
+  background-color: var(--hdr-bg, var(--fp-white-smoke));
+  background-image: var(--hdr-bg-img, none);
+  background-position: var(--hdr-bg-pos, center center);
+  background-size: var(--hdr-bg-size, cover);
+  background-repeat: var(--hdr-bg-repeat, no-repeat);
+  flex-direction: var(--hdr-direction, column);
+  place-content: var(--hdr-place-x, center);
+  place-items: var(--hdr-place-y, center);
+  text-align: var(--hdr-align, center);
+  min-height: var(--hdr-min-h, calc(var(--vw-md) + var(--vw-xs)));
+  min-width: var(--hdr-w, 100%);
+  padding-block: var(--hdr-py, 1rem);
+  padding-inline: var(--hdr-px, 1rem);
+  margin: var(--hdr-m, 0);
+}
+header:not([arial-label], dialog header)[data-variant],
+[role='banner']:not([arial-label], dialog header)[data-variant],
+[style*='--hdr']:not([arial-label], dialog header)[data-variant] {
+  background-color: var(--vbg);
+  color: var(--vcl);
+  font-size: var(--vfs);
+}
+header:not([arial-label], dialog header) section h2,
+[role='banner']:not([arial-label], dialog header) section h2,
+[style*='--hdr']:not([arial-label], dialog header) section h2 {
+  --title-fs: var(--fs-10, calc(80rem / 16));
+}
+header:not([arial-label], dialog header) section p,
+[role='banner']:not([arial-label], dialog header) section p,
+[style*='--hdr']:not([arial-label], dialog header) section p {
+  --text-fs: var(--fs-6, calc(80rem / 16));
+} /*# sourceMappingURL=header.css.map */
