@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.78](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.76...@fpkit/react@0.2.78) (2023-06-13)
+
+### Features
+
+- **text:** add Span component to render a span element with FP styles and props. Add displayName to Span component. ([d7d754e](https://github.com/shawn-sandy/fpkit/commit/d7d754e66c35c4f822c96f3ed5d77bf7398eb0fe))
+
 ## [0.2.77](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.76...@fpkit/react@0.2.77) (2023-06-13)
 
 ### Features

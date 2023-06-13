@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.55](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.53...@shawnsandy/first-paint@2.17.55) (2023-06-13)
+
+### Features
+
+- 🌟 header module updates ([c563be7](https://github.com/shawn-sandy/fp-kit/commit/c563be742aeabbcb7d70341e5165f6691495f813))
+
 ## [2.17.54](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.53...@shawnsandy/first-paint@2.17.54) (2023-06-13)
 
 ### Features
