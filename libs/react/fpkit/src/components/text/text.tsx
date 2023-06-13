@@ -1,33 +1,33 @@
 import React from 'react'
 import FP, { fpStyles } from '../fp'
 
+export type TextElements =
+  | 'p'
+  | 'span'
+  | 'a'
+  | 'strong'
+  | 'em'
+  | 'small'
+  | 's'
+  | 'cite'
+  | 'time'
+  | 'code'
+  | 'kbd'
+  | 'sub'
+  | 'sup'
+  | 'i'
+  | 'b'
+  | 'u'
+  | 'mark'
+  | 'span'
+  | 'blockquote'
 export interface TextProps {
   /**
    * HTML element
    */
-  elm?:
-    | 'p'
-    | 'span'
-    | 'a'
-    | 'strong'
-    | 'em'
-    | 'small'
-    | 's'
-    | 'cite'
-    | 'time'
-    | 'code'
-    | 'kbd'
-    | 'sub'
-    | 'sup'
-    | 'i'
-    | 'b'
-    | 'u'
-    | 'mark'
-    | 'span'
-    | 'br'
-    | 'blockquote'
-  children?: any
-  text?: any
+  elm?: TextElements
+  children?: React.ReactNode
+  text?: String
   styles?: {}
 }
 
