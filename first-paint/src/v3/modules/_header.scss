@@ -27,6 +27,7 @@
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
+  font-size: var(--h-fs, 1rem);
 
   &[data-variant] {
     background-color: var(--vbg);
@@ -36,13 +37,35 @@
 
   section {
     h2 {
-      --title-fs: var(--fs-10, calc(80rem / 16));
+      font-size: var(--fs);
+      --fs: var(--fs-10, calc(80rem / 16));
     }
 
     p {
-      --text-fs: var(--fs-6, calc(80rem / 16));
+      font-size: var(--fs);
+      --fs: var(--fs-6, calc(32rem / 16));
     }
 
+  }
+
+  &[data-large] {
+    h2 {
+      --fs: var(--fs-12);
+    }
+
+    p {
+      --fs: var(--fs-6);
+    }
+  }
+
+  &[data-small] {
+    h2 {
+      --fs: var(--fs-8);
+    }
+
+    p {
+      --fs: var(--fs-4);
+    }
   }
 
   @content;
