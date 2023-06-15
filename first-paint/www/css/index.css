@@ -1173,34 +1173,37 @@ header:not([arial-label], dialog header) section,
 header:not([arial-label], dialog header) section h2,
 [role='banner']:not([arial-label], dialog header) section h2,
 [style*='--hdr']:not([arial-label], dialog header) section h2 {
-  font-size: var(--fs);
-  --fs: var(--fs-10, calc(80rem / 16));
+  font-size: var(--hfs);
+  --hfs: var(--fs-10, calc(80rem / 16));
+  line-height: var(--hlh, 1.2);
 }
 header:not([arial-label], dialog header) section p,
 [role='banner']:not([arial-label], dialog header) section p,
 [style*='--hdr']:not([arial-label], dialog header) section p {
-  font-size: var(--fs);
-  --fs: var(--fs-6, calc(32rem / 16));
+  width: var(--hdp-w, 90%);
+  font-size: var(--pfs);
+  --pfs: var(--fs-6, calc(32rem / 16));
+  margin: auto;
 }
-header:not([arial-label], dialog header)[data-large] h2,
-[role='banner']:not([arial-label], dialog header)[data-large] h2,
-[style*='--hdr']:not([arial-label], dialog header)[data-large] h2 {
-  --fs: var(--fs-12);
+header:not([arial-label], dialog header)[data-style~='large'] h2,
+[role='banner']:not([arial-label], dialog header)[data-style~='large'] h2,
+[style*='--hdr']:not([arial-label], dialog header)[data-style~='large'] h2 {
+  --hfs: var(--fs-12);
 }
-header:not([arial-label], dialog header)[data-large] p,
-[role='banner']:not([arial-label], dialog header)[data-large] p,
-[style*='--hdr']:not([arial-label], dialog header)[data-large] p {
-  --fs: var(--fs-6);
+header:not([arial-label], dialog header)[data-style~='large'] p,
+[role='banner']:not([arial-label], dialog header)[data-style~='large'] p,
+[style*='--hdr']:not([arial-label], dialog header)[data-style~='large'] p {
+  --pfs: var(--fs-6);
 }
-header:not([arial-label], dialog header)[data-small] h2,
-[role='banner']:not([arial-label], dialog header)[data-small] h2,
-[style*='--hdr']:not([arial-label], dialog header)[data-small] h2 {
-  --fs: var(--fs-8);
+header:not([arial-label], dialog header)[data-style~='small'] h2,
+[role='banner']:not([arial-label], dialog header)[data-style~='small'] h2,
+[style*='--hdr']:not([arial-label], dialog header)[data-style~='small'] h2 {
+  --hfs: var(--fs-8);
 }
-header:not([arial-label], dialog header)[data-small] p,
-[role='banner']:not([arial-label], dialog header)[data-small] p,
-[style*='--hdr']:not([arial-label], dialog header)[data-small] p {
-  --fs: var(--fs-4);
+header:not([arial-label], dialog header)[data-style~='small'] p,
+[role='banner']:not([arial-label], dialog header)[data-style~='small'] p,
+[style*='--hdr']:not([arial-label], dialog header)[data-style~='small'] p {
+  --pfs: var(--fs-4);
 }
 main {
   padding-block: var(--main-py, 0rem);

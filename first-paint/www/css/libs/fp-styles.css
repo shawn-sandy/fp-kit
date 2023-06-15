@@ -90,24 +90,27 @@ section:not(nav) {
   max-width: 80%;
 }
 .fp-header section h2 {
-  font-size: var(--fs);
-  --fs: var(--fs-10, calc(80rem / 16));
+  font-size: var(--hfs);
+  --hfs: var(--fs-10, calc(80rem / 16));
+  line-height: var(--hlh, 1.2);
 }
 .fp-header section p {
-  font-size: var(--fs);
-  --fs: var(--fs-6, calc(32rem / 16));
+  width: var(--hdp-w, 90%);
+  font-size: var(--pfs);
+  --pfs: var(--fs-6, calc(32rem / 16));
+  margin: auto;
 }
-.fp-header[data-large] h2 {
-  --fs: var(--fs-12);
+.fp-header[data-style~='large'] h2 {
+  --hfs: var(--fs-12);
 }
-.fp-header[data-large] p {
-  --fs: var(--fs-6);
+.fp-header[data-style~='large'] p {
+  --pfs: var(--fs-6);
 }
-.fp-header[data-small] h2 {
-  --fs: var(--fs-8);
+.fp-header[data-style~='small'] h2 {
+  --hfs: var(--fs-8);
 }
-.fp-header[data-small] p {
-  --fs: var(--fs-4);
+.fp-header[data-style~='small'] p {
+  --pfs: var(--fs-4);
 }
 .fp-container {
   --bx-flow: column wrap;
