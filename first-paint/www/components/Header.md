@@ -99,12 +99,11 @@ import '@shawnsandy/first-paint@next/dist/css/components/header.min.css'
 ### Header Custom Style (h2)
 
 - Set the title (h2) to `"--hdr-min-h: 60vh"`
-- Set the font size to `font-size: var(--hdr-fs-xl)`
 
 ```html preview
 <header style="--hdr-min-h: 60vh">
   <section>
-    <h2 style="font-size: var(--hdr-fs-xl)">Header with title(h2)</h2>
+    <h2>Header with title(h2)</h2>
     <p>Consectetur et in deserunt est ad tempor consequat officia ex.</p>
   </section>
 </header>

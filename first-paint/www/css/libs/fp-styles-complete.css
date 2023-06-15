@@ -154,6 +154,9 @@ section:not(nav) {
   color: var(--vcl);
   font-size: var(--vfs);
 }
+.fp-header section {
+  max-width: 80%;
+}
 .fp-header section h2 {
   font-size: var(--fs);
   --fs: var(--fs-10, calc(80rem / 16));

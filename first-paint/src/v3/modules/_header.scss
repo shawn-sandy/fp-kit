@@ -36,6 +36,8 @@
   }
 
   section {
+    max-width: 80%;
+
     h2 {
       font-size: var(--fs);
       --fs: var(--fs-10, calc(80rem / 16));

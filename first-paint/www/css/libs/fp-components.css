@@ -85,6 +85,11 @@ header:not([arial-label], dialog header)[data-variant],
   color: var(--vcl);
   font-size: var(--vfs);
 }
+header:not([arial-label], dialog header) section,
+[role='banner']:not([arial-label], dialog header) section,
+[style*='--hdr']:not([arial-label], dialog header) section {
+  max-width: 80%;
+}
 header:not([arial-label], dialog header) section h2,
 [role='banner']:not([arial-label], dialog header) section h2,
 [style*='--hdr']:not([arial-label], dialog header) section h2 {
