@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.58](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.57...@shawnsandy/first-paint@2.17.58) (2023-06-17)
+
+### Features
+
+- 🎉 set global font-size for <p/> ([aa9ba3d](https://github.com/shawn-sandy/fp-kit/commit/aa9ba3dfd0c2a8a2215fb8e84a186d820397bc84))
+- 🎉 update the default font-size ([4b28fc8](https://github.com/shawn-sandy/fp-kit/commit/4b28fc8111d87009c8eb5191169c95cb5b7da76b))
+
 ## [2.17.57](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.56...@shawnsandy/first-paint@2.17.57) (2023-06-17)
 
 ### Features
