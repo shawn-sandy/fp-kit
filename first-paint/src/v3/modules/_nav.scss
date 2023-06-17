@@ -20,13 +20,13 @@
   height: var(--nav-h, calc(50rem / 16));
   place-items: var(--nav-align, center);
   justify-content: var(--nav-justify, space-between);
-  margin-inline: var(--nav-mx, 1rem);
+  margin-inline: var(--nav-mx, 0);
+  padding-inline: var(--nav-px, 1rem);
   background-color: var(--nav-bg, initial);
 
-  > section,
-  > ul {
+  >section,
+  >ul {
     --nav-dsp: flex;
-
     display: var(--nav-dsp, flex);
     gap: var(--nav-gap, 0);
     font-size: var(--nav-fs, 0.9rem);
@@ -34,13 +34,15 @@
     padding-inline: var(--nav-px, 1rem);
     height: 100%;
   }
-  > section {
-    > div {
+
+  >section {
+    >div {
       --py: 0;
     }
   }
+
   ul {
-    > li {
+    >li {
       display: flex;
       align-items: center;
       list-style: none;
@@ -48,6 +50,7 @@
       padding: 0;
       min-height: 100%;
       padding-inline: var(--nav-px, .75rem);
+
       &:hover {
         background-color: var(--nav-hov-bg, whitesmoke);
       }
@@ -64,6 +67,7 @@
     color: var(--nav-cl);
     font-size: var(--nav-fs, 0.9rem);
   }
+
   @content;
 }
 
@@ -72,7 +76,10 @@
 }
 
 @mixin module {
-  nav, [data-fp-nav], [role="navigation"] {
+
+  nav,
+  [data-fp-nav],
+  [role="navigation"] {
     @include rules();
   }
 }

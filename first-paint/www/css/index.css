@@ -1087,7 +1087,8 @@ nav,
   height: var(--nav-h, 3.125rem);
   place-items: var(--nav-align, center);
   justify-content: var(--nav-justify, space-between);
-  margin-inline: var(--nav-mx, 1rem);
+  margin-inline: var(--nav-mx, 0);
+  padding-inline: var(--nav-px, 1rem);
   background-color: var(--nav-bg, initial);
 }
 nav > section,
