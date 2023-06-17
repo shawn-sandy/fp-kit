@@ -23,6 +23,10 @@ section:not(nav) {
   padding-block: var(--sect-x, --spc-4);
 }
 
+p {
+  --fs: clamp(1rem, 1.2rem + 0.5vw, 1.4rem);
+}
+
 /* stylelint-disable declaration-colon-newline-after */
 /* stylelint-disable declaration-empty-line-before */
 /* stylelint-disable declaration-colon-newline-after */

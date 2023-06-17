@@ -18,4 +18,7 @@ footer > section {
 section:not(nav) {
   margin-inline: var(--sect-y, auto);
   padding-block: var(--sect-x, --spc-4);
+}
+p {
+  --fs: clamp(1rem, 1.2rem + 0.5vw, 1.4rem);
 } /*# sourceMappingURL=global.css.map */
