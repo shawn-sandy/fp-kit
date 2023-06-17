@@ -425,7 +425,7 @@ section:not(nav) {
   padding-block: var(--sect-x, --spc-4);
 }
 p {
-  --fs: clamp(1rem, 1.2rem + 0.5vw, 1.4rem);
+  --fs: var(--fs-0);
 }
 main,
 header,

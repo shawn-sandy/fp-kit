@@ -473,7 +473,7 @@ section:not(nav) {
 }
 
 p {
-  --fs: clamp(1rem, 1.2rem + 0.5vw, 1.4rem);
+  --fs: var(--fs-0);
 }
 
 /*
