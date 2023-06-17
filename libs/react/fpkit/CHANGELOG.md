@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.80](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.79...@fpkit/react@0.2.80) (2023-06-17)
+
+### Features
+
+- **nav:** add Nav component and Nav story to FP.React library to provide a reusable navigation component for layout purposes ([f70ec4a](https://github.com/shawn-sandy/fpkit/commit/f70ec4a42d435516e1755b56dd11a1ee5fda35bf))
+
 ## [0.2.79](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.2.78...@fpkit/react@0.2.79) (2023-06-15)
 
 **Note:** Version bump only for package @fpkit/react

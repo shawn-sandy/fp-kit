@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.57](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.56...@shawnsandy/first-paint@2.17.57) (2023-06-17)
+
+### Features
+
+- 🌟 update the margin/padding on nac module ([31bb3b2](https://github.com/shawn-sandy/fp-kit/commit/31bb3b21ac6b9cfff5a8a1b1213ac391673bee46))
+
 ## [2.17.56](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.55...@shawnsandy/first-paint@2.17.56) (2023-06-15)
 
 ### Features
