@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.59](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.58...@shawnsandy/first-paint@2.17.59) (2023-06-18)
+
+### Bug Fixes
+
+- 🔥 fix broken font-size on section ([d8df362](https://github.com/shawn-sandy/fp-kit/commit/d8df362019e7eef6950d3a8e7615e546ee89a699))
+
 ## [2.17.58](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.57...@shawnsandy/first-paint@2.17.58) (2023-06-17)
 
 ### Features
