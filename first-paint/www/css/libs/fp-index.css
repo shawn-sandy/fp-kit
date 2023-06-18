@@ -493,7 +493,7 @@ p,
   --fw: normal;
   --lh: 1.8;
   --spacing: 0.5rem;
-  --p-fs: var(--fs, clamp(0.9rem, 3vw - 1.5rem, 1rem) ;);
+  --p-fs: var(--fs, var(--fs-0));
   margin: var(--p-m, 0);
   padding: var(--p-p);
   line-height: var(--lh, 1.6);
