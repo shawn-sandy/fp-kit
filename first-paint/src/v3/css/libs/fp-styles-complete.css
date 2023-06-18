@@ -196,8 +196,7 @@ p {
 }
 .fp-header section p {
   width: var(--hdp-w, 90%);
-  font-size: var(--pfs);
-  --pfs: var(--fs-6, calc(32rem / 16));
+  font-size: var(--pfs), var(--fs-6);
   margin: auto;
 }
 .fp-header[data-style~='large'] h2 {

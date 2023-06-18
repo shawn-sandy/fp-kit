@@ -46,8 +46,7 @@
 
     p {
       width: var(--hdp-w, clamp(90%, 50%, 80%));
-      font-size: var(--pfs);
-      --pfs: var(--fs-6, calc(32rem / 16));
+      font-size: var(--pfs), var(--fs-6);
       margin: auto
     }
 
