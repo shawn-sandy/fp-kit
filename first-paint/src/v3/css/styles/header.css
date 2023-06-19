@@ -14,7 +14,7 @@
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
-  font-size: var(--phfs, var(--fs-6));
+  font-size: var(--ph-fs, var(--fs-6));
 }
 .fp-header[data-variant] {
   background-color: var(--vbg);
@@ -31,20 +31,20 @@
 }
 .fp-header section p {
   width: var(--hdp-w, 90%);
-  --fs: var(--fs-6, calc(40rem / 16));
+  font-size: var(--ph-fs, var(--fs-6));
   margin: auto;
 }
 .fp-header[data-style~='large'] h2 {
   --hfs: var(--fs-12);
 }
 .fp-header[data-style~='large'] p {
-  --fs: var(--fs-6);
+  --ph-fs: var(--fs-6);
 }
 .fp-header[data-style~='small'] h2 {
   --hfs: var(--fs-8);
 }
 .fp-header[data-style~='small'] p {
-  --fs: var(--fs-4);
+  --ph-fs: var(--fs-4);
 }
 
 /*# sourceMappingURL=header.css.map */

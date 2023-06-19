@@ -27,7 +27,7 @@
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
-  font-size: var(--phfs, var(--fs-6));
+  font-size: var(--ph-fs, var(--fs-6));
 
   &[data-variant] {
     background-color: var(--vbg);
@@ -46,7 +46,7 @@
 
     p {
       width: var(--hdp-w, clamp(90%, 50%, 80%));
-      --fs: var(--fs-6, calc(40rem / 16));
+      font-size: var(--ph-fs, var(--fs-6));
       margin: auto
     }
 
@@ -58,7 +58,7 @@
     }
 
     p {
-      --fs: var(--fs-6);
+      --ph-fs: var(--fs-6);
     }
   }
 
@@ -68,7 +68,7 @@
     }
 
     p {
-      --fs: var(--fs-4);
+      --ph-fs: var(--fs-4);
     }
   }
 
@@ -84,8 +84,7 @@
 @mixin module {
 
   header,
-  [role="banner"],
-  [style*="--hdr"] {
+  [role="banner"] {
     &:not([arial-label], dialog header) {
       @include props;
       @include rules;
