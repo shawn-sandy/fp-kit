@@ -46,7 +46,7 @@
 
     p {
       width: var(--hdp-w, clamp(90%, 50%, 80%));
-      font-size: var(--pfs), var(--fs-6);
+      font-size: var(--hpfs), var(--fs-6);
       margin: auto
     }
 
@@ -58,7 +58,7 @@
     }
 
     p {
-      --pfs: var(--fs-6);
+      --hpfs: var(--fs-6);
     }
   }
 
@@ -68,7 +68,7 @@
     }
 
     p {
-      --pfs: var(--fs-4);
+      --hpfs: var(--fs-4);
     }
   }
 

@@ -3,7 +3,7 @@ footer:not([aria-label], [role='footer']),
 [role='contentinfo']:not([aria-label], [role='footer']) {
   display: var(--footer-dsp, flex);
   flex-direction: var(--footer-direction, column);
-  font-size: var(--footer-fs, var(--fs-2));
+  font-size: var(--footer-fs, var(--fs-3));
 }
 footer:not([aria-label], [role='footer']) > p,
 [data-footer]:not([aria-label], [role='footer']) > p,

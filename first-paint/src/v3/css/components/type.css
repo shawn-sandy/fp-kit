@@ -68,7 +68,7 @@ p strong,
 }
 
 article > p {
-  font-size: var(--fs-3);
+  font-size: var(--fs-0);
 }
 
 h1,

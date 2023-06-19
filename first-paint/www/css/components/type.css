@@ -65,7 +65,7 @@ p strong,
   font-weight: var(--fw-medium);
 }
 article > p {
-  font-size: var(--fs-3);
+  font-size: var(--fs-0);
 }
 h1,
 h2,

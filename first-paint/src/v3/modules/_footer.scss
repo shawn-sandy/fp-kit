@@ -13,7 +13,7 @@
 @mixin rules {
   display: var(--footer-dsp, flex);
   flex-direction: var(--footer-direction, column);
-  font-size: var(--footer-fs, var(--fs-2));
+  font-size: var(--footer-fs, var(--fs-3));
 
   >p {
     text-align: var(--fp-align, center);

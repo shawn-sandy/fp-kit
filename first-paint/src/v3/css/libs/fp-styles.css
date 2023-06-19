@@ -126,20 +126,20 @@ p {
 }
 .fp-header section p {
   width: var(--hdp-w, 90%);
-  font-size: var(--pfs), var(--fs-6);
+  font-size: var(--hpfs), var(--fs-6);
   margin: auto;
 }
 .fp-header[data-style~='large'] h2 {
   --hfs: var(--fs-12);
 }
 .fp-header[data-style~='large'] p {
-  --pfs: var(--fs-6);
+  --hpfs: var(--fs-6);
 }
 .fp-header[data-style~='small'] h2 {
   --hfs: var(--fs-8);
 }
 .fp-header[data-style~='small'] p {
-  --pfs: var(--fs-4);
+  --hpfs: var(--fs-4);
 }
 .fp-container {
   --bx-flow: column wrap;
@@ -693,7 +693,7 @@ p {
 .fp-footer {
   display: var(--footer-dsp, flex);
   flex-direction: var(--footer-direction, column);
-  font-size: var(--footer-fs, var(--fs-2));
+  font-size: var(--footer-fs, var(--fs-3));
 }
 .fp-footer > p {
   text-align: var(--fp-align, center);

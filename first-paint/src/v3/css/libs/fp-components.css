@@ -112,7 +112,7 @@ header:not([arial-label], dialog header) section p,
 [role='banner']:not([arial-label], dialog header) section p,
 [style*='--hdr']:not([arial-label], dialog header) section p {
   width: var(--hdp-w, 90%);
-  font-size: var(--pfs), var(--fs-6);
+  font-size: var(--hpfs), var(--fs-6);
   margin: auto;
 }
 header:not([arial-label], dialog header)[data-style~='large'] h2,
@@ -123,7 +123,7 @@ header:not([arial-label], dialog header)[data-style~='large'] h2,
 header:not([arial-label], dialog header)[data-style~='large'] p,
 [role='banner']:not([arial-label], dialog header)[data-style~='large'] p,
 [style*='--hdr']:not([arial-label], dialog header)[data-style~='large'] p {
-  --pfs: var(--fs-6);
+  --hpfs: var(--fs-6);
 }
 header:not([arial-label], dialog header)[data-style~='small'] h2,
 [role='banner']:not([arial-label], dialog header)[data-style~='small'] h2,
@@ -133,7 +133,7 @@ header:not([arial-label], dialog header)[data-style~='small'] h2,
 header:not([arial-label], dialog header)[data-style~='small'] p,
 [role='banner']:not([arial-label], dialog header)[data-style~='small'] p,
 [style*='--hdr']:not([arial-label], dialog header)[data-style~='small'] p {
-  --pfs: var(--fs-4);
+  --hpfs: var(--fs-4);
 }
 
 form,
@@ -597,7 +597,7 @@ footer:not([aria-label], [role='footer']),
 [role='contentinfo']:not([aria-label], [role='footer']) {
   display: var(--footer-dsp, flex);
   flex-direction: var(--footer-direction, column);
-  font-size: var(--footer-fs, var(--fs-2));
+  font-size: var(--footer-fs, var(--fs-3));
 }
 footer:not([aria-label], [role='footer']) > p,
 [data-footer]:not([aria-label], [role='footer']) > p,
