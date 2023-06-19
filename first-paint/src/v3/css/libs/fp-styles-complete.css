@@ -179,7 +179,7 @@ p {
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
-  font-size: var(--h-fs, 1rem);
+  font-size: var(--fs, 1rem);
 }
 .fp-header[data-variant] {
   background-color: var(--vbg);
@@ -196,20 +196,20 @@ p {
 }
 .fp-header section p {
   width: var(--hdp-w, 90%);
-  font-size: var(--hpfs), var(--fs-6);
+  font-size: var(--fs), var(--fs-6);
   margin: auto;
 }
 .fp-header[data-style~='large'] h2 {
   --hfs: var(--fs-12);
 }
 .fp-header[data-style~='large'] p {
-  --hpfs: var(--fs-6);
+  --fs: var(--fs-6);
 }
 .fp-header[data-style~='small'] h2 {
   --hfs: var(--fs-8);
 }
 .fp-header[data-style~='small'] p {
-  --hpfs: var(--fs-4);
+  --fs: var(--fs-4);
 }
 .fp-container {
   --bx-flow: column wrap;

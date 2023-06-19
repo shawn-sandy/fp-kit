@@ -27,7 +27,7 @@
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
-  font-size: var(--h-fs, 1rem);
+  font-size: var(--fs, 1rem);
 
   &[data-variant] {
     background-color: var(--vbg);
@@ -46,7 +46,7 @@
 
     p {
       width: var(--hdp-w, clamp(90%, 50%, 80%));
-      font-size: var(--hpfs), var(--fs-6);
+      font-size: var(--fs), var(--fs-6);
       margin: auto
     }
 
@@ -58,7 +58,7 @@
     }
 
     p {
-      --hpfs: var(--fs-6);
+      --fs: var(--fs-6);
     }
   }
 
@@ -68,7 +68,7 @@
     }
 
     p {
-      --hpfs: var(--fs-4);
+      --fs: var(--fs-4);
     }
   }
 
