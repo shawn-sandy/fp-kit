@@ -1054,21 +1054,21 @@ header:not([arial-label], dialog header),
 [role='banner']:not([arial-label], dialog header),
 [style*='--hdr']:not([arial-label], dialog header) {
   display: var(--hdr-dsp, flex);
+  flex-direction: var(--hdr-direction, column);
+  place-content: var(--hdr-place-x, center);
+  place-items: var(--hdr-place-y, center);
   background-color: var(--hdr-bg, var(--fp-white-smoke));
   background-image: var(--hdr-bg-img, none);
   background-position: var(--hdr-bg-pos, center center);
   background-size: var(--hdr-bg-size, cover);
   background-repeat: var(--hdr-bg-repeat, no-repeat);
-  flex-direction: var(--hdr-direction, column);
-  place-content: var(--hdr-place-x, center);
-  place-items: var(--hdr-place-y, center);
   text-align: var(--hdr-align, center);
   min-height: var(--hdr-min-h, calc(var(--vw-md) + var(--vw-xs)));
   min-width: var(--hdr-w, 100%);
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
-  font-size: var(--fs, 1rem);
+  font-size: var(--fs, var(--fs-6));
 }
 header:not([arial-label], dialog header)[data-variant],
 [role='banner']:not([arial-label], dialog header)[data-variant],
@@ -1093,7 +1093,7 @@ header:not([arial-label], dialog header) section p,
 [role='banner']:not([arial-label], dialog header) section p,
 [style*='--hdr']:not([arial-label], dialog header) section p {
   width: var(--hdp-w, 90%);
-  font-size: var(--fs), var(--fs-6);
+  --fs: var(--fs-5, calc(40rem / 16));
   margin: auto;
 }
 header:not([arial-label], dialog header)[data-style~='large'] h2,
