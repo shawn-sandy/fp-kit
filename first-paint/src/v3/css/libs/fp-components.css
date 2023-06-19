@@ -87,7 +87,7 @@ header:not([arial-label], dialog header),
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
-  font-size: var(--fs, var(--fs-6));
+  font-size: var(--phfs, var(--fs-6));
 }
 header:not([arial-label], dialog header)[data-variant],
 [role='banner']:not([arial-label], dialog header)[data-variant],
@@ -112,7 +112,7 @@ header:not([arial-label], dialog header) section p,
 [role='banner']:not([arial-label], dialog header) section p,
 [style*='--hdr']:not([arial-label], dialog header) section p {
   width: var(--hdp-w, 90%);
-  --fs: var(--fs-5, calc(40rem / 16));
+  --fs: var(--fs-6, calc(40rem / 16));
   margin: auto;
 }
 header:not([arial-label], dialog header)[data-style~='large'] h2,
