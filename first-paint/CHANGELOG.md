@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.18.0](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.59...@shawnsandy/first-paint@2.18.0) (2023-06-19)
+
+### Bug Fixes
+
+- 🎉 fix issue with header font-size ([791b605](https://github.com/shawn-sandy/fp-kit/commit/791b605c03108b22e55f4d3310f2bc6bc17ff9e3))
+- 🎨 fix header p font size ([3653812](https://github.com/shawn-sandy/fp-kit/commit/3653812b328157e6eae19d32cf7e44aa812cf34f))
+
 ## [2.17.59](https://github.com/shawn-sandy/fp-kit/compare/@shawnsandy/first-paint@2.17.58...@shawnsandy/first-paint@2.17.59) (2023-06-18)
 
 ### Bug Fixes
