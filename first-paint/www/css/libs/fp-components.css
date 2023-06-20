@@ -571,9 +571,12 @@ footer:not([aria-label], [role='footer']) > p,
   text-align: var(--fp-align, center);
 }
 footer:not([aria-label], [role='footer']) p,
+footer:not([aria-label], [role='footer']) section p,
 [data-footer]:not([aria-label], [role='footer']) p,
-[role='contentinfo']:not([aria-label], [role='footer']) p {
-  --p-fs: var(--footer-fs, var(--fs));
+[data-footer]:not([aria-label], [role='footer']) section p,
+[role='contentinfo']:not([aria-label], [role='footer']) p,
+[role='contentinfo']:not([aria-label], [role='footer']) section p {
+  font-size: var(--footer-fs, var(--fs-3));
 }
 footer:not([aria-label], [role='footer'])[data-variant],
 [data-footer]:not([aria-label], [role='footer'])[data-variant],

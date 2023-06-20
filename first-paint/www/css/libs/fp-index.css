@@ -193,10 +193,10 @@ svg {
   --vh-xl: 80vh;
   --vh-xxl: 95vh;
   --fs: 100%;
-  --fs-0: clamp(1rem, 4vw - 1rem, 1.2rem);
+  --fs-0: clamp(0.9rem, 4vw - 1rem, 1.12rem);
   --fs-1: clamp(0.65rem, 1.3vw + 0.25rem, 0.75rem);
   --fs-2: clamp(0.7rem, 2vw - 0.5rem, 0.875rem);
-  --fs-3: clamp(0.85rem, 2vw - 0.25rem, 1.125rem);
+  --fs-3: clamp(0.85rem, 2vw - 0.25rem, 0.925rem);
   --fs-4: clamp(0.95rem, 2vw - 0.25rem, 1.313rem);
   --fs-5: clamp(1.1rem, 2vw - 0.25rem, 1.463rem);
   --fs-6: clamp(1.3rem, 2vw + 0.75rem, 2rem);
@@ -688,10 +688,10 @@ p + * {
   --vh-xl: 80vh;
   --vh-xxl: 95vh;
   --fs: 100%;
-  --fs-0: clamp(1rem, 4vw - 1rem, 1.2rem);
+  --fs-0: clamp(0.9rem, 4vw - 1rem, 1.12rem);
   --fs-1: clamp(0.65rem, 1.3vw + 0.25rem, 0.75rem);
   --fs-2: clamp(0.7rem, 2vw - 0.5rem, 0.875rem);
-  --fs-3: clamp(0.85rem, 2vw - 0.25rem, 1.125rem);
+  --fs-3: clamp(0.85rem, 2vw - 0.25rem, 0.925rem);
   --fs-4: clamp(0.95rem, 2vw - 0.25rem, 1.313rem);
   --fs-5: clamp(1.1rem, 2vw - 0.25rem, 1.463rem);
   --fs-6: clamp(1.3rem, 2vw + 0.75rem, 2rem);
@@ -1933,9 +1933,12 @@ footer:not([aria-label], [role='footer']) > p,
   text-align: var(--fp-align, center);
 }
 footer:not([aria-label], [role='footer']) p,
+footer:not([aria-label], [role='footer']) section p,
 [data-footer]:not([aria-label], [role='footer']) p,
-[role='contentinfo']:not([aria-label], [role='footer']) p {
-  --p-fs: var(--footer-fs, var(--fs));
+[data-footer]:not([aria-label], [role='footer']) section p,
+[role='contentinfo']:not([aria-label], [role='footer']) p,
+[role='contentinfo']:not([aria-label], [role='footer']) section p {
+  font-size: var(--footer-fs, var(--fs-3));
 }
 footer:not([aria-label], [role='footer'])[data-variant],
 [data-footer]:not([aria-label], [role='footer'])[data-variant],

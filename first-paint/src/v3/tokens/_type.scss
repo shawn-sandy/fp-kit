@@ -2,13 +2,13 @@
   // * responsive fonts sizes
   --fs: 100%;
 
-  --fs-0: clamp(1rem, 4vw - 1rem, 1.2rem); // 16px default
+  --fs-0: clamp(.9rem, 4vw - 1rem, 1.12rem); // 16px default
 
   --fs-1: clamp(0.65rem, 1.3vw + 0.25rem, 0.75rem); // 12px
 
   --fs-2: clamp(0.7rem, 2vw - 0.5rem, 0.875rem); // 14px
 
-  --fs-3: clamp(0.85rem, 2vw - 0.25rem, 1.125rem); // 18px
+  --fs-3: clamp(0.85rem, 2vw - 0.25rem, 0.925rem); // 18px
 
   --fs-4: clamp(0.95rem, 2vw - 0.25rem, 1.313rem); // 21px
 

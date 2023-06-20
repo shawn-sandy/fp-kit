@@ -698,8 +698,9 @@ p {
 .fp-footer > p {
   text-align: var(--fp-align, center);
 }
-.fp-footer p {
-  --p-fs: var(--footer-fs, var(--fs));
+.fp-footer p,
+.fp-footer section p {
+  font-size: var(--footer-fs, var(--fs-3));
 }
 .fp-footer[data-variant] {
   --footer-fs: var(--vfs);

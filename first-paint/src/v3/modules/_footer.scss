@@ -19,8 +19,9 @@
     text-align: var(--fp-align, center);
   }
 
-  p {
-    --p-fs: var(--footer-fs, var(--fs));
+  p,
+  section p {
+    font-size: var(--footer-fs, var(--fs-3));
   }
 
   &[data-variant] {
