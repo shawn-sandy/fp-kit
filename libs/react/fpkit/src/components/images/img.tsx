@@ -1,5 +1,23 @@
 import FP from '../fp'
 import { ComponentProps } from 'src/types'
+
+/*
+ * ImageProps interface
+ *
+ * Extends ComponentProps and defines additional props for the Img component.
+ *
+ * @property {string} [src] - The image source URL
+ * @property {string} alt - Required alt text for image accessibility
+ * @property {number} width - Required width of image
+ * @property {number} [height] - Optional height of image
+ * @property {"eager" | "lazy"} [loading="lazy"] - Loading behavior
+ * @property {string} [placeholder] - Fallback placeholder image
+ * @property {"high" | "low"} [fetchpriority="low"] - Image fetch priority
+ * @property {"sync" | "async" | "auto"} [decoding="auto"] - Decode setting
+ * @property {function} [imgError] - Error callback
+ * @property {function} [imgLoaded] - Loaded callback
+ */
+
 export interface ImageProps extends ComponentProps {
   src?: string
   alt: string
