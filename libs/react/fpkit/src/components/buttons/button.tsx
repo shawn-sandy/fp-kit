@@ -94,7 +94,7 @@ export const defStyles = {
  */
 
 export const Button = ({
-  type = 'button',
+  type,
   children,
   styles,
   disabled,
@@ -107,7 +107,7 @@ export const Button = ({
 }: ButtonProps) => {
   const stylesObj = { ...defStyles, ...styles } as React.CSSProperties
   const handlePointerEvents = (e: React.PointerEvent<HTMLButtonElement>) => {
-    // let eventType: String = e.type
+    let eventType: String = e.type
     if (!disabled) {
       switch (e.type) {
         case 'pointerover':
@@ -126,34 +126,20 @@ export const Button = ({
 
   /* Returning a button element. */
   return (
-    <>
-      <FP
-        as="button"
-        type={type}
-        styles={stylesObj}
-        // className={classes}
-        // onPointerOver={handlePointerEvents}
-        // onPointerDown={handlePointerEvents}
-        // onPointerLeave={handlePointerEvents}
-        // aria-disabled={disabled}
-        {...props}
-      >
-        {children}
-      </FP>
-    </>
-    // <button
-    //   type={type ?? 'button'}
-    //   onPointerOver={handlePointerEvents}
-    //   onPointerDown={handlePointerEvents}
-    //   onPointerLeave={handlePointerEvents}
-    //   style={stylesObj}
-    //   aria-disabled={disabled}
-    //   disabled={disabled}
-    //   {...props}
-    // >
-    //   {children}
-    // </button>
+    <button
+      type={type ?? 'button'}
+      onPointerOver={handlePointerEvents}
+      onPointerDown={handlePointerEvents}
+      onPointerLeave={handlePointerEvents}
+      style={stylesObj}
+      aria-disabled={disabled}
+      disabled={disabled}
+      {...props}
+    >
+      {children}
+    </button>
   )
+  //
 }
 
 Button.displayName = 'Button'
