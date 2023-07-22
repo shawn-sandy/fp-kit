@@ -31,6 +31,15 @@ type FPProps<C extends React.ElementType> = PolymorphicComponentPropWithRef<
   }
 >
 
+/*
+ * FPComponent type definition
+ *
+ * Defines the component function signature for the FP component.
+ *
+ * @typeParam C - The HTML element type to render
+ * @param props - The component props
+ * @returns React component
+ */
 type FPComponent = <C extends React.ElementType = 'span'>(
   props: FPProps<C>,
 ) => React.ReactElement | null
@@ -46,6 +55,16 @@ export const fpStyles = (styles: styl) => {
   return styles as React.CSSProperties
 }
 
+/**
+ * FP component is a polymorphic component that renders an HTML element with optional styles.
+ * @param {Object} props - Component props
+ * @param {React.ElementType} props.as - The HTML element to render. Defaults to 'div'.
+ * @param {boolean} props.renderStyles - Whether to render styles or not. Defaults to true.
+ * @param {Object} props.styles - The styles to apply to the component.
+ * @param {Object} props.defaultStyles - The default styles to apply to the component.
+ * @param {React.ReactNode} props.children - The children to render inside the component.
+ * @returns {React.ReactElement} - A React component that renders an HTML element with optional styles.
+ */
 const FP: FPComponent = React.forwardRef(
   <C extends React.ElementType>(
     {
