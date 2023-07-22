@@ -16,8 +16,13 @@ const meta: Meta<typeof Main> = {
   component: Main,
   args: {
     // @ts-ignore
-    children: (<section>The main HTML element represents the dominant content of the body of a document.</section>),
-    'data-testid': 'main'
+    children: (
+      <section>
+        The main HTML element represents the dominant content of the body of a
+        document.
+      </section>
+    ),
+    'data-testid': 'main',
   },
 }
 
@@ -36,7 +41,7 @@ export const MainLandmark: Story = {
     const canvas = within(canvasElement)
     const main = canvas.getByRole('main')
     expect(main).toBeInTheDocument()
-  }
+  },
 }
 
 export const MainWithChildren: Story = {

@@ -1,12 +1,10 @@
 const path = require('path')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
-
 module.exports = {
   stories: [
     '../libs/react/guides/**/*.stories.mdx',
     '../libs/react/**/*.stories.mdx',
     '../libs/react/**/*.stories.@(js|jsx|ts|tsx)',
-    '../src/**/*.stories.mdx',
   ],
   addons: [
     '@storybook/addon-links',
@@ -16,13 +14,15 @@ module.exports = {
     '@geometricpanda/storybook-addon-badges',
     '@storybook/addon-storysource',
     '@storybook/addon-coverage',
+    '@storybook/addon-mdx-gfm',
   ],
   features: {
     interactionsDebugger: true, // 👈 Enable playback controls
   },
-  framework: '@storybook/react',
-  core: {
-    builder: '@storybook/builder-webpack5',
+
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
   },
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
@@ -44,5 +44,8 @@ module.exports = {
 
     // Return the altered config
     return config
+  },
+  docs: {
+    autodocs: true,
   },
 }
