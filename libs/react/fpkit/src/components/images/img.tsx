@@ -13,7 +13,15 @@ export interface ImageProps extends ComponentProps {
   imgLoaded?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void
 }
 
-// type ImgProps = ImageProps & ComponentProps
+/*
+ * Default styles object for the Img component.
+ *
+ * @property {string} maxWidth - Sets the max-width CSS property. Default is 'var(--img-w, 100%)'.
+ * @property {string} height - Sets the height CSS property. Default is 'var(--img-h, auto)'.
+ * @property {string} objectFit - Sets the object-fit CSS property. Default is 'var(--img-obj-fit, cover)'.
+ * @property {string} objectPosition - Sets the object-position CSS property. Default is 'var(--img-position, center center)'.
+ * @property {string} aspectRatio - Sets the aspect-ratio CSS property. Default is 'var(--img-ratio, auto 2/3)'.
+ */
 
 export const defaultStyles = {
   maxWidth: 'var(--img-w, 100%)',
@@ -23,10 +31,25 @@ export const defaultStyles = {
   aspectRatio: 'var(--img-ratio, auto 2/3)',
 }
 
-/**
- * This is a simple image component that can be used to display images
- * @param param
- * @returns
+/*
+ * Img component
+ *
+ * Renders an <img> element with custom props.
+ *
+ * @param {string} src - The image source URL.
+ * @param {string} alt - The alt text for the image.
+ * @param {number} [width=480] - The width of the image.
+ * @param {number} [height] - The height of the image.
+ * @param {Object} [styles] - Additional CSS styles to apply.
+ * @param {boolean} [renderStyles=true] - Whether to render the default styles.
+ * @param {"eager" | "lazy"} [loading="lazy"] - The loading attribute.
+ * @param {string} [placeholder] - A placeholder image URL.
+ * @param {"high" | "low"} [fetchpriority="low"] - The fetchpriority attribute.
+ * @param {"sync" | "async" | "auto"} [decoding="auto"] - The decoding attribute.
+ * @param {function} [imgLoaded] - Callback when image loads successfully.
+ * @param {function} [imgError] - Callback when image errors.
+ *
+ * @returns {JSX.Element} The Img component.
  */
 export const Img = ({
   src,
