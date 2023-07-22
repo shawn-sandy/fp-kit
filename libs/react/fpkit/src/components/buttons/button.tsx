@@ -105,7 +105,7 @@ export const Button = ({
 }: ButtonProps) => {
   const defStyles = {}
 
-  const stylesObj = defaultStyles ? defStyles : {}
+  const stylesObj =  defStyles 
   const handlePointerEvents = (e: React.PointerEvent<HTMLButtonElement>) => {
     let eventType: String = e.type
     if (!disabled) {
@@ -127,7 +127,7 @@ export const Button = ({
   /* Returning a button element. */
   return (
     <button
-      type={type}
+      type={type ?? 'button'}
       onPointerOver={handlePointerEvents}
       onPointerDown={handlePointerEvents}
       onPointerLeave={handlePointerEvents}

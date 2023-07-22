@@ -43,10 +43,7 @@ export const AdvButton: Story = {
   args: {
     // @ts-ignore
     children: buttonProps.children,
-    type: buttonProps.type,
-    onPointerDown: { action: 'down' },
-    onPointerLeave: { action: 'leave' },
-    onPointerOver: { action: 'over' },
+    type: buttonProps.type as "button" | "submit" | "reset" | undefined,
   },
 }
 

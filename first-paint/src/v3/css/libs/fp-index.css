@@ -450,9 +450,19 @@ svg {
 
 html,
 body {
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family:
+    Roboto,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
 }
 
 main,
@@ -1959,7 +1969,9 @@ dialog[data-variant],
   transform: translateX(-50%) translateY(-2px);
   white-space: nowrap;
   z-index: 2;
-  transition: opacity 0.2s var(--tip-cubic), transform 0.2s var(--tip-cubic);
+  transition:
+    opacity 0.2s var(--tip-cubic),
+    transform 0.2s var(--tip-cubic);
 }
 [role='tooltip']:hover:after,
 [data-fp-tooltip]:hover:after {
