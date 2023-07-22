@@ -33,26 +33,27 @@ export default {
 const Template: StoryObj<typeof Field> = (args) => (
   <Field {...args}>{args.children}</Field>
 )
-/**
- *
- */
-export const FieldWrapper = Template.bind({})
-FieldWrapper.args = {
-  labelFor: 'name',
-  label: 'Field Label',
-  children: <Input type="text" id="name" placeholder="Placeholder" />,
-}
 
-FieldWrapper.play = async ({ args, canvasElement }) => {
-  const { getByLabelText } = within(canvasElement)
-  const Field = getByLabelText(/field label/i)
-  expect(Field).toBeInTheDocument()
-}
+export const FieldWrapper = {
+  render: Template,
 
-FieldWrapper.parameters = {
-  docs: {
-    description: {
-      story: 'Some story **markdown**',
+  args: {
+    labelFor: 'name',
+    label: 'Field Label',
+    children: <Input type="text" id="name" placeholder="Placeholder" />,
+  },
+
+  play: async ({ args, canvasElement }) => {
+    const { getByLabelText } = within(canvasElement)
+    const Field = getByLabelText(/field label/i)
+    expect(Field).toBeInTheDocument()
+  },
+
+  parameters: {
+    docs: {
+      description: {
+        story: 'Some story **markdown**',
+      },
     },
   },
 }

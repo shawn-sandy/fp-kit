@@ -17,7 +17,7 @@ const meta: Meta<typeof Header> = {
   args: {
     // @ts-ignore
     children: 'Default Header',
-    'data-testid': 'banner'
+    'data-testid': 'banner',
   },
 }
 
@@ -36,7 +36,7 @@ export const LandmarkDefault: Story = {}
 export const HeaderWithChildren: Story = {
   args: {
     // @ts-ignore
-    children: headerChildren()
+    children: headerChildren(),
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
@@ -45,5 +45,5 @@ export const HeaderWithChildren: Story = {
     const title = canvas.getByRole('heading')
     expect(title).toBeInTheDocument()
     expect(title).toHaveTextContent(/header title/i)
-  }
+  },
 }

@@ -17,7 +17,7 @@ const meta: Meta<typeof Footer> = {
   args: {
     // @ts-ignore
     children: 'Main Landmark',
-    'data-testid': 'main'
+    'data-testid': 'main',
   },
 }
 
