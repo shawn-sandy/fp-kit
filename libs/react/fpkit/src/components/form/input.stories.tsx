@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { StoryObj, ComponentMeta } from '@storybook/react'
+import { StoryObj, Meta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 // import '@shawnsandy/first-paint/dist/css/components/input.min.css'
 
@@ -28,7 +28,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Input>
+} as Meta<typeof Input>
 
 const Template: StoryObj<typeof Input> = (args) => (
   <section style={{ minWidth: '80vw' }}>

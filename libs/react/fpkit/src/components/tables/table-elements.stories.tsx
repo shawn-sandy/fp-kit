@@ -1,7 +1,7 @@
 import React from 'react'
 // import '@shawnsandy/first-paint/dist/css/components/table.min.css'
 
-import { StoryObj, ComponentMeta } from '@storybook/react'
+import { StoryObj, Meta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 import { within, userEvent, waitFor } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
@@ -23,7 +23,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Table>
+} as Meta<typeof Table>
 
 const displayTable = () => (
   <>

@@ -2,7 +2,7 @@ import React from 'react'
 // import '@shawnsandy/first-paint/src/v3/components/_select.scss'
 import '@shawnsandy/first-paint/src/v3/components/select.scss'
 
-import { StoryObj, ComponentMeta } from '@storybook/react'
+import { StoryObj, Meta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
 import { within, userEvent, waitFor } from '@storybook/testing-library'
@@ -24,7 +24,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Select>
+} as Meta<typeof Select>
 
 const options = (
   <>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { StoryObj, ComponentMeta } from '@storybook/react'
+import { StoryObj, Meta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
 import { within, userEvent, waitFor } from '@storybook/testing-library'
@@ -28,7 +28,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Field>
+} as Meta<typeof Field>
 
 const Template: StoryObj<typeof Field> = (args) => (
   <Field {...args}>{args.children}</Field>

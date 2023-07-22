@@ -1,7 +1,7 @@
 import React from 'react'
 // import '@shawnsandy/first-paint/dist/css/components/textarea.min.css'
 
-import { StoryObj, ComponentMeta } from '@storybook/react'
+import { StoryObj, Meta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
 import { within, userEvent, waitFor } from '@storybook/testing-library'
@@ -29,7 +29,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Textarea>
+} as Meta<typeof Textarea>
 
 const Template: StoryObj<typeof Textarea> = (args) => <Textarea {...args} />
 /**

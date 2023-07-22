@@ -1,7 +1,7 @@
 import React from 'react'
 // import '@shawnsandy/first-paint/dist/css/components/button.min.css'
 
-import { StoryObj, ComponentMeta } from '@storybook/react'
+import { StoryObj, Meta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
 import { within, userEvent, waitFor } from '@storybook/testing-library'
@@ -35,7 +35,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Button>
+} as Meta<typeof Button>
 
 const Template: StoryObj<typeof Button> = (args) => (
   <Button {...args}>{args.children}</Button>

@@ -1,7 +1,7 @@
 import React from 'react'
 // import '@shawnsandy/first-paint/dist/css/components/dialog.min.css'
 
-import { StoryObj, ComponentMeta } from '@storybook/react'
+import { StoryObj, Meta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
 import { within, userEvent, waitFor } from '@storybook/testing-library'
@@ -23,7 +23,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Modal>
+} as Meta<typeof Modal>
 
 const Template: StoryObj<typeof Modal> = (args) => (
   <Modal {...args}>{args.children}</Modal>
