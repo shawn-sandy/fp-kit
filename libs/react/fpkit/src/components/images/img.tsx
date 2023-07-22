@@ -19,9 +19,9 @@ import { ComponentProps } from 'src/types'
  */
 
 export interface ImageProps extends ComponentProps {
-  src?: string
   alt: string
-  width: number
+  src?: string
+  width?: number
   height?: number
   loading?: 'eager' | 'lazy'
   placeholder?: string
