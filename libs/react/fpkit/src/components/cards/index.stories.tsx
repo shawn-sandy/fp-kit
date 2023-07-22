@@ -1,7 +1,7 @@
 import React from 'react'
 // import '@shawnsandy/first-paint/dist/css/components/cards.min.css'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { StoryObj, ComponentMeta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
 import { within, userEvent, waitFor } from '@storybook/testing-library'
@@ -25,8 +25,10 @@ export default {
   },
 } as ComponentMeta<typeof Card>
 
-const Template: ComponentStory<typeof Card> = (args) => (
-  <Card {...args} data-testid="cards">{args.children}</Card>
+const Template: StoryObj<typeof Card> = (args) => (
+  <Card {...args} data-testid="cards">
+    {args.children}
+  </Card>
 )
 
 const content = () => (
@@ -46,7 +48,7 @@ const content = () => (
 
 export const DefaultCard = Template.bind({})
 DefaultCard.args = {
-  children: content()
+  children: content(),
 }
 
 DefaultCard.play = async ({ args, canvasElement }) => {

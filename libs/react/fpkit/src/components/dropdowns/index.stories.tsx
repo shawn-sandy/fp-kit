@@ -1,59 +1,51 @@
-import React from "react"
+import React from 'react'
 
-import {
-  ComponentStory,
-  ComponentMeta
-} from "@storybook/react"
-import { BADGE } from "@geometricpanda/storybook-addon-badges"
+import { StoryObj, Meta } from '@storybook/react'
+import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
-import {
-  within,
-  userEvent,
-  waitFor
-} from "@storybook/testing-library"
-import { expect } from "@storybook/jest"
+import { within, userEvent, waitFor } from '@storybook/testing-library'
+import { expect } from '@storybook/jest'
 
-import {Dropdown} from "./dropdown"
+import { Dropdown } from './dropdown'
 export default {
-  title: "FP.React Components/DetailsDropdown",
+  title: 'FP.React Components/DetailsDropdown',
   component: Dropdown,
   argTypes: {
-    children: { control: "text" },
+    children: { control: 'text' },
     type: {
-      control: "select",
-      options: ["ComponentName", "submit", "reset"]
+      control: 'select',
+      options: ['ComponentName', 'submit', 'reset'],
     },
-    onPointerDown: { action: "down" }
+    onPointerDown: { action: 'down' },
   },
   parameters: {
     badges: [BADGE.BETA],
-    layout: "padded"
+    layout: 'padded',
   },
-  onToggle: { action: "toggle" },
-  onOpen: { action: "open" },
-} as ComponentMeta<typeof Dropdown>
+  onToggle: { action: 'toggle' },
+  onOpen: { action: 'open' },
+} as Meta<typeof Dropdown>
 
-const Template: ComponentStory<typeof Dropdown> = (
-  args
-) => (
+const Template: StoryObj<typeof Dropdown> = (args) => (
   <Dropdown {...args}>
-    <div>
-      {args.children}
-    </div>
+    <div>{args.children}</div>
   </Dropdown>
 )
 
 export const DropdownComponent = Template.bind({})
 DropdownComponent.args = {
-  summary: "Dropdown Details",
-  children: <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores omnis blanditiis provident inventore? Laboriosam a quasi in ut quae natus sequi nemo labore recusandae numquam. Nisi quaerat perspiciatis unde fugit.</p>
+  summary: 'Dropdown Details',
+  children: (
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores omnis
+      blanditiis provident inventore? Laboriosam a quasi in ut quae natus sequi
+      nemo labore recusandae numquam. Nisi quaerat perspiciatis unde fugit.
+    </p>
+  ),
 }
-DropdownComponent.play = async ({
-  args,
-  canvasElement
-}) => {
+DropdownComponent.play = async ({ args, canvasElement }) => {
   const { getByRole, getByText } = within(canvasElement)
-  const dropdown = getByRole("group")
+  const dropdown = getByRole('group')
   expect(dropdown).toBeInTheDocument()
   expect(getByText(/dropdown */i)).toBeInTheDocument()
 }

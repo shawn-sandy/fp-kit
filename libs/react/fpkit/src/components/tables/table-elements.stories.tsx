@@ -1,7 +1,7 @@
 import React from 'react'
 // import '@shawnsandy/first-paint/dist/css/components/table.min.css'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { StoryObj, ComponentMeta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 import { within, userEvent, waitFor } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
@@ -18,7 +18,8 @@ export default {
     badges: [BADGE.BETA],
     docs: {
       description: {
-        component: 'A collection of elements for creating a responsive table components',
+        component:
+          'A collection of elements for creating a responsive table components',
       },
     },
   },
@@ -81,7 +82,7 @@ const displayTable = () => (
   </>
 )
 
-const Template: ComponentStory<typeof Table> = (args) => (
+const Template: StoryObj<typeof Table> = (args) => (
   <Table {...args}>{args.children}</Table>
 )
 
@@ -99,7 +100,8 @@ TableElement.play = async ({ args, canvasElement }) => {
 TableElement.parameters = {
   docs: {
     description: {
-      story: 'The `table` element is a wrapper that creates a responsive `<section><table>{children}</table></section>`',
+      story:
+        'The `table` element is a wrapper that creates a responsive `<section><table>{children}</table></section>`',
     },
   },
 }

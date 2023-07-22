@@ -3,7 +3,7 @@ import React from 'react'
 // import '@shawnsandy/first-paint/dist/css/components/list.min.css'
 // import '@shawnsandy/first-paint/dist/css/libs/fp-core.min.css'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { StoryObj, ComponentMeta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
 import { within, userEvent, waitFor } from '@storybook/testing-library'
@@ -18,19 +18,19 @@ export default {
     type: {
       control: 'select',
       options: ['FP', 'submit', 'reset'],
-    }
+    },
   },
   parameters: {
     badges: [BADGE.BETA],
     docs: {
       description: {
         component: 'FP Component - polymorphic react component',
-      }
+      },
     },
   },
 } as ComponentMeta<typeof FP>
 
-const Template: ComponentStory<typeof FP> = (args) => (
+const Template: StoryObj<typeof FP> = (args) => (
   <FP {...args} data-testid="fp-kit">
     {args.children}
   </FP>
@@ -59,7 +59,7 @@ export const Paragraphs = Template.bind({})
 Paragraphs.args = {
   as: 'p',
   children:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima minus, exercitationem aut deleniti eaque dolore eligendi quia repellat? Earum perferendis aperiam officia adipisci quos enim voluptas asperiores possimus necessitatibus harum.'
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima minus, exercitationem aut deleniti eaque dolore eligendi quia repellat? Earum perferendis aperiam officia adipisci quos enim voluptas asperiores possimus necessitatibus harum.',
 }
 
 Paragraphs.play = async ({ args, canvasElement }) => {
@@ -88,8 +88,8 @@ HorizontalRule.args = {
   as: 'div',
   children: <hr />,
   styles: {
-    minWidth: '50vw'
-  }
+    minWidth: '50vw',
+  },
 }
 
 export const List = Template.bind({})
@@ -125,8 +125,8 @@ ListUnstyled.args = {
     </>
   ),
   styles: {
-    '--listNone': 'var(--yes)'
-  }
+    '--listNone': 'var(--yes)',
+  },
 }
 
 export const ListInline = Template.bind({})
@@ -141,6 +141,5 @@ ListInline.args = {
       <li>List item</li>
       <li>List item</li>
     </>
-
-  )
+  ),
 }

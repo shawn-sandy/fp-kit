@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { StoryObj, ComponentMeta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
 import { within, userEvent, waitFor } from '@storybook/testing-library'
@@ -44,7 +44,7 @@ const tbodyData = [
   },
 ]
 
-const Template: ComponentStory<typeof RenderTable> = (args) => (
+const Template: StoryObj<typeof RenderTable> = (args) => (
   <RenderTable {...args}></RenderTable>
 )
 /**

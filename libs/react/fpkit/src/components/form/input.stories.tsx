@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { StoryObj, ComponentMeta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 // import '@shawnsandy/first-paint/dist/css/components/input.min.css'
 
@@ -18,7 +18,7 @@ export default {
     //   options: ["inputElm", "submit", "reset"]
     // },
     onChange: { action: 'change' },
-    onBlur: { action: 'blur' }
+    onBlur: { action: 'blur' },
   },
   parameters: {
     badges: [BADGE.BETA],
@@ -30,8 +30,8 @@ export default {
   },
 } as ComponentMeta<typeof Input>
 
-const Template: ComponentStory<typeof Input> = (args) => (
-  <section style={{ minWidth: '80vw'}}>
+const Template: StoryObj<typeof Input> = (args) => (
+  <section style={{ minWidth: '80vw' }}>
     <Input {...args} data-testid="input" />
   </section>
 )
@@ -49,7 +49,7 @@ TextInput.play = async ({ args, canvasElement }) => {
   expect(inputElm).toBeInTheDocument()
   expect(inputElm).toHaveAttribute('type')
   expect(inputElm).toHaveAttribute('placeholder', args.placeholder)
-  expect(inputElm).toHaveAttribute('type','text')
+  expect(inputElm).toHaveAttribute('type', 'text')
 }
 
 TextInput.parameters = {
@@ -78,7 +78,7 @@ PasswordInput.parameters = {
     description: {
       story: 'Create a password input',
     },
-  }
+  },
 }
 
 export const EmailInput = Template.bind({})
@@ -91,7 +91,7 @@ EmailInput.play = async ({ args, canvasElement }) => {
   const { getByRole } = within(canvasElement)
   const inputElm = getByRole('textbox')
   expect(inputElm).toBeInTheDocument()
-  expect (inputElm).toHaveAttribute('type', 'email')
+  expect(inputElm).toHaveAttribute('type', 'email')
 }
 
 EmailInput.parameters = {
@@ -99,7 +99,7 @@ EmailInput.parameters = {
     description: {
       story: 'Create a email input',
     },
-  }
+  },
 }
 
 export const SearchInput = Template.bind({})
@@ -120,7 +120,7 @@ SearchInput.parameters = {
     description: {
       story: 'Create a search input',
     },
-  }
+  },
 }
 
 export const DisabledInput = Template.bind({})
@@ -141,7 +141,7 @@ DisabledInput.parameters = {
     description: {
       story: 'Create a disabled input',
     },
-  }
+  },
 }
 
 export const ReadonlyInput = Template.bind({})
