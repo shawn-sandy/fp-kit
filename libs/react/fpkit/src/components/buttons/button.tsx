@@ -1,4 +1,6 @@
-import React from 'react'
+// import React from 'react'
+import FP from '../fp'
+import { ComponentProps } from '../../types'
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -92,7 +94,7 @@ export const defStyles = {
  */
 
 export const Button = ({
-  type,
+  type = 'button',
   children,
   styles,
   disabled,
@@ -103,11 +105,9 @@ export const Button = ({
   defaultStyles = false,
   ...props
 }: ButtonProps) => {
-  const defStyles = {}
-
-  const stylesObj =  defStyles 
+  const stylesObj = { ...defStyles, ...styles } as React.CSSProperties
   const handlePointerEvents = (e: React.PointerEvent<HTMLButtonElement>) => {
-    let eventType: String = e.type
+    // let eventType: String = e.type
     if (!disabled) {
       switch (e.type) {
         case 'pointerover':
@@ -126,20 +126,34 @@ export const Button = ({
 
   /* Returning a button element. */
   return (
-    <button
-      type={type ?? 'button'}
-      onPointerOver={handlePointerEvents}
-      onPointerDown={handlePointerEvents}
-      onPointerLeave={handlePointerEvents}
-      style={{ ...stylesObj, ...styles }}
-      aria-disabled={disabled}
-      disabled={disabled}
-      {...props}
-    >
-      {children}
-    </button>
+    <>
+      <FP
+        as="button"
+        type={type}
+        styles={stylesObj}
+        // className={classes}
+        // onPointerOver={handlePointerEvents}
+        // onPointerDown={handlePointerEvents}
+        // onPointerLeave={handlePointerEvents}
+        // aria-disabled={disabled}
+        {...props}
+      >
+        {children}
+      </FP>
+    </>
+    // <button
+    //   type={type ?? 'button'}
+    //   onPointerOver={handlePointerEvents}
+    //   onPointerDown={handlePointerEvents}
+    //   onPointerLeave={handlePointerEvents}
+    //   style={stylesObj}
+    //   aria-disabled={disabled}
+    //   disabled={disabled}
+    //   {...props}
+    // >
+    //   {children}
+    // </button>
   )
-  //
 }
 
 Button.displayName = 'Button'
