@@ -29,6 +29,7 @@ export const defaultStyles = {
   objectFit: 'var(--img-obj-fit, cover)',
   objectPosition: 'var(--img-position, center center)',
   aspectRatio: 'var(--img-ratio, auto 2/3)',
+  display: 'var(--img-display, initial)',
 }
 
 /*
