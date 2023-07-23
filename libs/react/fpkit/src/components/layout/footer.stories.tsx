@@ -15,8 +15,8 @@ const meta: Meta<typeof Footer> = {
   title: 'FP.React Components/Layout/Landmarks',
   component: Footer,
   args: {
-    // @ts-ignore
     children: 'Main Landmark',
+    // @ts-ignore
     'data-testid': 'main',
   },
 }
