@@ -17,6 +17,7 @@ const meta: Meta<typeof Header> = {
   args: {
     // @ts-ignore
     children: 'Default Header',
+    // @ts-ignore
     'data-testid': 'banner',
   },
 }

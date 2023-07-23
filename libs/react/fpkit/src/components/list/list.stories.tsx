@@ -31,6 +31,7 @@ export const DefaultList: Story = {
 export const UnstyledList: Story = {
   args: {
     ...DefaultList.args,
+    // @ts-ignore
     'data-variant': 'unstyled',
   },
 }

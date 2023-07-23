@@ -22,6 +22,7 @@ const meta: Meta<typeof Main> = {
         document.
       </section>
     ),
+    // @ts-ignore
     'data-testid': 'main',
   },
 }
