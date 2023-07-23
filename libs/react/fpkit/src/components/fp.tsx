@@ -42,7 +42,7 @@ type FPProps<C extends React.ElementType> = PolymorphicComponentPropWithRef<
  */
 type FPComponent = <C extends React.ElementType = 'span'>(
   props: FPProps<C>,
-) => React.ReactElement | null
+) => React.ReactElement | any
 
 // create an object type and make it optional
 type styl = {
