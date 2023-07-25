@@ -103,12 +103,8 @@ export const Button = ({
   pointerDown,
   pointerOver,
   pointerLeave,
-  defaultStyles = false,
   ...props
 }: ButtonProps) => {
-  const stylesObj = defaultStyles
-    ? ({ ...defStyles, ...styles } as React.CSSProperties)
-    : styles
   const handlePointerEvents = (e: React.PointerEvent<HTMLButtonElement>) => {
     let eventType: String = e.type
     if (!disabled) {
@@ -134,7 +130,7 @@ export const Button = ({
       onPointerOver={handlePointerEvents}
       onPointerDown={handlePointerEvents}
       onPointerLeave={handlePointerEvents}
-      style={stylesObj}
+      style={styles}
       aria-disabled={disabled}
       {...props}
     >

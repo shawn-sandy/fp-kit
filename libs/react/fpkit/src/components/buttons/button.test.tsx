@@ -18,6 +18,7 @@ describe('Button', () => {
 
   it('calls the onClick handler when clicked', () => {
     const handleClick = jest.fn()
+    const handlePointerEvents = jest.fn()
     const { getByText } = render(
       <Button type="button" onClick={handleClick}>
         Click me
@@ -26,6 +27,7 @@ describe('Button', () => {
     const button = getByText('Click me')
     fireEvent.click(button)
     expect(handleClick).toHaveBeenCalledTimes(1)
+    expect(handlePointerEvents).toHaveBeenCalledTimes(0)
   })
 
   it('applies custom styles when provided', () => {
