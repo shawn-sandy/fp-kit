@@ -10,6 +10,12 @@ describe('Button', () => {
     expect(button.tagName).toBe('BUTTON')
   })
 
+  it('has the type attribute set to "button" by default', () => {
+    const { getByText } = render(<Button type="button">Click me</Button>)
+    const button = getByText('Click me')
+    expect(button).toHaveAttribute('type', 'button')
+  })
+
   it('calls the onClick handler when clicked', () => {
     const handleClick = jest.fn()
     const { getByText } = render(
