@@ -80,7 +80,7 @@ ClickMe.args = {
 export const ButtonStyles = Template.bind({})
 ButtonStyles.args = {
   children: 'Button Styles',
-  styles: { color: 'white', backgroundColor: 'black' },
+  styles: { ...Button.styles, color: 'white', backgroundColor: 'black' },
   onPointerDown: () => alert('Clicked Button Styles'),
 }
 
@@ -91,7 +91,7 @@ ButtonStyles.args = {
 export const PillStyle = Template.bind({})
 PillStyle.args = {
   children: 'Pill Button',
-  styles: { '--btn-radius': '99rem' },
+  styles: { ...Button.styles, '--btn-radius': '99rem' },
   onPointerDown: () => alert('Clicked Pill'),
 }
 
