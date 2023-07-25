@@ -41,7 +41,9 @@ export interface ButtonProps
   pointerOver?: (e: React.PointerEvent) => void
 
   /**
-   * Button pointer-down event (pointerOver, pointerLeave)
+   * Pointer leave event handler for the Button component.
+   *
+   * @param {React.PointerEvent} e - The pointer event
    */
   pointerLeave?: (e: React.PointerEvent) => void
 }
