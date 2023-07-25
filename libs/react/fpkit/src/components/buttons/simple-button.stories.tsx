@@ -11,6 +11,7 @@ export default {
   args: {
     children: 'Default Button',
     type: 'button',
+    styles: Button.styles,
   },
   argTypes: {
     children: { control: 'text' },

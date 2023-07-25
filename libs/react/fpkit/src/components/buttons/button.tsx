@@ -25,6 +25,7 @@ export interface ButtonProps
   classes?: string
 
   /**
+   * @deprecated import styles Button.styles
    * default button styles
    */
   defaultStyles?: boolean
