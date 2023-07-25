@@ -15,7 +15,7 @@ import { expect } from '@storybook/jest'
 /**
  * import component(s)
  */
-import { Button } from './button'
+import { Button, defStyles } from './button'
 
 /**
  * Set component meta data
@@ -43,7 +43,8 @@ export const AdvButton: Story = {
   args: {
     // @ts-ignore
     children: buttonProps.children,
-    type: buttonProps.type as "button" | "submit" | "reset" | undefined,
+    type: buttonProps.type as 'button' | 'submit' | 'reset' | undefined,
+    styles: defStyles,
   },
 }
 

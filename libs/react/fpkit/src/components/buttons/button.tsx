@@ -105,7 +105,9 @@ export const Button = ({
   defaultStyles = false,
   ...props
 }: ButtonProps) => {
-  const stylesObj = { ...defStyles, ...styles } as React.CSSProperties
+  const stylesObj = defaultStyles
+    ? ({ ...defStyles, ...styles } as React.CSSProperties)
+    : styles
   const handlePointerEvents = (e: React.PointerEvent<HTMLButtonElement>) => {
     let eventType: String = e.type
     if (!disabled) {
@@ -140,5 +142,7 @@ export const Button = ({
   )
   //
 }
+
+Button.styles = defStyles
 
 Button.displayName = 'Button'

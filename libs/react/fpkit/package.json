@@ -7,7 +7,7 @@
     "start": "run-p package:watch dev",
     "dev": "vite --open",
     "package": "tsc && tsup --dts",
-    "package:watch": "tsup --watch --dts",
+    "package:watch": "tsc && tsup --watch --dts",
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --coverage --ui",
