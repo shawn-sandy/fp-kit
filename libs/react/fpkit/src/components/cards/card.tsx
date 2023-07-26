@@ -23,15 +23,11 @@ export const Card = ({
   id,
   ...props
 }: CardProps) => {
-  const stylesObj = renderStyles ? defaultStyles : {}
   return (
     <FP
       as={elm}
       id={id}
-      styles={{
-        ...stylesObj,
-        ...styles,
-      }}
+      styles={styles}
       renderStyles={renderStyles}
       data-card={dataStyle}
       {...props}

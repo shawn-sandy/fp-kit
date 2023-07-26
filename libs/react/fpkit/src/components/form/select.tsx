@@ -39,8 +39,6 @@ export const Select = ({
     }
   }
 
-
-
   return (
     <FP
       as="select"
@@ -55,5 +53,7 @@ export const Select = ({
     </FP>
   )
 }
+
+Select.styles = defaultStyles
 
 Select.displayName = 'Select'

@@ -103,6 +103,7 @@ export const UnStyled = Template.bind({})
 UnStyled.args = {
   children: 'UnStyled Button',
   defaultStyles: false,
+  styles: {},
   onPointerDown: () => alert('Clicked UnStyled'),
 }
 
