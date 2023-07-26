@@ -26,7 +26,9 @@ export default {
 } as ComponentMeta<typeof Card>
 
 const Template: ComponentStory<typeof Card> = (args) => (
-  <Card {...args} data-testid="cards">{args.children}</Card>
+  <Card {...args} data-testid="cards">
+    {args.children}
+  </Card>
 )
 
 const content = () => (
@@ -46,7 +48,8 @@ const content = () => (
 
 export const DefaultCard = Template.bind({})
 DefaultCard.args = {
-  children: content()
+  children: content(),
+  styles: Card.styles,
 }
 
 DefaultCard.play = async ({ args, canvasElement }) => {
