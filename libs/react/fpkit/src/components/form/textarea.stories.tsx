@@ -51,6 +51,7 @@ TextareaInput.play = async ({ canvasElement }) => {
   expect(ComponentName).toBeInTheDocument()
   expect(ComponentName).toHaveAttribute('rows')
   userEvent.type(ComponentName, text)
+
   // TODO: test the value of typed content
   // await waitFor(() => {
   //   const textAreaContent = (text)

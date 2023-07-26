@@ -41,12 +41,12 @@ export const Badge = ({
   styles = {},
   ...props
 }: FpBadgeProps) => {
-  const stylesObj = renderStyles ? defStyles : {}
   return (
-    <FP as={elm} role={role} styles={{ ...stylesObj, ...styles }} {...props}>
+    <FP as={elm} role={role} styles={styles} {...props}>
       {children}
     </FP>
   )
 }
 
+Badge.styles = defStyles
 Badge.displayName = 'Badge'
