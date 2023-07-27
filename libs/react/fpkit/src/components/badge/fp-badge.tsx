@@ -2,7 +2,7 @@ import FP from '../fp'
 import React from 'react'
 
 export interface FpBadgeProps {
-  elm?: 'span' | 'p' | 'a'
+  elm?: 'span' | 'p'
   children: React.ReactNode
   role: 'note' | 'alert' | 'status'
   renderStyles?: boolean
@@ -18,7 +18,7 @@ const defStyles = {
   fontFamily: 'var(--badge-ff, sans-serif)',
   border: 'var(--badge-brd, none)',
   borderRadius: 'var(--badge-rds, 99rem)',
-  backgroundColor: 'var(--badge-bg, lightgray)',
+  backgroundColor: 'var(--badge-bg, "blue")',
   textDecoration: 'var(--badge-decoration, none)',
   textTransform: 'var(--badge-tt, var(--tt))',
 }
