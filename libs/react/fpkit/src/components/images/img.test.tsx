@@ -18,14 +18,10 @@ describe('Img', () => {
   })
 
   it('should apply default styles when renderStyles is true', () => {
-    const { container } = render(<Img src="" alt="" />)
+    const { container } = render(<Img src="" alt="" styles={Img.styles} />)
 
     const img = screen.getByRole('img')
-    expect(img).toHaveStyle({
-      maxWidth: 'var(--img-w, 100%)',
-      height: 'var(--img-h, auto)',
-      objectFit: 'var(--img-obj-fit, cover)',
-    })
+    expect(img).toHaveStyle(Img.styles)
   })
 
   it('should call imgError callback on error', () => {

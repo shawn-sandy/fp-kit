@@ -76,7 +76,6 @@ export const Img = ({
   width = 480,
   height,
   styles,
-  renderStyles = true,
   loading = 'lazy',
   placeholder = `https://via.placeholder.com/${width}?text=PLACEHOLDER`,
   fetchpriority = 'low',
@@ -85,8 +84,6 @@ export const Img = ({
   imgError,
   ...props
 }: ImageProps) => {
-  const stylesObj = renderStyles ? defaultStyles : {}
-
   const handleImgError = (
     e: React.SyntheticEvent<HTMLImageElement, Event>,
   ): void => {
@@ -113,12 +110,12 @@ export const Img = ({
       width={width}
       height={height || 'auto'}
       loading={loading}
-      style={{ ...styles, ...stylesObj }}
+      style={styles}
       onError={handleImgError}
       onLoad={handleImgLoad}
       {...props}
     />
   )
 }
-
+Img.styles = defaultStyles
 Img.displayName = 'Img'
