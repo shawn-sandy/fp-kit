@@ -40,7 +40,6 @@ describe('Button', () => {
       </Button>,
     )
     const button = screen.getByRole('button')
-    screen.debug(button)
     expect(button).toHaveAttribute('style')
   })
 
