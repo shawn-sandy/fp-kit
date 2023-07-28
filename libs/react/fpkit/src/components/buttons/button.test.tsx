@@ -79,4 +79,27 @@ describe('Button', () => {
     await userEvent.unhover(button)
     expect(handlePointerEvents).toHaveBeenCalledTimes(1)
   })
+
+  it('it is disabled when disabled is true', () => {
+    const handleClick = jest.fn()
+    render(
+      <Button
+        type="button"
+        disabled
+        onPointerDown={handleClick}
+        onPointerOver={handleClick}
+        onPointerLeave={handleClick}
+      >
+        Click me
+      </Button>,
+    )
+    const button = screen.getByText('Click me')
+    expect(button).not.toBeDisabled()
+    userEvent.click(button)
+    expect(handleClick).toHaveBeenCalledTimes(0)
+    userEvent.hover(button)
+    expect(handleClick).toHaveBeenCalledTimes(0)
+    userEvent.unhover(button)
+    expect(handleClick).toHaveBeenCalledTimes(0)
+  })
 })
