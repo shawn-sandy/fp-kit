@@ -49,12 +49,6 @@ type styl = {
   styles?: {}
 }
 
-export const fpStyles = (styles: styl) => {
-  // if styles is undefined, return an empty object
-  if (styles.styles === undefined) return {} as React.CSSProperties
-  return styles as React.CSSProperties
-}
-
 /**
  * FP component is a polymorphic component that renders an HTML element with optional styles.
  * @param {Object} props - Component props
