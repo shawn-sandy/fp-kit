@@ -24,7 +24,6 @@ describe('FP component', () => {
   it('applies styles', () => {
     const style = { backgroundColor: 'red;' }
     const { container } = render(<FP styles={style}>Hello, world!</FP>)
-    screen.debug(screen.getByText('Hello, world!'))
     expect(container.firstChild).toHaveStyle(style)
   })
 
