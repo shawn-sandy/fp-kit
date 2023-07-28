@@ -97,7 +97,7 @@ export const defStyles = {
  */
 
 export const Button = ({
-  type,
+  type = 'button',
   children,
   styles,
   disabled,
@@ -107,31 +107,31 @@ export const Button = ({
   pointerLeave,
   ...props
 }: ButtonProps) => {
-  const handlePointerEvents = (e: React.PointerEvent<HTMLButtonElement>) => {
-    let eventType: String = e.type
+  const handlePointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
     if (!disabled) {
-      switch (e.type) {
-        case 'pointerover':
-          pointerOver?.(e)
-          break
-        case 'pointerleave':
-          pointerLeave?.(e)
-          break
-        case 'pointerdown':
-          if (e.button === 0) pointerDown?.(e)
-        default:
-          break
-      }
+      pointerDown?.(e)
+    }
+  }
+
+  const handlePointerOver = (e: React.PointerEvent<HTMLButtonElement>) => {
+    if (!disabled) {
+      pointerOver?.(e)
+    }
+  }
+
+  const handlePointerLeave = (e: React.PointerEvent<HTMLButtonElement>) => {
+    if (!disabled) {
+      pointerLeave?.(e)
     }
   }
 
   /* Returning a button element. */
   return (
     <button
-      type={type ?? 'button'}
-      onPointerOver={handlePointerEvents}
-      onPointerDown={handlePointerEvents}
-      onPointerLeave={handlePointerEvents}
+      type={type}
+      onPointerOver={handlePointerOver}
+      onPointerDown={handlePointerDown}
+      onPointerLeave={handlePointerLeave}
       style={styles}
       aria-disabled={disabled}
       {...props}
