@@ -38,5 +38,8 @@ export const Dropdown = ({
   )
 }
 
+Dropdown.Summary = Summary
+Dropdown.Details = Details
+
 // export default Dropdown
 Dropdown.displayName = 'Dropdown'
