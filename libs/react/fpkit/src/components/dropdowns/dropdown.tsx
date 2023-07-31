@@ -29,15 +29,15 @@ export const Dropdown = ({
   renderStyles = true,
   ...props
 }: DropdownProps) => {
-  const stylesObj = renderStyles ? defaultStyles : {}
   return (
-    <Details styles={{ ...stylesObj, ...styles }} onToggle={toggle} {...props}>
+    <Details styles={styles} onToggle={toggle} {...props}>
       <Summary>{summary}</Summary>
       {children}
     </Details>
   )
 }
 
+Dropdown.styles = defaultStyles
 Dropdown.Summary = Summary
 Dropdown.Details = Details
 

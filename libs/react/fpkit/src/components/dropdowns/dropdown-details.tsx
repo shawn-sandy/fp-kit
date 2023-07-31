@@ -20,24 +20,15 @@ export const Details = ({
   onToggle,
   ...props
 }: DropdownProps) => {
-  const styleObj = renderStyles ? defaultStyles : {}
   const handleToggle = (e: React.SyntheticEvent) => {
     onToggle?.(e)
   }
   return (
-    <FP
-      as="details"
-      title={title}
-      onToggle={handleToggle}
-      styles={{
-        ...styleObj,
-        ...styles,
-      }}
-    >
+    <FP as="details" title={title} onToggle={handleToggle} styles={styles}>
       {children}
     </FP>
   )
 }
-
+Details.styles = defaultStyles
 export default Details
 Details.displayName = 'Details'

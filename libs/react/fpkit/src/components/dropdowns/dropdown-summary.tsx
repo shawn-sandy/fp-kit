@@ -20,13 +20,13 @@ export const Summary = ({
   renderStyles = true,
   ...props
 }: SummaryPros) => {
-  const stylesObj = renderStyles ? defaultStyles : {}
   return (
-    <FP as="summary" styles={{ ...stylesObj, ...styles }} {...props}>
+    <FP as="summary" styles={styles} {...props}>
       {children}
     </FP>
   )
 }
 
-export default Summary
+Summary.styles = defaultStyles
 Summary.displayName = 'Summary'
+export default Summary
