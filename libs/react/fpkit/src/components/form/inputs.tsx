@@ -1,7 +1,7 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
 
-// import 
+// import
 
 export interface InputProps extends Omit<ComponentProps, 'children'> {
   /**
@@ -52,10 +52,19 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
    * ref to the input element
    */
   inputRef?: React.RefObject<HTMLInputElement>
-
+  /**
+   * Input styles
+   */
+  styles?: {}
+  /**
+   * input classes
+   */
+  classes?: string
 }
 
-export const defaultStyles = {}
+export const defaultStyles = {
+  minWidth: 'var(--input-min-w, 60%)',
+}
 
 export const Input = ({
   type = 'text',
@@ -63,6 +72,8 @@ export const Input = ({
   value,
   placeholder,
   id,
+  styles,
+  classes,
   disabled,
   readonly,
   required,
@@ -72,7 +83,6 @@ export const Input = ({
   inputDown,
   ...props
 }: InputProps) => {
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (inputChange && !disabled) {
       inputChange?.(e)
@@ -80,13 +90,13 @@ export const Input = ({
   }
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    if(inputBlur && !disabled) {
+    if (inputBlur && !disabled) {
       inputBlur?.(e)
     }
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if(inputDown && !disabled) {
+    if (inputDown && !disabled) {
       e.preventDefault()
       inputDown?.(e)
     }
@@ -98,7 +108,8 @@ export const Input = ({
       id={id}
       type={type}
       placeholder={placeholder}
-      styles={{ ...defaultStyles }}
+      className={classes}
+      styles={styles}
       onChange={handleChange}
       onBlur={handleBlur}
       onKeyDown={handleKeyDown}
@@ -113,5 +124,5 @@ export const Input = ({
     />
   )
 }
-
+Input.styles = defaultStyles
 Input.displayName = 'Input'
