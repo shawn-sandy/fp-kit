@@ -50,8 +50,14 @@ describe('Input', () => {
 
   it('allows the user to enter text', async () => {
     render(<Input placeholder="Enter your name" id="name" />)
-    const input = screen.getByPlaceholderText('Enter your name')
+    const input = screen.getByRole('textbox')
     fireEvent.change(input, { target: { value: 'John' } })
     expect(input).toHaveValue('John')
+  })
+
+  it('is disabled when disabled prop is true', () => {
+    render(<Input placeholder="Enter your name" id="name" isDisabled />)
+    const input = screen.getByRole('textbox')
+    expect(input).toHaveAttribute('aria-disabled', 'true')
   })
 })

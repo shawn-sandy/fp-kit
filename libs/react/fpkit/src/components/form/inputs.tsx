@@ -43,7 +43,7 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
   /**
    * Set the element as disabled
    */
-  disabled?: boolean
+  isDisabled?: boolean
   /**
    * Set the element as readonly
    */
@@ -74,7 +74,7 @@ export const Input = ({
   id,
   styles,
   classes,
-  disabled,
+  isDisabled,
   readonly,
   required,
   inputRef,
@@ -84,19 +84,19 @@ export const Input = ({
   ...props
 }: InputProps) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (inputChange && !disabled) {
+    if (inputChange && !isDisabled) {
       inputChange?.(e)
     }
   }
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    if (inputBlur && !disabled) {
+    if (inputBlur && !isDisabled) {
       inputBlur?.(e)
     }
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (inputDown && !disabled) {
+    if (inputDown && !isDisabled) {
       e.preventDefault()
       inputDown?.(e)
     }
@@ -116,8 +116,8 @@ export const Input = ({
       value={value}
       name={name}
       ref={inputRef}
-      aria-disabled={disabled}
-      tab-index={disabled ? -1 : undefined}
+      aria-disabled={isDisabled}
+      tab-index={isDisabled ? -1 : undefined}
       aria-readonly={readonly}
       readOnly={readonly}
       {...props}
