@@ -1,7 +1,7 @@
 import React from 'react'
 import FP from '../fp'
-import { ComponentProps } from '@/types'
-import { Code } from '@/components/icons'
+import { ComponentProps } from '../../types'
+import { Code } from './index'
 
 export interface IconProps extends Partial<ComponentProps> {
   fill?: string

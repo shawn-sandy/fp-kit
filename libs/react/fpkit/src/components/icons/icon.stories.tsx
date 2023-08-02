@@ -11,5 +11,7 @@ export default meta
 type Story = StoryObj<typeof Icon>
 
 export const Icons: Story = {
-  args: {},
+  args: {
+    children: <Icon.Code />,
+  },
 }
