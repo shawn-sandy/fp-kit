@@ -3,7 +3,11 @@
     "target": "es2015",
     "module": "es2015",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,
@@ -17,8 +21,26 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "outDir": "build",
-    "rootDir": "src"
+    "rootDir": "src",
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@utils/*": [
+        "src/hooks/*"
+      ],
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
-  "include": ["src", "src/setupTest.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src",
+    "src/setupTest.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
