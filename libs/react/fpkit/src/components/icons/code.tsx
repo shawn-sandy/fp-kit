@@ -22,7 +22,6 @@ export const Code = ({
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      style={styles}
     >
       <path
         d="M8 10L6 12L8 14"
