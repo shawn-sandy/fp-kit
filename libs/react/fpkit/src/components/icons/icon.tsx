@@ -1,5 +1,5 @@
 import React from 'react'
-import FP from '@/components/fp'
+import FP from '../fp'
 import { ComponentProps } from '@/types'
 import { Code } from '@/components/icons'
 

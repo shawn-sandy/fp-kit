@@ -2,9 +2,7 @@ import React from 'react'
 import { IconProps } from './types'
 
 export const defaultStyles = {
-  display: 'inline-block',
-  verticalAlign: 'middle',
-  fill: 'currentColor',
+  fill: 'none',
 }
 
 export const Code = ({
@@ -12,7 +10,7 @@ export const Code = ({
   size = '24',
   viewBox,
   name,
-  styles,
+  styles = defaultStyles,
   ...props
 }: IconProps) => {
   return (
@@ -22,6 +20,7 @@ export const Code = ({
       height={size}
       viewBox="0 0 24 24"
       fill="none"
+      style={styles}
     >
       <path
         d="M8 10L6 12L8 14"
