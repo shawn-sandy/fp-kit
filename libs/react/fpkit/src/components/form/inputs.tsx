@@ -66,6 +66,11 @@ export const defaultStyles = {
   minWidth: 'var(--input-min-w, 60%)',
 }
 
+/**
+ * Input component that renders an HTML input element.
+ * @param {InputProps} props - The input component props.
+ * @returns {JSX.Element} - The input component.
+ */
 export const Input = ({
   type = 'text',
   name,
@@ -82,7 +87,7 @@ export const Input = ({
   inputBlur,
   inputDown,
   ...props
-}: InputProps) => {
+}: InputProps): JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (inputChange && !isDisabled) {
       inputChange?.(e)
