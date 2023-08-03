@@ -12,6 +12,29 @@ type Story = StoryObj<typeof Icon>
 
 export const Icons: Story = {
   args: {
+    children: (
+      <>
+        <p>
+          Place icons here using the children prop <Icon.Code />
+        </p>
+      </>
+    ),
+  },
+}
+
+export const Code: Story = {
+  args: {
     children: <Icon.Code />,
+  },
+}
+
+export const Home: Story = {
+  args: {
+    styles: Icon.styles,
+    children: (
+      <>
+        <Icon.Home /> Home Icon
+      </>
+    ),
   },
 }

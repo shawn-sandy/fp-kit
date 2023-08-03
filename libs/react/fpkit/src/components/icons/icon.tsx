@@ -1,13 +1,13 @@
 import React from 'react'
 import FP from '../fp'
 import { ComponentProps } from '../../types'
-import { Code } from './index'
+import { Code, Home } from './index'
 
 export interface IconProps extends Partial<ComponentProps> {
   fill?: string
   size?: string
   viewBox?: string
-  name: string
+  name?: string
 }
 
 export const defaultStyles = {
@@ -32,3 +32,4 @@ export default Icon
 Icon.displayName = 'Icon'
 Icon.styles = defaultStyles
 Icon.Code = Code
+Icon.Home = Home
