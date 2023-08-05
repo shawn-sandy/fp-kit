@@ -5,6 +5,18 @@ const defaultStyles = {
   fill: 'currentColor',
 }
 
+/*
+ * ArrowRight icon component.
+ *
+ * Renders a right arrow SVG icon.
+ *
+ * @param {IconProps} props - The component props
+ * @param {string} [props.size="24"] - Icon size
+ * @param {string} [props.fill="currentColor"] - Icon fill color
+ * @param {string} [props.strokeColor="currentColor"] - Stroke color
+ *
+ * @returns {React.ReactElement} - The rendered icon
+ */
 export const ArrowRight = ({
   size = '24',
   fill = 'currentColor',
