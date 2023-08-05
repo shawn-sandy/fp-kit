@@ -2,12 +2,14 @@ import * as React from 'react'
 import { IconProps } from '../types'
 
 const defaultStyles = {
-  fill: 'none',
+  fill: 'currentColor',
 }
 
 export const Code = ({
   strokeColor = 'currentColor',
+  fill = 'currentColor',
   size = '24',
+  renderStyles,
   viewBox,
   name,
   styles = defaultStyles,
@@ -15,22 +17,27 @@ export const Code = ({
 }: IconProps) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      height={size}
+      width={size}
       viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      style={styles}
+      {...props}
     >
-      <title>code</title>
-      <g fill="none">
-        <path
-          d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"
-          fill="#212121"
-        ></path>
+      <g
+        fill={fill}
+        stroke={strokeColor}
+        strokeLinecap="square"
+        strokeLinejoin="miter"
+        strokeMiterlimit="10"
+        strokeWidth="2"
+      >
+        <polyline fill="none" points="8 6 2 12 8 18" stroke={strokeColor} />
+        <polyline fill="none" points="16 6 22 12 16 18" />
       </g>
     </svg>
   )
 }
 
-Code.styles = defaultStyles
-
 export default Code
+Code.styles = defaultStyles

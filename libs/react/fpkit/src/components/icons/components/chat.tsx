@@ -6,6 +6,7 @@ const defaultStyles = {}
 export const Chat = ({
   size = '24',
   strokeColor = 'currentcolor',
+  ...props
 }: IconProps) => {
   return (
     <svg
@@ -13,6 +14,7 @@ export const Chat = ({
       width={size}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g fill={strokeColor} strokeMiterlimit="10">
         <path
