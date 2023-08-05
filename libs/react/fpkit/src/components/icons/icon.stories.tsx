@@ -8,6 +8,13 @@ const meta: Meta<typeof Icon> = {
   args: {
     styles: Icon.styles,
   },
+  decorators: [
+    (Story) => (
+      <div style={{ width: '60vw' }}>
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export default meta
@@ -57,6 +64,12 @@ export const Chat: Story = {
 export const ArrowDown: Story = {
   args: {
     children: <Icon.ArrowDown />,
+  },
+}
+
+export const ArrowLeft: Story = {
+  args: {
+    children: <Icon.ArrowLeft />,
   },
 }
 
