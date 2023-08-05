@@ -1,7 +1,7 @@
 import React from 'react'
 import FP from '../fp'
 import { ComponentProps } from '../../types'
-import { Code, Home, Add, ArrowLeft, Chat } from './index'
+import { Code, Home, Add, ArrowLeft, Chat, ArrowDown } from './index'
 
 export interface IconProps extends Partial<ComponentProps> {
   fill?: string
@@ -37,3 +37,4 @@ Icon.Home = Home
 Icon.Add = Add
 Icon.ArrowLeft = ArrowLeft
 Icon.Chat = Chat
+Icon.ArrowDown = ArrowDown

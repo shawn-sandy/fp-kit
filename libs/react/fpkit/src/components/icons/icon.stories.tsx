@@ -54,6 +54,12 @@ export const Chat: Story = {
   },
 }
 
+export const ArrowDown: Story = {
+  args: {
+    children: <Icon.ArrowDown />,
+  },
+}
+
 export const IconSet = {
   args: {},
   render: (...args: any) => {

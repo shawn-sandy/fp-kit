@@ -4,8 +4,11 @@ import { IconProps } from '../types'
 const defaultStyles = {}
 
 export const ArrowLeft = ({
+  strokeColor = 'currentColor',
   fill = 'currentColor',
   size = '24',
+  styles,
+  ...props
 }: IconProps) => {
   return (
     <svg
@@ -13,11 +16,27 @@ export const ArrowLeft = ({
       width={size}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
-      <g fill="none">
-        <path
-          d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z"
-          fill={fill}
+      <g fill={fill} strokeMiterlimit="10">
+        <line
+          fill="none"
+          stroke={strokeColor}
+          strokeLinecap="butt"
+          strokeLinejoin="miter"
+          strokeWidth="2"
+          x1="22"
+          x2="2"
+          y1="12"
+          y2="12"
+        />
+        <polyline
+          fill="none"
+          points="9,19 2,12 9,5 "
+          stroke={strokeColor}
+          strokeLinecap="square"
+          strokeLinejoin="miter"
+          strokeWidth="2"
         />
       </g>
     </svg>
