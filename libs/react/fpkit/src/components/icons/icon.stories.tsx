@@ -1,10 +1,13 @@
-import React from 'react'
+import * as React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
 import { Icon } from './icon'
 
 const meta: Meta<typeof Icon> = {
   component: Icon,
   title: 'FP.React Components/Icons',
+  args: {
+    styles: Icon.styles,
+  },
 }
 
 export default meta
@@ -33,8 +36,28 @@ export const Home: Story = {
     styles: Icon.styles,
     children: (
       <>
-        <Icon.Home /> Home Icon
+        <Icon.Home size="12" /> Home Icon
       </>
     ),
+  },
+}
+
+export const Add: Story = {
+  args: {
+    children: <Icon.Add />,
+  },
+}
+
+export const IconSet = {
+  args: {},
+  render: (...args: any) => {
+    return (
+      <>
+        <div>
+          <Icon.Code />
+          Code Icon{' '}
+        </div>
+      </>
+    )
   },
 }

@@ -9,7 +9,7 @@ const defaultStyles = {
 export const Home = ({
   strokeColor = 'none',
   fill = 'currentColor',
-  size = '24',
+  size = '16',
   viewBox,
   name,
   styles = defaultStyles,
@@ -17,16 +17,25 @@ export const Home = ({
 }: IconProps) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      height="16"
+      width="16"
       viewBox="0 0 24 24"
-      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        d="M12 6.19L17 10.69V18.5H15V12.5H9V18.5H7V10.69L12 6.19ZM12 3.5L2 12.5H5V20.5H11V14.5H13V20.5H19V12.5H22L12 3.5Z"
-        fill="black"
-      />
+      <g
+        fill={fill}
+        stroke={fill}
+        strokeLinecap="square"
+        strokeLinejoin="miter"
+        strokeMiterlimit="10"
+        strokeWidth="2"
+      >
+        <polygon
+          fill="none"
+          points="12 2 2 10 2 23 9 23 9 16 15 16 15 23 22 23 22 10 12 2"
+          stroke="#212121"
+        />
+      </g>
     </svg>
   )
 }

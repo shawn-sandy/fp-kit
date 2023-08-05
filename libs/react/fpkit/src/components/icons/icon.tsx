@@ -1,7 +1,7 @@
 import React from 'react'
 import FP from '../fp'
 import { ComponentProps } from '../../types'
-import { Code, Home } from './index'
+import { Code, Home, Add, ArrowLeft } from './index'
 
 export interface IconProps extends Partial<ComponentProps> {
   fill?: string
@@ -14,6 +14,7 @@ export const defaultStyles = {
   display: 'flex-inline',
   direction: 'column',
   fill: 'currentColor',
+  width: '1.5rem',
 }
 
 export const Icon = ({
@@ -33,3 +34,5 @@ Icon.displayName = 'Icon'
 Icon.styles = defaultStyles
 Icon.Code = Code
 Icon.Home = Home
+Icon.Add = Add
+Icon.ArrowLeft = ArrowLeft
