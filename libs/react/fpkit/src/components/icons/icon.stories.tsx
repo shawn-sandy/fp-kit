@@ -79,6 +79,12 @@ export const ArrowRight: Story = {
   },
 }
 
+export const User: Story = {
+  args: {
+    children: <Icon.User />,
+  },
+}
+
 export const IconSet = {
   args: {},
   render: (...args: any) => {
