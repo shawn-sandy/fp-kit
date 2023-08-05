@@ -10,6 +10,7 @@ import {
   ArrowDown,
   ArrowRight,
   User,
+  Right,
 } from './index'
 
 export interface IconProps extends Partial<ComponentProps> {
@@ -49,3 +50,4 @@ Icon.Chat = Chat
 Icon.ArrowDown = ArrowDown
 Icon.ArrowRight = ArrowRight
 Icon.User = User
+Icon.Right = Right

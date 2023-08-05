@@ -85,6 +85,12 @@ export const User: Story = {
   },
 }
 
+export const Right: Story = {
+  args: {
+    children: <Icon.Right />,
+  },
+}
+
 export const IconSet = {
   args: {},
   render: (...args: any) => {
