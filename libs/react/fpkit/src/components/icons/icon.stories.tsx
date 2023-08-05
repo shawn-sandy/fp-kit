@@ -48,6 +48,12 @@ export const Add: Story = {
   },
 }
 
+export const Chat: Story = {
+  args: {
+    children: <Icon.Chat />,
+  },
+}
+
 export const IconSet = {
   args: {},
   render: (...args: any) => {
