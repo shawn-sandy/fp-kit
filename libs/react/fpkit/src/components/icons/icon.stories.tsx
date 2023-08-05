@@ -73,6 +73,12 @@ export const ArrowLeft: Story = {
   },
 }
 
+export const ArrowRight: Story = {
+  args: {
+    children: <Icon.ArrowRight />,
+  },
+}
+
 export const IconSet = {
   args: {},
   render: (...args: any) => {
