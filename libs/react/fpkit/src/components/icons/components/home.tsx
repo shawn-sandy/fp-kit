@@ -6,6 +6,18 @@ const defaultStyles = {
   stroke: 'none',
 }
 
+/**
+ * Renders a home icon.
+ *
+ * @param {string} strokeColor - The color of the icon's stroke.
+ * @param {string} fill - The color of the icon's fill.
+ * @param {string} size - The size of the icon.
+ * @param {string} viewBox - The viewBox of the icon.
+ * @param {string} name - The name of the icon.
+ * @param {Object} styles - The styles of the icon.
+ * @param {Object} props - The props of the icon.
+ * @returns {JSX.Element} - A home icon.
+ */
 export const Home = ({
   strokeColor = 'none',
   fill = 'currentColor',
