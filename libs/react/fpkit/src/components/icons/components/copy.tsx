@@ -15,6 +15,7 @@ const defaultStyles = {
 export const Copy = ({
   size = '24',
   strokeColor = 'currentColor',
+  styles,
   ...props
 }: IconProps): JSX.Element => {
   return (

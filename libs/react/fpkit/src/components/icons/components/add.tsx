@@ -5,11 +5,18 @@ const defaultStyles = {
   fill: 'currentColor',
 }
 
+/**
+ * Add Icon component
+ * @param {string} fill - Icon fill color (default: 'currentColor')
+ * @param {string} size - Icon size (default: '24')
+ * @param {IconProps} props - Other icon properties
+ * @returns {JSX.Element} - Rendered component
+ */
 export const Add = ({
   fill = 'currentColor',
   size = '24',
   ...props
-}: IconProps) => {
+}: IconProps): JSX.Element => {
   return (
     <svg
       height={size}

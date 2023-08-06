@@ -5,9 +5,18 @@ const defaultStyles = {
   fill: 'currenStyle',
 }
 
+/**
+ * Remove icon component
+ * @param {string} size - The size of the icon
+ * @param {string} fill - The fill color of the icon
+ * @param {object} styles - The styles to apply to the icon
+ * @param {object} props - The additional props to pass to the icon
+ * @returns {JSX.Element} - The Remove icon component
+ */
 export const Remove = ({
   size = '24',
   fill = 'currentColor',
+  styles,
   ...props
 }: IconProps) => {
   return (
@@ -16,6 +25,7 @@ export const Remove = ({
       width={size}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      style={styles}
     >
       <g fill={fill}>
         <path

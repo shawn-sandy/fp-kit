@@ -3,6 +3,13 @@ import { IconProps } from '../types'
 
 const defaultStyles = {}
 
+/**
+ * ArrowDown icon component
+ * @param fill - Icon fill color
+ * @param strokeColor - Icon stroke color
+ * @param styles - Icon styles
+ * @param size - Icon size
+ */
 export const ArrowDown = ({
   fill = 'currentColor',
   strokeColor,

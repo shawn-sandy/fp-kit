@@ -3,15 +3,24 @@ import { IconProps } from '../types'
 
 const defaultStyles = {}
 
+/**
+ * @param {string} size - The width and height of the icon in pixels. Defaults to 24.
+ * @param {string} strokeColor - The color of the icon stroke. Defaults to 'currentcolor'.
+ * @param {React.CSSProperties} styles - Additional CSS styles to apply to the icon.
+ * @param {IconProps} props - Additional props to pass to the SVG element.
+ * @returns {JSX.Element} - A chat icon component that displays a speech bubble with lines representing text.
+ */
 export const Chat = ({
   size = '24',
   strokeColor = 'currentcolor',
+  styles,
   ...props
-}: IconProps) => {
+}: IconProps): JSX.Element => {
   return (
     <svg
       height={size}
       width={size}
+      style={styles}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
