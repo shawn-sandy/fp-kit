@@ -1,5 +1,3 @@
-import { fromPairs } from "lodash"
-
 export * from './types'
 export * from './components/code'
 export * from './components/home'
