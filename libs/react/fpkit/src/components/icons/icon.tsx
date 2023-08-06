@@ -8,6 +8,7 @@ import {
   ArrowRight,
   Chat,
   Code,
+  Copy,
   Home,
   Left,
   Minus,
@@ -43,17 +44,18 @@ export const Icon = ({
 }
 
 export default Icon
-Icon.displayName = 'Icon'
-Icon.styles = defaultStyles
-Icon.Code = Code
-Icon.Home = Home
 Icon.Add = Add
-Icon.ArrowLeft = ArrowLeft
-Icon.Chat = Chat
 Icon.ArrowDown = ArrowDown
+Icon.ArrowLeft = ArrowLeft
 Icon.ArrowRight = ArrowRight
-Icon.User = User
-Icon.Right = Right
+Icon.Chat = Chat
+Icon.Code = Code
+Icon.Copy = Copy
+Icon.displayName = 'Icon'
+Icon.Home = Home
 Icon.Left = Left
-Icon.Remove = Remove
 Icon.Minus = Minus
+Icon.Remove = Remove
+Icon.Right = Right
+Icon.styles = defaultStyles
+Icon.User = User

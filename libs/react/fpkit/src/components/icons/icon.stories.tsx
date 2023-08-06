@@ -109,6 +109,12 @@ export const Remove: Story = {
   },
 }
 
+export const Copy: Story = {
+  args: {
+    children: <Icon.Copy />,
+  },
+}
+
 export const IconSet = {
   args: {},
   render: (...args: any) => {
