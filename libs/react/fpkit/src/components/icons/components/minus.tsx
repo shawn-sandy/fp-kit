@@ -5,9 +5,18 @@ const defaultStyles = {
   fill: 'currentColor',
 }
 
+/**
+ * Minus icon component
+ * @param {string} size - Icon size (default: 24)
+ * @param {string} fill - Icon fill color (default: 'currentColor')
+ * @param {object} styles - Inline styles for the SVG element
+ * @param {object} props - Any other SVG attributes
+ * @returns {JSX.Element} - Rendered Minus icon component
+ */
 export const Minus = ({
   size = '24',
   fill = 'currentColor',
+  styles,
   ...props
 }: IconProps) => {
   return (
@@ -16,6 +25,8 @@ export const Minus = ({
       width={size}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      style={styles}
+      {...props}
     >
       <g fill={fill}>
         <path

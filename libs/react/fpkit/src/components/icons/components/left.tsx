@@ -4,9 +4,19 @@ import { IconProps } from '../types'
 const defaultStyles = {
   fill: 'currentColor',
 }
+
+/**
+ * Left arrow icon
+ * @param {string} fill - Icon fill color (default: 'currentColor')
+ * @param {string} size - Icon size (default: '24')
+ * @param {React.CSSProperties} styles - Icon styles (default: {})
+ * @param {IconProps} props - Any other valid props for an SVG element
+ * @returns {JSX.Element} - Rendered icon component
+ */
 export const Left = ({
   fill = 'currentColor',
   size = '24',
+  styles,
   ...props
 }: IconProps) => {
   return (
@@ -15,6 +25,8 @@ export const Left = ({
       width={size}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      style={styles}
+      {...props}
     >
       <g fill={fill}>
         <path

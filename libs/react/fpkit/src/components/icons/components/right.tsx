@@ -5,9 +5,19 @@ const defaultStyles = {
   fill: 'currentColor',
 }
 
+/**
+ * Renders a right arrow icon.
+ *
+ * @param {string} size - The size of the icon.
+ * @param {string} fill - The fill color of the icon.
+ * @param {React.CSSProperties} styles - The styles to apply to the icon.
+ * @param {IconProps} props - The props to pass down to the icon.
+ * @returns {JSX.Element} - A right arrow icon.
+ */
 export const Right = ({
   size = '24',
   fill = 'currentColor',
+  styles,
   ...props
 }: IconProps) => {
   return (
@@ -16,6 +26,7 @@ export const Right = ({
       width={size}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      style={styles}
       {...props}
     >
       <g fill={fill}>
