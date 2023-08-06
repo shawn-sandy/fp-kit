@@ -88,6 +88,12 @@ export const ArrowRight: Story = {
   },
 }
 
+export const ArrowUp: Story = {
+  args: {
+    children: <Icon.ArrowUp />,
+  },
+}
+
 export const Chat: Story = {
   args: {
     children: <Icon.Chat />,
