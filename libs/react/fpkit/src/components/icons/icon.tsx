@@ -31,6 +31,13 @@ export const defaultStyles = {
   width: '1.5rem',
 }
 
+/**
+ * Icon component that renders an SVG icon.
+ * @param {IconProps} props - The props object for the Icon component.
+ * @param {React.ReactNode} props.children - The children of the Icon component.
+ * @param {Object} props.styles - The styles object for the Icon component.
+ * @returns {JSX.Element} - The Icon component.
+ */
 export const Icon = ({
   children,
   styles = defaultStyles,
