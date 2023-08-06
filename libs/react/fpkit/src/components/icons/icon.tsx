@@ -1,19 +1,19 @@
 import React from 'react'
-import FP from '../fp'
 import { ComponentProps } from '../../types'
+import FP from '../fp'
 import {
+  Add,
+  ArrowDown,
+  ArrowLeft,
+  ArrowRight,
+  Chat,
   Code,
   Home,
-  Add,
-  ArrowLeft,
-  Chat,
-  ArrowDown,
-  ArrowRight,
-  User,
-  Right,
   Left,
   Minus,
   Remove,
+  Right,
+  User,
 } from './index'
 
 export interface IconProps extends Partial<ComponentProps> {

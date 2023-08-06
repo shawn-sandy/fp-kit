@@ -18,8 +18,11 @@ export const Add = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g fill="none">
-        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill={fill} />
+      <g fill={fill}>
+        <path
+          d="M17,11h-4V7c0-.553-.447-1-1-1s-1,.447-1,1v4H7c-.553,0-1,.447-1,1s.447,1,1,1h4v4c0,.553,.447,1,1,1s1-.447,1-1v-4h4c.553,0,1-.447,1-1s-.447-1-1-1Z"
+          fill={fill}
+        />
       </g>
     </svg>
   )
