@@ -15,6 +15,7 @@ module.exports = {
     '@storybook/addon-storysource',
     '@storybook/addon-coverage',
     '@storybook/addon-mdx-gfm',
+    '@storybook/addon-coverage',
   ],
   features: {
     interactionsDebugger: true, // 👈 Enable playback controls

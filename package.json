@@ -4,7 +4,7 @@
   "private": true,
   "description": "A UI toolkit for creating and managing style-guides, design systems, pattern libraries, apps, digital products, etc.",
   "scripts": {
-    "start": "storybook dev -p 6006",
+    "start": "npm run storybook",
     "test": "jest",
     "serve": "eleventy --serve",
     "builds": "run-s build:*",
@@ -33,7 +33,8 @@
     "storybook-test": "test-storybook --url http://localhost:9006",
     "storybook-test:watch": "test-storybook --url http://localhost:9006 --watch --coverage",
     "build-storybook": "storybook build",
-    "test:storybook": "storybook.test.js",
+    "test:storybook": "test-storybook -- --coverage ",
+    "storybook:snapshot": "test-storybook -- u",
     "oco": "git add . && oc"
   },
   "auto-changelog": {
