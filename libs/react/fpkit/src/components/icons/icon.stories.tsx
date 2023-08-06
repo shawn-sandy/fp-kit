@@ -103,6 +103,12 @@ export const Minus: Story = {
   },
 }
 
+export const Remove: Story = {
+  args: {
+    children: <Icon.Remove />,
+  },
+}
+
 export const IconSet = {
   args: {},
   render: (...args: any) => {

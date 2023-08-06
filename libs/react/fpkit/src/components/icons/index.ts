@@ -13,3 +13,5 @@ export * from './components/user'
 export * from './components/right'
 export * from './components/left'
 export * from './components/minus'
+export * from './components/remove'
+
