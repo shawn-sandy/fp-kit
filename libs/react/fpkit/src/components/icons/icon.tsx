@@ -1,11 +1,9 @@
-import React from 'react'
-import { ComponentProps } from '../../types'
-import FP from '../fp'
 import {
   Add,
   ArrowDown,
   ArrowLeft,
   ArrowRight,
+  ArrowUp,
   Chat,
   Code,
   Copy,
@@ -17,6 +15,10 @@ import {
   User,
 } from './index'
 
+import { ComponentProps } from '../../types'
+import FP from '../fp'
+import React from 'react'
+
 export interface IconProps extends Partial<ComponentProps> {
   fill?: string
   size?: string
@@ -25,14 +27,16 @@ export interface IconProps extends Partial<ComponentProps> {
 }
 
 export const defaultStyles = {
-  display: 'flex-inline',
-  direction: 'column',
+  display: 'inline-flex',
+  direction: 'row',
   fill: 'currentColor',
+  minWidth: 'fit-content',
   width: '1.5rem',
+  gap: '.5rem',
 }
 
 /**
- * Icon component that renders an SVG icon.
+ * Icon component wraps svg in a div.
  * @param {IconProps} props - The props object for the Icon component.
  * @param {React.ReactNode} props.children - The children of the Icon component.
  * @param {Object} props.styles - The styles object for the Icon component.
@@ -55,6 +59,7 @@ Icon.Add = Add
 Icon.ArrowDown = ArrowDown
 Icon.ArrowLeft = ArrowLeft
 Icon.ArrowRight = ArrowRight
+Icon.ArrowUp = ArrowUp
 Icon.Chat = Chat
 Icon.Code = Code
 Icon.Copy = Copy

@@ -1,5 +1,5 @@
-import React from 'react'
 import { IconProps } from '../types'
+import React from 'react'
 
 const defaultStyles = {
   fill: 'currentColor',
@@ -19,8 +19,8 @@ const defaultStyles = {
  * @returns {JSX.Element} - A home icon.
  */
 export const Home = ({
-  strokeColor = 'none',
-  fill = 'currentColor',
+  strokeColor = 'currentColor',
+  fill = 'none',
   size = '16',
   viewBox,
   name,
@@ -38,7 +38,7 @@ export const Home = ({
     >
       <g
         fill={fill}
-        stroke={fill}
+        stroke={strokeColor}
         strokeLinecap="square"
         strokeLinejoin="miter"
         strokeMiterlimit="10"

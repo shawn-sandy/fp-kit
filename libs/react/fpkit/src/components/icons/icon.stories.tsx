@@ -1,5 +1,7 @@
 import * as React from 'react'
+
 import { Meta, StoryObj } from '@storybook/react'
+
 import { Icon } from './icon'
 
 const meta: Meta<typeof Icon> = {
@@ -10,9 +12,9 @@ const meta: Meta<typeof Icon> = {
   },
   decorators: [
     (Story) => (
-      <div style={{ width: '60vw' }}>
+      <section style={{ width: '60vw' }}>
         <Story />
-      </div>
+      </section>
     ),
   ],
 }
@@ -20,15 +22,28 @@ const meta: Meta<typeof Icon> = {
 export default meta
 type Story = StoryObj<typeof Icon>
 
-export const Icons: Story = {
+export const IconComponent: Story = {
   args: {
     children: (
       <>
-        <p>
-          Place icons here using the children prop <Icon.Code />
-        </p>
+        <span>
+          <Icon.Copy />
+        </span>
+        <span>Wraps you icons in a Flex container to allow you to edit</span>
       </>
     ),
+  },
+}
+
+export const IconSet = {
+  args: {},
+  render: (...args: any) => {
+    return (
+      <Icon>
+        <Icon.Code />
+        Code Icon{' '}
+      </Icon>
+    )
   },
 }
 
@@ -55,12 +70,6 @@ export const Add: Story = {
   },
 }
 
-export const Chat: Story = {
-  args: {
-    children: <Icon.Chat />,
-  },
-}
-
 export const ArrowDown: Story = {
   args: {
     children: <Icon.ArrowDown />,
@@ -79,21 +88,27 @@ export const ArrowRight: Story = {
   },
 }
 
+export const Chat: Story = {
+  args: {
+    children: <Icon.Chat />,
+  },
+}
+
 export const User: Story = {
   args: {
     children: <Icon.User />,
   },
 }
 
-export const Right: Story = {
-  args: {
-    children: <Icon.Right />,
-  },
-}
-
 export const Left: Story = {
   args: {
     children: <Icon.Left />,
+  },
+}
+
+export const Right: Story = {
+  args: {
+    children: <Icon.Right />,
   },
 }
 
@@ -112,19 +127,5 @@ export const Remove: Story = {
 export const Copy: Story = {
   args: {
     children: <Icon.Copy />,
-  },
-}
-
-export const IconSet = {
-  args: {},
-  render: (...args: any) => {
-    return (
-      <>
-        <div>
-          <Icon.Code />
-          Code Icon{' '}
-        </div>
-      </>
-    )
   },
 }
