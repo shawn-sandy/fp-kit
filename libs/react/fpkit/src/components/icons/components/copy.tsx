@@ -4,11 +4,19 @@ import { IconProps } from '../types'
 const defaultStyles = {
   stroke: 'currentColor',
 }
+
+/**
+ * Copy icon component
+ * @param {string} size - The width and height of the icon
+ * @param {string} strokeColor - The color of the icon stroke
+ * @param {IconProps} props - The icon component props
+ * @returns {JSX.Element} - A react JSX element representing the copy icon
+ */
 export const Copy = ({
   size = '24',
   strokeColor = 'currentColor',
   ...props
-}: IconProps) => {
+}: IconProps): JSX.Element => {
   return (
     <svg
       height={size}
