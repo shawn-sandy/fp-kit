@@ -1,5 +1,5 @@
-import React from 'react'
 import { IconProps } from '../types'
+import React from 'react'
 
 const defaultStyles = {
   fill: 'currentColor',
@@ -21,6 +21,7 @@ export const ArrowRight = ({
   size = '24',
   fill = 'currentColor',
   strokeColor = 'currentColor',
+  styles,
   ...props
 }: IconProps) => {
   return (
@@ -29,6 +30,7 @@ export const ArrowRight = ({
       width={size}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      style={styles}
       {...props}
     >
       <g

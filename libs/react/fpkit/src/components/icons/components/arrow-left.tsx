@@ -1,4 +1,5 @@
 import * as React from 'react'
+
 import { IconProps } from '../types'
 
 const defaultStyles = {}
@@ -26,6 +27,7 @@ export const ArrowLeft = ({
       width={size}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      style={styles}
       {...props}
     >
       <g fill={fill} strokeMiterlimit="10">
