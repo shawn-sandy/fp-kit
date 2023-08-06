@@ -97,6 +97,12 @@ export const Left: Story = {
   },
 }
 
+export const Minus: Story = {
+  args: {
+    children: <Icon.Minus />,
+  },
+}
+
 export const IconSet = {
   args: {},
   render: (...args: any) => {

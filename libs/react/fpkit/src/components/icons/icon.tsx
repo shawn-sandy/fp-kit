@@ -12,6 +12,7 @@ import {
   User,
   Right,
   Left,
+  Minus,
 } from './index'
 
 export interface IconProps extends Partial<ComponentProps> {
@@ -53,3 +54,4 @@ Icon.ArrowRight = ArrowRight
 Icon.User = User
 Icon.Right = Right
 Icon.Left = Left
+Icon.Minus = Minus
