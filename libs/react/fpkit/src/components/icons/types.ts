@@ -5,4 +5,5 @@ export interface IconProps extends Partial<ComponentProps> {
   size?: string
   strokeColor?: string
   strokeWidth?: string
+  role?: string
 }

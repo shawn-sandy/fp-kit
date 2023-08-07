@@ -23,8 +23,12 @@ export const Code = ({
   fill = 'none',
   size = '24',
   styles = defaultStyles,
+  role,
   ...props
-}: Pick<IconProps, 'strokeColor' | 'fill' | 'styles' | 'size'> = {}) => {
+}: Pick<
+  IconProps,
+  'strokeColor' | 'fill' | 'styles' | 'size' | 'role'
+> = {}) => {
   return (
     <svg
       height={size}

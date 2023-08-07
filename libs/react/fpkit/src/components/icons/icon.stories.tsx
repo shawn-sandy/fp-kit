@@ -49,7 +49,7 @@ export const IconSet = {
 
 export const Code: Story = {
   args: {
-    children: <Icon.Code />,
+    children: <Icon.Code role="img" aria-label="code icon" />,
   },
 }
 
