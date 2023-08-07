@@ -16,8 +16,9 @@ export const ArrowDown = ({
   strokeColor,
   styles,
   size = '24',
+  role = 'img',
   ...props
-}: IconProps) => {
+}: Pick<IconProps, 'strokeColor' | 'fill' | 'styles' | 'size' | 'role'>) => {
   return (
     <svg
       height={size}
@@ -25,6 +26,7 @@ export const ArrowDown = ({
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       style={styles}
+      role={role}
       {...props}
     >
       <g fill={fill} strokeMiterlimit="10">

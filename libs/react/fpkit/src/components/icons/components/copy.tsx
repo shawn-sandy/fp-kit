@@ -16,8 +16,12 @@ export const Copy = ({
   size = '24',
   strokeColor = 'currentColor',
   styles,
+  role = 'img',
   ...props
-}: IconProps): JSX.Element => {
+}: Pick<
+  IconProps,
+  'strokeColor' | 'fill' | 'styles' | 'size' | 'role'
+>): JSX.Element => {
   return (
     <svg
       height={size}
@@ -25,6 +29,7 @@ export const Copy = ({
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       style={styles}
+      role={role}
       {...props}
     >
       <g

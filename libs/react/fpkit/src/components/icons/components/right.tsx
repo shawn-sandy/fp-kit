@@ -1,5 +1,5 @@
-import React from 'react'
 import { IconProps } from '../types'
+import React from 'react'
 
 const defaultStyles = {
   fill: 'currentColor',
@@ -18,8 +18,9 @@ export const Right = ({
   size = '24',
   fill = 'currentColor',
   styles,
+  role = 'img',
   ...props
-}: IconProps) => {
+}: Pick<IconProps, 'strokeColor' | 'fill' | 'styles' | 'size' | 'role'>) => {
   return (
     <svg
       height={size}
@@ -27,6 +28,7 @@ export const Right = ({
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       style={styles}
+      role={role}
       {...props}
     >
       <g fill={fill}>

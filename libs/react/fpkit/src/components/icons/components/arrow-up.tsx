@@ -19,8 +19,9 @@ export const ArrowUp = ({
   strokeColor = 'currentColor',
   styles,
   size = '24',
+  role = 'img',
   ...props
-}: IconProps) => {
+}: Pick<IconProps, 'strokeColor' | 'fill' | 'styles' | 'size' | 'role'>) => {
   return (
     <svg
       height={size}

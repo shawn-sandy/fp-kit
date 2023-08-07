@@ -1,4 +1,5 @@
 import * as React from 'react'
+
 import { IconProps } from '../types'
 
 const defaultStyles = {
@@ -15,14 +16,19 @@ const defaultStyles = {
 export const Add = ({
   fill = 'currentColor',
   size = '24',
+  role = 'img',
   ...props
-}: IconProps): JSX.Element => {
+}: Pick<
+  IconProps,
+  'strokeColor' | 'fill' | 'styles' | 'size' | 'role'
+>): JSX.Element => {
   return (
     <svg
       height={size}
       width={size}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      role={role}
       {...props}
     >
       <g fill={fill}>

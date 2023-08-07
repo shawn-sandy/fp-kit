@@ -23,8 +23,9 @@ export const Home = ({
   fill = 'none',
   size = '16',
   styles = defaultStyles,
+  role = 'img',
   ...props
-}: IconProps) => {
+}: Pick<IconProps, 'strokeColor' | 'fill' | 'styles' | 'size' | 'role'>) => {
   return (
     <svg
       height="16"
@@ -32,6 +33,7 @@ export const Home = ({
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       style={styles}
+      role={role}
       {...props}
     >
       <g

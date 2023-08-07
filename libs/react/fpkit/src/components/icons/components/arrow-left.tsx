@@ -19,8 +19,9 @@ export const ArrowLeft = ({
   fill = 'currentColor',
   size = '24',
   styles,
+  role = 'img',
   ...props
-}: IconProps) => {
+}: Pick<IconProps, 'strokeColor' | 'fill' | 'styles' | 'size' | 'role'>) => {
   return (
     <svg
       height={size}
@@ -28,6 +29,7 @@ export const ArrowLeft = ({
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       style={styles}
+      role={role}
       {...props}
     >
       <g fill={fill} strokeMiterlimit="10">

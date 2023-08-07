@@ -1,4 +1,5 @@
 import * as React from 'react'
+
 import { IconProps } from '../types'
 
 const defaultStyles = {}
@@ -14,8 +15,12 @@ export const Chat = ({
   size = '24',
   strokeColor = 'currentcolor',
   styles,
+  role = 'img',
   ...props
-}: IconProps): JSX.Element => {
+}: Pick<
+  IconProps,
+  'strokeColor' | 'fill' | 'styles' | 'size' | 'role'
+>): JSX.Element => {
   return (
     <svg
       height={size}
@@ -23,6 +28,7 @@ export const Chat = ({
       style={styles}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      role={role}
       {...props}
     >
       <g fill={strokeColor} strokeMiterlimit="10">
