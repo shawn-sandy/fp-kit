@@ -42,11 +42,7 @@ export const defaultStyles = {
  * @param {Object} props.styles - The styles object for the Icon component.
  * @returns {JSX.Element} - The Icon component.
  */
-export const Icon = ({
-  children,
-  styles = defaultStyles,
-  ...props
-}: IconProps) => {
+export const Icon = ({ children, styles, ...props }: IconProps) => {
   return (
     <FP as="span" styles={styles} data-style="icons" {...props}>
       {children}
