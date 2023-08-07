@@ -22,8 +22,6 @@ export const Home = ({
   strokeColor = 'currentColor',
   fill = 'none',
   size = '16',
-  viewBox,
-  name,
   styles = defaultStyles,
   ...props
 }: IconProps) => {

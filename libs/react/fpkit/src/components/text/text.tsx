@@ -1,5 +1,5 @@
+import FP from '../fp'
 import React from 'react'
-import FP, { fpStyles } from '../fp'
 
 export type TextElements =
   | 'p'
