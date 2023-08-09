@@ -1,5 +1,6 @@
 import { IconProps } from '../types'
 import React from 'react'
+import Svg from './svg'
 
 const defaultStyles = {
   fill: 'currentColor',
@@ -21,21 +22,17 @@ const defaultStyles = {
 export const Home = ({
   strokeColor = 'currentColor',
   fill = 'none',
-  size = '16',
+  size = 16,
   styles = defaultStyles,
   role = 'img',
+  alt = 'Home icon',
   ...props
-}: Pick<IconProps, 'strokeColor' | 'fill' | 'styles' | 'size' | 'role'>) => {
+}: Pick<
+  IconProps,
+  'strokeColor' | 'fill' | 'styles' | 'size' | 'role' | 'alt'
+>) => {
   return (
-    <svg
-      height="16"
-      width="16"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      style={styles}
-      role={role}
-      {...props}
-    >
+    <Svg size={size} styles={styles} role={role} alt={alt} {...props}>
       <g
         fill={fill}
         stroke={strokeColor}
@@ -50,7 +47,7 @@ export const Home = ({
           stroke={strokeColor}
         />
       </g>
-    </svg>
+    </Svg>
   )
 }
 

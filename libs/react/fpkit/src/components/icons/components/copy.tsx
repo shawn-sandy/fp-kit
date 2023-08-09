@@ -1,5 +1,6 @@
 import { IconProps } from '../types'
 import React from 'react'
+import Svg from './svg'
 
 const defaultStyles = {
   stroke: 'currentColor',
@@ -13,25 +14,18 @@ const defaultStyles = {
  * @returns {JSX.Element} - A react JSX element representing the copy icon
  */
 export const Copy = ({
-  size = '24',
+  size = 16,
   strokeColor = 'currentColor',
   styles,
   role = 'img',
+  alt = 'Copy icon',
   ...props
 }: Pick<
   IconProps,
-  'strokeColor' | 'fill' | 'styles' | 'size' | 'role'
+  'strokeColor' | 'fill' | 'styles' | 'size' | 'role' | 'alt'
 >): JSX.Element => {
   return (
-    <svg
-      height={size}
-      width={size}
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      style={styles}
-      role={role}
-      {...props}
-    >
+    <Svg size={size} styles={styles} role={role} alt={alt} {...props}>
       <g
         fill="none"
         stroke={strokeColor}
@@ -47,7 +41,7 @@ export const Copy = ({
         />
         <rect height="13" width="10" fill="none" x="12" y="10" />
       </g>
-    </svg>
+    </Svg>
   )
 }
 
