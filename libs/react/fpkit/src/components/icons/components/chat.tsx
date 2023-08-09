@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { IconProps } from '../types'
+import Svg from './svg'
 
 const defaultStyles = {}
 
@@ -12,25 +13,18 @@ const defaultStyles = {}
  * @returns {JSX.Element} - A chat icon component that displays a speech bubble with lines representing text.
  */
 export const Chat = ({
-  size = '24',
+  size = 16,
   strokeColor = 'currentcolor',
   styles,
   role = 'img',
+  alt = 'Chat icon',
   ...props
 }: Pick<
   IconProps,
-  'strokeColor' | 'fill' | 'styles' | 'size' | 'role'
+  'strokeColor' | 'fill' | 'styles' | 'size' | 'role' | 'alt'
 >): JSX.Element => {
   return (
-    <svg
-      height={size}
-      width={size}
-      style={styles}
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      role={role}
-      {...props}
-    >
+    <Svg size={size} styles={styles} role={role} alt={alt} {...props}>
       <g fill={strokeColor} strokeMiterlimit="10">
         <path
           d="M21,2H3c-1.105,0-2,.895-2,2V15c0,1.105,.895,2,2,2h5l4,5,4-5h5c1.105,0,2-.895,2-2V4c0-1.105-.895-2-2-2Z"
@@ -41,7 +35,7 @@ export const Chat = ({
           strokeWidth="2"
         />
       </g>
-    </svg>
+    </Svg>
   )
 }
 
