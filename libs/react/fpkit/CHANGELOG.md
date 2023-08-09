@@ -3,6 +3,68 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.3.1...@fpkit/react@0.3.2) (2023-08-09)
+
+### Bug Fixes
+
+- **arrow-left.tsx:** add strokeColor prop to ArrowLeft component to allow customization of stroke color ([97a4156](https://github.com/shawn-sandy/fpkit/commit/97a415697b93217a4ef2b3681f18c53c1b377da8))
+- **arrow-right.tsx:** import Svg component to fix missing import error ([f449b7a](https://github.com/shawn-sandy/fpkit/commit/f449b7ae2c57421582af9da85e8608f7b169a0c1))
+- **arrow-up.tsx:** change default size of ArrowUp component from 24 to 16 for better consistency with other icons ([7de0306](https://github.com/shawn-sandy/fpkit/commit/7de03068de5403f308254c3b08831b78b262fd82))
+- **button.stories.tsx:** spread Button.styles object to preserve existing styles when adding new styles ([3363766](https://github.com/shawn-sandy/fpkit/commit/33637664f339539c5660051c1173f44ecb00ddf2))
+- **button.tsx:** remove unused imports and variables, fix type declaration for eventType ([33532c4](https://github.com/shawn-sandy/fpkit/commit/33532c4c8d41497fdd21b35ffec04186b67caacd))
+- **icons:** add role prop to Code component to improve accessibility ([17ed17f](https://github.com/shawn-sandy/fpkit/commit/17ed17f19f4977a5bf26f7c39044029b21ecd95e))
+- **icons:** add spread operator to pass down props in Add, Chat, and Code components ([9fa8e11](https://github.com/shawn-sandy/fpkit/commit/9fa8e11c642545c20e279935cb3d2fd656517887))
+- **icons:** change default fill color to 'none' and add stroke color to improve icon rendering ([a1df773](https://github.com/shawn-sandy/fpkit/commit/a1df773150feeef968d5db0d98b6c67adbd95d5c))
+- **icons:** change default size of Chat and User icons to 16 to improve consistency ([90bd242](https://github.com/shawn-sandy/fpkit/commit/90bd242449639861550d1f30d4a0166c532cde9e))
+- **icons:** change size prop type from string to number for Copy and Home icons to improve type safety and consistency ([d804c51](https://github.com/shawn-sandy/fpkit/commit/d804c519ed457530626d1fe841e47ff30886f599))
+- **icons:** import Svg component in left, minus, remove, and right icon components to improve code organization and reusability ([8206674](https://github.com/shawn-sandy/fpkit/commit/8206674b85c7362554d9a0e40a0c64ce0f8efbac))
+- **icons:** update the 'Add' icon to match the latest design ([9fec44c](https://github.com/shawn-sandy/fpkit/commit/9fec44c2bd6fe28861e7927467621a68bf05fd69))
+- **img.tsx:** remove unused renderStyles prop ([f8b4594](https://github.com/shawn-sandy/fpkit/commit/f8b459413121f3bf3c33ef971c2589916eb9bb6e))
+- **react/fpkit:** fix import statement in kit.tsx to use single quotes instead of double quotes ([fa9cb98](https://github.com/shawn-sandy/fpkit/commit/fa9cb988699e3d58b264319da6cb8dfb2b2c6128))
+
+### Features
+
+- 🌟 assets/icons ([e2fed2b](https://github.com/shawn-sandy/fpkit/commit/e2fed2be3a043485400750d79be72649be6bba4c))
+- **arrow-down.tsx:** add ArrowDown component to the icons library ([94e7bf0](https://github.com/shawn-sandy/fpkit/commit/94e7bf0a4a011bb24fab4fd204804d500c70b688))
+- **arrow-up.tsx:** add ArrowUp icon component ([584fdb1](https://github.com/shawn-sandy/fpkit/commit/584fdb1ef56a0d4b351a0325b9586df83482d250))
+- **button.test.tsx:** add unit tests for Button component ([37197ee](https://github.com/shawn-sandy/fpkit/commit/37197eefc1e13aa062176a3c2cba3a4ab2264da9))
+- **button.tsx:** add 'styles' prop to Button component to allow custom styles to be passed in ([8c4525a](https://github.com/shawn-sandy/fpkit/commit/8c4525a0020cbf230ffc651fa9335acb3e3e9c8e))
+- **button.tsx:** add comprehensive JSDoc comments to Button component to improve code documentation ([6d046fc](https://github.com/shawn-sandy/fpkit/commit/6d046fcfc53cca0d9da34958512f3c8ba0db9983))
+- **card.stories.tsx:** add Card component story with default props and content ([e7ffe11](https://github.com/shawn-sandy/fpkit/commit/e7ffe1187208b4aa7f6b138c38b43e0adabcc2f5))
+- **card:** add Card component with support for custom element, styles, and rendering children ([053bae6](https://github.com/shawn-sandy/fpkit/commit/053bae60b340991d5eb7d91642f0818d4f51dd04))
+- **Code.stories.tsx:** add storybook story for Code component in FP.React Components/Icons ([cd82509](https://github.com/shawn-sandy/fpkit/commit/cd825093fbf49aec193907c5b6a8056911d3538b))
+- **dropdown-summary.tsx:** expose defaultStyles as a static property on Summary component for easier customization ([b893d2e](https://github.com/shawn-sandy/fpkit/commit/b893d2ed3a08e3438823fe91999807879a42b9df))
+- **dropdown.tsx:** add Summary and Details components as properties of Dropdown component for better modularity and reusability ([4cc5bda](https://github.com/shawn-sandy/fpkit/commit/4cc5bdaa4be58ba3d52b2651659b61e8401aabee))
+- **fields.tsx:** add styles prop to Field component to allow custom styles to be applied ([8778c38](https://github.com/shawn-sandy/fpkit/commit/8778c388dab0f0e886c824d3ed68d848c53f4834))
+- **fp-badge.tsx:** add styles prop to Badge component to allow custom styling ([19d6471](https://github.com/shawn-sandy/fpkit/commit/19d64713470f01907dddce9a67eb8c4a43231878))
+- **icon.stories.tsx:** add a new story for the ArrowLeft icon ([0a4080e](https://github.com/shawn-sandy/fpkit/commit/0a4080efef46d7bf36503641e597efb88acc7200))
+- **icon.stories.tsx:** add story for ArrowUp icon to showcase the icon in the UI ([4d7688d](https://github.com/shawn-sandy/fpkit/commit/4d7688d620b45401e3b4004036aa7ba1e8d9adac))
+- **icons.ts:** add new file to export various icon components for use in the npm ([9cbe5fb](https://github.com/shawn-sandy/fpkit/commit/9cbe5fbb39ab5a9b2b728a4836337b98c39fb6b9))
+- **icons:** 🤩 add Code icon component ([d03515c](https://github.com/shawn-sandy/fpkit/commit/d03515cd950eaffd9646ca9d0dd1072e1964d603))
+- **icons:** add alt prop to Add and ArrowLeft components for accessibility ([3e8da01](https://github.com/shawn-sandy/fpkit/commit/3e8da01b828bb9c0306c8adc24ece4de6ba433dd))
+- **icons:** add ArrowRight icon component ([92d84a9](https://github.com/shawn-sandy/fpkit/commit/92d84a92293b303b9f121233ca2e2bc84ab1cc98))
+- **icons:** add Chat icon component ([7c71b8d](https://github.com/shawn-sandy/fpkit/commit/7c71b8d0f38903c8b705a61ceba686000dcf565b))
+- **icons:** add Copy icon component ([b17cb06](https://github.com/shawn-sandy/fpkit/commit/b17cb06a14ea1dd09044fe532350df0e416b6ce8))
+- **icons:** add Icon component to fpkit library ([fe78536](https://github.com/shawn-sandy/fpkit/commit/fe7853660ea389057896f421f74e91c40151cb26))
+- **icons:** add Left icon component ([d8bdeb8](https://github.com/shawn-sandy/fpkit/commit/d8bdeb8d583fecaf15513416f69bd7b1bc9988d2))
+- **icons:** add new Home icon component ([a5cb78e](https://github.com/shawn-sandy/fpkit/commit/a5cb78ec75f4a24469f9aecdce3de146ab6a15fd))
+- **icons:** add new icon.stories.tsx file to showcase the Icon component in Storybook ([1a53fb7](https://github.com/shawn-sandy/fpkit/commit/1a53fb725879c7444f60927bac2f4f56de93c338))
+- **icons:** add new icons 'Add' and 'ArrowLeft' to the icon library ([2297a51](https://github.com/shawn-sandy/fpkit/commit/2297a511cff8d944e7e0bcb2d766264d824f3d8d))
+- **icons:** add new icons 'Up' and 'Down' to the icon library ([5372249](https://github.com/shawn-sandy/fpkit/commit/53722493c0976987297217b51a16f0e5b2680ae2))
+- **icons:** add new Minus icon component ([18253dd](https://github.com/shawn-sandy/fpkit/commit/18253ddd029382a41339a09179e55b3c8e802a4c))
+- **icons:** add new Remove icon component ([7efc25a](https://github.com/shawn-sandy/fpkit/commit/7efc25a70563efe9e0bf08306d569c1d2d663297))
+- **icons:** add new Right icon component ([13d5ffe](https://github.com/shawn-sandy/fpkit/commit/13d5ffe08a5d2de7c13cd79bfa1af837adf43625))
+- **icons:** add Star component ([cd423d5](https://github.com/shawn-sandy/fpkit/commit/cd423d58eee24d906c37a4e6a89a2e56dcfb8149))
+- **icons:** add User icon component ([6c5fa59](https://github.com/shawn-sandy/fpkit/commit/6c5fa592cbfcb717be645ea6f8bf84e5075b5e59))
+- **img.tsx:** add support for customizing the display property of the image component using CSS variables to improve flexibility in styling ([70eb346](https://github.com/shawn-sandy/fpkit/commit/70eb346407e05992d3727ca3c7f4eb77cc58127e))
+- **inputs.tsx:** rename disabled prop to isDisabled for better semantics and consistency ([7dac75e](https://github.com/shawn-sandy/fpkit/commit/7dac75e9c4b8f8facb0e0fddc1327f21f2a37ff7))
+- **inputs:** add unit tests for Input component ([f26432c](https://github.com/shawn-sandy/fpkit/commit/f26432cf5e2399cee6064db580b86936f00fc022))
+- **svg.tsx:** add Svg component to handle SVG rendering and improve code reusability ([08c51d3](https://github.com/shawn-sandy/fpkit/commit/08c51d375490abe96ce7008924a2aecea870447a))
+
+### Reverts
+
+- 🚑️ restore original stories after update ([7da04ff](https://github.com/shawn-sandy/fpkit/commit/7da04ffc20edb59823e7052366954bb34037b9e4))
+
 ## [0.3.1](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.3.0...@fpkit/react@0.3.1) (2023-06-19)
 
 **Note:** Version bump only for package @fpkit/react
