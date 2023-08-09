@@ -118,6 +118,18 @@ export const Right: Story = {
   },
 }
 
+export const Up: Story = {
+  args: {
+    children: <Icon.Up />,
+  },
+}
+
+export const Down: Story = {
+  args: {
+    children: <Icon.Down />,
+  },
+}
+
 export const Minus: Story = {
   args: {
     children: <Icon.Minus />,
@@ -127,6 +139,12 @@ export const Minus: Story = {
 export const Remove: Story = {
   args: {
     children: <Icon.Remove />,
+  },
+}
+
+export const Star: Story = {
+  args: {
+    children: <Icon.Star />,
   },
 }
 

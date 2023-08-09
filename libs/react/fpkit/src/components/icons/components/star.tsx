@@ -2,7 +2,7 @@ import { IconProps } from '../types'
 import React from 'react'
 import Svg from './svg'
 
-function Star({
+export function Star({
   size = 16,
   fill = 'currentColor',
   strokeColor = 'currentColor',

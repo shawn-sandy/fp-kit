@@ -15,4 +15,8 @@ export * from './components/minus'
 export * from './components/remove'
 export * from './components/copy'
 export * from './components/svg'
+export * from './components/up'
+export * from './components/down'
+export * from './components/star'
+export * from './components/user'
 

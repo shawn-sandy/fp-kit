@@ -7,11 +7,14 @@ import {
   Chat,
   Code,
   Copy,
+  Down,
   Home,
   Left,
   Minus,
   Remove,
   Right,
+  Star,
+  Up,
   User,
 } from './index'
 
@@ -51,8 +54,6 @@ export const Icon = ({ children, styles, ...props }: IconProps) => {
 }
 
 export default Icon
-Icon.displayName = 'Icon'
-Icon.styles = defaultStyles
 Icon.Add = Add
 Icon.ArrowDown = ArrowDown
 Icon.ArrowLeft = ArrowLeft
@@ -61,9 +62,14 @@ Icon.ArrowUp = ArrowUp
 Icon.Chat = Chat
 Icon.Code = Code
 Icon.Copy = Copy
+Icon.displayName = 'Icon'
+Icon.Down = Down
 Icon.Home = Home
 Icon.Left = Left
 Icon.Minus = Minus
 Icon.Remove = Remove
 Icon.Right = Right
+Icon.Star = Star
+Icon.styles = defaultStyles
+Icon.Up = Up
 Icon.User = User
