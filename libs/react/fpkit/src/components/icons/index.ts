@@ -14,4 +14,5 @@ export * from './components/left'
 export * from './components/minus'
 export * from './components/remove'
 export * from './components/copy'
+export * from './components/svg'
 
