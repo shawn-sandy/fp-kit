@@ -19,7 +19,7 @@ export const ArrowUp = ({
   fill = 'currentColor',
   strokeColor = 'currentColor',
   styles,
-  size = 24,
+  size = 16,
   role = 'img',
   alt = 'Up arrow icon',
   ...props
