@@ -58,7 +58,7 @@ export const Home: Story = {
     styles: Icon.styles,
     children: (
       <>
-        <Icon.Home size={12} />
+        <Icon.Home size={16} />
       </>
     ),
   },

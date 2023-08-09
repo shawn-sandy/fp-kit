@@ -24,13 +24,13 @@
     "rootDir": "src",
     "paths": {
       "@*": [
-        "src/*"
+        "./src/*"
       ],
       "@components/*": [
-        "src/components/*"
+        "./src/components/*"
       ],
       "@utils/*": [
-        "src/hooks/*"
+        "./src/hooks/*"
       ],
     }
   },
