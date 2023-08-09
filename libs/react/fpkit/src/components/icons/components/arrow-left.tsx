@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { IconProps } from '../types'
+import Svg from './svg'
 
 const defaultStyles = {}
 
@@ -17,21 +18,17 @@ const defaultStyles = {}
 export const ArrowLeft = ({
   strokeColor = 'currentColor',
   fill = 'currentColor',
-  size = '24',
+  size = 16,
   styles,
   role = 'img',
+  alt = 'Arrow pointing left',
   ...props
-}: Pick<IconProps, 'strokeColor' | 'fill' | 'styles' | 'size' | 'role'>) => {
+}: Pick<
+  IconProps,
+  'strokeColor' | 'fill' | 'styles' | 'size' | 'role' | 'alt'
+>) => {
   return (
-    <svg
-      height={size}
-      width={size}
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      style={styles}
-      role={role}
-      {...props}
-    >
+    <Svg size={size} styles={styles} role={role} {...props} alt={alt}>
       <g fill={fill} strokeMiterlimit="10">
         <line
           fill="none"
@@ -53,7 +50,7 @@ export const ArrowLeft = ({
           strokeWidth="2"
         />
       </g>
-    </svg>
+    </Svg>
   )
 }
 

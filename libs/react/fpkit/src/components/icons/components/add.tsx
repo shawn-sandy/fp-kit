@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { IconProps } from '../types'
+import Svg from './svg'
 
 const defaultStyles = {
   fill: 'currentColor',
@@ -15,29 +16,23 @@ const defaultStyles = {
  */
 export const Add = ({
   fill = 'currentColor',
-  size = '24',
+  size = 24,
   role = 'img',
+  alt = 'Add icon',
   ...props
 }: Pick<
   IconProps,
-  'strokeColor' | 'fill' | 'styles' | 'size' | 'role'
+  'strokeColor' | 'fill' | 'styles' | 'size' | 'role' | 'alt'
 >): JSX.Element => {
   return (
-    <svg
-      height={size}
-      width={size}
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      role={role}
-      {...props}
-    >
+    <Svg size={size} role={role} alt={alt} {...props}>
       <g fill={fill}>
         <path
           d="M17,11h-4V7c0-.553-.447-1-1-1s-1,.447-1,1v4H7c-.553,0-1,.447-1,1s.447,1,1,1h4v4c0,.553,.447,1,1,1s1-.447,1-1v-4h4c.553,0,1-.447,1-1s-.447-1-1-1Z"
           fill={fill}
         />
       </g>
-    </svg>
+    </Svg>
   )
 }
 
