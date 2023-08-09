@@ -1,5 +1,6 @@
 import { IconProps } from '../types'
 import React from 'react'
+import Svg from './svg'
 
 const defaultStyles = {
   fill: 'currentColor',
@@ -15,28 +16,24 @@ const defaultStyles = {
  */
 export const Left = ({
   fill = 'currentColor',
-  size = '24',
+  size = 16,
   styles,
   role = 'img',
+  alt = 'Left arrow icon',
   ...props
-}: Pick<IconProps, 'strokeColor' | 'fill' | 'styles' | 'size' | 'role'>) => {
+}: Pick<
+  IconProps,
+  'strokeColor' | 'fill' | 'styles' | 'size' | 'role' | 'alt'
+>) => {
   return (
-    <svg
-      height={size}
-      width={size}
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      style={styles}
-      role={role}
-      {...props}
-    >
+    <Svg size={size} styles={styles} alt={alt} role={role} {...props}>
       <g fill={fill}>
         <path
           d="M17,23a1,1,0,0,1-.707-.293l-10-10a1,1,0,0,1,0-1.414l10-10a1,1,0,0,1,1.414,1.414L8.414,12l9.293,9.293A1,1,0,0,1,17,23Z"
           fill={fill}
         />
       </g>
-    </svg>
+    </Svg>
   )
 }
 

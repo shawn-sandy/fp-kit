@@ -1,5 +1,6 @@
 import { IconProps } from '../types'
 import React from 'react'
+import Svg from './svg'
 
 const defaultStyles = {
   fill: 'currentColor',
@@ -14,29 +15,25 @@ const defaultStyles = {
  * @returns {JSX.Element} - Rendered Minus icon component
  */
 export const Minus = ({
-  size = '24',
+  size = 24,
   fill = 'currentColor',
   styles,
   role = 'img',
+  alt = 'Minus icon',
   ...props
-}: Pick<IconProps, 'strokeColor' | 'fill' | 'styles' | 'size' | 'role'>) => {
+}: Pick<
+  IconProps,
+  'strokeColor' | 'fill' | 'styles' | 'size' | 'role' | 'alt'
+>) => {
   return (
-    <svg
-      height={size}
-      width={size}
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      style={styles}
-      role={role}
-      {...props}
-    >
+    <Svg size={size} styles={styles} role={role} alt={alt} {...props}>
       <g fill={fill}>
         <path
           d="M17,11H7c-.553,0-1,.447-1,1s.447,1,1,1h10c.553,0,1-.447,1-1s-.447-1-1-1Z"
           fill={fill}
         />
       </g>
-    </svg>
+    </Svg>
   )
 }
 
