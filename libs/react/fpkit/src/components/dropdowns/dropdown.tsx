@@ -1,6 +1,6 @@
+import { ComponentProps } from '../../types'
 import { Details } from './dropdown-details'
 import { Summary } from './dropdown-summary'
-import { ComponentProps } from '../../types'
 
 export interface DropdownProps extends ComponentProps {
   title: string

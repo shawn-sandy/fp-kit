@@ -1,6 +1,8 @@
 import './style.css'
 import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
 
+import * as React from 'react'
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   // viewMode: 'docs',
