@@ -41,5 +41,5 @@ Dropdown.styles = defaultStyles
 Dropdown.Summary = Summary
 Dropdown.Details = Details
 
-// export default Dropdown
+export default Dropdown
 Dropdown.displayName = 'Dropdown'
