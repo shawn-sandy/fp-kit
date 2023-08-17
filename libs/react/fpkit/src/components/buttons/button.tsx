@@ -1,6 +1,6 @@
+import { ComponentProps } from '#/types'
 // import React from 'react'
-import FP from '../fp'
-import { ComponentProps } from '../../types'
+import FP from '#components/fp'
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {

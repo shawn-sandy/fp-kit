@@ -16,6 +16,9 @@
     "test:snapshot": "vitest --run --update",
     "release": "npm publish"
   },
+  "imports": {
+    "#*": "./src/*"
+  },
   "dependencies": {
     "@shawnsandy/first-paint": "^2.18.1",
     "focus-trap": "^7.5.2",

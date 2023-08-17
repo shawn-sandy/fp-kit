@@ -23,14 +23,8 @@
     "outDir": "build",
     "rootDir": "src",
     "paths": {
-      "@*": [
+      "#*": [
         "./src/*"
-      ],
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@utils/*": [
-        "./src/hooks/*"
       ],
     }
   },

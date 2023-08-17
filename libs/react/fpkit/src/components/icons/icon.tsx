@@ -19,7 +19,7 @@ import {
 } from './index'
 
 import { ComponentProps } from '../../types'
-import FP from '../fp'
+import FP from '#components/fp'
 import React from 'react'
 
 export interface IconProps extends Partial<ComponentProps> {
