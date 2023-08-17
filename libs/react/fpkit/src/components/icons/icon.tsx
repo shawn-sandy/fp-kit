@@ -18,7 +18,7 @@ import {
   User,
 } from './index'
 
-import { ComponentProps } from '../../types'
+import { ComponentProps } from '#/types'
 import FP from '#components/fp'
 import React from 'react'
 
