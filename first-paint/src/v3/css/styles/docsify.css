@@ -364,8 +364,7 @@ button {
 img,
 picture,
 video,
-canvas,
-svg {
+canvas {
   display: block;
   max-width: 100%;
   aspect-ratio: auto;
@@ -441,9 +440,8 @@ table {
 }
 
 svg {
-  width: 100%;
+  max-width: 100%;
   /* Optional - make the SVG's fill be the same as the inherited color */
-  fill: currentColor;
   /* Prevent the SVG from altering cursor interaction */
   pointer-events: none;
 }

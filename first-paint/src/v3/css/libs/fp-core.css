@@ -69,8 +69,7 @@ button {
 img,
 picture,
 video,
-canvas,
-svg {
+canvas {
   display: block;
   max-width: 100%;
   aspect-ratio: auto;
@@ -146,9 +145,8 @@ table {
 }
 
 svg {
-  width: 100%;
+  max-width: 100%;
   /* Optional - make the SVG's fill be the same as the inherited color */
-  fill: currentColor;
   /* Prevent the SVG from altering cursor interaction */
   pointer-events: none;
 }
@@ -449,9 +447,19 @@ svg {
 
 html,
 body {
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family:
+    Roboto,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
 }
 
 main,

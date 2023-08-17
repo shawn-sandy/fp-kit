@@ -43,8 +43,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
@@ -69,8 +69,7 @@ button {
 img,
 picture,
 video,
-canvas,
-svg {
+canvas {
   display: block;
   max-width: 100%;
   aspect-ratio: auto;
@@ -88,7 +87,9 @@ svg {
 }
 
 /* Inherit fonts for inputs and buttons */
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
   font-style: inherit;
@@ -110,8 +111,8 @@ input, textarea, select {
   }
 
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -144,9 +145,8 @@ table {
 }
 
 svg {
-  width: 100%;
+  max-width: 100%;
   /* Optional - make the SVG's fill be the same as the inherited color */
-  fill: currentColor;
   /* Prevent the SVG from altering cursor interaction */
   pointer-events: none;
 }
