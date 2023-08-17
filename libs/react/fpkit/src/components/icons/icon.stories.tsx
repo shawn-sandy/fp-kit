@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import { Meta, StoryObj } from '@storybook/react'
 
+import { Button } from '#components/buttons/button'
 import { Icon } from './icon'
 
 const meta: Meta<typeof Icon> = {
@@ -32,6 +33,7 @@ export const IconComponent: Story = {
         <span>Wraps you icons in a Flex container to allow you to edit</span>
       </>
     ),
+    styles: Icon.styles,
   },
 }
 
@@ -39,10 +41,26 @@ export const IconSet = {
   args: {},
   render: (...args: any) => {
     return (
-      <Icon>
+      <Icon styles={Icon.styles}>
         <Icon.Code />
         Code Icon{' '}
       </Icon>
+    )
+  },
+}
+
+export const IconButton = {
+  args: {},
+  render: (...args: any) => {
+    return (
+      <>
+        <Button type="button">
+          <Icon>
+            <Icon.Code />
+          </Icon>
+          Click Me
+        </Button>
+      </>
     )
   },
 }

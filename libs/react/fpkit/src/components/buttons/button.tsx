@@ -142,6 +142,6 @@ export const Button = ({
   //
 }
 
+export default Button
 Button.styles = defStyles
-
 Button.displayName = 'Button'

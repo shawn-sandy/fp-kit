@@ -33,9 +33,9 @@ export const defaultStyles = {
   display: 'inline-flex',
   direction: 'row',
   fill: 'currentColor',
-  minWidth: 'fit-content',
-  width: '1.5rem',
+  minWidth: '100%',
   gap: '.5rem',
+  placeItems: 'center',
 }
 
 /**

@@ -47,8 +47,7 @@ button {
 img,
 picture,
 video,
-canvas,
-svg {
+canvas {
   display: block;
   max-width: 100%;
   aspect-ratio: auto;
@@ -109,8 +108,7 @@ table {
   border-collapse: collapse;
 }
 svg {
-  width: 100%;
-  fill: currentColor;
+  max-width: 100%;
   pointer-events: none;
 }
 :root {
