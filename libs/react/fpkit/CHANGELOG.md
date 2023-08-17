@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.3.2...@fpkit/react@0.3.3) (2023-08-17)
+
+### Bug Fixes
+
+- **fp-badge.tsx:** fix import path for FP component to correctly reference the component in the components/fp directory ([f2d5a7a](https://github.com/shawn-sandy/fpkit/commit/f2d5a7a14fc5cdd64862aa9f30eee93f9748b54b))
+
+### Features
+
+- **storybook:** add preview.tsx file to configure Storybook parameters and badges ([016a1fb](https://github.com/shawn-sandy/fpkit/commit/016a1fb5bb81eca4cad1d82e48dc99dc84167130))
+
 ## [0.3.2](https://github.com/shawn-sandy/fpkit/compare/@fpkit/react@0.3.1...@fpkit/react@0.3.2) (2023-08-09)
 
 ### Bug Fixes
