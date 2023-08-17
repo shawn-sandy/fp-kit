@@ -1,4 +1,4 @@
-import FP from '../fp'
+import FP from '#components/fp'
 import React from 'react'
 
 export interface FpBadgeProps {
