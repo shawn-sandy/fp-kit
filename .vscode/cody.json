@@ -12,7 +12,7 @@
     },
     "(example) Commit Message Suggestion": {
       "slashCommand": "commit",
-      "prompt": "Suggest a informative commit message by summarizing code changes from the shared command output. The commit message should follow the conventional commit format and provide meaningful context for future readers.",
+      "prompt": "Suggest a informative commit message by summarizing code changes from the shared command output. The commit message should follow the conventional commit format and provide meaningful context for future readers. Explain the changes in the commit desctiption",
       "context": {
         "selection": false,
         "command": "git diff"

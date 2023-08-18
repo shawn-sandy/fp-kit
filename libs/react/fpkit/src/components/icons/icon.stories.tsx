@@ -23,20 +23,6 @@ const meta: Meta<typeof Icon> = {
 export default meta
 type Story = StoryObj<typeof Icon>
 
-export const IconComponent: Story = {
-  args: {
-    children: (
-      <>
-        <span>
-          <Icon.Copy />
-        </span>
-        <span>Wraps you icons in a Flex container to allow you to edit</span>
-      </>
-    ),
-    styles: Icon.styles,
-  },
-}
-
 export const IconSet = {
   args: {},
   render: (...args: any) => {
