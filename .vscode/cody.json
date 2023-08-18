@@ -12,7 +12,7 @@
     },
     "Convential Commit": {
       "slashCommand": "convential-commit",
-      "prompt": "Suggest a informative commit message by summarizing code changes from the shared command output. The commit message should follow the conventional commit format and provide meaningful context for future readers add a relevant emoji at the end of the message. The message and subject must not be sentence-case, start-case, pascal-case, upper-case. Add a summary of the changes to the commit description",
+      "prompt": "Suggest a informative commit message by summarizing code changes from the shared command output. The commit message should follow the conventional commit format and provide meaningful context for future readers. The message and subject must not be sentence-case, start-case, pascal-case, upper-case. Add a summary of the changes to the commit description",
       "context": {
         "selection": false,
         "command": "git diff"
@@ -20,12 +20,14 @@
       "note": "You must have git installed and authenticated to use this command. Runs this command before staging."
     },
     "commands": {
-      "Smell Code": {
-        "prompt": "Find code smells, potential bugs, and unhandled errors in my selected code. Create a list with the top five errors you can find, and include a short informative description and suggestion for each. Please only respond with the list of errors and nothing else. If there are no errors, say",
-        "context": {
-          "selection": true
-        },
-        "slashCommand": "old-smell"
+      "commands": {
+        "Smell Code": {
+          "prompt": "Find code smells, potential bugs, and unhandled errors in my selected code. Create a list with the top five errors you can find, and include a short informative description and suggestion for each. Please only respond with the list of errors and nothing else. If there are no errors, say, 'There are no errors.'",
+          "context": {
+            "selection": true
+          },
+          "slashCommand": "old-smell"
+        }
       }
     }
   }
