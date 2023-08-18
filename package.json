@@ -35,7 +35,8 @@
     "build-storybook": "storybook build",
     "test:storybook": "test-storybook -- --coverage ",
     "storybook:snapshot": "test-storybook -- u",
-    "oco": "git add . && oc"
+    "oco": "git add . && oc",
+    "aicommits": "git add . && aicommits --type conventional"
   },
   "auto-changelog": {
     "unreleased": true,
