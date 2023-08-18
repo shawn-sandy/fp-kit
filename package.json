@@ -12,7 +12,7 @@
     "audit": "lighthouse https://shawnsandy.com/ --output=json --output-path=./audits/report.json --config-path=.lighthouseconfig.js",
     "build:first-paint": "lerna exec npm run build --scope=@shawnsandy/first-paint",
     "npm-next": "lerna publish --dist-tag next patch --no-private --conventional-commits -m \"chore(next): publish next release \"",
-    "npm-publish": "lerna publish patch --no-private --conventional-commits -m \"chore(next): publish next release \"",
+    "npm-publish": "lerna publish --no-private --conventional-commits -m \"chore(next): publish next release \"",
     "npm-publish:minor": "lerna publish minor --no-private --conventional-commits -m \"chore(next): publish next release \"",
     "npm-publish:major": "lerna publish major --no-private --conventional-commits -m \"chore(next): publish next release \"",
     "release-patch": "lerna version patch --conventional-commits --no-private",
