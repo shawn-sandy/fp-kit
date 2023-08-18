@@ -15,7 +15,7 @@
   "homepage": "https://firstpaint.dev",
   "license": "MIT",
   "style": "/v3/css/index.min.css",
-  "main": "/v3/css/index.min.css",
+  "main": "/v3/css/libs/all.min.css",
   "directories": {
     "lib": "dist"
   },
