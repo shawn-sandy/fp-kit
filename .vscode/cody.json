@@ -10,7 +10,7 @@
         "selection": true
       }
     },
-    "(example) Commit Message Suggestion": {
+    "Convential Commit Message": {
       "slashCommand": "commit",
       "prompt": "Suggest a informative convential commit message by summarizing code changes from the shared command output. The commit message should follow the conventional commit format and provide meaningful context for future readers. The scope should contain the name of the current git nranch. Add a summary of the chamges to the description",
       "context": {
@@ -18,6 +18,15 @@
         "command": "git diff"
       },
       "note": "You must have git installed and authenticated to use this command. Runs this command before staging."
+    },
+    "commands": {
+      "Smell Code": {
+        "prompt": "Find code smells, potential bugs, and unhandled errors in my selected code. Create a list with the top five errors you can find, and include a short informative description and suggestion for each. Please only respond with the list of errors and nothing else. If there are no errors, say, 'There are no errors.'",
+        "context": {
+          "selection": true
+        },
+        "slashCommand": "old-smell"
+      }
     }
   }
 }
