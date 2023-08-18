@@ -36,7 +36,7 @@
     "test:storybook": "test-storybook -- --coverage ",
     "storybook:snapshot": "test-storybook -- u",
     "oco": "git add . && oc",
-    "aicommits": "git add . && aicommits --type conventional"
+    "aicommits": "aicommits -a --type conventional"
   },
   "auto-changelog": {
     "unreleased": true,
