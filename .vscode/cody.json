@@ -12,7 +12,7 @@
     },
     "Convential Commit Message": {
       "slashCommand": "commit",
-      "prompt": "Suggest a informative convential commit message by summarizing code changes from the shared command output. The commit message should follow the conventional commit format and provide meaningful context for future readers. The scope should contain the name of the current git nranch. Add a summary of the chamges to the description",
+      "prompt": "Suggest a informative convential commit message by summarizing code changes from the shared command output. The commit message should follow the conventional commit format and provide meaningful context for future readers. The scope should contain the name of the current git branch-name. Add a summary of the changes to the commit description",
       "context": {
         "selection": false,
         "command": "git diff"
