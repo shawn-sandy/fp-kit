@@ -253,6 +253,7 @@ svg {
   --fs-xl: var(--fs-9);
   --fs-xxl: var(--fs-11);
   --fs-xxxl: var(--fs-12);
+  --display: var(--fs-12);
   --h1: var(--fs-10);
   --h2: var(--fs-9);
   --h3: var(--fs-8);
@@ -809,6 +810,7 @@ p + * {
   --fs-xl: var(--fs-9);
   --fs-xxl: var(--fs-11);
   --fs-xxxl: var(--fs-12);
+  --display: var(--fs-12);
   --h1: var(--fs-10);
   --h2: var(--fs-9);
   --h3: var(--fs-8);
