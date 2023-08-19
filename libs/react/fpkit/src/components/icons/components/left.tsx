@@ -3,6 +3,7 @@ import React from 'react'
 import Svg from './svg'
 
 const defaultStyles = {
+  ...Svg.styles,
   fill: 'currentColor',
 }
 
@@ -39,3 +40,4 @@ export const Left = ({
 
 export default Left
 Left.displayName = 'Left'
+Left.styles = defaultStyles

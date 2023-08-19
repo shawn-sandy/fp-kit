@@ -3,7 +3,7 @@ import * as React from 'react'
 import { IconProps } from '../types'
 import Svg from './svg'
 
-const defaultStyles = {}
+const defaultStyles = { ...Svg.styles }
 
 /**
  * Renders an arrow pointing to the left.

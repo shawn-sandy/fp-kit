@@ -4,7 +4,6 @@ import { IconProps } from '../types'
 
 const defaultStyes = {
   display: 'inline-flex',
-  gap: '.5rem',
   alignItems: 'center',
   width: 'auto',
 }

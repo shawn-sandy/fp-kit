@@ -2,6 +2,7 @@ import { IconProps } from '../types'
 import React from 'react'
 import Svg from './svg'
 
+const defaultStyles = { ...Svg.styles }
 export const Up = ({
   size = 16,
   fill = 'currentColor',
@@ -27,3 +28,4 @@ export const Up = ({
 
 export default Up
 Up.displayName = 'Up'
+Up.styles = defaultStyles

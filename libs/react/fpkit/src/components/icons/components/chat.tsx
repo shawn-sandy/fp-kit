@@ -3,7 +3,7 @@ import * as React from 'react'
 import { IconProps } from '../types'
 import Svg from './svg'
 
-const defaultStyles = {}
+const defaultStyles = { ...Svg.styles }
 
 /**
  * @param {string} size - The width and height of the icon in pixels. Defaults to 24.

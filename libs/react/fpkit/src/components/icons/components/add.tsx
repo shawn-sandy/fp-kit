@@ -4,6 +4,7 @@ import { IconProps } from '../types'
 import Svg from './svg'
 
 const defaultStyles = {
+  ...Svg.styles,
   fill: 'currentColor',
 }
 

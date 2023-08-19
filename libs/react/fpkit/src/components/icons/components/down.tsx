@@ -3,6 +3,8 @@ import * as React from 'react'
 import { IconProps } from '../types'
 import Svg from './svg'
 
+const defaultStyles = { ...Svg.styles }
+
 export const Down = ({
   size = 16,
   fill = 'currentColor',
@@ -28,3 +30,4 @@ export const Down = ({
 
 export default Down
 Down.displayName = 'Down'
+Down.styles = defaultStyles
