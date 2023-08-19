@@ -111,6 +111,11 @@ svg {
   max-width: 100%;
   pointer-events: none;
 }
+svg[role='img'] {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+}
 :root {
   --fw: normal;
   --fst: normal;
@@ -1421,7 +1426,7 @@ button,
   text-decoration: var(--btn-deco, none);
   color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
-  gap: var(--btn-gap, 1rem);
+  gap: var(--btn-gap, 0.2rem);
   white-space: var(--btn-wspc, inherit);
   margin: var(--btn-spc, 0);
   transition: var(--tran-all);

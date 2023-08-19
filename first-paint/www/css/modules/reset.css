@@ -110,4 +110,9 @@ table {
 svg {
   max-width: 100%;
   pointer-events: none;
+}
+svg[role='img'] {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
 } /*# sourceMappingURL=reset.css.map */

@@ -150,5 +150,10 @@ svg {
   /* Prevent the SVG from altering cursor interaction */
   pointer-events: none;
 }
+svg[role='img'] {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+}
 
 /*# sourceMappingURL=reset.css.map */
