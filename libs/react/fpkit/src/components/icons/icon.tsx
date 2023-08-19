@@ -32,9 +32,9 @@ export interface IconProps extends Partial<ComponentProps> {
 export const defaultStyles = {
   display: 'inline-flex',
   direction: 'row',
-  fill: 'currentColor',
-  gap: '.25rem',
+  gap: '.2rem',
   placeItems: 'center',
+  width: 'auto',
 }
 
 /**

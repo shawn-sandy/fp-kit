@@ -1,6 +1,5 @@
 
-export { Icon } from './src/components/icons/icon'
-
+export * from './src/components/icons/icon'
 export * from './src/components/icons/components/add'
 export * from './src/components/icons/components/arrow-down'
 export * from './src/components/icons/components/arrow-left'
