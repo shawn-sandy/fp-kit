@@ -169,4 +169,10 @@ svg {
 
   /* Prevent the SVG from altering cursor interaction */
   pointer-events: none;
+
+  &[role="img"] {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+  }
 }
