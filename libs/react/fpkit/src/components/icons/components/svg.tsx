@@ -2,6 +2,13 @@ import * as React from 'react'
 
 import { IconProps } from '../types'
 
+const defaultStyes = {
+  display: 'inline-flex',
+  gap: '.5rem',
+  alignItems: 'center',
+  width: 'auto',
+}
+
 export const Svg = ({
   fill = 'currentColor',
   strokeColor,
@@ -33,3 +40,4 @@ export const Svg = ({
 
 export default Svg
 Svg.displayName = 'Svg'
+Svg.styles = defaultStyes

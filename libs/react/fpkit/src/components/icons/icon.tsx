@@ -33,7 +33,6 @@ export const defaultStyles = {
   display: 'inline-flex',
   direction: 'row',
   fill: 'currentColor',
-  minWidth: '100%',
   gap: '.5rem',
   placeItems: 'center',
 }

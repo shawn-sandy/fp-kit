@@ -4,6 +4,7 @@ import { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from '#components/buttons/button'
 import { Icon } from './icon'
+import Svg from './components/svg'
 
 const meta: Meta<typeof Icon> = {
   component: Icon,
@@ -28,7 +29,7 @@ export const IconSet = {
   render: (...args: any) => {
     return (
       <Icon styles={Icon.styles}>
-        <Icon.Code />
+        <Icon.Code styles={Icon.Code.styles} />
         Code Icon{' '}
       </Icon>
     )
