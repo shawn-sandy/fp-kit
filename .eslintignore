@@ -8,6 +8,7 @@ package-lock.json
 
 # ignore built packages
 dist
+libs
 esm
 public
 generated
@@ -32,6 +33,7 @@ logs
 **/coverage/**
 **/docs/**
 **/dist/**
+**/libs/**
 **/*.spec.js,
 **/*.spec.jsx,
 **/*.test.js,

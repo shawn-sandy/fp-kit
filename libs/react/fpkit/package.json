@@ -50,21 +50,22 @@
   },
   "type": "module",
   "source": "src/index.ts",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./libs/index.cjs",
+  "module": "./libs/index.js",
+  "types": "./libs/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "default": "./dist/index.js"
+      "import": "./libs/index.js",
+      "require": "./libs/index.cjs",
+      "default": "./libs/index.js"
     },
     "./package.json": "./package.json"
   },
   "files": [
     "lib",
     "src",
-    "dist"
+    "dist",
+    "libs"
   ],
   "peerDependencies": {
     "react": "^18.0.0",
