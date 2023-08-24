@@ -21,7 +21,5 @@ export { default as To } from './components/link/link'
 export { default as FP } from './components/fp'
 export { default as Box } from './components/fp'
 export { default as Tag } from './components/fp'
-
-
 // hooks
 
