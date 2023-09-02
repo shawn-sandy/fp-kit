@@ -1326,8 +1326,9 @@ hr {
 
 img[alt],
 [data-img] {
-  max-width: 100%;
+  max-inline-size: 100%;
   object-fit: var(--img-obj-fit, cover);
+  block-size: auto;
   object-position: var(--img-position, center center);
   aspect-ratio: var(--img-ratio, 16/9);
 }
