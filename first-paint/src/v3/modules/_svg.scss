@@ -9,10 +9,10 @@
 @mixin props() {
   // * css custom properties
   @content;
+  display: var(--svg-dsp, flex-inline);
 }
 
 @mixin rules {
-
   // * css rules/styles
   @content;
 }
@@ -23,9 +23,10 @@
 }
 
 @mixin module {
-  svg {
+  svg[role='img'] {
     @include props;
     @include rules;
   }
+
   @include styles;
 }

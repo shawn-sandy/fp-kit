@@ -2657,4 +2657,8 @@ section.cover.show {
   padding-inline-start: 1rem;
 }
 
+h4 svg {
+  display: block;
+}
+
 /*# sourceMappingURL=docsify.css.map */
