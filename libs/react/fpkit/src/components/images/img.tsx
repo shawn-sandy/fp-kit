@@ -43,7 +43,8 @@ export interface ImageProps extends ComponentProps {
 
 export const defaultStyles = {
   maxWidth: 'var(--img-w, 100%)',
-  height: 'var(--img-h, auto)',
+  maxInlineSize: '100%',
+  blockSize: 'var(--img-h, auto)',
   objectFit: 'var(--img-obj-fit, cover)',
   objectPosition: 'var(--img-position, center center)',
   aspectRatio: 'var(--img-ratio, auto 2/3)',
