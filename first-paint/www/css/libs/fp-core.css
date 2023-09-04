@@ -59,7 +59,7 @@ iframe {
   block-size: auto;
 }
 svg {
-  display: block;
+  display: inline-block;
 }
 input,
 textarea,
@@ -108,7 +108,7 @@ table {
   border-collapse: collapse;
 }
 svg {
-  max-width: 100%;
+  max-width: inline-size;
   pointer-events: none;
 }
 svg[role='img'] {

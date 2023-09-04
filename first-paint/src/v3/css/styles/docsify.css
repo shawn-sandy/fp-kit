@@ -381,7 +381,7 @@ iframe {
 }
 
 svg {
-  display: block;
+  display: inline-block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -443,7 +443,7 @@ table {
 }
 
 svg {
-  max-width: 100%;
+  max-width: inline-size;
   /* Optional - make the SVG's fill be the same as the inherited color */
   /* Prevent the SVG from altering cursor interaction */
   pointer-events: none;
@@ -2657,8 +2657,12 @@ section.cover.show {
   padding-inline-start: 1rem;
 }
 
-h4 svg {
+h4 {
   display: block;
+  text-align: center;
+}
+h4 svg {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=docsify.css.map */

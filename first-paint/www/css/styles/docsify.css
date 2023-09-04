@@ -352,7 +352,7 @@ iframe {
   block-size: auto;
 }
 svg {
-  display: block;
+  display: inline-block;
 }
 input,
 textarea,
@@ -401,7 +401,7 @@ table {
   border-collapse: collapse;
 }
 svg {
-  max-width: 100%;
+  max-width: inline-size;
   pointer-events: none;
 }
 svg[role='img'] {
@@ -2429,6 +2429,10 @@ section.cover.show {
   padding: 0;
   padding-inline-start: 1rem;
 }
-h4 svg {
+h4 {
   display: block;
+  text-align: center;
+}
+h4 svg {
+  display: inline-block;
 } /*# sourceMappingURL=docsify.css.map */
