@@ -217,6 +217,11 @@ section.cover.show {
 }
 
 
-h4 svg {
+h4 {
   display: block;
+  text-align: center;
+
+  svg {
+    display: inline-block;
+  }
 }

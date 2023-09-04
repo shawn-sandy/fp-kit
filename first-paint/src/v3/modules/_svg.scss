@@ -23,7 +23,9 @@
 }
 
 @mixin module {
-  svg[role='img'] {
+
+  svg[role='img'],
+  svg {
     @include props;
     @include rules;
   }
