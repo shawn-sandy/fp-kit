@@ -14,7 +14,7 @@ const meta: Meta<typeof Icon> = {
   },
   decorators: [
     (Story) => (
-      <section style={{ minWidth: '60vw' }}>
+      <section style={{ minWidth: '60vw', textAlign: 'center' }}>
         <Story />
       </section>
     ),

@@ -55,7 +55,6 @@ export const Icon = ({ children, styles, ...props }: IconProps) => {
 export default Icon
 Icon.displayName = 'Icon'
 Icon.styles = defaultStyles
-
 Icon.Add = Add
 Icon.ArrowDown = ArrowDown
 Icon.ArrowLeft = ArrowLeft
