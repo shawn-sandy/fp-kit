@@ -1,7 +1,7 @@
 {
   "name": "@fpkit/shared",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Shared JS libs and types library",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
