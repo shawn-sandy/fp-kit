@@ -1,6 +1,11 @@
 import React from 'react'
 import usePopover from './use-popover'
 
+export type PopoverProps = {
+  children: React.ReactNode;
+  content?: React.ReactNode;
+}
+
 export const Popover: React.FC = () => {
   const hoverRef = React.useRef(null)
   const popOverRef = React.useRef(null)
@@ -10,6 +15,7 @@ export const Popover: React.FC = () => {
   return (
     <div data-testid="popover">
       <button
+        type="button"
         ref={hoverRef}
         onPointerEnter={handlePointerEvent}
         onPointerLeave={handlePointerLeave}
