@@ -9,7 +9,7 @@ import usePopover from '#hooks/popover/use-popover'
  */
 export type PopoverProps = {
   children: React.ReactNode
-  triggerElement: React.ReactNode
+  popoverTrigger: React.ReactNode
   styles: {}
 }
 
@@ -28,9 +28,10 @@ export const defaultStyles = {
  *
  * @param props - The props for the component
  * @param props.children - The content to show in the popover
- * @param props.triggerElement - The element that triggers the popover on hover
+ * @param props.popoverTrigger - The element that triggers the popover on hover
  *
  * @returns JSX.Element - The rendered JSX element for the Popover
+ * @example - <Popover popoverTrigger={<button>Hover here</button>}>Popover content</Popover>
  *
  * The component uses the usePopover hook to handle popover visibility and positioning.
  *
@@ -44,7 +45,7 @@ export const defaultStyles = {
 
 export const Popover = ({
   children,
-  triggerElement,
+  popoverTrigger,
   styles = defaultStyles,
   ...props
 }: PopoverProps): JSX.Element => {
@@ -56,8 +57,8 @@ export const Popover = ({
     opacity: isVisible ? 1 : 0,
     top: popoverPosition.top,
     left: popoverPosition.left,
-    transform: `translateY(${isVisible ? '0px' : '-50px'})`,
-    // zIndex: 999,
+    // transform: `translateY(${isVisible ? '0px' : '-50px'})`,
+    zIndex: 999,
   } as React.CSSProperties
 
   return (
@@ -68,7 +69,7 @@ export const Popover = ({
         onPointerLeave={handlePointerLeave}
         {...props}
       >
-        {triggerElement}
+        {popoverTrigger}
       </div>
       {isVisible && (
         <div ref={popOverRef} style={{ ...popoverStyles, ...styles }}>
