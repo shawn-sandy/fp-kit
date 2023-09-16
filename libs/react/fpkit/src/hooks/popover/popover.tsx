@@ -2,33 +2,33 @@ import React from 'react'
 import usePopover from './use-popover'
 
 /**
-* Interface for props accepted by the Popover component
-*
-* @property {ReactNode} children - The content to show in the popover
-* @property {ReactNode} [content] - Optional alternative content for popover
-*/
+ * Interface for props accepted by the Popover component
+ *
+ * @property {ReactNode} children - The content to show in the popover
+ * @property {ReactNode} [content] - Optional alternative content for popover
+ */
 export type PopoverProps = {
-  children: React.ReactNode;
-  content?: React.ReactNode;
+  children: React.ReactNode
+  content?: React.ReactNode
 }
 
 /**
-* Popover component to display popover content.
-*
-* @param {Object} props - The props for the component.
-* @returns {JSX.Element} - The JSX element for the Popover component.
-*
-* The component uses the usePopover hook to handle popover visibility and positioning.
-*
-* It renders a button that shows the popover on hover using pointer events.
-*
-* The popover content itself is rendered absolutely positioned when visible.
-*
-* Styles like background, border, padding etc are applied inline.
-*
-* Transforms and opacity animate the popover enter/exit.
-*/
-export const Popover: React.FC = () => {
+ * Popover component to display popover content.
+ *
+ * @param {Object} props - The props for the component.
+ * @returns {JSX.Element} - The JSX element for the Popover component.
+ *
+ * The component uses the usePopover hook to handle popover visibility and positioning.
+ *
+ * It renders a button that shows the popover on hover using pointer events.
+ *
+ * The popover content itself is rendered absolutely positioned when visible.
+ *
+ * Styles like background, border, padding etc are applied inline.
+ *
+ * Transforms and opacity animate the popover enter/exit.
+ */
+export const Popover = ({ children, ...props }: PopoverProps) => {
   const hoverRef = React.useRef(null)
   const popOverRef = React.useRef(null)
   const { isVisible, popoverPosition, handlePointerEvent, handlePointerLeave } =
@@ -36,14 +36,13 @@ export const Popover: React.FC = () => {
 
   return (
     <div data-testid="popover">
-      <button
-        type="button"
+      <div
         ref={hoverRef}
         onPointerEnter={handlePointerEvent}
         onPointerLeave={handlePointerLeave}
       >
-        Hover here
-      </button>
+        {children}
+      </div>
       {isVisible && (
         <div
           ref={popOverRef}
@@ -62,7 +61,7 @@ export const Popover: React.FC = () => {
             // zIndex: 999,
           }}
         >
-          This is a popover.
+          {'This is a popover.'}
         </div>
       )}
     </div>

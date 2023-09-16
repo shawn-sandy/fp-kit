@@ -26,8 +26,8 @@ type Position = {
  * @returns - handlePointerLeave - This is the function to handle the pointer leave event.
  */
 export const usePopover = (
-  elementRef: React.RefObject<HTMLElement>,
-  hoverRef: React.RefObject<HTMLElement>,
+  elementRef: React.RefObject<HTMLElement | HTMLDivElement>,
+  hoverRef: React.RefObject<HTMLElement | HTMLDivElement>,
   spacing = 1,
 ) => {
   const [isVisible, setIsVisible] = useState(false)
@@ -36,7 +36,9 @@ export const usePopover = (
     left: 0,
   })
 
-  const handlePointerEvent = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handlePointerEvent = (
+    event: React.MouseEvent<HTMLButtonElement | HTMLElement>,
+  ) => {
     event?.stopPropagation()
     const height = elementRef.current?.offsetHeight || 40
     if (elementRef.current) {
