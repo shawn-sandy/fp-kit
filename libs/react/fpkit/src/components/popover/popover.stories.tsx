@@ -23,5 +23,7 @@ export const PopoverComponent: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     expect(await canvas.queryByText('Hover here')).toBeInTheDocument()
+    userEvent.hover(canvas.getByText('Hover here'))
+    expect(await canvas.findByText('Hi, I am a popover.')).toBeInTheDocument()
   },
 }
