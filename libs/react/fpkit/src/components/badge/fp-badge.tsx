@@ -18,7 +18,7 @@ const defStyles = {
   fontFamily: 'var(--badge-ff, sans-serif)',
   border: 'var(--badge-brd, none)',
   borderRadius: 'var(--badge-rds, 99rem)',
-  backgroundColor: 'var(--badge-bg, "blue")',
+  backgroundColor: 'var(--badge-bg, lightgray)',
   textDecoration: 'var(--badge-decoration, none)',
   textTransform: 'var(--badge-tt, var(--tt))',
 }
@@ -47,6 +47,6 @@ export const Badge = ({
     </FP>
   )
 }
-
+export default Badge
 Badge.styles = defStyles
 Badge.displayName = 'Badge'

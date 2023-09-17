@@ -15,7 +15,6 @@ describe('Popover', () => {
       name: /hover here/i,
     })
     userEvent.hover(triggerElement)
-    screen.logTestingPlaygroundURL()
     expect(await screen.findByText('Popover content')).toBeInTheDocument()
   })
 
