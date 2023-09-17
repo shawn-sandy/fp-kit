@@ -9,9 +9,9 @@ const meta: Meta<typeof Popover> = {
   title: 'FP.React Components/Basic Popover',
   component: Popover,
   args: {
-    // @ts-ignore
     children: 'Hi, I am a popover.',
-    popoverTrigger: <button type="button">Hover here</button>,
+    popoverTrigger: 'Hover here',
+    styles: Popover.styles,
   },
 }
 
@@ -25,5 +25,7 @@ export const PopoverComponent: Story = {
     expect(await canvas.queryByText('Hover here')).toBeInTheDocument()
     userEvent.hover(canvas.getByText('Hover here'))
     expect(await canvas.findByText('Hi, I am a popover.')).toBeInTheDocument()
+    await userEvent.unhover(canvas.getByText('Hover here'))
+    expect(canvas.queryByText('Hi, I am a popover.')).not.toBeInTheDocument()
   },
 }

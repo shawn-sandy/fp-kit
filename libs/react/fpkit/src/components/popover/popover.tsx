@@ -10,14 +10,14 @@ import usePopover from '#hooks/popover/use-popover'
 export type PopoverProps = {
   children: React.ReactNode
   popoverTrigger: React.ReactNode
-  styles: {}
+  styles?: {}
 }
 
 export const defaultStyles = {
   display: 'block',
   position: 'absolute',
   background: '#000',
-  border: '1px solid #ccc',
+  border: '1px solid #010101',
   padding: '10px',
   color: '#fff',
   transition: 'opacity .5s ease-in-out',
@@ -46,7 +46,7 @@ export const defaultStyles = {
 export const Popover = ({
   children,
   popoverTrigger,
-  styles = defaultStyles,
+  styles,
   ...props
 }: PopoverProps): JSX.Element => {
   const hoverRef = React.useRef(null)
