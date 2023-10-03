@@ -16,6 +16,7 @@ module.exports = {
     '@storybook/addon-coverage',
     '@storybook/addon-mdx-gfm',
     '@storybook/addon-coverage',
+    '@chromaui/addon-visual-tests',
   ],
   features: {
     interactionsDebugger: true, // 👈 Enable playback controls
