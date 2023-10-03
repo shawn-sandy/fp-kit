@@ -12,10 +12,13 @@ footer {
 main > section,
 header > section,
 footer > section {
-  width: var(--lt-min);
   margin-inline: auto;
+  width: var(--content-w, 80%);
 }
 section:not(nav) {
   margin-inline: var(--sect-y, auto);
   padding-block: var(--sect-x, --spc-4);
+}
+p {
+  --fs: var(--fs-0);
 } /*# sourceMappingURL=global.css.map */

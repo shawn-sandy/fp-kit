@@ -7,26 +7,26 @@
 // */
 @mixin props() {
   // * css custom properties
-
   @content;
 }
 
 @mixin rules {
   display: var(--hdr-dsp, flex);
+  flex-direction: var(--hdr-direction, column);
+  place-content: var(--hdr-place-x, center);
+  place-items: var(--hdr-place-y, center);
   background-color: var(--hdr-bg, var(--fp-white-smoke));
   background-image: var(--hdr-bg-img, none);
   background-position: var(--hdr-bg-pos, center center);
   background-size: var(--hdr-bg-size, cover);
   background-repeat: var(--hdr-bg-repeat, no-repeat);
-  flex-direction: var(--hdr-direction, column);
-  place-content: var(--hdr-place-x, center);
-  place-items: var(--hdr-place-y, center);
   text-align: var(--hdr-align, center);
   min-height: var(--hdr-min-h, calc(var(--vw-md) + var(--vw-xs)));
   min-width: var(--hdr-w, 100%);
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
+  font-size: var(--ph-fs, var(--fs-6));
 
   &[data-variant] {
     background-color: var(--vbg);
@@ -34,24 +34,61 @@
     font-size: var(--vfs);
   }
 
-  @content;
-}
+  section {
+    max-width: 80%;
 
-@mixin styles {
-  // * css style utilities
-  [style*="--hdr"] {
-    // @include props;
+    h2 {
+      font-size: var(--hfs);
+      --hfs: var(--fs-10, calc(80rem / 16));
+      line-height: var(--hlh, 1.2);
+    }
+
+    p {
+      width: var(--hdp-w, clamp(90%, 50%, 80%));
+      font-size: var(--ph-fs, var(--fs-6));
+      margin: auto
+    }
+
+  }
+
+  &[data-style~=large] {
+    h2 {
+      --hfs: var(--fs-12);
+    }
+
+    p {
+      --ph-fs: var(--fs-6);
+    }
+  }
+
+  &[data-style~=small] {
+    h2 {
+      --hfs: var(--fs-8);
+    }
+
+    p {
+      --ph-fs: var(--fs-4);
+    }
   }
 
   @content;
 }
 
+@mixin styles {
+
+  // * css style utilities
+  @content;
+}
+
 @mixin module {
- header, .fp-header, [role="banner"], [style*="--hdr"] {
+
+  header,
+  [role="banner"] {
     &:not([arial-label], dialog header) {
       @include props;
       @include rules;
     }
   }
+
   @include styles;
 }

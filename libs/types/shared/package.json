@@ -1,7 +1,7 @@
 {
   "name": "@fpkit/shared",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Shared JS libs and types library",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -15,6 +15,7 @@
   "devDependencies": {
     "@preconstruct/cli": "^2.2.1",
     "@storybook/test-runner": "^0.7.2",
+    "@total-typescript/ts-reset": "^0.5.1",
     "tsup": "^6.2.3",
     "typescript": "^4.8.3"
   },

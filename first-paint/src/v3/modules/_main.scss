@@ -1,0 +1,51 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+@mixin props() {
+  // * css custom properties
+  @content;
+}
+
+@mixin rules {
+
+   /* Set variables for padding-block and padding-inline */
+  padding-block: var(--main-py, 0rem);
+  padding-inline: var(--main-px);
+  font-size: var(--fs-0);
+
+  /* Set variables for data-content display, grid gap and columns */
+  [data-content] {
+    display: var(--content-dsp, grid);
+    gap: var(--content-gap, 2rem);
+    grid-template-columns: var(--content-grid-cols, 3fr 1fr);
+    padding-block: var(--content-px, var(--spc-6));
+    > aside {
+      width: clamp(100%, calc(300rem/16), calc(200rem/16));
+    }
+    /* Set variables for main grid columns when screen width is less than 768px */
+    @media (max-width: 768px) {
+      --content-grid-cols: 1fr;
+    }
+  }
+  // * css rules/styles
+  @content;
+}
+
+@mixin styles {
+  // * css style utilities
+  @content;
+}
+
+@mixin module {
+  main {
+    @include props;
+    @include rules;
+  }
+
+  @include styles;
+}

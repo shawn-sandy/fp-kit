@@ -110,11 +110,17 @@ Change the grid `--grid-cols: 2` to set the number of grid columns.
 style="--grid-cols: 2"
 ```
 
+or using `data-grid` attribute
+
+```html
+data-grid="cols-2"
+```
+
 ```html preview
 <section style="max-width: min(80vw, 100vw);">
-  <section role="grid" style="--grid-cols: 2">
-    <div role="row">
-      <div role="gridcell">
+  <section data-fp-grid="cols-2">
+    <div data-grid-row>
+      <div data-grid="gridcell">
         <h3>Grid col</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
@@ -122,7 +128,7 @@ style="--grid-cols: 2"
           laboriosam rem omnis sit autem temporibus ipsum maxime dignissimos id.
         </p>
       </div>
-      <div role="gridcell">
+      <div data-grid-cell="gridcell">
         <h3>Grid col</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
@@ -130,7 +136,7 @@ style="--grid-cols: 2"
           laboriosam rem omnis sit autem temporibus ipsum maxime dignissimos id.
         </p>
       </div>
-      <div role="gridcell">
+      <div data-grid-cell="gridcell">
         <h3>Grid col</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla
@@ -138,7 +144,7 @@ style="--grid-cols: 2"
           laboriosam rem omnis sit autem temporibus ipsum maxime dignissimos id.
         </p>
       </div>
-      <div role="gridcell">
+      <div data-grid-cell="gridcell">
         <h3>Grid col</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nulla

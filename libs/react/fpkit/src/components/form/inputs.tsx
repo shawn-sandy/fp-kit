@@ -1,6 +1,8 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
 
+// import
+
 export interface InputProps extends Omit<ComponentProps, 'children'> {
   /**
    * The type of the input.
@@ -41,7 +43,7 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
   /**
    * Set the element as disabled
    */
-  disabled?: boolean
+  isDisabled?: boolean
   /**
    * Set the element as readonly
    */
@@ -50,18 +52,34 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
    * ref to the input element
    */
   inputRef?: React.RefObject<HTMLInputElement>
-
+  /**
+   * Input styles
+   */
+  styles?: {}
+  /**
+   * input classes
+   */
+  classes?: string
 }
 
-export const defaultStyles = {}
+export const defaultStyles = {
+  minWidth: 'var(--input-min-w, 60%)',
+}
 
+/**
+ * Input component that renders an HTML input element.
+ * @param {InputProps} props - The input component props.
+ * @returns {JSX.Element} - The input component.
+ */
 export const Input = ({
   type = 'text',
   name,
   value,
   placeholder,
   id,
-  disabled,
+  styles,
+  classes,
+  isDisabled,
   readonly,
   required,
   inputRef,
@@ -69,22 +87,21 @@ export const Input = ({
   inputBlur,
   inputDown,
   ...props
-}: InputProps) => {
-
+}: InputProps): JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (inputChange && !disabled) {
+    if (inputChange && !isDisabled) {
       inputChange?.(e)
     }
   }
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    if(inputBlur && !disabled) {
+    if (inputBlur && !isDisabled) {
       inputBlur?.(e)
     }
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if(inputDown && !disabled) {
+    if (inputDown && !isDisabled) {
       e.preventDefault()
       inputDown?.(e)
     }
@@ -96,20 +113,21 @@ export const Input = ({
       id={id}
       type={type}
       placeholder={placeholder}
-      styles={{ ...defaultStyles }}
+      className={classes}
+      styles={styles}
       onChange={handleChange}
       onBlur={handleBlur}
       onKeyDown={handleKeyDown}
       value={value}
       name={name}
       ref={inputRef}
-      aria-disabled={disabled}
-      tab-index={disabled ? -1 : undefined}
+      aria-disabled={isDisabled}
+      tab-index={isDisabled ? -1 : undefined}
       aria-readonly={readonly}
       readOnly={readonly}
       {...props}
     />
   )
 }
-
+Input.styles = defaultStyles
 Input.displayName = 'Input'

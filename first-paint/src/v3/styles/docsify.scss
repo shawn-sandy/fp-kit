@@ -13,6 +13,7 @@
 .demo_preview {
   width: 100%;
   display: flex;
+
   .demo_preview_content {
     display: flex;
     flex-direction: column;
@@ -21,6 +22,7 @@
     overflow: hidden;
     width: 100%;
     padding: calc(40rem / 16);
+
     main {
       width: auto;
     }
@@ -38,6 +40,7 @@
 .content {
   padding-bottom: 5rem !important;
   font-size: 1rem;
+
   blockquote {
     p {
       font-size: 1.2rem !important;
@@ -56,6 +59,7 @@
     table {
       margin: 0;
       padding: 0;
+
       tr,
       td,
       th,
@@ -84,6 +88,7 @@
   border-radius: var(--sl-border-radius-medium);
   padding: 0.5rem;
 }
+
 .docsify-pagination-container {
   padding-block: 2rem;
 
@@ -111,9 +116,11 @@
 
 .demo_preview .demo_preview_content {
   display: flex;
-  _pro > section {
+
+  _pro>section {
     width: 100%;
   }
+
   h1,
   h2,
   h3,
@@ -127,6 +134,7 @@
 
 .app-sub-sidebar li {
   display: flex;
+
   &::before {
     content: " ";
     display: flex;
@@ -138,9 +146,11 @@
 .page_toc {
   --fs: 0.85rem;
   line-height: 1.5;
-  li + li {
+
+  li+li {
     margin-top: 0.5rem;
   }
+
   @media (max-width: 1290px) {
     display: none;
   }
@@ -148,6 +158,7 @@
   [href*="undefined"] {
     display: none;
   }
+
   span:empty {
     display: none;
   }
@@ -163,7 +174,7 @@ div[style*="--tbl"] {
   border-radius: var(--rds);
 }
 
-.sidebar ul li.active > a {
+.sidebar ul li.active>a {
   width: 100%;
 }
 
@@ -203,4 +214,14 @@ section.cover.show {
 .markdown-section pre {
   padding: 0;
   padding-inline-start: 1rem;
+}
+
+
+h4 {
+  display: block;
+  text-align: center;
+
+  svg {
+    display: inline-block;
+  }
 }

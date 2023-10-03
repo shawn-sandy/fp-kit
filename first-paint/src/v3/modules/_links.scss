@@ -21,17 +21,20 @@
   background-color: var(--link-bg);
   text-decoration: var(--link-decoration, none);
   border: var(--link-border);
-  padding-inline: var(--link-px, 0.25rem);
+  padding-inline: var(--link-px, 0);
   transition: var(--tran-all);
+
   &:hover {
     --link-decoration: underline;
     // background-color: whitesmoke;
     filter: var(--filter);
   }
+
   &:visited {
     color: var(--link-color, #0070f3);
     background-color: var(--link-bg);
   }
+
   &:active {
     color: var(--link-color, #0070f3);
     background-color: var(--link-bg);
@@ -41,17 +44,19 @@
   /* // style --btn will soon be deprecated */
   /* use [data-fp-btn] instead */
   &[style="--btn"],
-  &[data-fp-btn] {
+  &[data-btn] {
     background-color: var(--link-bg, lightgray);
     --btn-bg: var(--link-bg, lightgray);
   }
 
-  &[aria-current], &:visited[aria-current] {
+  &[aria-current],
+  &:visited[aria-current] {
     --link-color: currentColor;
-  //  color: var(--link-color, gray);
-   &:hover {
-     text-decoration: none;
-   }
+
+    //  color: var(--link-color, gray);
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &[data-variant] {
@@ -60,6 +65,7 @@
     --link-decoration: var(--vdecoration);
     --link-fs: var(--vfs);
   }
+
   @content;
 }
 
@@ -73,5 +79,6 @@
     @include props;
     @include rules;
   }
+
   @include styles;
 }

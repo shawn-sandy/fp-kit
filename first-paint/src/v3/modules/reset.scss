@@ -85,8 +85,7 @@ button {
 img,
 picture,
 video,
-canvas,
-svg {
+canvas {
   display: block;
   max-width: 100%;
   aspect-ratio: auto;
@@ -100,11 +99,13 @@ iframe {
 }
 
 svg {
-  display: block;
+  display: inline-block;
 }
 
 /* Inherit fonts for inputs and buttons */
-input, textarea, select{
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
   font-style: inherit;
@@ -161,12 +162,17 @@ table {
 }
 
 svg {
-  // height: auto;
-  width: 100%;
+  max-width: inline-size;
 
   /* Optional - make the SVG's fill be the same as the inherited color */
-  fill: currentColor;
+  // fill: currentColor;
 
   /* Prevent the SVG from altering cursor interaction */
   pointer-events: none;
+
+  &[role="img"] {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+  }
 }

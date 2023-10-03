@@ -13,16 +13,28 @@
 @mixin rules {
   display: var(--footer-dsp, flex);
   flex-direction: var(--footer-direction, column);
-  font-size: var(--footer-fs, var(--fs-2));
+  font-size: var(--footer-fs, var(--fs-3));
 
-  p {
-    --p-fs: var(--footer-fs, var(--fs));
+  >p {
+    text-align: var(--fp-align, center);
   }
+
+  p,
+  section p {
+    font-size: var(--footer-fs, var(--fs-3));
+  }
+
   &[data-variant] {
     --footer-fs: var(--vfs);
     --footer-cl: var(--vcl);
     --footer-bg: var(--vbg);
   }
+
+  >section {
+    width: var(--content-w);
+    padding-block: var(--footer-py, var(--spc-md));
+  }
+
   @content;
 }
 
@@ -32,6 +44,7 @@
 }
 
 @mixin module {
+
   footer,
   [data-footer],
   [role="contentinfo"] {
@@ -40,5 +53,6 @@
       @include rules;
     }
   }
+
   @include styles;
 }

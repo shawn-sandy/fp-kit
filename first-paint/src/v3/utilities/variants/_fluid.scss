@@ -1,0 +1,25 @@
+@mixin module {
+
+  [data-fluid] {
+    @media (min-width: 768px) {
+      display: var(--scale-dsp, flex);
+    }
+
+    @media (max-width: 769px) {
+      --scale-dsp: block
+    }
+  }
+
+  [data-fluid~="block"] {
+    --scale-dsp: block;
+  }
+
+  [data-fluid~="grid"] {
+    --scale-dsp: grid;
+  }
+
+  [data-fluid~="inline-block"] {
+    --scale-dsp: inline-block;
+  }
+
+}

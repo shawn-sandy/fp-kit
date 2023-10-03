@@ -1,41 +1,32 @@
 @mixin props {
   // * responsive fonts sizes
   --fs: 100%;
-  // 16px default
-  --fs-0: clamp(0.8rem, 4vw - 1.5rem, 1rem);
-  // 12px
-  --fs-1: clamp(0.65rem, 1.3vw + 0.25rem, 0.75rem);
-  // 14px
-  --fs-2: clamp(0.7rem, 2vw - 0.5rem, 0.875rem);
-  // 18px
-  --fs-3: clamp(0.85rem, 2vw - 0.25rem, 1.125rem);
-  // 21px
-  --fs-4: clamp(0.95rem, 2vw - 0.25rem, 1.313rem);
-  // 25px
-  --fs-5: clamp(1.1rem, 2vw - 0.25rem, 1.463rem);
-  // 32px
-  --fs-6: clamp(1.3rem, 2vw + 0.75rem, 2rem);
-  // 38px
-  --fs-7: clamp(1.4rem, 4vw - 0.25rem, 2.375rem);
-  // 48px
-  --fs-8: clamp(1.48rem, 4vw + 0.25rem, 3rem);
-  // 64px
-  --fs-9: clamp(1.9rem, 4vw + 1.25rem, 4rem);
-  // 72px
-  --fs-10: clamp(2.5rem, 5vw + 2rem, 4.5rem);
-  // 81px
-  --fs-11: clamp(3rem, 5vw + 1.75rem, 5.063rem);
-  // 101px
-  --fs-12: clamp(3.5rem, 5vw + 3rem, 6.375rem);
+  --fs-0: clamp(.9rem, 4vw - 1rem, 1.12rem); // 16px default
+  --fs-1: clamp(0.65rem, 1.3vw + 0.25rem, 0.75rem); // 12px
+  --fs-2: clamp(0.7rem, 2vw - 0.5rem, 0.875rem); // 14px
+  --fs-3: clamp(0.85rem, 2vw - 0.25rem, 0.925rem); // 18px
+  --fs-4: clamp(0.95rem, 2vw - 0.25rem, 1.313rem); // 21px
+  --fs-5: clamp(1.1rem, 2vw - 0.25rem, 1.463rem); // 25px
+  --fs-6: clamp(1.3rem, 2vw + 0.75rem, 2rem); // 32px
+  --fs-7: clamp(1.4rem, 4vw - 0.25rem, 2.375rem); // 38px
+  --fs-8: clamp(1.48rem, 4vw + 0.25rem, 3rem); // 48px
+  --fs-9: clamp(1.9rem, 4vw + 1.25rem, 4rem); // 64px
+  --fs-10: clamp(2.5rem, 5vw + 2rem, 4.5rem); // 72px
+  --fs-11: clamp(3rem, 5vw + 1.75rem, 5.063rem); // 81px
+  --fs-12: clamp(3.5rem, 5vw + 3rem, 6.375rem); // 101px
 
-  --fs-xs: clamp(0.56rem, 0.14vw + 0.53rem, 0.67rem);
-  --fs-sm: clamp(0.7rem, 0.24vw + 0.64rem, 0.89rem);
-  --fs-base: clamp(0.88rem, 0.39vw + 0.78rem, 1.19rem);
-  --fs-md: clamp(1.09rem, 0.61vw + 0.94rem, 1.58rem);
-  --fs-lg: clamp(1.37rem, 0.93vw + 1.14rem, 2.11rem);
-  --fs-xl: clamp(1.71rem, 1.38vw + 1.36rem, 2.81rem);
-  --fs-xxl: clamp(2.14rem, 2.02vw + 1.63rem, 3.75rem);
-  --fs-xxxl: clamp(2.67rem, 2.91vw + 1.94rem, 5rem);
+  --fs-xs: var(--fs-1);
+  --fs-sm: var(--fs-3);
+  --fs-base: var(--fs-0);
+  --fs-md: var(--fs-5);
+  --fs-lg: var(--fs-7);
+  --fs-xl: var(--fs-9);
+  --fs-xxl: var(--fs-11);
+  --fs-xxxl: var(--fs-12);
+
+  --display: var(--fs-12);
+  --display-md: var(--fs-11);
+  --display-sm: var(--fs-10);
 
   // h1
   --h1: var(--fs-10);

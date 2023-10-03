@@ -1,33 +1,38 @@
-img[alt][width][height],
+img[alt],
 [data-img] {
-  max-width: 100%;
+  max-inline-size: 100%;
   object-fit: var(--img-obj-fit, cover);
+  block-size: auto;
   object-position: var(--img-position, center center);
-  aspect-ratio: var(--img-ratio, auto 2/3);
+  aspect-ratio: var(--img-ratio, 16/9);
 }
-img[alt][width][height][width][height],
+img[alt][width][height],
 [data-img][width][height] {
   height: var(--img-h, auto);
 }
-img[alt][width][height][src$='.svg'],
+img[alt][src$='.svg'],
 [data-img][src$='.svg'] {
   height: auto;
-  width: auto;
+  max-width: auto;
+  object-fit: var(--img-obj-fit, auto);
 }
-img[alt][width][height] + *,
+img[alt] + *,
 [data-img] + * {
   margin-block: 1rem 0;
 }
-img[alt][width][height][data-variant],
+img[alt][data-variant],
 [data-img][data-variant] {
   background-color: var(--vbg);
   color: var(--vcl);
   font-size: var(--vfs);
 }
+img[alt][data-variant~='my-spacer'],
+[data-img][data-variant~='my-spacer'] {
+  margin-block-end: 1rem;
+}
 
 picture,
-figure,
-.fp-figure {
+figure {
   max-width: var(--pic-max-w, 100%);
   width: var(--pic-w, auto);
   display: var(--pic-dsp, flex);
@@ -39,8 +44,7 @@ figure,
   padding-inline: var(--pic-px, 0.5rem);
 }
 
-figcaption,
-.fp-cations {
+figcaption {
   font-size: var(--fcap-fs, inherit);
   display: var(--fcap-dsp, flex);
   place-content: var(--place-x, flex-start);

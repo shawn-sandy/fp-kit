@@ -32,15 +32,18 @@ import '@shawnsandy/first-paint@next/dist/css/components/header.min.css'
 ### Default Header
 
 ```html preview
-<header>
-  <section>
-    <h2>Header Section</h2>
-    <p>
-      Labore est esse et nulla anim labore consequat veniam cupidatat laborum
-      adipisicing.
-    </p>
-  </section>
-</header>
+<div>
+  <header>
+    <section>
+      <h2>Header Section</h2>
+      <p>
+        Labore est esse et nulla anim labore consequat veniam cupidatat laborum
+        adipisicing.
+      </p>
+    </section>
+  </header>
+  <div></div>
+</div>
 ```
 
 ## Header Variables
@@ -96,19 +99,34 @@ import '@shawnsandy/first-paint@next/dist/css/components/header.min.css'
 </header>
 ```
 
-### Header Custom Style (h2)
+### Header data style large
 
+- Style header `data-style="large"`
 - Set the title (h2) to `"--hdr-min-h: 60vh"`
-- Set the font size to `font-size: var(--hdr-fs-xl)`
 
 ```html preview
-<header style="--hdr-min-h: 60vh">
+<header style="--hdr-min-h: 60vh" data-style="large">
   <section>
-    <h2 style="font-size: var(--hdr-fs-xl)">Header with title(h2)</h2>
+    <h2>Header with title(h2)</h2>
     <p>Consectetur et in deserunt est ad tempor consequat officia ex.</p>
   </section>
 </header>
 ```
+
+### Header data style small
+
+- Style header `data-style="small"`
+
+```html preview
+<header data-style="small">
+  <section>
+    <h2>Header with title(h2)</h2>
+    <p>Consectetur et in deserunt est ad tempor consequat officia ex.</p>
+  </section>
+</header>
+```
+
+---
 
 ---
 

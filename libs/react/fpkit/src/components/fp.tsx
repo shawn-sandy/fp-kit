@@ -1,47 +1,64 @@
-import React from "react"
-import { ComponentProps } from "../types"
+import React from 'react'
+import { ComponentProps } from '../types'
 
 type PolymorphicRef<C extends React.ElementType> =
-  React.ComponentPropsWithRef<C>["ref"]
+  React.ComponentPropsWithRef<C>['ref']
 
 type AsProp<C extends React.ElementType> = {
   as?: C
 }
 
-type PropsToOmit<
-  C extends React.ElementType,
-  P
-> = keyof (AsProp<C> & P)
+type PropsToOmit<C extends React.ElementType, P> = keyof (AsProp<C> & P)
 
 type PolymorphicComponentProp<
   C extends React.ElementType,
-  Props = {}
+  Props = {},
 > = React.PropsWithChildren<Props & AsProp<C>> &
-  Omit<
-    React.ComponentPropsWithoutRef<C>,
-    PropsToOmit<C, Props>
-  >
+  Omit<React.ComponentPropsWithoutRef<C>, PropsToOmit<C, Props>>
 
 type PolymorphicComponentPropWithRef<
   C extends React.ElementType,
-  Props = {}
+  Props = {},
 > = PolymorphicComponentProp<C, Props> & {
   ref?: PolymorphicRef<C>
 }
 
-type FPProps<C extends React.ElementType> =
-  PolymorphicComponentPropWithRef<
-    C,
-    {
-      renderStyles?: boolean
-      styles?: {}
-    }
-  >
+type FPProps<C extends React.ElementType> = PolymorphicComponentPropWithRef<
+  C,
+  {
+    renderStyles?: boolean
+    styles?: {}
+  }
+>
 
-type FPComponent = <C extends React.ElementType = "span">(
-  props: FPProps<C>
-) => React.ReactElement | null
+/*
+ * FPComponent type definition
+ *
+ * Defines the component function signature for the FP component.
+ *
+ * @typeParam C - The HTML element type to render
+ * @param props - The component props
+ * @returns React component
+ */
+type FPComponent = <C extends React.ElementType = 'span'>(
+  props: FPProps<C>,
+) => React.ReactElement | any
 
+// create an object type and make it optional
+type styl = {
+  styles?: {}
+}
+
+/**
+ * FP component is a polymorphic component that renders an HTML element with optional styles.
+ * @param {Object} props - Component props
+ * @param {React.ElementType} props.as - The HTML element to render. Defaults to 'div'.
+ * @param {boolean} props.renderStyles - Whether to render styles or not. Defaults to true.
+ * @param {Object} props.styles - The styles to apply to the component.
+ * @param {Object} props.defaultStyles - The default styles to apply to the component.
+ * @param {React.ReactNode} props.children - The children to render inside the component.
+ * @returns {React.ReactElement} - A React component that renders an HTML element with optional styles.
+ */
 const FP: FPComponent = React.forwardRef(
   <C extends React.ElementType>(
     {
@@ -49,24 +66,27 @@ const FP: FPComponent = React.forwardRef(
       renderStyles = true,
       styles,
       children,
+      defaultStyles,
       ...props
     }: FPProps<C>,
-    ref?: PolymorphicRef<C>
+    ref?: PolymorphicRef<C>,
   ) => {
-    const Component = as || "div"
+    const Component = as || 'div'
 
-    const styleObj = renderStyles ? styles : {}
+    const styleObj = renderStyles
+      ? { ...defaultStyles, ...styles }
+      : ({} as React.CSSProperties)
 
     return (
-      <Component ref={ref} style={styleObj} {...props} >
+      <Component ref={ref} style={styleObj} {...props}>
         {children}
       </Component>
     )
-  }
+  },
 )
 export interface BoxProps extends ComponentProps {
-  elm?: "div",
-  renderStyles: true,
+  elm?: 'div'
+  renderStyles: true
 }
 
 export default FP

@@ -28,21 +28,21 @@
   font-weight: var(--badge-fw, 700);
 
 
-  &[data-fp-badge~="beta"]{
+  &[data-badge~="beta"]{
     background-color: var(--beta);
   }
 
-  &[data-fp-badge~="stable"] {
+  &[data-badge~="stable"] {
     --badge-cl: white;
     --badge-bg: var(--stable);
   }
 
-  &[data-fp-badge~="production"] {
+  &[data-badge~="production"] {
     --badge-cl: white;
     --badge-bg: var(--production);
   }
 
-  &[data-fp-badge~="beta"] {
+  &[data-badge~="beta"] {
     --badge-cl:white;
     --badge-bg: var(--beta);
   }
@@ -76,6 +76,7 @@
   }
 
   [style*="--badge-scale"],
+  [data-badge~="scale"],
   p[style*="--badge-scale"] {
     font-size: var(--badge-scale, 75%);
   }
@@ -89,7 +90,8 @@
   [role="note"],
   [role="status"],
   p[role="note"],
-  [data-fp-badge]
+  [data-fp-badge],
+  [data-badge]
   {
     @include props;
     @include rules;

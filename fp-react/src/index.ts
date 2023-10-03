@@ -16,6 +16,7 @@ import Navbar from "./elements/nav/navbar"
 import FpLinks, { OpenTab } from './elements/content/links'
 import Input from "./elements/input/input"
 // import { Textarea } from './elements/textarea/textarea'
+// img fix
 
 export {
   Button,

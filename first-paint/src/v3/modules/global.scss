@@ -16,11 +16,14 @@ body {
   font-family: $font-family;
 }
 
-main, header, footer {
+main,
+header,
+footer {
   font-size: var(--fs);
-  > section {
-    width: var(--lt-min);
+
+  >section {
     margin-inline: auto;
+    width: var(--content-w, 80%);
   }
 }
 
@@ -28,3 +31,9 @@ section:not(nav) {
   margin-inline: var(--sect-y, auto);
   padding-block: var(--sect-x, --spc-4);
 }
+
+p {
+  --fs: var(--fs-0);
+}
+
+//---***************************---//

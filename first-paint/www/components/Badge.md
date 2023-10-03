@@ -1,4 +1,6 @@
-# Badges / Notes <span role="note" aria-label="status" style="--badge: var(--beta)">Beta</span>
+# Notes/Badges
+
+<span role="note" aria-label="status" style="--badge: var(--beta)">Beta</span>
 
 > Add badges or note styled elements/components to your apps using the aria `note` role. Badges are created using `<span role="note">`, adding `note` to other elements will create a `regular` note.
 
@@ -131,13 +133,13 @@ Create/Customize the note background/color with the `<p role="note" style="--bad
 ```
 
 ```html preview
-<div>A simple badge <span data-fp-badge>Stable</span></div>
+<div>A simple badge <span data-badge>Stable</span></div>
 ```
 
 ```html preview
-<p>A simple badge <span data-fp-badge="production">Production</span></p>
-<p>A simple badge <span data-fp-badge="stable">Beta</span></p>
-<p>A simple badge <span data-fp-badge="beta">Production</span></p>
+<p>A simple badge <span data-badge="production">Production</span></p>
+<p>A simple badge <span data-badge="stable">Beta</span></p>
+<p>A simple badge <span data-badge="beta">Production</span></p>
 ```
 
 ## Badge Variants (data-variant)
@@ -172,6 +174,12 @@ Create notes that scales with the font size to `75%` of the parent element, defa
 
 ```html preview
 <h3>A simple badge <span role="note" style="--badge-scale">Badge</span></h3>
+```
+
+Use the `data-badge` attribute to set the scale
+
+```html preview
+<h3>A simple badge <span role="note" data-badge="scale">Badge</span></h3>
 ```
 
 ```html preview

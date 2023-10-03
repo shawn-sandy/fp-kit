@@ -7,7 +7,8 @@ nav,
   height: var(--nav-h, 3.125rem);
   place-items: var(--nav-align, center);
   justify-content: var(--nav-justify, space-between);
-  margin-inline: var(--nav-mx, 1rem);
+  margin-inline: var(--nav-mx, 0);
+  padding-inline: var(--nav-px, 1rem);
   background-color: var(--nav-bg, initial);
 }
 nav > section,
@@ -59,32 +60,61 @@ nav[data-variant],
   font-size: var(--nav-fs, 0.9rem);
 }
 header:not([arial-label], dialog header),
-.fp-header:not([arial-label], dialog header),
-[role='banner']:not([arial-label], dialog header),
-[style*='--hdr']:not([arial-label], dialog header) {
+[role='banner']:not([arial-label], dialog header) {
   display: var(--hdr-dsp, flex);
+  flex-direction: var(--hdr-direction, column);
+  place-content: var(--hdr-place-x, center);
+  place-items: var(--hdr-place-y, center);
   background-color: var(--hdr-bg, var(--fp-white-smoke));
   background-image: var(--hdr-bg-img, none);
   background-position: var(--hdr-bg-pos, center center);
   background-size: var(--hdr-bg-size, cover);
   background-repeat: var(--hdr-bg-repeat, no-repeat);
-  flex-direction: var(--hdr-direction, column);
-  place-content: var(--hdr-place-x, center);
-  place-items: var(--hdr-place-y, center);
   text-align: var(--hdr-align, center);
   min-height: var(--hdr-min-h, calc(var(--vw-md) + var(--vw-xs)));
   min-width: var(--hdr-w, 100%);
   padding-block: var(--hdr-py, 1rem);
   padding-inline: var(--hdr-px, 1rem);
   margin: var(--hdr-m, 0);
+  font-size: var(--ph-fs, var(--fs-6));
 }
 header:not([arial-label], dialog header)[data-variant],
-.fp-header:not([arial-label], dialog header)[data-variant],
-[role='banner']:not([arial-label], dialog header)[data-variant],
-[style*='--hdr']:not([arial-label], dialog header)[data-variant] {
+[role='banner']:not([arial-label], dialog header)[data-variant] {
   background-color: var(--vbg);
   color: var(--vcl);
   font-size: var(--vfs);
+}
+header:not([arial-label], dialog header) section,
+[role='banner']:not([arial-label], dialog header) section {
+  max-width: 80%;
+}
+header:not([arial-label], dialog header) section h2,
+[role='banner']:not([arial-label], dialog header) section h2 {
+  font-size: var(--hfs);
+  --hfs: var(--fs-10, calc(80rem / 16));
+  line-height: var(--hlh, 1.2);
+}
+header:not([arial-label], dialog header) section p,
+[role='banner']:not([arial-label], dialog header) section p {
+  width: var(--hdp-w, 90%);
+  font-size: var(--ph-fs, var(--fs-6));
+  margin: auto;
+}
+header:not([arial-label], dialog header)[data-style~='large'] h2,
+[role='banner']:not([arial-label], dialog header)[data-style~='large'] h2 {
+  --hfs: var(--fs-12);
+}
+header:not([arial-label], dialog header)[data-style~='large'] p,
+[role='banner']:not([arial-label], dialog header)[data-style~='large'] p {
+  --ph-fs: var(--fs-6);
+}
+header:not([arial-label], dialog header)[data-style~='small'] h2,
+[role='banner']:not([arial-label], dialog header)[data-style~='small'] h2 {
+  --hfs: var(--fs-8);
+}
+header:not([arial-label], dialog header)[data-style~='small'] p,
+[role='banner']:not([arial-label], dialog header)[data-style~='small'] p {
+  --ph-fs: var(--fs-4);
 }
 form,
 .fp-form {
@@ -110,41 +140,46 @@ section:where([role='region']) {
 }
 hr {
   width: var(--hr-w, 100%);
-  height: var(--hr-h, 0.05rem);
+  height: var(--hr-h, 0.01rem);
   background-color: var(--hr-bg, lightgray);
   border: none;
-  margin-block: var(--py, 3rem);
+  margin-block: var(--hr-py, 2rem);
   margin-inline: var(px, auto);
 }
-img[alt][width][height],
+img[alt],
 [data-img] {
-  max-width: 100%;
+  max-inline-size: 100%;
   object-fit: var(--img-obj-fit, cover);
+  block-size: auto;
   object-position: var(--img-position, center center);
-  aspect-ratio: var(--img-ratio, auto 2/3);
+  aspect-ratio: var(--img-ratio, 16/9);
 }
-img[alt][width][height][width][height],
+img[alt][width][height],
 [data-img][width][height] {
   height: var(--img-h, auto);
 }
-img[alt][width][height][src$='.svg'],
+img[alt][src$='.svg'],
 [data-img][src$='.svg'] {
   height: auto;
-  width: auto;
+  max-width: auto;
+  object-fit: var(--img-obj-fit, auto);
 }
-img[alt][width][height] + *,
+img[alt] + *,
 [data-img] + * {
   margin-block: 1rem 0;
 }
-img[alt][width][height][data-variant],
+img[alt][data-variant],
 [data-img][data-variant] {
   background-color: var(--vbg);
   color: var(--vcl);
   font-size: var(--vfs);
 }
+img[alt][data-variant~='my-spacer'],
+[data-img][data-variant~='my-spacer'] {
+  margin-block-end: 1rem;
+}
 picture,
-figure,
-.fp-figure {
+figure {
   max-width: var(--pic-max-w, 100%);
   width: var(--pic-w, auto);
   display: var(--pic-dsp, flex);
@@ -155,8 +190,7 @@ figure,
   padding-block: var(--pic-py, 0.5rem);
   padding-inline: var(--pic-px, 0.5rem);
 }
-figcaption,
-.fp-cations {
+figcaption {
   font-size: var(--fcap-fs, inherit);
   display: var(--fcap-dsp, flex);
   place-content: var(--place-x, flex-start);
@@ -211,7 +245,8 @@ figcaption,
 }
 button,
 [style*='--btn'],
-a[data-fp-btn],
+[data-fp-btn],
+[data-btn],
 [role='button'] {
   --btn-sm: calc(12rem / 16);
   --btn-md: calc(16rem / 16);
@@ -220,39 +255,42 @@ a[data-fp-btn],
   --btn-height: calc(40rem / 16);
   --fs: 0.95rem;
   --btn-fs: calc(15rem / 16);
+  --btn-bg: lightgray;
   font-size: var(--btn-fs);
   font-weight: var(--btn-fw, 600);
   height: var(--btn-height, 2.5rem);
   min-height: var(--btn-height, 2.5rem);
-  max-height: var(--btn-height, 2.5rem);
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1%));
   padding-block: var(--btn-py, calc(var(--btn-fs) + 0.75%));
   border: var(--btn-bdr, none);
-  border-radius: var(--btn-rds, 0.1875rem);
+  border-radius: var(--btn-rds, 0.375rem);
   text-decoration: var(--btn-deco, none);
   color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
-  gap: var(--btn-gap, 1rem);
-  white-space: var(--btn-wspc, nowrap);
-  margin: var(--btn-spc, 0.25rem);
+  gap: var(--btn-gap, 0.2rem);
+  white-space: var(--btn-wspc, inherit);
+  margin: var(--btn-spc, 0);
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
   outline: none;
 }
 button[type],
 [style*='--btn'][type],
-a[data-fp-btn][type],
+[data-fp-btn][type],
+[data-btn][type],
 [role='button'][type] {
-  background-color: var(--btn-bg, var(--btn, var(--neutral-100)));
+  background-color: var(--btn-bg, var(--neutral-300));
   --btn-bdr: solid var(--btn-sg);
 }
 button[type='submit'],
 button[style*='submit'],
 [style*='--btn'][type='submit'],
 [style*='--btn'][style*='submit'],
-a[data-fp-btn][type='submit'],
-a[data-fp-btn][style*='submit'],
+[data-fp-btn][type='submit'],
+[data-fp-btn][style*='submit'],
+[data-btn][type='submit'],
+[data-btn][style*='submit'],
 [role='button'][type='submit'],
 [role='button'][style*='submit'] {
   --btn-bg: var(--primary-500, royal-blue);
@@ -262,8 +300,10 @@ button[disabled],
 button[aria-disabled='true'],
 [style*='--btn'][disabled],
 [style*='--btn'][aria-disabled='true'],
-a[data-fp-btn][disabled],
-a[data-fp-btn][aria-disabled='true'],
+[data-fp-btn][disabled],
+[data-fp-btn][aria-disabled='true'],
+[data-btn][disabled],
+[data-btn][aria-disabled='true'],
 [role='button'][disabled],
 [role='button'][aria-disabled='true'] {
   cursor: var(--btn-cursor, not-allowed);
@@ -273,8 +313,10 @@ button[disabled]:is(:hover, :focus),
 button[aria-disabled='true']:is(:hover, :focus),
 [style*='--btn'][disabled]:is(:hover, :focus),
 [style*='--btn'][aria-disabled='true']:is(:hover, :focus),
-a[data-fp-btn][disabled]:is(:hover, :focus),
-a[data-fp-btn][aria-disabled='true']:is(:hover, :focus),
+[data-fp-btn][disabled]:is(:hover, :focus),
+[data-fp-btn][aria-disabled='true']:is(:hover, :focus),
+[data-btn][disabled]:is(:hover, :focus),
+[data-btn][aria-disabled='true']:is(:hover, :focus),
 [role='button'][disabled]:is(:hover, :focus),
 [role='button'][aria-disabled='true']:is(:hover, :focus) {
   transform: none;
@@ -282,19 +324,27 @@ a[data-fp-btn][aria-disabled='true']:is(:hover, :focus),
 }
 button:is(:hover, :focus),
 [style*='--btn']:is(:hover, :focus),
-a[data-fp-btn]:is(:hover, :focus),
+[data-fp-btn]:is(:hover, :focus),
+[data-btn]:is(:hover, :focus),
 [role='button']:is(:hover, :focus) {
   --btn-cl: var(--btn-cl-hover);
   background-color: var(--btn-bg, var(--btn, lightgray));
   filter: invert(1) hue-rotate 180deg;
   transform: scale(0.95);
-  outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin)
-    var(--line-style, solid);
   outline-offset: var(--line-offset, 5px);
+}
+button:is(:hover, :focus)[aria-disabled='true'],
+[style*='--btn']:is(:hover, :focus)[aria-disabled='true'],
+[data-fp-btn]:is(:hover, :focus)[aria-disabled='true'],
+[data-btn]:is(:hover, :focus)[aria-disabled='true'],
+[role='button']:is(:hover, :focus)[aria-disabled='true'] {
+  transform: none;
+  opacity: var(--btn-opacity, 0.5);
 }
 button[type='reset'],
 [style*='--btn'][type='reset'],
-a[data-fp-btn][type='reset'],
+[data-fp-btn][type='reset'],
+[data-btn][type='reset'],
 [role='button'][type='reset'] {
   --btn-bg: transparent;
   --btn-color: gray;
@@ -302,7 +352,8 @@ a[data-fp-btn][type='reset'],
 }
 button[type='submit'],
 [style*='--btn'][type='submit'],
-a[data-fp-btn][type='submit'],
+[data-fp-btn][type='submit'],
+[data-btn][type='submit'],
 [role='button'][type='submit'] {
   --btn-bg: var(--primary-700, blue);
   --btn-cl: #fff;
@@ -310,18 +361,56 @@ a[data-fp-btn][type='submit'],
   --btn-border: none;
 }
 button[data-fp-btn~='pill'],
+button[data-btn~='pill'],
+button[data-style~='pill'],
 [style*='--btn'][data-fp-btn~='pill'],
-a[data-fp-btn][data-fp-btn~='pill'],
-[role='button'][data-fp-btn~='pill'] {
-  border-radius: 100rem;
+[style*='--btn'][data-btn~='pill'],
+[style*='--btn'][data-style~='pill'],
+[data-fp-btn][data-fp-btn~='pill'],
+[data-fp-btn][data-btn~='pill'],
+[data-fp-btn][data-style~='pill'],
+[data-btn][data-fp-btn~='pill'],
+[data-btn][data-btn~='pill'],
+[data-btn][data-style~='pill'],
+[role='button'][data-fp-btn~='pill'],
+[role='button'][data-btn~='pill'],
+[role='button'][data-style~='pill'] {
+  border-radius: var(--btn-pill, 100rem);
 }
 button[data-variant],
+button[data-style],
 [style*='--btn'][data-variant],
-a[data-fp-btn][data-variant],
-[role='button'][data-variant] {
+[style*='--btn'][data-style],
+[data-fp-btn][data-variant],
+[data-fp-btn][data-style],
+[data-btn][data-variant],
+[data-btn][data-style],
+[role='button'][data-variant],
+[role='button'][data-style] {
   --btn-bg: var(--vbg);
   --btn-cl: var(--vcl);
   --btn-fs: var(--vfs, 0.95rem);
+}
+button[data-style~='sm'],
+[style*='--btn'][data-style~='sm'],
+[data-fp-btn][data-style~='sm'],
+[data-btn][data-style~='sm'],
+[role='button'][data-style~='sm'] {
+  --btn-fs: var(--btn-sm);
+}
+button[data-style~='md'],
+[style*='--btn'][data-style~='md'],
+[data-fp-btn][data-style~='md'],
+[data-btn][data-style~='md'],
+[role='button'][data-style~='md'] {
+  --btn-fs: var(--btn-md);
+}
+button[data-style~='lg'],
+[style*='--btn'][data-style~='lg'],
+[data-fp-btn][data-style~='lg'],
+[data-btn][data-style~='lg'],
+[role='button'][data-style~='lg'] {
+  --btn-fs: var(--btn-lg);
 }
 input[type]:not([type='checkbox'], [type='radio']),
 .fp-input[id][type]:not([type='checkbox'], [type='radio']) {
@@ -331,7 +420,7 @@ input[type]:not([type='checkbox'], [type='radio']),
   font-weight: var(--input-fw, normal);
   border-width: var(--input-bdr-w, thin);
   border-style: var(--input-bdr-style, solid);
-  border-color: var(--input-bdr-color, var(--fp-light-gray));
+  border-color: var(--input-bdr-color, var(--fp-light-gray, currentColor));
   padding-inline: var(--input-px, 0.6rem);
   padding-block: var(--input-py, 0.4rem);
   width: var(--input-min-w, min(100%, 50rem));
@@ -339,6 +428,8 @@ input[type]:not([type='checkbox'], [type='radio']),
   -webkit-appearance: var(--input-appearance);
   -moz-appearance: var(--input-appearance);
   appearance: var(--input-appearance);
+  border: var(--input-bdr-color, currentColor) var(--input-bdr-style, solid)
+    var(--input-bdr-w, thin);
 }
 input[type]:not([type='checkbox'], [type='radio'])::placeholder,
 .fp-input[id][type]:not([type='checkbox'], [type='radio'])::placeholder {
@@ -473,12 +564,20 @@ footer:not([aria-label], [role='footer']),
 [role='contentinfo']:not([aria-label], [role='footer']) {
   display: var(--footer-dsp, flex);
   flex-direction: var(--footer-direction, column);
-  font-size: var(--footer-fs, var(--fs-2));
+  font-size: var(--footer-fs, var(--fs-3));
+}
+footer:not([aria-label], [role='footer']) > p,
+[data-footer]:not([aria-label], [role='footer']) > p,
+[role='contentinfo']:not([aria-label], [role='footer']) > p {
+  text-align: var(--fp-align, center);
 }
 footer:not([aria-label], [role='footer']) p,
+footer:not([aria-label], [role='footer']) section p,
 [data-footer]:not([aria-label], [role='footer']) p,
-[role='contentinfo']:not([aria-label], [role='footer']) p {
-  --p-fs: var(--footer-fs, var(--fs));
+[data-footer]:not([aria-label], [role='footer']) section p,
+[role='contentinfo']:not([aria-label], [role='footer']) p,
+[role='contentinfo']:not([aria-label], [role='footer']) section p {
+  font-size: var(--footer-fs, var(--fs-3));
 }
 footer:not([aria-label], [role='footer'])[data-variant],
 [data-footer]:not([aria-label], [role='footer'])[data-variant],
@@ -486,4 +585,10 @@ footer:not([aria-label], [role='footer'])[data-variant],
   --footer-fs: var(--vfs);
   --footer-cl: var(--vcl);
   --footer-bg: var(--vbg);
+}
+footer:not([aria-label], [role='footer']) > section,
+[data-footer]:not([aria-label], [role='footer']) > section,
+[role='contentinfo']:not([aria-label], [role='footer']) > section {
+  width: var(--content-w);
+  padding-block: var(--footer-py, var(--spc-md));
 } /*# sourceMappingURL=fp-components.css.map */

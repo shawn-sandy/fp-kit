@@ -1,20 +1,21 @@
+/**
+ * Import Storybook and component dependencies
+ */
 import type { Meta, StoryObj } from '@storybook/react'
 
+/**
+ * Import testing library dependencies
+ */
 import { within, userEvent } from '@storybook/testing-library'
 
+/**
+ * Import jest matchers
+ */
 import { expect } from '@storybook/jest'
 /**
  * import component(s)
  */
-import { Button } from './button'
-
-/**
- * Add object with test prop values
- */
-const buttonProps = {
-  children: 'Default Button',
-  type: 'button',
-}
+import { Button, defStyles } from './button'
 
 /**
  * Set component meta data
@@ -30,25 +31,31 @@ const meta: Meta<typeof Button> = {
 export default meta
 type Story = StoryObj<typeof Button>
 
+/**
+ * Add object with test prop values
+ */
+const buttonProps = {
+  children: 'Default Button',
+  type: 'button',
+}
+
 export const AdvButton: Story = {
   args: {
     // @ts-ignore
     children: buttonProps.children,
-    type: buttonProps.type,
-    onPointerDown: { action: "down" },
-    onPointerLeave: { action: "leave" },
-    onPointerOver: { action: "over" }
-  }
+    type: buttonProps.type as 'button' | 'submit' | 'reset' | undefined,
+    styles: defStyles,
+  },
 }
 
 /**
- * create story with inherited story args
+ * extend AdvButton story args
  * (AdvButton.args)
  */
 export const ButtonInteractions: Story = {
-
+  // inherit AdvButton args
   ...AdvButton,
-  args: {...AdvButton.args},
+  // add play params/object to interact with component
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const button = canvas.getByRole('button')

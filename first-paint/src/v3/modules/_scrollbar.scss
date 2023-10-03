@@ -12,12 +12,13 @@
 }
 
 @mixin rules {
-  max-height: var(--scroll, 50vh);
+  max-height: var(--scroll, 40vh);
+  max-width: var(--scroll-w, 100%);
   overflow-y: var(--overflow-y, auto);
   overflow-x: var(--overflow-x, auto);
   scrollbar-width: var(--scroll-size, thin);
 
-  > * {
+  >* {
     padding: 10px;
   }
 
@@ -26,15 +27,15 @@
     height: var(--scroll-h, 0.5rem);
     transition: opacity 500ms ease;
   }
+
   &::-webkit-scrollbar-track {
     /* Background */
     background: var(--scroll-track-bg, lightgray);
-
   }
+
   &::-webkit-scrollbar-thumb {
     /* Foreground */
     background: var(--scroll-bg, gray);
-
   }
 
   &[data-variant] {
@@ -47,18 +48,51 @@
     --scroll-track-bg: var(--vscroll-track-bg);
     --scroll-bg: var(--vscroll-bg);
   }
+
   @content;
 }
 
 @mixin styles {
+
   // * css style utilities
+  [data-scroll~="horizontal"] {
+    --overflow-x: hidden;
+    --overflow-y: auto;
+  }
+
+  [data-scroll~="vertical"] {
+    --overflow-x: auto;
+    --overflow-y: hidden;
+  }
+
+  [data-scroll~="sm"] {
+    --scroll: 20vh;
+  }
+
+  [data-scroll~="md"] {
+    --scroll: 40vh;
+  }
+
+  [data-scroll~="lg"] {
+    --scroll: 60vh;
+  }
+
+  [data-scroll~="xl"] {
+    --scroll: 80vh;
+  }
+
   @content;
 }
 
 @mixin module {
-  [style*="--scroll"], div[role="region"], [data-fp-scroll] {
+
+  [style*="--scroll"],
+  div[role="region"],
+  [data-fp-scroll],
+  [data-scroll] {
     @include props;
     @include rules;
   }
+
   @include styles;
 }

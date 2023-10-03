@@ -1,1 +1,30 @@
-.fp-content form,.fp-content .fp-form{width:100%}.fp-content form div+div,.fp-content .fp-form div+div{margin-block-start:var(--form-spc, 1.5rem);display:block}.fp-content .fp-label+input,.fp-content .fp-label+textarea,.fp-content .fp-label+select,.fp-content label[for]+input,.fp-content label[for]+textarea,.fp-content label[for]+select{margin-block-start:.75rem;display:block}.fp-content div:where([role="region"]),.fp-content section:where([role="region"]){width:100%}.fp-content hr{width:var(--hr-w, 100%);height:var(--hr-h, 0.05rem);background-color:var(--hr-bg, lightgray);border:none;margin-block:var(--py, 3rem);margin-inline:var(px, auto)}/*# sourceMappingURL=content.css.map */
+.fp-content form,
+.fp-content .fp-form {
+  width: 100%;
+}
+.fp-content form div + div,
+.fp-content .fp-form div + div {
+  margin-block-start: var(--form-spc, 1.5rem);
+  display: block;
+}
+.fp-content .fp-label + input,
+.fp-content .fp-label + textarea,
+.fp-content .fp-label + select,
+.fp-content label[for] + input,
+.fp-content label[for] + textarea,
+.fp-content label[for] + select {
+  margin-block-start: 0.75rem;
+  display: block;
+}
+.fp-content div:where([role='region']),
+.fp-content section:where([role='region']) {
+  width: 100%;
+}
+.fp-content hr {
+  width: var(--hr-w, 100%);
+  height: var(--hr-h, 0.01rem);
+  background-color: var(--hr-bg, lightgray);
+  border: none;
+  margin-block: var(--hr-py, 2rem);
+  margin-inline: var(px, auto);
+} /*# sourceMappingURL=content.css.map */

@@ -26,7 +26,6 @@
 
 @mixin rules {
   @include props;
-
   // * css rules/styles
   h1,
   h2,
@@ -37,10 +36,31 @@
   display: var(--card-dsp, flex);
   flex-direction: var(--card-direction, column);
   padding: var(--card, var(--card-pd, 2rem));
-  border-radius: var(--card-radius, 0.2rem);
+  border-radius: var(--card-radius, calc(6rem/16));
   background-color: var(--card-bg, var(--bg, #fff));
   box-shadow: var(--card-shadow, none);
   border: var(--card-border, thin solid lightgray);
+
+  &[data-style~="shadow-sm"] {
+    box-shadow: var(--cd-shadow-sm);
+  }
+
+  &[data-style~="shadow-md"] {
+    box-shadow: var(--cd-shadow-md);
+  }
+
+  &[data-style~="shadow-md"] {
+    box-shadow: var(--cd-shadow-md);
+  }
+
+  &[data-style~="shadow-lg"] {
+    box-shadow: var(--cd-shadow-lg);
+  }
+
+  &[data-style~="shadow-none"] {
+    box-shadow: none;
+  }
+
   @content;
 }
 

@@ -1,8 +1,10 @@
+import { ReactNode } from "react"
+
 export interface ComponentProps {
   /**
    * The default child content/component to render.
    */
-  children?: React.ReactNode
+  children?: ReactNode
   /**
    * Use default component styles
    */
@@ -15,6 +17,10 @@ export interface ComponentProps {
    * Styles object
    */
   styles?: {}
+  /**
+   * Default styles object
+   */
+  defaultStyles?: {}
   /**
    * Component class attribute
    */

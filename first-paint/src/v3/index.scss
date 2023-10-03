@@ -2,6 +2,7 @@
 @use "./modules/props";
 @use "./modules/global.scss";
 @use "./modules/header.scss";
+@use "./modules/main.scss";
 @use "./modules/container";
 @use "./modules/button";
 @use "./modules/checkbox";
@@ -38,6 +39,7 @@
 @include props.module();
 @include nav.module();
 @include header.module();
+@include main.module();
 @include content.module();
 @include links.module();
 @include img.module();

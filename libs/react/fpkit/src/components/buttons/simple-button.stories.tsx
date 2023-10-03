@@ -1,6 +1,6 @@
 import { Button } from './button'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
-import '@shawnsandy/first-paint/dist/css/components/button.min.css'
+// import '@shawnsandy/first-paint/dist/css/components/button.min.css'
 
 import { userEvent, screen, waitFor } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
@@ -11,6 +11,7 @@ export default {
   args: {
     children: 'Default Button',
     type: 'button',
+    styles: Button.styles,
   },
   argTypes: {
     children: { control: 'text' },

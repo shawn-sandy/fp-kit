@@ -1,56 +1,56 @@
-import React from "react";
+import React from 'react'
 
 type Rainbow =
-  | "red"
-  | "orange"
-  | "yellow"
-  | "green"
-  | "blue"
-  | "indigo"
-  | "violet";
+  | 'red'
+  | 'orange'
+  | 'yellow'
+  | 'green'
+  | 'blue'
+  | 'indigo'
+  | 'violet'
 
 type PolymorphicRef<C extends React.ElementType> =
-  React.ComponentPropsWithRef<C>["ref"];
+  React.ComponentPropsWithRef<C>['ref']
 
 type AsProp<C extends React.ElementType> = {
-  as?: C;
-};
+  as?: C
+}
 
-type PropsToOmit<C extends React.ElementType, P> = keyof (AsProp<C> & P);
+type PropsToOmit<C extends React.ElementType, P> = keyof (AsProp<C> & P)
 
 type PolymorphicComponentProp<
   C extends React.ElementType,
-  Props = {}
+  Props = {},
 > = React.PropsWithChildren<Props & AsProp<C>> &
-  Omit<React.ComponentPropsWithoutRef<C>, PropsToOmit<C, Props>>;
+  Omit<React.ComponentPropsWithoutRef<C>, PropsToOmit<C, Props>>
 
 type PolymorphicComponentPropWithRef<
   C extends React.ElementType,
-  Props = {}
-> = PolymorphicComponentProp<C, Props> & { ref?: PolymorphicRef<C> };
+  Props = {},
+> = PolymorphicComponentProp<C, Props> & { ref?: PolymorphicRef<C> }
 
 type TextProps<C extends React.ElementType> = PolymorphicComponentPropWithRef<
   C,
-  { color?: Rainbow | "black" }
->;
+  { color?: Rainbow | 'black' }
+>
 
-type TextComponent = <C extends React.ElementType = "span">(
-  props: TextProps<C>
-) => React.ReactElement | null;
+type TextComponent = <C extends React.ElementType = 'span'>(
+  props: TextProps<C>,
+) => React.ReactElement | any
 
 export const Text: TextComponent = React.forwardRef(
-  <C extends React.ElementType = "span">(
+  <C extends React.ElementType = 'span'>(
     { as, color, children }: TextProps<C>,
-    ref?: PolymorphicRef<C>
+    ref?: PolymorphicRef<C>,
   ) => {
-    const Component = as || "span";
+    const Component = as || 'span'
 
-    const style = color ? { style: { color } } : {};
+    const style = color ? { style: { color } } : {}
 
     return (
       <Component {...style} ref={ref}>
         {children}
       </Component>
-    );
-  }
-);
+    )
+  },
+)

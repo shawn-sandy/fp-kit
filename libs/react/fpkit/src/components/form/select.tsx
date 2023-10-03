@@ -1,6 +1,8 @@
 import FP from '../fp'
 import { SharedInputProps } from '../../types'
 
+import './style.scss'
+
 export interface SelectProps extends SharedInputProps {
   /**
    * Select onChange event props
@@ -37,8 +39,6 @@ export const Select = ({
     }
   }
 
-
-
   return (
     <FP
       as="select"
@@ -53,5 +53,7 @@ export const Select = ({
     </FP>
   )
 }
+
+Select.styles = defaultStyles
 
 Select.displayName = 'Select'

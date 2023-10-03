@@ -15,34 +15,33 @@
   --btn-height: calc(40rem / 16);
   --fs: .95rem;
   --btn-fs: calc(15rem / 16);
+  --btn-bg: lightgray;
   @content;
 }
 
 @mixin rules() {
-
   @include props;
   font-size: var(--btn-fs);
   font-weight: var(--btn-fw, 600);
   height: var(--btn-height, calc(40rem / 16));
   min-height: var(--btn-height, calc(40rem / 16));
-  max-height: var(--btn-height, calc(40rem / 16));
   place-items: var(--btn-place, center);
   padding-inline: var(--btn-px, calc(var(--btn-fs) + 1.1%));
   padding-block: var(--btn-py, calc(var(--btn-fs) + .75%));
   border: var(--btn-bdr, none);
-  border-radius: var(--btn-rds, calc(3rem / 16));
+  border-radius: var(--btn-rds, calc(6rem / 16));
   text-decoration: var(--btn-deco, none);
   color: var(--btn-cl, currentColor);
   display: var(--btn-dsp, inline-flex);
-  gap: var(--btn-gap, 1rem);
-  white-space: var(--btn-wspc, nowrap);
-  margin: var(--btn-spc, 0.25rem);
+  gap: var(--btn-gap, .2rem);
+  white-space: var(--btn-wspc, inherit);
+  margin: var(--btn-spc, 0);
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
   outline: none;
 
   &[type] {
-    background-color: var(--btn-bg, var(--btn, var(--neutral-100)));
+    background-color: var(--btn-bg, var(--neutral-300));
     --btn-bdr: solid var(--btn-sg);
   }
 
@@ -56,6 +55,7 @@
   &[aria-disabled="true"] {
     cursor: var(--btn-cursor, not-allowed);
     opacity: var(--btn-opacity, 0.5);
+
     &:is(:hover, :focus) {
       transform: none;
       // background-color: var(--btn-bg, lightgray);
@@ -70,8 +70,13 @@
     background-color: var(--btn-bg, var(--btn, lightgray));
     filter: invert(1) hue-rotate (180deg);
     transform: scale(0.95);
-    outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
+    // outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
     outline-offset: var(--line-offset, 5px);
+
+    &[aria-disabled="true"] {
+      transform: none;
+      opacity: var(--btn-opacity, 0.5);
+    }
   }
 
   &[type="reset"] {
@@ -87,14 +92,29 @@
     --btn-border: none;
   }
 
-  &[data-fp-btn~="pill"] {
-    border-radius: 100rem;
+  &[data-fp-btn~="pill"],
+  &[data-btn~="pill"],
+  &[data-style~="pill"] {
+    border-radius: var(--btn-pill, 100rem);
   }
 
-  &[data-variant] {
+  &[data-variant],
+  &[data-style] {
     --btn-bg: var(--vbg);
     --btn-cl: var(--vcl);
     --btn-fs: var(--vfs, .95rem);
+  }
+
+  &[data-style~='sm'] {
+    --btn-fs: var(--btn-sm);
+  }
+
+  &[data-style~='md'] {
+    --btn-fs: var(--btn-md);
+  }
+
+  &[data-style~='lg'] {
+    --btn-fs: var(--btn-lg);
   }
 
   @content;
@@ -106,7 +126,8 @@
 
   button,
   [style*="--btn"],
-  a[data-fp-btn],
+  [data-fp-btn],
+  [data-btn],
   [role="button"] {
     @include rules;
   }

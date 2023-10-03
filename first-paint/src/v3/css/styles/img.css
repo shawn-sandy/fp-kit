@@ -1,15 +1,17 @@
 .fp-img {
-  max-width: 100%;
+  max-inline-size: 100%;
   object-fit: var(--img-obj-fit, cover);
+  block-size: auto;
   object-position: var(--img-position, center center);
-  aspect-ratio: var(--img-ratio, auto 2/3);
+  aspect-ratio: var(--img-ratio, 16/9);
 }
 .fp-img[width][height] {
   height: var(--img-h, auto);
 }
 .fp-img[src$='.svg'] {
   height: auto;
-  width: auto;
+  max-width: auto;
+  object-fit: var(--img-obj-fit, auto);
 }
 .fp-img + * {
   margin-block: 1rem 0;
@@ -18,6 +20,9 @@
   background-color: var(--vbg);
   color: var(--vcl);
   font-size: var(--vfs);
+}
+.fp-img[data-variant~='my-spacer'] {
+  margin-block-end: 1rem;
 }
 
 /*# sourceMappingURL=img.css.map */

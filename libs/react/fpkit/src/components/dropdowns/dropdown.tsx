@@ -1,6 +1,6 @@
+import { ComponentProps } from '../../types'
 import { Details } from './dropdown-details'
 import { Summary } from './dropdown-summary'
-import { ComponentProps } from '../../types'
 
 export interface DropdownProps extends ComponentProps {
   title: string
@@ -29,14 +29,17 @@ export const Dropdown = ({
   renderStyles = true,
   ...props
 }: DropdownProps) => {
-  const stylesObj = renderStyles ? defaultStyles : {}
   return (
-    <Details styles={{ ...stylesObj, ...styles }} onToggle={toggle} {...props}>
+    <Details styles={styles} onToggle={toggle} {...props}>
       <Summary>{summary}</Summary>
       {children}
     </Details>
   )
 }
 
-// export default Dropdown
+Dropdown.styles = defaultStyles
+Dropdown.Summary = Summary
+Dropdown.Details = Details
+
+export default Dropdown
 Dropdown.displayName = 'Dropdown'

@@ -11,26 +11,23 @@
 
 @mixin rules {
 
-  max-width: 100%;
+  max-inline-size: 100%;
   object-fit: var(--img-obj-fit, cover);
+  block-size: auto;
   object-position: var(--img-position, center center);
-  aspect-ratio: var(--img-ratio, auto 2/3);
-
-  // &[width] {
-  //   width: var(--img-w, auto);
-  // }
+  aspect-ratio: var(--img-ratio, 16/9);
 
   &[width][height] {
     height: var(--img-h, auto);
   }
 
   &[src$=".svg"] {
-    // width: 100%;
     height: auto;
-    width: auto;
+    max-width: auto;
+    object-fit: var(--img-obj-fit, auto);
   }
 
-  + * {
+  +* {
     margin-block: 1rem 0;
   }
 
@@ -38,6 +35,10 @@
     background-color: var(--vbg);
     color: var(--vcl);
     font-size: var(--vfs);
+  }
+
+  &[data-variant~="my-spacer"] {
+    margin-block-end: min(1rem, 1.3rem);
   }
 
 
@@ -67,22 +68,22 @@
   padding-inline: var(--fcap-px, 0.5rem);
 }
 
-@mixin styles {
-
-}
+@mixin styles {}
 
 @mixin module {
-  img[alt][width][height], [data-img] {
+
+  img[alt],
+  [data-img] {
     @include props;
     @include rules;
   }
 
   picture,
-  figure, .fp-figure {
+  figure {
     @include figure-rules;
   }
 
-  figcaption, .fp-cations {
+  figcaption {
     @include figcaption-rules;
   }
 }
