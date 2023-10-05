@@ -15,7 +15,6 @@ module.exports = {
     '@storybook/addon-storysource',
     '@storybook/addon-coverage',
     '@storybook/addon-mdx-gfm',
-    '@storybook/addon-coverage',
     '@chromaui/addon-visual-tests',
   ],
   features: {
@@ -28,5 +27,6 @@ module.exports = {
   },
   docs: {
     autodocs: true,
+    defaultName: 'Interactive Guide',
   },
 }
