@@ -23,9 +23,9 @@ export const parameters = {
   docs: {
     page: CustomDocs,
     toc: true, // 👈 Enables the table of contents
-
   },
   layout: 'centered',
+  // @geometricpanda/storybook-addon-badges
   badgesConfig: {
     beta: {
       styles: {
