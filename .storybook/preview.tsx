@@ -3,6 +3,7 @@ import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
 
 import * as React from 'react'
 import * as DocBlock from '@storybook/blocks'
+import CustomDocs from './templates/custom-docs'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -20,17 +21,9 @@ export const parameters = {
     },
   },
   docs: {
-    page: () => (
-      <>
-        <DocBlock.Title />
-        <DocBlock.Subtitle />
-        <DocBlock.Description />
-        <DocBlock.Primary />
-        <DocBlock.Controls />
-        <DocBlock.Source />
-        <DocBlock.Stories />
-      </>
-    ),
+    page: CustomDocs,
+    toc: true, // 👈 Enables the table of contents
+
   },
   layout: 'centered',
   badgesConfig: {
