@@ -1,5 +1,7 @@
 const path = require('path')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+const path = require('path')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 module.exports = {
   stories: [
     '../libs/react/guides/**/*.stories.mdx',
@@ -14,6 +16,9 @@ module.exports = {
     '@geometricpanda/storybook-addon-badges',
     '@storybook/addon-storysource',
     '@storybook/addon-coverage',
+    '@storybook/addon-mdx-gfm',
+    '@storybook/addon-coverage',
+    '@chromaui/addon-visual-tests',
     '@storybook/addon-mdx-gfm',
     '@chromaui/addon-visual-tests',
   ],
