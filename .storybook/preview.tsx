@@ -2,6 +2,8 @@ import './style.css'
 import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
 
 import * as React from 'react'
+import * as DocBlock from '@storybook/blocks'
+import CustomDocs from './templates/custom-docs'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -12,6 +14,16 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  options: {
+    sort: {
+      method: 'alphabetical',
+    },
+  },
+  docs: {
+    page: CustomDocs,
+    toc: true, // 👈 Enables the table of contents
+
   },
   layout: 'centered',
   badgesConfig: {

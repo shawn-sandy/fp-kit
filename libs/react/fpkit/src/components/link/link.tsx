@@ -1,14 +1,14 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
 
-export type LinkProps = Partial<ComponentProps> & {
+export type LinkProps = {
   href: string
   target?: string
   rel?: string
   children: React.ReactNode
   prefetch?: boolean
   onPointerDown?: (e: React.PointerEvent<HTMLAnchorElement>) => void
-}
+} & Pick<ComponentProps, 'styles'>
 
 export const Link = ({
   href,
