@@ -15,7 +15,6 @@ const meta: Meta<typeof Header> = {
   title: 'FP.React Components/Layout/Landmarks',
   component: Header,
   args: {
-    // @ts-ignore
     children: 'Default Header',
     // @ts-ignore
     'data-testid': 'banner',
@@ -36,7 +35,6 @@ export const LandmarkDefault: Story = {}
 
 export const HeaderWithChildren: Story = {
   args: {
-    // @ts-ignore
     children: headerChildren(),
   },
   play: async ({ canvasElement }) => {

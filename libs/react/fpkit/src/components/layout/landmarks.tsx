@@ -4,6 +4,13 @@
 
 import FP from '../fp'
 import { ComponentProps } from '../../types'
+import React from 'react'
+
+/**
+ * Renders children elements without any wrapping component.
+ * Can be used as a placeholder when no semantic landmark is needed.
+ */
+export const Landmarks = (children?: React.FC) => <>{children}</>
 
 export const Header = ({ children, styles = {}, ...props }: ComponentProps) => {
   return (
@@ -60,6 +67,16 @@ export const Article = ({
     </FP>
   )
 }
+
+export default Landmarks
+
+Landmarks.displayName = 'Landmarks'
+Landmarks.Header = Header
+Landmarks.Main = Main
+Landmarks.Footer = Footer
+Landmarks.Aside = Aside
+Landmarks.Section = Section
+Landmarks.Article = Article
 
 Header.displayName = 'Header'
 Main.displayName = 'Main'
