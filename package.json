@@ -24,7 +24,6 @@
     "commit": "run-s git:add git:cz git:push",
     "prepare": "chmod +x ./node_modules/husky/lib/bin.js && husky install",
     "eslint": "eslint '**/src/**/*.jsx'",
-    "lint-staged": "lint-staged",
     "commitlint": "npx commitlint",
     "mit": "mitosis compile --to=react src/component.lite.jsx > components/react/components/component.jsx",
     "chromatic": "chromatic --exit-zero-on-changes",
