@@ -51,7 +51,8 @@
 
   }
 
-  &[data-style~=large] {
+  &[data-style~=large],
+  &[data-style~=cover] {
     h2 {
       --hfs: var(--fs-12);
     }
@@ -59,6 +60,7 @@
     p {
       --ph-fs: var(--fs-6);
     }
+
   }
 
   &[data-style~=small] {
