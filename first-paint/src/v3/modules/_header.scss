@@ -51,7 +51,8 @@
 
   }
 
-  &[data-style~=large] {
+  &[data-style~=large],
+  &[data-style~=banner] {
     h2 {
       --hfs: var(--fs-12);
     }
@@ -61,7 +62,8 @@
     }
   }
 
-  &[data-style~=small] {
+  &[data-style~=small],
+  &[data-style~=banner] {
     h2 {
       --hfs: var(--fs-8);
     }

@@ -209,16 +209,20 @@ p {
   font-size: var(--ph-fs, var(--fs-6));
   margin: auto;
 }
-.fp-header[data-style~='large'] h2 {
+.fp-header[data-style~='large'] h2,
+.fp-header[data-style~='banner'] h2 {
   --hfs: var(--fs-12);
 }
-.fp-header[data-style~='large'] p {
+.fp-header[data-style~='large'] p,
+.fp-header[data-style~='banner'] p {
   --ph-fs: var(--fs-6);
 }
-.fp-header[data-style~='small'] h2 {
+.fp-header[data-style~='small'] h2,
+.fp-header[data-style~='banner'] h2 {
   --hfs: var(--fs-8);
 }
-.fp-header[data-style~='small'] p {
+.fp-header[data-style~='small'] p,
+.fp-header[data-style~='banner'] p {
   --ph-fs: var(--fs-4);
 }
 .fp-container {

@@ -40,18 +40,26 @@ header:not([arial-label], dialog header) section p,
   margin: auto;
 }
 header:not([arial-label], dialog header)[data-style~='large'] h2,
-[role='banner']:not([arial-label], dialog header)[data-style~='large'] h2 {
+header:not([arial-label], dialog header)[data-style~='banner'] h2,
+[role='banner']:not([arial-label], dialog header)[data-style~='large'] h2,
+[role='banner']:not([arial-label], dialog header)[data-style~='banner'] h2 {
   --hfs: var(--fs-12);
 }
 header:not([arial-label], dialog header)[data-style~='large'] p,
-[role='banner']:not([arial-label], dialog header)[data-style~='large'] p {
+header:not([arial-label], dialog header)[data-style~='banner'] p,
+[role='banner']:not([arial-label], dialog header)[data-style~='large'] p,
+[role='banner']:not([arial-label], dialog header)[data-style~='banner'] p {
   --ph-fs: var(--fs-6);
 }
 header:not([arial-label], dialog header)[data-style~='small'] h2,
-[role='banner']:not([arial-label], dialog header)[data-style~='small'] h2 {
+header:not([arial-label], dialog header)[data-style~='banner'] h2,
+[role='banner']:not([arial-label], dialog header)[data-style~='small'] h2,
+[role='banner']:not([arial-label], dialog header)[data-style~='banner'] h2 {
   --hfs: var(--fs-8);
 }
 header:not([arial-label], dialog header)[data-style~='small'] p,
-[role='banner']:not([arial-label], dialog header)[data-style~='small'] p {
+header:not([arial-label], dialog header)[data-style~='banner'] p,
+[role='banner']:not([arial-label], dialog header)[data-style~='small'] p,
+[role='banner']:not([arial-label], dialog header)[data-style~='banner'] p {
   --ph-fs: var(--fs-4);
 } /*# sourceMappingURL=header.css.map */
