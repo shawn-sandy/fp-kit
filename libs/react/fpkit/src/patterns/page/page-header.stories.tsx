@@ -9,7 +9,7 @@ const meta: Meta<typeof PageHeader> = {
   component: PageHeader,
   args: {
     headerTitle: 'Page Header',
-    children: 'Place your cool elevator pitch here',
+    children: 'Place your cool elevator pitch here...',
   },
 } as Meta
 
