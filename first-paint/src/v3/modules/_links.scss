@@ -45,7 +45,7 @@
   /* use [data-fp-btn] instead */
   &[style="--btn"],
   &[data-btn] {
-    background-color: var(--link-bg, lightgray);
+    // background-color: var(--link-bg, lightgray);
     --btn-bg: var(--link-bg, lightgray);
   }
 

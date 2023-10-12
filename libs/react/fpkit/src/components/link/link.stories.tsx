@@ -48,3 +48,10 @@ export const ExternalLink: Story = {
     expect(link).toHaveAttribute('rel', 'noopener noreferrer prefetch')
   },
 }
+
+export const ButtonLink: Story = {
+  args: {
+    ...LinkComponent.args,
+    children: 'Button Link',
+  },
+} as Story

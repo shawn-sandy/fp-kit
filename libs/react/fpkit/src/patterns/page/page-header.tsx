@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 import Landmarks from '#components/layout/landmarks'
 import { ComponentProps } from '#types'
+import { Link } from '#components/link/link'
 
 export enum HeaderVariants {
   Cover = 'cover',
   Banner = 'banner',
+}
+
+export type headerLinkType = {
+  url: string
+  label: string
 }
 
 /**
@@ -24,9 +30,12 @@ export type PageHeaderProps = {
   variant?: HeaderVariants
   /** The children of the page header (optional) */
   children?: React.ReactNode
+  headerLink?: headerLinkType
 } & Pick<ComponentProps, 'styles'>
 
-const defaultStyles = {}
+const defaultStyles = {
+  minHeight: 'var(--hdr-min-h, 30vh)',
+}
 
 /**
  * PageHeader component
@@ -55,7 +64,7 @@ const PageHeader = ({
     <Landmarks.Header styles={style} data-style={variant} {...props}>
       <h2>{headerTitle}</h2>
       {!!headerSubtitle && <h3>{headerSubtitle}</h3>}
-      {children}
+      <Link href="/">{children}</Link>
     </Landmarks.Header>
   )
 }

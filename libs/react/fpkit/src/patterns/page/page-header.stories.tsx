@@ -2,14 +2,14 @@ import { StoryObj, Meta } from '@storybook/react'
 import { within, userEvent, screen } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
-import PageHeader, { HeaderVariants } from './page-header'
+import PageHeader, { HeaderVariants } from './page-header.js'
 
 const meta: Meta<typeof PageHeader> = {
   title: 'FP.React Patterns/PageHeader',
   component: PageHeader,
   args: {
     headerTitle: 'Page Header',
-    children: 'Place your cool elevator pitch here...',
+    headerSubtitle: 'Place your cool elevator pitch here...',
   },
 } as Meta
 
@@ -38,4 +38,5 @@ export const Banner: Story = {
     ...PageHeaderComponent.args,
     variant: HeaderVariants.Banner,
   },
+  name: 'Banner Style',
 } as Story

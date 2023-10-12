@@ -1202,6 +1202,12 @@ header:not([arial-label], dialog header) section p,
   font-size: var(--ph-fs, var(--fs-6));
   margin: auto;
 }
+header:not([arial-label], dialog header)[data-style~='large'],
+header:not([arial-label], dialog header)[data-style~='cover'],
+[role='banner']:not([arial-label], dialog header)[data-style~='large'],
+[role='banner']:not([arial-label], dialog header)[data-style~='cover'] {
+  --hdr-min-h: 40vh;
+}
 header:not([arial-label], dialog header)[data-style~='large'] h2,
 header:not([arial-label], dialog header)[data-style~='cover'] h2,
 [role='banner']:not([arial-label], dialog header)[data-style~='large'] h2,
@@ -1307,7 +1313,6 @@ a:active {
 a[role='button'],
 a[style='--btn'],
 a[data-btn] {
-  background-color: var(--link-bg, lightgray);
   --btn-bg: var(--link-bg, lightgray);
 }
 a[aria-current],

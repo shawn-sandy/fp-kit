@@ -113,6 +113,10 @@ p {
   font-size: var(--ph-fs, var(--fs-6));
   margin: auto;
 }
+.fp-header[data-style~='large'],
+.fp-header[data-style~='cover'] {
+  --hdr-min-h: 40vh;
+}
 .fp-header[data-style~='large'] h2,
 .fp-header[data-style~='cover'] h2 {
   --hfs: var(--fs-12);
