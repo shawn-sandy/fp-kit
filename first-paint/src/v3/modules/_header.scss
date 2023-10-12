@@ -35,7 +35,7 @@
   }
 
   section {
-    max-width: 80%;
+    max-width: clamp(98%, 80%, 90%);
 
     h2 {
       font-size: var(--hfs);

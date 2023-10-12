@@ -1188,7 +1188,7 @@ header:not([arial-label], dialog header)[data-variant],
 }
 header:not([arial-label], dialog header) section,
 [role='banner']:not([arial-label], dialog header) section {
-  max-width: 80%;
+  max-width: 98%;
 }
 header:not([arial-label], dialog header) section h2,
 [role='banner']:not([arial-label], dialog header) section h2 {

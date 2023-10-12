@@ -22,7 +22,7 @@
   font-size: var(--vfs);
 }
 .fp-header section {
-  max-width: 80%;
+  max-width: 98%;
 }
 .fp-header section h2 {
   font-size: var(--hfs);
