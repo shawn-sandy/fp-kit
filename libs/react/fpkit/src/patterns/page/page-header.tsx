@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Landmarks from '#components/layout/landmarks'
 import { ComponentProps } from '#types'
 
-enum HeaderVariants {
+export enum HeaderVariants {
   Cover = 'cover',
   Banner = 'banner',
 }
@@ -29,14 +29,18 @@ export type PageHeaderProps = {
 const defaultStyles = {}
 
 /**
- * Renders a page header with a title, subtitle, and optional children.
- * @param {Object} props - The component props.
- * @param {string} props.headerTitle - The title of the header.
- * @param {string} [props.headerSubtitle] - The subtitle of the header (optional).
- * @param {string} [props.variant] - The variant of the header (optional).
- * @param {ReactNode} [props.children] - The children to render inside the header (optional).
- * @param {Object} [props.styles] - The styles to apply to the header (optional).
- * @returns {JSX.Element} - The rendered component.
+ * PageHeader component
+ *
+ * Renders a page header with title, subtitle, variant and children.
+ *
+ * @param {PageHeaderProps} props - Component props
+ * @param {string} props.headerTitle - The title of the header
+ * @param {string} [props.headerSubtitle] - Optional subtitle
+ * @param {HeaderVariants} [props.variant] - Visual variant
+ * @param {ReactNode} [props.children] - Content inside the header
+ * @param {Object} [props.styles] - CSS styles to apply
+ *
+ * @returns {ReactElement} The page header component
  */
 const PageHeader = ({
   headerTitle,
@@ -48,7 +52,7 @@ const PageHeader = ({
 }: PageHeaderProps) => {
   const style = { defaultStyles, ...styles }
   return (
-    <Landmarks.Header styles={style} {...props}>
+    <Landmarks.Header styles={style} data-style={variant} {...props}>
       <h2>{headerTitle}</h2>
       {!!headerSubtitle && <h3>{headerSubtitle}</h3>}
       {children}

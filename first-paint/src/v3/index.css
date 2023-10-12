@@ -1276,8 +1276,8 @@ header:not([arial-label], dialog header),
 [role='banner']:not([arial-label], dialog header) {
   display: var(--hdr-dsp, flex);
   flex-direction: var(--hdr-direction, column);
-  place-content: var(--hdr-place-x, center);
-  place-items: var(--hdr-place-y, center);
+  place-content: var(--hdr-place-content, center);
+  place-items: var(--hdr-place-items, center);
   background-color: var(--hdr-bg, var(--fp-white-smoke));
   background-image: var(--hdr-bg-img, none);
   background-position: var(--hdr-bg-pos, center center);
@@ -1325,12 +1325,22 @@ header:not([arial-label], dialog header)[data-style~='cover'] p,
 [role='banner']:not([arial-label], dialog header)[data-style~='cover'] p {
   --ph-fs: var(--fs-6);
 }
+header:not([arial-label], dialog header)[data-style~='small'],
+header:not([arial-label], dialog header)[data-style~='banner'],
+[role='banner']:not([arial-label], dialog header)[data-style~='small'],
+[role='banner']:not([arial-label], dialog header)[data-style~='banner'] {
+  --text-align: 'left';
+}
 header:not([arial-label], dialog header)[data-style~='small'] h2,
-[role='banner']:not([arial-label], dialog header)[data-style~='small'] h2 {
+header:not([arial-label], dialog header)[data-style~='banner'] h2,
+[role='banner']:not([arial-label], dialog header)[data-style~='small'] h2,
+[role='banner']:not([arial-label], dialog header)[data-style~='banner'] h2 {
   --hfs: var(--fs-8);
 }
 header:not([arial-label], dialog header)[data-style~='small'] p,
-[role='banner']:not([arial-label], dialog header)[data-style~='small'] p {
+header:not([arial-label], dialog header)[data-style~='banner'] p,
+[role='banner']:not([arial-label], dialog header)[data-style~='small'] p,
+[role='banner']:not([arial-label], dialog header)[data-style~='banner'] p {
   --ph-fs: var(--fs-4);
 }
 
