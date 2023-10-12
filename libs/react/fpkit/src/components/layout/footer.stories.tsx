@@ -19,7 +19,7 @@ const meta: Meta<typeof Footer> = {
     // @ts-ignore
     'data-testid': 'main',
   },
-}
+} as Meta
 
 const mainChildren = () => (
   <>

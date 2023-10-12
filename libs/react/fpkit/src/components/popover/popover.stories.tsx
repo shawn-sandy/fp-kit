@@ -13,7 +13,7 @@ const meta: Meta<typeof Popover> = {
     popoverTrigger: 'Hover here',
     styles: Popover.styles,
   },
-}
+} as Meta
 
 export default meta
 type Story = StoryObj<typeof Popover>

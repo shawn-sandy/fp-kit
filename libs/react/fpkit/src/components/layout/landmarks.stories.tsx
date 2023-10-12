@@ -19,7 +19,7 @@ const meta: Meta<typeof Header> = {
     // @ts-ignore
     'data-testid': 'banner',
   },
-}
+} as Meta
 
 const headerChildren = () => (
   <>
@@ -45,4 +45,4 @@ export const HeaderWithChildren: Story = {
     expect(title).toBeInTheDocument()
     expect(title).toHaveTextContent(/header title/i)
   },
-}
+} as Story

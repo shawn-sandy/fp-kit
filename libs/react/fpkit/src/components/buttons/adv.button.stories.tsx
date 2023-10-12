@@ -23,7 +23,7 @@ import { Button, defStyles } from './button'
 const meta: Meta<typeof Button> = {
   title: 'FP.React Components/Buttons',
   component: Button,
-}
+} as Meta
 
 /**
  * Export meta object

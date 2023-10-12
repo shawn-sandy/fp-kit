@@ -14,7 +14,7 @@ const meta: Meta<typeof Link> = {
     href: '/',
     children: 'Link',
   },
-}
+} as Meta
 
 export default meta
 type Story = StoryObj<typeof Link>

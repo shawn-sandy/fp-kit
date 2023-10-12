@@ -9,7 +9,7 @@ import List from './list'
 const meta: Meta<typeof List> = {
   title: 'FP.React Components/List',
   component: List,
-}
+} as Meta
 
 const listElm = (
   <>
@@ -31,7 +31,6 @@ export const DefaultList: Story = {
 export const UnstyledList: Story = {
   args: {
     ...DefaultList.args,
-    // @ts-ignore
     'data-variant': 'unstyled',
   },
 }
