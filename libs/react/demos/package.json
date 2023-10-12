@@ -1,7 +1,7 @@
 {
   "name": "demos",
   "private": true,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@shawnsandy/first-paint": "^2.18.7",
+    "@shawnsandy/first-paint": "^2.18.8",
     "downshift": "^7.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
