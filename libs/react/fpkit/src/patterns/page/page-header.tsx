@@ -13,14 +13,6 @@ export type headerLinkType = {
   label: string
 }
 
-/**
- * Props for the PageHeader component
- * @param {string} title - The title of the page header
- * @param {string} [subtitle] - The subtitle of the page header (optional)
- * @param {HeaderVariants} [variant] - The variant of the page header (optional)
- * @param {React.ReactNode} [children] - The children of the page header (optional)
- * @param {ComponentProps['styles']} [styles] - The styles for the page header (optional)
- */
 export type PageHeaderProps = {
   /** The title of the page header */
   headerTitle: string
@@ -30,6 +22,7 @@ export type PageHeaderProps = {
   variant?: HeaderVariants
   /** The children of the page header (optional) */
   children?: React.ReactNode
+  /** The link of the page header (optional) */
   headerLink?: headerLinkType
 } & Pick<ComponentProps, 'styles'>
 
@@ -64,7 +57,7 @@ const PageHeader = ({
     <Landmarks.Header styles={style} data-style={variant} {...props}>
       <h2>{headerTitle}</h2>
       {!!headerSubtitle && <h3>{headerSubtitle}</h3>}
-      <Link href="/">{children}</Link>
+      {children}
     </Landmarks.Header>
   )
 }

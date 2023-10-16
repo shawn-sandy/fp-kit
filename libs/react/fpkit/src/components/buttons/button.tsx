@@ -134,6 +134,7 @@ export const Button = ({
       onPointerLeave={handlePointerLeave}
       style={styles}
       aria-disabled={disabled}
+      onClick={handlePointerDown}
       {...props}
     >
       {children}

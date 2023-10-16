@@ -51,7 +51,7 @@ export const ExternalLink: Story = {
 
 export const ButtonLink: Story = {
   args: {
-    ...LinkComponent.args,
+    ...ExternalLink.args,
     children: 'Button Link',
   },
 } as Story

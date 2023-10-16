@@ -7,10 +7,9 @@
 */
 a {
   --link-border: none;
-  --link-bg: white-smoke;
+  --link-bg: lightgray;
   --link-color: #0070f3;
   color: var(--link-color);
-  background-color: var(--link-bg);
   text-decoration: var(--link-decoration, none);
   border: var(--link-border);
   padding-inline: var(--link-px, 0);
@@ -31,7 +30,7 @@ a:active {
 a[role='button'],
 a[style='--btn'],
 a[data-btn] {
-  --btn-bg: var(--link-bg, lightgray);
+  background-color: var(--link-bg, lightgray);
 }
 a[aria-current],
 a:visited[aria-current] {
