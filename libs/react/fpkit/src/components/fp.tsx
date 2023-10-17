@@ -73,9 +73,7 @@ const FP: FPComponent = React.forwardRef(
   ) => {
     const Component = as || 'div'
 
-    const styleObj = renderStyles
-      ? { ...defaultStyles, ...styles }
-      : ({} as React.CSSProperties)
+    const styleObj = { ...defaultStyles, ...styles } as React.CSSProperties
 
     return (
       <Component ref={ref} style={styleObj} {...props}>

@@ -3,10 +3,11 @@ import { ComponentProps } from '../../types'
 
 export type LinkProps = {
   href: string
+  children: React.ReactNode
   target?: string
   rel?: string
-  children: React.ReactNode
   prefetch?: boolean
+  btnStyle?: boolean
   onPointerDown?: (e: React.PointerEvent<HTMLAnchorElement>) => void
 } & Pick<ComponentProps, 'styles'>
 
@@ -14,9 +15,10 @@ export const Link = ({
   href,
   target,
   rel,
-  children,
+  children = 'Link' as React.ReactNode,
   styles = {},
   prefetch = true,
+  btnStyle,
   onPointerDown,
   ...props
 }: LinkProps) => {
@@ -37,9 +39,10 @@ export const Link = ({
       styles={styles}
       rel={relValue}
       onPointerDown={handleOnpointerDown}
+      data-btn={btnStyle}
       {...props}
     >
-      {children ?? 'Link'}
+      {children}
     </FP>
   )
 }

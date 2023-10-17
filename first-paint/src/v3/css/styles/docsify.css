@@ -1211,8 +1211,8 @@ header:not([arial-label], dialog header),
 [role='banner']:not([arial-label], dialog header) {
   display: var(--hdr-dsp, flex);
   flex-direction: var(--hdr-direction, column);
-  place-content: var(--hdr-place-x, center);
-  place-items: var(--hdr-place-y, center);
+  place-content: var(--hdr-place-content, center);
+  place-items: var(--hdr-place-items, center);
   background-color: var(--hdr-bg, var(--fp-white-smoke));
   background-image: var(--hdr-bg-img, none);
   background-position: var(--hdr-bg-pos, center center);
@@ -1234,7 +1234,7 @@ header:not([arial-label], dialog header)[data-variant],
 }
 header:not([arial-label], dialog header) section,
 [role='banner']:not([arial-label], dialog header) section {
-  max-width: 80%;
+  max-width: 98%;
 }
 header:not([arial-label], dialog header) section h2,
 [role='banner']:not([arial-label], dialog header) section h2 {
@@ -1248,17 +1248,23 @@ header:not([arial-label], dialog header) section p,
   font-size: var(--ph-fs, var(--fs-6));
   margin: auto;
 }
+header:not([arial-label], dialog header)[data-style~='large'],
+[role='banner']:not([arial-label], dialog header)[data-style~='large'] {
+  --hdr-min-h: 40vh;
+}
 header:not([arial-label], dialog header)[data-style~='large'] h2,
-header:not([arial-label], dialog header)[data-style~='banner'] h2,
-[role='banner']:not([arial-label], dialog header)[data-style~='large'] h2,
-[role='banner']:not([arial-label], dialog header)[data-style~='banner'] h2 {
+[role='banner']:not([arial-label], dialog header)[data-style~='large'] h2 {
   --hfs: var(--fs-12);
 }
 header:not([arial-label], dialog header)[data-style~='large'] p,
-header:not([arial-label], dialog header)[data-style~='banner'] p,
-[role='banner']:not([arial-label], dialog header)[data-style~='large'] p,
-[role='banner']:not([arial-label], dialog header)[data-style~='banner'] p {
+[role='banner']:not([arial-label], dialog header)[data-style~='large'] p {
   --ph-fs: var(--fs-6);
+}
+header:not([arial-label], dialog header)[data-style~='small'],
+header:not([arial-label], dialog header)[data-style~='banner'],
+[role='banner']:not([arial-label], dialog header)[data-style~='small'],
+[role='banner']:not([arial-label], dialog header)[data-style~='banner'] {
+  --text-align: 'left';
 }
 header:not([arial-label], dialog header)[data-style~='small'] h2,
 header:not([arial-label], dialog header)[data-style~='banner'] h2,
@@ -1466,10 +1472,9 @@ hr {
 
 a {
   --link-border: none;
-  --link-bg: white-smoke;
+  --link-bg: lightgray;
   --link-color: #0070f3;
   color: var(--link-color);
-  background-color: var(--link-bg);
   text-decoration: var(--link-decoration, none);
   border: var(--link-border);
   padding-inline: var(--link-px, 0);
@@ -1490,8 +1495,8 @@ a:active {
 a[role='button'],
 a[style='--btn'],
 a[data-btn] {
+  color: var(--btn-link-color, currentColor);
   background-color: var(--link-bg, lightgray);
-  --btn-bg: var(--link-bg, lightgray);
 }
 a[aria-current],
 a:visited[aria-current] {

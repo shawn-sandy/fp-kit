@@ -25,7 +25,7 @@ const meta: Meta<typeof Main> = {
     // @ts-ignore
     'data-testid': 'main',
   },
-}
+} as Meta
 
 const mainChildren = () => (
   <section>

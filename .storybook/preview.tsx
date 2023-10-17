@@ -2,7 +2,6 @@ import './style.css'
 import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
 
 import * as React from 'react'
-import * as DocBlock from '@storybook/blocks'
 import CustomDocs from './templates/custom-docs'
 
 export const parameters = {
@@ -21,6 +20,7 @@ export const parameters = {
     },
   },
   docs: {
+    page: CustomDocs,
     toc: true, // 👈 Enables the table of contents
   },
   layout: 'centered',

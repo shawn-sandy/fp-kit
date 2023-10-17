@@ -15,10 +15,9 @@
 
   // * css rules/styles
   --link-border: none;
-  --link-bg: white-smoke;
+  --link-bg: lightgray;
   --link-color: #0070f3;
   color: var(--link-color);
-  background-color: var(--link-bg);
   text-decoration: var(--link-decoration, none);
   border: var(--link-border);
   padding-inline: var(--link-px, 0);
@@ -41,12 +40,10 @@
   }
 
   &[role="button"],
-  /* // style --btn will soon be deprecated */
-  /* use [data-fp-btn] instead */
   &[style="--btn"],
   &[data-btn] {
+    color: var(--btn-link-color, currentColor);
     background-color: var(--link-bg, lightgray);
-    --btn-bg: var(--link-bg, lightgray);
   }
 
   &[aria-current],

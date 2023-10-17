@@ -14,7 +14,7 @@ const meta: Meta<typeof Link> = {
     href: '/',
     children: 'Link',
   },
-}
+} as Meta
 
 export default meta
 type Story = StoryObj<typeof Link>
@@ -48,3 +48,10 @@ export const ExternalLink: Story = {
     expect(link).toHaveAttribute('rel', 'noopener noreferrer prefetch')
   },
 }
+
+export const ButtonLink: Story = {
+  args: {
+    ...ExternalLink.args,
+    children: 'Button Link',
+  },
+} as Story
