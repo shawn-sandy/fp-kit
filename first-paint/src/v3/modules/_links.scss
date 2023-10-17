@@ -40,10 +40,9 @@
   }
 
   &[role="button"],
-  /* // style --btn will soon be deprecated */
-  /* use [data-fp-btn] instead */
   &[style="--btn"],
   &[data-btn] {
+    color: var(--btn-link-color, currentColor);
     background-color: var(--link-bg, lightgray);
   }
 
