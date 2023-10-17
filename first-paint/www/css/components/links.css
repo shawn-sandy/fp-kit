@@ -23,6 +23,7 @@ a:active {
 a[role='button'],
 a[style='--btn'],
 a[data-btn] {
+  color: var(--btn-link-color, currentColor);
   background-color: var(--link-bg, lightgray);
 }
 a[aria-current],
