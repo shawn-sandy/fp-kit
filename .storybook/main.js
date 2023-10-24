@@ -15,9 +15,6 @@ module.exports = {
     '@storybook/addon-storysource',
     '@storybook/addon-coverage',
     '@storybook/addon-mdx-gfm',
-    '@storybook/addon-coverage',
-    '@chromaui/addon-visual-tests',
-    '@storybook/addon-mdx-gfm',
     '@chromaui/addon-visual-tests',
   ],
   features: {
