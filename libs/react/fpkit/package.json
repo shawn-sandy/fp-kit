@@ -2,7 +2,7 @@
   "name": "@fpkit/react",
   "description": "A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.",
   "private": false,
-  "version": "0.3.20",
+  "version": "0.3.21",
   "scripts": {
     "start": "run-p package:watch dev",
     "dev": "vite --open",
@@ -25,7 +25,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@shawnsandy/first-paint": "^2.18.9",
+    "@shawnsandy/first-paint": "^2.18.10",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
