@@ -9,14 +9,14 @@ export type ListProps = {
   /** Children to be rendered inside the list */
   children: React.ReactNode
   /** Type of list to render (default: 'ul') */
-  type: 'ul' | 'ol' | 'dl'
+  type?: 'ul' | 'ol' | 'dl'
   /** variant of list to render (default: 'none') */
-  variant: string
+  variant?: string
 }
 
 export type ListItemProps = Omit<ListProps, 'type'> & {
   /** Type of list item to render (default: 'li') */
-  type: 'li' | 'dt' | 'dd'
+  type?: 'li' | 'dt' | 'dd'
 }
 
 /**

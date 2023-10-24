@@ -13,9 +13,9 @@ const meta: Meta<typeof List> = {
 
 const listElm = (
   <>
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
+    <List.ListItem>Home</List.ListItem>
+    <List.ListItem>About</List.ListItem>
+    <List.ListItem>Contact</List.ListItem>
   </>
 )
 
@@ -26,11 +26,18 @@ export const DefaultList: Story = {
   args: {
     children: listElm,
   },
-}
+} as Story
 
 export const UnstyledList: Story = {
   args: {
     ...DefaultList.args,
     'data-variant': 'unstyled',
   },
-}
+} as Story
+
+export const InlineList: Story = {
+  args: {
+    ...UnstyledList.args,
+    'data-list': 'inline',
+  },
+} as Story
