@@ -1,4 +1,6 @@
 import FP from '../fp'
+import React from 'react'
+
 import { ComponentProps } from '../../types'
 
 export const Nav = ({ children, styles = {}, ...props }: ComponentProps) => {
