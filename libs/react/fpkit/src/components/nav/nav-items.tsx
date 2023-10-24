@@ -15,7 +15,11 @@ const defaultStyles = {}
  * @returns {JSX.Element} - The rendered NavItems component.
  */
 const NavItems = ({ children, ...props }: NavItemsProps): JSX.Element => {
-  return <FP {...props}>{children}</FP>
+  return (
+    <FP as="section" {...props}>
+      {children}
+    </FP>
+  )
 }
 
 export default NavItems
