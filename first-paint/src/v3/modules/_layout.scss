@@ -20,10 +20,14 @@
 @mixin styles {
   // * css style utilities
   @content;
-  main, header, footer {
+
+  main,
+  header,
+  footer {
     font-size: var(--fs, 1rem);
-    > section {
-      width:  var(--content-w);
+
+    >section {
+      width: var(--content-w);
       margin-inline: auto;
     }
   }
@@ -33,6 +37,17 @@
     padding-block: var(--spc-4, 1rem);
   }
 
+  section {
+    --section-display: flex;
+    --section-direction: column;
+    --section-padding: .5rem;
+    --section-gap: 1.5rem;
+    display: var(--section-display);
+    flex-direction: var(--section-direction);
+    gap: var(--section-gap);
+    padding: var(--section-padding);
+  }
+
 }
 
 @mixin module {
@@ -40,5 +55,6 @@
     @include props;
     @include rules;
   }
+
   @include styles;
 }

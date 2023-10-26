@@ -33,6 +33,13 @@ export const UnstyledList: Story = {
     ...DefaultList.args,
     'data-variant': 'unstyled',
   },
+  parameters: {
+    docs: {
+      description: {
+        story: '## Another description `on the story`, with some markdown',
+      },
+    },
+  },
 } as Story
 
 export const InlineList: Story = {

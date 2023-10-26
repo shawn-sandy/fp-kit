@@ -35,6 +35,11 @@
     padding-block: var(--footer-py, var(--spc-md));
   }
 
+  >div {
+    font-size: var(--fs-3);
+    text-align: center;
+  }
+
   @content;
 }
 
