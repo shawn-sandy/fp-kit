@@ -1989,6 +1989,12 @@ footer:not([aria-label], [role='footer']) > section,
   width: var(--content-w);
   padding-block: var(--footer-py, var(--spc-md));
 }
+footer:not([aria-label], [role='footer']) > div,
+[data-footer]:not([aria-label], [role='footer']) > div,
+[role='contentinfo']:not([aria-label], [role='footer']) > div {
+  font-size: var(--fs-3);
+  --text-align: center;
+}
 ul,
 ol,
 [data-fp-list],
