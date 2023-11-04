@@ -36,8 +36,9 @@
   }
 
   >div {
-    font-size: var(--fs-3);
     --text-align: center;
+    font-size: var(--fs-3);
+    text-align: var(--text-align)
   }
 
   @content;
