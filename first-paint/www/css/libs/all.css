@@ -2270,6 +2270,52 @@ nav > :where(ol, [data-fp-breadcrumb], [data-breadcrumb])[data-variant] {
   --crumb-cl: var(--vcl);
   --crumb-bg: var(--vbg);
 }
+progress {
+  --progress-color: red;
+  --progress-accent-color: var(--progress-color);
+  --progress-bg: #cccccc;
+  --progress-height: 1.6rem;
+  --progress-width: 100%;
+  display: block;
+  height: var(--progress-height);
+  width: var(--progress-width);
+  background-color: var(--progress-bg);
+  color: var(--progress-accent-color);
+  accent-color: var(--progress-color);
+}
+progress[value] {
+  --progress-height: 1rem;
+}
+progress[value]::-webkit-progress-value {
+  background-color: var(--progress-accent-color);
+  accent-color: var(--progress-accent-color);
+}
+progress[value]::-moz-progress-bar {
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-background-color);
+}
+progress[value]::-webkit-progress-bar {
+  background-color: var(--progress-background-color);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy] {
+  all: revert;
+  height: var(--progress-height);
+  width: var(--progress-width);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy]::-webkit-progress-value {
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy]::-moz-progress-bar {
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy]::-webkit-progress-bar {
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-accent-color);
+}
 [style*='--fp'] {
   background-color: var(--fp-bg);
   color: var(--fp-cl);

@@ -1,0 +1,94 @@
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
+
+@mixin props() {
+  // * css custom properties
+  --progress-color: red;
+  --progress-accent-color: var(--progress-color);
+  --progress-bg: #cccccc;
+  --progress-height: 1.6rem;
+  --progress-width: 100%;
+  @content;
+}
+
+@mixin rules {
+  display: block;
+  height: var(--progress-height);
+  width: var(--progress-width);
+  background-color: var(--progress-bg);
+  color: var(--progress-accent-color);
+  accent-color: var(--progress-color);
+
+  &[value] {
+    --progress-height: 1rem;
+
+    &::-webkit-progress-value {
+      /* Color for Chrome, Safari, and newer Opera */
+      background-color: var(--progress-accent-color);
+      accent-color: var(--progress-accent-color)
+    }
+
+    &::-moz-progress-bar {
+      /* Color for Firefox */
+      background-color: var(--progress-bg);
+      accent-color: var(--progress-background-color)
+    }
+
+    /* Styling for the remaining part of the& bar */
+    &::-webkit-progress-bar {
+      /* Background for Chrome, Safari, and newer Opera */
+      background-color: var(--progress-background-color);
+      accent-color: var(--progress-accent-color)
+    }
+  }
+
+
+  // * css rules/styles
+  &[aria-busy] {
+    all: revert;
+    height: var(--progress-height);
+    width: var(--progress-width);
+    accent-color: var(--progress-accent-color);
+
+    &::-webkit-progress-value {
+      /* Color for Chrome, Safari, and newer Opera */
+      background-color: var(--progress-bg);
+      accent-color: var(--progress-accent-color)
+    }
+
+    &::-moz-progress-bar {
+      /* Color for Firefox */
+      background-color: var(--progress-bg);
+      accent-color: var(--progress-accent-color)
+    }
+
+    /* Styling for the remaining part of the& bar */
+    &::-webkit-progress-bar {
+      /* Background for Chrome, Safari, and newer Opera */
+      background-color: var(--progress-bg);
+      accent-color: var(--progress-accent-color)
+    }
+  }
+
+  @content;
+}
+
+@mixin styles {
+  // * css style utilities
+
+  @content;
+}
+
+@mixin module {
+  progress {
+    @include props;
+    @include rules;
+  }
+
+  @include styles;
+}

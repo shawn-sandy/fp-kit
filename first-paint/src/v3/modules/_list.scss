@@ -36,12 +36,15 @@
 
   // * css style utilities
   [style*="--listOff"] {
+    // * set default list style to none
     --list-s: var(--listOff, none);
     --list-pxs: var(--listOff, 5px);
   }
 
+  // * unstyled list
   [data-fp-list~="unstyled"],
   [data-variant~="unstyled"] {
+    // * override default list style
     --list-s: none;
     --list-pxs: 0;
 
@@ -51,6 +54,7 @@
     }
   }
 
+  // * inline list
   [data-fp-list~="inline"],
   [data-list~="inline"] {
     --list-dsp: flex;

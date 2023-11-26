@@ -18,6 +18,7 @@
 @use "./modules/footer";
 @use "./modules/content";
 @use "./modules/links";
+@use "./modules/progress";
 // custom modules
 @forward "./modules/details-summary" as detailsSummary-*;
 @forward "./modules/tooltip" as tooltip-*;
@@ -47,7 +48,7 @@
 @include button.module();
 @include input.module();
 @include radio.module();
+@include progress.module();
 @include textarea.module();
 @include select.module();
 @include footer.module();
-
