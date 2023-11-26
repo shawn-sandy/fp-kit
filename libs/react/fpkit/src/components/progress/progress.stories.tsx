@@ -9,10 +9,7 @@ import Progress from './progress'
 const meta: Meta<typeof Progress> = {
   title: 'FP.React Components/Progress',
   component: Progress,
-  args: {
-    // @ts-ignore
-    children: 'Link',
-  },
+  args: {},
   decorators: [
     (Story) => (
       <div style={{ minWidth: '500px', height: '100%' }}>
@@ -30,9 +27,19 @@ export default meta
 type Story = StoryObj<typeof Progress>
 
 export const ProgressComponent: Story = {
-  args: {},
+  name: 'Progress Bar',
+  args: {
+    isBusy: true,
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     //expect(canvas).toBeInTheDocument()
   },
-}
+} as Story
+
+export const ProgressIndicator: Story = {
+  args: {
+    value: 3,
+    max: 10,
+  },
+} as Story
