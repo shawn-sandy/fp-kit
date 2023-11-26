@@ -1,0 +1,38 @@
+import { StoryObj, Meta } from '@storybook/react'
+import { within, userEvent, screen } from '@storybook/testing-library'
+import { expect } from '@storybook/jest'
+
+import './progress.scss'
+
+import Progress from './progress'
+
+const meta: Meta<typeof Progress> = {
+  title: 'FP.React Components/Progress',
+  component: Progress,
+  args: {
+    // @ts-ignore
+    children: 'Link',
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ minWidth: '500px', height: '100%' }}>
+        <Story />
+      </div>
+    ),
+  ],
+} as Meta
+
+const css = {
+  progress: Progress.styles,
+}
+
+export default meta
+type Story = StoryObj<typeof Progress>
+
+export const ProgressComponent: Story = {
+  args: {},
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    //expect(canvas).toBeInTheDocument()
+  },
+}
