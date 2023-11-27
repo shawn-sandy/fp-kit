@@ -23,7 +23,15 @@ type ProgressOptions =
     }
 
 export type ProgressProps = {
+  /**
+   * Optional styles to pass to override default styles
+   * Accepts CSSProperties
+   */
   styles?: React.CSSProperties
+
+  /**
+   * Optional accessible label for the progress bar
+   */
   label?: string
 } & ProgressOptions
 
