@@ -54,7 +54,7 @@ const Progress = ({
   isBusy,
   value,
   max,
-  label,
+  label = 'Progress',
   ...props
 }: ProgressProps): React.JSX.Element => {
   const style = { ...defaultStyles, ...styles }

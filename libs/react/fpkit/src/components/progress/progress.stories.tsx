@@ -5,7 +5,6 @@ import { expect } from '@storybook/jest'
 import './progress.scss'
 
 import Progress from './progress'
-import { S } from 'vitest/dist/types-198fd1d9.js'
 
 const meta: Meta<typeof Progress> = {
   title: 'FP.React Components/Progress',
