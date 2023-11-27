@@ -42,7 +42,6 @@ export const ProgressIndicator: Story = {
   args: {
     value: 3,
     max: 10,
-    isBusy: 'true',
   },
 } as Story
 
