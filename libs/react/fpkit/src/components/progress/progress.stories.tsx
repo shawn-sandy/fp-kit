@@ -5,6 +5,7 @@ import { expect } from '@storybook/jest'
 import './progress.scss'
 
 import Progress from './progress'
+import { S } from 'vitest/dist/types-198fd1d9.js'
 
 const meta: Meta<typeof Progress> = {
   title: 'FP.React Components/Progress',
@@ -41,5 +42,16 @@ export const ProgressIndicator: Story = {
   args: {
     value: 3,
     max: 10,
+    isBusy: 'true',
+  },
+} as Story
+
+export const RedProgress: Story = {
+  args: {
+    ...ProgressIndicator.args,
+    styles: {
+      '--progress-color': '#ff0000',
+    },
+    value: 7,
   },
 } as Story

@@ -3,17 +3,17 @@ import React from 'react'
 type ProgressOptions =
   | {
       /** Indicates progress bar is in busy/loading state */
-      isBusy: true
+      isBusy?: true
 
       /** No current value when in busy state */
-      value: never
+      value?: never
 
       /** No max value needed when in busy state */
-      max: never
+      max?: never
     }
   | {
       /** Indicates progress bar is not in busy state */
-      isBusy: false
+      isBusy?: false | undefined
 
       /** Current value of progress bar */
       value: number
