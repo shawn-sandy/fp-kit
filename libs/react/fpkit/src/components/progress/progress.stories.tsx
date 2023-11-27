@@ -50,7 +50,7 @@ export const RedProgress: Story = {
   args: {
     ...ProgressIndicator.args,
     styles: {
-      '--progress-color': '#ff0000',
+      '--progress-color': 'red',
     },
     value: 7,
   },
