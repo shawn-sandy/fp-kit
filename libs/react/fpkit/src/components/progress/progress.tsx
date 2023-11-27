@@ -1,6 +1,6 @@
 import React from 'react'
 
-type ProgressType =
+type ProgressOptions =
   | {
       /** Indicates progress bar is in busy/loading state */
       isBusy: true
@@ -23,30 +23,42 @@ type ProgressType =
     }
 
 export type ProgressProps = {
-  children?: React.ReactNode
-  classes: {}
-} & ProgressType
+  styles: React.CSSProperties
+  label: string
+} & ProgressOptions
 
 const defaultStyles = {} as React.CSSProperties
 
+/**
+ * Progress bar component
+ * Displays a progress bar with busy and value state
+ *
+ * @param {Object} classes - CSS classes object
+ * @param {ReactNode} [children] - Child elements
+ * @param {boolean} isBusy - Whether progress is in busy state
+ * @param {number} [value] - Current progress value
+ * @param {number} [max] - Max progress value
+ * @param {Object} props - Other props
+ * @returns {JSX.Element} - Rendered progress element
+ */
 const Progress = ({
-  classes,
-  children,
+  styles,
   isBusy,
   value,
   max,
+  label,
   ...props
 }: ProgressProps): React.JSX.Element => {
+  const style = { ...defaultStyles, ...styles }
   return (
     <progress
-      style={defaultStyles}
+      aria-label={label}
+      style={style}
       aria-busy={isBusy}
       value={value}
       max={max}
       {...props}
-    >
-      {children}
-    </progress>
+    ></progress>
   )
 }
 
