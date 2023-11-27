@@ -23,8 +23,8 @@ type ProgressOptions =
     }
 
 export type ProgressProps = {
-  styles: React.CSSProperties
-  label: string
+  styles?: React.CSSProperties
+  label?: string
 } & ProgressOptions
 
 const defaultStyles = {} as React.CSSProperties
