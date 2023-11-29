@@ -1,0 +1,54 @@
+progress {
+  /* Revert all styles */
+  all: revert;
+  --progress-w: 100%;
+  --progress-h: 1rem;
+  --progress-bg: #cccccc;
+  --progress-color: rgb(71, 71, 245);
+  --progress-accent-color: var(--progress-color);
+  /* This code changes the color of the progress bar. */
+  /* The variable names indicate the colors that are used. */
+  /* The colors are used in the progress bar. */
+  /* If the progress element is busy, remove the revert styles */
+}
+progress[value] {
+  width: var(--progress-w);
+  height: var(--progress-h);
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-accent-color);
+  /* Styling for the remaining part of the& bar */
+}
+progress[value]::-webkit-progress-value {
+  /* Color for Chrome, Safari, and newer Opera */
+  background-color: var(--progress-accent-color);
+  accent-color: var(--progress-accent-color);
+}
+progress[value]::-moz-progress-bar {
+  /* Color for Firefox */
+  background-color: var(--progress-accent-color);
+  accent-color: var(--progress-accent-color);
+}
+progress[value]::-webkit-progress-bar {
+  /* Background for Chrome, Safari, and newer Opera */
+  background-color: var(--progress-background-color);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy] {
+  width: var(--progress-w);
+  height: var(--progress-h);
+  accent-color: var(--progress-accent-color);
+  /* Styling for the remaining part of the& bar */
+}
+progress[aria-busy]::-webkit-progress-value {
+  /* Color for Chrome, Safari, and newer Opera */
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy]::-moz-progress-bar {
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy]::-webkit-progress-bar {
+  /* Background for Chrome, Safari, and newer Opera */
+  accent-color: var(--progress-accent-color);
+}
+
+/*# sourceMappingURL=progress.css.map */

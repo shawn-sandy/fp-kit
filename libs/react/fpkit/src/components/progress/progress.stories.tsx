@@ -2,7 +2,7 @@ import { StoryObj, Meta } from '@storybook/react'
 import { within, userEvent, screen } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
-import './progress.scss'
+import '../../styles/progress/progress.css'
 
 import Progress from './progress'
 
@@ -18,10 +18,6 @@ const meta: Meta<typeof Progress> = {
     ),
   ],
 } as Meta
-
-const css = {
-  progress: Progress.styles,
-}
 
 export default meta
 type Story = StoryObj<typeof Progress>

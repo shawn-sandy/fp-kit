@@ -1,6 +1,6 @@
 import React from 'react'
 
-type ProgressOptions =
+type ProgressRules =
   | {
       /** Indicates progress bar is in busy/loading state */
       isBusy?: true
@@ -33,9 +33,11 @@ export type ProgressProps = {
    * Optional accessible label for the progress bar
    */
   label?: string
-} & ProgressOptions
-
-const defaultStyles = {} as React.CSSProperties
+  /**
+   * Color of the scroll bar
+   */
+  color?: string
+} & ProgressRules
 
 /**
  * Progress bar component
@@ -46,6 +48,7 @@ const defaultStyles = {} as React.CSSProperties
  * @param {boolean} isBusy - Whether progress is in busy state
  * @param {number} [value] - Current progress value
  * @param {number} [max] - Max progress value
+ * @param {string} [color] - color of the scroll bar
  * @param {Object} props - Other props
  * @returns {JSX.Element} - Rendered progress element
  */
@@ -54,9 +57,14 @@ const Progress = ({
   isBusy,
   value,
   max,
+  color,
   label = 'Progress',
   ...props
 }: ProgressProps): React.JSX.Element => {
+  const defaultStyles = {
+    accentColor: color,
+  } as React.CSSProperties
+
   const style = { ...defaultStyles, ...styles }
   return (
     <progress
@@ -72,4 +80,3 @@ const Progress = ({
 
 export default Progress
 Progress.displayName = 'Progress'
-Progress.styles = defaultStyles
