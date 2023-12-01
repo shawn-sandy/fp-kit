@@ -6,12 +6,13 @@
   "scripts": {
     "start": "run-p package:watch sass:watch",
     "dev": "vite --open",
+    "build": "sass && css && package",
     "package": "tsc && tsup --dts",
     "package:watch": "tsc && tsup --watch --dts",
-    "build-css": "postcss ./libs/**/*.css --dir ./libs/css/ --ext min.css",
+    "css": "postcss ./libs/components/**/*.css --base libs/components/ -d  ./libs/components/ --ext min.css",
     "preview": "vite preview",
-    "sass": "sass src/components:libs/components/.",
-    "sass:dev": "sass --watch src/index.scss:src/components/styles/index.css src/components:src/styles/.",
+    "sass": "sass src/index.scss:libs/index.css src/components:libs/components/.",
+    "sass:watch": "sass --watch src/index.scss:src/components/styles/index.css src/components:src/styles/.",
     "sass:build": "sass --style=compressed src/index.scss:libs/index.css",
     "test": "vitest",
     "test:ui": "vitest --coverage --ui",
@@ -66,7 +67,15 @@
       "require": "./libs/index.cjs",
       "default": "./libs/index.js"
     },
-    "./package.json": "./package.json"
+    "./hooks": {
+      "import": "./libs/hooks.js",
+      "require": "./libs/hooks.cjs",
+      "default": "./libs/hooks.js"
+    },
+    "./package.json": "./package.json",
+    "./styles": "./libs/styles.css",
+    "./css": "./libs/components/**/*.css",
+    "./scss": "./src/components/**/*.scss"
   },
   "files": [
     "src",
