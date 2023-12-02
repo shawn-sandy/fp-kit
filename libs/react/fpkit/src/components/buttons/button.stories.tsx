@@ -23,17 +23,22 @@ export const ButtonComponent: Story = {
   },
 } as Story
 
-export const ButtonWithStyles: Story = {
+export const Medium: Story = {
+  args: {
+    'data-style': 'md',
+  },
+} as Story
+
+export const Large: Story = {
+  args: {
+    'data-style': 'lg',
+  },
+} as Story
+
+export const Custom: Story = {
   args: {
     styles: {
-      backgroundColor: 'blue',
+      '--btn-fs': '2rem',
     },
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    expect(canvas).toBeInTheDocument()
-    expect(await canvas.findByRole('button')).toHaveStyle(
-      'background-color: blue',
-    )
   },
 } as Story

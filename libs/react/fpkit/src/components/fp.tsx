@@ -27,7 +27,7 @@ type FPProps<C extends React.ElementType> = PolymorphicComponentPropWithRef<
   C,
   {
     renderStyles?: boolean
-    styles?: {}
+    styles?: React.CSSProperties | {}
   }
 >
 
