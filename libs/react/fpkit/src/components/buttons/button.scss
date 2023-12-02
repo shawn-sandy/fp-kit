@@ -7,6 +7,7 @@ button {
   --fs: 0.95rem;
   --btn-fs: calc(15rem / 16);
   --btn-bg: lightgray;
+  --btn-width: max-content;
 
   font-size: var(--btn-fs);
   font-weight: var(--btn-fw, 600);
@@ -26,6 +27,7 @@ button {
   transition: var(--tran-all);
   background-color: var(--btn-bg, var(--btn));
   outline: none;
+  width: var(--btn-width);
 
   &[type] {
     background-color: var(--btn-bg, var(--neutral-300));
@@ -83,13 +85,6 @@ button {
   &[data-btn~='pill'],
   &[data-style~='pill'] {
     border-radius: var(--btn-pill, 100rem);
-  }
-
-  &[data-variant],
-  &[data-style] {
-    --btn-bg: var(--vbg);
-    --btn-cl: var(--vcl);
-    --btn-fs: var(--vfs, 0.95rem);
   }
 
   &[data-style~='sm'] {
