@@ -1,10 +1,9 @@
 import { ComponentProps } from '#/types'
 // import React from 'react'
 import FP from '#components/fp'
-import { type } from 'os'
 import React from 'react'
 
-export type ButtonProps = {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   /**
    * The button type
    * Required - 'button' | 'submit' | 'reset'
@@ -52,7 +51,7 @@ export type ButtonProps = {
    * Optional
    */
   pointerLeave?: (e: React.PointerEvent) => void
-} & React.ButtonHTMLAttributes<HTMLButtonElement>
+}
 
 /**
  * Default styles object for the Button component.

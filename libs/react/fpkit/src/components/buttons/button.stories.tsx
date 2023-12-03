@@ -23,6 +23,12 @@ export const ButtonComponent: Story = {
   },
 } as Story
 
+export const Small: Story = {
+  args: {
+    'data-style': 'sm',
+  },
+} as Story
+
 export const Medium: Story = {
   args: {
     'data-style': 'md',

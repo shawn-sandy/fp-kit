@@ -20,6 +20,7 @@ export const parameters = {
     },
   },
   docs: {
+    autodocs: true,
     page: CustomDocs,
     toc: true, // 👈 Enables the table of contents
   },

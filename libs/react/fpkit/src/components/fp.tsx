@@ -46,7 +46,7 @@ type FPComponent = <C extends React.ElementType = 'span'>(
 
 // create an object type and make it optional
 type styl = {
-  styles?: {}
+  styles?: React.CSSProperties | {}
 }
 
 /**
