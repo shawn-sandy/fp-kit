@@ -1,0 +1,15 @@
+[data-icon] {
+  --icon-display: inline-flex;
+  --icon-direction: row;
+  --icons-placement: center;
+  --icon-width: max-content;
+  --icon-gap: 0.2rem;
+  --icon-height: max-content;
+
+  display: var(--icon-display);
+  flex-direction: var(--icon-direction);
+  gap: var(--icon-gap);
+  place-items: var(--icons-placement);
+  width: var(--icon-width);
+  height: var(--icon-height);
+}

@@ -23,31 +23,15 @@ import FP from '#components/fp'
 import React from 'react'
 
 /**
-* Interface for the props accepted by the Icon component.
-* Extends Partial<ComponentProps> from the FP component.
-*
-* @property {string} fill - The fill color for the icon.
-* @property {string} size - The size of the icon.
-* @property {string} viewBox - The viewBox attribute for the icon SVG.
-* @property {string} name - The name of the icon.
-*/
-export interface IconProps extends Partial<ComponentProps> {
-  fill?: string
-  size?: string
-  viewBox?: string
-  name?: string
-}
-
-/**
-* The default styles object for the Icon component.
-*
-* @property {string} display - Sets display to 'inline-flex' to make Icon inline.
-* @property {string} direction - Sets flex direction to 'row'.
-* @property {string} gap - Sets gap between items to '.2rem'.
-* @property {string} placeItems - Centers items vertically using 'center'.
-* @property {string} width - Sets width to 'auto' for automatic sizing.
-*/
-export const defaultStyles = {
+ * The default styles object for the Icon component.
+ *
+ * @property {string} display - Sets display to 'inline-flex' to make Icon inline.
+ * @property {string} direction - Sets flex direction to 'row'.
+ * @property {string} gap - Sets gap between items to '.2rem'.
+ * @property {string} placeItems - Centers items vertically using 'center'.
+ * @property {string} width - Sets width to 'auto' for automatic sizing.
+ */
+const defaultStyles = {
   display: 'inline-flex',
   direction: 'row',
   gap: '.2rem',
@@ -62,9 +46,9 @@ export const defaultStyles = {
  * @param {Object} props.styles - The styles object for the Icon component.
  * @returns {JSX.Element} - The Icon component.
  */
-export const Icon = ({ children, styles, ...props }: IconProps) => {
+export const Icon = ({ children, styles, ...props }: ComponentProps) => {
   return (
-    <FP as="span" styles={styles} data-style="icons" {...props}>
+    <FP as="span" styles={styles} data-icon data-style="icons" {...props}>
       {children}
     </FP>
   )
