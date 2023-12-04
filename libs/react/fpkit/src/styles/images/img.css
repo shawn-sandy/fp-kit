@@ -1,0 +1,17 @@
+img {
+  --img-max-width: 100%;
+  --img-height: auto;
+  --img-object-fit: cover;
+  --img-object-position: center;
+  --img-aspect-ratio: auto 2/3;
+  --img-display: initial;
+  max-width: var(--img-max-width);
+  max-inline-size: var(--img-max-width);
+  block-size: var(--img-height);
+  object-fit: var(--img-object-fit);
+  object-position: var(--img-object-position);
+  aspect-ratio: var(--img-aspect-ratio);
+  display: var(--img-display);
+}
+
+/*# sourceMappingURL=img.css.map */
