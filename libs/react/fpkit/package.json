@@ -22,9 +22,6 @@
     "test:snapshot": "vitest --run --update",
     "release": "npm publish"
   },
-  "imports": {
-    "#*": "./src/*"
-  },
   "dependencies": {
     "focus-trap": "^7.5.2",
     "react": "^18.2.0",
@@ -63,6 +60,9 @@
   "main": "./libs/index.cjs",
   "module": "./libs/index.js",
   "types": "./libs/index.d.ts",
+  "imports": {
+    "#*": "./src/*"
+  },
   "exports": {
     ".": {
       "import": "./libs/index.js",
@@ -73,6 +73,11 @@
       "import": "./libs/hooks.js",
       "require": "./libs/hooks.cjs",
       "default": "./libs/hooks.js"
+    },
+    "./icons": {
+      "import": "./libs/icons.js",
+      "require": "./libs/icons.cjs",
+      "default": "./libs/icons.js"
     },
     "./package.json": "./package.json",
     "./styles": "./libs/styles.css",

@@ -17,7 +17,6 @@ import { ComponentProps } from 'src/types'
  * @property {function} [imgError] - Error callback
  * @property {function} [imgLoaded] - Loaded callback
  */
-
 export interface ImageProps extends ComponentProps {
   alt: string
   src: string
