@@ -63,7 +63,7 @@ export const Card = ({
       id={id}
       styles={styles}
       renderStyles={renderStyles}
-      data-card={dataStyle}
+      data-card
       {...props}
     >
       {children}
@@ -71,6 +71,6 @@ export const Card = ({
   )
 }
 
-Card.styles = defaultStyles
-
+export default Card
+Card.defStyles = defaultStyles
 Card.displayName = 'Card'
