@@ -17,6 +17,7 @@ p[role='note'],
   padding-block: var(--badge-py);
   color: var(--badge-color);
   background-color: var(--badge-bg);
+  border-radius: var(--badge-radius);
 }
 p[role='note'][data-badge~='beta'],
 [role='note'][data-badge~='beta'],

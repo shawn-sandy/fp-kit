@@ -6,10 +6,19 @@
 //  ***************************************
 // */
 
-$font-family: Roboto, -apple-system, BlinkMacSystemFont,
-  "Segoe UI", "Helvetica Neue", Arial, "Noto Sans",
-  sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family:
+  Roboto,
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  'Helvetica Neue',
+  Arial,
+  'Noto Sans',
+  sans-serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Noto Color Emoji' !default;
 
 html,
 body {
@@ -21,7 +30,7 @@ header,
 footer {
   font-size: var(--fs);
 
-  >section {
+  > section {
     margin-inline: auto;
     width: var(--content-w, 80%);
   }
@@ -35,5 +44,3 @@ section:not(nav) {
 p {
   --fs: var(--fs-0);
 }
-
-//---***************************---//

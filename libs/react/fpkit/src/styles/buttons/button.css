@@ -9,7 +9,7 @@ button {
   --btn-bg: lightgray;
   --btn-width: max-content;
   font-size: var(--btn-fs);
-  font-weight: var(--btn-fw, 600);
+  font-weight: var(--btn-fw, 500);
   height: var(--btn-height, 2.5rem);
   min-height: var(--btn-height);
   place-items: var(--btn-place, center);
@@ -74,13 +74,13 @@ button[data-btn~='pill'],
 button[data-style~='pill'] {
   border-radius: var(--btn-pill, 100rem);
 }
-button[data-style~='sm'] {
+button[data-btn~='sm'] {
   --btn-fs: var(--btn-sm);
 }
-button[data-style~='md'] {
+button[data-btn~='md'] {
   --btn-fs: var(--btn-md);
 }
-button[data-style~='lg'] {
+button[data-btn~='lg'] {
   --btn-fs: var(--btn-lg);
 }
 

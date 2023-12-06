@@ -10,7 +10,7 @@ button {
   --btn-width: max-content;
 
   font-size: var(--btn-fs);
-  font-weight: var(--btn-fw, 600);
+  font-weight: var(--btn-fw, 500);
   height: var(--btn-height, calc(40rem / 16));
   min-height: var(--btn-height);
   place-items: var(--btn-place, center);
@@ -87,15 +87,15 @@ button {
     border-radius: var(--btn-pill, 100rem);
   }
 
-  &[data-style~='sm'] {
+  &[data-btn~='sm'] {
     --btn-fs: var(--btn-sm);
   }
 
-  &[data-style~='md'] {
+  &[data-btn~='md'] {
     --btn-fs: var(--btn-md);
   }
 
-  &[data-style~='lg'] {
+  &[data-btn~='lg'] {
     --btn-fs: var(--btn-lg);
   }
 }

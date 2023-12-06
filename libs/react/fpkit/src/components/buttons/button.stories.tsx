@@ -3,6 +3,7 @@ import { within, userEvent, screen } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import Button from './button'
+import './button.scss'
 
 const meta: Meta<typeof Button> = {
   title: 'FP.React Components/Buttons',
@@ -25,19 +26,19 @@ export const ButtonComponent: Story = {
 
 export const Small: Story = {
   args: {
-    'data-style': 'sm',
+    'data-btn': 'sm',
   },
 } as Story
 
 export const Medium: Story = {
   args: {
-    'data-style': 'md',
+    'data-btn': 'md',
   },
 } as Story
 
 export const Large: Story = {
   args: {
-    'data-style': 'lg',
+    'data-btn': 'lg',
   },
 } as Story
 
