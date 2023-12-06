@@ -10,11 +10,13 @@ export type ListProps = {
   children: React.ReactNode
   /** Type of list to render (default: 'ul') */
   type?: 'ul' | 'ol' | 'dl'
+  /** The ro */
+  role?: string | undefined
   /** variant of list to render (default: 'none') */
   variant?: string
 }
 
-export type ListItemProps = Omit<ListProps, 'type'> & {
+export type ListItemProps = Omit<ListProps, 'type' | 'role'> & {
   /** Type of list item to render (default: 'li') */
   type?: 'li' | 'dt' | 'dd'
 }
@@ -56,6 +58,7 @@ export const List = ({
   type = 'ul',
   variant,
   styles,
+  role = 'list',
   ...props
 }: ListProps) => {
   return (
@@ -64,6 +67,7 @@ export const List = ({
       data-variant={variant}
       className={classes}
       style={styles}
+      role={role}
       {...props}
     >
       {children}
