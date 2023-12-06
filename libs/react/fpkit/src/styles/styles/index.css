@@ -48,6 +48,7 @@ ol[role='list'] {
   list-style: none;
   margin-block-end: 0;
   margin-block-start: 0;
+  padding-inline-start: 0;
 }
 
 /* Set core body defaults */

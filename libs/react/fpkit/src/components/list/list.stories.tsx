@@ -31,12 +31,12 @@ export const DefaultList: Story = {
 export const UnstyledList: Story = {
   args: {
     ...DefaultList.args,
-    'data-variant': 'unstyled',
+    role: 'list',
   },
   parameters: {
     docs: {
       description: {
-        story: '## Another description `on the story`, with some markdown',
+        story: 'Another description `on the story`, with some markdown',
       },
     },
   },

@@ -58,7 +58,7 @@ export const List = ({
   type = 'ul',
   variant,
   styles,
-  role = 'list',
+  role,
   ...props
 }: ListProps) => {
   return (
