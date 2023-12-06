@@ -27,3 +27,28 @@ export const CardComponent: Story = {
     expect(canvas.getByText(/link/i)).toBeInTheDocument()
   },
 }
+
+export const Multiple: Story = {
+  render: () => (
+    <>
+      <Card>
+        Proident et amet aliqua excepteur sunt qui deserunt commodo tempor esse.
+        Et aliqua nulla ea amet nisi consequat id adipisicing culpa ipsum minim
+        voluptate est Lorem. Amet qui laboris incididunt commodo culpa aliqua
+        veniam.
+      </Card>
+      <Card>
+        Proident et amet aliqua excepteur sunt qui deserunt commodo tempor esse.
+        Et aliqua nulla ea amet nisi consequat id adipisicing culpa ipsum minim
+        voluptate est Lorem. Amet qui laboris incididunt commodo culpa aliqua
+        veniam.
+      </Card>
+      <Card>
+        Proident et amet aliqua excepteur sunt qui deserunt commodo tempor esse.
+        Et aliqua nulla ea amet nisi consequat id adipisicing culpa ipsum minim
+        voluptate est Lorem. Amet qui laboris incididunt commodo culpa aliqua
+        veniam.
+      </Card>
+    </>
+  ),
+} as Story
