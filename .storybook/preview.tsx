@@ -1,5 +1,6 @@
 import './style.css'
-import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
+// import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
+import '../libs/react/fpkit/src/styles/styles/index.css'
 
 import * as React from 'react'
 import CustomDocs from './templates/custom-docs'
@@ -20,6 +21,7 @@ export const parameters = {
     },
   },
   docs: {
+    autodocs: true,
     page: CustomDocs,
     toc: true, // 👈 Enables the table of contents
   },

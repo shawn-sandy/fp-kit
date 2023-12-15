@@ -514,6 +514,13 @@ p {
  Date: 2021-04-01
  ***************************************
 */
+/*
+ ***************************************
+ FirsPaint
+ Author: Shawn Sandy
+ Date: 2021-04-01
+ ***************************************
+*/
 /***
 //  ***************************************
 //  FirsPaint
@@ -1802,6 +1809,61 @@ input[type]:not([type='checkbox'], [type='radio'])[data-variant],
   border-style: var(--rdo-bdr-s, none);
 }
 
+progress {
+  --progress-color: red;
+  --progress-accent-color: var(--progress-color);
+  --progress-bg: #cccccc;
+  --progress-height: 1.6rem;
+  --progress-width: 100%;
+  display: block;
+  height: var(--progress-height);
+  width: var(--progress-width);
+  background-color: var(--progress-bg);
+  color: var(--progress-accent-color);
+  accent-color: var(--progress-color);
+}
+progress[value] {
+  --progress-height: 1rem;
+  /* Styling for the remaining part of the& bar */
+}
+progress[value]::-webkit-progress-value {
+  /* Color for Chrome, Safari, and newer Opera */
+  background-color: var(--progress-accent-color);
+  accent-color: var(--progress-accent-color);
+}
+progress[value]::-moz-progress-bar {
+  /* Color for Firefox */
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-background-color);
+}
+progress[value]::-webkit-progress-bar {
+  /* Background for Chrome, Safari, and newer Opera */
+  background-color: var(--progress-background-color);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy] {
+  all: revert;
+  height: var(--progress-height);
+  width: var(--progress-width);
+  accent-color: var(--progress-accent-color);
+  /* Styling for the remaining part of the& bar */
+}
+progress[aria-busy]::-webkit-progress-value {
+  /* Color for Chrome, Safari, and newer Opera */
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy]::-moz-progress-bar {
+  /* Color for Firefox */
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy]::-webkit-progress-bar {
+  /* Background for Chrome, Safari, and newer Opera */
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-accent-color);
+}
+
 textarea {
   --txa-bdr-s: solid;
   --txa-bdr-w: thin;
@@ -1899,6 +1961,13 @@ footer:not([aria-label], [role='footer']) > section,
 [role='contentinfo']:not([aria-label], [role='footer']) > section {
   width: var(--content-w);
   padding-block: var(--footer-py, var(--spc-md));
+}
+footer:not([aria-label], [role='footer']) > div,
+[data-footer]:not([aria-label], [role='footer']) > div,
+[role='contentinfo']:not([aria-label], [role='footer']) > div {
+  --text-align: center;
+  font-size: var(--fs-3);
+  text-align: var(--text-align);
 }
 
 /*# sourceMappingURL=index.css.map */

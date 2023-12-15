@@ -2,11 +2,11 @@ import FP from '#components/fp'
 import React from 'react'
 
 export interface FpBadgeProps {
+  /** HTML element to display the badge as span or p */
   elm?: 'span' | 'p'
   children: React.ReactNode
-  role: 'note' | 'alert' | 'status'
-  renderStyles?: boolean
-  styles?: {}
+  role: 'note' | 'status'
+  styles?: React.CSSProperties | {}
 }
 
 const defStyles = {
@@ -35,10 +35,9 @@ const defStyles = {
  */
 export const Badge = ({
   elm = 'span',
-  role,
+  role = 'note',
   children,
-  renderStyles = true,
-  styles = {},
+  styles,
   ...props
 }: FpBadgeProps) => {
   return (

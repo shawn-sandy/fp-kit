@@ -20,11 +20,7 @@ describe('Badge', () => {
 
   it('renders with custom styles', () => {
     const styles = { ...Badge.styles, backgroundColor: '#000', color: '#fff' }
-    const { getByText } = render(
-      <Badge role="note" styles={styles}>
-        Danger Zone
-      </Badge>,
-    )
+    const { getByText } = render(<Badge role="note">Danger Zone</Badge>)
     const badge = screen.getByRole('note')
     expect(badge).toHaveStyle(styles)
   })

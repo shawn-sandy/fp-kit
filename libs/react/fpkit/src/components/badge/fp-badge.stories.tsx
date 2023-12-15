@@ -3,6 +3,7 @@ import { within, userEvent, screen } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import Badge from './fp-badge'
+import './badge.scss'
 
 const meta: Meta<typeof Badge> = {
   title: 'FP.React Components/Badge',
@@ -10,7 +11,7 @@ const meta: Meta<typeof Badge> = {
   args: {
     // @ts-ignore
     children: 'Basic Badge',
-    styles: Badge.styles,
+    // styles: Badge.styles,
   },
 } as Meta
 
@@ -24,3 +25,15 @@ export const BadgeComponent: Story = {
     expect(canvas.queryByText(/basic badge/i)).toBeInTheDocument()
   },
 }
+
+export const Beta: Story = {
+  args: {
+    'data-badge': 'beta',
+  },
+} as Story
+
+export const Production: Story = {
+  args: {
+    'data-badge': 'production',
+  },
+} as Story

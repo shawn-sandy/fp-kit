@@ -5,12 +5,13 @@ import { Meta, StoryObj } from '@storybook/react'
 import { Button } from '#components/buttons/button'
 import { Icon } from './icon'
 import Svg from './components/svg'
+import './icon.scss'
 
 const meta: Meta<typeof Icon> = {
   component: Icon,
   title: 'FP.React Components/Icons',
   args: {
-    styles: Icon.styles,
+    // styles: Icon.styles,
   },
   decorators: [
     (Story) => (

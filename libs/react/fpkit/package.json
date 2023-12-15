@@ -2,13 +2,19 @@
   "name": "@fpkit/react",
   "description": "A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.",
   "private": false,
-  "version": "0.3.20",
+  "version": "0.3.24",
   "scripts": {
-    "start": "run-p package:watch dev",
+    "start": "run-p package:watch sass:watch",
     "dev": "vite --open",
+    "build": "run-s package sass build:sass build:css",
     "package": "tsc && tsup --dts",
     "package:watch": "tsc && tsup --watch --dts",
+    "build::css": "postcss ./libs/components/**/*.css --base libs/components/  --use autoprefixer -d ./libs/components/ --ext min.css",
     "preview": "vite preview",
+    "build:sass": "sass --style=compressed src/index.scss:libs/index.css src/components:libs/components/.",
+    "sass:build": "sass --style=compressed src/index.scss:libs/index.css",
+    "sass:watch": "sass --watch src/index.scss:src/components/styles/index.css src/components:src/styles/.",
+    "sass": "sass src/index.scss:src/components/styles/index.css src/components:src/styles/.",
     "test": "vitest",
     "test:ui": "vitest --coverage --ui",
     "test:coverage": "vitest --coverage",
@@ -16,16 +22,13 @@
     "test:snapshot": "vitest --run --update",
     "release": "npm publish"
   },
-  "imports": {
-    "#*": "./src/*"
-  },
   "dependencies": {
     "focus-trap": "^7.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@shawnsandy/first-paint": "^2.18.9",
+    "@shawnsandy/first-paint": "^2.18.12",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
@@ -36,11 +39,14 @@
     "@vitejs/plugin-react": "^4.0.3",
     "@vitest/coverage-v8": "^0.33.0",
     "@vitest/ui": "^0.33.0",
+    "autoprefixer": "^10.4.16",
     "c8": "^8.0.0",
     "happy-dom": "^10.5.2",
     "jsdom": "^22.1.0",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.9.3",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
     "react-test-renderer": "^18.2.0",
     "sass": "^1.64.1",
     "tsup": "^7.1.0",
@@ -54,16 +60,31 @@
   "main": "./libs/index.cjs",
   "module": "./libs/index.js",
   "types": "./libs/index.d.ts",
+  "imports": {
+    "#*": "./src/*"
+  },
   "exports": {
     ".": {
       "import": "./libs/index.js",
       "require": "./libs/index.cjs",
       "default": "./libs/index.js"
     },
-    "./package.json": "./package.json"
+    "./hooks": {
+      "import": "./libs/hooks.js",
+      "require": "./libs/hooks.cjs",
+      "default": "./libs/hooks.js"
+    },
+    "./icons": {
+      "import": "./libs/icons.js",
+      "require": "./libs/icons.cjs",
+      "default": "./libs/icons.js"
+    },
+    "./package.json": "./package.json",
+    "./styles": "./libs/styles.css",
+    "./css": "./libs/components/**/*.css",
+    "./scss": "./src/components/**/*.scss"
   },
   "files": [
-    "lib",
     "src",
     "dist",
     "libs"

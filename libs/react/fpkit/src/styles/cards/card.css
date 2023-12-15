@@ -1,0 +1,20 @@
+[data-card] {
+  --card-p: 2rem;
+  --card-bg: #fff;
+  --card-radius: calc(var(--card-p) / 3);
+  --card-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  --card-position: relative;
+  --card-display: flex;
+  --card-direction: column;
+  --card-gap: 1rem;
+  position: relative;
+  display: var(--card-display);
+  padding: var(--card-p);
+  display: var(--card-display);
+  flex-direction: var(--card-direction);
+  gap: var(--card-gap);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--card-radius);
+}
+
+/*# sourceMappingURL=card.css.map */

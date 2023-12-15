@@ -17,10 +17,9 @@ import { ComponentProps } from 'src/types'
  * @property {function} [imgError] - Error callback
  * @property {function} [imgLoaded] - Loaded callback
  */
-
 export interface ImageProps extends ComponentProps {
   alt: string
-  src?: string
+  src: string
   width?: number
   height?: number
   loading?: 'eager' | 'lazy'
@@ -72,7 +71,7 @@ export const defaultStyles = {
  * @returns {JSX.Element} The Img component.
  */
 export const Img = ({
-  src,
+  src = '//',
   alt,
   width = 480,
   height,
@@ -118,5 +117,7 @@ export const Img = ({
     />
   )
 }
+
+export default Img
 Img.styles = defaultStyles
 Img.displayName = 'Img'

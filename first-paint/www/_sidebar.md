@@ -34,6 +34,7 @@
   - [Header](/components/Header)
   - [Img](/components/Img)
   - [Navbar](/components/Navbar)
+  - [Progress](/components/Progress)
   - [Scrollbar](/components/Scrollbar)
   - [Table](/components/Table)
   - [Tooltip](/components/Tooltip)

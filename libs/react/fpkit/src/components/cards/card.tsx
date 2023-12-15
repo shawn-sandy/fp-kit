@@ -28,7 +28,7 @@ export const defaultStyles = {
   padding: 'var(--card-p, 2rem)',
   backgroundColor: 'var(--card-bg, white)',
   boxShadow: 'var(--card-shadow, 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1))',
-  borderRadius: 'var(--card-rds, 0.2ßrem)',
+  borderRadius: 'var(--card-rds, 0.25rem)',
   border: 'var(--card-brd, none)',
   color: 'var(--card-cl, black)',
 }
@@ -63,7 +63,7 @@ export const Card = ({
       id={id}
       styles={styles}
       renderStyles={renderStyles}
-      data-card={dataStyle}
+      data-card
       {...props}
     >
       {children}
@@ -71,6 +71,6 @@ export const Card = ({
   )
 }
 
-Card.styles = defaultStyles
-
+export default Card
+Card.defStyles = defaultStyles
 Card.displayName = 'Card'

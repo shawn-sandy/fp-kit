@@ -731,6 +731,11 @@ p {
   width: var(--content-w);
   padding-block: var(--footer-py, var(--spc-md));
 }
+.fp-footer > div {
+  --text-align: center;
+  font-size: var(--fs-3);
+  text-align: var(--text-align);
+}
 .fp-list {
   --listOff: ;
   list-style: var(--list-s, outside);

@@ -1,49 +1,54 @@
 import { ComponentProps } from '#/types'
 // import React from 'react'
 import FP from '#components/fp'
+import React from 'react'
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   /**
-   * The type of the button.
+   * The button type
+   * Required - 'button' | 'submit' | 'reset'
    */
   type: 'button' | 'submit' | 'reset'
 
   /**
-   * Button label/content
+   * The button label/content
+   * Required
    */
   children: React.ReactNode
 
   /**
-   * Button styles and props
+   * Custom CSS styles
+   * Optional
    */
-  styles?: object
+  styles?: React.CSSProperties
 
   /**
-   * button classes
+   * Custom CSS classes
+   * Optional
    */
   classes?: string
 
   /**
-   * @deprecated import styles Button.styles
-   * default button styles
+   * Whether to apply default styles
+   * Optional - default false
    */
   defaultStyles?: boolean
 
   /**
-   * Button pointer-down event (pointerOver, pointerLeave)
+   * Pointer down event handler
+   * Optional
    */
   pointerDown?: (e: React.PointerEvent) => void
 
   /**
-   * Button pointer-down event (pointerOver, pointerLeave)
+   * Pointer over event handler
+   * Optional
    */
   pointerOver?: (e: React.PointerEvent) => void
 
   /**
-   * Pointer leave event handler for the Button component.
-   *
-   * @param {React.PointerEvent} e - The pointer event
+   * Pointer leave event handler
+   * Optional
    */
   pointerLeave?: (e: React.PointerEvent) => void
 }
@@ -95,7 +100,6 @@ export const defStyles = {
  *
  * @returns {JSX.Element} The rendered <button> element
  */
-
 export const Button = ({
   type = 'button',
   children,
@@ -127,7 +131,8 @@ export const Button = ({
 
   /* Returning a button element. */
   return (
-    <button
+    <FP
+      as="button"
       type={type}
       onPointerOver={handlePointerOver}
       onPointerDown={handlePointerDown}
@@ -138,11 +143,11 @@ export const Button = ({
       {...props}
     >
       {children}
-    </button>
+    </FP>
   )
   //
 }
 
 export default Button
-Button.styles = defStyles
+Button.defaultStyles = defStyles
 Button.displayName = 'Button'

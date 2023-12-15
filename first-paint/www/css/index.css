@@ -1674,6 +1674,52 @@ input[type]:not([type='checkbox'], [type='radio'])[data-variant],
   border-width: var(--rdo-bdr-w, thick);
   border-style: var(--rdo-bdr-s, none);
 }
+progress {
+  --progress-color: red;
+  --progress-accent-color: var(--progress-color);
+  --progress-bg: #cccccc;
+  --progress-height: 1.6rem;
+  --progress-width: 100%;
+  display: block;
+  height: var(--progress-height);
+  width: var(--progress-width);
+  background-color: var(--progress-bg);
+  color: var(--progress-accent-color);
+  accent-color: var(--progress-color);
+}
+progress[value] {
+  --progress-height: 1rem;
+}
+progress[value]::-webkit-progress-value {
+  background-color: var(--progress-accent-color);
+  accent-color: var(--progress-accent-color);
+}
+progress[value]::-moz-progress-bar {
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-background-color);
+}
+progress[value]::-webkit-progress-bar {
+  background-color: var(--progress-background-color);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy] {
+  all: revert;
+  height: var(--progress-height);
+  width: var(--progress-width);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy]::-webkit-progress-value {
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy]::-moz-progress-bar {
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-accent-color);
+}
+progress[aria-busy]::-webkit-progress-bar {
+  background-color: var(--progress-bg);
+  accent-color: var(--progress-accent-color);
+}
 textarea {
   --txa-bdr-s: solid;
   --txa-bdr-w: thin;
@@ -1768,4 +1814,11 @@ footer:not([aria-label], [role='footer']) > section,
 [role='contentinfo']:not([aria-label], [role='footer']) > section {
   width: var(--content-w);
   padding-block: var(--footer-py, var(--spc-md));
+}
+footer:not([aria-label], [role='footer']) > div,
+[data-footer]:not([aria-label], [role='footer']) > div,
+[role='contentinfo']:not([aria-label], [role='footer']) > div {
+  --text-align: center;
+  font-size: var(--fs-3);
+  text-align: var(--text-align);
 } /*# sourceMappingURL=index.css.map */

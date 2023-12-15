@@ -29,6 +29,7 @@
 @use "../modules/links";
 @use "../modules/breadcrumb";
 @use "../modules/fp";
+@use "../modules/progress";
 // @include container.module();
 // tokens
 @use "../tokens/colors.scss";
@@ -56,5 +57,5 @@
 @include list.module();
 @include scrollbar.module();
 @include breadcrumb.module();
+@include progress.module();
 @include fp.module();
-

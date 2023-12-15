@@ -1,0 +1,26 @@
+details {
+  --details-display: 'flex';
+  --details-flex-direction: 'column';
+  --details-align-items: 'flex-start';
+  --details-margin: '0';
+  --details-width: '100%';
+  --details-padding-x: '0';
+  --details-padding-y: '1.5rem';
+
+  display: var(--details-display);
+  flex-direction: var(--details-flex-direction);
+  align-items: var(--details-align-items);
+  margin: var(--details-margin);
+  width: var(--details-width);
+  padding-inline: var(--details-padding-x);
+  padding-block: var(--details-padding-y);
+
+  > summary {
+    width: var(--details-width);
+    display: var(--details-display);
+  }
+
+  > div {
+    padding: var(--details-padding-y);
+  }
+}

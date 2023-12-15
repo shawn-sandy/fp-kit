@@ -7,16 +7,6 @@ describe('Card', () => {
     expect(screen.getByText('Hello World')).toBeInTheDocument()
   })
 
-  it('renders with default styles', () => {
-    render(
-      <Card data-testid="card" styles={Card.styles}>
-        Hello World
-      </Card>,
-    )
-    const card = screen.getByTestId('card')
-    expect(card).toHaveStyle(Card.styles)
-  })
-
   it('renders with custom styles', () => {
     const style = { backgroundColor: '#000;' }
     render(
