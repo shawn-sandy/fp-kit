@@ -14,10 +14,12 @@ main,
 header,
 footer {
   font-size: var(--fs);
-
   > section {
     margin-inline: auto;
     width: var(--content-w, 80%);
+  }
+  > div {
+    text-align: center;
   }
 }
 
