@@ -194,6 +194,12 @@ footer > section {
   width: var(--content-w, 80%);
 }
 
+main > div,
+header > div,
+footer > div {
+  text-align: center;
+}
+
 section:not(nav) {
   margin-inline: var(--sect-y, auto);
   padding-block: var(--sect-x, --spc-4);
@@ -369,7 +375,8 @@ p[role='note'] {
   --border-radius: 0.5rem;
 }
 
-[data-card] {
+[data-card],
+[data-component~='card'] {
   --card-p: 2rem;
   --card-bg: #fff;
   --card-radius: calc(var(--card-p) / 3);

@@ -1,0 +1,40 @@
+details {
+  --details-w: 100%;
+  --details-h: fit-content;
+  --details-border: 1px solid #dfdfdf;
+  --details-display: flex;
+  --details-justify: flex-start;
+  --details-direction: columns;
+  --details-gap: 5rem;
+  --details-px: 1.5rem;
+  --details-py: 1rem;
+  --summary-cursor: pointer;
+  display: var(--details-display);
+  flex-direction: var(--details-direction);
+  justify-content: var(--details-justify);
+  gap: var(--details-gap);
+  width: var(--details-w);
+  border: var(--details-border);
+}
+details::marker {
+  content: none;
+}
+details summary {
+  padding-inline: var(--details-px);
+  padding-block: var(--details-py);
+}
+details summary:hover {
+  cursor: var(--summary-cursor);
+}
+details summary > section {
+  width: var(--details-w);
+}
+details[open] > summary {
+  border-bottom: var(--details-border);
+}
+details > section {
+  padding-inline: var(--details-px);
+  padding-block: var(--details-py);
+}
+
+/*# sourceMappingURL=details.css.map */
