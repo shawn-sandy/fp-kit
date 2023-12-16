@@ -25,7 +25,7 @@ export type DetailsProps = InheritedProps & {
 }
 
 /**
- * Details component props.
+ * Details component with a summary and content.
  * @typedef {Object} DetailsProps
  * @property {ReactNode} children - The content to render inside the details element. Required.
  * @property {ReactNode} summary - The summary text shown for the details. Required.

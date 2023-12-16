@@ -482,4 +482,75 @@ progress[aria-busy]::-webkit-progress-bar {
   accent-color: var(--progress-accent-color);
 }
 
+details {
+  --details-w: 100%;
+  --details-h: fit-content;
+  --details-border: 1px solid #dfdfdf;
+  --details-display: flex;
+  --details-justify: flex-start;
+  --details-direction: columns;
+  --details-gap: 5rem;
+  --details-px: 2rem;
+  --details-py: 1.5rem;
+  --details-radius: 0.5rem;
+  --summary-cursor: pointer;
+  --summary-transitions: all 0.75s ease-in-out;
+  --summary-display: flex;
+  --summary-justify: flex-start;
+  --summary-align: center;
+  --summary-gap: 0.5rem;
+  --max-h-closed: 200px;
+  --max-h-open: 50rem;
+  display: var(--details-display);
+  flex-direction: var(--details-direction);
+  justify-content: var(--details-justify);
+  gap: var(--details-gap);
+  width: var(--details-w);
+  border: var(--details-border);
+  transition: var(--summary-transitions);
+  max-height: var(--max-h-closed);
+  overflow: clip;
+  border-radius: var(--details-radius);
+}
+
+details::marker {
+  content: none;
+}
+
+details summary {
+  display: var(--summary-display);
+  justify-content: var(--summary-justify);
+  align-items: var(--summary-align);
+  padding-inline: var(--details-px);
+  padding-block: var(--details-py);
+  gap: var(--summary-gap);
+}
+
+details summary:hover {
+  cursor: var(--summary-cursor);
+}
+
+details summary > section {
+  width: var(--details-w);
+}
+
+details > section {
+  padding-inline: var(--details-px);
+  padding-block: var(--details-py);
+  border: 1px transparent solid;
+}
+
+details[open] {
+  max-height: var(--max-h-open);
+  transition: var(--summary-transitions);
+}
+
+details[open] > summary {
+  border-bottom: var(--details-border);
+}
+
+details[open] > section {
+  max-height: var(--max-h-open);
+}
+
 /*# sourceMappingURL=index.css.map */

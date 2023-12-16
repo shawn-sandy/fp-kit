@@ -7,15 +7,16 @@ details {
   --details-direction: columns;
   --details-gap: 5rem;
   --details-px: 2rem;
-  --details-py: 1rem;
+  --details-py: 1.5rem;
+  --details-radius: 0.5rem;
   --summary-cursor: pointer;
   --summary-transitions: all 0.75s ease-in-out;
   --summary-display: flex;
   --summary-justify: flex-start;
   --summary-align: center;
   --summary-gap: 0.5rem;
-  --height-closed: 4.6875rem;
-  --height-open: 50rem;
+  --max-h-closed: 200px;
+  --max-h-open: 50rem;
 
   display: var(--details-display);
   flex-direction: var(--details-direction);
@@ -24,13 +25,9 @@ details {
   width: var(--details-w);
   border: var(--details-border);
   transition: var(--summary-transitions);
-  max-height: var(--height-closed);
+  max-height: var(--max-h-closed);
   overflow: clip;
-
-  &[open] {
-    max-height: var(--height-open);
-    transition: var(--summary-transitions);
-  }
+  border-radius: var(--details-radius);
 
   &::marker {
     content: none;
@@ -52,13 +49,20 @@ details {
     }
   }
 
-  &[open] > summary {
-    border-bottom: var(--details-border);
-    max-height: var(--height-open);
-  }
-
   > section {
     padding-inline: var(--details-px);
     padding-block: var(--details-py);
+    border: 1px transparent solid;
+  }
+
+  &[open] {
+    max-height: var(--max-h-open);
+    transition: var(--summary-transitions);
+    > summary {
+      border-bottom: var(--details-border);
+    }
+    > section {
+      max-height: var(--max-h-open);
+    }
   }
 }
