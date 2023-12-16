@@ -37,8 +37,8 @@ details {
     display: var(--summary-display);
     justify-content: var(--summary-justify);
     align-items: var(--summary-align);
-    padding-inline: var(--details-px);
-    padding-block: var(--details-py);
+    padding-inline: var(--summary-px, var(--details-px));
+    padding-block: var(--summary-py, var(--details-py));
     gap: var(--summary-gap);
 
     &:hover {

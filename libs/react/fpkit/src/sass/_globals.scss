@@ -30,4 +30,7 @@ section:not(nav) {
 
 p {
   font-size: var(--fs);
+  & + p {
+    margin-block-start: 1rem;
+  }
 }

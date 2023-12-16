@@ -51,7 +51,7 @@ const meta: Meta<typeof Details> = {
 export default meta
 type Story = StoryObj<typeof Details>
 
-export const DetailsComponent: Story = {
+export const DetailsDropdown: Story = {
   args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
