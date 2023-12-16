@@ -1,8 +1,8 @@
 import React from 'react'
 import FP from '#components/fp'
-import { ComponentProps } from '#types'
+type InheritedProps = React.ComponentProps<typeof FP>
 
-export type DetailsProps = {
+type DetailsProps = {
   /**
    * The summary text shown for the details.
    * Required.
@@ -18,7 +18,7 @@ export type DetailsProps = {
    * Optional callback when pointer down event occurs on the summary.
    */
   onPointerDownEvent?: (e: React.PointerEvent<HTMLDetailsElement>) => void
-} & Partial<ComponentProps>
+} & Partial<InheritedProps>
 
 /**
  * Details component props.
