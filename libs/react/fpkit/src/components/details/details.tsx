@@ -1,22 +1,13 @@
 import React from 'react'
 import FP from '#components/fp'
-export type DetailsProps = {
-  /**
-   * The content to render inside the details element.
-   * Required.
-   */
-  children: React.ReactNode
+import { ComponentProps } from '#types'
 
+export type DetailsProps = {
   /**
    * The summary text shown for the details.
    * Required.
    */
   summary: React.ReactNode
-
-  /**
-   * Optional styles to apply to the details element.
-   */
-  styles?: React.CSSProperties | {}
 
   /**
    * Optional callback when the details is toggled open/closed.
@@ -26,8 +17,8 @@ export type DetailsProps = {
   /**
    * Optional callback when pointer down event occurs on the summary.
    */
-  onPointerDownEvent?: (e: React.PointerEvent<HTMLDetailsElement>) => voidd
-}
+  onPointerDownEvent?: (e: React.PointerEvent<HTMLDetailsElement>) => void
+} & Partial<ComponentProps>
 
 /**
  * Details component props.
@@ -46,6 +37,7 @@ const Details = ({
   onToggleEvent,
   onPointerDownEvent,
   children,
+  ref,
   ...props
 }: DetailsProps) => {
   const defaultStyles: React.CSSProperties = { ...styles }
@@ -63,6 +55,7 @@ const Details = ({
       as="details"
       style={defaultStyles}
       onToggle={onToggleCallback}
+      ref={ref}
       {...props}
     >
       <FP as="summary" onPointerDown={onPointerDownCallback}>
