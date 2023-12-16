@@ -32,5 +32,5 @@ export interface ComponentProps {
   /**
    * Component ref attribute
    */
-  ref: React.Ref<any>
+  ref?: React.Ref<any>
 }

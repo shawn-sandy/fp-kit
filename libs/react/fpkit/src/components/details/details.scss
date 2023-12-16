@@ -10,6 +10,9 @@ details {
   --details-py: 1rem;
   --summary-cursor: pointer;
   --summary-transitions: all 0.75s ease-in-out;
+  --summary-display: flex;
+  --summary-justify: space-between;
+  --summary-align: center;
   --height-closed: 4.6875rem;
   --height-open: 50rem;
 
@@ -33,6 +36,9 @@ details {
   }
 
   summary {
+    display: var(--summary-display);
+    justify-content: var(--summary-justify);
+    align-items: var(--summary-align);
     padding-inline: var(--details-px);
     padding-block: var(--details-py);
 

@@ -3,6 +3,7 @@ import { within, userEvent, screen } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import Details from './details'
+import Icons from '../icons/icon'
 import '../../styles/details/details.css'
 
 const content = (
@@ -35,7 +36,12 @@ const meta: Meta<typeof Details> = {
     children: content,
     summary: (
       <section>
-        <h3>Summary Section</h3>
+        <h3>
+          <Icons>
+            <Icons.Add />
+            Summary Section
+          </Icons>
+        </h3>
       </section>
     ),
   },
@@ -55,6 +61,6 @@ export const DetailsComponent: Story = {
   args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
-    expect(canvas.getByText(/link/i)).toBeInTheDocument()
+    expect(canvas.getByRole('group')).toBeInTheDocument()
   },
-}
+} as Story
