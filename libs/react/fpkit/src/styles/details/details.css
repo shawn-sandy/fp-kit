@@ -6,15 +6,25 @@ details {
   --details-justify: flex-start;
   --details-direction: columns;
   --details-gap: 5rem;
-  --details-px: 1.5rem;
+  --details-px: 2rem;
   --details-py: 1rem;
   --summary-cursor: pointer;
+  --summary-transitions: all 0.75s ease-in-out;
+  --height-closed: 4.6875rem;
+  --height-open: 50rem;
   display: var(--details-display);
   flex-direction: var(--details-direction);
   justify-content: var(--details-justify);
   gap: var(--details-gap);
   width: var(--details-w);
   border: var(--details-border);
+  transition: var(--summary-transitions);
+  max-height: var(--height-closed);
+  overflow: clip;
+}
+details[open] {
+  max-height: var(--height-open);
+  transition: var(--summary-transitions);
 }
 details::marker {
   content: none;
@@ -31,6 +41,7 @@ details summary > section {
 }
 details[open] > summary {
   border-bottom: var(--details-border);
+  max-height: var(--height-open);
 }
 details > section {
   padding-inline: var(--details-px);
