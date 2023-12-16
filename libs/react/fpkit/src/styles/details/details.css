@@ -11,8 +11,9 @@ details {
   --summary-cursor: pointer;
   --summary-transitions: all 0.75s ease-in-out;
   --summary-display: flex;
-  --summary-justify: space-between;
+  --summary-justify: flex-start;
   --summary-align: center;
+  --summary-gap: 0.5rem;
   --height-closed: 4.6875rem;
   --height-open: 50rem;
   display: var(--details-display);
@@ -38,6 +39,7 @@ details summary {
   align-items: var(--summary-align);
   padding-inline: var(--details-px);
   padding-block: var(--details-py);
+  gap: var(--summary-gap);
 }
 details summary:hover {
   cursor: var(--summary-cursor);

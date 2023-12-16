@@ -28,20 +28,18 @@ const content = (
   </>
 )
 
+const icon = <Icons.Add />
+
 const meta: Meta<typeof Details> = {
   title: 'FP.REACT Components/Details',
   component: Details,
   args: {
     // @ts-ignore
     children: content,
+    icon: icon,
     summary: (
       <section>
-        <h3>
-          <Icons>
-            <Icons.Add />
-            Summary Section
-          </Icons>
-        </h3>
+        <h3>Summary Section</h3>
       </section>
     ),
   },

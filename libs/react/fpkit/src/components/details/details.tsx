@@ -4,6 +4,10 @@ type InheritedProps = React.ComponentProps<typeof FP>
 
 type DetailsProps = {
   /**
+   * The icon to show in the details summary element.
+   */
+  icon?: React.ReactNode
+  /**
    * The summary text shown for the details.
    * Required.
    */
@@ -33,6 +37,7 @@ type DetailsProps = {
  */
 const Details = ({
   summary,
+  icon,
   styles,
   onToggleEvent,
   onPointerDownEvent,
@@ -59,6 +64,7 @@ const Details = ({
       {...props}
     >
       <FP as="summary" onPointerDown={onPointerDownCallback}>
+        {icon}
         {summary}
       </FP>
       <FP as="section">{children}</FP>
