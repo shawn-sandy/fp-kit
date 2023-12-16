@@ -37,11 +37,7 @@ const meta: Meta<typeof Details> = {
     // @ts-ignore
     children: content,
     icon: icon,
-    summary: (
-      <section>
-        <h3>Summary Section</h3>
-      </section>
-    ),
+    summary: <h3>Summary Section</h3>,
   },
   decorators: [
     (Story) => (

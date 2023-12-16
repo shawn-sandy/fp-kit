@@ -2,7 +2,7 @@ import React from 'react'
 import FP from '#components/fp'
 type InheritedProps = React.ComponentProps<typeof FP>
 
-type DetailsProps = {
+export type DetailsProps = InheritedProps & {
   /**
    * The icon to show in the details summary element.
    */
@@ -22,7 +22,7 @@ type DetailsProps = {
    * Optional callback when pointer down event occurs on the summary.
    */
   onPointerDownEvent?: (e: React.PointerEvent<HTMLDetailsElement>) => void
-} & Partial<InheritedProps>
+}
 
 /**
  * Details component props.
@@ -35,7 +35,7 @@ type DetailsProps = {
  * @param {DetailsProps} props
  * @returns {JSX.Element}
  */
-const Details = ({
+export const Details = ({
   summary,
   icon,
   styles,
