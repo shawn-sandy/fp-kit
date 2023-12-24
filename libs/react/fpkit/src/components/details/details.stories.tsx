@@ -58,3 +58,21 @@ export const DetailsDropdown: Story = {
     expect(canvas.getByRole('group')).toBeInTheDocument()
   },
 } as Story
+
+export const CustomDropdown: Story = {
+  render: () => (
+    <>
+      <Details summary="Summary Section" icon={icon}>
+        {content}
+      </Details>
+      <>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
+          quasi maiores placeat voluptate voluptatem, tenetur consectetur earum
+          modi, quam pariatur, quas porro iste quo ipsum rem rerum fuga
+          incidunt? Suscipit!
+        </p>
+      </>
+    </>
+  ),
+} as Story
