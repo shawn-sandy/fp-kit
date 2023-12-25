@@ -6,7 +6,7 @@ details {
   --details-justify: flex-start;
   --details-direction: columns;
   --details-gap: 5rem;
-  --details-px: 2rem;
+  --details-px: 1.5rem;
   --details-py: 1.5rem;
   --details-radius: 0.5rem;
   --summary-cursor: pointer;

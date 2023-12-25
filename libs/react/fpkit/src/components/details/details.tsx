@@ -14,6 +14,11 @@ export type DetailsProps = InheritedProps & {
   summary: React.ReactNode
 
   /**
+   * Set the details to open or closed
+   */
+  open?: boolean
+
+  /**
    * Optional callback when the details is toggled open/closed.
    */
   onToggleEvent?: (e: React.PointerEvent<HTMLDetailsElement>) => void
@@ -39,6 +44,7 @@ export const Details = ({
   summary,
   icon,
   styles,
+  open,
   onToggleEvent,
   onPointerDownEvent,
   children,
@@ -61,6 +67,7 @@ export const Details = ({
       style={defaultStyles}
       onToggle={onToggleCallback}
       ref={ref}
+      open={open}
       {...props}
     >
       <FP as="summary" onPointerDown={onPointerDownCallback}>
