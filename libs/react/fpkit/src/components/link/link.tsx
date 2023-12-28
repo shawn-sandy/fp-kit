@@ -2,14 +2,37 @@ import FP from '../fp'
 import { ComponentProps } from '../../types'
 
 export type LinkProps = {
+  /** The href URL that the link goes to */
   href: string
+  /** The link text or contents */
   children: React.ReactNode
+  /** The target attribute for the link */
   target?: string
+  /** The rel attribute for the link */
   rel?: string
+  /** Whether to prefetch the link */
   prefetch?: boolean
+  /** Applies button styling to the link */
   btnStyle?: boolean
+  /** Callback when link is clicked */
   onPointerDown?: (e: React.PointerEvent<HTMLAnchorElement>) => void
 } & Pick<ComponentProps, 'styles'>
+
+/**
+ * Link component props.
+ * @typedef {Object} LinkProps
+ * @property {string} href - The href URL that the link goes to.
+ * @property {ReactNode} children - The link text or contents.
+ * @property {string} [target] - The target attribute for the link.
+ * @property {string} [rel] - The rel attribute for the link.
+ * @property {boolean} [prefetch=true] - Whether to prefetch the link.
+ * @property {boolean} [btnStyle] - Applies button styling to the link.
+ * @property {(e: PointerEvent<HTMLAnchorElement>) => void} [onPointerDown] -
+ * Callback when link is clicked.
+ * @property {Object} [styles] - Component styles.
+ * @param {LinkProps} props
+ * @returns {JSX.Element}
+ */
 
 export const Link = ({
   href,
