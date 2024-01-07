@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import React, { ReactNode } from 'react'
 
 export interface ComponentProps {
   /**
@@ -16,7 +16,7 @@ export interface ComponentProps {
   /**
    * Styles object
    */
-  styles?: {}
+  styles?: React.CSSProperties | {}
   /**
    * Default styles object
    */
@@ -29,4 +29,8 @@ export interface ComponentProps {
    * Style value for [data-style] attribute
    */
   dataStyle?: string
+  /**
+   * Component ref attribute
+   */
+  ref?: React.Ref<any>
 }

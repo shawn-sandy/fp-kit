@@ -1,7 +1,7 @@
 import * as React from 'react'
 import FP from '../fp'
 
-export type ListProps = {
+type ListProps = {
   /** Styles to be applied to the list */
   styles?: React.CSSProperties
   /** CSS classes to be applied to the list */

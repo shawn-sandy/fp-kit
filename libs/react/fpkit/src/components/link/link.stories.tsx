@@ -5,6 +5,7 @@ import { within, userEvent, screen } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import Link from './link'
+import '../../styles/link/link.css'
 
 const meta: Meta<typeof Link> = {
   title: 'FP.React Components/Links',

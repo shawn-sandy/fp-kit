@@ -1,0 +1,34 @@
+a {
+  --link-decoration: none;
+  --link-color: #0070f3;
+  --link-bg: lightgray;
+  --link-px: 0;
+  --link-py: 0;
+  --link-transition: all 0.75s ease-in-out;
+  --link-fs: 1rem;
+  --link-skip-ink: auto;
+  --link-decoration-offset: 1.5px;
+  --link-decoration-thickness: 2px;
+
+  color: var(--link-color);
+  font-size: var(--link-fs);
+  text-decoration: var(--link-decoration);
+  text-decoration-color: var(--link-color);
+  text-decoration-thickness: var(--link-decoration-thickness);
+  text-underline-offset: var(--link-decoration-offset);
+  text-decoration-skip-ink: var(--link-skip-ink);
+
+  &:hover {
+    --link-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
+    --link-decoration: underline;
+  }
+
+  &:visited,
+  &:active {
+    --link-color: currentColor;
+  }
+}

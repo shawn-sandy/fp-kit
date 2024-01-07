@@ -43,14 +43,6 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-  margin-block-end: 0;
-  margin-block-start: 0;
-  padding-inline-start: 0;
-}
-
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -194,6 +186,7 @@ footer > section {
 main > div,
 header > div,
 footer > div {
+  width: 100%;
   text-align: center;
 }
 
@@ -207,6 +200,29 @@ p {
 }
 p + p {
   margin-block-start: 1rem;
+}
+
+ul,
+ol {
+  display: var(--li-display, flex);
+  flex-direction: var(--li-direction, column);
+  gap: var(--li-gap, 0.2rem);
+  flex-wrap: var(--li-wrap, nowrap);
+}
+ul[role='list'],
+ul[data-list='unstyled'],
+ol[role='list'],
+ol[data-list='unstyled'] {
+  list-style: var(--li-style, none);
+  margin-block-end: var(--li-my, 0);
+  margin-block-start: var(--li-mx, 0);
+  padding-inline-start: var(--li-px, 0);
+}
+ul[data-list='inline'],
+ol[data-list='inline'] {
+  --li-direction: row;
+  --li-gap: 1rem;
+  --li-wrap: wrap;
 }
 
 button {
@@ -462,7 +478,7 @@ details {
   --details-justify: flex-start;
   --details-direction: columns;
   --details-gap: 5rem;
-  --details-px: 2rem;
+  --details-px: 1.5rem;
   --details-py: 1.5rem;
   --details-radius: 0.5rem;
   --summary-cursor: pointer;
@@ -471,7 +487,7 @@ details {
   --summary-justify: flex-start;
   --summary-align: center;
   --summary-gap: 0.5rem;
-  --max-h-closed: 200px;
+  --max-h-closed: 6.25rem;
   --max-h-open: 50rem;
   display: var(--details-display);
   flex-direction: var(--details-direction);
@@ -515,6 +531,37 @@ details[open] > summary {
 }
 details[open] > section {
   max-height: var(--max-h-open);
+}
+
+a {
+  --link-decoration: none;
+  --link-color: #0070f3;
+  --link-bg: lightgray;
+  --link-px: 0;
+  --link-py: 0;
+  --link-transition: all 0.75s ease-in-out;
+  --link-fs: 1rem;
+  --link-skip-ink: auto;
+  --link-decoration-offset: 1.5px;
+  --link-decoration-thickness: 2px;
+  color: var(--link-color);
+  font-size: var(--link-fs);
+  text-decoration: var(--link-decoration);
+  text-decoration-color: var(--link-color);
+  text-decoration-thickness: var(--link-decoration-thickness);
+  text-underline-offset: var(--link-decoration-offset);
+  text-decoration-skip-ink: var(--link-skip-ink);
+}
+a:hover {
+  --link-decoration: underline;
+}
+a:focus {
+  outline: none;
+  --link-decoration: underline;
+}
+a:visited,
+a:active {
+  --link-color: currentColor;
 }
 
 /*# sourceMappingURL=index.css.map */
