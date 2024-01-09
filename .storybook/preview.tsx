@@ -1,6 +1,6 @@
 import './style.css'
 // import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
-import '../libs/react/fpkit/src/styles/styles/index.css'
+import '../libs/react/fpkit/src/styles/index.css'
 
 import * as React from 'react'
 import CustomDocs from './templates/custom-docs'
@@ -25,7 +25,7 @@ export const parameters = {
     page: CustomDocs,
     toc: true, // 👈 Enables the table of contents
   },
-  layout: 'centered',
+  layout: 'padded',
   // @geometricpanda/storybook-addon-badges
   badgesConfig: {
     beta: {

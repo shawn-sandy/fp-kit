@@ -28,7 +28,7 @@ export interface TextProps {
   elm?: TextElements
   children?: React.ReactNode
   text?: String
-  styles?: {}
+  styles?: React.CSSProperties | {}
 }
 
 export const Text = ({
