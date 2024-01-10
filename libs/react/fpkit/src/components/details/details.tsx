@@ -48,7 +48,6 @@ export const Details = ({
   onToggleEvent,
   onPointerDownEvent,
   children,
-  ariaLabel,
   ref,
   ...props
 }: DetailsProps) => {
@@ -69,7 +68,6 @@ export const Details = ({
       onToggle={onToggleCallback}
       ref={ref}
       open={open}
-      aria-label={ariaLabel || 'Details dropdown'}
       {...props}
     >
       <FP as="summary" onPointerDown={onPointerDownCallback}>
