@@ -1,0 +1,12 @@
+header {
+  display: grid;
+  grid-template-areas: 'hero';
+  place-items: center;
+  > * {
+    grid-area: hero;
+  }
+
+  section {
+    text-align: center;
+  }
+}

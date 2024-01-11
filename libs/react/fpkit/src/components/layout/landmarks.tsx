@@ -5,6 +5,7 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
 import React, { ReactNode } from 'react'
+import { Img } from '../images/img'
 
 /**
  * Renders children elements without any wrapping component.
@@ -24,7 +25,8 @@ export const Landmarks = (children?: React.FC) => <>{children}</>
 export const Header = ({ children, styles = {}, ...props }: ComponentProps) => {
   return (
     <FP as="header" {...props} styles={styles}>
-      <FP as="section">{children}</FP>
+      <Img src="//" alt="" />
+      <FP as="section">{children}I</FP>
     </FP>
   )
 }

@@ -11,6 +11,8 @@ import { expect } from '@storybook/jest'
 
 import { Header } from './landmarks'
 
+import './landmarks.scss'
+
 const meta: Meta<typeof Header> = {
   title: 'FP.React Components/Layout/Landmarks',
   component: Header,

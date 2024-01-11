@@ -482,7 +482,7 @@ details {
   --details-py: 1.5rem;
   --details-radius: 0.5rem;
   --summary-cursor: pointer;
-  --summary-transitions: all 0.75s ease-in-out;
+  --summary-transitions: all 0.75s linear;
   --summary-display: flex;
   --summary-justify: flex-start;
   --summary-align: center;
@@ -562,6 +562,18 @@ a:focus {
 a:visited,
 a:active {
   --link-color: currentColor;
+}
+
+header {
+  display: grid;
+  grid-template-areas: 'hero';
+  place-items: center;
+}
+header > * {
+  grid-area: hero;
+}
+header section {
+  text-align: center;
 }
 
 /*# sourceMappingURL=index.css.map */

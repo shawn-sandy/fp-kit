@@ -1,0 +1,13 @@
+header {
+  display: grid;
+  grid-template-areas: 'hero';
+  place-items: center;
+}
+header > * {
+  grid-area: hero;
+}
+header section {
+  text-align: center;
+}
+
+/*# sourceMappingURL=landmarks.css.map */
