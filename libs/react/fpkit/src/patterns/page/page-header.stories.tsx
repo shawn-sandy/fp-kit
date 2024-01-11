@@ -11,7 +11,7 @@ const meta: Meta<typeof PageHeader> = {
   args: {
     headerTitle: 'Page Header',
     headerSubtitle: 'Place your cool elevator pitch here...',
-    headerBackground: <Img src="https://picsum.photos/1000/600" alt="" />,
+    headerBackground: <Img src="https://picsum.photos/2400/600" alt="" />,
   },
 } as Meta
 
