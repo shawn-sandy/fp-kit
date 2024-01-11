@@ -5,7 +5,6 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
 import React, { ReactNode } from 'react'
-import { Img } from '../images/img'
 
 /**
  * Renders children elements without any wrapping component.
@@ -13,6 +12,9 @@ import { Img } from '../images/img'
  */
 export const Landmarks = (children?: React.FC) => <>{children}</>
 
+type HeaderProps = {
+  headerBackground?: ReactNode
+} & ComponentProps
 /**
  * Header component.
  *
@@ -22,10 +24,15 @@ export const Landmarks = (children?: React.FC) => <>{children}</>
  * @param styles - Optional styles object.
  * @param props - Other props.
  */
-export const Header = ({ children, styles = {}, ...props }: ComponentProps) => {
+export const Header = ({
+  children,
+  headerBackground,
+  styles = {},
+  ...props
+}: HeaderProps) => {
   return (
     <FP as="header" {...props} styles={styles}>
-      <Img src="//" alt="" />
+      {headerBackground}
       <FP as="section">{children}I</FP>
     </FP>
   )

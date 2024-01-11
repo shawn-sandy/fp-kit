@@ -3,6 +3,7 @@ import { within, userEvent, screen } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import PageHeader, { HeaderVariants } from './page-header.js'
+import { Img } from '#components/images/img'
 
 const meta: Meta<typeof PageHeader> = {
   title: 'FP.React Patterns/PageHeader',
@@ -10,6 +11,7 @@ const meta: Meta<typeof PageHeader> = {
   args: {
     headerTitle: 'Page Header',
     headerSubtitle: 'Place your cool elevator pitch here...',
+    headerBackground: <Img src="https://picsum.photos/1000/600" alt="" />,
   },
 } as Meta
 

@@ -564,15 +564,39 @@ a:active {
   --link-color: currentColor;
 }
 
-header {
-  display: grid;
-  grid-template-areas: 'hero';
-  place-items: center;
+header,
+[data-grid~='overlay'] {
+  --overlay-grid-area: overlay;
+  --overlay-placement: center;
+  --overlay-display: grid;
+  display: var(--overlay-display);
+  grid-template-areas: var(--overlay-grid-area);
+  place-items: var(--overlay-placement);
 }
-header > * {
-  grid-area: hero;
+header > *,
+[data-grid~='overlay'] > * {
+  grid-area: overlay;
 }
-header section {
+header section,
+[data-grid~='overlay'] section {
+  text-align: center;
+}
+
+header,
+[data-grid~='overlay'] {
+  --overlay-grid-area: overlay;
+  --overlay-placement: center;
+  --overlay-display: grid;
+  display: var(--overlay-display);
+  grid-template-areas: var(--overlay-grid-area);
+  place-items: var(--overlay-placement);
+}
+header > *,
+[data-grid~='overlay'] > * {
+  grid-area: overlay;
+}
+header section,
+[data-grid~='overlay'] section {
   text-align: center;
 }
 
