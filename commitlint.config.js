@@ -22,9 +22,9 @@ const Configuration = {
         'style',
       ],
     ],
-    'body-max-length': [1, 'always', 200],
+    'body-max-length': [1, 'always', 500],
     'body-max-line-length': [1, 'always', 200],
-    'header-max-length': [1, 'always', 100],
+    'header-max-length': [1, 'always', 200],
   },
 
   /*
