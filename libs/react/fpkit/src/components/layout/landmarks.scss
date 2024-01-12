@@ -9,6 +9,9 @@ header,
   // Controls display of grid
   --overlay-display: grid;
 
+  // Overlay padding
+  --overlay-padding: 2rem;
+
   display: var(--overlay-display);
 
   grid-template-areas: var(--overlay-grid-area);
@@ -17,25 +20,8 @@ header,
 
   > * {
     grid-area: overlay;
-  }
-
-  section {
-    text-align: center;
-  }
-}
-header,
-[data-grid~='overlay'] {
-  --overlay-grid-area: overlay;
-  --overlay-placement: center;
-  --overlay-display: grid;
-  display: var(--overlay-display);
-  grid-template-areas: var(--overlay-grid-area);
-  place-items: var(--overlay-placement);
-  > * {
-    grid-area: overlay;
-  }
-
-  section {
-    text-align: center;
+    section {
+      text-align: center;
+    }
   }
 }
