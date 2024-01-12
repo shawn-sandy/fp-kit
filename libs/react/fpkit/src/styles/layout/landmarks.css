@@ -3,31 +3,23 @@ header,
   --overlay-grid-area: overlay;
   --overlay-placement: center;
   --overlay-display: grid;
+  --overlay-padding: 2rem;
+  --overlay-w: min(100vw, 90vw);
+  --overlay-h: min(70vh, 50vh);
+  grid-template-areas: 'overlay';
   display: var(--overlay-display);
-  grid-template-areas: var(--overlay-grid-area);
   place-items: var(--overlay-placement);
+  align-items: var(--overlay-placement);
+  height: var(--overlay-h);
+  width: var(--overlay-w);
 }
 header > *,
 [data-grid~='overlay'] > * {
   grid-area: overlay;
 }
-header section,
-[data-grid~='overlay'] section {
-  text-align: center;
-}
-
-header,
-[data-grid~='overlay'] {
-  --overlay-grid-area: overlay;
-  --overlay-placement: center;
-  --overlay-display: grid;
-  display: var(--overlay-display);
-  grid-template-areas: var(--overlay-grid-area);
-  place-items: var(--overlay-placement);
-}
-header > *,
-[data-grid~='overlay'] > * {
-  grid-area: overlay;
+header img,
+[data-grid~='overlay'] img {
+  width: var(--overlay-w);
 }
 header section,
 [data-grid~='overlay'] section {

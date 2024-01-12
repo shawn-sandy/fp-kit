@@ -9,32 +9,30 @@ header,
   // Controls display of grid
   --overlay-display: grid;
 
+  // Overlay padding
+  --overlay-padding: 2rem;
+
+  --overlay-w: min(100vw, 90vw);
+
+  --overlay-h: min(70vh, 50vh);
+
+  grid-template-areas: 'overlay';
+
   display: var(--overlay-display);
 
-  grid-template-areas: var(--overlay-grid-area);
-
   place-items: var(--overlay-placement);
+  align-items: var(--overlay-placement);
+
+  height: var(--overlay-h);
+
+  width: var(--overlay-w);
 
   > * {
     grid-area: overlay;
   }
-
-  section {
-    text-align: center;
+  img {
+    width: var(--overlay-w);
   }
-}
-header,
-[data-grid~='overlay'] {
-  --overlay-grid-area: overlay;
-  --overlay-placement: center;
-  --overlay-display: grid;
-  display: var(--overlay-display);
-  grid-template-areas: var(--overlay-grid-area);
-  place-items: var(--overlay-placement);
-  > * {
-    grid-area: overlay;
-  }
-
   section {
     text-align: center;
   }

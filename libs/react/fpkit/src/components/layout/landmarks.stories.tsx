@@ -39,7 +39,7 @@ export const LandmarkDefault: Story = {}
 export const HeroHeader: Story = {
   args: {
     children: headerChildren(),
-    headerBackground: <Img src="https://picsum.photos/1000/600" alt="" />,
+    headerBackground: <Img src="https://picsum.photos/2000/1000" alt="" />,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
