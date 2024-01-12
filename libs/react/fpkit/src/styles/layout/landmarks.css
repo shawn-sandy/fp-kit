@@ -17,12 +17,12 @@ header > *,
 [data-grid~='overlay'] > * {
   grid-area: overlay;
 }
-header img,
-[data-grid~='overlay'] img {
+header > img,
+[data-grid~='overlay'] > img {
   width: var(--overlay-w);
 }
-header section,
-[data-grid~='overlay'] section {
+header > section,
+[data-grid~='overlay'] > section {
   text-align: center;
 }
 
