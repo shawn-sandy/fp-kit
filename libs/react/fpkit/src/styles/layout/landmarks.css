@@ -4,18 +4,25 @@ header,
   --overlay-placement: center;
   --overlay-display: grid;
   --overlay-padding: 2rem;
+  --overlay-w: min(100vw, 90vw);
+  --overlay-h: min(70vh, 50vh);
   grid-template-areas: 'overlay';
   display: var(--overlay-display);
   place-items: var(--overlay-placement);
-  height: 50vh;
-  width: 90vw;
+  align-items: var(--overlay-placement);
+  height: var(--overlay-h);
+  width: var(--overlay-w);
 }
 header > *,
 [data-grid~='overlay'] > * {
   grid-area: overlay;
 }
-header > * section,
-[data-grid~='overlay'] > * section {
+header img,
+[data-grid~='overlay'] img {
+  width: var(--overlay-w);
+}
+header section,
+[data-grid~='overlay'] section {
   text-align: center;
 }
 

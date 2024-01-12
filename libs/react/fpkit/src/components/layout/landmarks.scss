@@ -12,20 +12,28 @@ header,
   // Overlay padding
   --overlay-padding: 2rem;
 
+  --overlay-w: min(100vw, 90vw);
+
+  --overlay-h: min(70vh, 50vh);
+
   grid-template-areas: 'overlay';
 
   display: var(--overlay-display);
 
   place-items: var(--overlay-placement);
+  align-items: var(--overlay-placement);
 
-  height: min(70vh, 50vh);
+  height: var(--overlay-h);
 
-  width: min(100vw, 90vw);
+  width: var(--overlay-w);
 
   > * {
     grid-area: overlay;
-    section {
-      text-align: center;
-    }
+  }
+  img {
+    width: var(--overlay-w);
+  }
+  section {
+    text-align: center;
   }
 }
