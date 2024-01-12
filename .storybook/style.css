@@ -1,7 +1,7 @@
 #root {
   min-width: 100%;
   display: grid;
-  align-items: center;
-  justify-items: center;
+  /* align-items: center;
+  justify-items: center; */
   font-family: 'Roboto', sans-serif;
 }

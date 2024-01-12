@@ -12,11 +12,15 @@ header,
   // Overlay padding
   --overlay-padding: 2rem;
 
+  grid-template-areas: 'overlay';
+
   display: var(--overlay-display);
 
-  grid-template-areas: var(--overlay-grid-area);
-
   place-items: var(--overlay-placement);
+
+  height: min(70vh, 50vh);
+
+  width: min(100vw, 90vw);
 
   > * {
     grid-area: overlay;
