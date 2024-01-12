@@ -1,0 +1,37 @@
+header,
+[data-grid~='overlay'] {
+  --overlay-grid-area: overlay;
+  --overlay-placement: center;
+  --overlay-display: grid;
+  display: var(--overlay-display);
+  grid-template-areas: var(--overlay-grid-area);
+  place-items: var(--overlay-placement);
+}
+header > *,
+[data-grid~='overlay'] > * {
+  grid-area: overlay;
+}
+header section,
+[data-grid~='overlay'] section {
+  text-align: center;
+}
+
+header,
+[data-grid~='overlay'] {
+  --overlay-grid-area: overlay;
+  --overlay-placement: center;
+  --overlay-display: grid;
+  display: var(--overlay-display);
+  grid-template-areas: var(--overlay-grid-area);
+  place-items: var(--overlay-placement);
+}
+header > *,
+[data-grid~='overlay'] > * {
+  grid-area: overlay;
+}
+header section,
+[data-grid~='overlay'] section {
+  text-align: center;
+}
+
+/*# sourceMappingURL=landmarks.css.map */

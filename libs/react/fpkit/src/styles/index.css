@@ -482,7 +482,7 @@ details {
   --details-py: 1.5rem;
   --details-radius: 0.5rem;
   --summary-cursor: pointer;
-  --summary-transitions: all 0.75s ease-in-out;
+  --summary-transitions: all 0.75s linear;
   --summary-display: flex;
   --summary-justify: flex-start;
   --summary-align: center;
@@ -562,6 +562,42 @@ a:focus {
 a:visited,
 a:active {
   --link-color: currentColor;
+}
+
+header,
+[data-grid~='overlay'] {
+  --overlay-grid-area: overlay;
+  --overlay-placement: center;
+  --overlay-display: grid;
+  display: var(--overlay-display);
+  grid-template-areas: var(--overlay-grid-area);
+  place-items: var(--overlay-placement);
+}
+header > *,
+[data-grid~='overlay'] > * {
+  grid-area: overlay;
+}
+header section,
+[data-grid~='overlay'] section {
+  text-align: center;
+}
+
+header,
+[data-grid~='overlay'] {
+  --overlay-grid-area: overlay;
+  --overlay-placement: center;
+  --overlay-display: grid;
+  display: var(--overlay-display);
+  grid-template-areas: var(--overlay-grid-area);
+  place-items: var(--overlay-placement);
+}
+header > *,
+[data-grid~='overlay'] > * {
+  grid-area: overlay;
+}
+header section,
+[data-grid~='overlay'] section {
+  text-align: center;
 }
 
 /*# sourceMappingURL=index.css.map */

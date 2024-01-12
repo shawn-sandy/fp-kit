@@ -1,0 +1,41 @@
+header,
+[data-grid~='overlay'] {
+  // Name of the grid area
+  --overlay-grid-area: overlay;
+
+  // Placement of items in grid area
+  --overlay-placement: center;
+
+  // Controls display of grid
+  --overlay-display: grid;
+
+  display: var(--overlay-display);
+
+  grid-template-areas: var(--overlay-grid-area);
+
+  place-items: var(--overlay-placement);
+
+  > * {
+    grid-area: overlay;
+  }
+
+  section {
+    text-align: center;
+  }
+}
+header,
+[data-grid~='overlay'] {
+  --overlay-grid-area: overlay;
+  --overlay-placement: center;
+  --overlay-display: grid;
+  display: var(--overlay-display);
+  grid-template-areas: var(--overlay-grid-area);
+  place-items: var(--overlay-placement);
+  > * {
+    grid-area: overlay;
+  }
+
+  section {
+    text-align: center;
+  }
+}

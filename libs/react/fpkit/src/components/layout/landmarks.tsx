@@ -12,6 +12,9 @@ import React, { ReactNode } from 'react'
  */
 export const Landmarks = (children?: React.FC) => <>{children}</>
 
+type HeaderProps = {
+  headerBackground?: ReactNode
+} & ComponentProps
 /**
  * Header component.
  *
@@ -21,10 +24,16 @@ export const Landmarks = (children?: React.FC) => <>{children}</>
  * @param styles - Optional styles object.
  * @param props - Other props.
  */
-export const Header = ({ children, styles = {}, ...props }: ComponentProps) => {
+export const Header = ({
+  children,
+  headerBackground,
+  styles = {},
+  ...props
+}: HeaderProps) => {
   return (
     <FP as="header" {...props} styles={styles}>
-      <FP as="section">{children}</FP>
+      {headerBackground}
+      <FP as="section">{children}I</FP>
     </FP>
   )
 }

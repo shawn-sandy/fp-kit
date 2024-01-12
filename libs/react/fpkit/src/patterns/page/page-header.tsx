@@ -24,7 +24,7 @@ export type PageHeaderProps = {
   children?: React.ReactNode
   /** The link of the page header (optional) */
   headerLink?: headerLinkType
-} & Pick<ComponentProps, 'styles'>
+} & React.ComponentProps<typeof Landmarks.Header>
 
 const defaultStyles = {
   minHeight: 'var(--hdr-min-h, 30vh)',
@@ -39,6 +39,7 @@ const defaultStyles = {
  * @param {string} props.headerTitle - The title of the header
  * @param {string} [props.headerSubtitle] - Optional subtitle
  * @param {HeaderVariants} [props.variant] - Visual variant
+ * @param {ReactNode} [props.headerBackground] - Background element to render inside the header
  * @param {ReactNode} [props.children] - Content inside the header
  * @param {Object} [props.styles] - CSS styles to apply
  *
@@ -50,14 +51,22 @@ const PageHeader = ({
   variant,
   children,
   styles,
+  headerBackground,
   ...props
 }: PageHeaderProps) => {
   const style = { defaultStyles, ...styles }
   return (
-    <Landmarks.Header styles={style} data-style={variant} {...props}>
-      <h2>{headerTitle}</h2>
-      {!!headerSubtitle && <h3>{headerSubtitle}</h3>}
-      {children}
+    <Landmarks.Header
+      headerBackground={headerBackground}
+      styles={style}
+      data-style={variant}
+      {...props}
+    >
+      <Landmarks.Section>
+        <h2>{headerTitle}</h2>
+        {!!headerSubtitle && <h3>{headerSubtitle}</h3>}
+        {children}
+      </Landmarks.Section>
     </Landmarks.Header>
   )
 }

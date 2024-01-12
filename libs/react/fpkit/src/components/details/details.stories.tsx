@@ -72,7 +72,11 @@ export const DetailsOpen: Story = {
 export const CustomDropdown: Story = {
   render: () => (
     <>
-      <Details summary="Summary Section" icon={icon}>
+      <Details
+        summary="Summary Section"
+        icon={icon}
+        ariaLabel="Details Section"
+      >
         {content}
       </Details>
       <p>

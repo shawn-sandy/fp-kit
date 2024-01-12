@@ -11,6 +11,9 @@ import { expect } from '@storybook/jest'
 
 import { Header } from './landmarks'
 
+import './landmarks.scss'
+import Img from '#components/images/img'
+
 const meta: Meta<typeof Header> = {
   title: 'FP.React Components/Layout/Landmarks',
   component: Header,
@@ -33,9 +36,10 @@ type Story = StoryObj<typeof Header>
 
 export const LandmarkDefault: Story = {}
 
-export const HeaderWithChildren: Story = {
+export const HeroHeader: Story = {
   args: {
     children: headerChildren(),
+    headerBackground: <Img src="https://picsum.photos/1000/600" alt="" />,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
