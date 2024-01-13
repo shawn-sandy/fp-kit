@@ -28,10 +28,11 @@ export const Header = ({
   children,
   headerBackground,
   styles = {},
+  classes,
   ...props
 }: HeaderProps) => {
   return (
-    <FP as="header" {...props} styles={styles}>
+    <FP as="header" {...props} styles={styles} className={classes}>
       {headerBackground}
       <FP as="section">{children}I</FP>
     </FP>

@@ -44,6 +44,7 @@ export const Details = ({
   summary,
   icon,
   styles,
+  classes,
   open,
   onToggleEvent,
   onPointerDownEvent,
@@ -66,6 +67,7 @@ export const Details = ({
     <FP
       as="details"
       style={defaultStyles}
+      classNames={classes}
       onToggle={onToggleCallback}
       ref={ref}
       open={open}
