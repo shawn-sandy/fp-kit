@@ -138,6 +138,7 @@ export const Button = ({
       onPointerDown={handlePointerDown}
       onPointerLeave={handlePointerLeave}
       style={styles}
+      className={classes}
       aria-disabled={disabled}
       onClick={handlePointerDown}
       {...props}
