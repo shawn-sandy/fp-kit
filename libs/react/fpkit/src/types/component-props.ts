@@ -24,7 +24,7 @@ export interface ComponentProps {
   /**
    * Component class attribute
    */
-  classes?: String
+  classes?: string
   /**
    * Style value for [data-style] attribute
    */

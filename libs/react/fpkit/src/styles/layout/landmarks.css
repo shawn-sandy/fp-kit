@@ -6,12 +6,14 @@ header,
   --overlay-padding: 2rem;
   --overlay-w: min(100vw, 90vw);
   --overlay-h: min(70vh, 50vh);
+  --overlay-color: currentColor;
   grid-template-areas: 'overlay';
   display: var(--overlay-display);
   place-items: var(--overlay-placement);
   align-items: var(--overlay-placement);
   height: var(--overlay-h);
   width: var(--overlay-w);
+  color: var(--overlay-color);
 }
 header > *,
 [data-grid~='overlay'] > * {

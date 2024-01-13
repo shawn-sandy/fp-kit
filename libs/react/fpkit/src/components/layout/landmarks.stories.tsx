@@ -40,6 +40,9 @@ export const HeroHeader: Story = {
   args: {
     children: headerChildren(),
     headerBackground: <Img src="https://picsum.photos/2000/1000" alt="" />,
+    styles: { color: 'red' },
+    classNames: 'header-class',
+    'data-styles': 'blue',
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)

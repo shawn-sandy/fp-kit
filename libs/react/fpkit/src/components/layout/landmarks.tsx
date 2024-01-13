@@ -47,9 +47,14 @@ export const Header = ({
  * @param styles - Optional styles object.
  * @param props - Other props.
  */
-export const Main = ({ children, styles = {}, ...props }: ComponentProps) => {
+export const Main = ({
+  children,
+  styles,
+  classes,
+  ...props
+}: ComponentProps) => {
   return (
-    <FP as="main" styles={styles} {...props}>
+    <FP as="main" styles={styles} {...props} className={classes}>
       {children}
     </FP>
   )
@@ -70,9 +75,14 @@ export const Footer = ({ children, styles = {}, ...props }: ComponentProps) => {
   )
 }
 
-export const Aside = ({ children, styles = {}, ...props }: ComponentProps) => {
+export const Aside = ({
+  children,
+  styles = {},
+  classes,
+  ...props
+}: ComponentProps) => {
   return (
-    <FP as="aside" styles={styles} {...props}>
+    <FP as="aside" styles={styles} className={classes} {...props}>
       <FP as="section">{children}</FP>
     </FP>
   )
@@ -87,11 +97,12 @@ export const Aside = ({ children, styles = {}, ...props }: ComponentProps) => {
  */
 export const Section = ({
   children,
-  styles = {},
+  styles,
+  classes,
   ...props
 }: ComponentProps) => {
   return (
-    <FP as="section" styles={styles} {...props}>
+    <FP as="section" styles={styles} className={classes} {...props}>
       {children}
     </FP>
   )
@@ -106,11 +117,12 @@ export const Section = ({
  */
 export const Article = ({
   children,
-  styles = {},
+  styles,
+  classes,
   ...props
 }: ComponentProps) => {
   return (
-    <FP as="article" styles={styles} {...props}>
+    <FP as="article" styles={styles} className={classes} {...props}>
       {children}
     </FP>
   )
