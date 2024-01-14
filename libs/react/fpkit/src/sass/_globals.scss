@@ -33,6 +33,7 @@ section {
 
 p {
   font-size: var(--fs);
+  max-width: var(--p-max-w, 70ch);
   & + p {
     margin-block-start: 1rem;
   }
@@ -56,4 +57,14 @@ ol {
     --li-gap: 1rem;
     --li-wrap: wrap;
   }
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+blockquote {
+  padding: 1rem;
+  border-left: 5px lightgray solid;
 }
