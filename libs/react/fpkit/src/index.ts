@@ -23,6 +23,7 @@ export { Modal } from './components/modal/modal'
 export * from './components/nav/nav'
 export { Popover } from './components/popover/popover'
 export { RenderTable as TBL } from './components/tables/table'
+export * from './components/tag/tag'
 export {
   Table,
   Caption,
@@ -37,5 +38,5 @@ export { Textarea } from './components/form/textarea'
 export { default as To } from './components/link/link'
 export { default as FP } from './components/fp'
 export { default as Box } from './components/fp'
-export { default as Tag } from './components/fp'
+// export { default as Tag } from './components/fp'
 // hooks
