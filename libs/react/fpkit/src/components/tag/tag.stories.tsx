@@ -18,7 +18,7 @@ const meta: Meta<typeof Tag> = {
 export default meta
 type Story = StoryObj<typeof Tag>
 
-export const BadgeComponent: Story = {
+export const TagComponent: Story = {
   args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
