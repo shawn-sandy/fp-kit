@@ -12,4 +12,8 @@ sup:has(> span) {
   span {
     color: inherit;
   }
+
+  &[data-badge~='rounded'] {
+    --badge-radius: 100%;
+  }
 }

@@ -32,12 +32,23 @@ export const CustomBadge: Story = {
   render: ({ ...args }) => {
     return (
       <p>
-        Custom<Badge>21</Badge>
+        {args.children}
+        <Badge>21</Badge>
       </p>
     )
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     expect(canvas.getByText(/custom/i)).toBeInTheDocument()
+  },
+} as Story
+
+export const RoundedBadge: Story = {
+  render: ({ ...args }) => {
+    return (
+      <p>
+        Custom<Badge data-badge="rounded">21</Badge>
+      </p>
+    )
   },
 } as Story
