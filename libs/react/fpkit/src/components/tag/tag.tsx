@@ -1,7 +1,7 @@
 import React from 'react'
 import FP from '#components/fp'
 
-export type FpBadgeProps = {
+export type TagProps = {
   /** HTML element to display the badge as span or p */
   elm?: 'span' | 'p'
   /**  Aria role for the component - conditional */
@@ -18,18 +18,18 @@ export type FpBadgeProps = {
  * @param {object} props - additional props to pass to the FP component
  * @returns {any} - returns the Badge component
  */
-export const Badge = ({
+export const Tag = ({
   elm = 'span',
   role = 'note',
   children,
   styles,
   ...props
-}: FpBadgeProps) => {
+}: TagProps) => {
   return (
     <FP as={elm} role={role} styles={styles} {...props}>
       {children}
     </FP>
   )
 }
-export default Badge
-Badge.displayName = 'Badge'
+export default Tag
+Tag.displayName = 'Tag'

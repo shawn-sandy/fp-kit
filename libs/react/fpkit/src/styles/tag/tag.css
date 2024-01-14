@@ -1,0 +1,64 @@
+p[role='note'],
+[role='note'],
+[data-tag] {
+  --beta: var(--warning-500, orange);
+  --stable: var(--success-500, green);
+  --production: rgb(44, 71, 151);
+  --tag-px: 0.7rem;
+  --tag-py: 0.2rem;
+  --tag-fs: 0.8rem;
+  --tag-radius: 99rem;
+  --tag-bg: lightgray;
+  --tag-fw: 500;
+  --tag-color: currentColor;
+  --tag-display: inline-block;
+  display: var(--tag-display);
+  padding-inline: var(--tag-px);
+  padding-block: var(--tag-py);
+  font-size: var(--tag-fs);
+  color: var(--tag-color);
+  background-color: var(--tag-bg);
+  border-radius: var(--tag-radius);
+}
+p[role='note'][data-tag~='beta'],
+[role='note'][data-tag~='beta'],
+[data-tag][data-tag~='beta'] {
+  background-color: var(--beta);
+}
+p[role='note'][data-tag~='stable'],
+[role='note'][data-tag~='stable'],
+[data-tag][data-tag~='stable'] {
+  --tag-cl: white;
+  --tag-bg: var(--stable);
+}
+p[role='note'][data-tag~='production'],
+[role='note'][data-tag~='production'],
+[data-tag][data-tag~='production'] {
+  --tag-color: white;
+  --tag-bg: var(--production);
+}
+p[role='note'][data-tag~='beta'],
+[role='note'][data-tag~='beta'],
+[data-tag][data-tag~='beta'] {
+  --tag-color: currentColor;
+  --tag-bg: var(--beta);
+}
+p[role='note'][data-tag~='alpha'],
+[role='note'][data-tag~='alpha'],
+[data-tag][data-tag~='alpha'] {
+  --tag-color: currentColor;
+  --tag-bg: var(--beta);
+}
+p[role='note'][data-tag~='beta'],
+[role='note'][data-tag~='beta'],
+[data-tag][data-tag~='beta'] {
+  --tag-color: currentColor;
+  --tag-bg: var(--beta);
+}
+
+p[role='note'] {
+  --tag-display: block;
+  --border-radius: 0.5rem;
+}
+
+/*# sourceMappingURL=tag.css.map */

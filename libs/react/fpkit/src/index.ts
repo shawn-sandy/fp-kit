@@ -1,6 +1,6 @@
 import { Popover } from './hooks/popover/popover'
 // export { Textarea } from './components/form/textarea';
-export { Badge } from './components/badge/fp-badge'
+
 export { Button } from './components/buttons/button'
 export { Card } from './components/cards/card'
 export { Dialog } from './components/modal/dialog'
