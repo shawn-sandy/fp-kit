@@ -68,3 +68,7 @@ blockquote {
   padding: 1rem;
   border-left: 5px lightgray solid;
 }
+
+strong {
+  font-weight: var(--weight);
+}
