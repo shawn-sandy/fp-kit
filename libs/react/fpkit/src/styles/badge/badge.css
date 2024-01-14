@@ -1,0 +1,17 @@
+sup:has(> span) {
+  --badge-bg: lightgray;
+  --badge-color: currentColor;
+  --badge-radius: 0.15rem;
+  --badge-padding: 0.15rem;
+  --badge-v-align: 0.5rem;
+  background-color: var(--badge-bg);
+  color: var(--badge-color);
+  padding: var(--badge-padding);
+  border-radius: var(--badge-radius);
+  vertical-align: var(--badge-v-align);
+}
+sup:has(> span) span {
+  color: inherit;
+}
+
+/*# sourceMappingURL=badge.css.map */
