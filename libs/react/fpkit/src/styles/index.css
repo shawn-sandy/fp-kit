@@ -632,5 +632,8 @@ sup:has(> span) {
 sup:has(> span) span {
   color: inherit;
 }
+sup:has(> span)[data-badge~='rounded'] {
+  --badge-radius: 100%;
+}
 
 /*# sourceMappingURL=index.css.map */
