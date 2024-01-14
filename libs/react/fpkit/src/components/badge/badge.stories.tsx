@@ -32,7 +32,7 @@ export const CustomBadge: Story = {
   render: ({ ...args }) => {
     return (
       <p>
-        {args.children}
+        Custom
         <Badge>21</Badge>
       </p>
     )
