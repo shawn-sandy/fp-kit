@@ -54,7 +54,9 @@ export const RequiredInput: Story = {
     await userEvent.type(input, 'test')
     expect(input).toBeValid()
 
-    await userEvent.type(input, '')
+    await userEvent.clear(input)
+
+    userEvent.type(input, '\n')
     expect(input).toBeInvalid()
   },
 } as Story

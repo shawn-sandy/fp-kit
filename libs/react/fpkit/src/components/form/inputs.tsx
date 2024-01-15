@@ -110,6 +110,7 @@ export const Input = ({
       tab-index={isDisabled ? -1 : undefined}
       aria-readonly={readonly}
       aria-required={required}
+      required={required}
       readOnly={readonly}
       {...props}
     />
