@@ -53,8 +53,8 @@ const Form = ({
 }
 
 export default Form
+Form.displayName = 'Form'
 Form.Field = Field
 Form.Input = Input
 Form.Select = Select
 Form.Textarea = Textarea
-Form.displayName = 'Form'

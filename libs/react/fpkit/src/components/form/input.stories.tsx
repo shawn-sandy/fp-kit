@@ -6,7 +6,7 @@ import Input from './inputs'
 import './form.scss'
 
 const meta: Meta<typeof Input> = {
-  title: 'FP.REACT Components/Form',
+  title: 'FP.REACT  Forms/Inputs',
   component: Input,
   args: {},
   parameters: {
