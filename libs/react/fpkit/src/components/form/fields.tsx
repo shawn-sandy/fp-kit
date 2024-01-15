@@ -42,4 +42,5 @@ export const Field = ({
   )
 }
 
+export default Field
 Field.displayName = 'Field'

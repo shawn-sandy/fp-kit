@@ -84,4 +84,5 @@ export const Textarea = ({
   )
 }
 
+export default Textarea
 Textarea.displayName = 'Textarea'

@@ -54,6 +54,6 @@ export const Select = ({
   )
 }
 
+export default Select
 Select.styles = defaultStyles
-
 Select.displayName = 'Select'
