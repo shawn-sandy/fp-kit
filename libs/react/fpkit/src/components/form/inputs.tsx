@@ -36,10 +36,7 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
    * Input is required or not
    */
   required?: boolean
-  /**
-   * Input id attribute
-   */
-  id: string
+
   /**
    * Set the element as disabled
    */
@@ -52,18 +49,6 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
    * ref to the input element
    */
   inputRef?: React.RefObject<HTMLInputElement>
-  /**
-   * Input styles
-   */
-  styles?: {}
-  /**
-   * input classes
-   */
-  classes?: string
-}
-
-export const defaultStyles = {
-  minWidth: 'var(--input-min-w, 60%)',
 }
 
 /**
@@ -112,7 +97,7 @@ export const Input = ({
       as="input"
       id={id}
       type={type}
-      placeholder={placeholder}
+      placeholder={placeholder || `${type} input`}
       className={classes}
       styles={styles}
       onChange={handleChange}
@@ -129,5 +114,6 @@ export const Input = ({
     />
   )
 }
-Input.styles = defaultStyles
+
+export default Input
 Input.displayName = 'Input'

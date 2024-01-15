@@ -1,7 +1,7 @@
 import FP from '../fp'
 import { ComponentProps } from '../../types'
 
-export interface FieldProps extends ComponentProps {
+export type FieldProps = {
   /**
    * Defines the for attribute of the label element
    */
@@ -10,10 +10,7 @@ export interface FieldProps extends ComponentProps {
    * The label content
    */
   label: React.ReactNode
-}
-
-export const defaultStyles = {}
-
+} & React.ComponentProps<typeof FP>
 /**
  * Field component that renders a label and children wrapped in a div element.
  * @param labelFor Defines the for attribute of the label element
@@ -23,20 +20,26 @@ export const defaultStyles = {}
  * @param props Additional props to be spread to the component
  */
 export const Field = ({
-  labelFor,
-  styles,
   label,
+  labelFor,
+  id,
+  styles,
+  classes,
   children,
   ...props
 }: FieldProps) => {
   return (
-    <FP as="div" styles={styles} data-style="fields">
+    <FP
+      as="div"
+      id={id}
+      styles={styles}
+      className={classes}
+      data-style="fields"
+    >
       <label htmlFor={labelFor}>{label}</label>
       {children}
     </FP>
   )
 }
-
-Field.styles = defaultStyles
 
 Field.displayName = 'Field'
