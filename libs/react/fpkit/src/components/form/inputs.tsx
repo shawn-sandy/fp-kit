@@ -97,7 +97,7 @@ export const Input = ({
       as="input"
       id={id}
       type={type}
-      placeholder={placeholder || `${type} input`}
+      placeholder={placeholder || `${required ? '*' : ''} ${type} input `}
       className={classes}
       styles={styles}
       onChange={handleChange}
@@ -109,6 +109,7 @@ export const Input = ({
       aria-disabled={isDisabled}
       tab-index={isDisabled ? -1 : undefined}
       aria-readonly={readonly}
+      aria-required={required}
       readOnly={readonly}
       {...props}
     />

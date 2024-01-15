@@ -25,10 +25,26 @@ input[type]:not([type='checkbox'], [type='radio'])::placeholder {
   color: var(--placeholder-color);
   font-style: var(--placeholder-style);
   font-size: var(--placeholder-fs);
+  text-transform: capitalize;
+}
+input[type]:not(
+    [type='checkbox'],
+    [type='radio']
+  )[aria-required='true']::placeholder {
+  color: var(--color-required, var(--placeholder-color));
+  font-weight: 600;
+}
+input[type]:not(
+    [type='checkbox'],
+    [type='radio']
+  )[aria-required='true']::placeholder::after {
+  content: '* ';
 }
 input[type]:not([type='checkbox'], [type='radio'])[aria-disabled='true'] {
   --input-border-color: lightgray;
   cursor: not-allowed;
+  text-transform: capitalize;
+  text-decoration: line-through;
 }
 
 /*# sourceMappingURL=form.css.map */

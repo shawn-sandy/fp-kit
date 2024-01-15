@@ -30,6 +30,42 @@ export const InputComponent: Story = {
   },
 }
 
+//required input story
+export const RequiredInput: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Displays a required input `aria-required="true"` on any input type the placeholder displays an `*` at the start of a default placeholder text to indicate it is required',
+      },
+    },
+  },
+  args: {
+    type: 'text',
+    required: true,
+    placeholder: 'This Field is required (placeholder)',
+  },
+
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const input = canvas.getByRole('textbox')
+    expect(input).toBeRequired()
+
+    await userEvent.type(input, 'test')
+    expect(input).toBeValid()
+
+    await userEvent.type(input, '')
+    expect(input).toBeInvalid()
+  },
+} as Story
+
+export const DefaultRequired: Story = {
+  args: {
+    type: 'text',
+    required: true,
+  },
+} as Story
+
 export const InputDisabled: Story = {
   parameters: {
     docs: {
@@ -98,5 +134,20 @@ export const TelInput: Story = {
 
     await userEvent.type(input, '1234567890')
     expect(input).toHaveValue('1234567890')
+  },
+} as Story
+
+// URL text input story
+export const UrlInput: Story = {
+  args: {
+    type: 'url',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const input = canvas.getByRole('textbox')
+    expect(input).toHaveAttribute('type', 'url')
+
+    await userEvent.type(input, 'https://example.com')
+    expect(input).toHaveValue('https://example.com')
   },
 } as Story

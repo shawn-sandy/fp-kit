@@ -29,10 +29,23 @@ input[type]:not([type='checkbox'], [type='radio']) {
     color: var(--placeholder-color);
     font-style: var(--placeholder-style);
     font-size: var(--placeholder-fs);
+    text-transform: capitalize;
+  }
+
+  &[aria-required='true'] {
+    &::placeholder {
+      color: var(--color-required, var(--placeholder-color));
+      font-weight: 600;
+      &::after {
+        content: '* ';
+      }
+    }
   }
 
   &[aria-disabled='true'] {
     --input-border-color: lightgray;
     cursor: not-allowed;
+    text-transform: capitalize;
+    text-decoration: line-through;
   }
 }
