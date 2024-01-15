@@ -1,13 +1,14 @@
 input[type]:not([type='checkbox'], [type='radio']) {
+  --input-border-color: gray;
   --input-appearance: none;
   --input-bg: inherit;
   --input-border: none;
-  --input-outline: 0.0625rem solid gray;
+  --input-outline: 0.0625rem solid var(--input-border-color);
   --input-px: 0.6rem;
   --input-py: 0.4rem;
   --input-radius: 0.5rem;
   --input-fs: var(--fs);
-  --input-w: min(100%, 400px);
+  --input-w: clamp(200px, 100%, 500px);
   --placeholder-color: gray;
   --placeholder-style: italic;
   --placeholder-fs: smaller;
@@ -24,6 +25,10 @@ input[type]:not([type='checkbox'], [type='radio'])::placeholder {
   color: var(--placeholder-color);
   font-style: var(--placeholder-style);
   font-size: var(--placeholder-fs);
+}
+input[type]:not([type='checkbox'], [type='radio'])[aria-disabled='true'] {
+  --input-border-color: lightgray;
+  cursor: not-allowed;
 }
 
 /*# sourceMappingURL=form.css.map */

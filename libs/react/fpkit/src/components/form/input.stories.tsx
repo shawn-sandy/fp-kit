@@ -9,6 +9,14 @@ const meta: Meta<typeof Input> = {
   title: 'FP.REACT Components/Form',
   component: Input,
   args: {},
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Use the `<Input type="***"/>` component to render an any input element -- text, email, number etc. Pass props like `name`, `value`, `placeholder` etc to control the input.',
+      },
+    },
+  },
 } as Story
 
 export default meta
@@ -21,6 +29,21 @@ export const InputComponent: Story = {
     expect(canvas.getByRole('textbox')).toBeInTheDocument()
   },
 }
+
+export const InputDisabled: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Displays a disabled input `aria-disabled="true"` on any input type',
+      },
+    },
+  },
+  args: {
+    type: 'text',
+    isDisabled: true,
+  },
+} as Story
 
 export const EmailInput: Story = {
   args: {
@@ -61,5 +84,19 @@ export const SearchInput: Story = {
 
     await userEvent.type(input, 'search term')
     expect(input).toHaveValue('search term')
+  },
+} as Story
+
+export const TelInput: Story = {
+  args: {
+    type: 'tel',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const input = canvas.getByRole('textbox')
+    expect(input).toHaveAttribute('type', 'tel')
+
+    await userEvent.type(input, '1234567890')
+    expect(input).toHaveValue('1234567890')
   },
 } as Story
