@@ -1,5 +1,4 @@
 import FP from '../fp'
-import { ComponentProps } from '../../types'
 
 export type FieldProps = {
   /**

@@ -14,9 +14,9 @@ export type FormProps = {
   target?: string
   formAction: (e: React.FormEvent<HTMLFormElement>) => void
   onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
-} & React.ComponentProps<typeof FP>
+} & Partial<React.ComponentProps<typeof FP>>
 
-const Form = ({
+export const Form = ({
   id,
   styles,
   classes,
