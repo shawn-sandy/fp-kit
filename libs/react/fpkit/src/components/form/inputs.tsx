@@ -4,6 +4,7 @@ import { ComponentProps } from '../../types'
 // import
 
 export interface InputProps extends Omit<ComponentProps, 'children'> {
+  id: string
   /**
    * The type of the input.
    */

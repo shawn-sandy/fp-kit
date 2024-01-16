@@ -9,7 +9,8 @@ export type FieldProps = {
    * The label content
    */
   label: React.ReactNode
-} & React.ComponentProps<typeof FP>
+  children: React.ReactNode
+} & Partial<React.ComponentProps<typeof FP>>
 /**
  * Field component that renders a label and children wrapped in a div element.
  * @param labelFor Defines the for attribute of the label element
@@ -34,6 +35,7 @@ export const Field = ({
       styles={styles}
       className={classes}
       data-style="fields"
+      {...props}
     >
       <label htmlFor={labelFor}>{label}</label>
       {children}

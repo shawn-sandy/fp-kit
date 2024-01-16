@@ -1,3 +1,19 @@
+:root {
+  --input-border-color: gray;
+  --input-appearance: none;
+  --input-bg: inherit;
+  --input-border: none;
+  --input-outline: 0.0625rem solid var(--input-border-color);
+  --input-px: 0.6rem;
+  --input-py: 0.4rem;
+  --input-radius: 0.5rem;
+  --input-fs: var(--fs);
+  --input-w: clamp(200px, 100%, 500px);
+  --placeholder-color: gray;
+  --placeholder-style: italic;
+  --placeholder-fs: smaller;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -14,20 +30,6 @@ form {
 }
 
 input[type]:not([type='checkbox'], [type='radio']) {
-  --input-border-color: gray;
-  --input-appearance: none;
-  --input-bg: inherit;
-  --input-border: none;
-  --input-outline: 0.0625rem solid var(--input-border-color);
-  --input-px: 0.6rem;
-  --input-py: 0.4rem;
-  --input-radius: 0.5rem;
-  --input-fs: var(--fs);
-  --input-w: clamp(200px, 100%, 500px);
-  --placeholder-color: gray;
-  --placeholder-style: italic;
-  --placeholder-fs: smaller;
-
   -webkit-appearance: var(--input-appearance);
   -moz-appearance: var(--input-appearance);
   appearance: var(--input-appearance);
@@ -59,5 +61,16 @@ input[type]:not([type='checkbox'], [type='radio']) {
     cursor: not-allowed;
     text-transform: capitalize;
     text-decoration: line-through;
+  }
+}
+
+textarea {
+  width: var(--input-w);
+  border: var(--input-border);
+  outline: var(--input-outline);
+  padding-inline: var(--input-px);
+  padding-block: var(--input-py);
+  &:focus {
+    outline: var(--input-outline);
   }
 }
