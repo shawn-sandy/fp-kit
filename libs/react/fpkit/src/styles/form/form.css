@@ -1,3 +1,17 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form > div {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+form label {
+  display: block;
+}
+
 input[type]:not([type='checkbox'], [type='radio']) {
   --input-border-color: gray;
   --input-appearance: none;
