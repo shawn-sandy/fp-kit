@@ -43,12 +43,15 @@ export const Select = ({
   return (
     <FP
       as="select"
+      id={id}
       ref={selectRef}
       onChange={handleChange}
       onBlur={handleChange}
       required={required}
+      disabled={disabled}
       aria-disabled={disabled ? true : undefined}
       style={{ ...defaultStyles }}
+      {...props}
     >
       {children || <option value="1">Option 1</option>}
     </FP>
