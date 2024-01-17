@@ -1,6 +1,8 @@
 import FP from '../fp'
 import { SharedInputProps } from '../../types'
 import React from 'react'
+import { o } from 'vitest/dist/types-198fd1d9.js'
+import { on } from 'events'
 
 export type SelectProps = {
   /**
@@ -26,27 +28,32 @@ const options = ({ selectValue, selectLabel }: SelectOptionsProps) => {
 
 export const Select = ({
   id,
+  name,
   classes,
   disabled,
   children,
   required,
   selectRef,
-  selectChange,
+  onChange,
+  onPointerDown,
   ...props
 }: SelectProps) => {
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    if (selectChange && !disabled) {
-      selectChange?.(e)
-    }
+  const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    if (onChange && !disabled) onChange?.(e)
+  }
+
+  const handlePointerDown = (e: React.PointerEvent<HTMLSelectElement>) => {
+    if (onPointerDown && !disabled) onPointerDown?.(e)
   }
 
   return (
     <FP
       as="select"
       id={id}
+      name={name}
       ref={selectRef}
-      onChange={handleChange}
-      onBlur={handleChange}
+      onChange={handleOnChange}
+      onPointerDown={handlePointerDown}
       required={required}
       disabled={disabled}
       aria-disabled={disabled ? true : undefined}

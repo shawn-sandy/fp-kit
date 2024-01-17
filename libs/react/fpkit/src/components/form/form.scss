@@ -70,6 +70,14 @@ textarea {
   outline: var(--input-outline);
   padding-inline: var(--input-px);
   padding-block: var(--input-py);
+
+  &::placeholder {
+    font-size: smaller;
+    color: var(--color-required, var(--placeholder-color));
+    font-size: var(--placeholder-fs);
+    font-style: var(--placeholder-style);
+  }
+
   &:focus {
     outline: var(--input-outline);
   }

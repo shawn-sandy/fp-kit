@@ -7,18 +7,7 @@ export type InputProps = {
    * The type of the input.
    */
   type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url' | 'search'
-  /**
-   * Pass a function to handle input change events
-   */
-  inputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
-  /**
-   * Pass a function to handle input focus events
-   */
-  inputBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
-  /**
-   * Function prop to handle input keydown events
-   */
-  inputDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+
   /**
    * Set the element as disabled
    */
@@ -39,30 +28,33 @@ export const Input = ({
   styles,
   classes,
   isDisabled,
+  disabled,
   readonly,
   required,
   ref,
+  onChange,
+  onBlur,
+  onPointerDown,
   inputChange,
   inputBlur,
-  inputDown,
   ...props
 }: InputProps): JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (inputChange && !isDisabled) {
-      inputChange?.(e)
+    if (onChange && !disabled) {
+      onChange?.(e)
     }
   }
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    if (inputBlur && !isDisabled) {
-      inputBlur?.(e)
+    if (onBlur && !disabled) {
+      onBlur?.(e)
     }
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (inputDown && !isDisabled) {
+    if (onPointerDown && !disabled) {
       e.preventDefault()
-      inputDown?.(e)
+      onPointerDown?.(e)
     }
   }
 

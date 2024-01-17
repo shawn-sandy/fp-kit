@@ -18,7 +18,7 @@ export interface ComponentProps {
   /**
    * Component class attribute
    */
-  classes?: String
+  classes?: string
   /**
    * Style value for [data-style] attribute
    */
@@ -26,7 +26,6 @@ export interface ComponentProps {
 }
 
 export interface SharedInputProps extends ComponentProps {
-
   /**
    * The input name
    */
@@ -55,5 +54,4 @@ export interface SharedInputProps extends ComponentProps {
    * Set the element as readonly
    */
   readonly?: boolean
-
 }

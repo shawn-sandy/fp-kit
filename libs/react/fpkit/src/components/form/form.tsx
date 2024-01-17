@@ -10,15 +10,14 @@ export type FormProps = {
   children: React.ReactNode
   formAction: (e: React.FormEvent<HTMLFormElement>) => void
   onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
-} & Partial<React.ComponentProps<typeof FP>> &
-  React.ComponentProps<'form'>
+} & Partial<React.ComponentProps<typeof FP>>
 
 export const Form = ({
   id,
+  name,
   styles,
   classes,
   children,
-  name,
   formAction,
   formMethod,
   onSubmit,
@@ -36,6 +35,8 @@ export const Form = ({
   return (
     <FP
       as="form"
+      id={id}
+      name={name}
       className={classes}
       styles={styles}
       action={formAction}

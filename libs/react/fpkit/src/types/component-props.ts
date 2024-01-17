@@ -24,7 +24,7 @@ export interface ComponentProps {
   /**
    * Component class attribute
    */
-  classes?: string
+  classes?: string | undefined
   /**
    * Style value for [data-style] attribute
    */
