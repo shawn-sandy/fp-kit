@@ -27,7 +27,7 @@ export const FormComponent: Story = {
   args: {
     children: (
       <>
-        <Form.Field label="Name" labelFor="name">
+        <Form.Field label="Name" labelFor="name" id="name-field">
           <Form.Input id="name" name="name" />
         </Form.Field>
         <Form.Field label="Email" labelFor="email">
@@ -42,6 +42,7 @@ export const FormComponent: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
-    expect(canvas.getByRole('form')).toBeInTheDocument()
+    const form = canvas.getByRole('form')
+    await expect(form).toBeInTheDocument()
   },
 } as Story

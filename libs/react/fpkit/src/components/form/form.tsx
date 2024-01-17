@@ -8,13 +8,10 @@ import Textarea from './textarea'
 
 export type FormProps = {
   children: React.ReactNode
-  formMethod?: 'get' | 'post'
-  noValidate?: boolean
-  name?: string
-  target?: string
   formAction: (e: React.FormEvent<HTMLFormElement>) => void
   onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
-} & Partial<React.ComponentProps<typeof FP>>
+} & Partial<React.ComponentProps<typeof FP>> &
+  React.ComponentProps<'form'>
 
 export const Form = ({
   id,

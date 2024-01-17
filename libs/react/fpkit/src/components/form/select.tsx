@@ -1,7 +1,8 @@
 import FP from '../fp'
 import { SharedInputProps } from '../../types'
+import React from 'react'
 
-export interface SelectProps extends SharedInputProps {
+export type SelectProps = {
   /**
    * Select onChange event props
    */
@@ -10,7 +11,7 @@ export interface SelectProps extends SharedInputProps {
    * Select ref
    */
   selectRef?: React.RefObject<HTMLSelectElement>
-}
+} & React.ComponentProps<typeof FP>
 
 export interface SelectOptionsProps {
   selectLabel: 'String'
@@ -24,6 +25,8 @@ const options = ({ selectValue, selectLabel }: SelectOptionsProps) => {
 }
 
 export const Select = ({
+  id,
+  classes,
   disabled,
   children,
   required,

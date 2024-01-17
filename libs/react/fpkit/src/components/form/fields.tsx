@@ -2,15 +2,12 @@ import FP from '../fp'
 
 export type FieldProps = {
   /**
-   * Defines the for attribute of the label element
-   */
-  labelFor: string
-  /**
    * The label content
    */
   label: React.ReactNode
   children: React.ReactNode
-} & Partial<React.ComponentProps<typeof FP>>
+} & React.ComponentProps<'label'> &
+  Partial<React.ComponentProps<typeof FP>>
 /**
  * Field component that renders a label and children wrapped in a div element.
  * @param labelFor Defines the for attribute of the label element

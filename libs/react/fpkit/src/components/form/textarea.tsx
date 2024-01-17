@@ -2,15 +2,7 @@ import FP from '../fp'
 import { InputProps } from './inputs'
 import { SharedInputProps } from '../../types'
 
-export interface TextareaProps extends SharedInputProps {
-  /**
-   * The number of lines in textarea
-   */
-  rows?: number
-  /**
-   * The number of columns in textarea
-   */
-  cols?: number
+export type TextareaProps = {
   /**
    * Textarea react ref
    */
@@ -27,7 +19,7 @@ export interface TextareaProps extends SharedInputProps {
    * Textarea keydown event handler
    */
   textareaDown?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void
-}
+} & React.ComponentProps<typeof FP>
 
 export const defaultStyles = {}
 

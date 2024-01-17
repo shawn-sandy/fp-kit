@@ -1,26 +1,12 @@
 import FP from '../fp'
-import { ComponentProps } from '../../types'
 
 // import
 
-export interface InputProps extends Omit<ComponentProps, 'children'> {
-  id: string
+export type InputProps = {
   /**
    * The type of the input.
    */
   type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url' | 'search'
-  /**
-   * The input name
-   */
-  name?: string
-  /**
-   * The input value
-   */
-  value?: string
-  /**
-   * The input placeholder
-   */
-  placeholder?: string
   /**
    * Pass a function to handle input change events
    */
@@ -34,23 +20,10 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
    */
   inputDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
   /**
-   * Input is required or not
-   */
-  required?: boolean
-
-  /**
    * Set the element as disabled
    */
   isDisabled?: boolean
-  /**
-   * Set the element as readonly
-   */
-  readonly?: boolean
-  /**
-   * ref to the input element
-   */
-  inputRef?: React.RefObject<HTMLInputElement>
-}
+} & React.ComponentProps<typeof FP>
 
 /**
  * Input component that renders an HTML input element.
@@ -68,7 +41,7 @@ export const Input = ({
   isDisabled,
   readonly,
   required,
-  inputRef,
+  ref,
   inputChange,
   inputBlur,
   inputDown,
@@ -106,7 +79,7 @@ export const Input = ({
       onKeyDown={handleKeyDown}
       value={value}
       name={name}
-      ref={inputRef}
+      ref={ref}
       aria-disabled={isDisabled}
       tab-index={isDisabled ? -1 : undefined}
       aria-readonly={readonly}

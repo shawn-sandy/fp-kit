@@ -4,7 +4,6 @@ import { Popover } from './hooks/popover/popover'
 export { Button } from './components/buttons/button'
 export { Card } from './components/cards/card'
 export { Dialog } from './components/modal/dialog'
-export { Dropdown } from './components/dropdowns/dropdown'
 export { Field } from './components/form/fields'
 export {
   Header,
