@@ -28,7 +28,9 @@ form label {
   display: block;
 }
 
-input[type]:not([type='checkbox'], [type='radio']) {
+input[type]:not([type='checkbox'], [type='radio']),
+textarea,
+select {
   -webkit-appearance: var(--input-appearance);
   -moz-appearance: var(--input-appearance);
   appearance: var(--input-appearance);
@@ -38,7 +40,9 @@ input[type]:not([type='checkbox'], [type='radio']) {
   padding-inline: var(--input-px);
   padding-block: var(--input-py);
 }
-input[type]:not([type='checkbox'], [type='radio'])::placeholder {
+input[type]:not([type='checkbox'], [type='radio'])::placeholder,
+textarea::placeholder,
+select::placeholder {
   color: var(--placeholder-color);
   font-style: var(--placeholder-style);
   font-size: var(--placeholder-fs);
@@ -47,46 +51,27 @@ input[type]:not([type='checkbox'], [type='radio'])::placeholder {
 input[type]:not(
     [type='checkbox'],
     [type='radio']
-  )[aria-required='true']::placeholder {
+  )[aria-required='true']::placeholder,
+textarea[aria-required='true']::placeholder,
+select[aria-required='true']::placeholder {
   color: var(--color-required, var(--placeholder-color));
   font-weight: 600;
 }
 input[type]:not(
     [type='checkbox'],
     [type='radio']
-  )[aria-required='true']::placeholder::after {
+  )[aria-required='true']::placeholder::after,
+textarea[aria-required='true']::placeholder::after,
+select[aria-required='true']::placeholder::after {
   content: '* ';
 }
-input[type]:not([type='checkbox'], [type='radio'])[aria-disabled='true'] {
+input[type]:not([type='checkbox'], [type='radio'])[aria-disabled='true'],
+textarea[aria-disabled='true'],
+select[aria-disabled='true'] {
   --input-border-color: lightgray;
   cursor: not-allowed;
   text-transform: capitalize;
   text-decoration: line-through;
-}
-
-textarea {
-  width: var(--input-w);
-  border: var(--input-border);
-  outline: var(--input-outline);
-  padding-inline: var(--input-px);
-  padding-block: var(--input-py);
-}
-textarea::placeholder {
-  font-size: smaller;
-  color: var(--color-required, var(--placeholder-color));
-  font-size: var(--placeholder-fs);
-  font-style: var(--placeholder-style);
-}
-textarea:focus {
-  outline: var(--input-outline);
-}
-
-select {
-  width: var(--input-w);
-  border: var(--input-outline);
-  outline: var(--input-outline);
-  padding-inline: var(--input-px);
-  padding-block: var(--input-py);
 }
 
 /*# sourceMappingURL=form.css.map */

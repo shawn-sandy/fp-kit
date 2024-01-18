@@ -29,7 +29,9 @@ form {
   }
 }
 
-input[type]:not([type='checkbox'], [type='radio']) {
+input[type]:not([type='checkbox'], [type='radio']),
+textarea,
+select {
   -webkit-appearance: var(--input-appearance);
   -moz-appearance: var(--input-appearance);
   appearance: var(--input-appearance);
@@ -62,31 +64,4 @@ input[type]:not([type='checkbox'], [type='radio']) {
     text-transform: capitalize;
     text-decoration: line-through;
   }
-}
-
-textarea {
-  width: var(--input-w);
-  border: var(--input-border);
-  outline: var(--input-outline);
-  padding-inline: var(--input-px);
-  padding-block: var(--input-py);
-
-  &::placeholder {
-    font-size: smaller;
-    color: var(--color-required, var(--placeholder-color));
-    font-size: var(--placeholder-fs);
-    font-style: var(--placeholder-style);
-  }
-
-  &:focus {
-    outline: var(--input-outline);
-  }
-}
-
-select {
-  width: var(--input-w);
-  border: var(--input-outline);
-  outline: var(--input-outline);
-  padding-inline: var(--input-px);
-  padding-block: var(--input-py);
 }
