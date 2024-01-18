@@ -1,14 +1,8 @@
 import FP from '../fp'
-import { SharedInputProps } from '../../types'
+// import { SharedInputProps } from '../../types'
 import React from 'react'
-import { o } from 'vitest/dist/types-198fd1d9.js'
-import { on } from 'events'
 
 export type SelectProps = {
-  /**
-   * Select onChange event props
-   */
-  selectChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void
   /**
    * Select ref
    */
@@ -33,29 +27,38 @@ export const Select = ({
   disabled,
   children,
   required,
-  selectRef,
+  selected,
+  onBlur,
   onChange,
+  onSelectionChange,
   onPointerDown,
+  ref,
   ...props
 }: SelectProps) => {
   const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    if (onChange && !disabled) onChange?.(e)
+    if (onSelectionChange && !disabled) onSelectionChange?.(e)
   }
 
   const handlePointerDown = (e: React.PointerEvent<HTMLSelectElement>) => {
     if (onPointerDown && !disabled) onPointerDown?.(e)
   }
 
+  const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
+    if (onBlur && !disabled) onBlur?.(e)
+  }
+
   return (
     <FP
       as="select"
       id={id}
+      ref={ref}
       name={name}
-      ref={selectRef}
+      selected={selected}
       onChange={handleOnChange}
       onPointerDown={handlePointerDown}
       required={required}
       disabled={disabled}
+      aria-required={required} // Accessibility
       aria-disabled={disabled ? true : undefined}
       style={{ ...defaultStyles }}
       {...props}
