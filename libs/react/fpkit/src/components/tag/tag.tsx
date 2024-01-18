@@ -24,7 +24,7 @@ export const Tag = ({
   children,
   styles,
   ...props
-}: TagProps) => {
+}: TagProps): any => {
   return (
     <FP as={elm} role={role} styles={styles} {...props}>
       {children}

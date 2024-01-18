@@ -1,87 +1,95 @@
 import FP from '../fp'
-import { InputProps } from './inputs'
 import { SharedInputProps } from '../../types'
 
-export interface TextareaProps extends SharedInputProps {
-  /**
-   * The number of lines in textarea
-   */
-  rows?: number
-  /**
-   * The number of columns in textarea
-   */
-  cols?: number
+export type TextareaProps = {
   /**
    * Textarea react ref
    */
   textareaRef?: React.RefObject<HTMLTextAreaElement>
-  /**
-   * Textarea change event handler
-   */
-  textareaChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
-  /**
-   * Textarea area blur event handler
-   */
-  textareaBlur?: (e: React.FocusEvent<HTMLTextAreaElement>) => void
-  /**
-   * Textarea keydown event handler
-   */
-  textareaDown?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void
-}
+} & React.ComponentProps<'textarea'> &
+  SharedInputProps
 
 export const defaultStyles = {}
 
+/**
+ * Textarea component.
+ *
+ * @param value - The value of the textarea.
+ * @param rows - The number of rows.
+ * @param cols - The number of columns.
+ * @param id - The id of the textarea.
+ * @param name - The name of the textarea.
+ * @param required - Whether the textarea is required.
+ * @param disabled - Whether the textarea is disabled.
+ * @param readOnly - Whether the textarea is read only.
+ * @param onBlur - Blur event handler.
+ * @param onPointerDown - Pointer down event handler.
+ * @param onChange - Change event handler.
+ * @param ref - Ref for the textarea.
+ * @param styles - Styles object for the textarea.
+ * @param textareaRef - Ref specifically for the textarea element.
+ * @param props - Other props.
+ */
 export const Textarea = ({
-  value,
-  rows,
-  cols,
   id,
+  classes,
+  value,
+  rows = 5,
+  cols = 25,
+  name,
   required,
   disabled,
-  readonly,
-  textareaBlur,
-  textareaChange,
-  textareaDown,
+  readOnly,
+  onBlur,
+  onPointerDown,
+  onChange,
+  ref,
+  styles,
   textareaRef,
+  placeholder,
   ...props
 }: TextareaProps) => {
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    if (textareaChange && !disabled) {
-      textareaChange(e)
+    if (onChange && !disabled) {
+      onChange?.(e)
     }
   }
 
   const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement>) => {
-    if (textareaBlur && !disabled) {
-      textareaBlur?.(e)
+    if (onBlur && !disabled) {
+      onBlur?.(e)
     }
   }
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (textareaDown && !disabled) {
-      textareaDown?.(e)
+  const handleKeyDown = (e: React.PointerEvent<HTMLTextAreaElement>) => {
+    if (onPointerDown && !disabled) {
+      onPointerDown?.(e)
     }
   }
 
   return (
     <FP
       as="textarea"
-      ref={textareaRef}
+      id={id}
+      name={name}
       rows={rows}
       cols={cols}
-      styles={{ ...defaultStyles }}
+      styles={styles}
+      className={classes}
       data-style="textarea"
-      id={id}
       required={required}
       value={value}
       aria-disabled={disabled}
-      readOnly={readonly}
+      readOnly={readOnly}
       onChange={handleChange}
       onBlur={handleBlur}
-      onKeyDown={handleKeyDown}
+      onPointerDown={handleKeyDown}
+      ref={textareaRef}
+      placeholder={placeholder || `${required ? '*' : ''} Message`}
       {...props}
     />
   )
 }
 
+export default Textarea
 Textarea.displayName = 'Textarea'

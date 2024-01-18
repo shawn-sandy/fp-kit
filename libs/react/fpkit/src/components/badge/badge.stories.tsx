@@ -33,7 +33,7 @@ export const CustomBadge: Story = {
     return (
       <p>
         Custom
-        <Badge>21</Badge>
+        <Badge aria-label="badge">21</Badge>
       </p>
     )
   },
