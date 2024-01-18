@@ -1,5 +1,4 @@
 import FP from '../fp'
-// import { SharedInputProps } from '../../types'
 import React from 'react'
 
 export type SelectProps = {
@@ -14,8 +13,6 @@ export interface SelectOptionsProps {
   selectValue: 'Number' | 'String'
 }
 
-export const defaultStyles = {}
-
 const options = ({ selectValue, selectLabel }: SelectOptionsProps) => {
   return <option value={selectValue}>{selectLabel || selectValue}</option>
 }
@@ -23,6 +20,7 @@ const options = ({ selectValue, selectLabel }: SelectOptionsProps) => {
 export const Select = ({
   id,
   name,
+  styles,
   classes,
   disabled,
   children,
@@ -60,14 +58,15 @@ export const Select = ({
       disabled={disabled}
       aria-required={required} // Accessibility
       aria-disabled={disabled ? true : undefined}
-      style={{ ...defaultStyles }}
+      style={styles}
       {...props}
     >
-      {children || <option value="1">Option 1</option>}
+      {children || <option></option>}
     </FP>
   )
 }
 
 export default Select
-Select.styles = defaultStyles
 Select.displayName = 'Select'
+
+export const MemoizedSelect = React.memo(Select)
