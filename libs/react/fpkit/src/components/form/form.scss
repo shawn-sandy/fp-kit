@@ -82,3 +82,11 @@ textarea {
     outline: var(--input-outline);
   }
 }
+
+select {
+  width: var(--input-w);
+  border: var(--input-outline);
+  outline: var(--input-outline);
+  padding-inline: var(--input-px);
+  padding-block: var(--input-py);
+}
