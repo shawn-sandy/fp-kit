@@ -9,11 +9,11 @@ export type SelectProps = {
 } & React.ComponentProps<typeof FP>
 
 export interface SelectOptionsProps {
-  selectLabel: 'String'
-  selectValue: 'Number' | 'String'
+  selectLabel: string
+  selectValue: number | string
 }
 
-const options = ({ selectValue, selectLabel }: SelectOptionsProps) => {
+const Option = ({ selectValue, selectLabel }: SelectOptionsProps) => {
   return <option value={selectValue}>{selectLabel || selectValue}</option>
 }
 
@@ -68,5 +68,6 @@ export const Select = ({
 
 export default Select
 Select.displayName = 'Select'
+Select.Option = Option
 
 export const MemoizedSelect = React.memo(Select)

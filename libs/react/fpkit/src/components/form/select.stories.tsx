@@ -16,7 +16,13 @@ const meta: Meta<typeof Select> = {
   },
   args: {
     // @ts-ignore
-    children: 'Link',
+    children: (
+      <>
+        <Select.Option selectValue="value" selectLabel="Option 1" />
+        <Select.Option selectValue="value" selectLabel="Option 2" />
+        <Select.Option selectValue="value" selectLabel="Option 3" />
+      </>
+    ),
   },
 } as Story
 
