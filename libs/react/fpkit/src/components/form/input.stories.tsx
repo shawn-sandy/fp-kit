@@ -103,7 +103,7 @@ export const PasswordInput: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
-    const input = canvas.getByRole('textbox')
+    const input = canvas.getByPlaceholderText(/password/i)
     expect(input).toHaveAttribute('type', 'password')
 
     await userEvent.type(input, 'password')
@@ -117,7 +117,7 @@ export const SearchInput: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
-    const input = canvas.getByRole('textbox')
+    const input = canvas.getByRole('searchbox')
     expect(input).toHaveAttribute('type', 'search')
 
     await userEvent.type(input, 'search term')

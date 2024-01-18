@@ -33,6 +33,6 @@ export const SelectComponent: Story = {
   args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
-    expect(canvas.getByText(/link/i)).toBeInTheDocument()
+    expect(canvas.getByRole('combobox')).toBeInTheDocument()
   },
 }
