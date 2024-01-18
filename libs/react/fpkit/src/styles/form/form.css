@@ -6,7 +6,7 @@
   --input-outline: 0.0625rem solid var(--input-border-color);
   --input-px: 0.6rem;
   --input-py: 0.4rem;
-  --input-radius: 0.5rem;
+  --input-radius: 0.15rem;
   --input-fs: var(--fs);
   --input-w: clamp(200px, 100%, 500px);
   --placeholder-color: gray;
@@ -39,6 +39,7 @@ select {
   outline: var(--input-outline);
   padding-inline: var(--input-px);
   padding-block: var(--input-py);
+  border-radius: var(--input-radius);
 }
 input[type]:not([type='checkbox'], [type='radio'])::placeholder,
 textarea::placeholder,
