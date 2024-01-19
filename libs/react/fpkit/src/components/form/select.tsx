@@ -85,11 +85,11 @@ export const Select = ({
       required={required}
       aria-required={required} // Accessibility
       disabled={disabled}
-      aria-disabled={disabled ? true : undefined}
+      aria-disabled={disabled ?? true}
       style={styles}
       {...props}
     >
-      {children || <option value=""></option>}
+      {children || <option value="" />}
     </FP>
   )
 }
