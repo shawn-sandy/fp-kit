@@ -20,8 +20,12 @@ export interface SelectOptionsProps {
   selectValue: number | string
 }
 
-const Option = ({ selectValue, selectLabel }: SelectOptionsProps) => {
-  return <option value={selectValue}>{selectLabel || selectValue}</option>
+export const Option = ({ selectValue, selectLabel }: SelectOptionsProps) => {
+  return (
+    <option role="option" value={selectValue}>
+      {selectLabel || selectValue}
+    </option>
+  )
 }
 
 /**
@@ -77,14 +81,15 @@ export const Select = ({
       selected={selected}
       onChange={handleOnChange}
       onPointerDown={handlePointerDown}
+      onBlur={handleOnBlur}
       required={required}
-      disabled={disabled}
       aria-required={required} // Accessibility
+      disabled={disabled}
       aria-disabled={disabled ? true : undefined}
       style={styles}
       {...props}
     >
-      {children || <option></option>}
+      {children || <option value=""></option>}
     </FP>
   )
 }
