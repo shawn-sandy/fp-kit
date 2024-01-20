@@ -1,4 +1,6 @@
-a {
+@use '../../mixins';
+
+a[href] {
   --link-decoration: none;
   --link-color: #0070f3;
   --link-bg: transparent;
@@ -6,17 +8,20 @@ a {
   --link-py: 0;
   --link-transition: all 0.75s ease-in-out;
   --link-fs: 1rem;
+  --link-radius: none;
   --link-skip-ink: auto;
   --link-decoration-offset: 1.5px;
   --link-decoration-thickness: 3px;
   --link-decoration: color: var(--link-color) var(--link-decoration-offset)
     var(--link-decoration-thickness) var(--link-skip-ink);
 
+  color: var(--link-color);
   font-size: var(--link-fs);
   text-decoration: var(--link-decoration);
   text-underline-offset: var(--link-decoration-offset);
   text-decoration-skip-ink: var(--link-skip-ink);
   background-color: var(--link-bg);
+  border-radius: var(--link-radius);
 
   &:hover {
     --link-decoration: underline;
@@ -31,21 +36,20 @@ a {
   &:active {
     --link-color: currentColor;
   }
-}
-a {
-  --link-button-bg: lightgray;
-  --link-decoration: none;
 
-  span:first-of-type {
-    background-color: var(--link-button-bg);
+  > b:first-of-type {
+    --link-button-color: var(--link-color);
+    --link-bg: lightgray;
+    --link-decoration: none;
+    --link-radius: 0.25rem;
+
+    background-color: var(--link-bg);
+    color: var(--link-button-color);
     padding-inline: var(--link-fs);
     padding-block: calc(var(--link-fs) - 0.3rem);
-    transform: scale(1);
-    transition: all 0.25s ease-in-out;
+    border-radius: var(--link-radius);
     display: inline-flex;
-
-    &:hover {
-      transform: scale(1.08);
-    }
+    outline: 2px currentColor solid;
+    @include mixins.scale-transitions;
   }
 }

@@ -55,7 +55,7 @@ export const ButtonLink: Story = {
     ...ExternalLink.args,
     children: (
       <>
-        <span>Button Link</span> <span>Button Link</span>
+        ddddd <b style={{ color: '' }}>Button Link</b> <b>Button Link</b>
       </>
     ),
   },

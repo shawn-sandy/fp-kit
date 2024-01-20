@@ -143,6 +143,10 @@ h6 {
   outline: none;
 }
 
+b {
+  font-weight: normal;
+}
+
 /* Removes spacing between cells in tables */
 table {
   border-collapse: collapse;
@@ -537,7 +541,7 @@ details[open] > section {
   max-height: var(--max-h-open);
 }
 
-a {
+a[href] {
   --link-decoration: none;
   --link-color: #0070f3;
   --link-bg: transparent;
@@ -545,43 +549,51 @@ a {
   --link-py: 0;
   --link-transition: all 0.75s ease-in-out;
   --link-fs: 1rem;
+  --link-radius: none;
   --link-skip-ink: auto;
   --link-decoration-offset: 1.5px;
   --link-decoration-thickness: 3px;
   --link-decoration: color: var(--link-color) var(--link-decoration-offset)
     var(--link-decoration-thickness) var(--link-skip-ink);
+  color: var(--link-color);
   font-size: var(--link-fs);
   text-decoration: var(--link-decoration);
   text-underline-offset: var(--link-decoration-offset);
   text-decoration-skip-ink: var(--link-skip-ink);
   background-color: var(--link-bg);
+  border-radius: var(--link-radius);
 }
-a:hover {
+a[href]:hover {
   --link-decoration: underline;
 }
-a:focus {
+a[href]:focus {
   outline: none;
   --link-decoration: underline;
 }
-a:visited,
-a:active {
+a[href]:visited,
+a[href]:active {
   --link-color: currentColor;
 }
-
-a {
-  --link-button-bg: lightgray;
+a[href] > b:first-of-type {
+  --link-button-color: var(--link-color);
+  --link-bg: lightgray;
   --link-decoration: none;
-}
-a span:first-of-type {
-  background-color: var(--link-button-bg);
+  --link-radius: 0.25rem;
+  background-color: var(--link-bg);
+  color: var(--link-button-color);
   padding-inline: var(--link-fs);
   padding-block: calc(var(--link-fs) - 0.3rem);
-  transform: scale(1);
-  transition: all 0.25s ease-in-out;
+  border-radius: var(--link-radius);
   display: inline-flex;
+  outline: 2px currentColor solid;
+  --scale-transition: transform 0.25s ease-in-out;
+  --scale: scale(1);
+  --scale-to: scale(1.08);
+  transform: --scale;
+  transition: var(--scale-transition);
 }
-a span:first-of-type:hover {
-  transform: scale(1.08);
+a[href] > b:first-of-type:hover {
+  transform: var(--scale-to);
 }
 
 header,
