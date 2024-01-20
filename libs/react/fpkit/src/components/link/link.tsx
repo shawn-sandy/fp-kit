@@ -38,7 +38,7 @@ export const Link = ({
   href,
   target,
   rel,
-  children = 'Link' as React.ReactNode,
+  children = 'Link',
   styles = {},
   prefetch = true,
   btnStyle,

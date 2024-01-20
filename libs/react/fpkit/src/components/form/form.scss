@@ -66,3 +66,13 @@ select {
     text-decoration: line-through;
   }
 }
+
+select {
+  border: 1px blue solid;
+  background-color: whitesmoke;
+  background: var(--input-bg);
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  background-position: right 0.8rem top 50%;
+  padding-right: var(--input-px);
+}
