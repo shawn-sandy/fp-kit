@@ -31,11 +31,18 @@ a:active {
 
 a {
   --link-button-bg: lightgray;
+  --link-decoration: none;
 }
 a span:first-of-type {
   background-color: var(--link-button-bg);
   padding-inline: var(--link-fs);
-  padding-block: calc(var(--link-fs) - 0.25rem);
+  padding-block: calc(var(--link-fs) - 0.3rem);
+  transform: scale(1);
+  transition: all 0.25s ease-in-out;
+  display: inline-flex;
+}
+a span:first-of-type:hover {
+  transform: scale(1.08);
 }
 
 /*# sourceMappingURL=link.css.map */
