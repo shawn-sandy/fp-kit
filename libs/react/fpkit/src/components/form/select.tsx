@@ -8,7 +8,7 @@ export type SelectProps = {
   selectRef?: React.RefObject<HTMLSelectElement>
 } & React.ComponentProps<typeof FP>
 
-export interface SelectOptionsProps {
+export type SelectOptionsProps = {
   /**
    * Label for the select option
    */
@@ -17,9 +17,15 @@ export interface SelectOptionsProps {
   /**
    * Value for the select option. Can be a number or string.
    */
-  selectValue: number | string
+  selectValue: string
 }
 
+/**
+ * Option component for select.
+ * @param {SelectOptionsProps} param0 - The component props.
+ * @param {string} param0.selectValue - Value for the option.
+ * @param {string} [param0.selectLabel] - Label for the option.
+ */
 export const Option = ({ selectValue, selectLabel }: SelectOptionsProps) => {
   return (
     <option role="option" value={selectValue}>

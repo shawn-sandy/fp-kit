@@ -7,8 +7,9 @@ import Select from './select'
 import Textarea from './textarea'
 
 export type FormProps = {
-  children: React.ReactNode
+  /** Form submit handler */
   formAction: (e: React.FormEvent<HTMLFormElement>) => void
+  /** Optional additional submit handler */
   onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
 } & Partial<React.ComponentProps<typeof FP>>
 
