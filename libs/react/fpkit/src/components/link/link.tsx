@@ -2,8 +2,6 @@ import FP from '../fp'
 import { ComponentProps } from '../../types'
 
 export type LinkProps = {
-  /** The href URL that the link goes to */
-  href: string
   /** The link text or contents */
   children: React.ReactNode
   /** The target attribute for the link */
@@ -16,7 +14,7 @@ export type LinkProps = {
   btnStyle?: boolean
   /** Callback when link is clicked */
   onPointerDown?: (e: React.PointerEvent<HTMLAnchorElement>) => void
-} & Pick<ComponentProps, 'styles'>
+} & React.ComponentProps<typeof FP>
 
 /**
  * Link component props.
@@ -63,6 +61,7 @@ export const Link = ({
       rel={relValue}
       onPointerDown={handleOnpointerDown}
       data-btn={btnStyle}
+      prefetch={prefetch}
       {...props}
     >
       {children}
