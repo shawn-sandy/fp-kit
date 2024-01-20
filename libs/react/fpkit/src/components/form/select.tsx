@@ -85,7 +85,7 @@ export const Select = ({
       required={required}
       aria-required={required} // Accessibility
       disabled={disabled}
-      aria-disabled={disabled ?? true}
+      aria-disabled={disabled ? true : false}
       style={styles}
       {...props}
     >

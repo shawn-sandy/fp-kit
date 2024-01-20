@@ -547,12 +547,11 @@ a {
   --link-fs: 1rem;
   --link-skip-ink: auto;
   --link-decoration-offset: 1.5px;
-  --link-decoration-thickness: 2px;
-  color: var(--link-color);
+  --link-decoration-thickness: 3px;
+  --link-decoration: color: var(--link-color) var(--link-decoration-offset)
+    var(--link-decoration-thickness) var(--link-skip-ink);
   font-size: var(--link-fs);
   text-decoration: var(--link-decoration);
-  text-decoration-color: var(--link-color);
-  text-decoration-thickness: var(--link-decoration-thickness);
   text-underline-offset: var(--link-decoration-offset);
   text-decoration-skip-ink: var(--link-skip-ink);
 }

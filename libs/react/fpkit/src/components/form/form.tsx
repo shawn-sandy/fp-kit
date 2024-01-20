@@ -12,6 +12,14 @@ export type FormProps = {
   onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
 } & Partial<React.ComponentProps<typeof FP>>
 
+/**
+ * Form component props interface
+ * @interface FormProps
+ * @property {React.ReactNode} children - Child elements/components
+ * @property {(e: React.FormEvent<HTMLFormElement>) => void} formAction - Form submit handler
+ * @property {(e: React.FormEvent<HTMLFormElement>) => void} [onSubmit] - Optional additional submit handler
+ * @property {Partial<React.ComponentProps<typeof FP>>} ...props - Remaining props
+ */
 export const Form = ({
   id,
   name,

@@ -6,7 +6,7 @@ import Form from './form'
 import './form.scss'
 
 const meta: Meta<typeof Form> = {
-  title: 'FP.REACT Forms/Components',
+  title: 'FP.REACT Forms/Examples',
   component: Form,
   parameters: {
     docs: {
@@ -17,6 +17,7 @@ const meta: Meta<typeof Form> = {
   },
   args: {
     children: 'Link',
+    name: 'my-form',
   },
 } as Story
 
