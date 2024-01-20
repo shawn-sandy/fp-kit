@@ -38,7 +38,7 @@ export const Link = ({
   rel,
   children = 'Link',
   styles = {},
-  prefetch = true,
+  prefetch,
   btnStyle,
   onPointerDown,
   ...props

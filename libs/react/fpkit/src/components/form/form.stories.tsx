@@ -37,7 +37,7 @@ export const FormComponent: Story = {
         <Form.Field label="Message" labelFor="message">
           <Form.Textarea id="message" name="message" />
         </Form.Field>
-        <button type="submit">Submit</button>
+        <button type="submit">Submit Form</button>
       </>
     ),
   },
