@@ -6,23 +6,24 @@
   --input-outline: 0.0625rem solid var(--input-border-color);
   --input-px: 0.6rem;
   --input-py: 0.4rem;
-  --input-radius: 0.15rem;
+  --input-radius: --var(--radius);
   --input-fs: var(--fs);
   --input-w: clamp(200px, 100%, 500px);
   --placeholder-color: gray;
   --placeholder-style: italic;
   --placeholder-fs: smaller;
+  --form-direction: column;
 }
 
 form {
   display: flex;
-  flex-direction: column;
+  flex-direction: var(--form-direction);
   gap: 1rem;
 }
 form > div {
   display: flex;
   gap: 1rem;
-  flex-direction: column;
+  flex-direction: var(--form-direction);
 }
 form label {
   display: block;
@@ -40,6 +41,7 @@ select {
   padding-inline: var(--input-px);
   padding-block: var(--input-py);
   border-radius: var(--input-radius);
+  background-color: var(--input-bg, #fff);
 }
 input[type]:not([type='checkbox'], [type='radio'])::placeholder,
 textarea::placeholder,
@@ -76,13 +78,15 @@ select[aria-disabled='true'] {
 }
 
 select {
-  border: 1px blue solid;
-  background-color: whitesmoke;
-  background: var(--input-bg);
-  background-repeat: no-repeat;
-  background-size: 1rem 1rem;
-  background-position: right 0.8rem top 50%;
-  padding-right: var(--input-px);
+  border: var(--input-outline);
+  outline: none;
+  -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+  -moz-appearance: none; /* Remove default arrow in Firefox */
+  appearance: none; /* Remove default arrow in other browsers */
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><polyline points='6,9 10,13 14,9' stroke='%23000000' stroke-width='1.5' fill='none' /></svg>")
+    no-repeat;
+  background-position: right 0.5rem top 50%;
+  padding-inline-end: 0;
 }
 
 /*# sourceMappingURL=form.css.map */
