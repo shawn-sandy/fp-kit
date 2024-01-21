@@ -13,6 +13,7 @@
   --placeholder-style: italic;
   --placeholder-fs: smaller;
   --form-direction: column;
+  --select-arrow: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><polyline points='6,9 10,13 14,9' stroke='%23000000' stroke-width='1.5' fill='none' /></svg>");
 }
 
 form {
@@ -83,8 +84,7 @@ select {
   -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
   -moz-appearance: none; /* Remove default arrow in Firefox */
   appearance: none; /* Remove default arrow in other browsers */
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><polyline points='6,9 10,13 14,9' stroke='%23000000' stroke-width='1.5' fill='none' /></svg>")
-    no-repeat;
+  background: var(--select-arrow) no-repeat;
   background-position: right 0.5rem top 50%;
   padding-inline-end: 0;
 }
