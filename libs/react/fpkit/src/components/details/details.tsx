@@ -1,8 +1,7 @@
 import React from 'react'
 import FP from '#components/fp'
-type InheritedProps = React.ComponentProps<typeof FP>
 
-type DetailsProps = InheritedProps & {
+type DetailsProps = {
   /**
    * The icon to show in the details summary element.
    */
