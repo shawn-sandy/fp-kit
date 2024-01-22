@@ -7,38 +7,21 @@ type DetailsProps = InheritedProps & {
    * The icon to show in the details summary element.
    */
   icon?: React.ReactNode
-  /**
-   * The summary text shown for the details.
-   * Required.
-   */
-  summary: React.ReactNode
-
-  /**
-   * Set the details to open or closed
-   */
-  open?: boolean
-
-  /**
-   * Optional callback when the details is toggled open/closed.
-   */
-  onToggleEvent?: (e: React.PointerEvent<HTMLDetailsElement>) => void
-
-  /**
-   * Optional callback when pointer down event occurs on the summary.
-   */
-  onPointerDownEvent?: (e: React.PointerEvent<HTMLDetailsElement>) => void
-}
+} & Partial<React.ComponentProps<typeof FP>>
 
 /**
- * Details component with a summary and content.
- * @typedef {Object} DetailsProps
- * @property {ReactNode} children - The content to render inside the details element. Required.
- * @property {ReactNode} summary - The summary text shown for the details. Required.
- * @property {Object|CSSProperties} [styles] - Optional styles to apply to the details element.
- * @property {(e: PointerEvent<HTMLDetailsElement>) => void} [onToggleEvent] - Optional callback when the details is toggled open/closed.
- * @property {(e: PointerEvent<HTMLDetailsElement>) => void} [onPointerDownEvent] - Optional callback when pointer down event occurs on the summary.
- * @param {DetailsProps} props
- * @returns {JSX.Element}
+ * Details component props interface.
+ *
+ * @param {ReactNode} [icon] - The icon to show in the summary.
+ * @param {React.CSSProperties} [styles] - CSS styles object.
+ * @param {string} [classes] - Classnames string.
+ * @param {boolean} [open] - Whether the details is open.
+ * @param {(e: React.PointerEvent<HTMLDetailsElement>) => void} [onToggle] - onToggle callback.
+ * @param {(e: React.PointerEvent<HTMLDetailsElement>) => void} [onPointerDown] - onPointerDown callback.
+ * @param {ReactNode} children - The content inside the details.
+ * @param {string} [ariaLabel] - aria-label for accessibility.
+ * @param {React.Ref<any>} [ref] - Ref object.
+ * @param {Object} props - Other props.
  */
 export const Details = ({
   summary,
@@ -46,8 +29,8 @@ export const Details = ({
   styles,
   classes,
   open,
-  onToggleEvent,
-  onPointerDownEvent,
+  onToggle,
+  onPointerDown,
   children,
   ariaLabel,
   ref,
@@ -56,11 +39,11 @@ export const Details = ({
   const defaultStyles: React.CSSProperties = { ...styles }
 
   const onToggleCallback = (e: React.PointerEvent<HTMLDetailsElement>) => {
-    if (onToggleEvent) onToggleEvent?.(e)
+    if (onToggle) onToggle?.(e)
   }
 
   const onPointerDownCallback = (e: React.PointerEvent<HTMLDetailsElement>) => {
-    if (onPointerDownEvent) onPointerDownEvent?.(e)
+    if (onPointerDown) onPointerDown?.(e)
   }
 
   return (
@@ -74,7 +57,7 @@ export const Details = ({
       aria-label={ariaLabel || 'Details dropdown'}
       {...props}
     >
-      <FP as="summary" onPointerDown={onPointerDownCallback}>
+      <FP as="summary" role="group" onPointerDown={onPointerDownCallback}>
         {icon}
         {summary}
       </FP>
