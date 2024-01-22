@@ -1,4 +1,4 @@
-@use '../../mixins';
+@use '../../sass/mixins';
 
 a[href] {
   --link-decoration: none;
@@ -42,11 +42,13 @@ a[href] {
     --link-bg: lightgray;
     --link-decoration: none;
     --link-radius: 0.25rem;
+    --link-fs: 0.9rem;
 
     background-color: var(--link-bg);
+    font-size: var(--link-fs);
     color: var(--link-button-color);
     padding-inline: var(--link-fs);
-    padding-block: calc(var(--link-fs) - 0.3rem);
+    padding-block: calc(var(--link-fs) - 0.4rem);
     border-radius: var(--link-radius);
     display: inline-flex;
     outline: 2px currentColor solid;

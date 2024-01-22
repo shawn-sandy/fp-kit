@@ -1,12 +1,7 @@
 import FP from '../fp'
 import React from 'react'
 
-export type SelectProps = {
-  /**
-   * Select ref
-   */
-  selectRef?: React.RefObject<HTMLSelectElement>
-} & React.ComponentProps<typeof FP>
+export type SelectProps = React.ComponentProps<typeof FP>
 
 export type SelectOptionsProps = {
   /**
