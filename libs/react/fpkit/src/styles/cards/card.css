@@ -1,4 +1,5 @@
-[data-card] {
+[data-card],
+[data-component~='card'] {
   --card-p: 2rem;
   --card-bg: #fff;
   --card-radius: calc(var(--card-p) / 3);

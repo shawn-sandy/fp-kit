@@ -81,8 +81,8 @@
     },
     "./package.json": "./package.json",
     "./styles": "./libs/styles.css",
-    "./css": "./libs/components/**/*.css",
-    "./scss": "./src/components/**/*.scss"
+    "./css": "./libs/components",
+    "./scss": "./src/components"
   },
   "files": [
     "src",
