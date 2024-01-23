@@ -80,7 +80,11 @@
       "default": "./libs/icons.js"
     },
     "./package.json": "./package.json",
-    "./styles": "./libs/styles.css",
+    "./styles": {
+      "import": "./libs/styles.css",
+      "require": "./libs/styles.ccs",
+      "default": "./libs/styles.css"
+    },
     "./css": "./libs/components",
     "./scss": "./src/components"
   },
