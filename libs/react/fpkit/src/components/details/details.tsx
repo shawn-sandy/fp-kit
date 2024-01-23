@@ -3,9 +3,20 @@ import FP from '#components/fp'
 
 type DetailsProps = {
   /**
-   * The icon to show in the details summary element.
+   * The summary text shown for the details.
+   * Required.
    */
-  icon?: React.ReactNode
+  summary: React.ReactNode
+
+  /**
+   * Set the details to open or closed
+   */
+  open?: boolean
+
+  /**
+   * The aria-label  element for accessibility.
+   */
+  ariaLabel: string
 } & Partial<React.ComponentProps<typeof FP>>
 
 /**
@@ -27,11 +38,11 @@ export const Details = ({
   icon,
   styles,
   classes,
+  ariaLabel,
   open,
   onToggle,
   onPointerDown,
   children,
-  ariaLabel,
   ref,
   ...props
 }: DetailsProps) => {
