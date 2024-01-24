@@ -1,0 +1,92 @@
+:root {
+  --input-border-color: gray;
+  --input-appearance: none;
+  --input-bg: inherit;
+  --input-border: none;
+  --input-outline: 0.0625rem solid var(--input-border-color);
+  --input-px: 0.6rem;
+  --input-py: 0.4rem;
+  --input-radius: --var(--radius);
+  --input-fs: var(--fs);
+  --input-w: clamp(200px, 100%, 500px);
+  --placeholder-color: gray;
+  --placeholder-style: italic;
+  --placeholder-fs: smaller;
+  --form-direction: column;
+  --select-arrow: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><polyline points='6,9 10,13 14,9' stroke='%23000000' stroke-width='1.5' fill='none' /></svg>");
+}
+
+form {
+  display: flex;
+  flex-direction: var(--form-direction);
+  gap: 1rem;
+}
+form > div {
+  display: flex;
+  gap: 1rem;
+  flex-direction: var(--form-direction);
+}
+form label {
+  display: block;
+}
+
+input[type]:not([type='checkbox'], [type='radio']),
+textarea,
+select {
+  -webkit-appearance: var(--input-appearance);
+  -moz-appearance: var(--input-appearance);
+  appearance: var(--input-appearance);
+  width: var(--input-w);
+  border: var(--input-border);
+  outline: var(--input-outline);
+  padding-inline: var(--input-px);
+  padding-block: var(--input-py);
+  border-radius: var(--input-radius);
+  background-color: var(--input-bg, #fff);
+}
+input[type]:not([type='checkbox'], [type='radio'])::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: var(--placeholder-color);
+  font-style: var(--placeholder-style);
+  font-size: var(--placeholder-fs);
+  text-transform: capitalize;
+}
+input[type]:not(
+    [type='checkbox'],
+    [type='radio']
+  )[aria-required='true']::placeholder,
+textarea[aria-required='true']::placeholder,
+select[aria-required='true']::placeholder {
+  color: var(--color-required, var(--placeholder-color));
+  font-weight: 600;
+}
+input[type]:not(
+    [type='checkbox'],
+    [type='radio']
+  )[aria-required='true']::placeholder::after,
+textarea[aria-required='true']::placeholder::after,
+select[aria-required='true']::placeholder::after {
+  content: '* ';
+}
+input[type]:not([type='checkbox'], [type='radio'])[aria-disabled='true'],
+textarea[aria-disabled='true'],
+select[aria-disabled='true'] {
+  --input-border-color: lightgray;
+  cursor: not-allowed;
+  text-transform: capitalize;
+  text-decoration: line-through;
+}
+
+select {
+  border: var(--input-outline);
+  outline: none;
+  -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+  -moz-appearance: none; /* Remove default arrow in Firefox */
+  appearance: none; /* Remove default arrow in other browsers */
+  background: var(--select-arrow) no-repeat;
+  background-position: right 0.5rem top 50%;
+  padding-inline-end: 0;
+}
+
+/*# sourceMappingURL=form.css.map */

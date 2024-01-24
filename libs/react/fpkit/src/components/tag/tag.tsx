@@ -1,27 +1,12 @@
-import FP from '#components/fp'
 import React from 'react'
+import FP from '#components/fp'
 
-export interface FpBadgeProps {
+export type TagProps = {
   /** HTML element to display the badge as span or p */
   elm?: 'span' | 'p'
-  children: React.ReactNode
+  /**  Aria role for the component - conditional */
   role: 'note' | 'status'
-  styles?: React.CSSProperties | {}
-}
-
-const defStyles = {
-  paddingInline: 'var(--badge-px, 0.7rem)',
-  paddingBlock: 'var(--badge-py, 0.2rem)',
-  color: 'var(--badge-cl, black)',
-  fontSize: 'var(--badge-fs, 0.8rem)',
-  fontWeight: 'var(--badge-fw, normal)',
-  fontFamily: 'var(--badge-ff, sans-serif)',
-  border: 'var(--badge-brd, none)',
-  borderRadius: 'var(--badge-rds, 99rem)',
-  backgroundColor: 'var(--badge-bg, lightgray)',
-  textDecoration: 'var(--badge-decoration, none)',
-  textTransform: 'var(--badge-tt, var(--tt))',
-}
+} & React.ComponentProps<typeof FP>
 
 /**
  * @description Creates a Badge component that wraps a child element with a badge.
@@ -33,19 +18,18 @@ const defStyles = {
  * @param {object} props - additional props to pass to the FP component
  * @returns {any} - returns the Badge component
  */
-export const Badge = ({
+export const Tag = ({
   elm = 'span',
   role = 'note',
   children,
   styles,
   ...props
-}: FpBadgeProps) => {
+}: TagProps): any => {
   return (
     <FP as={elm} role={role} styles={styles} {...props}>
       {children}
     </FP>
   )
 }
-export default Badge
-Badge.styles = defStyles
-Badge.displayName = 'Badge'
+export default Tag
+Tag.displayName = 'Tag'

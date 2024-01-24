@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 
-import { Badge } from './components/badge/fp-badge'
+import { Tag } from './components/tag/tag'
 import { Box } from './index'
 import { Button } from './components/buttons/button'
 
@@ -13,14 +13,14 @@ function App() {
       <header className="App-header">
         <p>Hello Vite + React!</p>
         <p>
-          <Badge elm="span" role="note">
+          <Tag elm="span" role="note">
             Badge
-          </Badge>
+          </Tag>
         </p>
         <Box as="section">
-          <Badge elm="span" role="note">
+          <Tag elm="span" role="note">
             Badge
-          </Badge>
+          </Tag>
         </Box>
         <Box as="section">
           <p>

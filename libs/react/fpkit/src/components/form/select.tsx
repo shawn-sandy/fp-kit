@@ -1,59 +1,102 @@
 import FP from '../fp'
-import { SharedInputProps } from '../../types'
+import React from 'react'
 
-import './style.scss'
+export type SelectProps = React.ComponentProps<typeof FP>
 
-export interface SelectProps extends SharedInputProps {
+export type SelectOptionsProps = {
   /**
-   * Select onChange event props
+   * Label for the select option
    */
-  selectChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void
+  selectLabel: string
+
   /**
-   * Select ref
+   * Value for the select option. Can be a number or string.
    */
-  selectRef?: React.RefObject<HTMLSelectElement>
+  selectValue: string
 }
 
-export interface SelectOptionsProps {
-  selectLabel: 'String'
-  selectValue: 'Number' | 'String'
+/**
+ * Option component for select.
+ * @param {SelectOptionsProps} param0 - The component props.
+ * @param {string} param0.selectValue - Value for the option.
+ * @param {string} [param0.selectLabel] - Label for the option.
+ */
+export const Option = ({ selectValue, selectLabel }: SelectOptionsProps) => {
+  return (
+    <option role="option" value={selectValue}>
+      {selectLabel || selectValue}
+    </option>
+  )
 }
 
-export const defaultStyles = {}
-
-const options = ({ selectValue, selectLabel }: SelectOptionsProps) => {
-  return <option value={selectValue}>{selectLabel || selectValue}</option>
-}
-
+/**
+ * Select component props.
+ * @param {string} [id] - Unique id for the select.
+ * @param {string} [name] - Name for the select input.
+ * @param {React.CSSProperties} [styles] - Inline styles.
+ * @param {string} [classes] - CSS classes.
+ * @param {boolean} [disabled] - Whether select is disabled.
+ * @param {React.ReactNode} [children] - Child elements.
+ * @param {boolean} [required] - Whether select is required.
+ * @param {string | number | string[] | undefined} [selected] - Selected option value(s).
+ * @param {React.FocusEventHandler<HTMLSelectElement>} [onBlur] - Blur event handler.
+ * @param {React.ChangeEventHandler<HTMLSelectElement>} [onChange] - Change event handler.
+ * @param {(e: React.ChangeEvent<HTMLSelectElement>) => void} [onSelectionChange] - Selection change handler.
+ * @param {(e: React.PointerEvent<HTMLSelectElement>) => void} [onPointerDown] - Pointer down handler.
+ * @param {React.Ref<HTMLSelectElement>} [ref] - Ref for the select element.
+ */
 export const Select = ({
+  id,
+  name,
+  styles,
+  classes,
   disabled,
   children,
   required,
-  selectRef,
-  selectChange,
+  selected,
+  onBlur,
+  onChange,
+  onSelectionChange,
+  onPointerDown,
+  ref,
   ...props
 }: SelectProps) => {
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    if (selectChange && !disabled) {
-      selectChange?.(e)
-    }
+  const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    if (onSelectionChange && !disabled) onSelectionChange?.(e)
+  }
+
+  const handlePointerDown = (e: React.PointerEvent<HTMLSelectElement>) => {
+    if (onPointerDown && !disabled) onPointerDown?.(e)
+  }
+
+  const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
+    if (onBlur && !disabled) onBlur?.(e)
   }
 
   return (
     <FP
       as="select"
-      ref={selectRef}
-      onChange={handleChange}
-      onBlur={handleChange}
+      id={id}
+      ref={ref}
+      name={name}
+      selected={selected}
+      onChange={handleOnChange}
+      onPointerDown={handlePointerDown}
+      onBlur={handleOnBlur}
       required={required}
-      aria-disabled={disabled ? true : undefined}
-      style={{ ...defaultStyles }}
+      aria-required={required} // Accessibility
+      disabled={disabled}
+      aria-disabled={disabled ? true : false}
+      style={styles}
+      {...props}
     >
-      {children || <option value="1">Option 1</option>}
+      {children || <option value="" />}
     </FP>
   )
 }
 
-Select.styles = defaultStyles
-
+export default Select
 Select.displayName = 'Select'
+Select.Option = Option
+
+export const MemoizedSelect = React.memo(Select)

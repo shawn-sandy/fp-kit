@@ -2,23 +2,23 @@ import { StoryObj, Meta } from '@storybook/react'
 import { within, userEvent, screen } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
-import Badge from './fp-badge'
-import './badge.scss'
+import Tag from './tag'
+import './tag.scss'
 
-const meta: Meta<typeof Badge> = {
-  title: 'FP.React Components/Badge',
-  component: Badge,
+const meta: Meta<typeof Tag> = {
+  title: 'FP.React Components/Tag',
+  component: Tag,
   args: {
     // @ts-ignore
-    children: 'Basic Badge',
-    // styles: Badge.styles,
+    children: 'Basic Tag',
+    // styles: Tag.styles,
   },
 } as Meta
 
 export default meta
-type Story = StoryObj<typeof Badge>
+type Story = StoryObj<typeof Tag>
 
-export const BadgeComponent: Story = {
+export const TagComponent: Story = {
   args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
@@ -28,12 +28,12 @@ export const BadgeComponent: Story = {
 
 export const Beta: Story = {
   args: {
-    'data-badge': 'beta',
+    'data-tag': 'beta',
   },
 } as Story
 
 export const Production: Story = {
   args: {
-    'data-badge': 'production',
+    'data-tag': 'production',
   },
 } as Story

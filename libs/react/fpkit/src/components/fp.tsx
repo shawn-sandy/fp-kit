@@ -65,6 +65,7 @@ const FP: FPComponent = React.forwardRef(
       as,
       renderStyles = true,
       styles,
+      classes,
       children,
       defaultStyles,
       ...props
@@ -76,7 +77,7 @@ const FP: FPComponent = React.forwardRef(
     const styleObj = { ...defaultStyles, ...styles } as React.CSSProperties
 
     return (
-      <Component ref={ref} style={styleObj} {...props}>
+      <Component ref={ref} style={styleObj} className={classes} {...props}>
         {children}
       </Component>
     )

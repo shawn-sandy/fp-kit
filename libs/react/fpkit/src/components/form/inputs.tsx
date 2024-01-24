@@ -1,70 +1,18 @@
 import FP from '../fp'
-import { ComponentProps } from '../../types'
 
 // import
 
-export interface InputProps extends Omit<ComponentProps, 'children'> {
+export type InputProps = {
   /**
    * The type of the input.
    */
   type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url' | 'search'
-  /**
-   * The input name
-   */
-  name?: string
-  /**
-   * The input value
-   */
-  value?: string
-  /**
-   * The input placeholder
-   */
-  placeholder?: string
-  /**
-   * Pass a function to handle input change events
-   */
-  inputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
-  /**
-   * Pass a function to handle input focus events
-   */
-  inputBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
-  /**
-   * Function prop to handle input keydown events
-   */
-  inputDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
-  /**
-   * Input is required or not
-   */
-  required?: boolean
-  /**
-   * Input id attribute
-   */
-  id: string
+
   /**
    * Set the element as disabled
    */
   isDisabled?: boolean
-  /**
-   * Set the element as readonly
-   */
-  readonly?: boolean
-  /**
-   * ref to the input element
-   */
-  inputRef?: React.RefObject<HTMLInputElement>
-  /**
-   * Input styles
-   */
-  styles?: {}
-  /**
-   * input classes
-   */
-  classes?: string
-}
-
-export const defaultStyles = {
-  minWidth: 'var(--input-min-w, 60%)',
-}
+} & React.ComponentProps<typeof FP>
 
 /**
  * Input component that renders an HTML input element.
@@ -80,30 +28,33 @@ export const Input = ({
   styles,
   classes,
   isDisabled,
+  disabled,
   readonly,
   required,
-  inputRef,
+  ref,
+  onChange,
+  onBlur,
+  onPointerDown,
   inputChange,
   inputBlur,
-  inputDown,
   ...props
 }: InputProps): JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (inputChange && !isDisabled) {
-      inputChange?.(e)
+    if (onChange && !disabled) {
+      onChange?.(e)
     }
   }
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    if (inputBlur && !isDisabled) {
-      inputBlur?.(e)
+    if (onBlur && !disabled) {
+      onBlur?.(e)
     }
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (inputDown && !isDisabled) {
+    if (onPointerDown && !disabled) {
       e.preventDefault()
-      inputDown?.(e)
+      onPointerDown?.(e)
     }
   }
 
@@ -112,7 +63,7 @@ export const Input = ({
       as="input"
       id={id}
       type={type}
-      placeholder={placeholder}
+      placeholder={placeholder || `${required ? '*' : ''} ${type} input `}
       className={classes}
       styles={styles}
       onChange={handleChange}
@@ -120,14 +71,17 @@ export const Input = ({
       onKeyDown={handleKeyDown}
       value={value}
       name={name}
-      ref={inputRef}
+      ref={ref}
       aria-disabled={isDisabled}
       tab-index={isDisabled ? -1 : undefined}
       aria-readonly={readonly}
+      aria-required={required}
+      required={required}
       readOnly={readonly}
       {...props}
     />
   )
 }
-Input.styles = defaultStyles
+
+export default Input
 Input.displayName = 'Input'

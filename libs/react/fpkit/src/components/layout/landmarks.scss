@@ -16,24 +16,25 @@ header,
 
   --overlay-h: min(70vh, 50vh);
 
+  --overlay-color: currentColor;
+
   grid-template-areas: 'overlay';
 
   display: var(--overlay-display);
 
   place-items: var(--overlay-placement);
   align-items: var(--overlay-placement);
-
   height: var(--overlay-h);
-
   width: var(--overlay-w);
+  color: var(--overlay-color);
 
   > * {
     grid-area: overlay;
   }
-  img {
+  > img {
     width: var(--overlay-w);
   }
-  section {
+  > section {
     text-align: center;
   }
 }

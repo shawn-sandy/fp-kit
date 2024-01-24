@@ -2,7 +2,7 @@
   "name": "@fpkit/react",
   "description": "A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.",
   "private": false,
-  "version": "0.3.24",
+  "version": "0.3.27",
   "scripts": {
     "start": "run-p package:watch sass:watch",
     "dev": "vite --open",
@@ -28,7 +28,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@shawnsandy/first-paint": "^2.18.12",
+    "@shawnsandy/first-paint": "^2.18.13",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
@@ -80,9 +80,13 @@
       "default": "./libs/icons.js"
     },
     "./package.json": "./package.json",
-    "./styles": "./libs/styles.css",
-    "./css": "./libs/components/**/*.css",
-    "./scss": "./src/components/**/*.scss"
+    "./styles": {
+      "import": "./libs/styles.css",
+      "require": "./libs/styles.ccs",
+      "default": "./libs/styles.css"
+    },
+    "./css": "./libs/components",
+    "./scss": "./src/components"
   },
   "files": [
     "src",

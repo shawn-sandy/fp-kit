@@ -13,6 +13,7 @@ npx commitlint -V --edit  "$1"
 # lint-staged
 echo 'Starting lint-staged...'
 npx lint-staged "$1"
+git add -A
 
 # run build
 echo 'Starting lint-staged...'

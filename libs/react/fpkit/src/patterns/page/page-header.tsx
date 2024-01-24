@@ -60,6 +60,7 @@ const PageHeader = ({
       headerBackground={headerBackground}
       styles={style}
       data-style={variant}
+      aria-label="landmark header"
       {...props}
     >
       <Landmarks.Section>

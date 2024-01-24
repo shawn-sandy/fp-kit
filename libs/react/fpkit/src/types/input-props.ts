@@ -1,7 +1,6 @@
 import { ComponentProps } from './shared'
 
 export interface SharedInputProps extends ComponentProps {
-
   /**
    * The input name
    */
@@ -19,10 +18,6 @@ export interface SharedInputProps extends ComponentProps {
    */
   required?: boolean
   /**
-   * Input id attribute
-   */
-  id: string
-  /**
    * Set the element as disabled
    */
   disabled?: boolean
@@ -30,5 +25,4 @@ export interface SharedInputProps extends ComponentProps {
    * Set the element as readonly
    */
   readonly?: boolean
-
 }
