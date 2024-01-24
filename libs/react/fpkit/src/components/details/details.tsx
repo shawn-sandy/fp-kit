@@ -60,7 +60,7 @@ export const Details = ({
     <FP
       as="details"
       style={defaultStyles}
-      classNames={classes}
+      className={classes}
       onToggle={onToggleCallback}
       ref={ref}
       open={open}
