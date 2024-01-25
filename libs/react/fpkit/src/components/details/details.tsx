@@ -72,7 +72,6 @@ export const Details = ({
     >
       <UI as="summary" role="group" onPointerDown={onPointerDownCallback}>
         {icon}
-        {summary}
       </UI>
       <UI as="section">{children}</UI>
     </UI>
