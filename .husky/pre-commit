@@ -11,9 +11,9 @@ echo 'Starting commitlint...'
 npx commitlint -V --edit  "$1"
 
 # lint-staged
-echo 'Starting lint-staged...'
-npx lint-staged "$1"
-git add -A
+# echo 'Starting lint-staged...'
+# npx lint-staged "$1"
+# git add -A
 
 # run build
 echo 'Starting lint-staged...'
@@ -23,3 +23,4 @@ echo 'Starting lint-staged...'
 # If everything passes... Now we can commit
 echo '✅✅✅✅ Excellent all test passed, I am committing this now.'
 # npx lint-staged
+npx lint-staged

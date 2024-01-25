@@ -19,7 +19,7 @@ type DetailsProps = {
   ariaLabel: string
 } & Partial<React.ComponentProps<typeof UI>>
 
-/**
+/**3
  * Details component props interface.
  *
  * @param {ReactNode} [icon] - The icon to show in the summary.
