@@ -23,6 +23,7 @@
     "react/prop-types": "off",
     "jsx-quotes": "off",
     "@typescript-eslint/no-explicit-any": "error",
-    " react/react-in-jsx-scop": "off"
+    "react/react-in-jsx-scop": "off",
+    "no-unused-vars": "error"
   }
 }

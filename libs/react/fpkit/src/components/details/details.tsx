@@ -17,7 +17,8 @@ type DetailsProps = {
    * The aria-label  element for accessibility.
    */
   ariaLabel: string
-} & Partial<React.ComponentProps<typeof UI>>
+} & React.ComponentProps<'details'> &
+  Partial<React.ComponentProps<typeof UI>>
 
 /**3
  * Details component props interface.
