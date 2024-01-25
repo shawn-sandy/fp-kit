@@ -20,7 +20,9 @@
     "test:coverage": "vitest --coverage",
     "test:ui:coverage": "vitest --coverage --ui",
     "test:snapshot": "vitest --run --update",
-    "release": "npm publish"
+    "release": "npm publish",
+    "lint": "eslint . --ext .jsx,.tsx",
+    "lint-fix": "eslint . --ext .jsx,.tsx"
   },
   "dependencies": {
     "focus-trap": "^7.5.2",

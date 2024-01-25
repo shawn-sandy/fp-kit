@@ -1,5 +1,5 @@
 import React from 'react'
-import FP from '#components/fp'
+import UI from '#components/fp'
 
 type DetailsProps = {
   /**
@@ -17,7 +17,7 @@ type DetailsProps = {
    * The aria-label  element for accessibility.
    */
   ariaLabel: string
-} & Partial<React.ComponentProps<typeof FP>>
+} & Partial<React.ComponentProps<typeof UI>>
 
 /**
  * Details component props interface.
@@ -57,22 +57,24 @@ export const Details = ({
   }
 
   return (
-    <FP
+    <UI
       as="details"
       style={defaultStyles}
       className={classes}
-      onToggle={onToggleCallback}
+      onToggle={() => {
+        console.log('toggle')
+      }}
       ref={ref}
       open={open}
       aria-label={ariaLabel || 'Details dropdown'}
       {...props}
     >
-      <FP as="summary" role="group" onPointerDown={onPointerDownCallback}>
+      <UI as="summary" role="group" onPointerDown={onPointerDownCallback}>
         {icon}
         {summary}
-      </FP>
-      <FP as="section">{children}</FP>
-    </FP>
+      </UI>
+      <UI as="section">{children}</UI>
+    </UI>
   )
 }
 
