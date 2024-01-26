@@ -9,11 +9,6 @@ type DetailsProps = {
   summary: React.ReactNode
 
   /**
-   * Set the details to open or closed
-   */
-  open?: boolean
-
-  /**
    * The aria-label  element for accessibility.
    */
   ariaLabel: string
@@ -41,33 +36,30 @@ export const Details = ({
   classes,
   ariaLabel,
   open,
-  onToggle,
   onPointerDown,
+  onToggle,
   children,
   ref,
   ...props
 }: DetailsProps) => {
   const defaultStyles: React.CSSProperties = { ...styles }
 
-  const onToggleCallback = (e: React.PointerEvent<HTMLDetailsElement>) => {
-    if (onToggle) onToggle?.(e)
-  }
-
   const onPointerDownCallback = (e: React.PointerEvent<HTMLDetailsElement>) => {
     if (onPointerDown) onPointerDown?.(e)
   }
 
+  const onToggleCallback = (e: React.PointerEvent<HTMLDetailsElement>) => {
+    if (onToggle) onPointerDown?.(e)
+  }
   return (
     <UI
       as="details"
       style={defaultStyles}
       className={classes}
-      onToggle={() => {
-        console.log('toggle')
-      }}
+      onToggle={onToggleCallback}
       ref={ref}
       open={open}
-      // aria-label={ariaLabel || 'Details dropdown'}
+      aria-label={ariaLabel || 'Details dropdown'}
       {...props}
     >
       <UI as="summary" role="group" onPointerDown={onPointerDownCallback}>
