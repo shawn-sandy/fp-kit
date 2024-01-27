@@ -1,6 +1,5 @@
 /* eslint-enable react/display-name */
 import React from 'react'
-import { ComponentProps } from '../types'
 
 type PolymorphicRef<C extends React.ElementType> =
   React.ComponentPropsWithRef<C>['ref']

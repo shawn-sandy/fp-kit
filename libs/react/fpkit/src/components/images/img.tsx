@@ -1,4 +1,4 @@
-import FP from '../fp'
+import UI from '../ui'
 import React from 'react'
 /*
  * ImageProps interface
@@ -17,7 +17,7 @@ import React from 'react'
  * @property {function} [imgLoaded] - Loaded callback
  */
 export type ImageProps = React.ComponentProps<'img'> &
-  React.ComponentProps<typeof FP>
+  React.ComponentProps<typeof UI>
 
 /*
  * Img component
@@ -72,7 +72,7 @@ export const Img = ({
   }
 
   return (
-    <FP
+    <UI
       as="img"
       src={src}
       alt={alt}

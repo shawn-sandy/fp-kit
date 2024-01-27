@@ -1,5 +1,5 @@
 import React from 'react'
-import UI from '#components/fp'
+import UI from '#components/ui'
 
 /*
  * CardProps interface

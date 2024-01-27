@@ -1,12 +1,12 @@
 import * as React from 'react'
-import FP from '../fp'
+import UI from '../ui'
 
 type ListProps = {
   /** Type of list to render (default: 'ul') */
   type?: 'ul' | 'ol' | 'dl'
   /** variant of list to render (default: 'none') */
   variant?: string
-} & React.ComponentProps<typeof FP>
+} & React.ComponentProps<typeof UI>
 
 export type ListItemProps = Omit<ListProps, 'type' | 'role'> & {
   /** Type of list item to render (default: 'li') */
@@ -29,9 +29,9 @@ export const ListItem = ({
   ...props
 }: ListItemProps) => {
   return (
-    <FP id={id} as={type} {...props} style={styles}>
+    <UI id={id} as={type} {...props} style={styles}>
       {children}
-    </FP>
+    </UI>
   )
 }
 
@@ -55,7 +55,7 @@ export const List = ({
   ...props
 }: ListProps) => {
   return (
-    <FP
+    <UI
       as={type}
       data-variant={variant}
       className={classes}
@@ -64,7 +64,7 @@ export const List = ({
       {...props}
     >
       {children}
-    </FP>
+    </UI>
   )
 }
 

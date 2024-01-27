@@ -1,4 +1,4 @@
-import UI from '#components/fp'
+import UI from '#components/ui'
 import React from 'react'
 
 type DetailsProps = {

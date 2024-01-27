@@ -27,4 +27,4 @@ export { default as Box } from './components/fp'
 // export { default as Tag } from './components/fp'
 // hooks
 
-export { default as UI } from './components/fp'
+export * from './components/ui'

@@ -1,4 +1,4 @@
-import FP from '#components/fp'
+import UI from '#components/fp'
 import React from 'react'
 
 import Input from './inputs'
@@ -6,7 +6,7 @@ import Field from './fields'
 import Select from './select'
 import Textarea from './textarea'
 
-export type FormProps = Partial<React.ComponentProps<typeof FP>> &
+export type FormProps = Partial<React.ComponentProps<typeof UI>> &
   React.ComponentProps<'form'>
 
 /**
@@ -45,7 +45,7 @@ export const Form = ({
   }
 
   return (
-    <FP
+    <UI
       as="form"
       id={id}
       name={name}
@@ -59,7 +59,7 @@ export const Form = ({
       {...props}
     >
       {children}
-    </FP>
+    </UI>
   )
 }
 

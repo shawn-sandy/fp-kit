@@ -1,12 +1,12 @@
 import React from 'react'
-import FP from '#components/fp'
+import UI from '#components/ui'
 
 export type TagProps = {
   /** HTML element to display the badge as span or p */
   elm?: 'span' | 'p'
   /**  Aria role for the component - conditional */
   role: 'note' | 'status'
-} & React.ComponentProps<typeof FP>
+} & React.ComponentProps<typeof UI>
 
 export const Tag = ({
   elm = 'span',
@@ -16,9 +16,9 @@ export const Tag = ({
   ...props
 }: TagProps) => {
   return (
-    <FP as={elm} role={role} styles={styles} {...props}>
+    <UI as={elm} role={role} styles={styles} {...props}>
       {children}
-    </FP>
+    </UI>
   )
 }
 export default Tag

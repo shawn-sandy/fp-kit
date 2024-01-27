@@ -1,10 +1,10 @@
-import FP from '../fp'
+import UI from '../ui'
 import React from 'react'
 
 export type LinkProps = {
   /** Applies button styling to the link */
   btnStyle?: boolean
-} & React.ComponentProps<typeof FP> &
+} & React.ComponentProps<typeof UI> &
   React.ComponentProps<'a'>
 
 export const Link = ({
@@ -28,7 +28,7 @@ export const Link = ({
   }
 
   return (
-    <FP
+    <UI
       as="a"
       href={href}
       target={target}
@@ -40,7 +40,7 @@ export const Link = ({
       {...props}
     >
       {children}
-    </FP>
+    </UI>
   )
 }
 

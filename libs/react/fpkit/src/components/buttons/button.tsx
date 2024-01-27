@@ -1,4 +1,4 @@
-import UI from '../fp'
+import UI from '../ui'
 import React from 'react'
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
