@@ -28,6 +28,7 @@ type FPProps<C extends React.ElementType> = PolymorphicComponentPropWithRef<
   {
     renderStyles?: boolean
     styles?: React.CSSProperties
+    classes?: string
   }
 >
 
@@ -56,15 +57,7 @@ type FPComponent = <C extends React.ElementType = 'span'>(
  */
 const FP: FPComponent = React.forwardRef(
   <C extends React.ElementType>(
-    {
-      as,
-      renderStyles = true,
-      styles,
-      classes,
-      children,
-      defaultStyles,
-      ...props
-    }: FPProps<C>,
+    { as, styles, classes, children, defaultStyles, ...props }: FPProps<C>,
     ref?: PolymorphicRef<C>,
   ) => {
     const Component = as || 'div'

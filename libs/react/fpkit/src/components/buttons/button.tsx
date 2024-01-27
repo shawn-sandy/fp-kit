@@ -1,37 +1,14 @@
 import UI from '../fp'
 import React from 'react'
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  /**
-   * The button type
-   * Required - 'button' | 'submit' | 'reset'
-   */
-  type: 'button' | 'submit' | 'reset'
-
-  /**
-   * The button label/content
-   * Required
-   */
-  children: React.ReactNode
-
-  /**
-   * Custom CSS styles
-   * Optional
-   */
-  styles?: React.CSSProperties
-
-  /**
-   * Custom CSS classes
-   * Optional
-   */
-  classes?: string
-
-  /**
-   * Whether to apply default styles
-   * Optional - default false
-   */
-  defaultStyles?: boolean
-}
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  Partial<React.ComponentProps<typeof UI>> & {
+    /**
+     * The button type
+     * Required - 'button' | 'submit' | 'reset'
+     */
+    type: 'button' | 'submit' | 'reset'
+  }
 
 export const Button = ({
   type = 'button',

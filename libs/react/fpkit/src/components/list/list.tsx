@@ -35,6 +35,16 @@ export const ListItem = ({
   )
 }
 
+/**
+ * List component renders a list element with provided props
+ * @param children - Child elements to render inside the list
+ * @param classes - CSS classes to apply
+ * @param type - Type of list element (default: 'ul')
+ * @param variant - Variant for styling purposes
+ * @param styles - Inline styles object
+ * @param role - ARIA role
+ * @param props - Additional props to pass to underlying element
+ */
 export const List = ({
   children,
   classes,

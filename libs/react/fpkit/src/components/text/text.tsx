@@ -1,8 +1,8 @@
 // import FP from '../fp'
 import React from 'react'
-import UI from '../ui'
+import FP from '#components/fp'
 
-type InheritedProps = React.ComponentProps<typeof UI>
+type InheritedProps = React.ComponentProps<typeof FP>
 
 type TextElements =
   | 'a'
@@ -44,9 +44,9 @@ export const Text = ({
   ...props
 }: TextProps) => {
   return (
-    <UI as={elm} id={id} styles={styles} className={classes} {...props}>
+    <FP as={elm} id={id} styles={styles} className={classes} {...props}>
       {children || text}
-    </UI>
+    </FP>
   )
 }
 
