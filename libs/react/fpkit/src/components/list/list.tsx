@@ -2,19 +2,11 @@ import * as React from 'react'
 import FP from '../fp'
 
 type ListProps = {
-  /** Styles to be applied to the list */
-  styles?: React.CSSProperties
-  /** CSS classes to be applied to the list */
-  classes?: string
-  /** Children to be rendered inside the list */
-  children: React.ReactNode
   /** Type of list to render (default: 'ul') */
   type?: 'ul' | 'ol' | 'dl'
-  /** The ro */
-  role?: string | undefined
   /** variant of list to render (default: 'none') */
   variant?: string
-}
+} & React.ComponentProps<typeof FP>
 
 export type ListItemProps = Omit<ListProps, 'type' | 'role'> & {
   /** Type of list item to render (default: 'li') */
@@ -31,27 +23,18 @@ export type ListItemProps = Omit<ListProps, 'type' | 'role'> & {
  */
 export const ListItem = ({
   type = 'li',
+  id,
   styles,
   children,
   ...props
 }: ListItemProps) => {
   return (
-    <FP as={type} {...props}>
+    <FP id={id} as={type} {...props} style={styles}>
       {children}
     </FP>
   )
 }
 
-/**
- * A component that renders a list.
- * @param children - The content to render inside the list.
- * @param classes - The CSS classes to apply to the list.
- * @param type - The type of list to render (ul or ol).
- * @param variant - The variant of the list.
- * @param styles - The inline styles to apply to the list.
- * @param props - Additional props to apply to the list.
- * @returns The rendered list component.
- */
 export const List = ({
   children,
   classes,
