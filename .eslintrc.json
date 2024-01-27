@@ -24,6 +24,7 @@
     "jsx-quotes": "off",
     "@typescript-eslint/no-explicit-any": "error",
     "react/react-in-jsx-scop": "off",
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "react/display-name": "warn"
   }
 }
