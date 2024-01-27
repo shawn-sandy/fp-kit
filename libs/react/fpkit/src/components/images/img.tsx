@@ -1,6 +1,5 @@
 import FP from '../fp'
-import { ComponentProps } from 'src/types'
-
+import React from 'react'
 /*
  * ImageProps interface
  *
@@ -17,38 +16,8 @@ import { ComponentProps } from 'src/types'
  * @property {function} [imgError] - Error callback
  * @property {function} [imgLoaded] - Loaded callback
  */
-export interface ImageProps extends ComponentProps {
-  alt: string
-  src: string
-  width?: number
-  height?: number
-  loading?: 'eager' | 'lazy'
-  placeholder?: string
-  fetchpriority?: 'high' | 'low'
-  decoding?: 'sync' | 'async' | 'auto'
-  imgError?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void
-  imgLoaded?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void
-}
-
-/*
- * Default styles object for the Img component.
- *
- * @property {string} maxWidth - Sets the max-width CSS property. Default is 'var(--img-w, 100%)'.
- * @property {string} height - Sets the height CSS property. Default is 'var(--img-h, auto)'.
- * @property {string} objectFit - Sets the object-fit CSS property. Default is 'var(--img-obj-fit, cover)'.
- * @property {string} objectPosition - Sets the object-position CSS property. Default is 'var(--img-position, center center)'.
- * @property {string} aspectRatio - Sets the aspect-ratio CSS property. Default is 'var(--img-ratio, auto 2/3)'.
- */
-
-export const defaultStyles = {
-  maxWidth: 'var(--img-w, 100%)',
-  maxInlineSize: '100%',
-  blockSize: 'var(--img-h, auto)',
-  objectFit: 'var(--img-obj-fit, cover)',
-  objectPosition: 'var(--img-position, center center)',
-  aspectRatio: 'var(--img-ratio, auto 2/3)',
-  display: 'var(--img-display, initial)',
-}
+export type ImageProps = React.ComponentProps<'img'> &
+  React.ComponentProps<typeof FP>
 
 /*
  * Img component
@@ -113,11 +82,12 @@ export const Img = ({
       style={styles}
       onError={handleImgError}
       onLoad={handleImgLoad}
+      fetchPriority={fetchpriority}
+      decoding={decoding}
       {...props}
     />
   )
 }
 
 export default Img
-Img.styles = defaultStyles
 Img.displayName = 'Img'

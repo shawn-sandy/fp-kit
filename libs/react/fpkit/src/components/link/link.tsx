@@ -1,43 +1,18 @@
 import FP from '../fp'
-import { ComponentProps } from '../../types'
+import React from 'react'
 
 export type LinkProps = {
-  /** The link text or contents */
-  children: React.ReactNode
-  /** The target attribute for the link */
-  target?: string
-  /** The rel attribute for the link */
-  rel?: string
-  /** Whether to prefetch the link */
-  prefetch?: boolean
   /** Applies button styling to the link */
   btnStyle?: boolean
-  /** Callback when link is clicked */
-  onPointerDown?: (e: React.PointerEvent<HTMLAnchorElement>) => void
-} & React.ComponentProps<typeof FP>
-
-/**
- * Link component props.
- * @typedef {Object} LinkProps
- * @property {string} href - The href URL that the link goes to.
- * @property {ReactNode} children - The link text or contents.
- * @property {string} [target] - The target attribute for the link.
- * @property {string} [rel] - The rel attribute for the link.
- * @property {boolean} [prefetch=true] - Whether to prefetch the link.
- * @property {boolean} [btnStyle] - Applies button styling to the link.
- * @property {(e: PointerEvent<HTMLAnchorElement>) => void} [onPointerDown] -
- * Callback when link is clicked.
- * @property {Object} [styles] - Component styles.
- * @param {LinkProps} props
- * @returns {JSX.Element}
- */
+} & React.ComponentProps<typeof FP> &
+  React.ComponentProps<'a'>
 
 export const Link = ({
   href,
   target,
   rel,
   children = 'Link',
-  styles = {},
+  styles,
   prefetch,
   btnStyle,
   onPointerDown,
@@ -46,7 +21,7 @@ export const Link = ({
   let relValue = rel
 
   if (target === '_blank')
-    relValue = `noopener noreferrer ${!!prefetch ? 'prefetch' : ''}`
+    relValue = `noopener noreferrer ${!prefetch ? 'prefetch' : ''}`
 
   const handleOnpointerDown = (e: React.PointerEvent<HTMLAnchorElement>) => {
     if (onPointerDown) onPointerDown?.(e)

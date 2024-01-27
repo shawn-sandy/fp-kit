@@ -4,7 +4,7 @@ import Svg from './svg'
 
 export function Star({
   size = 16,
-  fill = 'currentColor',
+  fill,
   strokeColor = 'currentColor',
   styles,
   role = 'img',
@@ -17,7 +17,7 @@ export function Star({
   return (
     <Svg size={size} alt={alt} styles={styles} role={role} {...props}>
       <g
-        fill="none"
+        fill={fill}
         stroke={strokeColor}
         strokeLinecap="square"
         strokeLinejoin="miter"

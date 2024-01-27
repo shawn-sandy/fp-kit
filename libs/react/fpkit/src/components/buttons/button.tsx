@@ -31,70 +31,35 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
    * Optional - default false
    */
   defaultStyles?: boolean
-
-  /**
-   * Pointer down event handler
-   * Optional
-   */
-  pointerDown?: (e: React.PointerEvent) => void
-
-  /**
-   * Pointer over event handler
-   * Optional
-   */
-  pointerOver?: (e: React.PointerEvent) => void
-
-  /**
-   * Pointer leave event handler
-   * Optional
-   */
-  pointerLeave?: (e: React.PointerEvent) => void
 }
 
-/*
- * Button component
- *
- * Renders a <button> element with custom props.
- *
- * @param {ButtonProps} props - The component props
- * @param {"button" | "submit" | "reset"} [props.type="button"] - The button type
- * @param {ReactNode} props.children - The button label/content
- * @param {Object} [props.styles] - Custom CSS styles
- * @param {boolean} [props.disabled=false] - Whether the button is disabled
- * @param {string} [props.classes] - Custom CSS classes
- * @param {function} [props.pointerDown] - Pointer down event handler
- * @param {function} [props.pointerOver] - Pointer over event handler
- * @param {function} [props.pointerLeave] - Pointer leave event handler
- * @param {boolean} [props.defaultStyles=false] - Whether to apply default styles
- *
- * @returns {JSX.Element} The rendered <button> element
- */
 export const Button = ({
   type = 'button',
   children,
   styles,
   disabled,
   classes,
-  pointerDown,
-  pointerOver,
-  pointerLeave,
+  onPointerDown,
+  onPointerOver,
+  onPointerLeave,
+
   ...props
 }: ButtonProps) => {
   const handlePointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
     if (!disabled) {
-      pointerDown?.(e)
+      onPointerDown?.(e)
     }
   }
 
   const handlePointerOver = (e: React.PointerEvent<HTMLButtonElement>) => {
     if (!disabled) {
-      pointerOver?.(e)
+      onPointerOver?.(e)
     }
   }
 
   const handlePointerLeave = (e: React.PointerEvent<HTMLButtonElement>) => {
     if (!disabled) {
-      pointerLeave?.(e)
+      onPointerLeave?.(e)
     }
   }
 
