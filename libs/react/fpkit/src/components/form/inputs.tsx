@@ -1,3 +1,4 @@
+import React from 'react'
 import FP from '../fp'
 
 // import
@@ -35,8 +36,6 @@ export const Input = ({
   onChange,
   onBlur,
   onPointerDown,
-  inputChange,
-  inputBlur,
   ...props
 }: InputProps): JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

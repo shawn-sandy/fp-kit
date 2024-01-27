@@ -1,5 +1,5 @@
-import FP from '../fp'
-import { ComponentProps } from '../../types'
+import React from 'react'
+import UI from '#components/fp'
 
 /*
  * CardProps interface
@@ -8,30 +8,9 @@ import { ComponentProps } from '../../types'
  *
  * @property {('div' | 'aside' | 'section' | 'article')} [elm='div'] - HTML element to render as
  */
-export interface CardProps extends ComponentProps {
+export type CardProps = {
   elm?: 'div' | 'aside' | 'section' | 'article'
-}
-
-/*
- * Default styles for the Card component.
- *
- * Defines CSS custom properties for styling cards.
- *
- * @property {string} --card-p - Padding
- * @property {string} --card-bg - Background color
- * @property {string} --card-shadow - Box shadow
- * @property {string} --card-rds - Border radius
- * @property {string} --card-brd - Border
- * @property {string} --card-cl - Text color
- */
-export const defaultStyles = {
-  padding: 'var(--card-p, 2rem)',
-  backgroundColor: 'var(--card-bg, white)',
-  boxShadow: 'var(--card-shadow, 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1))',
-  borderRadius: 'var(--card-rds, 0.25rem)',
-  border: 'var(--card-brd, none)',
-  color: 'var(--card-cl, black)',
-}
+} & React.ComponentProps<typeof UI>
 
 /*
  * Card component
@@ -52,27 +31,23 @@ export const Card = ({
   elm = 'div',
   styles,
   children,
-  renderStyles = true,
-  dataStyle,
   classes,
   id,
   ...props
 }: CardProps) => {
   return (
-    <FP
+    <UI
       as={elm}
       id={id}
       styles={styles}
-      renderStyles={renderStyles}
       className={classes}
       data-card
       {...props}
     >
       {children}
-    </FP>
+    </UI>
   )
 }
 
 export default Card
-Card.defStyles = defaultStyles
 Card.displayName = 'Card'

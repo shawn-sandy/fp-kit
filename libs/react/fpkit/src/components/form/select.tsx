@@ -13,7 +13,7 @@ export type SelectOptionsProps = {
    * Value for the select option. Can be a number or string.
    */
   selectValue: string
-}
+} & SelectProps
 
 /**
  * Option component for select.
@@ -55,7 +55,6 @@ export const Select = ({
   required,
   selected,
   onBlur,
-  onChange,
   onSelectionChange,
   onPointerDown,
   ref,
@@ -79,6 +78,7 @@ export const Select = ({
       id={id}
       ref={ref}
       name={name}
+      className={classes}
       selected={selected}
       onChange={handleOnChange}
       onPointerDown={handlePointerDown}

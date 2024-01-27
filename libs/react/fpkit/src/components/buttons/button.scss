@@ -55,11 +55,9 @@ button {
   // TODO: add hover/focus with :if()
   &:is(:hover, :focus) {
     // --btn-bg: lightgray;
-    --btn-cl: var(--btn-cl-hover);
     background-color: var(--btn-bg, var(--btn, lightgray));
     filter: invert(1) hue-rotate (180deg);
-    transform: scale(0.95);
-    // outline: var(--line-bg, var(--btn-bg)) var(--line-width, thin) var(--line-style, solid);
+    transform: scale(0.95) var(--line-style, solid);
     outline-offset: var(--line-offset, 5px);
 
     &[aria-disabled='true'] {

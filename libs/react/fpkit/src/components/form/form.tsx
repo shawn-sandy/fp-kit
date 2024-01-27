@@ -52,6 +52,7 @@ export const Form = ({
       novalidate={noValidate}
       method={formMethod}
       onSubmit={onSubmitCallback}
+      target={target}
       {...props}
     >
       {children}

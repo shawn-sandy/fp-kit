@@ -27,8 +27,7 @@ a[href]:focus {
   outline: none;
   --link-decoration: underline;
 }
-a[href]:visited,
-a[href]:active {
+a[href]:visited, a[href]:active {
   --link-color: currentColor;
 }
 a[href] > b:first-of-type {
@@ -45,10 +44,10 @@ a[href] > b:first-of-type {
   border-radius: var(--link-radius);
   display: inline-flex;
   outline: 2px currentColor solid;
-  --scale-transition: transform 0.25s ease-in-out;
+  --scale-transition: transform 0.25s ease;
   --scale: scale(1);
   --scale-to: scale(1.08);
-  transform: --scale;
+  transform: var(--scale);
   transition: var(--scale-transition);
 }
 a[href] > b:first-of-type:hover {

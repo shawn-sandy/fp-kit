@@ -1,5 +1,5 @@
-import React from 'react'
 import UI from '#components/fp'
+import React from 'react'
 
 type DetailsProps = {
   /**
@@ -18,7 +18,6 @@ type DetailsProps = {
 /**3
  * Details component props interface.
  *
- * @param {ReactNode} [icon] - The icon to show in the summary.
  * @param {React.CSSProperties} [styles] - CSS styles object.
  * @param {string} [classes] - Classnames string.
  * @param {boolean} [open] - Whether the details is open.

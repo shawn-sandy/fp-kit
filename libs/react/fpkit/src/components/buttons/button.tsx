@@ -1,6 +1,4 @@
-import { ComponentProps } from '#/types'
-// import React from 'react'
-import FP from '#components/fp'
+import UI from '../fp'
 import React from 'react'
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -53,35 +51,6 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   pointerLeave?: (e: React.PointerEvent) => void
 }
 
-/**
- * Default styles object for the Button component.
- *
- * Defines CSS custom properties used for styling buttons.
- *
- * @property {string} --btn-px - Padding left/right
- * @property {string} --btn-py - Padding top/bottom
- * @property {string} --btn-dsp - Display value
- * @property {string} --btn-place - place-items value
- * @property {string} --btn-justify - justify-content value
- * @property {string} --btn-cursor - Cursor value
- * @property {string} --btn-border - Border value
- * @property {string} --btn-color - Text color
- * @property {string} --btn-bg - Background color
- * @property {string} --btn-radius - Border radius
- */
-export const defStyles = {
-  paddingInline: 'var(--btn-px, 1.4rem)',
-  paddingBlock: 'var(--btn-py, 0.8rem)',
-  display: 'var(--btn-dsp, inline-flex)',
-  placeItems: 'var(--btn-place, center)',
-  justifyContent: 'var(--btn-justify, center)',
-  cursor: 'var(--btn-cursor, pointer)',
-  border: 'var(--btn-border, none)',
-  color: 'var(--btn-color, white)',
-  backgroundColor: 'var(--btn-bg, royalblue)',
-  borderRadius: 'var(--btn-radius, 0.2rem)',
-}
-
 /*
  * Button component
  *
@@ -131,7 +100,7 @@ export const Button = ({
 
   /* Returning a button element. */
   return (
-    <FP
+    <UI
       as="button"
       type={type}
       onPointerOver={handlePointerOver}
@@ -144,11 +113,10 @@ export const Button = ({
       {...props}
     >
       {children}
-    </FP>
+    </UI>
   )
   //
 }
 
 export default Button
-Button.defaultStyles = defStyles
 Button.displayName = 'Button'

@@ -27,7 +27,7 @@ type FPProps<C extends React.ElementType> = PolymorphicComponentPropWithRef<
   C,
   {
     renderStyles?: boolean
-    styles?: React.CSSProperties | {}
+    styles?: React.CSSProperties
   }
 >
 
@@ -43,11 +43,6 @@ type FPProps<C extends React.ElementType> = PolymorphicComponentPropWithRef<
 type FPComponent = <C extends React.ElementType = 'span'>(
   props: FPProps<C>,
 ) => React.ReactElement | any
-
-// create an object type and make it optional
-type styl = {
-  styles?: React.CSSProperties | {}
-}
 
 /**
  * FP component is a polymorphic component that renders an HTML element with optional styles.

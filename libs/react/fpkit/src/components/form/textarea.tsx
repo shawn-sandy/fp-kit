@@ -1,15 +1,8 @@
+import React from 'react'
 import FP from '../fp'
-import { SharedInputProps } from '../../types'
 
-export type TextareaProps = {
-  /**
-   * Textarea react ref
-   */
-  textareaRef?: React.RefObject<HTMLTextAreaElement>
-} & React.ComponentProps<'textarea'> &
-  SharedInputProps
-
-export const defaultStyles = {}
+export type TextareaProps = React.ComponentProps<'textarea'> &
+  React.ComponentProps<typeof FP>
 
 /**
  * Textarea component.
@@ -45,7 +38,6 @@ export const Textarea = ({
   onChange,
   ref,
   styles,
-  textareaRef,
   placeholder,
   ...props
 }: TextareaProps) => {
@@ -84,7 +76,7 @@ export const Textarea = ({
       onChange={handleChange}
       onBlur={handleBlur}
       onPointerDown={handleKeyDown}
-      ref={textareaRef}
+      ref={ref}
       placeholder={placeholder || `${required ? '*' : ''} Message`}
       {...props}
     />

@@ -1,4 +1,5 @@
-import FP from '../fp'
+import React from 'react'
+import UI from '../fp'
 
 export type FieldProps = {
   /**
@@ -7,7 +8,7 @@ export type FieldProps = {
   label: React.ReactNode
   children: React.ReactNode
 } & React.ComponentProps<'label'> &
-  Partial<React.ComponentProps<typeof FP>>
+  Partial<React.ComponentProps<typeof UI>>
 /**
  * Field component that renders a label and children wrapped in a div element.
  * @param labelFor Defines the for attribute of the label element
@@ -26,7 +27,7 @@ export const Field = ({
   ...props
 }: FieldProps) => {
   return (
-    <FP
+    <UI
       as="div"
       id={id}
       styles={styles}
@@ -36,7 +37,7 @@ export const Field = ({
     >
       <label htmlFor={labelFor}>{label}</label>
       {children}
-    </FP>
+    </UI>
   )
 }
 
