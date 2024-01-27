@@ -17,7 +17,6 @@ const defaultStyles = {
  * @param size - Icon size
  */
 export const ArrowUp = ({
-  fill = 'currentColor',
   strokeColor = 'currentColor',
   styles,
   size = 16,

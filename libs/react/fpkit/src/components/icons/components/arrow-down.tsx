@@ -14,16 +14,12 @@ const defaultStyles = { ...Svg.styles }
  */
 export const ArrowDown = ({
   fill = 'currentColor',
-  strokeColor,
   styles,
   size = 16,
   role = 'img',
   alt = 'Down icon',
   ...props
-}: Pick<
-  IconProps,
-  'strokeColor' | 'fill' | 'styles' | 'size' | 'role' | 'alt'
->) => {
+}: Pick<IconProps, 'fill' | 'styles' | 'size' | 'role' | 'alt'>) => {
   return (
     <Svg size={size} role={role} styles={styles} alt={alt} {...props}>
       <g fill={fill} strokeMiterlimit="10">

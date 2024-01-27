@@ -9,17 +9,6 @@ const defaultStyles = {
   stroke: 'currentColor',
 }
 
-/**
- * Renders a code icon.
- *
- * @param {string} strokeColor - The color of the icon's stroke.
- * @param {string} fill - The color of the icon's fill.
- * @param {string} size - The size of the icon.
- * @param {string} viewBox - The viewBox of the icon.
- * @param {React.CSSProperties} styles - The default styles of the icon.
- * @param {IconProps} props - Additional props to apply to the icon.
- * @returns {JSX.Element} - A React component that renders an SVG icon.
- */
 export const Code = ({
   strokeColor = 'currentColor',
   fill = 'none',
