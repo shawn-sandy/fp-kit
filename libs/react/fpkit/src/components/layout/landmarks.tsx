@@ -2,9 +2,10 @@
  * @fileoverview Landmarks components
  */
 
-import FP from '../fp'
-import { ComponentProps } from '../../types'
+import UI from '../ui'
 import React, { ReactNode } from 'react'
+
+type ComponentProps = React.ComponentProps<typeof UI>
 
 /**
  * Renders children elements without any wrapping component.
@@ -25,17 +26,18 @@ type HeaderProps = {
  * @param props - Other props.
  */
 export const Header = ({
+  id,
   children,
   headerBackground,
-  styles = {},
+  styles,
   classes,
   ...props
 }: HeaderProps) => {
   return (
-    <FP as="header" {...props} styles={styles} className={classes}>
+    <UI as="header" id={id} styles={styles} className={classes} {...props}>
       {headerBackground}
-      <FP as="section">{children}I</FP>
-    </FP>
+      <UI as="section">{children}I</UI>
+    </UI>
   )
 }
 
@@ -49,15 +51,16 @@ export const Header = ({
  * @param props - Other props.
  */
 export const Main = ({
+  id,
   children,
   styles,
   classes,
   ...props
 }: ComponentProps) => {
   return (
-    <FP as="main" styles={styles} {...props} className={classes}>
+    <UI as="main" id={id} styles={styles} {...props} className={classes}>
       {children}
-    </FP>
+    </UI>
   )
 }
 
@@ -68,24 +71,31 @@ export const Main = ({
  * @param props - Additional props to pass to the footer element.
  * @returns A React component that renders a footer element with a section element inside.
  */
-export const Footer = ({ children, styles = {}, ...props }: ComponentProps) => {
+export const Footer = ({
+  id,
+  classes,
+  children,
+  styles = {},
+  ...props
+}: ComponentProps) => {
   return (
-    <FP as="footer" styles={styles} {...props}>
-      <FP as="section">{children || 'Copyright © 2022'}</FP>
-    </FP>
+    <UI as="footer" id={id} className={classes} styles={styles} {...props}>
+      <UI as="section">{children || 'Copyright © 2022'}</UI>
+    </UI>
   )
 }
 
 export const Aside = ({
+  id,
   children,
   styles = {},
   classes,
   ...props
 }: ComponentProps) => {
   return (
-    <FP as="aside" styles={styles} className={classes} {...props}>
-      <FP as="section">{children}</FP>
-    </FP>
+    <UI as="aside" id={id} styles={styles} className={classes} {...props}>
+      <UI as="section">{children}</UI>
+    </UI>
   )
 }
 
@@ -97,15 +107,16 @@ export const Aside = ({
  * @param props - Other props.
  */
 export const Section = ({
+  id,
   children,
   styles,
   classes,
   ...props
 }: ComponentProps) => {
   return (
-    <FP as="section" styles={styles} className={classes} {...props}>
+    <UI as="section" id={id} styles={styles} className={classes} {...props}>
       {children}
-    </FP>
+    </UI>
   )
 }
 
@@ -117,15 +128,16 @@ export const Section = ({
  * @param props - Additional props to pass to the article element.
  */
 export const Article = ({
+  id,
   children,
   styles,
   classes,
   ...props
 }: ComponentProps) => {
   return (
-    <FP as="article" styles={styles} className={classes} {...props}>
+    <UI as="article" id={id} styles={styles} className={classes} {...props}>
       {children}
-    </FP>
+    </UI>
   )
 }
 

@@ -8,7 +8,7 @@ type ListProps = {
   variant?: string
 } & React.ComponentProps<typeof UI>
 
-export type ListItemProps = Omit<ListProps, 'type' | 'role'> & {
+export type ListItemProps = Omit<ListProps, 'type'> & {
   /** Type of list item to render (default: 'li') */
   type?: 'li' | 'dt' | 'dd'
 }
@@ -26,10 +26,11 @@ export const ListItem = ({
   id,
   styles,
   children,
+  classes,
   ...props
 }: ListItemProps) => {
   return (
-    <UI id={id} as={type} {...props} style={styles}>
+    <UI id={id} as={type} className={classes} {...props} style={styles}>
       {children}
     </UI>
   )

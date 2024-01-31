@@ -1,9 +1,7 @@
-import FP from '../fp'
-import { ComponentProps } from '../../types'
-import { Button } from '../buttons/button'
-import React, { MouseEventHandler, useEffect } from 'react'
+import UI from '../ui'
+import React from 'react'
 
-export interface DialogProps extends ComponentProps {
+export type DialogProps = {
   /**
    * React ref for dialog element
    */
@@ -16,18 +14,18 @@ export interface DialogProps extends ComponentProps {
    * open modal on mount
    */
   openOnMount?: boolean
-}
+} & React.ComponentProps<typeof UI>
 /**
  * Dialog component
  */
 export const Dialog = ({
   id,
   children,
+  classes,
   modalRef,
   openOnMount,
   ...props
 }: DialogProps) => {
-
   const handleCloseModal = (e: React.SyntheticEvent<HTMLDialogElement>) => {
     if (e.currentTarget === e.target) {
       e.currentTarget.close()
@@ -35,16 +33,17 @@ export const Dialog = ({
   }
 
   return (
-    <FP
+    <UI
       as="dialog"
       id={id}
+      classes={classes}
       ref={modalRef}
       open={openOnMount}
       onClick={handleCloseModal}
       {...props}
     >
       {children}
-    </FP>
+    </UI>
   )
 }
 
