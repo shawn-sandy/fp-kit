@@ -11,6 +11,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
+    '@storybook/addon-actions',
     '@geometricpanda/storybook-addon-badges',
     // '@storybook/addon-storysource',
     '@storybook/addon-coverage',

@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { within } from '@storybook/testing-library'
+import { within, userEvent } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import Button from './button'
@@ -9,8 +9,12 @@ const meta: Meta<typeof Button> = {
   title: 'FP.React Components/Buttons',
   component: Button,
   args: {
-    children: 'Link',
+    children: 'Click me',
   },
+  parameters: {
+    actions: { argTypesRegex: '^on.*' },
+  },
+  argTypes: { onClick: { action: 'clicked' } },
 } as Meta
 
 export default meta
@@ -20,7 +24,9 @@ export const ButtonComponent: Story = {
   args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
-    expect(canvas).toBeInTheDocument()
+    expect(canvas.getByRole('button')).toBeInTheDocument()
+    await userEvent.tab()
+    expect(canvas.getByRole('button')).toHaveFocus()
   },
 } as Story
 
