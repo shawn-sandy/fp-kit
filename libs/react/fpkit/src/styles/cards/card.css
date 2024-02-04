@@ -1,5 +1,5 @@
 [data-card],
-[data-component~='card'] {
+[data-component~=card] {
   --card-p: 2rem;
   --card-bg: #fff;
   --card-radius: calc(var(--card-p) / 3);
@@ -16,6 +16,7 @@
   gap: var(--card-gap);
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
+  background-color: var(--card-bg);
 }
 
 /*# sourceMappingURL=card.css.map */

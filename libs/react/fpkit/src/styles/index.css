@@ -420,6 +420,7 @@ p[role=note] {
   gap: var(--card-gap);
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
+  background-color: var(--card-bg);
 }
 
 progress {
