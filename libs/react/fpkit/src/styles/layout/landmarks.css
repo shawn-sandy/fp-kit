@@ -1,5 +1,5 @@
 header,
-[data-grid~='overlay'] {
+[data-grid~=overlay] {
   --overlay-grid-area: overlay;
   --overlay-placement: center;
   --overlay-display: grid;
@@ -7,7 +7,7 @@ header,
   --overlay-w: min(100vw, 90vw);
   --overlay-h: min(70vh, 50vh);
   --overlay-color: currentColor;
-  grid-template-areas: 'overlay';
+  grid-template-areas: "overlay";
   display: var(--overlay-display);
   place-items: var(--overlay-placement);
   align-items: var(--overlay-placement);
@@ -16,15 +16,15 @@ header,
   color: var(--overlay-color);
 }
 header > *,
-[data-grid~='overlay'] > * {
+[data-grid~=overlay] > * {
   grid-area: overlay;
 }
 header > img,
-[data-grid~='overlay'] > img {
+[data-grid~=overlay] > img {
   width: var(--overlay-w);
 }
 header > section,
-[data-grid~='overlay'] > section {
+[data-grid~=overlay] > section {
   text-align: center;
 }
 
