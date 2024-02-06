@@ -87,9 +87,9 @@
     },
     "./package.json": "./package.json",
     "./styles": {
-      "import": "./libs/styles.css",
-      "require": "./libs/styles.ccs",
-      "default": "./libs/styles.css"
+      "import": "./libs/index.css",
+      "require": "./libs/index.ccs",
+      "default": "./libs/index.css"
     },
     "./css": "./libs/components",
     "./scss": "./src/components"
@@ -97,7 +97,8 @@
   "files": [
     "src",
     "dist",
-    "libs"
+    "libs",
+    "libs/index.css"
   ],
   "peerDependencies": {
     "react": "^18.0.0",
