@@ -20,11 +20,10 @@ export * from './components/tables/table-elements'
 export * from './components/details/details'
 export * from './components/text/text'
 export * from './components/form/textarea'
+export * from './components/nav/nav'
 
 export { default as To } from './components/link/link'
 export { default as FP } from './components/fp'
 export { default as Box } from './components/fp'
-// export { default as Tag } from './components/fp'
-// hooks
 
 export * from './components/ui'

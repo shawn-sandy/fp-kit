@@ -1,15 +1,17 @@
-import FP from '../fp'
+import UI from '../ui'
+import { List } from '../list/list'
 import React from 'react'
 
-import { ComponentProps } from '../../types'
+export type NavProps = React.ComponentProps<typeof UI>
 
-export const Nav = ({ children, styles = {}, ...props }: ComponentProps) => {
+export const Nav = ({ children, ...props }: NavProps) => {
   return (
-    <FP as="nav" styles={styles} {...props}>
+    <UI as="nav" {...props}>
       {children}
-    </FP>
+    </UI>
   )
 }
 
 export default Nav
 Nav.displayName = 'Nav'
+Nav.List = List

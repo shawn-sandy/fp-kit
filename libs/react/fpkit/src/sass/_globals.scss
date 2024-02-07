@@ -46,13 +46,13 @@ ol {
   gap: var(--li-gap, 0.2rem);
   flex-wrap: var(--li-wrap, nowrap);
   &[role='list'],
-  &[data-list='unstyled'] {
+  &[data-list~='unstyled'] {
     list-style: var(--li-style, none);
     margin-block-end: var(--li-my, 0);
     margin-block-start: var(--li-mx, 0);
     padding-inline-start: var(--li-px, 0);
   }
-  &[data-list='inline'] {
+  &[data-list~='inline'] {
     --li-direction: row;
     --li-gap: 1rem;
     --li-wrap: wrap;
