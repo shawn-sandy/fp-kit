@@ -12,12 +12,18 @@ nav {
 nav > section,
 nav > ul {
   --nav-dsp: flex;
+  flex-direction: var(--nav-direction, row);
   display: var(--nav-dsp, flex);
   gap: var(--nav-gap, 0);
   font-size: var(--nav-fs, 0.9rem);
   align-items: var(--nav-align, center);
   padding-inline: var(--nav-px, 1rem);
+  padding-block: var(--nav-py, 0);
   height: 100%;
+}
+nav > section[data-list~=block],
+nav > ul[data-list~=block] {
+  --nav-direction: column;
 }
 nav > section > div {
   --py: 0;

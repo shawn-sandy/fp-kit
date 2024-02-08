@@ -17,10 +17,16 @@ const meta: Meta<typeof Nav> = {
     },
   },
   args: {
-    children: 'Link',
+    children: (
+      <>
+        <Nav.List>
+          <Nav.Item>Link 1</Nav.Item>
+          <Nav.Item>Link 2</Nav.Item>
+        </Nav.List>
+      </>
+    ),
     id: 'nav',
     classes: 'nav',
-    // styles: { backgroundColor: 'blue' },
   },
 } as Story
 
@@ -50,5 +56,19 @@ export const NavSection: Story = {
     const canvas = within(canvasElement)
     expect(canvas.getByText('Link 1')).toBeInTheDocument()
     expect(canvas.getByText('Link 2')).toBeInTheDocument()
+  },
+} as Story
+
+export const NavBlock: Story = {
+  args: {
+    ...NavSection.args,
+    children: (
+      <>
+        <Nav.List isBlock={true}>
+          <Nav.Item>Link 1</Nav.Item>
+          <Nav.Item>Link 2</Nav.Item>
+        </Nav.List>
+      </>
+    ),
   },
 } as Story

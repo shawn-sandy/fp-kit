@@ -2,10 +2,11 @@ import UI from '../ui'
 import List from '../list/list'
 import React from 'react'
 
-export type NavListProps = React.ComponentProps<typeof List>
-export type NavItemProps = React.ComponentProps<typeof List.ListItem> & {
-  inline?: boolean
+export type NavListProps = React.ComponentProps<typeof List> & {
+  isBlock?: boolean
 }
+export type NavItemProps = React.ComponentProps<typeof List.ListItem>
+
 export type NavProps = React.ComponentProps<typeof UI>
 
 /**
@@ -15,9 +16,9 @@ export type NavProps = React.ComponentProps<typeof UI>
  * @param {Object} props - Additional props to spread to the List component.
  * @returns {JSX.Element} The rendered NavList component.
  */
-export const NavList = ({ children, ...props }: NavListProps) => {
+export const NavList = ({ isBlock, children, ...props }: NavListProps) => {
   return (
-    <List type="ul" {...props} data-list="unstyled inline">
+    <List type="ul" {...props} data-list={`unstyled ${isBlock ? 'block' : ''}`}>
       {children}
     </List>
   )
@@ -39,7 +40,6 @@ export const NavItem = ({
   styles,
   classes,
   children,
-  inline = true,
   ...props
 }: NavItemProps) => {
   return (
@@ -48,7 +48,6 @@ export const NavItem = ({
       id={id}
       classes={classes}
       styles={styles}
-      data-list={`${inline ? 'inline' : ''} unstyled`}
       {...props}
     >
       {children}
