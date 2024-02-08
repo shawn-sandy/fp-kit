@@ -8,10 +8,10 @@ type ListProps = {
   variant?: string
 } & React.ComponentProps<typeof UI>
 
-export type ListItemProps = Omit<ListProps, 'type'> & {
+export type ListItemProps = {
   /** Type of list item to render (default: 'li') */
   type?: 'li' | 'dt' | 'dd'
-}
+} & React.ComponentProps<typeof UI>
 
 /**
  * ListItem component
