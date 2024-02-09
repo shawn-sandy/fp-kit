@@ -19,16 +19,14 @@ const meta: Meta<typeof Nav> = {
   },
   args: {
     children: (
-      <>
-        <Nav.List>
-          <Nav.Item>
-            <Link href="/">Link 1</Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Link href="/">Link 2</Link>
-          </Nav.Item>
-        </Nav.List>
-      </>
+      <Nav.List>
+        <Nav.Item>
+          <Link href="/">Link 1</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link href="/">Link 2</Link>
+        </Nav.Item>
+      </Nav.List>
     ),
     id: 'nav',
     classes: 'nav',
