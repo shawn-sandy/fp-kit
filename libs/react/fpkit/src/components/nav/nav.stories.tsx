@@ -4,6 +4,7 @@ import { expect } from '@storybook/jest'
 import React from 'react'
 
 import Nav from './nav'
+import Link from '../link/link'
 
 const meta: Meta<typeof Nav> = {
   title: 'FP.REACT Components/Nav',
@@ -20,8 +21,12 @@ const meta: Meta<typeof Nav> = {
     children: (
       <>
         <Nav.List>
-          <Nav.Item>Link 1</Nav.Item>
-          <Nav.Item>Link 2</Nav.Item>
+          <Nav.Item>
+            <Link href="/">Link 1</Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Link href="/">Link 2</Link>
+          </Nav.Item>
         </Nav.List>
       </>
     ),
