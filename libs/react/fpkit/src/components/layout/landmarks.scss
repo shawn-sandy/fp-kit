@@ -38,3 +38,13 @@ header,
     text-align: center;
   }
 }
+
+main,
+footer {
+  --content-w: clamp(100%, 1200px, 1600px);
+  --content-mx: auto;
+  > section {
+    width: var(--content-w);
+    margin-inline: var(--content-mx);
+  }
+}

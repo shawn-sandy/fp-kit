@@ -625,6 +625,17 @@ header > section,
   text-align: center;
 }
 
+main,
+footer {
+  --content-w: clamp(100%, 1200px, 1600px);
+  --content-mx: auto;
+}
+main > section,
+footer > section {
+  width: var(--content-w);
+  margin-inline: var(--content-mx);
+}
+
 sup:has(> span) {
   --badge-bg: lightgray;
   --badge-color: currentColor;
