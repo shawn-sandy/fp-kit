@@ -21,8 +21,8 @@ body {
   }
 }
 
-* + *:not(main, header, footer, nav, li) {
-  margin-block-start: var(--spc-4);
+* + div {
+  margin-block-start: 1rem;
 }
 
 main,
