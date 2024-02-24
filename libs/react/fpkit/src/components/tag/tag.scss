@@ -1,5 +1,6 @@
 p[role='note'],
 [role='note'],
+small > span,
 [data-tag] {
   --beta: var(--warning-500, orange);
   --stable: var(--success-500, green);

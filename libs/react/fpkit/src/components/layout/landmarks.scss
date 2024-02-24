@@ -19,9 +19,7 @@ header,
   --overlay-color: currentColor;
 
   grid-template-areas: 'overlay';
-
   display: var(--overlay-display);
-
   place-items: var(--overlay-placement);
   align-items: var(--overlay-placement);
   min-height: var(--overlay-h);
