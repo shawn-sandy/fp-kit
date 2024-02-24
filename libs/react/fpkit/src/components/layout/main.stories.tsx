@@ -51,6 +51,7 @@ const mainChildren = () => (
           eveniet, modi reprehenderit vero pariatur enim esse eaque consectetur
           nulla.
         </p>
+        <div>Lorem ipsum dolor sit amet.</div>
       </article>
       <aside>
         <p>

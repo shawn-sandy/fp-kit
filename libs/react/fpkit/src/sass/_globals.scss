@@ -19,10 +19,10 @@ body {
   main: {
     flex-grow: 1;
   }
+}
 
-  * + *:not(main, header, footer, nav) {
-    margin-block-start: var(--spc-4);
-  }
+* + *:not(main, header, footer, nav, li) {
+  margin-block-start: var(--spc-4);
 }
 
 main,
