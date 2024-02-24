@@ -272,7 +272,9 @@ body {
   main-flex-grow: 1;
 }
 
-* + div {
+* + div,
+* + ul,
+* + section {
   margin-block-start: 1rem;
 }
 

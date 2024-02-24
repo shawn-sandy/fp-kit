@@ -21,7 +21,9 @@ body {
   }
 }
 
-* + div {
+* + div,
+* + ul,
+* + section {
   margin-block-start: 1rem;
 }
 
