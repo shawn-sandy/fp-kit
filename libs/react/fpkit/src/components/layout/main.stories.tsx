@@ -31,7 +31,7 @@ const mainChildren = () => (
   <>
     <section aria-label="main-content">
       <article>
-        <h2>Header Title</h2>
+        <h3>Header Title</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis alias,
           labore quibusdam, culpa dolorum rerum fugiat laborum deserunt sed ad
