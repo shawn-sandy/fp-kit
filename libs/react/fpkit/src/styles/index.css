@@ -271,7 +271,7 @@ body {
   flex-direction: var(--body-direction, column);
   main-flex-grow: 1;
 }
-> body:not(main, header, nav, footer) * + * {
+body * + *:not(main, header, footer, nav) {
   margin-block-start: var(--spc-4);
 }
 

@@ -20,10 +20,8 @@ body {
     flex-grow: 1;
   }
 
-  > &:not(main, header, nav, footer) {
-    * + * {
-      margin-block-start: var(--spc-4);
-    }
+  * + *:not(main, header, footer, nav) {
+    margin-block-start: var(--spc-4);
   }
 }
 
