@@ -12,9 +12,9 @@ header,
   // Overlay padding
   --overlay-padding: 2rem;
 
-  --overlay-w: min(100vw, 90vw);
+  --overlay-w: 100%;
 
-  --overlay-h: min(70vh, 50vh);
+  --overlay-h: 30vh;
 
   --overlay-color: currentColor;
 
@@ -24,7 +24,7 @@ header,
 
   place-items: var(--overlay-placement);
   align-items: var(--overlay-placement);
-  height: var(--overlay-h);
+  min-height: var(--overlay-h);
   width: var(--overlay-w);
   color: var(--overlay-color);
 
@@ -42,15 +42,24 @@ header,
 
 main,
 footer {
-  --content-w: min(100%, 1600px);
+  --content-w: min(100%, 1480px);
   --content-mx: auto;
+  > section {
+    width: var(--content-w);
+    margin-inline: var(--content-mx);
+  }
+}
 
-  > section[aria-label] {
+main {
+  flex: 1;
+  > section[aria-label],
+  > section {
     width: var(--content-w);
     margin-inline: var(--content-mx);
     &:has(> article, > aside) {
       display: flex;
       flex-wrap: wrap;
+      flex: 1;
       gap: 1rem;
       > article {
         flex-basis: 0;
@@ -62,5 +71,11 @@ footer {
         flex-grow: 1;
       }
     }
+  }
+}
+
+footer {
+  > div {
+    text-align: center;
   }
 }

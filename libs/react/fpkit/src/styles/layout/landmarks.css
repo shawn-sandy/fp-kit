@@ -4,14 +4,14 @@ header,
   --overlay-placement: center;
   --overlay-display: grid;
   --overlay-padding: 2rem;
-  --overlay-w: min(100vw, 90vw);
-  --overlay-h: min(70vh, 50vh);
+  --overlay-w: 100%;
+  --overlay-h: 30vh;
   --overlay-color: currentColor;
   grid-template-areas: "overlay";
   display: var(--overlay-display);
   place-items: var(--overlay-placement);
   align-items: var(--overlay-placement);
-  height: var(--overlay-h);
+  min-height: var(--overlay-h);
   width: var(--overlay-w);
   color: var(--overlay-color);
 }
@@ -31,30 +31,44 @@ header > section,
 
 main,
 footer {
-  --content-w: min(100%, 1600px);
+  --content-w: min(100%, 1480px);
   --content-mx: auto;
 }
+main > section,
+footer > section {
+  width: var(--content-w);
+  margin-inline: var(--content-mx);
+}
+
+main {
+  flex: 1;
+}
 main > section[aria-label],
-footer > section[aria-label] {
+main > section {
   width: var(--content-w);
   margin-inline: var(--content-mx);
 }
 main > section[aria-label]:has(> article, > aside),
-footer > section[aria-label]:has(> article, > aside) {
+main > section:has(> article, > aside) {
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
   gap: 1rem;
 }
 main > section[aria-label]:has(> article, > aside) > article,
-footer > section[aria-label]:has(> article, > aside) > article {
+main > section:has(> article, > aside) > article {
   flex-basis: 0;
   flex-grow: 999;
   min-inline-size: 50%;
 }
 main > section[aria-label]:has(> article, > aside) > aside,
-footer > section[aria-label]:has(> article, > aside) > aside {
+main > section:has(> article, > aside) > aside {
   flex-basis: 20rem;
   flex-grow: 1;
+}
+
+footer > div {
+  text-align: center;
 }
 
 /*# sourceMappingURL=landmarks.css.map */

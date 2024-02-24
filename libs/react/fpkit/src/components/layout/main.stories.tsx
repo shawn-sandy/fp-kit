@@ -25,6 +25,13 @@ const meta: Meta<typeof Main> = {
     // @ts-ignore
     'data-testid': 'main',
   },
+  decorators: [
+    (Story) => (
+      <div style={{ minHeight: '80vh', display: 'flex' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta
 
 const mainChildren = () => (
