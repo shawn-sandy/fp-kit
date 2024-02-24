@@ -729,11 +729,13 @@ main,
 footer {
   --content-w: min(100%, 1480px);
   --content-mx: auto;
+  --content-px: 1rem;
 }
 main > section,
 footer > section {
   width: var(--content-w);
   margin-inline: var(--content-mx);
+  padding-inline: var(--content-px);
 }
 
 main {
