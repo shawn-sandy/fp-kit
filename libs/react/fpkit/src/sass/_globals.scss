@@ -12,6 +12,18 @@ html {
   font-size: var(--fs);
 }
 
+body {
+  display: var(--body-dsp, flex);
+  min-height: 100%;
+  flex-direction: var(--body-direction, column);
+  header: {
+    min-height: 30vh;
+  }
+  main: {
+    flex-grow: 1;
+  }
+}
+
 main,
 header,
 footer {
