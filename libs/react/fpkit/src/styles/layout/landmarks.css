@@ -26,17 +26,35 @@ header > img,
 header > section,
 [data-grid~=overlay] > section {
   text-align: center;
+  margin-inline: var(--content-mx);
 }
 
 main,
 footer {
-  --content-w: clamp(100%, 1200px, 1600px);
+  --content-w: min(100%, 1600px);
   --content-mx: auto;
 }
-main > section,
-footer > section {
+main > section[aria-label],
+footer > section[aria-label] {
   width: var(--content-w);
   margin-inline: var(--content-mx);
+}
+main > section[aria-label]:has(> article, > aside),
+footer > section[aria-label]:has(> article, > aside) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+main > section[aria-label]:has(> article, > aside) > article,
+footer > section[aria-label]:has(> article, > aside) > article {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+main > section[aria-label]:has(> article, > aside) > aside,
+footer > section[aria-label]:has(> article, > aside) > aside {
+  flex-basis: 20rem;
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=landmarks.css.map */

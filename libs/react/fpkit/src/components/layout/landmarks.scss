@@ -36,15 +36,31 @@ header,
   }
   > section {
     text-align: center;
+    margin-inline: var(--content-mx);
   }
 }
 
 main,
 footer {
-  --content-w: clamp(100%, 1200px, 1600px);
+  --content-w: min(100%, 1600px);
   --content-mx: auto;
-  > section {
+
+  > section[aria-label] {
     width: var(--content-w);
     margin-inline: var(--content-mx);
+    &:has(> article, > aside) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      > article {
+        flex-basis: 0;
+        flex-grow: 999;
+        min-inline-size: 50%;
+      }
+      > aside {
+        flex-basis: 20rem;
+        flex-grow: 1;
+      }
+    }
   }
 }

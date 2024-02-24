@@ -2,7 +2,7 @@
   --font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --fs: 1rem;
+
   --TRUE: initial;
   --FALSE: ;
 }
@@ -34,8 +34,8 @@ section {
 }
 
 p {
-  font-size: var(--fs);
-  max-width: var(--p-max-w, 70ch);
+  font-size: var(--fs-0);
+
   & + p {
     margin-block-start: 1rem;
   }
@@ -73,4 +73,24 @@ blockquote {
 
 strong {
   font-weight: var(--weight);
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
 }

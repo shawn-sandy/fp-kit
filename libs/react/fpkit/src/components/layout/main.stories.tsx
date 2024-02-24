@@ -28,10 +28,24 @@ const meta: Meta<typeof Main> = {
 } as Meta
 
 const mainChildren = () => (
-  <section>
-    <h2>Header Title</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, unde?</p>
-  </section>
+  <>
+    <section aria-label="main-content">
+      <article>
+        <h2>Header Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis alias,
+          labore quibusdam, culpa dolorum rerum fugiat laborum deserunt sed ad
+          eveniet, modi reprehenderit vero pariatur enim esse eaque consectetur
+          nulla.
+        </p>
+      </article>
+      <aside>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, unde?
+        </p>
+      </aside>
+    </section>
+  </>
 )
 
 export default meta
@@ -45,7 +59,7 @@ export const MainLandmark: Story = {
   },
 }
 
-export const MainWithChildren: Story = {
+export const MainArticles: Story = {
   args: {
     // @ts-ignore
     children: mainChildren(),
