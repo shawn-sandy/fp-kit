@@ -78,6 +78,9 @@ main {
 
 footer {
   > div {
+    display: flex;
+    align-items: center;
+    min-height: 5rem;
     text-align: center;
   }
 }
