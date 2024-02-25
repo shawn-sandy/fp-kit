@@ -382,17 +382,17 @@ h6 {
   font-size: var(--title-6);
 }
 
-h1[data-ui=display], h1:has(span:first-of-type),
+h1[data-ui=display], h1:has(span:first-of-type) > span,
 h2[data-ui=display],
-h2:has(span:first-of-type),
+h2:has(span:first-of-type) > span,
 h3[data-ui=display],
-h3:has(span:first-of-type),
+h3:has(span:first-of-type) > span,
 h4[data-ui=display],
-h4:has(span:first-of-type),
+h4:has(span:first-of-type) > span,
 h5[data-ui=display],
-h5:has(span:first-of-type),
+h5:has(span:first-of-type) > span,
 h6[data-ui=display],
-h6:has(span:first-of-type) {
+h6:has(span:first-of-type) > span {
   --weight: 600;
   --title-1: var(--h1);
   --title-2: var(--h2);
