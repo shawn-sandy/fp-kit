@@ -5,7 +5,7 @@ header,
   --overlay-display: grid;
   --overlay-padding: 2rem;
   --overlay-w: 100%;
-  --overlay-h: 30vh;
+  --overlay-h: 40vh;
   --overlay-color: currentColor;
   grid-template-areas: "overlay";
   display: var(--overlay-display);
@@ -27,6 +27,7 @@ header > section,
 [data-grid~=overlay] > section {
   text-align: center;
   margin-inline: var(--content-mx);
+  padding-inline: var(--spc-4);
 }
 
 main,
@@ -39,7 +40,7 @@ main > section,
 footer > section {
   width: var(--content-w);
   margin-inline: var(--content-mx);
-  padding-inline: var(--content-px);
+  padding-inline: var(--spc-4);
 }
 
 main {

@@ -4,6 +4,7 @@
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --TRUE: initial;
   --FALSE: ;
+  --weight: 600;
 }
 
 html {
@@ -90,22 +91,55 @@ strong {
   font-weight: var(--weight);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--weight);
+  margin-block-start: 0;
+  margin-block-end: 1rem;
+}
+
 h1 {
-  font-size: var(--h1);
+  font-size: var(--title-1);
 }
 
 h2 {
-  font-size: var(--h2);
+  font-size: var(--title-2);
 }
 
 h3 {
-  font-size: var(--h3);
+  font-size: var(--title-3);
 }
 
 h4 {
-  font-size: var(--h4);
+  font-size: var(--title-4);
 }
 
 h5 {
-  font-size: var(--h5);
+  font-size: var(--title-5);
+}
+
+h6 {
+  font-size: var(--title-6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &[data-ui='display'],
+  &:has(span:first-of-type) {
+    --weight: 600;
+    --title-1: var(--h1);
+    --title-2: var(--h2);
+    --title-3: var(--h3);
+    --title-4: var(--h4);
+    --title-5: var(--h5);
+    --title-6: var(--h6);
+  }
 }

@@ -14,7 +14,7 @@ header,
 
   --overlay-w: 100%;
 
-  --overlay-h: 30vh;
+  --overlay-h: 40vh;
 
   --overlay-color: currentColor;
 
@@ -35,6 +35,7 @@ header,
   > section {
     text-align: center;
     margin-inline: var(--content-mx);
+    padding-inline: var(--spc-4);
   }
 }
 
@@ -46,7 +47,7 @@ footer {
   > section {
     width: var(--content-w);
     margin-inline: var(--content-mx);
-    padding-inline: var(--content-px);
+    padding-inline: var(--spc-4);
   }
 }
 
