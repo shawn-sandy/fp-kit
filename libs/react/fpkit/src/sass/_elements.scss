@@ -1,0 +1,17 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &[data-ui~='display'],
+  &:has(span:first-of-type) > span {
+    --weight: 600;
+    --title-1: var(--h1);
+    --title-2: var(--h2);
+    --title-3: var(--h3);
+    --title-4: var(--h4);
+    --title-5: var(--h5);
+    --title-6: var(--h6);
+  }
+}

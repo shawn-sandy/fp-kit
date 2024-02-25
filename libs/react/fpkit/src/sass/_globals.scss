@@ -126,20 +126,12 @@ h6 {
   font-size: var(--title-6, var(--fs-2));
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  &[data-ui~='display'],
-  &:has(span:first-of-type) > span {
-    --weight: 600;
-    --title-1: var(--h1);
-    --title-2: var(--h2);
-    --title-3: var(--h3);
-    --title-4: var(--h4);
-    --title-5: var(--h5);
-    --title-6: var(--h6);
-  }
+hr {
+  --hr-h: 0.0625rem;
+  --hr-color: lightgray;
+  --border-my: 1.5rem;
+  height: var(--hr-h);
+  background-color: var(--hr-color);
+  border: none;
+  margin-block: var(--border-my);
 }

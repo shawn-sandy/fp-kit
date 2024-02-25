@@ -382,6 +382,16 @@ h6 {
   font-size: var(--title-6, var(--fs-2));
 }
 
+hr {
+  --hr-h: 0.0625rem;
+  --hr-color: lightgray;
+  --border-my: 1.5rem;
+  height: var(--hr-h);
+  background-color: var(--hr-color);
+  border: none;
+  margin-block: var(--border-my);
+}
+
 h1[data-ui~=display], h1:has(span:first-of-type) > span,
 h2[data-ui~=display],
 h2:has(span:first-of-type) > span,
