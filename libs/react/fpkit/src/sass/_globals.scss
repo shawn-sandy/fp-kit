@@ -103,27 +103,27 @@ h6 {
 }
 
 h1 {
-  font-size: var(--title-1);
+  font-size: var(--title-1, var(--fs-5));
 }
 
 h2 {
-  font-size: var(--title-2);
+  font-size: var(--title-2, var(--fs-4));
 }
 
 h3 {
-  font-size: var(--title-3);
+  font-size: var(--title-3, var(--fs-0));
 }
 
 h4 {
-  font-size: var(--title-4);
+  font-size: var(--title-4, var(--fs-3));
 }
 
 h5 {
-  font-size: var(--title-5);
+  font-size: var(--title-5, var(--fs-2));
 }
 
 h6 {
-  font-size: var(--title-6);
+  font-size: var(--title-6, var(--fs-1));
 }
 
 h1,
@@ -132,7 +132,7 @@ h3,
 h4,
 h5,
 h6 {
-  &[data-ui='display'],
+  &[data-ui~='display'],
   &:has(span:first-of-type) > span {
     --weight: 600;
     --title-1: var(--h1);

@@ -359,39 +359,39 @@ h6 {
 }
 
 h1 {
-  font-size: var(--title-1);
+  font-size: var(--title-1, var(--fs-5));
 }
 
 h2 {
-  font-size: var(--title-2);
+  font-size: var(--title-2, var(--fs-4));
 }
 
 h3 {
-  font-size: var(--title-3);
+  font-size: var(--title-3, var(--fs-0));
 }
 
 h4 {
-  font-size: var(--title-4);
+  font-size: var(--title-4, var(--fs-3));
 }
 
 h5 {
-  font-size: var(--title-5);
+  font-size: var(--title-5, var(--fs-2));
 }
 
 h6 {
-  font-size: var(--title-6);
+  font-size: var(--title-6, var(--fs-1));
 }
 
-h1[data-ui=display], h1:has(span:first-of-type) > span,
-h2[data-ui=display],
+h1[data-ui~=display], h1:has(span:first-of-type) > span,
+h2[data-ui~=display],
 h2:has(span:first-of-type) > span,
-h3[data-ui=display],
+h3[data-ui~=display],
 h3:has(span:first-of-type) > span,
-h4[data-ui=display],
+h4[data-ui~=display],
 h4:has(span:first-of-type) > span,
-h5[data-ui=display],
+h5[data-ui~=display],
 h5:has(span:first-of-type) > span,
-h6[data-ui=display],
+h6[data-ui~=display],
 h6:has(span:first-of-type) > span {
   --weight: 600;
   --title-1: var(--h1);
