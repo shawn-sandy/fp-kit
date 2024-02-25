@@ -63,6 +63,7 @@ ol {
   flex-direction: var(--li-direction, column);
   gap: var(--li-gap, 0.2rem);
   flex-wrap: var(--li-wrap, nowrap);
+  padding-inline-start: var(--spc-2);
   &[role='list'],
   &[data-list~='unstyled'] {
     list-style: var(--li-style, none);

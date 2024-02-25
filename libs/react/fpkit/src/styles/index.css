@@ -203,7 +203,7 @@ svg[role=img] {
   --display: var(--fs-12);
   --display-md: var(--fs-11);
   --display-sm: var(--fs-10);
-  --h1: var(--fs-10);
+  --h1: var(--fs-11);
   --h2: var(--fs-9);
   --h3: var(--fs-8);
   --h4: var(--fs-7);
@@ -317,6 +317,7 @@ ol {
   flex-direction: var(--li-direction, column);
   gap: var(--li-gap, 0.2rem);
   flex-wrap: var(--li-wrap, nowrap);
+  padding-inline-start: var(--spc-2);
 }
 ul[role=list], ul[data-list~=unstyled],
 ol[role=list],
