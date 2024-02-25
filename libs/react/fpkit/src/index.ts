@@ -21,6 +21,7 @@ export * from './components/details/details'
 export * from './components/text/text'
 export * from './components/form/textarea'
 export * from './components/nav/nav'
+export * from './components/heading/heading'
 
 export { default as To } from './components/link/link'
 export { default as FP } from './components/fp'
