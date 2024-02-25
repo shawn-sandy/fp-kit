@@ -269,13 +269,15 @@ body {
   display: var(--body-dsp, flex);
   min-height: 100%;
   flex-direction: var(--body-direction, column);
-  main-flex-grow: 1;
+}
+body main {
+  flex-grow: 1;
 }
 
 * + div,
 * + ul,
 * + section {
-  margin-block-start: 1rem;
+  margin-block-start: 1.5rem;
 }
 
 main,
@@ -781,6 +783,7 @@ main > section:has(> article, > aside) > aside {
 footer > div {
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 5rem;
   text-align: center;
 }

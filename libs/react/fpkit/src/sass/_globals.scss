@@ -16,7 +16,7 @@ body {
   min-height: 100%;
   flex-direction: var(--body-direction, column);
 
-  main: {
+  main {
     flex-grow: 1;
   }
 }
@@ -24,7 +24,7 @@ body {
 * + div,
 * + ul,
 * + section {
-  margin-block-start: 1rem;
+  margin-block-start: 1.5rem;
 }
 
 main,
