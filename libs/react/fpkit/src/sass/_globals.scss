@@ -133,7 +133,7 @@ h4,
 h5,
 h6 {
   &[data-ui='display'],
-  &:has(span:first-of-type) {
+  &:has(span:first-of-type) > span {
     --weight: 600;
     --title-1: var(--h1);
     --title-2: var(--h2);
