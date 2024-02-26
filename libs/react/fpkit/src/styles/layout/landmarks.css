@@ -51,6 +51,7 @@ footer {
   --content-w: min(100%, 1480px);
   --content-mx: auto;
   --content-px: 1rem;
+  padding-block: var(--overlay-padding);
 }
 main > section,
 footer > section {
@@ -61,6 +62,7 @@ footer > section {
 
 main {
   flex: 1;
+  font-size: var(--fs-3);
 }
 main > section[aria-label],
 main > section {

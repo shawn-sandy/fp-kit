@@ -17,6 +17,7 @@ body {
   min-height: 100%;
   flex-direction: var(--body-direction, column);
   min-width: 20.3125rem;
+  font-size: var(--fs-0);
 
   main {
     flex-grow: 1;

@@ -271,6 +271,7 @@ body {
   min-height: 100%;
   flex-direction: var(--body-direction, column);
   min-width: 20.3125rem;
+  font-size: var(--fs-0);
 }
 body main {
   flex-grow: 1;
@@ -811,6 +812,7 @@ footer {
   --content-w: min(100%, 1480px);
   --content-mx: auto;
   --content-px: 1rem;
+  padding-block: var(--overlay-padding);
 }
 main > section,
 footer > section {
@@ -821,6 +823,7 @@ footer > section {
 
 main {
   flex: 1;
+  font-size: var(--fs-3);
 }
 main > section[aria-label],
 main > section {
