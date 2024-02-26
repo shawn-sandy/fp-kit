@@ -64,18 +64,19 @@ ol {
   flex-direction: var(--li-direction, column);
   gap: var(--li-gap, 0.2rem);
   flex-wrap: var(--li-wrap, nowrap);
-  padding-inline-start: var(--spc-2);
+  padding-inline-start: var(--spc-2, 0.75rem);
   &[role='list'],
   &[data-list~='unstyled'] {
     list-style: var(--li-style, none);
     margin-block-end: var(--li-my, 0);
     margin-block-start: var(--li-mx, 0);
-    padding-inline-start: var(--li-px, 0);
+    padding-inline-start: var(--li-px, var(--spc-4));
   }
   &[data-list~='inline'] {
     --li-direction: row;
     --li-gap: 1rem;
     --li-wrap: wrap;
+    --li-px: 0;
   }
 }
 
