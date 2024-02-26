@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Landmarks from '#components/layout/landmarks'
-import { ComponentProps } from '#types'
+import Heading from '#components/heading/heading'
 import { Link } from '#components/link/link'
+import { ComponentProps } from '#types'
 
 export enum HeaderVariants {
   Cover = 'cover',
@@ -64,8 +65,8 @@ const PageHeader = ({
       {...props}
     >
       <Landmarks.Section>
-        <h2>{headerTitle}</h2>
-        {!!headerSubtitle && <h3>{headerSubtitle}</h3>}
+        <Heading type={`h1`}>{headerTitle}</Heading>
+        {!!headerSubtitle && <h2>{headerSubtitle}</h2>}
         {children}
       </Landmarks.Section>
     </Landmarks.Header>

@@ -766,14 +766,20 @@ header,
   --overlay-padding: 2rem;
   --overlay-w: 100%;
   --overlay-h: 40vh;
+  --overlay-max-h: 500px;
   --overlay-color: currentColor;
+  --overlay-content-w: 80%;
+  --overlay-gap: 1rem;
+  --overlay-bg: whitesmoke;
   grid-template-areas: "overlay";
   display: var(--overlay-display);
   place-items: var(--overlay-placement);
   align-items: var(--overlay-placement);
   min-height: var(--overlay-h);
+  max-height: var(--overlay-max-h);
   width: var(--overlay-w);
   color: var(--overlay-color);
+  background-color: var(--overlay-bg);
 }
 header > *,
 [data-grid~=overlay] > * {
@@ -782,12 +788,22 @@ header > *,
 header > img,
 [data-grid~=overlay] > img {
   width: var(--overlay-w);
+  height: auto;
+  background-size: contain;
+}
+header > div,
+header > section,
+[data-grid~=overlay] > div,
+[data-grid~=overlay] > section {
+  max-width: var(--overlay-content-w);
+  padding-inline: var(--spc-4);
+  margin-inline: var(--content-mx);
 }
 header > section,
 [data-grid~=overlay] > section {
+  --overlay-display: flex;
+  gap: var(--overlay-gap);
   text-align: center;
-  margin-inline: var(--content-mx);
-  padding-inline: var(--spc-4);
 }
 
 main,

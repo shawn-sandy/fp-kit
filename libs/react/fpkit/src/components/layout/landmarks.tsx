@@ -1,7 +1,3 @@
-/**
- * @fileoverview Landmarks components
- */
-
 import UI from '../ui'
 import React, { ReactNode } from 'react'
 
