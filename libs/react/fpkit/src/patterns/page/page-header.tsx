@@ -9,7 +9,7 @@ export enum HeaderVariants {
   Banner = 'banner',
 }
 
-export type headerLinkType = {
+export type HeaderLinkType = {
   url: string
   label: string
 }
@@ -24,7 +24,7 @@ export type PageHeaderProps = {
   /** The children of the page header (optional) */
   children?: React.ReactNode
   /** The link of the page header (optional) */
-  headerLink?: headerLinkType
+  headerLink?: HeaderLinkType
 } & React.ComponentProps<typeof Landmarks.Header>
 
 const defaultStyles = {
