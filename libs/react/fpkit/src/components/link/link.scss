@@ -8,7 +8,7 @@ a[href] {
   --link-py: 0;
   --link-transition: all 0.75s ease-in-out;
   --link-fs: 1rem;
-  --link-radius: none;
+  --link-radius: 0.25rem;
   --link-skip-ink: auto;
   --link-decoration-offset: 1.5px;
   --link-decoration-thickness: 3px;
@@ -37,11 +37,11 @@ a[href] {
     --link-color: currentColor;
   }
 
-  > b:first-of-type {
+  > b:first-of-type,
+  &[data-link~='btn'] {
     --link-button-color: var(--link-color);
     --link-bg: lightgray;
     --link-decoration: none;
-    --link-radius: 0.25rem;
     --link-fs: 0.9rem;
 
     background-color: var(--link-bg);

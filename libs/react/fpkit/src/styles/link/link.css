@@ -6,7 +6,7 @@ a[href] {
   --link-py: 0;
   --link-transition: all 0.75s ease-in-out;
   --link-fs: 1rem;
-  --link-radius: none;
+  --link-radius: 0.25rem;
   --link-skip-ink: auto;
   --link-decoration-offset: 1.5px;
   --link-decoration-thickness: 3px;
@@ -30,11 +30,10 @@ a[href]:focus {
 a[href]:visited, a[href]:active {
   --link-color: currentColor;
 }
-a[href] > b:first-of-type {
+a[href] > b:first-of-type, a[href][data-link~=btn] {
   --link-button-color: var(--link-color);
   --link-bg: lightgray;
   --link-decoration: none;
-  --link-radius: 0.25rem;
   --link-fs: 0.9rem;
   background-color: var(--link-bg);
   font-size: var(--link-fs);
@@ -50,7 +49,7 @@ a[href] > b:first-of-type {
   transform: var(--scale);
   transition: var(--scale-transition);
 }
-a[href] > b:first-of-type:hover {
+a[href] > b:first-of-type:hover, a[href][data-link~=btn]:hover {
   transform: var(--scale-to);
 }
 
