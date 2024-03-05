@@ -52,7 +52,7 @@ export const ExternalLink: Story = {
 
 export const ButtonLink: Story = {
   args: {
-    ...ExternalLink.args,
+    ...LinkComponent.args,
     children: <b>Button Link</b>,
   },
 } as Story
