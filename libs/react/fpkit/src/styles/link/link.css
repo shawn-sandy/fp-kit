@@ -30,7 +30,7 @@ a[href]:focus {
 a[href]:visited, a[href]:active {
   --link-color: currentColor;
 }
-a[href] > b:first-of-type, a[href][data-link~=btn] {
+a[href] > b, a[href][data-link~=btn] {
   --link-button-color: var(--link-color);
   --link-bg: lightgray;
   --link-decoration: none;
@@ -49,7 +49,7 @@ a[href] > b:first-of-type, a[href][data-link~=btn] {
   transform: var(--scale);
   transition: var(--scale-transition);
 }
-a[href] > b:first-of-type:hover, a[href][data-link~=btn]:hover {
+a[href] > b:hover, a[href][data-link~=btn]:hover {
   transform: var(--scale-to);
 }
 
