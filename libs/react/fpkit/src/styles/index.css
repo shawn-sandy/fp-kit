@@ -745,7 +745,7 @@ a[href] > b, a[href][data-link~=btn] {
   color: var(--link-button-color);
   padding-inline: var(--link-fs);
   padding-block: calc(var(--link-fs) - 0.4rem);
-  border-radius: var(--link-radius);
+  border-radius: var(--link-radius, 99rem);
   display: inline-flex;
   outline: 2px currentColor solid;
   --scale-transition: transform 0.25s ease;
