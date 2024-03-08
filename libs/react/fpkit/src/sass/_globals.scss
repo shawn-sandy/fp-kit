@@ -23,11 +23,12 @@ body {
     flex-grow: 1;
   }
 }
-
-* + div,
-* + ul,
-* + section {
-  margin-block-start: 1.5rem;
+body:not(nav) {
+  * + div,
+  * + ul,
+  * + section {
+    margin-block-start: 1.5rem;
+  }
 }
 
 main,

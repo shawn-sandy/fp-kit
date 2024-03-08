@@ -277,9 +277,9 @@ body main {
   flex-grow: 1;
 }
 
-* + div,
-* + ul,
-* + section {
+body:not(nav) * + div,
+body:not(nav) * + ul,
+body:not(nav) * + section {
   margin-block-start: 1.5rem;
 }
 
