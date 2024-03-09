@@ -27,7 +27,7 @@ body:not(nav) {
   * + div,
   * + ul,
   * + section {
-    margin-block-start: 1.5rem;
+    margin-block-start: 1rem;
   }
 }
 
@@ -66,13 +66,12 @@ ol {
   flex-direction: var(--li-direction, column);
   gap: var(--li-gap, 0.2rem);
   flex-wrap: var(--li-wrap, nowrap);
-  padding-inline-start: var(--spc-4);
+  padding-inline-start: var(--spc-3);
   &[role='list'],
   &[data-list~='unstyled'] {
     list-style: var(--li-style, none);
     margin-block-end: var(--li-my, 0);
     margin-block-start: var(--li-mx, 0);
-    padding-inline-start: var(--li-px, var(--spc-4));
   }
   &[data-list~='inline'] {
     --li-direction: row;
