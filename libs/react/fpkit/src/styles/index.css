@@ -277,10 +277,10 @@ body main {
   flex-grow: 1;
 }
 
-body:not(nav) * + div,
-body:not(nav) * + ul,
-body:not(nav) * + section {
-  margin-block-start: 1.5rem;
+* + div,
+* + ul,
+* + section {
+  margin-block-start: 1rem;
 }
 
 main,
@@ -319,7 +319,7 @@ ol {
   flex-direction: var(--li-direction, column);
   gap: var(--li-gap, 0.2rem);
   flex-wrap: var(--li-wrap, nowrap);
-  padding-inline-start: var(--spc-4);
+  padding-inline-start: var(--spc-3);
 }
 ul[role=list], ul[data-list~=unstyled],
 ol[role=list],
@@ -327,7 +327,6 @@ ol[data-list~=unstyled] {
   list-style: var(--li-style, none);
   margin-block-end: var(--li-my, 0);
   margin-block-start: var(--li-mx, 0);
-  padding-inline-start: var(--li-px, var(--spc-4));
 }
 ul[data-list~=inline],
 ol[data-list~=inline] {
@@ -776,7 +775,6 @@ header,
   place-items: var(--overlay-placement);
   align-items: var(--overlay-placement);
   min-height: var(--overlay-h);
-  max-height: var(--overlay-max-h);
   width: var(--overlay-w);
   color: var(--overlay-color);
   background-color: var(--overlay-bg);
@@ -926,6 +924,9 @@ nav[data-variant] {
   background-color: var(--nav-bg);
   color: var(--nav-cl);
   font-size: var(--nav-fs, 0.9rem);
+}
+nav div {
+  margin-block-start: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

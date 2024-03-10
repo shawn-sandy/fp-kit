@@ -49,5 +49,8 @@ nav[data-variant] {
   color: var(--nav-cl);
   font-size: var(--nav-fs, 0.9rem);
 }
+nav div {
+  margin-block-start: 0;
+}
 
 /*# sourceMappingURL=nav.css.map */
