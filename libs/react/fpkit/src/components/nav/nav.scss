@@ -58,7 +58,7 @@ nav {
     font-size: var(--nav-fs, 0.9rem);
   }
 
-  div {
+  > div {
     margin-block-start: 0;
   }
 }
