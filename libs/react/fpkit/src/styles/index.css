@@ -874,15 +874,33 @@ sup:has(> span)[data-badge~=rounded] {
   --badge-radius: 100%;
 }
 
+body > nav,
+[aria-label~=navbar] {
+  padding-inline: var(--nav-px, 1rem);
+  height: var(--nav-h, 3.125rem);
+}
+body > nav ul > li,
+[aria-label~=navbar] ul > li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  padding-inline: var(--nav-px, 0.75rem);
+}
+body > nav ul > li:hover,
+[aria-label~=navbar] ul > li:hover {
+  background-color: var(--nav-hov-bg, whitesmoke);
+}
+
 nav {
   display: var(--nav-dsp, flex);
   flex-direction: var(--nav-direction, row);
   width: var(--nav-w, auto);
-  height: var(--nav-h, 3.125rem);
   place-items: var(--nav-align, center);
   justify-content: var(--nav-justify, space-between);
   margin-inline: var(--nav-mx, 0);
-  padding-inline: var(--nav-px, 1rem);
   background-color: var(--nav-bg, initial);
 }
 nav > section,
@@ -911,10 +929,7 @@ nav ul > li {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  padding-inline: var(--nav-px, 0.75rem);
-}
-nav ul > li:hover {
-  background-color: var(--nav-hov-bg, whitesmoke);
+  padding-inline: var(--nav-px, 1rem);
 }
 nav img[alt] {
   --px: 0 var(--s1);
