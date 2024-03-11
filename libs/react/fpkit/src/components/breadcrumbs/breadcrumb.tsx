@@ -1,28 +1,62 @@
-import FP from '../fp'
-import { ComponentProps } from '../../types'
-// import '@shawnsandy/first-paint/dist/css/components/breadcrumb.min.css'
+// Code: Breadcrumb component
+import React from 'react'
 
-export interface BCProps extends ComponentProps {
-  /**
-   * Style nav element using data-style attribute
-   */
-  dataStyleNav?: string
-  /**
-   * React child component
-   */
-  children: React.ReactNode
+type Crumbs = {
+  path?: string | number
+  name?: string
+  url?: string
+}
+type BreadcrumbProps = {
+  routes?: Crumbs[]
+  startRoute?: React.ReactNode
 }
 
-export const defaultStyles = {}
+export const Breadcrumb: React.FC<BreadcrumbProps> = ({
+  startRoute = 'Home',
+  routes,
+  ...props
+}) => {
+  const [currentPath, setCurrentPath] = React.useState('')
+  React.useEffect(() => {
+    const path = window.location.pathname
+    if (path.length) {
+      setCurrentPath(path)
+    }
+  }, [])
 
-export const Breadcrumb = ({ dataStyle, dataStyleNav, children, ...props }: BCProps) => {
-  return (
-    <FP as="nav" data-style={dataStyleNav}>
-      <ol data-fp-breadcrumb={dataStyle} {...props}>
-        {children}
-      </ol>
-    </FP>
-  )
+  const getPathName = (pathSegment: string | number) => {
+    const route = routes?.find((route) => route.path === pathSegment)
+    return route ? route.name : pathSegment
+  }
+
+  const segments = currentPath.split('/').filter((segment) => segment)
+  if (currentPath.length) {
+    return (
+      <ul aria-label="breadcrumb" data-list="unstyled inline" {...props}>
+        <li>
+          <a href="/">{startRoute}</a>
+        </li>
+        {segments.length &&
+          segments.map((segment: any, index) => (
+            <li key={index}>
+              <span>
+                /{' '}
+                <a href={`/${segments.slice(0, index + 1).join('/')}`}>
+                  {isNaN(segment) ? (
+                    `${getPathName(segment)}`
+                  ) : (
+                    <span>{`Page ${segment}`}</span>
+                  )}
+                </a>
+              </span>
+            </li>
+          ))}
+      </ul>
+    )
+  } else {
+    return null
+  }
 }
 
-// Breadcrumb.displayName = 'FP.BreadCrumb'
+export default Breadcrumb
+Breadcrumb.displayName = 'BreadCrumb'
