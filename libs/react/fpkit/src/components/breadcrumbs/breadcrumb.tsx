@@ -18,6 +18,36 @@ type BreadcrumbProps = {
   currentRoute?: string
 } & React.ComponentProps<typeof UI>
 
+const BreadcrumbNav = ({
+  styles,
+  id,
+  classes,
+  children,
+  ...props
+}: React.ComponentProps<typeof UI>) => {
+  return (
+    <UI as="nav" id={id} styles={styles} classNames={classes} {...props}>
+      <ul data-list="unstyled inline" {...props}>
+        {children}
+      </ul>
+    </UI>
+  )
+}
+
+const BreadcrumbItems = ({
+  styles,
+  id,
+  classes,
+  children,
+  ...props
+}: React.ComponentProps<typeof UI>) => {
+  return (
+    <li aria-label="breadcrumb" data-list="unstyled inline" {...props}>
+      {children}
+    </li>
+  )
+}
+
 export const Breadcrumb: React.FC<BreadcrumbProps> = ({
   startRoute = 'Home',
   currentRoute,
@@ -59,40 +89,47 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
 
   if (currentPath.length) {
     return (
-      <UI as="nav" id={id} {...props} styles={styles} classNames={classes}>
-        <ul aria-label="breadcrumb" data-list="unstyled inline" {...props}>
-          <li>
-            <a href="/">{startRoute}</a>
-          </li>
-          {segments.length &&
-            segments.map((segment: any) => {
-              const currentSegment = getPathName(segment)
-              if (currentSegment?.name) {
-                return (
-                  <>
-                    <li key={`${segment?.name}-${uuid}`}>
-                      <span>{spacer} </span>
-                      <span>
-                        <a href={currentSegment?.url}>
-                          {isNaN(segment?.name) ? (
-                            `${currentSegment?.name}`
-                          ) : (
-                            <span>{`Page ${currentSegment?.name}`}</span>
-                          )}
-                        </a>
-                      </span>
-                    </li>
-                  </>
-                )
-              } else {
-                return <></>
-              }
-            })}
-          <li>
-            {<span>{spacer} </span>} {segments[lastSegment]}
-          </li>
-        </ul>
-      </UI>
+      <BreadcrumbNav
+        as="nav"
+        id={id}
+        {...props}
+        styles={styles}
+        classNames={classes}
+      >
+        <li>
+          <a href="/">{startRoute}</a>
+        </li>
+        {segments.length &&
+          segments.map((segment: any) => {
+            const currentSegment = getPathName(segment)
+            if (currentSegment?.name) {
+              return (
+                <>
+                  <li key={`${segment?.name}-${uuid}`}>
+                    <span>{spacer}</span>
+                    <span>
+                      <a href={currentSegment?.url}>
+                        {isNaN(segment?.name) ? (
+                          `${currentSegment?.name}`
+                        ) : (
+                          <span>{`Page ${currentSegment?.name}`}</span>
+                        )}
+                      </a>
+                    </span>
+                  </li>
+                </>
+              )
+            } else {
+              return <></>
+            }
+          })}
+        <li>
+          {<span>{spacer}</span>}
+          <a href="" aria-current="page">
+            {segments[lastSegment]}
+          </a>
+        </li>
+      </BreadcrumbNav>
     )
   } else {
     return null
