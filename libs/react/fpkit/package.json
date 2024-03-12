@@ -2,7 +2,7 @@
   "name": "@fpkit/react",
   "description": "A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.",
   "private": false,
-  "version": "0.3.58",
+  "version": "0.3.59",
   "scripts": {
     "start": "run-p package:watch sass:watch",
     "dev": "vite --open",
