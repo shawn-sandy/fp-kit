@@ -43,6 +43,12 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
 
   const segments = currentPath.split('/').filter((segment) => segment)
 
+  console.log({ segments })
+
+  const uuid = React.useId()
+
+  console.log({ segments })
+
   if (currentPath.length) {
     return (
       <nav>
@@ -54,8 +60,8 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
             segments.map((segment: any, index) => (
               <>
                 {getPathName(segment) && (
-                  <li key={index}>
-                    <span>{spacer}</span>
+                  <li key={`${segment}-${uuid}`}>
+                    <span>{spacer} </span>
                     <span>
                       <a href={`/${segments.slice(0, index + 1).join('/')}`}>
                         {isNaN(segment) ? (
@@ -65,6 +71,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
                         )}
                       </a>
                     </span>
+                    {routes?.[index + 1]?.name}
                   </li>
                 )}
               </>
