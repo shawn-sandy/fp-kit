@@ -1,0 +1,23 @@
+nav:not(body > nav) {
+  --breadcrumb-px: unset;
+  --breadcrumb-dsp: flex;
+  --breadcrumb-gap: 0.5rem;
+  margin-inline: unset;
+  padding-inline: unset;
+}
+nav:not(body > nav) ul {
+  padding-inline: var(--breadcrumb-px);
+  display: var(--breadcrumb-dsp);
+  gap: var(--breadcrumb-gap);
+}
+nav:not(body > nav) ul li {
+  padding-inline: unset;
+  width: var(--breadcrumb-w, fit-content);
+  text-transform: capitalize;
+}
+nav:not(body > nav) ul li a {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/*# sourceMappingURL=breadcrumb.css.map */

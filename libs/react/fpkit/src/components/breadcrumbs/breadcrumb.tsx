@@ -9,12 +9,14 @@ type customRoute = {
 type BreadcrumbProps = {
   routes?: customRoute[]
   startRoute?: React.ReactNode
+  spacer?: React.ReactNode
   currentRoute?: string
 }
 
 export const Breadcrumb: React.FC<BreadcrumbProps> = ({
   startRoute = 'Home',
   currentRoute,
+  spacer = <>&larr;</>,
   routes,
   ...props
 }) => {
@@ -51,8 +53,8 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
             segments.map((segment: any, index) => (
               <li key={index}>
                 <span>
-                  /{' '}
                   <a href={`/${segments.slice(0, index + 1).join('/')}`}>
+                    <span>{spacer}</span>
                     {isNaN(segment) ? (
                       `${getPathName(segment)}`
                     ) : (
