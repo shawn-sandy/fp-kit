@@ -41,10 +41,8 @@ const Items = ({
 type customRoute = {
   /** The path or id for routing */
   path?: string | number
-
   /** The display name */
   name?: string
-
   /** The url if linking out */
   url?: string
 }
@@ -94,7 +92,10 @@ export const Breadcrumb = ({
     }
   }
 
+  /** Array of path segments from current path */
   const segments = currentPath.split('/').filter((segment) => segment)
+
+  /** Index of last item in segments array */
   const lastSegment = segments.length - 1
 
   const uuid = React.useId()
