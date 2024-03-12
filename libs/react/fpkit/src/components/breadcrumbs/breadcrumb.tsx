@@ -142,7 +142,7 @@ export const Breadcrumb = ({
       <Items>
         <a href="/">{startRoute}</a>
       </Items>
-      {segments.length &&
+      {segments.length ? (
         segments.map((segment: any) => {
           const currentSegment = getPathName(segment)
           if (currentSegment?.name) {
@@ -159,7 +159,10 @@ export const Breadcrumb = ({
           } else {
             return <></>
           }
-        })}
+        })
+      ) : (
+        <></>
+      )}
       <Items>
         {<span>{spacer}</span>}
         {typeof segments[lastSegment] === 'string' && (
