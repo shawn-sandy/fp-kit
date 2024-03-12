@@ -33,7 +33,7 @@ const Nav = ({
   ...props
 }: React.ComponentProps<typeof UI>) => {
   return (
-    <UI as="nav" id={id} styles={styles} classNames={classes} {...props}>
+    <UI as="nav" id={id} styles={styles} className={classes} {...props}>
       <List>{children}</List>
     </UI>
   )
@@ -138,8 +138,8 @@ export const Breadcrumb = ({
   const uuid = React.useId()
 
   return currentPath.length ? (
-    <Nav as="nav" id={id} {...props} styles={styles} classNames={classes}>
-      <Items>
+    <Nav as="nav" id={id} {...props} styles={styles} className={classes}>
+      <Items key={`${startRoute}-${uuid}`}>
         <a href="/">{startRoute}</a>
       </Items>
       {segments.length ? (
@@ -148,7 +148,7 @@ export const Breadcrumb = ({
           if (currentSegment?.name) {
             return (
               <>
-                <Items key={`${segment?.name}-${uuid}`}>
+                <Items key={`${currentSegment?.name}-${uuid}`}>
                   <span>{spacer}</span>
                   <span>
                     <a href={currentSegment?.url}>{currentSegment?.name}</a>
@@ -163,7 +163,7 @@ export const Breadcrumb = ({
       ) : (
         <></>
       )}
-      <Items>
+      <Items key={`last-${uuid}`}>
         {<span>{spacer}</span>}
         {typeof segments[lastSegment] === 'string' && (
           <a href="" aria-current="page">
