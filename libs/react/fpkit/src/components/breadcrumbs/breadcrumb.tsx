@@ -163,14 +163,16 @@ export const Breadcrumb = ({
       ) : (
         <></>
       )}
-      <Items key={`last-${uuid}`}>
-        {<span>{spacer}</span>}
-        {typeof segments[lastSegment] === 'string' && (
-          <a href="" aria-current="page">
-            {segments[lastSegment]}
-          </a>
-        )}
-      </Items>
+      {typeof segments[lastSegment] === 'string' && (
+        <Items key={`last-${uuid}`}>
+          <>
+            {<span>{spacer}</span>}
+            <a href="" aria-current="page">
+              {segments[lastSegment]}
+            </a>
+          </>{' '}
+        </Items>
+      )}
     </Nav>
   ) : (
     <></>
