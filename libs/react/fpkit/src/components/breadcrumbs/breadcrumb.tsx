@@ -36,9 +36,14 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
    *
    * @returns The name of the route matching the path segment if found, otherwise just returns undefined.
    */
-  const getPathName = (pathSegment: string | number): string | undefined => {
+  const getPathName = (pathSegment: string | number): customRoute => {
     const route = routes?.find((route) => route.path === pathSegment)
-    return route ? route.name : undefined
+    // return route ? route.name : undefined
+    return {
+      path: route?.path,
+      name: route?.name,
+      url: route?.url,
+    }
   }
 
   const segments = currentPath.split('/').filter((segment) => segment)
@@ -55,25 +60,29 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
             <a href="/">{startRoute}</a>
           </li>
           {segments.length &&
-            segments.map((segment: any, index) => (
-              <>
-                {getPathName(segment) && (
-                  <li key={`${segment}-${uuid}`}>
-                    <span>{spacer} </span>
-                    <span>
-                      <a href={routes?.[index]?.url}>
-                        {isNaN(segment) ? (
-                          `${getPathName(segment)}`
-                        ) : (
-                          <span>{`Page ${segment}`}</span>
-                        )}
-                      </a>
-                    </span>
-                    {routes?.[index + 1]?.name}
-                  </li>
-                )}
-              </>
-            ))}
+            segments.map((segment: any) => {
+              const currentSegment = getPathName(segment)
+              if (currentSegment?.name) {
+                return (
+                  <>
+                    <li key={`${segment?.name}-${uuid}`}>
+                      <span>{spacer} </span>
+                      <span>
+                        <a href={currentSegment?.url}>
+                          {isNaN(segment?.name) ? (
+                            `${currentSegment?.name}`
+                          ) : (
+                            <span>{`Page ${currentSegment?.name}`}</span>
+                          )}
+                        </a>
+                      </span>
+                    </li>
+                  </>
+                )
+              } else {
+                return <></>
+              }
+            })}
         </ul>
       </nav>
     )
