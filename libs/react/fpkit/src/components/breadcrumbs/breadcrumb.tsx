@@ -2,23 +2,6 @@
 import React from 'react'
 import UI from '#components/ui'
 
-type customRoute = {
-  path?: string | number
-  name?: string
-  url?: string
-}
-
-type BreadcrumbProps = {
-  /** Array of custom route objects */
-  routes?: customRoute[]
-  /** Starting route node */
-  startRoute?: React.ReactNode
-  /** Spacer node between routes */
-  spacer?: React.ReactNode
-  /** String representing current route */
-  currentRoute?: string
-} & React.ComponentProps<typeof UI>
-
 const List = ({ children, ...props }: React.ComponentProps<typeof UI>) => {
   return (
     <UI as="ul" data-list="unstyled inline" {...props}>
@@ -54,6 +37,28 @@ const Items = ({
     </li>
   )
 }
+
+type customRoute = {
+  /** The path or id for routing */
+  path?: string | number
+
+  /** The display name */
+  name?: string
+
+  /** The url if linking out */
+  url?: string
+}
+
+type BreadcrumbProps = {
+  /** Array of custom route objects */
+  routes?: customRoute[]
+  /** Starting route node */
+  startRoute?: React.ReactNode
+  /** Spacer node between routes */
+  spacer?: React.ReactNode
+  /** String representing current route */
+  currentRoute?: string
+} & React.ComponentProps<typeof UI>
 
 export const Breadcrumb = ({
   startRoute = 'Home',

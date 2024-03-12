@@ -3,6 +3,7 @@ nav:not(body > nav) {
   --breadcrumb-dsp: flex;
   --breadcrumb-gap: 0.5rem;
   --breadcrumb-color: currentColor;
+  --breadcrumb-current-color: currentColor;
   margin-inline: unset;
   padding-inline: unset;
 }
@@ -18,6 +19,10 @@ nav:not(body > nav) ul li {
   display: flex;
   color: var(--breadcrumb-color);
   gap: 0.5rem;
+}
+nav:not(body > nav) ul li a[href][aria-current] {
+  color: var(--breadcrumb-current-color);
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=breadcrumb.css.map */
