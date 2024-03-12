@@ -2,6 +2,12 @@
 import React from 'react'
 import UI from '#components/ui'
 
+/**
+ * List component.
+ *
+ * @param children - The content to render inside the list.
+ * @param props - Additional props to pass to the UI component.
+ */
 const List = ({ children, ...props }: React.ComponentProps<typeof UI>) => {
   return (
     <UI as="ul" data-list="unstyled inline" {...props}>
@@ -10,6 +16,15 @@ const List = ({ children, ...props }: React.ComponentProps<typeof UI>) => {
   )
 }
 
+/**
+ * Nav component.
+ *
+ * @param styles - Styles object for the nav.
+ * @param id - Id for the nav.
+ * @param classes - Class names for the nav.
+ * @param children - Child components.
+ * @param props - Other props.
+ */
 const Nav = ({
   styles,
   id,
@@ -24,6 +39,15 @@ const Nav = ({
   )
 }
 
+/**
+ * Items component.
+ *
+ * @param styles - Styles object for the item.
+ * @param id - Id for the item.
+ * @param classes - Class names for the item.
+ * @param children - Child components.
+ * @param props - Other props.
+ */
 const Items = ({
   styles,
   id,
@@ -58,6 +82,19 @@ type BreadcrumbProps = {
   currentRoute?: string
 } & React.ComponentProps<typeof UI>
 
+/**
+ * Navigation component for breadcrumbs.
+ *
+ * @param props - Props for the navigation component.
+ * @param props.startRoute - Starting route node. Default 'Home'.
+ * @param props.currentRoute - String representing current route.
+ * @param props.spacer - Spacer node between routes. Default '&#47;'.
+ * @param props.routes - Array of custom route objects.
+ * @param props.styles - Styles object for the nav.
+ * @param props.id - Id for the nav.
+ * @param props.classes - Class names for the nav.
+ * @param props.children - Child components.
+ */
 export const Breadcrumb = ({
   startRoute = 'Home',
   currentRoute,
@@ -94,10 +131,10 @@ export const Breadcrumb = ({
 
   /** Array of path segments from current path */
   const segments = currentPath.split('/').filter((segment) => segment)
-
   /** Index of last item in segments array */
   const lastSegment = segments.length - 1
 
+  /** Unique id for breadcrumb */
   const uuid = React.useId()
 
   if (currentPath.length) {
