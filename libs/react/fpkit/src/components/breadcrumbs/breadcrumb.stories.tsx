@@ -36,10 +36,6 @@ export const CustomURL: Story = {
   args: {
     routes: [
       {
-        name: 'Home',
-        url: '/',
-      },
-      {
         name: 'Products',
         url: '/products',
         path: 'product',
