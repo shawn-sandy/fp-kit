@@ -19,6 +19,9 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
   currentRoute,
   spacer = <>&#47;</>,
   routes,
+  styles,
+  id,
+  classes,
   ...props
 }) => {
   const [currentPath, setCurrentPath] = React.useState('')
@@ -48,15 +51,12 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
 
   const segments = currentPath.split('/').filter((segment) => segment)
   const lastSegment = segments.length - 1
-  console.log({ lastSegment })
-
-  console.log({ segments })
 
   const uuid = React.useId()
 
   if (currentPath.length) {
     return (
-      <nav>
+      <UI as="nav" id={id} {...props} styles={styles} classNames={classes}>
         <ul aria-label="breadcrumb" data-list="unstyled inline" {...props}>
           <li>
             <a href="/">{startRoute}</a>
@@ -89,7 +89,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
             {<span>{spacer} </span>} {segments[lastSegment]}
           </li>
         </ul>
-      </nav>
+      </UI>
     )
   } else {
     return null
