@@ -152,13 +152,7 @@ export const Breadcrumb = ({
                   <Items key={`${segment?.name}-${uuid}`}>
                     <span>{spacer}</span>
                     <span>
-                      <a href={currentSegment?.url}>
-                        {isNaN(segment?.name) ? (
-                          `${currentSegment?.name}`
-                        ) : (
-                          <span>{`Page ${currentSegment?.name}`}</span>
-                        )}
-                      </a>
+                      <a href={currentSegment?.url}>{currentSegment?.name}</a>
                     </span>
                   </Items>
                 </>
@@ -170,7 +164,9 @@ export const Breadcrumb = ({
         <Items>
           {<span>{spacer}</span>}
           <a href="" aria-current="page">
-            {segments[lastSegment]}
+            {typeof segments[lastSegment] === 'string'
+              ? segments[lastSegment]
+              : ''}
           </a>
         </Items>
       </Nav>
