@@ -948,6 +948,7 @@ nav:not(body > nav) {
   --breadcrumb-px: unset;
   --breadcrumb-dsp: flex;
   --breadcrumb-gap: 0.5rem;
+  --breadcrumb-color: currentColor;
   margin-inline: unset;
   padding-inline: unset;
 }
@@ -960,9 +961,8 @@ nav:not(body > nav) ul li {
   padding-inline: unset;
   width: var(--breadcrumb-w, fit-content);
   text-transform: capitalize;
-}
-nav:not(body > nav) ul li a {
   display: flex;
+  color: var(--breadcrumb-color);
   gap: 0.5rem;
 }
 

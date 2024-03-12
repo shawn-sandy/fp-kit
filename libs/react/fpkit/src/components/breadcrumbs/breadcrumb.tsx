@@ -1,5 +1,6 @@
 // Code: Breadcrumb component
 import React from 'react'
+import UI from '#components/ui'
 
 type customRoute = {
   path?: string | number
@@ -11,12 +12,12 @@ type BreadcrumbProps = {
   startRoute?: React.ReactNode
   spacer?: React.ReactNode
   currentRoute?: string
-}
+} & React.ComponentProps<typeof UI>
 
 export const Breadcrumb: React.FC<BreadcrumbProps> = ({
   startRoute = 'Home',
   currentRoute,
-  spacer = <>&larr;</>,
+  spacer = <>&#47;</>,
   routes,
   ...props
 }) => {
@@ -33,11 +34,11 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
    *
    * @param pathSegment - The path segment to get the name for. This can be a string or number.
    *
-   * @returns The name of the route matching the path segment if found, otherwise just returns the path segment.
+   * @returns The name of the route matching the path segment if found, otherwise just returns undefined.
    */
-  const getPathName = (pathSegment: string | number) => {
+  const getPathName = (pathSegment: string | number): string | undefined => {
     const route = routes?.find((route) => route.path === pathSegment)
-    return route ? route.name : pathSegment
+    return route ? route.name : undefined
   }
 
   const segments = currentPath.split('/').filter((segment) => segment)
@@ -51,18 +52,22 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
           </li>
           {segments.length &&
             segments.map((segment: any, index) => (
-              <li key={index}>
-                <span>
-                  <a href={`/${segments.slice(0, index + 1).join('/')}`}>
+              <>
+                {getPathName(segment) && (
+                  <li key={index}>
                     <span>{spacer}</span>
-                    {isNaN(segment) ? (
-                      `${getPathName(segment)}`
-                    ) : (
-                      <span>{`Page ${segment}`}</span>
-                    )}
-                  </a>
-                </span>
-              </li>
+                    <span>
+                      <a href={`/${segments.slice(0, index + 1).join('/')}`}>
+                        {isNaN(segment) ? (
+                          `${getPathName(segment)}`
+                        ) : (
+                          <span>{`Page ${segment}`}</span>
+                        )}
+                      </a>
+                    </span>
+                  </li>
+                )}
+              </>
             ))}
         </ul>
       </nav>

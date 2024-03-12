@@ -31,3 +31,33 @@ export const BreadcrumbComponent: Story = {
     expect(canvas.getByText(/link/i)).toBeInTheDocument()
   },
 }
+
+export const CustomURL: Story = {
+  args: {
+    routes: [
+      {
+        name: 'Home',
+        url: '/',
+      },
+      {
+        name: 'Products',
+        url: '/products',
+        path: 'product',
+      },
+      {
+        name: 'Shirts',
+        url: '/products/shirts',
+        path: 'shirts',
+      },
+      {
+        name: 'Pants',
+        url: '/products/pants',
+        path: 'pants',
+      },
+    ],
+    currentRoute: '/product/men/shirts/size-22',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+  },
+} as Story
