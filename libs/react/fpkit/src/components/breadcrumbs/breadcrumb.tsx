@@ -137,43 +137,41 @@ export const Breadcrumb = ({
   /** Unique id for breadcrumb */
   const uuid = React.useId()
 
-  if (currentPath.length) {
-    return (
-      <Nav as="nav" id={id} {...props} styles={styles} classNames={classes}>
-        <Items>
-          <a href="/">{startRoute}</a>
-        </Items>
-        {segments.length &&
-          segments.map((segment: any) => {
-            const currentSegment = getPathName(segment)
-            if (currentSegment?.name) {
-              return (
-                <>
-                  <Items key={`${segment?.name}-${uuid}`}>
-                    <span>{spacer}</span>
-                    <span>
-                      <a href={currentSegment?.url}>{currentSegment?.name}</a>
-                    </span>
-                  </Items>
-                </>
-              )
-            } else {
-              return <></>
-            }
-          })}
-        <Items>
-          {<span>{spacer}</span>}
+  return currentPath.length ? (
+    <Nav as="nav" id={id} {...props} styles={styles} classNames={classes}>
+      <Items>
+        <a href="/">{startRoute}</a>
+      </Items>
+      {segments.length &&
+        segments.map((segment: any) => {
+          const currentSegment = getPathName(segment)
+          if (currentSegment?.name) {
+            return (
+              <>
+                <Items key={`${segment?.name}-${uuid}`}>
+                  <span>{spacer}</span>
+                  <span>
+                    <a href={currentSegment?.url}>{currentSegment?.name}</a>
+                  </span>
+                </Items>
+              </>
+            )
+          } else {
+            return <></>
+          }
+        })}
+      <Items>
+        {<span>{spacer}</span>}
+        {isNaN(segments[lastSegment]) && (
           <a href="" aria-current="page">
-            {typeof segments[lastSegment] === 'string'
-              ? segments[lastSegment]
-              : ''}
+            {segments[lastSegment]}
           </a>
-        </Items>
-      </Nav>
-    )
-  } else {
-    return <></>
-  }
+        )}
+      </Items>
+    </Nav>
+  ) : (
+    <></>
+  )
 }
 
 export default Breadcrumb
