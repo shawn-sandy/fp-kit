@@ -162,7 +162,7 @@ export const Breadcrumb = ({
         })}
       <Items>
         {<span>{spacer}</span>}
-        {isNaN(segments[lastSegment]) && (
+        {typeof segments[lastSegment] === 'string' && (
           <a href="" aria-current="page">
             {segments[lastSegment]}
           </a>
