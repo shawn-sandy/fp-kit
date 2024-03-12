@@ -47,6 +47,8 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
   }
 
   const segments = currentPath.split('/').filter((segment) => segment)
+  const lastSegment = segments.length - 1
+  console.log({ lastSegment })
 
   console.log({ segments })
 
@@ -83,6 +85,9 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
                 return <></>
               }
             })}
+          <li>
+            {<span>{spacer} </span>} {segments[lastSegment]}
+          </li>
         </ul>
       </nav>
     )
