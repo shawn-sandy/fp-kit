@@ -7,6 +7,7 @@ type customRoute = {
   name?: string
   url?: string
 }
+
 type BreadcrumbProps = {
   /** Array of custom route objects */
   routes?: customRoute[]
@@ -18,7 +19,15 @@ type BreadcrumbProps = {
   currentRoute?: string
 } & React.ComponentProps<typeof UI>
 
-const BreadcrumbNav = ({
+const List = ({ children, ...props }: React.ComponentProps<typeof UI>) => {
+  return (
+    <UI as="ul" data-list="unstyled inline" {...props}>
+      {children}
+    </UI>
+  )
+}
+
+const Nav = ({
   styles,
   id,
   classes,
@@ -27,14 +36,12 @@ const BreadcrumbNav = ({
 }: React.ComponentProps<typeof UI>) => {
   return (
     <UI as="nav" id={id} styles={styles} classNames={classes} {...props}>
-      <ul data-list="unstyled inline" {...props}>
-        {children}
-      </ul>
+      <List>{children}</List>
     </UI>
   )
 }
 
-const BreadcrumbItems = ({
+const Items = ({
   styles,
   id,
   classes,
@@ -48,7 +55,7 @@ const BreadcrumbItems = ({
   )
 }
 
-export const Breadcrumb: React.FC<BreadcrumbProps> = ({
+export const Breadcrumb = ({
   startRoute = 'Home',
   currentRoute,
   spacer = <>&#47;</>,
@@ -57,7 +64,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
   id,
   classes,
   ...props
-}) => {
+}: BreadcrumbProps): React.JSX.Element => {
   const [currentPath, setCurrentPath] = React.useState('')
   React.useEffect(() => {
     const path = currentRoute || window.location.pathname
@@ -89,23 +96,17 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
 
   if (currentPath.length) {
     return (
-      <BreadcrumbNav
-        as="nav"
-        id={id}
-        {...props}
-        styles={styles}
-        classNames={classes}
-      >
-        <li>
+      <Nav as="nav" id={id} {...props} styles={styles} classNames={classes}>
+        <Items>
           <a href="/">{startRoute}</a>
-        </li>
+        </Items>
         {segments.length &&
           segments.map((segment: any) => {
             const currentSegment = getPathName(segment)
             if (currentSegment?.name) {
               return (
                 <>
-                  <li key={`${segment?.name}-${uuid}`}>
+                  <Items key={`${segment?.name}-${uuid}`}>
                     <span>{spacer}</span>
                     <span>
                       <a href={currentSegment?.url}>
@@ -116,25 +117,29 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
                         )}
                       </a>
                     </span>
-                  </li>
+                  </Items>
                 </>
               )
             } else {
               return <></>
             }
           })}
-        <li>
+        <Items>
           {<span>{spacer}</span>}
           <a href="" aria-current="page">
             {segments[lastSegment]}
           </a>
-        </li>
-      </BreadcrumbNav>
+        </Items>
+      </Nav>
     )
   } else {
-    return null
+    return <></>
   }
 }
 
 export default Breadcrumb
+
 Breadcrumb.displayName = 'BreadCrumb'
+Breadcrumb.Nav = Nav
+Breadcrumb.List = List
+Breadcrumb.Items = Items
