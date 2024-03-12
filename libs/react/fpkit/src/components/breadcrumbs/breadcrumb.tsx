@@ -8,9 +8,13 @@ type customRoute = {
   url?: string
 }
 type BreadcrumbProps = {
+  /** Array of custom route objects */
   routes?: customRoute[]
+  /** Starting route node */
   startRoute?: React.ReactNode
+  /** Spacer node between routes */
   spacer?: React.ReactNode
+  /** String representing current route */
   currentRoute?: string
 } & React.ComponentProps<typeof UI>
 
@@ -35,9 +39,8 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
   /**
    * Gets the path name for the given path segment.
    *
-   * @param pathSegment - The path segment to get the name for. This can be a string or number.
-   *
-   * @returns The name of the route matching the path segment if found, otherwise just returns undefined.
+   * @param pathSegment - The path segment (string or number) to get the path name for.
+   * @returns The path name object for the given path segment.
    */
   const getPathName = (pathSegment: string | number): customRoute => {
     const route = routes?.find((route) => route.path === pathSegment)
