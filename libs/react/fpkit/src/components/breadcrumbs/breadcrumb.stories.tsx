@@ -57,3 +57,10 @@ export const CustomURL: Story = {
     const canvas = within(canvasElement)
   },
 } as Story
+
+export const AstroBreadcrumbs: Story = {
+  args: {
+    ...CustomURL.args,
+    currentRoute: '/about',
+  },
+} as Story
