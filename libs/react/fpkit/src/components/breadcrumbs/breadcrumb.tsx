@@ -66,9 +66,9 @@ type customRoute = {
   /** The path or id for routing */
   path?: string | number
   /** The display name */
-  name?: string
+  name?: string | number
   /** The url if linking out */
-  url?: string
+  url?: string | number
 }
 
 type BreadcrumbProps = {
@@ -126,9 +126,9 @@ export const Breadcrumb = ({
     const route = routes?.find((route) => route.path === pathSegment)
     // return route ? route.name : undefined
     return {
-      path: route?.path,
-      name: route?.name,
-      url: route?.url,
+      path: route?.path || pathSegment,
+      name: route?.name || pathSegment,
+      url: route?.url || pathSegment,
     }
   }
 

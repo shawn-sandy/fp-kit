@@ -55,6 +55,8 @@ export const CustomURL: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
+    const nav = canvas.getByRole('navigation')
+    expect(nav).toBeInTheDocument()
   },
 } as Story
 
