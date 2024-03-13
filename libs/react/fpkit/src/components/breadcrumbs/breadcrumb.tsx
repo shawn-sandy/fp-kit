@@ -152,9 +152,10 @@ export const Breadcrumb = ({
         <a href="/">{startRoute}</a>
       </Items>
       {segments.length ? (
-        segments.map((segment: any) => {
+        segments.map((segment: any, index: number) => {
           const currentSegment = getPathName(segment)
-          if (currentSegment?.name) {
+          const isLast = index === segment.length - 1
+          if (currentSegment?.name && !isLast) {
             return (
               <>
                 <Items key={`${currentSegment?.name}-${uuid}`}>
@@ -166,24 +167,27 @@ export const Breadcrumb = ({
               </>
             )
           } else {
-            return <></>
+            return (
+              <>
+                {typeof segments[lastSegment] === 'string' &&
+                  segments[lastSegment].length > 3 &&
+                  segments[lastSegment] !== segments[lastSegment - 1] && (
+                    <Items key={`last-${uuid}`}>
+                      <>
+                        {<span>{spacer}</span>}
+                        <a href="" aria-current="page">
+                          {segments[lastSegment]}
+                        </a>
+                      </>{' '}
+                    </Items>
+                  )}
+              </>
+            )
           }
         })
       ) : (
         <></>
       )}
-      {typeof segments[lastSegment] === 'string' &&
-        segments[lastSegment].length > 3 &&
-        segments[lastSegment] !== segments[lastSegment - 1] && (
-          <Items key={`last-${uuid}`}>
-            <>
-              {<span>{spacer}</span>}
-              <a href="" aria-current="page">
-                {segments[lastSegment]}
-              </a>
-            </>{' '}
-          </Items>
-        )}
     </Nav>
   ) : (
     <></>
