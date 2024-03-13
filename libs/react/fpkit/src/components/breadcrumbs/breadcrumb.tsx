@@ -64,11 +64,11 @@ const Items = ({
 
 type customRoute = {
   /** The path or id for routing */
-  path?: string | number
+  path?: string
   /** The display name */
-  name?: string | number
+  name?: string
   /** The url if linking out */
-  url?: string | number
+  url?: string
 }
 
 type BreadcrumbProps = {
@@ -122,9 +122,9 @@ export const Breadcrumb = ({
    * @param pathSegment - The path segment (string or number) to get the path name for.
    * @returns The path name object for the given path segment.
    */
-  const getPathName = (pathSegment: string | number): customRoute => {
+  const getPathName = (pathSegment: string): customRoute => {
     const route = routes?.find((route) => route.path === pathSegment)
-    // return route ? route.name : undefined
+
     return {
       path: route?.path || pathSegment,
       name: route?.name || pathSegment,
