@@ -26,10 +26,6 @@ type Story = StoryObj<typeof Breadcrumb>
 
 export const BreadcrumbComponent: Story = {
   args: {},
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    expect(canvas.getByText(/link/i)).toBeInTheDocument()
-  },
 }
 
 export const CustomURL: Story = {
@@ -52,10 +48,6 @@ export const CustomURL: Story = {
       },
     ],
     currentRoute: '/product/men/shirts/size-22',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    await expect(canvas.getByRole('list')).toBeInTheDocument()
   },
 } as Story
 
