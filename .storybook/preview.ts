@@ -5,6 +5,9 @@ import '../libs/react/fpkit/src/styles/index.css'
 import { Preview } from '@storybook/react'
 
 import CustomDocs from './templates/custom-docs'
+import { withPerformance } from 'storybook-addon-performance'
+
+export const decorators = [withPerformance]
 
 export const preview: Preview = {
   parameters: {

@@ -1,4 +1,4 @@
-nav:not(body > nav) {
+nav[aria-label~=breadcrumb]:not(body > nav) {
   --breadcrumb-px: unset;
   --breadcrumb-dsp: flex;
   --breadcrumb-gap: 0.5rem;
@@ -7,12 +7,12 @@ nav:not(body > nav) {
   margin-inline: unset;
   padding-inline: unset;
 }
-nav:not(body > nav) ul {
+nav[aria-label~=breadcrumb]:not(body > nav) ul {
   padding-inline: var(--breadcrumb-px);
   display: var(--breadcrumb-dsp);
   gap: var(--breadcrumb-gap);
 }
-nav:not(body > nav) ul li {
+nav[aria-label~=breadcrumb]:not(body > nav) ul li {
   padding-inline: unset;
   width: var(--breadcrumb-w, fit-content);
   text-transform: capitalize;
@@ -20,7 +20,7 @@ nav:not(body > nav) ul li {
   color: var(--breadcrumb-color);
   gap: 0.5rem;
 }
-nav:not(body > nav) ul li a[href][aria-current] {
+nav[aria-label~=breadcrumb]:not(body > nav) ul li a[href][aria-current] {
   color: var(--breadcrumb-current-color);
   text-decoration: none;
 }

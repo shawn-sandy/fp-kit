@@ -1,4 +1,4 @@
-nav:not(body > nav) {
+nav[aria-label~='breadcrumb']:not(body > nav) {
   --breadcrumb-px: unset;
   --breadcrumb-dsp: flex;
   --breadcrumb-gap: 0.5rem;

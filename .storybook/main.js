@@ -13,9 +13,8 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/addon-actions',
     '@geometricpanda/storybook-addon-badges',
-    // '@storybook/addon-storysource',
     '@storybook/addon-coverage',
-    // '@storybook/addon-mdx-gfm',
+    'storybook-addon-performance',
     '@chromaui/addon-visual-tests',
   ],
   features: {

@@ -56,7 +56,7 @@ const Items = ({
   ...props
 }: React.ComponentProps<typeof UI>) => {
   return (
-    <li aria-label="breadcrumb" data-list="unstyled inline" {...props}>
+    <li data-list="unstyled inline" {...props}>
       {children}
     </li>
   )
@@ -80,6 +80,8 @@ type BreadcrumbProps = {
   spacer?: React.ReactNode
   /** String representing current route */
   currentRoute?: string
+  /** Prefix breadcrumb aria-label - "prefix breadcrumb" */
+  ariaLabelPrefix?: string
 } & React.ComponentProps<typeof UI>
 
 /**
@@ -103,6 +105,7 @@ export const Breadcrumb = ({
   styles,
   id,
   classes,
+  ariaLabelPrefix,
   ...props
 }: BreadcrumbProps): React.JSX.Element => {
   const [currentPath, setCurrentPath] = React.useState('')
@@ -138,7 +141,13 @@ export const Breadcrumb = ({
   const uuid = React.useId()
 
   return currentPath.length ? (
-    <Nav as="nav" id={id} {...props} styles={styles} className={classes}>
+    <Nav
+      id={id}
+      {...props}
+      styles={styles}
+      className={classes}
+      aria-label={`${ariaLabelPrefix} breadcrumb`}
+    >
       <Items key={`${startRoute}-${uuid}`}>
         <a href="/">{startRoute}</a>
       </Items>
@@ -163,16 +172,17 @@ export const Breadcrumb = ({
       ) : (
         <></>
       )}
-      {typeof segments[lastSegment] === 'string' && (
-        <Items key={`last-${uuid}`}>
-          <>
-            {<span>{spacer}</span>}
-            <a href="" aria-current="page">
-              {segments[lastSegment]}
-            </a>
-          </>{' '}
-        </Items>
-      )}
+      {typeof segments[lastSegment] === 'string' &&
+        segments[lastSegment].length > 3 && (
+          <Items key={`last-${uuid}`}>
+            <>
+              {<span>{spacer}</span>}
+              <a href="" aria-current="page">
+                {segments[lastSegment]}
+              </a>
+            </>{' '}
+          </Items>
+        )}
     </Nav>
   ) : (
     <></>
