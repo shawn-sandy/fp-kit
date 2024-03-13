@@ -944,7 +944,8 @@ nav > div {
   margin-block-start: 0;
 }
 
-nav[aria-label~=breadcrumb]:not(body > nav) {
+nav:not(body > nav),
+nav[data-breadcrumb] {
   --breadcrumb-px: unset;
   --breadcrumb-dsp: flex;
   --breadcrumb-gap: 0.5rem;
@@ -953,12 +954,14 @@ nav[aria-label~=breadcrumb]:not(body > nav) {
   margin-inline: unset;
   padding-inline: unset;
 }
-nav[aria-label~=breadcrumb]:not(body > nav) ul {
+nav:not(body > nav) ol,
+nav[data-breadcrumb] ol {
   padding-inline: var(--breadcrumb-px);
   display: var(--breadcrumb-dsp);
   gap: var(--breadcrumb-gap);
 }
-nav[aria-label~=breadcrumb]:not(body > nav) ul li {
+nav:not(body > nav) ol li,
+nav[data-breadcrumb] ol li {
   padding-inline: unset;
   width: var(--breadcrumb-w, fit-content);
   text-transform: capitalize;
@@ -966,7 +969,8 @@ nav[aria-label~=breadcrumb]:not(body > nav) ul li {
   color: var(--breadcrumb-color);
   gap: 0.5rem;
 }
-nav[aria-label~=breadcrumb]:not(body > nav) ul li a[href][aria-current] {
+nav:not(body > nav) ol li a[href][aria-current],
+nav[data-breadcrumb] ol li a[href][aria-current] {
   color: var(--breadcrumb-current-color);
   text-decoration: none;
 }

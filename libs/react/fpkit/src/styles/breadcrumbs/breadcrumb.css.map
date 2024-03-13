@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../components/breadcrumbs/breadcrumb.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EACE;EACA;EACA;;AACA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEE;EACE;EACA","file":"breadcrumb.css"}
+{"version":3,"sourceRoot":"","sources":["../../components/breadcrumbs/breadcrumb.scss"],"names":[],"mappings":"AAAA;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;AAAA;EACE;EACA;EACA;;AACA;AAAA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEE;AAAA;EACE;EACA","file":"breadcrumb.css"}

@@ -2,42 +2,7 @@
 import React from 'react'
 import UI from '#components/ui'
 
-/**
- * List component.
- *
- * @param children - The content to render inside the list.
- * @param props - Additional props to pass to the UI component.
- */
-const List = ({ children, ...props }: React.ComponentProps<typeof UI>) => {
-  return (
-    <UI as="ul" data-list="unstyled inline" {...props}>
-      {children}
-    </UI>
-  )
-}
-
-/**
- * Nav component.
- *
- * @param styles - Styles object for the nav.
- * @param id - Id for the nav.
- * @param classes - Class names for the nav.
- * @param children - Child components.
- * @param props - Other props.
- */
-const Nav = ({
-  styles,
-  id,
-  classes,
-  children,
-  ...props
-}: React.ComponentProps<typeof UI>) => {
-  return (
-    <UI as="nav" id={id} styles={styles} className={classes} {...props}>
-      <List>{children}</List>
-    </UI>
-  )
-}
+// TYPES
 
 /**
  * Items component.
@@ -83,6 +48,43 @@ type BreadcrumbProps = {
   /** Prefix breadcrumb aria-label - "prefix breadcrumb" */
   ariaLabelPrefix?: string
 } & React.ComponentProps<typeof UI>
+
+/**
+ * List component.
+ *
+ * @param children - The content to render inside the list.
+ * @param props - Additional props to pass to the UI component.
+ */
+const List = ({ children, ...props }: React.ComponentProps<typeof UI>) => {
+  return (
+    <UI as="ol" data-list="unstyled inline" {...props}>
+      {children}
+    </UI>
+  )
+}
+
+/**
+ * Nav component.
+ *
+ * @param styles - Styles object for the nav.
+ * @param id - Id for the nav.
+ * @param classes - Class names for the nav.
+ * @param children - Child components.
+ * @param props - Other props.
+ */
+const Nav = ({
+  styles,
+  id,
+  classes,
+  children,
+  ...props
+}: React.ComponentProps<typeof UI>) => {
+  return (
+    <UI as="nav" id={id} styles={styles} className={classes} {...props}>
+      <List>{children}</List>
+    </UI>
+  )
+}
 
 /**
  * Navigation component for breadcrumbs.
@@ -146,7 +148,7 @@ export const Breadcrumb = ({
       {...props}
       styles={styles}
       className={classes}
-      aria-label={`${ariaLabelPrefix} breadcrumb`}
+      aria-label={ariaLabelPrefix}
     >
       <Items key={`${startRoute}-${uuid}`}>
         <a href="/">{startRoute}</a>
