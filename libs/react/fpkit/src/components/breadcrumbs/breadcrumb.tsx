@@ -173,7 +173,8 @@ export const Breadcrumb = ({
         <></>
       )}
       {typeof segments[lastSegment] === 'string' &&
-        segments[lastSegment].length > 3 && (
+        segments[lastSegment].length > 3 &&
+        segments[lastSegment] !== segments[lastSegment - 1] && (
           <Items key={`last-${uuid}`}>
             <>
               {<span>{spacer}</span>}
