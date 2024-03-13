@@ -176,7 +176,7 @@ export const Breadcrumb = ({
                   segments[lastSegment] !== segments[lastSegment - 1] && (
                     <Items key={`last-${uuid}`}>
                       <>
-                        {<span>{spacer}</span>}
+                        <span>{spacer}</span>
                         <a href="" aria-current="page">
                           {segments[lastSegment]}
                         </a>
