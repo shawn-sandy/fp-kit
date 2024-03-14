@@ -167,7 +167,7 @@ export const Breadcrumb = ({
                   segments[lastSegment] !== segments[lastSegment - 1] && (
                     <Items key={`${path || index}-${uuid}`}>
                       <>
-                        <span>{spacer}</span>
+                        <span aria-hidden="true">{spacer}</span>
                         <a href="" aria-current="page">
                           {decodeURIComponent(name)}
                         </a>
@@ -179,7 +179,7 @@ export const Breadcrumb = ({
           } else {
             return (
               <Items key={`${currentSegment?.name}-${uuid}`}>
-                <span>{spacer}</span>
+                <span aria-hidden="true">{spacer}</span>
                 <span>
                   <a href={url}>{decodeURIComponent(name)}</a>
                 </span>
