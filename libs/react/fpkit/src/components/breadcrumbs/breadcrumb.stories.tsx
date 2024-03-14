@@ -57,3 +57,29 @@ export const AstroBreadcrumbs: Story = {
     currentRoute: '/about',
   },
 } as Story
+
+export const EncodedBreadcrumbs: Story = {
+  args: {
+    routes: [
+      {
+        name: 'Home',
+        path: '/',
+      },
+      {
+        name: 'Products',
+        path: '/products',
+      },
+      {
+        name: 'Shirts',
+        path: '/products/shirts',
+      },
+    ],
+    currentRoute: '/products/learning%20in%20public',
+  },
+
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    await userEvent.click(screen.getByText('Shirts'))
+    expect(screen.getByText('Shirts')).toBeInTheDocument()
+  },
+} as Story

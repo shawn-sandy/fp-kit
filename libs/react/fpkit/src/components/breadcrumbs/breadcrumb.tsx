@@ -31,7 +31,7 @@ type customRoute = {
   /** The path or id for routing */
   path?: string
   /** The display name */
-  name?: string
+  name: string
   /** The url if linking out */
   url?: string
 }
@@ -158,17 +158,18 @@ export const Breadcrumb = ({
       {segments.length ? (
         segments.map((segment: any, index: number) => {
           const currentSegment = getPathName(segment)
+          const { name, url, path } = currentSegment
           if (index === lastSegment) {
             return (
               <>
                 {typeof segments[lastSegment] === 'string' &&
                   segments[lastSegment].length > 3 &&
                   segments[lastSegment] !== segments[lastSegment - 1] && (
-                    <Items key={`last-${uuid}`}>
+                    <Items key={`${path || index}-${uuid}`}>
                       <>
                         <span>{spacer}</span>
                         <a href="" aria-current="page">
-                          {segments[lastSegment]}
+                          {decodeURIComponent(name)}
                         </a>
                       </>{' '}
                     </Items>
@@ -180,7 +181,7 @@ export const Breadcrumb = ({
               <Items key={`${currentSegment?.name}-${uuid}`}>
                 <span>{spacer}</span>
                 <span>
-                  <a href={currentSegment?.url}>{currentSegment?.name}</a>
+                  <a href={url}>{decodeURIComponent(name)}</a>
                 </span>
               </Items>
             )
