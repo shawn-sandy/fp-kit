@@ -156,19 +156,7 @@ export const Breadcrumb = ({
       {segments.length ? (
         segments.map((segment: any, index: number) => {
           const currentSegment = getPathName(segment)
-          const isLast = index === segment.length - 1
-          if (currentSegment?.name && !isLast) {
-            return (
-              <>
-                <Items key={`${currentSegment?.name}-${uuid}`}>
-                  <span>{spacer}</span>
-                  <span>
-                    <a href={currentSegment?.url}>{currentSegment?.name}</a>
-                  </span>
-                </Items>
-              </>
-            )
-          } else {
+          if (index === lastSegment) {
             return (
               <>
                 {typeof segments[lastSegment] === 'string' &&
@@ -183,6 +171,17 @@ export const Breadcrumb = ({
                       </>{' '}
                     </Items>
                   )}
+              </>
+            )
+          } else {
+            return (
+              <>
+                <Items key={`${currentSegment?.name}-${uuid}`}>
+                  <span>{spacer}</span>
+                  <span>
+                    <a href={currentSegment?.url}>{currentSegment?.name}</a>
+                  </span>
+                </Items>
               </>
             )
           }
