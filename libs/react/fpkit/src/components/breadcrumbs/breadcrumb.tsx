@@ -49,6 +49,8 @@ type BreadcrumbProps = {
   ariaLabelPrefix?: string
 } & React.ComponentProps<typeof UI>
 
+// Components
+
 /**
  * List component.
  *
@@ -175,14 +177,12 @@ export const Breadcrumb = ({
             )
           } else {
             return (
-              <>
-                <Items key={`${currentSegment?.name}-${uuid}`}>
-                  <span>{spacer}</span>
-                  <span>
-                    <a href={currentSegment?.url}>{currentSegment?.name}</a>
-                  </span>
-                </Items>
-              </>
+              <Items key={`${currentSegment?.name}-${uuid}`}>
+                <span>{spacer}</span>
+                <span>
+                  <a href={currentSegment?.url}>{currentSegment?.name}</a>
+                </span>
+              </Items>
             )
           }
         })
