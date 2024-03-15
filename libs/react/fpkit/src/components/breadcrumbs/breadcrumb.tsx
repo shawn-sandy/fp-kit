@@ -172,9 +172,13 @@ export const Breadcrumb = ({
                     <Items key={`${path || index}-${uuid}`}>
                       <>
                         <span aria-hidden="true">{spacer}</span>
-                        aria-label=
-                        {name.length > truncateLength ? name : undefined}
-                        <a href="" aria-current="page">
+                        <a
+                          href=""
+                          aria-current="page"
+                          aria-label={
+                            name.length > truncateLength ? name : undefined
+                          }
+                        >
                           {Truncate(decodeURIComponent(name), truncateLength)}
                         </a>
                       </>{' '}
