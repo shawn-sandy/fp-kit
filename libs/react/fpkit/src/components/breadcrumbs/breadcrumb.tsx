@@ -5,29 +5,6 @@ import { Truncate } from '#libs/content'
 
 // TYPES
 
-/**
- * Items component.
- *
- * @param styles - Styles object for the item.
- * @param id - Id for the item.
- * @param classes - Class names for the item.
- * @param children - Child components.
- * @param props - Other props.
- */
-const Items = ({
-  styles,
-  id,
-  classes,
-  children,
-  ...props
-}: React.ComponentProps<typeof UI>) => {
-  return (
-    <li data-list="unstyled inline" {...props}>
-      {children}
-    </li>
-  )
-}
-
 type customRoute = {
   /** The path or id for routing */
   path?: string
@@ -53,6 +30,29 @@ type BreadcrumbProps = {
 } & React.ComponentProps<typeof UI>
 
 // Components
+
+/**
+ * Items component.
+ *
+ * @param styles - Styles object for the item.
+ * @param id - Id for the item.
+ * @param classes - Class names for the item.
+ * @param children - Child components.
+ * @param props - Other props.
+ */
+const Items = ({
+  styles,
+  id,
+  classes,
+  children,
+  ...props
+}: React.ComponentProps<typeof UI>) => {
+  return (
+    <li data-list="unstyled inline" {...props}>
+      {children}
+    </li>
+  )
+}
 
 /**
  * List component.
