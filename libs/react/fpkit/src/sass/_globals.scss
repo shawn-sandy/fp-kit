@@ -53,6 +53,7 @@ section {
 
 p {
   font-size: var(--fs-0);
+  line-height: 1.6;
 
   & + p {
     margin-block-start: 1rem;

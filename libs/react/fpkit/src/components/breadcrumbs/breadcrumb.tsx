@@ -1,6 +1,7 @@
 // Code: Breadcrumb component
 import React from 'react'
 import UI from '#components/ui'
+import { Truncate } from '#libs/content'
 
 // TYPES
 
@@ -47,6 +48,8 @@ type BreadcrumbProps = {
   currentRoute?: string
   /** Prefix breadcrumb aria-label - "prefix breadcrumb" */
   ariaLabelPrefix?: string
+  /** Truncate breadcrumb text after this length */
+  truncateLength?: number
 } & React.ComponentProps<typeof UI>
 
 // Components
@@ -110,6 +113,7 @@ export const Breadcrumb = ({
   id,
   classes,
   ariaLabelPrefix,
+  truncateLength = 15,
   ...props
 }: BreadcrumbProps): React.JSX.Element => {
   const [currentPath, setCurrentPath] = React.useState('')
@@ -169,7 +173,7 @@ export const Breadcrumb = ({
                       <>
                         <span aria-hidden="true">{spacer}</span>
                         <a href="" aria-current="page">
-                          {decodeURIComponent(name)}
+                          {Truncate(decodeURIComponent(name), truncateLength)}
                         </a>
                       </>{' '}
                     </Items>

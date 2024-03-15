@@ -83,3 +83,10 @@ export const EncodedBreadcrumbs: Story = {
     expect(screen.getByText('Shirts')).toBeInTheDocument()
   },
 } as Story
+
+export const TruncateName: Story = {
+  args: {
+    ...CustomURL.args,
+    currentRoute: '/products/AveryLongNameTruncate',
+  },
+} as Story
