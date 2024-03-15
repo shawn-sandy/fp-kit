@@ -185,7 +185,12 @@ export const Breadcrumb = ({
               <Items key={`${currentSegment?.name}-${uuid}`}>
                 <span aria-hidden="true">{spacer}</span>
                 <span>
-                  <a href={url}>{decodeURIComponent(name)}</a>
+                  <a
+                    href={url}
+                    aria-label={name.length > truncateLength ? name : undefined}
+                  >
+                    {Truncate(decodeURIComponent(name), truncateLength)}
+                  </a>
                 </span>
               </Items>
             )
