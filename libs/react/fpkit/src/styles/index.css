@@ -285,18 +285,21 @@ body main {
 
 main,
 header,
-footer {
+footer,
+section {
   font-size: var(--fs);
 }
 main > section,
 header > section,
-footer > section {
+footer > section,
+section > section {
   margin-inline: auto;
   width: var(--content-w, 80%);
 }
 main > div,
 header > div,
-footer > div {
+footer > div,
+section > div {
   width: 100%;
   text-align: center;
 }

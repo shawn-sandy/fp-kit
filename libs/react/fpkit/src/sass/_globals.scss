@@ -32,7 +32,8 @@ body {
 
 main,
 header,
-footer {
+footer,
+section {
   font-size: var(--fs);
   > section {
     margin-inline: auto;
