@@ -34,7 +34,7 @@ main,
 header,
 footer,
 section {
-  font-size: var(--fs);
+  font-size: var(--fs-0);
   > section {
     margin-inline: auto;
     width: var(--content-w, 80%);
