@@ -9,7 +9,7 @@ header,
   --overlay-max-h: 500px;
   --overlay-color: currentColor;
   --overlay-content-w: 80%;
-  --overlay-gap: 1rem;
+  --overlay-gap: 2rem;
   --overlay-bg: whitesmoke;
   grid-template-areas: "overlay";
   display: var(--overlay-display);
@@ -50,6 +50,7 @@ footer {
   --content-w: min(100%, 1480px);
   --content-mx: auto;
   --content-px: 1rem;
+  --content-gap: 2rem;
   padding-block: var(--overlay-padding);
 }
 main > section,
@@ -73,7 +74,7 @@ main > section:has(> article, > aside) {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  gap: 1rem;
+  gap: var(--content-gap);
 }
 main > section[aria-label]:has(> article, > aside) > article,
 main > section:has(> article, > aside) > article {
