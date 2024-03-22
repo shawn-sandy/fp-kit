@@ -165,7 +165,7 @@ svg[role=img] {
 }
 
 :root {
-  --fs: clamp(0.96rem, 1vw + 0.5rem, 1.5rem);
+  --fs: clamp(0.96rem, 1vw + 0.5rem, 1.6rem);
   --p: 1rem;
   --px: var(--p);
   --py: var(--p);
@@ -178,7 +178,6 @@ svg[role=img] {
   --placeholder-style: italic;
   --placeholder-fs: smaller;
   --transition: all 0.25s linear;
-  --fs: 100%;
   --fs-0: clamp(0.9rem, 4vw - 1rem, 1.12rem);
   --fs-1: clamp(0.65rem, 1.3vw + 0.25rem, 0.75rem);
   --fs-2: clamp(0.7rem, 2vw - 0.5rem, 0.875rem);
@@ -263,7 +262,7 @@ svg[role=img] {
 
 html {
   font-family: var(--font-family);
-  font-size: var(--fs);
+  font-size: 100%;
 }
 
 body {

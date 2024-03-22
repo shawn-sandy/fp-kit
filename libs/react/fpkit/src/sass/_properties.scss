@@ -1,5 +1,5 @@
 :root {
-  --fs: clamp(0.96rem, 1vw + 0.5rem, 1.5rem);
+  --fs: clamp(0.96rem, 1vw + 0.5rem, 1.6rem);
   --p: 1rem;
   --px: var(--p);
   --py: var(--p);
@@ -14,7 +14,6 @@
   --transition: all 0.25s linear;
 
   // * responsive fonts sizes
-  --fs: 100%;
   --fs-0: clamp(0.9rem, 4vw - 1rem, 1.12rem); // 16px default
   --fs-1: clamp(0.65rem, 1.3vw + 0.25rem, 0.75rem); // 12px
   --fs-2: clamp(0.7rem, 2vw - 0.5rem, 0.875rem); // 14px
