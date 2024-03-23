@@ -173,7 +173,6 @@ export const Breadcrumb = ({
                       <>
                         <span aria-hidden="true">{spacer}</span>
                         <a
-                          href=""
                           aria-current="page"
                           aria-label={
                             name.length > truncateLength ? name : undefined

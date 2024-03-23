@@ -956,6 +956,7 @@ nav[data-breadcrumb] {
   --breadcrumb-gap: 0.5rem;
   --breadcrumb-color: currentColor;
   --breadcrumb-current-color: rgb(46, 46, 46);
+  --breadcrumb-fs: var(--fs-0);
   margin-inline: unset;
   padding-inline: unset;
 }
@@ -973,6 +974,11 @@ nav[data-breadcrumb] ol li {
   display: flex;
   color: var(--breadcrumb-color);
   gap: 0.5rem;
+  font-size: var(--breadcrumb-fs);
+}
+nav:not(body > nav) ol li a[href],
+nav[data-breadcrumb] ol li a[href] {
+  font-size: var(--breadcrumb-fs);
 }
 nav:not(body > nav) ol li a[href][aria-current],
 nav[data-breadcrumb] ol li a[href][aria-current] {

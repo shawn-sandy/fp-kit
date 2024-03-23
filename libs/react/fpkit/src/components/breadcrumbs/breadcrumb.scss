@@ -5,6 +5,7 @@ nav[data-breadcrumb] {
   --breadcrumb-gap: 0.5rem;
   --breadcrumb-color: currentColor;
   --breadcrumb-current-color: rgb(46, 46, 46);
+  --breadcrumb-fs: var(--fs-0);
   margin-inline: unset;
   padding-inline: unset;
   ol {
@@ -18,7 +19,9 @@ nav[data-breadcrumb] {
       display: flex;
       color: var(--breadcrumb-color);
       gap: 0.5rem;
+      font-size: var(--breadcrumb-fs);
       a[href] {
+        font-size: var(--breadcrumb-fs);
         &[aria-current] {
           color: var(--breadcrumb-current-color);
           text-decoration: none;
