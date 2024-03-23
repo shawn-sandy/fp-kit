@@ -32,7 +32,7 @@ a[href]:visited, a[href]:active {
 }
 a[href] > b, a[href][data-link~=btn] {
   --link-button-color: var(--link-color);
-  --link-bg: lightgray;
+  --link-bg: transparent;
   --link-decoration: none;
   --link-fs: 0.9rem;
   background-color: var(--link-bg);
@@ -51,6 +51,9 @@ a[href] > b, a[href][data-link~=btn] {
 }
 a[href] > b:hover, a[href][data-link~=btn]:hover {
   transform: var(--scale-to);
+}
+a[href][data-link~=pill] {
+  --link-radius: 99rem;
 }
 
 /*# sourceMappingURL=link.css.map */

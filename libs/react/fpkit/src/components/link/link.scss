@@ -40,7 +40,7 @@ a[href] {
   > b,
   &[data-link~='btn'] {
     --link-button-color: var(--link-color);
-    --link-bg: lightgray;
+    --link-bg: transparent;
     --link-decoration: none;
     --link-fs: 0.9rem;
     background-color: var(--link-bg);
@@ -52,5 +52,8 @@ a[href] {
     display: inline-flex;
     outline: 2px currentColor solid;
     @include mixins.scale-transitions;
+  }
+  &[data-link~='pill'] {
+    --link-radius: 99rem;
   }
 }
