@@ -753,7 +753,7 @@ a[href] > b, a[href][data-link~=btn] {
   outline: 2px currentColor solid;
   --scale-transition: transform 0.25s ease;
   --scale: scale(1);
-  --scale-to: scale(1.08);
+  --scale-to: scale(1.05);
   transform: var(--scale);
   transition: var(--scale-transition);
 }
