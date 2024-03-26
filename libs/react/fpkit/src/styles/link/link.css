@@ -56,4 +56,8 @@ a[href][data-link~=pill] {
   --link-radius: 99rem;
 }
 
+header > section {
+  width: auto;
+}
+
 /*# sourceMappingURL=link.css.map */

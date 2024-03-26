@@ -44,6 +44,11 @@ header > section,
   gap: var(--overlay-gap);
   text-align: center;
 }
+header > section p,
+[data-grid~=overlay] > section p {
+  width: auto;
+  max-width: 60ch;
+}
 
 main,
 footer {

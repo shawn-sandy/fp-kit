@@ -764,6 +764,10 @@ a[href][data-link~=pill] {
   --link-radius: 99rem;
 }
 
+header > section {
+  width: auto;
+}
+
 header,
 [data-grid~=overlay] {
   --overlay-grid-area: overlay;
@@ -809,6 +813,11 @@ header > section,
   --overlay-display: flex;
   gap: var(--overlay-gap);
   text-align: center;
+}
+header > section p,
+[data-grid~=overlay] > section p {
+  width: auto;
+  max-width: 60ch;
 }
 
 main,

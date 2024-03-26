@@ -42,6 +42,10 @@ header,
     --overlay-display: flex;
     gap: var(--overlay-gap);
     text-align: center;
+    p {
+      width: auto;
+      max-width: 60ch;
+    }
   }
 }
 
