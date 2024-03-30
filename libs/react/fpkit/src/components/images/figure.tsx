@@ -20,7 +20,7 @@ const Figure = ({
   return (
     <UI as="figure" id={id} {...props} styles={styles}>
       <Img src="/path/to/image.jpg" alt={alt} width={width} height={height} />
-      <UI as="figcaption">{caption}</UI>
+      {caption.length ? <UI as="figcaption">{caption}</UI> : <></>}
     </UI>
   )
 }
