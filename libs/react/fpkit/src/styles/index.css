@@ -569,6 +569,44 @@ p[role=note] {
   --border-radius: 0.5rem;
 }
 
+img {
+  --img-max-width: 100%;
+  --img-height: auto;
+  --img-object-fit: cover;
+  --img-object-position: center;
+  --img-aspect-ratio: auto 2/3;
+  --img-display: initial;
+  max-width: var(--img-max-width);
+  max-inline-size: var(--img-max-width);
+  block-size: var(--img-height);
+  object-fit: var(--img-object-fit);
+  object-position: var(--img-object-position);
+  aspect-ratio: var(--img-aspect-ratio);
+  display: var(--img-display);
+}
+
+figure:has(img[alt]) {
+  --img-display: flex;
+  --figure-p: 0.5rem;
+  --figure-bg: whitesmoke;
+  display: var(--img-display);
+  position: relative;
+  padding: var(--figure-p);
+  background-color: var(--figure-bg);
+}
+figure:has(img[alt]) > figcaption {
+  position: absolute;
+  bottom: var(--figure-p);
+  left: var(--figure-p);
+  right: var(--figure-p);
+  padding: var(--spc-3);
+  background-color: rgba(245, 245, 245, 0.683);
+}
+figure:has(img[alt]) > img {
+  max-width: 100%;
+  height: auto;
+}
+
 [data-card],
 [data-component~=card] {
   --card-p: 2rem;

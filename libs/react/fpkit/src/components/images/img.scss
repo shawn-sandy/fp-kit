@@ -14,3 +14,27 @@ img {
   aspect-ratio: var(--img-aspect-ratio);
   display: var(--img-display);
 }
+
+figure {
+  &:has(img[alt]) {
+    --img-display: flex;
+    --figure-p: 0.5rem;
+    --figure-bg: whitesmoke;
+    display: var(--img-display);
+    position: relative;
+    padding: var(--figure-p);
+    background-color: var(--figure-bg);
+    > figcaption {
+      position: absolute;
+      bottom: var(--figure-p);
+      left: var(--figure-p);
+      right: var(--figure-p);
+      padding: var(--spc-3);
+      background-color: rgba(245, 245, 245, 0.683);
+    }
+    > img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
