@@ -7,8 +7,6 @@ export type FigureProps = {
   caption: string
 } & React.ComponentProps<typeof Img>
 
-const defaultStyles = {}
-
 const Figure = ({
   id,
   src,
@@ -29,4 +27,3 @@ const Figure = ({
 
 export default Figure
 Figure.displayName = 'Figure'
-Figure.styles = defaultStyles
