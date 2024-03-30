@@ -1,4 +1,4 @@
-img {
+img[alt] {
   --img-max-width: 100%;
   --img-height: auto;
   --img-object-fit: cover;
@@ -30,10 +30,6 @@ figure:has(img[alt]) > figcaption {
   right: var(--fig-p);
   padding: var(--spc-3);
   background-color: rgba(245, 245, 245, 0.683);
-}
-figure:has(img[alt]) > img {
-  max-width: 100%;
-  height: auto;
 }
 
 /*# sourceMappingURL=img.css.map */
