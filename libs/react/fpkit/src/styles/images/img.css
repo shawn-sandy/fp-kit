@@ -27,10 +27,10 @@ figure:has(img[alt]) {
 }
 figure:has(img[alt]) > figcaption {
   position: absolute;
-  bottom: var(--fig-p);
-  left: var(--fig-p);
-  right: var(--fig-p);
-  padding: var(--spc-3);
+  bottom: var(--fig-bottom, var(--fig-p));
+  left: var(--fig-left, var(--fig-p));
+  right: var(--fig-right, var(--fig-p));
+  padding: var(--caption-p, var(--spc-3));
   background-color: rgba(245, 245, 245, 0.683);
 }
 

@@ -2,9 +2,12 @@ import React from 'react'
 import UI from '#components/ui'
 import Img from './img'
 
-export type FigureProps = {
+type FigureProps = {
+  /** Children nodes to render inside the figure */
   children: React.ReactNode
-  caption: string
+
+  /** The figure caption */
+  caption?: string
 } & React.ComponentProps<typeof Img>
 
 const Figure = ({
@@ -19,7 +22,7 @@ const Figure = ({
 }: FigureProps) => {
   return (
     <UI as="figure" id={id} {...props} styles={styles}>
-      <Img src="/path/to/image.jpg" alt={alt} width={width} height={height} />
+      <Img src={src} alt={alt} width={width} height={height} />
       {caption.length ? <UI as="figcaption">{caption}</UI> : <></>}
     </UI>
   )

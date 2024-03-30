@@ -15,10 +15,7 @@ const meta: Meta<typeof Figure> = {
       },
     },
   },
-  args: {
-    // @ts-ignore
-    children: 'Link',
-  },
+  args: {},
 } as Story
 
 export default meta
