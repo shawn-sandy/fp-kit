@@ -20,10 +20,12 @@ figure {
     --fig-display: flex;
     --fig-p: 0.5rem;
     --fig-bg: whitesmoke;
+    --fig-w: fit-content;
     display: var(--fig-display);
     position: relative;
     padding: var(--fig-p);
     background-color: var(--fig-bg);
+    max-width: var(--fig-w);
     > figcaption {
       position: absolute;
       bottom: var(--fig-p);

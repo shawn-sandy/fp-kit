@@ -589,10 +589,12 @@ figure:has(img[alt]) {
   --fig-display: flex;
   --fig-p: 0.5rem;
   --fig-bg: whitesmoke;
+  --fig-w: fit-content;
   display: var(--fig-display);
   position: relative;
   padding: var(--fig-p);
   background-color: var(--fig-bg);
+  max-width: var(--fig-w);
 }
 figure:has(img[alt]) > figcaption {
   position: absolute;

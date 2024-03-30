@@ -28,6 +28,10 @@ export const FigureComponent: Story = {
   args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
-    expect(canvas.getByText(/link/i)).toBeInTheDocument()
+    expect(
+      canvas.getByText(/caption for the image here.../i),
+    ).toBeInTheDocument()
+    expect(canvas.getByRole('img')).toBeInTheDocument()
+    expect(canvas.getByRole('figure')).toBeInTheDocument()
   },
 }
