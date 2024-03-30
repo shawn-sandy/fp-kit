@@ -4,7 +4,7 @@ img {
   --img-object-fit: cover;
   --img-object-position: center;
   --img-aspect-ratio: auto 2/3;
-  --img-display: initial;
+  --fig-display: initial;
 
   max-width: var(--img-max-width);
   max-inline-size: var(--img-max-width);
@@ -12,23 +12,23 @@ img {
   object-fit: var(--img-object-fit);
   object-position: var(--img-object-position);
   aspect-ratio: var(--img-aspect-ratio);
-  display: var(--img-display);
+  display: var(--fig-display);
 }
 
 figure {
   &:has(img[alt]) {
-    --img-display: flex;
-    --figure-p: 0.5rem;
-    --figure-bg: whitesmoke;
-    display: var(--img-display);
+    --fig-display: flex;
+    --fig-p: 0.5rem;
+    --fig-bg: whitesmoke;
+    display: var(--fig-display);
     position: relative;
-    padding: var(--figure-p);
-    background-color: var(--figure-bg);
+    padding: var(--fig-p);
+    background-color: var(--fig-bg);
     > figcaption {
       position: absolute;
-      bottom: var(--figure-p);
-      left: var(--figure-p);
-      right: var(--figure-p);
+      bottom: var(--fig-p);
+      left: var(--fig-p);
+      right: var(--fig-p);
       padding: var(--spc-3);
       background-color: rgba(245, 245, 245, 0.683);
     }
