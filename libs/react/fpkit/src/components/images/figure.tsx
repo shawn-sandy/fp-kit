@@ -2,7 +2,7 @@ import React from 'react'
 import UI from '#components/ui'
 import Img from './img'
 
-type FigureProps = {
+export type FigureProps = {
   /** Children nodes to render inside the figure */
   children: React.ReactNode
 
@@ -10,6 +10,18 @@ type FigureProps = {
   caption?: string
 } & React.ComponentProps<typeof Img>
 
+/**
+ * @description Figure component props.
+ *
+ * @param id - The id of the figure element.
+ * @param src - The image source url.
+ * @param width - The image width.
+ * @param height - The image height.
+ * @param alt - Alternative text for the image.
+ * @param caption - The figure caption text.
+ * @param styles - CSS styles object.
+ * @param props - Other props.
+ */
 const Figure = ({
   id,
   src,

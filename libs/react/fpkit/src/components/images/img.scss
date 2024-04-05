@@ -19,7 +19,7 @@ figure {
   &:has(img[alt]) {
     --fig-display: flex;
     --fig-p: 0.5rem;
-    --fig-bg: whitesmoke;
+    --fig-bg: rgba(245, 245, 245, 0.683);
     --fig-w: fit-content;
     display: var(--fig-display);
     position: relative;
@@ -32,7 +32,7 @@ figure {
       left: var(--fig-left, var(--fig-p));
       right: var(--fig-right, var(--fig-p));
       padding: var(--caption-p, var(--spc-3));
-      background-color: rgba(245, 245, 245, 0.683);
+      background-color: var(--fig-bg);
     }
   }
 }
