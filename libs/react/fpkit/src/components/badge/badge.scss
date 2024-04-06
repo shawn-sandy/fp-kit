@@ -4,16 +4,26 @@ sup:has(> span) {
   --badge-radius: 0.15rem;
   --badge-padding: 0.15rem;
   --badge-v-align: 0.5rem;
+  --badge-fs: clamp(0.4rem, 0.5rem + 0.5vw, 7rem);
   background-color: var(--badge-bg);
+  color: var(--badge-color);
+  padding: var(--badge-padding);
   color: var(--badge-color);
   padding: var(--badge-padding);
   border-radius: var(--badge-radius);
   vertical-align: var(--badge-v-align);
   span {
     color: inherit;
-  }
+    vertical-align: var(--badge-v-align);
+    span {
+      color: inherit;
+    }
 
-  &[data-badge~='rounded'] {
-    --badge-radius: 100%;
+    &[data-badge~='rounded'] {
+      --badge-radius: 100%;
+    }
+    &[data-badge~='rounded'] {
+      --badge-radius: 100%;
+    }
   }
 }

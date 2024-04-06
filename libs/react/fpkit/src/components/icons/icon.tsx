@@ -18,8 +18,7 @@ import {
   User,
 } from './index'
 
-import { ComponentProps } from '#/types'
-import FP from '#components/fp'
+import UI from '#components/ui'
 import React from 'react'
 
 /**
@@ -39,18 +38,27 @@ const defaultStyles = {
   width: 'auto',
 }
 
-/**
- * Icon component wraps svg in a div.
- * @param {IconProps} props - The props object for the Icon component.
- * @param {React.ReactNode} props.children - The children of the Icon component.
- * @param {Object} props.styles - The styles object for the Icon component.
- * @returns {JSX.Element} - The Icon component.
- */
-export const Icon = ({ children, styles, ...props }: ComponentProps) => {
+export type IconProps = React.ComponentProps<typeof UI>
+
+export const Icon = ({
+  id,
+  classes,
+  children,
+  styles,
+  ...props
+}: IconProps) => {
   return (
-    <FP as="span" styles={styles} data-icon data-style="icons" {...props}>
+    <UI
+      id={id}
+      as="span"
+      styles={styles}
+      className={classes}
+      data-icon
+      data-style="icons"
+      {...props}
+    >
       {children}
-    </FP>
+    </UI>
   )
 }
 

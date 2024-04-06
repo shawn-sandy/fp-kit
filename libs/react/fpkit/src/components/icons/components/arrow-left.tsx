@@ -5,16 +5,6 @@ import Svg from './svg'
 
 const defaultStyles = { ...Svg.styles }
 
-/**
- * Renders an arrow pointing to the left.
- *
- * @param {string} strokeColor - The color of the arrow's stroke.
- * @param {string} fill - The fill color of the arrow.
- * @param {string} size - The size of the arrow.
- * @param {object} styles - The styles to apply to the arrow.
- * @param {object} props - The additional props to pass to the SVG element.
- * @returns {JSX.Element} - A React component that renders an arrow pointing to the left.
- */
 export const ArrowLeft = ({
   strokeColor = 'currentColor',
   fill = 'currentColor',

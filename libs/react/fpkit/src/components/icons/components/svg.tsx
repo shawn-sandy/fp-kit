@@ -9,7 +9,7 @@ const defaultStyes = {
 }
 
 export const Svg = ({
-  fill = 'currentColor',
+  fill,
   strokeColor,
   styles,
   size,
@@ -23,6 +23,8 @@ export const Svg = ({
 >) => {
   return (
     <svg
+      fill={fill}
+      stroke={strokeColor}
       height={size}
       width={size}
       viewBox="0 0 24 24"

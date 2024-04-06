@@ -1,0 +1,51 @@
+@mixin props {
+
+  --spc-0: 0;
+  --spc-1: 0.25rem;
+  --spc-2: 0.5rem;
+  --spc-3: 0.75rem;
+  --spc-4: 1rem;
+  --spc-5: 1.5;
+  --spc-6: 2rem;
+  --spc-7: 2.5rem;
+  --spc-8: 3rem;
+  --spc-9: 3.5rem;
+  --spc-10: 4rem;
+  --spc-11: 4.5rem;
+  --spc-12: 5rem;
+  --spc-13: 6rem;
+  --spc-14: 7rem;
+  --spc-15: 8rem;
+  --spc-16: 9rem;
+  --spc-17: 10rem;
+  --spc-18: 11rem;
+  --spc-19: 12rem;
+  --spc-20: 13rem;
+
+  // t-shirt sizes
+  --spc: var(--spc-4);
+  --spc-xs: var(--spc-1);
+  --spc-sm: var(--spc-3);
+  --spc-base: var(--spc-5);
+  --spc-md: var(--spc-7);
+  --spc-lg: var(--spc-9);
+  --spc-xl: var(--spc-11);
+  --spc-xxl: var(--spc-13);
+
+// vw units
+  --vw-xs: 5vw;
+  --vw-sm: 10vw;
+  --vw-md: 20vw;
+  --vw-lg: 50vw;
+  --vw-xl: 80vw;
+  --vw-xxl: 95vw;
+
+// vh units
+  --vh-xs: 5vh;
+  --vh-sm: 10vh;
+  --vh-md: 20vh;
+  --vh-lg: 50vh;
+  --vh-xl: 80vh;
+  --vh-xxl: 95vh;
+
+}

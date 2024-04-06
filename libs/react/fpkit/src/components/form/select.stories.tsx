@@ -3,7 +3,7 @@ import { within, userEvent, screen } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import Select from './select'
-
+import React from 'react'
 const meta: Meta<typeof Select> = {
   title: 'FP.REACT Forms/Select',
   component: Select,

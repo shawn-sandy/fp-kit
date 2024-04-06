@@ -1,27 +1,3 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": [
-    "standard",
-    "eslint-config-prettier",
-    "plugin:react/recommended",
-    "@azimutlabs/eslint-config-jsx-a11y",
-    "eslint:recommended",
-    "plugin:storybook/recommended"
-  ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "plugins": ["react", "jsx-a11y"],
-  "rules": {
-    "jsx-quotes": ["error", "prefer-single"],
-    "complexity": ["error", 2],
-    "@typescript-eslint/no-explicit-any": "error"
-  }
+  "extends": "../../../.eslintrc.json"
 }

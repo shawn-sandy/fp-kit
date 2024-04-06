@@ -39,6 +39,7 @@ const meta: Meta<typeof Details> = {
     icon: icon,
     summary: <h3>Summary Section</h3>,
   },
+  actions: { argTypesRegex: '^on.*' },
   decorators: [
     (Story) => (
       <div className="container" style={{ minWidth: '50vw' }}>

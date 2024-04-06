@@ -1,11 +1,17 @@
 @import './sass/reset';
+@import './sass/type';
+@import './sass/layout';
 @import './sass/properties';
 @import './sass/globals';
+@import './sass/elements';
 @import './components/buttons/button.scss';
 @import './components/tag/tag.scss';
+@import './components/images/img.scss';
 @import './components/cards/card.scss';
 @import './components/progress/progress.scss';
 @import './components/details/details.scss';
 @import './components/link/link.scss';
 @import './components/layout/landmarks.scss';
 @import './components/badge/badge.scss';
+@import './components/nav/nav.scss';
+@import './components/breadcrumbs/breadcrumb.scss';

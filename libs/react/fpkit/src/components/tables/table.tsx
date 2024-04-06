@@ -1,5 +1,7 @@
-import { Table, Caption, Thead, Tbody, Td, Tr } from "./table-elements"
+import { Table, Caption, Thead, Tbody, Td, Tr } from './table-elements'
 import { ComponentProps } from '../../types'
+
+import React from 'react'
 
 export interface TableProps extends ComponentProps {
   tblHead: React.ReactNode
@@ -7,7 +9,7 @@ export interface TableProps extends ComponentProps {
   tblCaption?: React.ReactNode
 }
 
-export type dataType = {id: number, items: string[]}[]
+export type dataType = { id: number; items: string[] }[]
 
 /**
  * Render the `thead` by passing an array of names
@@ -16,11 +18,7 @@ export const RenderHead = (data: []) => {
   const head = data.map((item, index) => {
     return <th key={index}>{item}</th>
   })
-  return (
-    <tr>
-      {head}
-    </tr>
-  )
+  return <tr>{head}</tr>
 }
 
 /**
@@ -35,25 +33,21 @@ export const RenderBody = (data: {}[]) => {
       </tr>
     )
   })
-  return (<Tbody>{rec}</Tbody>)
+  return <Tbody>{rec}</Tbody>
 }
 
 /**
  * Render the table placing `caption`, `thead` and `tbody` in the correct order
  * caption is optional
  */
-export const RenderTable = ({tblBody, tblCaption, tblHead}: TableProps) => {
+export const RenderTable = ({ tblBody, tblCaption, tblHead }: TableProps) => {
   return (
     <Table>
       {tblCaption && <Caption>{tblCaption}</Caption>}
       <Thead>
-        <Tr>
-          {tblHead}
-        </Tr>
+        <Tr>{tblHead}</Tr>
       </Thead>
-      <Tbody>
-        {tblBody}
-      </Tbody>
+      <Tbody>{tblBody}</Tbody>
     </Table>
   )
 }

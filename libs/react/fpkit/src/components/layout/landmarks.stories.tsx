@@ -11,7 +11,6 @@ import { expect } from '@storybook/jest'
 
 import { Header } from './landmarks'
 
-import './landmarks.scss'
 import Img from '#components/images/img'
 
 const meta: Meta<typeof Header> = {

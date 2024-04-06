@@ -1,8 +1,8 @@
 @mixin scale-transitions {
-  --scale-transition: transform 0.25s ease-in-out;
+  --scale-transition: transform 0.25s ease;
   --scale: scale(1);
-  --scale-to: scale(1.08);
-  transform: --scale;
+  --scale-to: scale(1.05);
+  transform: var(--scale);
   transition: var(--scale-transition);
   &:hover {
     transform: var(--scale-to);

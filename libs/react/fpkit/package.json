@@ -2,7 +2,7 @@
   "name": "@fpkit/react",
   "description": "A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.",
   "private": false,
-  "version": "0.3.27",
+  "version": "0.3.76",
   "scripts": {
     "start": "run-p package:watch sass:watch",
     "dev": "vite --open",
@@ -20,14 +20,17 @@
     "test:coverage": "vitest --coverage",
     "test:ui:coverage": "vitest --coverage --ui",
     "test:snapshot": "vitest --run --update",
-    "release": "npm publish"
+    "release": "npm publish",
+    "lint": "eslint . --ext .jsx,.tsx",
+    "lint-fix": "eslint . --ext .jsx,.tsx"
   },
   "dependencies": {
     "focus-trap": "^7.5.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@shawnsandy/first-paint": "^2.18.13",
     "@shawnsandy/first-paint": "^2.18.13",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
@@ -41,12 +44,16 @@
     "@vitest/ui": "^0.33.0",
     "autoprefixer": "^10.4.16",
     "c8": "^8.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
     "happy-dom": "^10.5.2",
     "jsdom": "^22.1.0",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.9.3",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
+    "prettier": "^3.2.4",
     "react-test-renderer": "^18.2.0",
     "sass": "^1.64.1",
     "tsup": "^7.1.0",
@@ -81,9 +88,9 @@
     },
     "./package.json": "./package.json",
     "./styles": {
-      "import": "./libs/styles.css",
-      "require": "./libs/styles.ccs",
-      "default": "./libs/styles.css"
+      "import": "./libs/index.css",
+      "require": "./libs/index.ccs",
+      "default": "./libs/index.css"
     },
     "./css": "./libs/components",
     "./scss": "./src/components"
@@ -91,7 +98,8 @@
   "files": [
     "src",
     "dist",
-    "libs"
+    "libs",
+    "libs/index.css"
   ],
   "peerDependencies": {
     "react": "^18.0.0",

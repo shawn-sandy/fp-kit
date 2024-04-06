@@ -52,11 +52,16 @@ export const ExternalLink: Story = {
 
 export const ButtonLink: Story = {
   args: {
-    ...ExternalLink.args,
-    children: (
-      <>
-        <b>Button Link</b>
-      </>
-    ),
+    ...LinkComponent.args,
+    children: <b>Button Link</b>,
+  },
+} as Story
+
+export const ButtonRounded: Story = {
+  args: {
+    ...ButtonLink.args,
+    styles: {
+      '--link-radius': 'initial',
+    },
   },
 } as Story

@@ -1,43 +1,67 @@
-import {
-  ComponentPropsWithRef,
-  ElementType,
-  ForwardedRef,
-  forwardRef,
-  useRef,
-} from 'react'
+/* eslint-enable react/display-name */
+import React from 'react'
 
-type CustomForwardRef = <T, P = {}>(
-  render: (props: P, ref: React.Ref<T>) => React.ReactNode,
-) => (props: P & React.RefAttributes<T>) => React.ReactNode
+type PolymorphicRef<C extends React.ElementType> =
+  React.ComponentPropsWithRef<C>['ref']
 
-const uiForwardRef = forwardRef as CustomForwardRef
-
-type UIProps = {
-  renderStyles?: boolean
-  styles?: React.CSSProperties | {}
-  classes?: string
-  // children?: React.ReactNode
+type AsProp<C extends React.ElementType> = {
+  as?: C
 }
 
-// Added a DistributiveOmit type
+type PropsToOmit<C extends React.ElementType, P> = keyof (AsProp<C> & P)
 
-type DistributiveOmit<T, TOmitted extends PropertyKey> = T extends any
-  ? Omit<T, TOmitted>
-  : never
+type PolymorphicComponentProp<
+  C extends React.ElementType,
+  Props = {},
+> = React.PropsWithChildren<Props & AsProp<C>> &
+  Omit<React.ComponentPropsWithoutRef<C>, PropsToOmit<C, Props>>
 
-export const UnwrappedLink = <TAs extends ElementType>(
-  props: {
-    as?: TAs
-  } & UIProps &
-    DistributiveOmit<
-      ComponentPropsWithRef<ElementType extends TAs ? 'span' : TAs>,
-      'as'
-    >,
-  ref: ForwardedRef<any>,
-) => {
-  const { as: Comp = 'span', ...rest } = props
-  return <Comp {...rest} ref={ref}></Comp>
+type PolymorphicComponentPropWithRef<
+  C extends React.ElementType,
+  Props = {},
+> = PolymorphicComponentProp<C, Props> & {
+  ref?: PolymorphicRef<C>
 }
 
-export const UI = uiForwardRef(UnwrappedLink)
-export default UI
+type FPProps<C extends React.ElementType> = PolymorphicComponentPropWithRef<
+  C,
+  {
+    renderStyles?: boolean
+    styles?: React.CSSProperties
+    classes?: string
+    id?: string
+    children?: React.ReactNode
+  }
+>
+
+/*
+ * FPComponent type definition
+ *
+ * Defines the component function signature for the FP component.
+ *
+ * @typeParam C - The HTML element type to render
+ * @param props - The component props
+ * @returns React component
+ */
+type FPComponent = <C extends React.ElementType = 'span'>(
+  props: FPProps<C>,
+) => React.ReactElement | any
+
+const FP: FPComponent = React.forwardRef(
+  <C extends React.ElementType>(
+    { as, styles, classes, children, defaultStyles, ...props }: FPProps<C>,
+    ref?: PolymorphicRef<C>,
+  ) => {
+    const Component = as || 'div'
+
+    const styleObj: React.CSSProperties = { ...defaultStyles, ...styles }
+
+    return (
+      <Component ref={ref} style={styleObj} className={classes} {...props}>
+        {children}
+      </Component>
+    )
+  },
+)
+
+export default FP

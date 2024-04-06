@@ -1,15 +1,8 @@
+import React from 'react'
 import FP from '../fp'
-import { SharedInputProps } from '../../types'
 
-export type TextareaProps = {
-  /**
-   * Textarea react ref
-   */
-  textareaRef?: React.RefObject<HTMLTextAreaElement>
-} & React.ComponentProps<'textarea'> &
-  SharedInputProps
-
-export const defaultStyles = {}
+export type TextareaProps = React.ComponentProps<'textarea'> &
+  React.ComponentProps<typeof FP>
 
 /**
  * Textarea component.
@@ -33,7 +26,12 @@ export const defaultStyles = {}
 export const Textarea = ({
   id,
   classes,
+  id,
+  classes,
   value,
+  rows = 5,
+  cols = 25,
+  name,
   rows = 5,
   cols = 25,
   name,
@@ -45,11 +43,12 @@ export const Textarea = ({
   onChange,
   ref,
   styles,
-  textareaRef,
   placeholder,
   ...props
 }: TextareaProps) => {
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    if (onChange && !disabled) {
+      onChange?.(e)
     if (onChange && !disabled) {
       onChange?.(e)
     }
@@ -58,9 +57,14 @@ export const Textarea = ({
   const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement>) => {
     if (onBlur && !disabled) {
       onBlur?.(e)
+    if (onBlur && !disabled) {
+      onBlur?.(e)
     }
   }
 
+  const handleKeyDown = (e: React.PointerEvent<HTMLTextAreaElement>) => {
+    if (onPointerDown && !disabled) {
+      onPointerDown?.(e)
   const handleKeyDown = (e: React.PointerEvent<HTMLTextAreaElement>) => {
     if (onPointerDown && !disabled) {
       onPointerDown?.(e)
@@ -72,8 +76,12 @@ export const Textarea = ({
       as="textarea"
       id={id}
       name={name}
+      id={id}
+      name={name}
       rows={rows}
       cols={cols}
+      styles={styles}
+      className={classes}
       styles={styles}
       className={classes}
       data-style="textarea"
@@ -81,15 +89,17 @@ export const Textarea = ({
       value={value}
       aria-disabled={disabled}
       readOnly={readOnly}
+      readOnly={readOnly}
       onChange={handleChange}
       onBlur={handleBlur}
       onPointerDown={handleKeyDown}
-      ref={textareaRef}
+      ref={ref}
       placeholder={placeholder || `${required ? '*' : ''} Message`}
       {...props}
     />
   )
 }
 
+export default Textarea
 export default Textarea
 Textarea.displayName = 'Textarea'

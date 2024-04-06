@@ -2,15 +2,18 @@
 
 a[href] {
   --link-decoration: none;
-  --link-color: #0070f3;
+  --link-color: #085ab7;
   --link-bg: transparent;
   --link-px: 0;
   --link-py: 0;
   --link-transition: all 0.75s ease-in-out;
   --link-fs: 1rem;
-  --link-radius: none;
+  --link-radius: 0.25rem;
   --link-skip-ink: auto;
   --link-decoration-offset: 1.5px;
+  --link-decoration-thickness: 3px;
+  --link-decoration: color: var(--link-color) var(--link-decoration-offset)
+    var(--link-decoration-thickness) var(--link-skip-ink);
   --link-decoration-thickness: 3px;
   --link-decoration: color: var(--link-color) var(--link-decoration-offset)
     var(--link-decoration-thickness) var(--link-skip-ink);
@@ -20,6 +23,8 @@ a[href] {
   text-decoration: var(--link-decoration);
   text-underline-offset: var(--link-decoration-offset);
   text-decoration-skip-ink: var(--link-skip-ink);
+  background-color: var(--link-bg);
+  border-radius: var(--link-radius);
   background-color: var(--link-bg);
   border-radius: var(--link-radius);
 
@@ -37,21 +42,27 @@ a[href] {
     --link-color: currentColor;
   }
 
-  > b:first-of-type {
+  > b,
+  &[data-link~='btn'] {
     --link-button-color: var(--link-color);
-    --link-bg: lightgray;
+    --link-bg: transparent;
     --link-decoration: none;
-    --link-radius: 0.25rem;
     --link-fs: 0.9rem;
-
     background-color: var(--link-bg);
     font-size: var(--link-fs);
     color: var(--link-button-color);
     padding-inline: var(--link-fs);
     padding-block: calc(var(--link-fs) - 0.4rem);
-    border-radius: var(--link-radius);
+    border-radius: var(--link-radius, 99rem);
     display: inline-flex;
     outline: 2px currentColor solid;
     @include mixins.scale-transitions;
   }
+  &[data-link~='pill'] {
+    --link-radius: 99rem;
+  }
+}
+
+header > section {
+  width: auto;
 }

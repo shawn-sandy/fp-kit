@@ -1,0 +1,71 @@
+body > nav,
+[aria-label~=navbar] {
+  padding-inline: var(--nav-px, 1rem);
+  height: var(--nav-h, 3.125rem);
+}
+body > nav ul > li,
+[aria-label~=navbar] ul > li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  padding-inline: var(--nav-px, 0.75rem);
+}
+body > nav ul > li:hover,
+[aria-label~=navbar] ul > li:hover {
+  background-color: var(--nav-hov-bg, whitesmoke);
+}
+
+nav {
+  display: var(--nav-dsp, flex);
+  flex-direction: var(--nav-direction, row);
+  width: var(--nav-w, auto);
+  place-items: var(--nav-align, center);
+  justify-content: var(--nav-justify, space-between);
+  margin-inline: var(--nav-mx, 0);
+  background-color: var(--nav-bg, initial);
+}
+nav > section,
+nav > ul {
+  --nav-dsp: flex;
+  flex-direction: var(--nav-direction, row);
+  display: var(--nav-dsp, flex);
+  gap: var(--nav-gap, 0);
+  font-size: var(--nav-fs, 0.9rem);
+  align-items: var(--nav-align, center);
+  padding-inline: var(--nav-px, 1rem);
+  padding-block: var(--nav-py, 0);
+  height: 100%;
+}
+nav > section[data-list~=block],
+nav > ul[data-list~=block] {
+  --nav-direction: column;
+}
+nav > section > div {
+  --py: 0;
+}
+nav ul > li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  padding-inline: var(--nav-px, 1rem);
+}
+nav img[alt] {
+  --px: 0 var(--s1);
+  --w: var(--brand-w, 3.6rem);
+}
+nav[data-variant] {
+  background-color: var(--nav-bg);
+  color: var(--nav-cl);
+  font-size: var(--nav-fs, 0.9rem);
+}
+nav > div {
+  margin-block-start: 0;
+}
+
+/*# sourceMappingURL=nav.css.map */

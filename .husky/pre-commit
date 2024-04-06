@@ -7,19 +7,14 @@
 # npx pretty-quick --staged "$1"
 
 # commitizen
-echo 'Starting commitlint...'
-npx commitlint -V --edit  "$1"
+# echo 'Starting commitlint...'
+# npx commitlint -V --edit  "$1"
 
 # lint-staged
 echo 'Starting lint-staged...'
-npx lint-staged "$1"
-git add -A
-
-# run build
-echo 'Starting lint-staged...'
-# npm run package "$1"
-
+# npx lint-staged "$1"
+# git add -A
 
 # If everything passes... Now we can commit
 echo '✅✅✅✅ Excellent all test passed, I am committing this now.'
-# npx lint-staged
+

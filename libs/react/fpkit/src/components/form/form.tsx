@@ -1,4 +1,4 @@
-import FP from '#components/fp'
+import UI from '#components/fp'
 import React from 'react'
 
 import Input from './inputs'
@@ -6,20 +6,23 @@ import Field from './fields'
 import Select from './select'
 import Textarea from './textarea'
 
-export type FormProps = {
-  /** Form submit handler */
-  formAction: (e: React.FormEvent<HTMLFormElement>) => void
-  /** Optional additional submit handler */
-  onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
-} & Partial<React.ComponentProps<typeof FP>>
+export type FormProps = Partial<React.ComponentProps<typeof UI>> &
+  React.ComponentProps<'form'>
 
 /**
- * Form component props interface
- * @interface FormProps
- * @property {React.ReactNode} children - Child elements/components
- * @property {(e: React.FormEvent<HTMLFormElement>) => void} formAction - Form submit handler
- * @property {(e: React.FormEvent<HTMLFormElement>) => void} [onSubmit] - Optional additional submit handler
- * @property {Partial<React.ComponentProps<typeof FP>>} ...props - Remaining props
+ * Form component
+ * @param {Object} props - Form component props
+ * @param {string} [id] - Unique identifier for form
+ * @param {string} [name] - Name for form
+ * @param {Object} [styles] - Inline styles
+ * @param {string} [classes] - Additional classes
+ * @param {ReactNode} children - Child elements
+ * @param {string} [action] - Form action URL
+ * @param {('get'|'post')} [formMethod='post'] - Form method
+ * @param {Function} [onSubmit] - Submit callback
+ * @param {string} [target] - Form submit target
+ * @param {boolean} [noValidate=false] - Disable validation
+ * @param {Object} ...props - Additional props
  */
 export const Form = ({
   id,
@@ -27,7 +30,7 @@ export const Form = ({
   styles,
   classes,
   children,
-  formAction,
+  action,
   formMethod,
   onSubmit,
   target,
@@ -42,20 +45,21 @@ export const Form = ({
   }
 
   return (
-    <FP
+    <UI
       as="form"
       id={id}
       name={name}
       className={classes}
       styles={styles}
-      action={formAction}
+      action={action}
       novalidate={noValidate}
       method={formMethod}
       onSubmit={onSubmitCallback}
+      target={target}
       {...props}
     >
       {children}
-    </FP>
+    </UI>
   )
 }
 

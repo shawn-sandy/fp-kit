@@ -43,8 +43,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
   margin-block-end: 0;
   margin-block-start: 0;
@@ -163,16 +163,16 @@ svg {
   pointer-events: none;
 }
 
-svg[role='img'] {
+svg[role=img] {
   display: inline-flex;
   align-items: center;
   width: auto;
 }
 
 :root {
-  --font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --fs: 1rem;
 }
 
@@ -249,20 +249,20 @@ button[type] {
   --btn-bdr: solid var(--btn-sg);
 }
 
-button[type='submit'],
-button[style*='submit'] {
+button[type=submit],
+button[style*=submit] {
   --btn-bg: var(--primary-500, royal-blue);
   --btn-color: white;
 }
 
 button[disabled],
-button[aria-disabled='true'] {
+button[aria-disabled=true] {
   cursor: var(--btn-cursor, not-allowed);
   opacity: var(--btn-opacity, 0.5);
 }
 
 button[disabled]:is(:hover, :focus),
-button[aria-disabled='true']:is(:hover, :focus) {
+button[aria-disabled=true]:is(:hover, :focus) {
   transform: none;
   opacity: var(--btn-opacity, 0.5);
 }
@@ -275,44 +275,44 @@ button:is(:hover, :focus) {
   outline-offset: var(--line-offset, 5px);
 }
 
-button:is(:hover, :focus)[aria-disabled='true'] {
+button:is(:hover, :focus)[aria-disabled=true] {
   transform: none;
   opacity: var(--btn-opacity, 0.5);
 }
 
-button[type='reset'] {
+button[type=reset] {
   --btn-bg: transparent;
   --btn-color: gray;
   --btn-bdr: gray thin solid;
 }
 
-button[type='submit'] {
+button[type=submit] {
   --btn-bg: var(--primary-700, blue);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
 }
 
-button[data-fp-btn~='pill'],
-button[data-btn~='pill'],
-button[data-style~='pill'] {
+button[data-fp-btn~=pill],
+button[data-btn~=pill],
+button[data-style~=pill] {
   border-radius: var(--btn-pill, 100rem);
 }
 
-button[data-btn~='sm'] {
+button[data-btn~=sm] {
   --btn-fs: var(--btn-sm);
 }
 
-button[data-btn~='md'] {
+button[data-btn~=md] {
   --btn-fs: var(--btn-md);
 }
 
-button[data-btn~='lg'] {
+button[data-btn~=lg] {
   --btn-fs: var(--btn-lg);
 }
 
-p[role='note'],
-[role='note'],
+p[role=note],
+[role=note],
 [data-badge] {
   --beta: var(--warning-500, orange);
   --stable: var(--success-500, green);
@@ -333,54 +333,54 @@ p[role='note'],
   border-radius: var(--badge-radius);
 }
 
-p[role='note'][data-badge~='beta'],
-[role='note'][data-badge~='beta'],
-[data-badge][data-badge~='beta'] {
+p[role=note][data-badge~=beta],
+[role=note][data-badge~=beta],
+[data-badge][data-badge~=beta] {
   background-color: var(--beta);
 }
 
-p[role='note'][data-badge~='stable'],
-[role='note'][data-badge~='stable'],
-[data-badge][data-badge~='stable'] {
+p[role=note][data-badge~=stable],
+[role=note][data-badge~=stable],
+[data-badge][data-badge~=stable] {
   --badge-cl: white;
   --badge-bg: var(--stable);
 }
 
-p[role='note'][data-badge~='production'],
-[role='note'][data-badge~='production'],
-[data-badge][data-badge~='production'] {
+p[role=note][data-badge~=production],
+[role=note][data-badge~=production],
+[data-badge][data-badge~=production] {
   --badge-color: white;
   --badge-bg: var(--production);
 }
 
-p[role='note'][data-badge~='beta'],
-[role='note'][data-badge~='beta'],
-[data-badge][data-badge~='beta'] {
+p[role=note][data-badge~=beta],
+[role=note][data-badge~=beta],
+[data-badge][data-badge~=beta] {
   --badge-color: currentColor;
   --badge-bg: var(--beta);
 }
 
-p[role='note'][data-badge~='alpha'],
-[role='note'][data-badge~='alpha'],
-[data-badge][data-badge~='alpha'] {
+p[role=note][data-badge~=alpha],
+[role=note][data-badge~=alpha],
+[data-badge][data-badge~=alpha] {
   --badge-color: currentColor;
   --badge-bg: var(--beta);
 }
 
-p[role='note'][data-badge~='beta'],
-[role='note'][data-badge~='beta'],
-[data-badge][data-badge~='beta'] {
+p[role=note][data-badge~=beta],
+[role=note][data-badge~=beta],
+[data-badge][data-badge~=beta] {
   --badge-color: currentColor;
   --badge-bg: var(--beta);
 }
 
-p[role='note'] {
+p[role=note] {
   --badge-display: block;
   --border-radius: 0.5rem;
 }
 
 [data-card],
-[data-component~='card'] {
+[data-component~=card] {
   --card-p: 2rem;
   --card-bg: #fff;
   --card-radius: calc(var(--card-p) / 3);
@@ -400,13 +400,13 @@ p[role='note'] {
 }
 
 details {
-  --details-display: 'flex';
-  --details-flex-direction: 'column';
-  --details-align-items: 'flex-start';
-  --details-margin: '0';
-  --details-width: '100%';
-  --details-padding-x: '0';
-  --details-padding-y: '1.5rem';
+  --details-display: "flex";
+  --details-flex-direction: "column";
+  --details-align-items: "flex-start";
+  --details-margin: "0";
+  --details-width: "100%";
+  --details-padding-x: "0";
+  --details-padding-y: "1.5rem";
   display: var(--details-display);
   flex-direction: var(--details-flex-direction);
   align-items: var(--details-align-items);
@@ -556,5 +556,7 @@ details[open] > summary {
 details[open] > section {
   max-height: var(--max-h-open);
 }
+
+
 
 /*# sourceMappingURL=index.css.map */

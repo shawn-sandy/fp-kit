@@ -16,15 +16,15 @@ export interface ComponentProps {
   /**
    * Styles object
    */
-  styles?: React.CSSProperties | {}
+  styles?: React.CSSProperties
   /**
    * Default styles object
    */
-  defaultStyles?: {}
+  defaultStyles?: React.CSSProperties
   /**
    * Component class attribute
    */
-  classes?: string | undefined
+  classes?: string
   /**
    * Style value for [data-style] attribute
    */

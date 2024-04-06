@@ -2,18 +2,39 @@
   --font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --fs: 1rem;
+  --TRUE: initial;
+  --FALSE: ;
+  --weight: 600;
 }
 
 html {
   font-family: var(--font-family);
-  font-size: var(--fs);
+  font-size: 100%;
+}
+
+body {
+  display: var(--body-dsp, flex);
+  min-height: 100%;
+  flex-direction: var(--body-direction, column);
+  min-width: 20.3125rem;
+  font-size: var(--fs-0);
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+* + div,
+* + ul,
+* + section {
+  margin-block-start: 1rem;
 }
 
 main,
 header,
-footer {
-  font-size: var(--fs);
+footer,
+section {
+  font-size: var(--fs-0);
   > section {
     margin-inline: auto;
     width: var(--content-w, 80%);
@@ -32,8 +53,10 @@ section {
 }
 
 p {
-  font-size: var(--fs);
-  max-width: var(--p-max-w, 70ch);
+  max-width: 70ch;
+  font-size: var(--fs-0);
+  line-height: 1.6;
+
   & + p {
     margin-block-start: 1rem;
   }
@@ -45,17 +68,18 @@ ol {
   flex-direction: var(--li-direction, column);
   gap: var(--li-gap, 0.2rem);
   flex-wrap: var(--li-wrap, nowrap);
+  padding-inline-start: var(--spc-3);
   &[role='list'],
-  &[data-list='unstyled'] {
+  &[data-list~='unstyled'] {
     list-style: var(--li-style, none);
     margin-block-end: var(--li-my, 0);
     margin-block-start: var(--li-mx, 0);
-    padding-inline-start: var(--li-px, 0);
   }
-  &[data-list='inline'] {
+  &[data-list~='inline'] {
     --li-direction: row;
     --li-gap: 1rem;
     --li-wrap: wrap;
+    --li-px: 0;
   }
 }
 
@@ -71,4 +95,49 @@ blockquote {
 
 strong {
   font-weight: var(--weight);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--weight);
+  margin-block-start: 0;
+  margin-block-end: 1rem;
+}
+
+h1 {
+  font-size: var(--title-1, var(--fs-6));
+}
+
+h2 {
+  font-size: var(--title-2, var(--fs-5));
+}
+
+h3 {
+  font-size: var(--title-3, var(--fs-4));
+}
+
+h4 {
+  font-size: var(--title-4, var(--fs-3));
+}
+
+h5 {
+  font-size: var(--title-5, var(--fs-0));
+}
+
+h6 {
+  font-size: var(--title-6, var(--fs-2));
+}
+
+hr {
+  --hr-h: 0.0625rem;
+  --hr-color: lightgray;
+  --hr-my: 1.5rem;
+  --hr-style: dotted;
+  border: none;
+  border-bottom: var(--hr-h) var(--hr-style) var(--hr-color);
+  margin-block: var(--hr-my);
 }

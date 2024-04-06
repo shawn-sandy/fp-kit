@@ -25,13 +25,42 @@ const meta: Meta<typeof Main> = {
     // @ts-ignore
     'data-testid': 'main',
   },
+  decorators: [
+    (Story) => (
+      <div style={{ minHeight: '80vh', display: 'flex' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta
 
 const mainChildren = () => (
-  <section>
-    <h2>Header Title</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, unde?</p>
-  </section>
+  <>
+    <section aria-label="main-content">
+      <article>
+        <h3>Header Title</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis alias,
+          labore quibusdam, culpa dolorum rerum fugiat laborum deserunt sed ad
+          eveniet, modi reprehenderit vero pariatur enim esse eaque consectetur
+          nulla.
+        </p>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis alias,
+          labore quibusdam, culpa dolorum rerum fugiat laborum deserunt sed ad
+          eveniet, modi reprehenderit vero pariatur enim esse eaque consectetur
+          nulla.
+        </p>
+        <div>Lorem ipsum dolor sit amet.</div>
+      </article>
+      <aside>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, unde?
+        </p>
+      </aside>
+    </section>
+  </>
 )
 
 export default meta
@@ -45,7 +74,7 @@ export const MainLandmark: Story = {
   },
 }
 
-export const MainWithChildren: Story = {
+export const MainArticles: Story = {
   args: {
     // @ts-ignore
     children: mainChildren(),

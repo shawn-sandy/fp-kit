@@ -1,25 +1,17 @@
 import * as React from 'react'
-import FP from '../fp'
+import UI from '../ui'
 
 type ListProps = {
-  /** Styles to be applied to the list */
-  styles?: React.CSSProperties
-  /** CSS classes to be applied to the list */
-  classes?: string
-  /** Children to be rendered inside the list */
-  children: React.ReactNode
   /** Type of list to render (default: 'ul') */
   type?: 'ul' | 'ol' | 'dl'
-  /** The ro */
-  role?: string | undefined
   /** variant of list to render (default: 'none') */
   variant?: string
-}
+} & React.ComponentProps<typeof UI>
 
-export type ListItemProps = Omit<ListProps, 'type' | 'role'> & {
+export type ListItemProps = {
   /** Type of list item to render (default: 'li') */
   type?: 'li' | 'dt' | 'dd'
-}
+} & React.ComponentProps<typeof UI>
 
 /**
  * ListItem component
@@ -31,26 +23,28 @@ export type ListItemProps = Omit<ListProps, 'type' | 'role'> & {
  */
 export const ListItem = ({
   type = 'li',
+  id,
   styles,
   children,
+  classes,
   ...props
 }: ListItemProps) => {
   return (
-    <FP as={type} {...props}>
+    <UI id={id} as={type} className={classes} {...props} style={styles}>
       {children}
-    </FP>
+    </UI>
   )
 }
 
 /**
- * A component that renders a list.
- * @param children - The content to render inside the list.
- * @param classes - The CSS classes to apply to the list.
- * @param type - The type of list to render (ul or ol).
- * @param variant - The variant of the list.
- * @param styles - The inline styles to apply to the list.
- * @param props - Additional props to apply to the list.
- * @returns The rendered list component.
+ * List component renders a list element with provided props
+ * @param children - Child elements to render inside the list
+ * @param classes - CSS classes to apply
+ * @param type - Type of list element (default: 'ul')
+ * @param variant - Variant for styling purposes
+ * @param styles - Inline styles object
+ * @param role - ARIA role
+ * @param props - Additional props to pass to underlying element
  */
 export const List = ({
   children,
@@ -62,7 +56,7 @@ export const List = ({
   ...props
 }: ListProps) => {
   return (
-    <FP
+    <UI
       as={type}
       data-variant={variant}
       className={classes}
@@ -71,7 +65,7 @@ export const List = ({
       {...props}
     >
       {children}
-    </FP>
+    </UI>
   )
 }
 

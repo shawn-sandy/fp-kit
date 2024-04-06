@@ -1,40 +1,105 @@
 header,
+[data-hero],
 [data-grid~='overlay'] {
   // Name of the grid area
   --overlay-grid-area: overlay;
-
   // Placement of items in grid area
   --overlay-placement: center;
-
   // Controls display of grid
   --overlay-display: grid;
-
   // Overlay padding
   --overlay-padding: 2rem;
-
-  --overlay-w: min(100vw, 90vw);
-
-  --overlay-h: min(70vh, 50vh);
-
+  --overlay-w: 100%;
+  --overlay-h: 40vh;
+  --overlay-max-h: 500px;
   --overlay-color: currentColor;
+  --overlay-content-w: 80%;
+  --overlay-gap: 2rem;
+  --overlay-bg: whitesmoke;
+  --overlay-px: auto;
+  --overlay-py: auto;
+  --overlay-mx: auto;
+  --overlay-my: auto;
 
   grid-template-areas: 'overlay';
-
   display: var(--overlay-display);
-
   place-items: var(--overlay-placement);
   align-items: var(--overlay-placement);
-  height: var(--overlay-h);
+  min-height: var(--overlay-h);
   width: var(--overlay-w);
   color: var(--overlay-color);
-
+  background-color: var(--overlay-bg);
   > * {
     grid-area: overlay;
   }
+
   > img {
     width: var(--overlay-w);
+    height: auto;
+    background-size: contain;
+  }
+  > div,
+  > section {
+    max-width: var(--overlay-content-w);
+    padding-inline: var(--spc-4);
+    margin-inline: var(--overlay-mx);
   }
   > section {
+    --overlay-display: flex;
+    gap: var(--overlay-gap);
+    text-align: center;
+    p {
+      width: auto;
+      max-width: 60ch;
+    }
+  }
+}
+
+main,
+footer {
+  --content-w: min(100%, 1480px);
+  --content-mx: auto;
+  --content-px: 1rem;
+  --content-gap: 2rem;
+  padding-block: var(--overlay-padding);
+  > section {
+    width: var(--content-w);
+    margin-inline: var(--content-mx);
+    padding-inline: var(--spc-6);
+  }
+}
+
+main {
+  flex: 1;
+  font-size: var(--fs-3);
+  > section[aria-label],
+  > section {
+    width: var(--content-w);
+    margin-inline: var(--content-mx);
+    &:has(> article, > aside) {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      gap: var(--content-gap);
+      > article {
+        flex-basis: 0;
+        flex-grow: 999;
+        min-inline-size: 50%;
+      }
+      > aside {
+        flex-basis: 20rem;
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+footer {
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 5rem;
     text-align: center;
   }
 }

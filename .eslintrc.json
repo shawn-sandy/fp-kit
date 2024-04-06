@@ -4,13 +4,12 @@
     "es2021": true
   },
   "extends": [
-    "standard",
-    "eslint-config-prettier",
-    "plugin:react/recommended",
-    "@azimutlabs/eslint-config-jsx-a11y",
     "eslint:recommended",
-    "plugin:storybook/recommended"
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -18,10 +17,17 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "jsx-a11y"],
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
   "rules": {
-    "jsx-quotes": ["error", "prefer-single"],
-    "complexity": ["error", 2],
-    "@typescript-eslint/no-explicit-any": "error"
+    // Add your rules here
+    "react/prop-types": "off",
+    "jsx-quotes": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "react/react-in-jsx-scop": "off",
+    "no-unused-vars": "error",
+    "react/display-name": "warn"
   }
 }

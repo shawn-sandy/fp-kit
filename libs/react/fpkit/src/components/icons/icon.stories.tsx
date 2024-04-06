@@ -29,7 +29,7 @@ export const IconSet = {
   args: {},
   render: (...args: any) => {
     return (
-      <Icon styles={Icon.styles}>
+      <Icon>
         <Icon.Code styles={Icon.Code.styles} />
         Code Icon{' '}
       </Icon>
