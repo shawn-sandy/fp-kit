@@ -26,7 +26,12 @@ export type TextareaProps = React.ComponentProps<'textarea'> &
 export const Textarea = ({
   id,
   classes,
+  id,
+  classes,
   value,
+  rows = 5,
+  cols = 25,
+  name,
   rows = 5,
   cols = 25,
   name,
@@ -44,15 +49,22 @@ export const Textarea = ({
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     if (onChange && !disabled) {
       onChange?.(e)
+    if (onChange && !disabled) {
+      onChange?.(e)
     }
   }
 
   const handleBlur = (e: React.FocusEvent<HTMLTextAreaElement>) => {
     if (onBlur && !disabled) {
       onBlur?.(e)
+    if (onBlur && !disabled) {
+      onBlur?.(e)
     }
   }
 
+  const handleKeyDown = (e: React.PointerEvent<HTMLTextAreaElement>) => {
+    if (onPointerDown && !disabled) {
+      onPointerDown?.(e)
   const handleKeyDown = (e: React.PointerEvent<HTMLTextAreaElement>) => {
     if (onPointerDown && !disabled) {
       onPointerDown?.(e)
@@ -64,14 +76,19 @@ export const Textarea = ({
       as="textarea"
       id={id}
       name={name}
+      id={id}
+      name={name}
       rows={rows}
       cols={cols}
+      styles={styles}
+      className={classes}
       styles={styles}
       className={classes}
       data-style="textarea"
       required={required}
       value={value}
       aria-disabled={disabled}
+      readOnly={readOnly}
       readOnly={readOnly}
       onChange={handleChange}
       onBlur={handleBlur}
@@ -83,5 +100,6 @@ export const Textarea = ({
   )
 }
 
+export default Textarea
 export default Textarea
 Textarea.displayName = 'Textarea'

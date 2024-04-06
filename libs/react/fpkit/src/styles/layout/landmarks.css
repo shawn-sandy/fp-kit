@@ -1,6 +1,6 @@
 header,
 [data-hero],
-[data-grid~=overlay] {
+[data-grid~='overlay'] {
   --overlay-grid-area: overlay;
   --overlay-placement: center;
   --overlay-display: grid;
@@ -16,7 +16,7 @@ header,
   --overlay-py: auto;
   --overlay-mx: auto;
   --overlay-my: auto;
-  grid-template-areas: "overlay";
+  grid-template-areas: 'overlay';
   display: var(--overlay-display);
   place-items: var(--overlay-placement);
   align-items: var(--overlay-placement);
@@ -27,12 +27,12 @@ header,
 }
 header > *,
 [data-hero] > *,
-[data-grid~=overlay] > * {
+[data-grid~='overlay'] > * {
   grid-area: overlay;
 }
 header > img,
 [data-hero] > img,
-[data-grid~=overlay] > img {
+[data-grid~='overlay'] > img {
   width: var(--overlay-w);
   height: auto;
   background-size: contain;
@@ -41,22 +41,22 @@ header > div,
 header > section,
 [data-hero] > div,
 [data-hero] > section,
-[data-grid~=overlay] > div,
-[data-grid~=overlay] > section {
+[data-grid~='overlay'] > div,
+[data-grid~='overlay'] > section {
   max-width: var(--overlay-content-w);
   padding-inline: var(--spc-4);
   margin-inline: var(--overlay-mx);
 }
 header > section,
 [data-hero] > section,
-[data-grid~=overlay] > section {
+[data-grid~='overlay'] > section {
   --overlay-display: flex;
   gap: var(--overlay-gap);
   text-align: center;
 }
 header > section p,
 [data-hero] > section p,
-[data-grid~=overlay] > section p {
+[data-grid~='overlay'] > section p {
   width: auto;
   max-width: 60ch;
 }

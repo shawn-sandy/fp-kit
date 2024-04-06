@@ -107,6 +107,8 @@ export const Section = ({
   children,
   styles,
   classes,
+  styles,
+  classes,
   ...props
 }: ComponentProps) => {
   return (
@@ -126,6 +128,8 @@ export const Section = ({
 export const Article = ({
   id,
   children,
+  styles,
+  classes,
   styles,
   classes,
   ...props

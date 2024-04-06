@@ -1,6 +1,9 @@
 @use '../../sass/mixins';
 
 a[href] {
+@use '../../sass/mixins';
+
+a[href] {
   --link-decoration: none;
   --link-color: #085ab7;
   --link-bg: transparent;
@@ -14,12 +17,17 @@ a[href] {
   --link-decoration-thickness: 3px;
   --link-decoration: color: var(--link-color) var(--link-decoration-offset)
     var(--link-decoration-thickness) var(--link-skip-ink);
+  --link-decoration-thickness: 3px;
+  --link-decoration: color: var(--link-color) var(--link-decoration-offset)
+    var(--link-decoration-thickness) var(--link-skip-ink);
 
   color: var(--link-color);
   font-size: var(--link-fs);
   text-decoration: var(--link-decoration);
   text-underline-offset: var(--link-decoration-offset);
   text-decoration-skip-ink: var(--link-skip-ink);
+  background-color: var(--link-bg);
+  border-radius: var(--link-radius);
   background-color: var(--link-bg);
   border-radius: var(--link-radius);
 

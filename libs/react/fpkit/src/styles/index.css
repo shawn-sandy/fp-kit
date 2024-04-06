@@ -1,70 +1,14 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* Error: expected "{".
+ *   ,
+ * 3 | @import './sass/type';
+ *   |                      ^
+ *   '
+ *   src/index.scss 3:22  root stylesheet */
 
-::selection {
-  /* Optional */
-  /* It can be really hard to read highlighted text with a text-shadow, it should be removed when selected */
-  text-shadow: none;
-  /* NOTE: Using this means the color and background-color are set to transparent for selected text... */
-  /* So you can customise your styles below */
-  color: #fff;
-  background-color: #00f;
-}
-
-/*
-  3. Allow percentage-based heights in the application
-*/
-html,
-body {
-  height: 100%;
-  font-size: 100%;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-a,
-button {
-  cursor: pointer;
-}
-
-/* Make images easier to work with */
-img,
-picture,
-video,
-canvas {
+body::before {
+  font-family: 'Source Code Pro', 'SF Mono', Monaco, Inconsolata, 'Fira Mono',
+    'Droid Sans Mono', monospace, monospace;
+  white-space: pre;
   display: block;
   max-width: 100%;
   aspect-ratio: auto;
@@ -158,7 +102,7 @@ svg {
   /* Prevent the SVG from altering cursor interaction */
   pointer-events: none;
 }
-svg[role=img] {
+svg[role='img'] {
   display: inline-flex;
   align-items: center;
   width: auto;
@@ -252,9 +196,9 @@ svg[role=img] {
 }
 
 :root {
-  --font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --TRUE: initial;
   --FALSE: ;
   --weight: 600;
@@ -325,15 +269,16 @@ ol {
   flex-wrap: var(--li-wrap, nowrap);
   padding-inline-start: var(--spc-3);
 }
-ul[role=list], ul[data-list~=unstyled],
-ol[role=list],
-ol[data-list~=unstyled] {
+ul[role='list'],
+ul[data-list~='unstyled'],
+ol[role='list'],
+ol[data-list~='unstyled'] {
   list-style: var(--li-style, none);
   margin-block-end: var(--li-my, 0);
   margin-block-start: var(--li-mx, 0);
 }
-ul[data-list~=inline],
-ol[data-list~=inline] {
+ul[data-list~='inline'],
+ol[data-list~='inline'] {
   --li-direction: row;
   --li-gap: 1rem;
   --li-wrap: wrap;
@@ -399,16 +344,17 @@ hr {
   margin-block: var(--hr-my);
 }
 
-h1[data-ui~=display], h1:has(span:first-of-type) > span,
-h2[data-ui~=display],
+h1[data-ui~='display'],
+h1:has(span:first-of-type) > span,
+h2[data-ui~='display'],
 h2:has(span:first-of-type) > span,
-h3[data-ui~=display],
+h3[data-ui~='display'],
 h3:has(span:first-of-type) > span,
-h4[data-ui~=display],
+h4[data-ui~='display'],
 h4:has(span:first-of-type) > span,
-h5[data-ui~=display],
+h5[data-ui~='display'],
 h5:has(span:first-of-type) > span,
-h6[data-ui~=display],
+h6[data-ui~='display'],
 h6:has(span:first-of-type) > span {
   --weight: 600;
   --title-1: var(--h1);
@@ -453,15 +399,18 @@ button[type] {
   background-color: var(--btn-bg, var(--neutral-300));
   --btn-bdr: solid var(--btn-sg);
 }
-button[type=submit], button[style*=submit] {
+button[type='submit'],
+button[style*='submit'] {
   --btn-bg: var(--primary-500, royal-blue);
   --btn-color: white;
 }
-button[disabled], button[aria-disabled=true] {
+button[disabled],
+button[aria-disabled='true'] {
   cursor: var(--btn-cursor, not-allowed);
   opacity: var(--btn-opacity, 0.5);
 }
-button[disabled]:is(:hover, :focus), button[aria-disabled=true]:is(:hover, :focus) {
+button[disabled]:is(:hover, :focus),
+button[aria-disabled='true']:is(:hover, :focus) {
   transform: none;
   opacity: var(--btn-opacity, 0.5);
 }
@@ -471,36 +420,38 @@ button:is(:hover, :focus) {
   transform: scale(0.95) var(--line-style, solid);
   outline-offset: var(--line-offset, 5px);
 }
-button:is(:hover, :focus)[aria-disabled=true] {
+button:is(:hover, :focus)[aria-disabled='true'] {
   transform: none;
   opacity: var(--btn-opacity, 0.5);
 }
-button[type=reset] {
+button[type='reset'] {
   --btn-bg: transparent;
   --btn-color: gray;
   --btn-bdr: gray thin solid;
 }
-button[type=submit] {
+button[type='submit'] {
   --btn-bg: var(--primary-700, blue);
   --btn-cl: #fff;
   --btn-color: rgb(231, 231, 231);
   --btn-border: none;
 }
-button[data-fp-btn~=pill], button[data-btn~=pill], button[data-style~=pill] {
+button[data-fp-btn~='pill'],
+button[data-btn~='pill'],
+button[data-style~='pill'] {
   border-radius: var(--btn-pill, 100rem);
 }
-button[data-btn~=sm] {
+button[data-btn~='sm'] {
   --btn-fs: var(--btn-sm);
 }
-button[data-btn~=md] {
+button[data-btn~='md'] {
   --btn-fs: var(--btn-md);
 }
-button[data-btn~=lg] {
+button[data-btn~='lg'] {
   --btn-fs: var(--btn-lg);
 }
 
-p[role=note],
-[role=note],
+p[role='note'],
+[role='note'],
 small > span,
 [data-tag] {
   --beta: var(--warning-500, orange);
@@ -522,49 +473,49 @@ small > span,
   background-color: var(--tag-bg);
   border-radius: var(--tag-radius);
 }
-p[role=note][data-tag~=beta],
-[role=note][data-tag~=beta],
-small > span[data-tag~=beta],
-[data-tag][data-tag~=beta] {
+p[role='note'][data-tag~='beta'],
+[role='note'][data-tag~='beta'],
+small > span[data-tag~='beta'],
+[data-tag][data-tag~='beta'] {
   background-color: var(--beta);
 }
-p[role=note][data-tag~=stable],
-[role=note][data-tag~=stable],
-small > span[data-tag~=stable],
-[data-tag][data-tag~=stable] {
+p[role='note'][data-tag~='stable'],
+[role='note'][data-tag~='stable'],
+small > span[data-tag~='stable'],
+[data-tag][data-tag~='stable'] {
   --tag-cl: white;
   --tag-bg: var(--stable);
 }
-p[role=note][data-tag~=production],
-[role=note][data-tag~=production],
-small > span[data-tag~=production],
-[data-tag][data-tag~=production] {
+p[role='note'][data-tag~='production'],
+[role='note'][data-tag~='production'],
+small > span[data-tag~='production'],
+[data-tag][data-tag~='production'] {
   --tag-color: white;
   --tag-bg: var(--production);
 }
-p[role=note][data-tag~=beta],
-[role=note][data-tag~=beta],
-small > span[data-tag~=beta],
-[data-tag][data-tag~=beta] {
+p[role='note'][data-tag~='beta'],
+[role='note'][data-tag~='beta'],
+small > span[data-tag~='beta'],
+[data-tag][data-tag~='beta'] {
   --tag-color: currentColor;
   --tag-bg: var(--beta);
 }
-p[role=note][data-tag~=alpha],
-[role=note][data-tag~=alpha],
-small > span[data-tag~=alpha],
-[data-tag][data-tag~=alpha] {
+p[role='note'][data-tag~='alpha'],
+[role='note'][data-tag~='alpha'],
+small > span[data-tag~='alpha'],
+[data-tag][data-tag~='alpha'] {
   --tag-color: currentColor;
   --tag-bg: var(--beta);
 }
-p[role=note][data-tag~=beta],
-[role=note][data-tag~=beta],
-small > span[data-tag~=beta],
-[data-tag][data-tag~=beta] {
+p[role='note'][data-tag~='beta'],
+[role='note'][data-tag~='beta'],
+small > span[data-tag~='beta'],
+[data-tag][data-tag~='beta'] {
   --tag-color: currentColor;
   --tag-bg: var(--beta);
 }
 
-p[role=note] {
+p[role='note'] {
   --tag-display: block;
   --border-radius: 0.5rem;
 }
@@ -610,7 +561,7 @@ figure:has(img[alt]) > figcaption {
 }
 
 [data-card],
-[data-component~=card] {
+[data-component~='card'] {
   --card-p: 2rem;
   --card-bg: #fff;
   --card-radius: calc(var(--card-p) / 3);
@@ -775,10 +726,12 @@ a[href]:focus {
   outline: none;
   --link-decoration: underline;
 }
-a[href]:visited, a[href]:active {
+a[href]:visited,
+a[href]:active {
   --link-color: currentColor;
 }
-a[href] > b, a[href][data-link~=btn] {
+a[href] > b,
+a[href][data-link~='btn'] {
   --link-button-color: var(--link-color);
   --link-bg: transparent;
   --link-decoration: none;
@@ -797,10 +750,11 @@ a[href] > b, a[href][data-link~=btn] {
   transform: var(--scale);
   transition: var(--scale-transition);
 }
-a[href] > b:hover, a[href][data-link~=btn]:hover {
+a[href] > b:hover,
+a[href][data-link~='btn']:hover {
   transform: var(--scale-to);
 }
-a[href][data-link~=pill] {
+a[href][data-link~='pill'] {
   --link-radius: 99rem;
 }
 
@@ -810,7 +764,7 @@ header > section {
 
 header,
 [data-hero],
-[data-grid~=overlay] {
+[data-grid~='overlay'] {
   --overlay-grid-area: overlay;
   --overlay-placement: center;
   --overlay-display: grid;
@@ -826,7 +780,7 @@ header,
   --overlay-py: auto;
   --overlay-mx: auto;
   --overlay-my: auto;
-  grid-template-areas: "overlay";
+  grid-template-areas: 'overlay';
   display: var(--overlay-display);
   place-items: var(--overlay-placement);
   align-items: var(--overlay-placement);
@@ -837,12 +791,12 @@ header,
 }
 header > *,
 [data-hero] > *,
-[data-grid~=overlay] > * {
+[data-grid~='overlay'] > * {
   grid-area: overlay;
 }
 header > img,
 [data-hero] > img,
-[data-grid~=overlay] > img {
+[data-grid~='overlay'] > img {
   width: var(--overlay-w);
   height: auto;
   background-size: contain;
@@ -851,22 +805,22 @@ header > div,
 header > section,
 [data-hero] > div,
 [data-hero] > section,
-[data-grid~=overlay] > div,
-[data-grid~=overlay] > section {
+[data-grid~='overlay'] > div,
+[data-grid~='overlay'] > section {
   max-width: var(--overlay-content-w);
   padding-inline: var(--spc-4);
   margin-inline: var(--overlay-mx);
 }
 header > section,
 [data-hero] > section,
-[data-grid~=overlay] > section {
+[data-grid~='overlay'] > section {
   --overlay-display: flex;
   gap: var(--overlay-gap);
   text-align: center;
 }
 header > section p,
 [data-hero] > section p,
-[data-grid~=overlay] > section p {
+[data-grid~='overlay'] > section p {
   width: auto;
   max-width: 60ch;
 }
@@ -938,17 +892,17 @@ sup:has(> span) {
 sup:has(> span) span {
   color: inherit;
 }
-sup:has(> span)[data-badge~=rounded] {
+sup:has(> span)[data-badge~='rounded'] {
   --badge-radius: 100%;
 }
 
 body > nav,
-[aria-label~=navbar] {
+[aria-label~='navbar'] {
   padding-inline: var(--nav-px, 1rem);
   height: var(--nav-h, 3.125rem);
 }
 body > nav ul > li,
-[aria-label~=navbar] ul > li {
+[aria-label~='navbar'] ul > li {
   display: flex;
   align-items: center;
   list-style: none;
@@ -958,7 +912,7 @@ body > nav ul > li,
   padding-inline: var(--nav-px, 0.75rem);
 }
 body > nav ul > li:hover,
-[aria-label~=navbar] ul > li:hover {
+[aria-label~='navbar'] ul > li:hover {
   background-color: var(--nav-hov-bg, whitesmoke);
 }
 
@@ -983,8 +937,8 @@ nav > ul {
   padding-block: var(--nav-py, 0);
   height: 100%;
 }
-nav > section[data-list~=block],
-nav > ul[data-list~=block] {
+nav > section[data-list~='block'],
+nav > ul[data-list~='block'] {
   --nav-direction: column;
 }
 nav > section > div {

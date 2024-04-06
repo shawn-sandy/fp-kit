@@ -2,6 +2,7 @@ import React from 'react'
 import UI from '../fp'
 
 export type FieldProps = {
+export type FieldProps = {
   /**
    * The label content
    */
@@ -19,9 +20,12 @@ export type FieldProps = {
  */
 export const Field = ({
   label,
+  label,
   labelFor,
   id,
+  id,
   styles,
+  classes,
   classes,
   children,
   ...props
@@ -41,5 +45,6 @@ export const Field = ({
   )
 }
 
+export default Field
 export default Field
 Field.displayName = 'Field'

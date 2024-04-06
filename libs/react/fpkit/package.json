@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@shawnsandy/first-paint": "^2.18.13",
+    "@shawnsandy/first-paint": "^2.18.13",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
