@@ -12,11 +12,16 @@ a[href] {
   --link-decoration-thickness: 3px;
   --link-decoration: color: var(--link-color) var(--link-decoration-offset)
     var(--link-decoration-thickness) var(--link-skip-ink);
+  --link-decoration-thickness: 3px;
+  --link-decoration: color: var(--link-color) var(--link-decoration-offset)
+    var(--link-decoration-thickness) var(--link-skip-ink);
   color: var(--link-color);
   font-size: var(--link-fs);
   text-decoration: var(--link-decoration);
   text-underline-offset: var(--link-decoration-offset);
   text-decoration-skip-ink: var(--link-skip-ink);
+  background-color: var(--link-bg);
+  border-radius: var(--link-radius);
   background-color: var(--link-bg);
   border-radius: var(--link-radius);
 }
@@ -27,12 +32,10 @@ a[href]:focus {
   outline: none;
   --link-decoration: underline;
 }
-a[href]:visited,
-a[href]:active {
+a[href]:visited, a[href]:active {
   --link-color: currentColor;
 }
-a[href] > b,
-a[href][data-link~='btn'] {
+a[href] > b, a[href][data-link~=btn] {
   --link-button-color: var(--link-color);
   --link-bg: transparent;
   --link-decoration: none;
@@ -51,11 +54,10 @@ a[href][data-link~='btn'] {
   transform: var(--scale);
   transition: var(--scale-transition);
 }
-a[href] > b:hover,
-a[href][data-link~='btn']:hover {
+a[href] > b:hover, a[href][data-link~=btn]:hover {
   transform: var(--scale-to);
 }
-a[href][data-link~='pill'] {
+a[href][data-link~=pill] {
   --link-radius: 99rem;
 }
 
