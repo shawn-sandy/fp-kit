@@ -107,8 +107,6 @@ export const Section = ({
   children,
   styles,
   classes,
-  styles,
-  classes,
   ...props
 }: ComponentProps) => {
   return (
@@ -128,8 +126,7 @@ export const Section = ({
 export const Article = ({
   id,
   children,
-  styles,
-  classes,
+
   styles,
   classes,
   ...props
@@ -150,10 +147,3 @@ Landmarks.Footer = Footer
 Landmarks.Aside = Aside
 Landmarks.Section = Section
 Landmarks.Article = Article
-
-Header.displayName = 'Header'
-Main.displayName = 'Main'
-Footer.displayName = 'Footer'
-Aside.displayName = 'Aside'
-Section.displayName = 'Section'
-Article.displayName = 'Article'

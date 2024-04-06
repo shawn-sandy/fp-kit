@@ -37,7 +37,6 @@ export const Link = ({
       onPointerDown={handleOnpointerDown}
       data-btn={btnStyle}
       prefetch={prefetch}
-      prefetch={prefetch}
       {...props}
     >
       {children}

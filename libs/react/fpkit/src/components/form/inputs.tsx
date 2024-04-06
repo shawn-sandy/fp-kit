@@ -1,21 +1,16 @@
 import React from 'react'
 import FP from '../fp'
 
-// import
-
-export type InputProps = {
 export type InputProps = {
   /**
    * The type of the input.
    */
   type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url' | 'search'
 
-
   /**
    * Set the element as disabled
    */
   isDisabled?: boolean
-} & React.ComponentProps<typeof FP>
 } & React.ComponentProps<typeof FP>
 
 /**
@@ -33,7 +28,6 @@ export const Input = ({
   classes,
   isDisabled,
   disabled,
-  disabled,
   readonly,
   required,
   ref,
@@ -45,14 +39,10 @@ export const Input = ({
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (onChange && !disabled) {
       onChange?.(e)
-    if (onChange && !disabled) {
-      onChange?.(e)
     }
   }
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    if (onBlur && !disabled) {
-      onBlur?.(e)
     if (onBlur && !disabled) {
       onBlur?.(e)
     }
@@ -60,9 +50,7 @@ export const Input = ({
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (onPointerDown && !disabled) {
-    if (onPointerDown && !disabled) {
       e.preventDefault()
-      onPointerDown?.(e)
       onPointerDown?.(e)
     }
   }
@@ -73,7 +61,6 @@ export const Input = ({
       id={id}
       type={type}
       placeholder={placeholder || `${required ? '*' : ''} ${type} input `}
-      placeholder={placeholder || `${required ? '*' : ''} ${type} input `}
       className={classes}
       styles={styles}
       onChange={handleChange}
@@ -82,12 +69,9 @@ export const Input = ({
       value={value}
       name={name}
       ref={ref}
-      ref={ref}
       aria-disabled={isDisabled}
-      tab-index={isDisabled ? -1 : undefined}
+      tabIndex={isDisabled ? -1 : undefined}
       aria-readonly={readonly}
-      aria-required={required}
-      required={required}
       aria-required={required}
       required={required}
       readOnly={readonly}
@@ -96,7 +80,5 @@ export const Input = ({
   )
 }
 
-export default Input
-
-export default Input
 Input.displayName = 'Input'
+export default Input
