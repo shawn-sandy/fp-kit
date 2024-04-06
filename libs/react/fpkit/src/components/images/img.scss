@@ -4,7 +4,7 @@ img[alt] {
   --img-object-fit: cover;
   --img-object-position: center;
   --img-aspect-ratio: auto 2/3;
-  --fig-display: initial;
+  --img-display: inline-block;
 
   max-width: var(--img-max-width);
   max-inline-size: var(--img-max-width);
@@ -12,7 +12,11 @@ img[alt] {
   object-fit: var(--img-object-fit);
   object-position: var(--img-object-position);
   aspect-ratio: var(--img-aspect-ratio);
-  display: var(--fig-display);
+  display: var(--img-display);
+  vertical-align: middle;
+  font-style: italic;
+  background-size: cover;
+  shape-margin: var(--spc-3);
 }
 
 figure {
