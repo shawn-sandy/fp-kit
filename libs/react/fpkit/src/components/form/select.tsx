@@ -50,10 +50,6 @@ export const Select = ({
   name,
   styles,
   classes,
-  id,
-  name,
-  styles,
-  classes,
   disabled,
   children,
   required,
@@ -74,53 +70,44 @@ export const Select = ({
 
   const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
     if (onBlur && !disabled) onBlur?.(e)
-  const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    if (onSelectionChange && !disabled) onSelectionChange?.(e)
-  }
+    const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+      if (onSelectionChange && !disabled) onSelectionChange?.(e)
+    }
 
-  const handlePointerDown = (e: React.PointerEvent<HTMLSelectElement>) => {
-    if (onPointerDown && !disabled) onPointerDown?.(e)
-  }
+    const handlePointerDown = (e: React.PointerEvent<HTMLSelectElement>) => {
+      if (onPointerDown && !disabled) onPointerDown?.(e)
+    }
 
-  const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
-    if (onBlur && !disabled) onBlur?.(e)
-  }
+    const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
+      if (onBlur && !disabled) onBlur?.(e)
+    }
 
-  return (
-    <FP
-      as="select"
-      id={id}
-      ref={ref}
-      name={name}
-      className={classes}
-      selected={selected}
-      onChange={handleOnChange}
-      onPointerDown={handlePointerDown}
-      onBlur={handleOnBlur}
-      required={required}
-      aria-required={required} // Accessibility
-      disabled={disabled}
-      aria-disabled={disabled ? true : false}
-      style={styles}
-      {...props}
-      aria-required={required} // Accessibility
-      disabled={disabled}
-      aria-disabled={disabled ? true : false}
-      style={styles}
-      {...props}
-    >
-      {children || <option value="" />}
-      {children || <option value="" />}
-    </FP>
-  )
+    return (
+      <FP
+        as="select"
+        id={id}
+        ref={ref}
+        name={name}
+        className={classes}
+        selected={selected}
+        onChange={handleOnChange}
+        onPointerDown={handlePointerDown}
+        onBlur={handleOnBlur}
+        required={required}
+        aria-required={required} // Accessibility
+        disabled={disabled}
+        aria-disabled={disabled ? true : false}
+        style={styles}
+        {...props} // Accessibility
+      >
+        {children || <option value="" />}
+        {children || <option value="" />}
+      </FP>
+    )
+  }
 }
-
 export default Select
-export default Select
-Select.displayName = 'Select'
-Select.Option = Option
+Select.displayName = 'Select' // Remove this line
+Select.Option = Option // Remove this line
 
-export const MemoizedSelect = React.memo(Select)
-Select.Option = Option
-
-export const MemoizedSelect = React.memo(Select)
+// export const MemoizedSelect = React.memo(Select)

@@ -2,7 +2,6 @@ import UI from '#components/ui'
 import React from 'react'
 
 type DetailsProps = {
-type DetailsProps = {
   /**
    * The summary text shown for the details.
    * Required.
@@ -35,8 +34,7 @@ export const Details = ({
   styles,
   classes,
   ariaLabel,
-  classes,
-  ariaLabel,
+
   open,
   onPointerDown,
   onToggle,
@@ -58,7 +56,6 @@ export const Details = ({
     <UI
       as="details"
       style={defaultStyles}
-      className={classes}
       className={classes}
       onToggle={onToggleCallback}
       ref={ref}

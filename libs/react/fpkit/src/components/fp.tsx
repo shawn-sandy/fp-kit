@@ -66,14 +66,12 @@ const FP: FPComponent = React.forwardRef(
 
     return (
       <Component ref={ref} style={styleObj} className={classes} {...props}>
-      <Component ref={ref} style={styleObj} className={classes} {...props}>
         {children}
       </Component>
     )
   },
 )
 export interface BoxProps extends ComponentProps {
-  elm?: 'div'
   renderStyles: true
 }
 

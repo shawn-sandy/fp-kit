@@ -1,5 +1,5 @@
-p[role='note'],
-[role='note'],
+p[role=note],
+[role=note],
 small > span,
 [data-tag] {
   --beta: var(--warning-500, orange);
@@ -21,49 +21,49 @@ small > span,
   background-color: var(--tag-bg);
   border-radius: var(--tag-radius);
 }
-p[role='note'][data-tag~='beta'],
-[role='note'][data-tag~='beta'],
-small > span[data-tag~='beta'],
-[data-tag][data-tag~='beta'] {
+p[role=note][data-tag~=beta],
+[role=note][data-tag~=beta],
+small > span[data-tag~=beta],
+[data-tag][data-tag~=beta] {
   background-color: var(--beta);
 }
-p[role='note'][data-tag~='stable'],
-[role='note'][data-tag~='stable'],
-small > span[data-tag~='stable'],
-[data-tag][data-tag~='stable'] {
+p[role=note][data-tag~=stable],
+[role=note][data-tag~=stable],
+small > span[data-tag~=stable],
+[data-tag][data-tag~=stable] {
   --tag-cl: white;
   --tag-bg: var(--stable);
 }
-p[role='note'][data-tag~='production'],
-[role='note'][data-tag~='production'],
-small > span[data-tag~='production'],
-[data-tag][data-tag~='production'] {
+p[role=note][data-tag~=production],
+[role=note][data-tag~=production],
+small > span[data-tag~=production],
+[data-tag][data-tag~=production] {
   --tag-color: white;
   --tag-bg: var(--production);
 }
-p[role='note'][data-tag~='beta'],
-[role='note'][data-tag~='beta'],
-small > span[data-tag~='beta'],
-[data-tag][data-tag~='beta'] {
+p[role=note][data-tag~=beta],
+[role=note][data-tag~=beta],
+small > span[data-tag~=beta],
+[data-tag][data-tag~=beta] {
   --tag-color: currentColor;
   --tag-bg: var(--beta);
 }
-p[role='note'][data-tag~='alpha'],
-[role='note'][data-tag~='alpha'],
-small > span[data-tag~='alpha'],
-[data-tag][data-tag~='alpha'] {
+p[role=note][data-tag~=alpha],
+[role=note][data-tag~=alpha],
+small > span[data-tag~=alpha],
+[data-tag][data-tag~=alpha] {
   --tag-color: currentColor;
   --tag-bg: var(--beta);
 }
-p[role='note'][data-tag~='beta'],
-[role='note'][data-tag~='beta'],
-small > span[data-tag~='beta'],
-[data-tag][data-tag~='beta'] {
+p[role=note][data-tag~=beta],
+[role=note][data-tag~=beta],
+small > span[data-tag~=beta],
+[data-tag][data-tag~=beta] {
   --tag-color: currentColor;
   --tag-bg: var(--beta);
 }
 
-p[role='note'] {
+p[role=note] {
   --tag-display: block;
   --border-radius: 0.5rem;
 }

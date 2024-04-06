@@ -1,6 +1,4 @@
 [data-card],
-[data-component~='card'] {
-[data-card],
 [data-component~=card] {
   --card-p: 2rem;
   --card-bg: #fff;
