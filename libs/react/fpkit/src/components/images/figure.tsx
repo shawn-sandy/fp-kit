@@ -28,7 +28,7 @@ const Figure = ({
   width,
   height,
   alt = '',
-  caption = 'Caption for the image here...',
+  caption = 'Caption (caption) for the image here...',
   styles,
   ...props
 }: FigureProps) => {
