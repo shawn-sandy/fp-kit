@@ -309,7 +309,7 @@ section:not(nav) {
 }
 
 p {
-  max-width: 70ch;
+  max-width: 75ch;
   font-size: var(--fs-0);
   line-height: 1.6;
 }
@@ -363,6 +363,7 @@ h6 {
   font-weight: var(--weight);
   margin-block-start: 0;
   margin-block-end: 1rem;
+  line-height: 1.5;
 }
 
 h1 {
@@ -586,6 +587,7 @@ img[alt] {
   vertical-align: middle;
   font-style: italic;
   background-size: cover;
+  background-repeat: no-repeat;
   shape-margin: var(--spc-3);
 }
 
