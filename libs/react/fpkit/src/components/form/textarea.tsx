@@ -53,7 +53,7 @@ export const Textarea = ({
     }
   }
 
-  const handleKeyDown = (e: React.PointerEvent<HTMLTextAreaElement>) => {
+  const handlePointerDown = (e: React.PointerEvent<HTMLTextAreaElement>) => {
     if (onPointerDown && !disabled) {
       onPointerDown?.(e)
     }
@@ -75,7 +75,7 @@ export const Textarea = ({
       readOnly={readOnly}
       onChange={handleChange}
       onBlur={handleBlur}
-      onPointerDown={handleKeyDown}
+      onPointerDown={handlePointerDown}
       ref={ref}
       placeholder={placeholder || `${required ? '*' : ''} Message`}
       {...props}
