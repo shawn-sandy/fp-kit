@@ -8,23 +8,15 @@ sup:has(> span) {
   background-color: var(--badge-bg);
   color: var(--badge-color);
   padding: var(--badge-padding);
-  color: var(--badge-color);
-  padding: var(--badge-padding);
   border-radius: var(--badge-radius);
   vertical-align: var(--badge-v-align);
 }
 sup:has(> span) span {
   color: inherit;
-  vertical-align: var(--badge-v-align);
 }
-sup:has(> span) span span {
-  color: inherit;
-}
-sup:has(> span) span[data-badge~=rounded] {
+sup:has(> span)[data-badge~=rounded] {
   --badge-radius: 100%;
-}
-sup:has(> span) span[data-badge~=rounded] {
-  --badge-radius: 100%;
+  --badge-padding: 0.2rem;
 }
 
 /*# sourceMappingURL=badge.css.map */
