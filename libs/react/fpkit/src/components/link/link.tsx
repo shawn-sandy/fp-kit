@@ -11,7 +11,7 @@ export const Link = ({
   href,
   target,
   rel,
-  children = 'Link',
+  children,
   styles,
   prefetch,
   btnStyle,
@@ -21,7 +21,7 @@ export const Link = ({
   let relValue = rel
 
   if (target === '_blank')
-    relValue = `noopener noreferrer ${!prefetch ? 'prefetch' : ''}`
+    relValue = `noopener noreferrer ${prefetch ? 'prefetch' : ''}`
 
   const handleOnpointerDown = (e: React.PointerEvent<HTMLAnchorElement>) => {
     if (onPointerDown) onPointerDown?.(e)

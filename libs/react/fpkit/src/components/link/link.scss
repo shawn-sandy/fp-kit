@@ -27,6 +27,7 @@ a[href] {
   border-radius: var(--link-radius);
   background-color: var(--link-bg);
   border-radius: var(--link-radius);
+  font-weight: var(--link-weight);
 
   &:hover {
     --link-decoration: underline;
