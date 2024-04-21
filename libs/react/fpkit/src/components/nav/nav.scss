@@ -1,7 +1,7 @@
 body > nav,
 [aria-label~='navbar'] {
   padding-inline: var(--nav-px, 1rem);
-  height: var(--nav-h, calc(50rem / 16));
+  min-height: var(--nav-h, calc(50rem / 16));
 
   ul {
     > li {
