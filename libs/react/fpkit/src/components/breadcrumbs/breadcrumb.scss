@@ -20,6 +20,9 @@ nav[data-breadcrumb] {
       color: var(--breadcrumb-color);
       gap: 0.5rem;
       font-size: var(--breadcrumb-fs);
+      span[aria-hidden='true'] {
+        opacity: 0.6;
+      }
       a[href] {
         font-size: var(--breadcrumb-fs);
         &[aria-current] {

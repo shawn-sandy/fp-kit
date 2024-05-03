@@ -324,7 +324,7 @@ ol {
   flex-direction: var(--li-direction, column);
   gap: var(--li-gap, 0.2rem);
   flex-wrap: var(--li-wrap, nowrap);
-  padding-inline-start: var(--spc-3);
+  padding-inline-start: var(--li-ps, var(--spc-0));
 }
 ul[role=list], ul[data-list~=unstyled],
 ol[role=list],
@@ -1048,6 +1048,10 @@ nav[data-breadcrumb] ol li {
   color: var(--breadcrumb-color);
   gap: 0.5rem;
   font-size: var(--breadcrumb-fs);
+}
+nav:not(body > nav) ol li span[aria-hidden=true],
+nav[data-breadcrumb] ol li span[aria-hidden=true] {
+  opacity: 0.6;
 }
 nav:not(body > nav) ol li a[href],
 nav[data-breadcrumb] ol li a[href] {

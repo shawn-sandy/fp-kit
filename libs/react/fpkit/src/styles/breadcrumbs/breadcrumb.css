@@ -25,6 +25,10 @@ nav[data-breadcrumb] ol li {
   gap: 0.5rem;
   font-size: var(--breadcrumb-fs);
 }
+nav:not(body > nav) ol li span[aria-hidden=true],
+nav[data-breadcrumb] ol li span[aria-hidden=true] {
+  opacity: 0.6;
+}
 nav:not(body > nav) ol li a[href],
 nav[data-breadcrumb] ol li a[href] {
   font-size: var(--breadcrumb-fs);
