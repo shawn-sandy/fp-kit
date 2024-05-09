@@ -22,6 +22,24 @@ body {
   main {
     flex-grow: 1;
   }
+
+  > a[href^='#'] {
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    width: 100%;
+    display: block;
+    justify-content: flex-start;
+    padding: 1rem;
+    z-index: 100;
+    transition: top 0.3s;
+    border-radius: 0;
+    // padding: 1rem;
+    background-color: whitesmoke;
+    &:focus {
+      top: 0;
+    }
+  }
 }
 
 * + div,
