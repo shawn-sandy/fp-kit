@@ -36,7 +36,7 @@ a[href]:focus {
 a[href]:visited, a[href]:active {
   --link-color: currentColor;
 }
-a[href] > b, a[href][data-link~=btn] {
+a[href]:has(> b), a[href][data-link~=btn] {
   --link-button-color: var(--link-color);
   --link-bg: transparent;
   --link-decoration: none;
@@ -55,7 +55,7 @@ a[href] > b, a[href][data-link~=btn] {
   transform: var(--scale);
   transition: var(--scale-transition);
 }
-a[href] > b:hover, a[href][data-link~=btn]:hover {
+a[href]:has(> b):hover, a[href][data-link~=btn]:hover {
   transform: var(--scale-to);
 }
 a[href][data-link~=pill] {

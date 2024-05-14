@@ -43,7 +43,7 @@ a[href] {
     --link-color: currentColor;
   }
 
-  > b,
+  &:has(> b),
   &[data-link~='btn'] {
     --link-button-color: var(--link-color);
     --link-bg: transparent;
