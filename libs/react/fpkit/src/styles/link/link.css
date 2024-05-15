@@ -40,6 +40,7 @@ a[href]:has(> b), a[href][data-link~=btn] {
   --link-button-color: var(--link-color);
   --link-bg: transparent;
   --link-decoration: none;
+  --link-border: 2px currentColor solid;
   --link-fs: 0.9rem;
   background-color: var(--link-bg);
   font-size: var(--link-fs);
@@ -48,12 +49,19 @@ a[href]:has(> b), a[href][data-link~=btn] {
   padding-block: calc(var(--link-fs) - 0.4rem);
   border-radius: var(--link-radius, 99rem);
   display: inline-flex;
-  outline: 2px currentColor solid;
+  outline: var(--link-border);
   --scale-transition: transform 0.25s ease;
   --scale: scale(1);
   --scale-to: scale(1.05);
   transform: var(--scale);
   transition: var(--scale-transition);
+}
+a[href]:has(> b):focus, a[href][data-link~=btn]:focus {
+  outline: var(--link-border);
+  --link-decoration: none;
+}
+a[href]:has(> b):hover, a[href][data-link~=btn]:hover {
+  --link-decoration: none;
 }
 a[href]:has(> b):hover, a[href][data-link~=btn]:hover {
   transform: var(--scale-to);

@@ -48,6 +48,7 @@ a[href] {
     --link-button-color: var(--link-color);
     --link-bg: transparent;
     --link-decoration: none;
+    --link-border: 2px currentColor solid;
     --link-fs: 0.9rem;
     background-color: var(--link-bg);
     font-size: var(--link-fs);
@@ -56,7 +57,14 @@ a[href] {
     padding-block: calc(var(--link-fs) - 0.4rem);
     border-radius: var(--link-radius, 99rem);
     display: inline-flex;
-    outline: 2px currentColor solid;
+    outline: var(--link-border);
+    &:focus {
+      outline: var(--link-border);
+      --link-decoration: none;
+    }
+    &:hover {
+      --link-decoration: none;
+    }
     @include mixins.scale-transitions;
   }
   &[data-link~='pill'] {
