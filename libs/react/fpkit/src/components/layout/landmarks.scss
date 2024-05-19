@@ -41,12 +41,10 @@ header,
   }
   > div,
   > section {
+    --overlay-display: flex;
     max-width: var(--overlay-content-w);
     padding-inline: var(--spc-4);
     margin-inline: var(--overlay-mx);
-  }
-  > section {
-    --overlay-display: flex;
     gap: var(--overlay-gap);
     text-align: center;
     p {
