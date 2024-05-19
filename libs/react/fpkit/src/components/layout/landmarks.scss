@@ -29,13 +29,14 @@ header,
   width: var(--overlay-w);
   color: var(--overlay-color);
   background-color: var(--overlay-bg);
+  min-width: 20rem;
   > * {
     grid-area: overlay;
   }
 
   > img {
     width: var(--overlay-w);
-    height: auto;
+    // height: auto;
     background-size: contain;
   }
   > div,
@@ -51,6 +52,13 @@ header,
     p {
       width: auto;
       max-width: 60ch;
+      font-size: var(--fs-7);
+      line-height: 1.4;
+    }
+    > h1,
+    > h2 {
+      font-size: var(--h1);
+      line-height: var(--header-lh, 1.1);
     }
   }
 }
