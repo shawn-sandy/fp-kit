@@ -833,11 +833,12 @@ a[href]:has(> b):hover, a[href][data-link~=btn]:hover {
 a[href]:has(> b):hover, a[href][data-link~=btn]:hover {
   transform: var(--scale-to);
 }
-a[href][data-link~=pill] {
+a[href][data-link~=pill], a[href]:has(> i) {
   --link-radius: 99rem;
+  --link-decoration: none;
 }
-a[href]:has(> i) {
-  --link-radius: 99rem;
+a[href][data-link~=pill]:hover, a[href][data-link~=pill]:focus, a[href]:has(> i):hover, a[href]:has(> i):focus {
+  --link-decoration: none;
 }
 
 header > section {

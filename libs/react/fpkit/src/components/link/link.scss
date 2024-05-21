@@ -67,11 +67,14 @@ a[href] {
     }
     @include mixins.scale-transitions;
   }
-  &[data-link~='pill'] {
-    --link-radius: 99rem;
-  }
+  &[data-link~='pill'],
   &:has(> i) {
     --link-radius: 99rem;
+    --link-decoration: none;
+    &:hover,
+    &:focus {
+      --link-decoration: none;
+    }
   }
 }
 
