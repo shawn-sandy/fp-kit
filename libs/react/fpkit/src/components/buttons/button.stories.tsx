@@ -12,7 +12,7 @@ const meta: Meta<typeof Button> = {
     children: 'Click me',
   },
   parameters: {
-    actions: { argTypesRegex: '^on.*' },
+    // actions: { argTypesRegex: '^on.*' },
   },
   argTypes: { onClick: { action: 'clicked' } },
 } as Meta

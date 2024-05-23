@@ -11,7 +11,7 @@ export const decorators = [withPerformance]
 
 export const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
+    actions: { argTypesRegex: '^on.*' },
     // viewMode: 'docs',
     // previewTabs: { 'storybook/docs/panel': { index: -1 } },
     controls: {

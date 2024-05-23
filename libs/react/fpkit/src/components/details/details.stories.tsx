@@ -37,7 +37,7 @@ const meta: Meta<typeof Details> = {
     // @ts-ignore
     children: content,
     icon: icon,
-    summary: <h3>Summary Section</h3>,
+    summary: <>Summary Section</>,
   },
   actions: { argTypesRegex: '^on.*' },
   decorators: [
