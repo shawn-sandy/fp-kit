@@ -29,6 +29,12 @@ a[href] {
   border-radius: var(--link-radius);
   font-weight: var(--link-weight);
 
+  > i,
+  > b {
+    font-weight: var(--link-weight);
+    font-style: normal;
+  }
+
   &:hover {
     --link-decoration: underline;
   }
@@ -44,13 +50,15 @@ a[href] {
   }
 
   &:has(> b),
-  &[data-link~='btn'] {
+  &[data-link~='btn'],
+  &:has(> i) {
     --link-button-color: var(--link-color);
     --link-bg: transparent;
     --link-decoration: none;
     --link-border: 2px currentColor solid;
     --link-fs: 0.9rem;
     background-color: var(--link-bg);
+    font-style: normal;
     font-size: var(--link-fs);
     color: var(--link-button-color);
     padding-inline: var(--link-fs);
@@ -71,6 +79,7 @@ a[href] {
   &:has(> i) {
     --link-radius: 99rem;
     --link-decoration: none;
+    font-style: normal;
     &:hover,
     &:focus {
       --link-decoration: none;
