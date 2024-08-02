@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { describe, expect, test, it  } from 'vitest';
-import { render, screen  } from '@testing-library/react';
+import { render, screen  } from '@test/react';
 
 import App from './App'
 describe('App renders correctly', () => {

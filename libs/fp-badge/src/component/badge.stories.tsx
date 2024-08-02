@@ -3,8 +3,8 @@ import React from 'react'
 import { StoryObj, ComponentMeta } from '@storybook/react'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
-import { within, userEvent, waitFor } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
+import { within, userEvent, waitFor } from '@storybook/test'
+
 
 import Badge from './badge'
 export default {

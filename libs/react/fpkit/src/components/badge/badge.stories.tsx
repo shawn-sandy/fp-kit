@@ -1,6 +1,6 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { within, userEvent, screen } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
+import { within, userEvent, screen, expect } from '@storybook/test'
+
 
 import Badge from './badge'
 import './badge.scss'
@@ -15,6 +15,7 @@ const meta: Meta<typeof Badge> = {
 } as Story
 
 export default meta
+
 type Story = StoryObj<typeof Badge>
 
 export const BadgeComponent: Story = {

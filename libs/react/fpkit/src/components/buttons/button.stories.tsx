@@ -1,6 +1,6 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { within, userEvent } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
+import { within, userEvent } from '@storybook/test'
+
 
 import Button from './button'
 import './button.scss'

@@ -1,7 +1,7 @@
 import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent } from '@test/react'
 import Popover from './popover'
-import userEvent from '@testing-library/user-event'
+import userEvent from '@test/user-event'
 
 describe('Popover', () => {
   it('renders the popover content when the trigger element is hovered', async () => {

@@ -2,9 +2,9 @@ import React from 'react'
 
 import { StoryObj, Meta } from '@storybook/react'
 
-import { within, userEvent } from '@storybook/testing-library'
+import { within, userEvent } from '@storybook/test'
 
-import { expect } from '@storybook/jest'
+
 
 import List from './list'
 

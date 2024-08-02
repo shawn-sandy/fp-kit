@@ -1,1 +1,1 @@
-import '@testing-library/jest-dom'
+import '@test/jest-dom'

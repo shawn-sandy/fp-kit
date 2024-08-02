@@ -11,7 +11,7 @@ export const decorators = [withPerformance]
 
 export const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on.*' },
+    // actions: { argTypesRegex: '^on.*' },
     // viewMode: 'docs',
     // previewTabs: { 'storybook/docs/panel': { index: -1 } },
     controls: {
@@ -32,6 +32,8 @@ export const preview: Preview = {
     },
     // layout: 'padded',
   },
+
+  tags: ['autodocs']
 }
 
 export default preview

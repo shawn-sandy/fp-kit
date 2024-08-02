@@ -17,9 +17,9 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.2.1",
+    "@test/jest-dom": "^5.16.4",
+    "@test/react": "^13.3.0",
+    "@test/user-event": "^14.2.1",
     "@types/react-dom": "^18.0.0",
     "@types/react-test-renderer": "^18.0.0",
     "@types/react": "^18.0.0",

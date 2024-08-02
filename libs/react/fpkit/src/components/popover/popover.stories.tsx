@@ -1,9 +1,9 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { within, userEvent, screen } from '@storybook/testing-library'
-import { expect } from '@storybook/jest'
+import { within, userEvent, screen, expect }  from '@storybook/test'
+
 
 import Popover from './popover'
-import { getByText } from '@testing-library/react'
+import { getByText } from '@test/react'
 
 const meta: Meta<typeof Popover> = {
   title: 'FP.React Components/Basic Popover',

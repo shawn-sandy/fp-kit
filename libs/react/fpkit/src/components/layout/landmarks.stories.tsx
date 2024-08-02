@@ -2,12 +2,12 @@ import { StoryObj, Meta } from '@storybook/react'
 /**
  * Import testing library dependencies
  */
-import { within, userEvent } from '@storybook/testing-library'
+import { within, userEvent } from '@storybook/test'
 
 /**
  * Import jest matchers
  */
-import { expect } from '@storybook/jest'
+
 
 import { Header } from './landmarks'
 

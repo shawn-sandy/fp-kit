@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { describe, expect, test, it  } from 'vitest';
-import { render, screen  } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { render, screen  } from '@test/react';
+import userEvent from '@test/user-event';
 
 import App from './App'
 
