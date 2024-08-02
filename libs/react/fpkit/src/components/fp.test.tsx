@@ -1,8 +1,8 @@
 import React from 'react'
-import { render, screen } from '@test/react'
+import { render, screen } from '@testing-library/react'
 import FP from '../components/fp'
 import jest from 'jest-mock'
-import { userEvent } from '@storybook/test'
+import userEvent from "@testing-library/user-event"
 
 describe('FP component', () => {
   it('renders a div by default', () => {

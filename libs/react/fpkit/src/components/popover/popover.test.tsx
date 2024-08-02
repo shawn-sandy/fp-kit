@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen, fireEvent } from '@test/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import Popover from './popover'
 import userEvent from '@test/user-event'
 

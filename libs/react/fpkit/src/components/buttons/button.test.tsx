@@ -1,9 +1,9 @@
 import React from 'react'
-import { render, screen } from '@test/react'
+import { render, screen } from '@testing-library/react'
 import { Button } from './button'
 import user from '@test/user-event'
 import jest from 'jest-mock'
-import { userEvent } from '@storybook/test'
+import userEvent from '@testing-library/user-event'
 
 describe('Button', () => {
   it('renders a button element with the correct label', () => {

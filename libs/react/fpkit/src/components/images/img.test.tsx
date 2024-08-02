@@ -1,6 +1,6 @@
 import { Img } from './img'
 import React from 'react'
-import { fireEvent, render, screen } from '@test/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import jest from 'jest-mock'
 describe('Img', () => {
   it('should render an img element with passed props', () => {
