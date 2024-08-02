@@ -146,7 +146,7 @@
     "stylelint-prettier": "^4.0.00",
     "stylelint-scss": "^5.2.1",
     "trash-cli": "^5.0.0",
-    "ts-jest": "^29.1.1",
+    "ts-jest": "^29.2.4",
     "ts-node": "10.9.1",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "tslib": "^2.6.2"
@@ -154,7 +154,7 @@
   "dependencies": {
     "@fpkit/nextjs": "^0.2.5",
     "@storybook/react-vite": "^8.2.7",
-    "chromatic": "^7.3.0",
+    "chromatic": "^11.7.0",
     "core-js": "^3.33.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
