@@ -40,7 +40,7 @@
   "auto-changelog": {
     "unreleased": true,
     "template": "config/_changelog.hbs"
-  },
+  }, 
   "main": "index.js",
   "repository": "https://github.com/shawn-sandy/fp-kit.git",
   "author": "shawnsandy <shawnsandy04@gmail.com>",

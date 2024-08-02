@@ -6,7 +6,7 @@
       "dom",
       "dom.iterable",
       "esnext"
-    ],
+    ], 
     "declaration": true,
     "declarationDir": "lib",
     "allowJs": true,
@@ -21,6 +21,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
       "@/*": [
