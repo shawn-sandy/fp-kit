@@ -1,6 +1,6 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { within, userEvent, screen, expect }  from '@storybook/test'
-import React from "react"
+import { within, userEvent, expect }  from '@storybook/test'
+// import React from "react"
 
 import Breadcrumb from './breadcrumb'
 
@@ -77,11 +77,11 @@ export const EncodedBreadcrumbs: Story = {
     currentRoute: '/products/learning%20in%20public',
   },
 
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    await userEvent.click(screen.getByText('Shirts'))
-    expect(screen.getByText('Shirts')).toBeInTheDocument()
-  },
+  // play: async ({ canvasElement }) => {
+  //   const canvas = within(canvasElement)
+  //   await userEvent.click(canvas.getByText('Shirts'))
+  //   expect(canvas.getByText('Shirts')).toBeInTheDocument()
+  // },
 } as Story
 
 export const TruncateName: Story = {

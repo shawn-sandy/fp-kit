@@ -1,3 +1,4 @@
+import * as React from 'react'
 import './style.css'
 // import '@shawnsandy/first-paint/dist/css/libs/all.min.css'
 import '../libs/react/fpkit/src/styles/index.css'

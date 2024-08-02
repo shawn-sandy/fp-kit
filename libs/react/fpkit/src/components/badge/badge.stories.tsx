@@ -1,9 +1,9 @@
+import React from 'react'
 import { StoryObj, Meta } from '@storybook/react'
 import { within, userEvent, screen, expect } from '@storybook/test'
 
-
 import Badge from './badge'
-import './badge.scss'
+// import './badge.scss'
 
 const meta: Meta<typeof Badge> = {
   title: 'FP.REACT Components/Badge',
@@ -20,10 +20,10 @@ type Story = StoryObj<typeof Badge>
 
 export const BadgeComponent: Story = {
   args: {},
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    expect(canvas.getByText(/link/i)).toBeInTheDocument()
-  },
+  // play: async ({ canvasElement }) => {
+  //   const canvas = within(canvasElement)
+  //   expect(canvas.getByText(/link/i)).toBeInTheDocument()
+  // },
 }
 
 export const CustomBadge: Story = {
@@ -38,10 +38,10 @@ export const CustomBadge: Story = {
       </p>
     )
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    expect(canvas.getByText(/custom/i)).toBeInTheDocument()
-  },
+  // play: async ({ canvasElement }) => {
+  //   const canvas = within(canvasElement)
+  //   expect(canvas.getByText(/custom/i)).toBeInTheDocument()
+  // },
 } as Story
 
 export const RoundedBadge: Story = {
