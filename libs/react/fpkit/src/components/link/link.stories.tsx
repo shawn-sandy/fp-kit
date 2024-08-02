@@ -3,7 +3,7 @@ import { StoryObj, Meta } from '@storybook/react'
 import { within, userEvent, screen, expect }  from '@storybook/test'
 
 import Link from './link'
-import '../../styles/link/link.css'
+// import '../../styles/link/link.css'
 
 const meta: Meta<typeof Link> = {
   title: 'FP.React Components/Links',
@@ -23,7 +23,7 @@ export const LinkComponent: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     const link = canvas.getByRole('link')
-    expect(link).toBeInTheDocument()
+    await expect(link).toBeInTheDocument()
     expect(link).toHaveTextContent('Link')
   },
 }

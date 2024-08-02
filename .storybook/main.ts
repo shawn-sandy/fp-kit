@@ -12,12 +12,12 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
-    // '@storybook/addon-actions',
-    // '@geometricpanda/storybook-addon-badges',
     '@storybook/addon-coverage',
-    // 'storybook-addon-performance',
     '@chromaui/addon-visual-tests',
     '@chromatic-com/storybook'
+    // '@storybook/addon-actions',
+    // '@geometricpanda/storybook-addon-badges',
+    // 'storybook-addon-performance',
   ],
 
   // features: {

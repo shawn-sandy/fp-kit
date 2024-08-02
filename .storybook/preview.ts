@@ -22,11 +22,11 @@ export const preview: Preview = {
         method: 'alphabetical',
       },
     },
-    docs: {
-      autodocs: true,
-      page: CustomDocs,
-      toc: true, // 👈 Enables the table of contents
-    },
+    // docs: {
+    //   autodocs: true,
+    //   page: CustomDocs,
+    //   toc: true, // 👈 Enables the table of contents
+    // },
     // layout: 'padded',
   },
 
