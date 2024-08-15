@@ -49,7 +49,7 @@ header,
     p {
       width: auto;
       max-width: 60ch;
-      font-size: var(--fs-7);
+      font-size: var(--fs-8);
       line-height: 1.4;
     }
     > h1,
@@ -62,10 +62,11 @@ header,
       font-size: var(--fs-12);
     }
     > h2 {
-      font-size: var(--fs-10);
+      font-size: var(--fs-11);
     }
     > h3 {
-      font-size: var(--fs-6);
+      font-size: var(--fs-10);
     }
+
   }
 }
