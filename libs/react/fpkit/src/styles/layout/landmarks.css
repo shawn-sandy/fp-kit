@@ -74,6 +74,7 @@ header > section > h2,
 [data-grid~=overlay] > section > h1,
 [data-grid~=overlay] > section > h2 {
   line-height: var(--header-lh, 1.1);
+  font-weight: 500;
 }
 header > div > h1,
 header > section > h1,
@@ -89,7 +90,15 @@ header > section > h2,
 [data-hero] > section > h2,
 [data-grid~=overlay] > div > h2,
 [data-grid~=overlay] > section > h2 {
-  font-size: var(--fs-7);
+  font-size: var(--fs-10);
+}
+header > div > h3,
+header > section > h3,
+[data-hero] > div > h3,
+[data-hero] > section > h3,
+[data-grid~=overlay] > div > h3,
+[data-grid~=overlay] > section > h3 {
+  font-size: var(--fs-6);
 }
 
 main,

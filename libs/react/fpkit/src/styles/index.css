@@ -880,17 +880,20 @@ header,
   background-color: var(--overlay-bg);
   min-width: 20rem;
 }
+
 header > *,
 [data-hero] > *,
 [data-grid~=overlay] > * {
   grid-area: overlay;
 }
+
 header > img,
 [data-hero] > img,
 [data-grid~=overlay] > img {
   width: var(--overlay-w);
   background-size: contain;
 }
+
 header > div,
 header > section,
 [data-hero] > div,
@@ -904,6 +907,7 @@ header > section,
   gap: var(--overlay-gap);
   text-align: center;
 }
+
 header > div p,
 header > section p,
 [data-hero] > div p,
@@ -915,6 +919,7 @@ header > section p,
   font-size: var(--fs-7);
   line-height: 1.4;
 }
+
 header > div > h1,
 header > div > h2,
 header > section > h1,
@@ -928,7 +933,9 @@ header > section > h2,
 [data-grid~=overlay] > section > h1,
 [data-grid~=overlay] > section > h2 {
   line-height: var(--header-lh, 1.1);
+  font-weight: 500;
 }
+
 header > div > h1,
 header > section > h1,
 [data-hero] > div > h1,
@@ -937,13 +944,23 @@ header > section > h1,
 [data-grid~=overlay] > section > h1 {
   font-size: var(--fs-12);
 }
+
 header > div > h2,
 header > section > h2,
 [data-hero] > div > h2,
 [data-hero] > section > h2,
 [data-grid~=overlay] > div > h2,
 [data-grid~=overlay] > section > h2 {
-  font-size: var(--fs-7);
+  font-size: var(--fs-10);
+}
+
+header > div > h3,
+header > section > h3,
+[data-hero] > div > h3,
+[data-hero] > section > h3,
+[data-grid~=overlay] > div > h3,
+[data-grid~=overlay] > section > h3 {
+  font-size: var(--fs-6);
 }
 
 main,
