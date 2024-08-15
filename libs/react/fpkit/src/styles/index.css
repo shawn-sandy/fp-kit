@@ -943,7 +943,7 @@ header > section > h2,
 [data-hero] > section > h2,
 [data-grid~=overlay] > div > h2,
 [data-grid~=overlay] > section > h2 {
-  font-size: var(--fs-8);
+  font-size: var(--fs-7);
 }
 
 main,
