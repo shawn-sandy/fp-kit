@@ -253,7 +253,7 @@ svg[role=img] {
 }
 
 :root {
-  --font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --TRUE: initial;
@@ -927,7 +927,7 @@ header > section > h2,
 [data-grid~=overlay] > div > h2,
 [data-grid~=overlay] > section > h1,
 [data-grid~=overlay] > section > h2 {
-  font-size: var(--h1);
+  font-size: clamp(var(--h5), var(--h1), var(--9xl));
   line-height: var(--header-lh, 1.1);
 }
 
