@@ -73,8 +73,23 @@ header > section > h2,
 [data-grid~=overlay] > div > h2,
 [data-grid~=overlay] > section > h1,
 [data-grid~=overlay] > section > h2 {
-  font-size: clamp(var(--h5), var(--h1), var(--9xl));
   line-height: var(--header-lh, 1.1);
+}
+header > div > h1,
+header > section > h1,
+[data-hero] > div > h1,
+[data-hero] > section > h1,
+[data-grid~=overlay] > div > h1,
+[data-grid~=overlay] > section > h1 {
+  font-size: var(--fs-12);
+}
+header > div > h2,
+header > section > h2,
+[data-hero] > div > h2,
+[data-hero] > section > h2,
+[data-grid~=overlay] > div > h2,
+[data-grid~=overlay] > section > h2 {
+  font-size: var(--fs-8);
 }
 
 main,

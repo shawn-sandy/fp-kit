@@ -55,8 +55,13 @@ header,
     }
     > h1,
     > h2 {
-      font-size: clamp( var(--h5), var(--h1), var(--9xl));
       line-height: var(--header-lh, 1.1);
+    }
+    > h1 {
+      font-size: var(--fs-12);
+    }
+    > h2 {
+      font-size: var(--fs-8);
     }
   }
 }
