@@ -40,6 +40,13 @@ details {
     padding-inline: var(--summary-px, var(--details-px));
     padding-block: var(--summary-py, var(--details-py));
     gap: var(--summary-gap);
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    /* This ensures no bullet points are shown */
 
     &:hover {
       cursor: var(--summary-cursor);

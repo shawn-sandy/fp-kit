@@ -742,6 +742,11 @@ details summary {
   padding-inline: var(--summary-px, var(--details-px));
   padding-block: var(--summary-py, var(--details-py));
   gap: var(--summary-gap);
+  list-style: none;
+  /* This ensures no bullet points are shown */
+}
+details summary::-webkit-details-marker {
+  display: none;
 }
 details summary:hover {
   cursor: var(--summary-cursor);
