@@ -1,7 +1,7 @@
 body > nav,
 [aria-label~=navbar] {
   padding-inline: var(--nav-px, 1rem);
-  min-height: var(--nav-h, 3.125rem);
+  min-height: var(--nav-h, fit-content);
 }
 body > nav ul > li,
 [aria-label~=navbar] ul > li {
@@ -33,11 +33,11 @@ nav {
 }
 @media (max-width: 580px) {
   nav {
-    --nav-direction: column;
-    height: unset;
-    min-height: unset;
+    flex-direction: column;
+    height: fit-content;
+    min-height: fit-content;
     padding-block: unset;
-    gap: 0.4rem;
+    gap: 0.5rem;
   }
 }
 nav > section,
