@@ -1059,6 +1059,10 @@ body > nav ul > li:hover,
 [aria-label~=navbar] ul > li:hover {
   background-color: var(--nav-hov-bg, whitesmoke);
 }
+body > nav ul > li:hover:where(img),
+[aria-label~=navbar] ul > li:hover:where(img) {
+  background-color: transparent;
+}
 
 nav {
   display: var(--nav-dsp, flex);
@@ -1068,6 +1072,15 @@ nav {
   justify-content: var(--nav-justify, space-between);
   margin-inline: var(--nav-mx, 0);
   background-color: var(--nav-bg, initial);
+}
+@media (max-width: 580px) {
+  nav {
+    --nav-direction: column;
+    height: unset;
+    min-height: unset;
+    padding-block: unset;
+    gap: 0.4rem;
+  }
 }
 nav > section,
 nav > ul {

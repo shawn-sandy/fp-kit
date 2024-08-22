@@ -3,6 +3,7 @@ body > nav,
   padding-inline: var(--nav-px, 1rem);
   min-height: var(--nav-h, calc(50rem / 16));
 
+
   ul {
     > li {
       display: flex;
@@ -16,6 +17,9 @@ body > nav,
       &:hover {
         background-color: var(--nav-hov-bg, whitesmoke);
       }
+      &:hover:where(img) {
+        background-color: transparent;
+      }
     }
   }
 }
@@ -28,6 +32,15 @@ nav {
   justify-content: var(--nav-justify, space-between);
   margin-inline: var(--nav-mx, 0);
   background-color: var(--nav-bg, initial);
+
+
+  @media(max-width: 580px) {
+   --nav-direction: column;
+    height: unset;
+    min-height: unset;
+    padding-block: unset;
+    gap: 0.4rem;
+  }
 
   > section,
   > ul {
