@@ -204,11 +204,11 @@ svg[role=img] {
   --display-md: var(--fs-11);
   --display-sm: var(--fs-10);
   --h1: var(--fs-11);
-  --h2: var(--fs-8);
-  --h3: var(--fs-7);
-  --h4: var(--fs-6);
-  --h5: var(--fs-5);
-  --h6: var(--fs-4);
+  --h2: var(--fs-9);
+  --h3: var(--fs-8);
+  --h4: var(--fs-7);
+  --h5: var(--fs-6);
+  --h6: var(--fs-5);
   --spc-0: 0;
   --spc-1: 0.25rem;
   --spc-2: 0.5rem;
