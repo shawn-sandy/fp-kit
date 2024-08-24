@@ -1,9 +1,15 @@
 body > nav,
-[aria-label~='navbar'] {
+[aria-label~='navbar'], .navbar {
   padding-inline: var(--nav-px, 1rem);
   min-height: var(--nav-h, fit-content);
 
-
+  @media(max-width: 580px) {
+    flex-direction: column;
+    height: fit-content;
+    min-height: fit-content;
+    padding-block: unset;
+    gap: 0.5rem;
+  }
   ul {
     > li {
       display: flex;
@@ -32,15 +38,6 @@ nav {
   justify-content: var(--nav-justify, space-between);
   margin-inline: var(--nav-mx, 0);
   background-color: var(--nav-bg, initial);
-
-
-  @media(max-width: 580px) {
-    flex-direction: column;
-    height: fit-content;
-    min-height: fit-content;
-    padding-block: unset;
-    gap: 0.5rem;
-  }
 
   > section,
   > ul {

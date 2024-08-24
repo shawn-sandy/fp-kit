@@ -1,10 +1,20 @@
 body > nav,
-[aria-label~=navbar] {
+[aria-label~=navbar], .navbar {
   padding-inline: var(--nav-px, 1rem);
   min-height: var(--nav-h, fit-content);
 }
+@media (max-width: 580px) {
+  body > nav,
+  [aria-label~=navbar], .navbar {
+    flex-direction: column;
+    height: fit-content;
+    min-height: fit-content;
+    padding-block: unset;
+    gap: 0.5rem;
+  }
+}
 body > nav ul > li,
-[aria-label~=navbar] ul > li {
+[aria-label~=navbar] ul > li, .navbar ul > li {
   display: flex;
   align-items: center;
   list-style: none;
@@ -14,11 +24,11 @@ body > nav ul > li,
   padding-inline: var(--nav-px, 0.75rem);
 }
 body > nav ul > li:hover,
-[aria-label~=navbar] ul > li:hover {
+[aria-label~=navbar] ul > li:hover, .navbar ul > li:hover {
   background-color: var(--nav-hov-bg, whitesmoke);
 }
 body > nav ul > li:hover:where(img),
-[aria-label~=navbar] ul > li:hover:where(img) {
+[aria-label~=navbar] ul > li:hover:where(img), .navbar ul > li:hover:where(img) {
   background-color: transparent;
 }
 
@@ -30,15 +40,6 @@ nav {
   justify-content: var(--nav-justify, space-between);
   margin-inline: var(--nav-mx, 0);
   background-color: var(--nav-bg, initial);
-}
-@media (max-width: 580px) {
-  nav {
-    flex-direction: column;
-    height: fit-content;
-    min-height: fit-content;
-    padding-block: unset;
-    gap: 0.5rem;
-  }
 }
 nav > section,
 nav > ul {

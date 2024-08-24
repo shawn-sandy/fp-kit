@@ -79,6 +79,7 @@ export const NavBlock: Story = {
 export const MultipleNavs: Story = {
   args: {
     ...NavSection.args,
+    classes: 'navbar',
     children: (
       <>
         <Nav.List>
