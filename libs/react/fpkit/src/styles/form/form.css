@@ -3,7 +3,7 @@
   --input-appearance: none;
   --input-bg: inherit;
   --input-border: none;
-  --input-outline: 0.0625rem solid var(--input-border-color);
+  --input-outline: thin solid var(--input-border-color);
   --input-px: 0.6rem;
   --input-py: 0.4rem;
   --input-radius: --var(--radius);
@@ -51,6 +51,13 @@ select::placeholder {
   font-style: var(--placeholder-style);
   font-size: var(--placeholder-fs);
   text-transform: capitalize;
+}
+input[type]:not([type=checkbox], [type=radio]):focus-visible, input[type]:not([type=checkbox], [type=radio]):focus,
+textarea:focus-visible,
+textarea:focus,
+select:focus-visible,
+select:focus {
+  outline-width: medium;
 }
 input[type]:not([type=checkbox], [type=radio])[aria-required=true]::placeholder,
 textarea[aria-required=true]::placeholder,

@@ -1,7 +1,7 @@
-import FP from '../fp'
+import UI from '../ui'
 import React from 'react'
 
-export type SelectProps = React.ComponentProps<typeof FP>
+export type SelectProps = React.ComponentProps<typeof UI>
 
 export type SelectOptionsProps = {
   /**
@@ -83,7 +83,7 @@ export const Select = ({
     }
 
     return (
-      <FP
+      <UI
         as="select"
         id={id}
         ref={ref}
@@ -100,9 +100,8 @@ export const Select = ({
         style={styles}
         {...props} // Accessibility
       >
-        {children || <option value="" />}
-        {children || <option value="" />}
-      </FP>
+         <option value="" />
+      </UI>
     )
   }
 }

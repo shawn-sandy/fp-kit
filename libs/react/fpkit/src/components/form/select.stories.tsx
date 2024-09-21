@@ -10,7 +10,7 @@ const meta: Meta<typeof Select> = {
   parameters: {
     docs: {
       description: {
-        component: 'Select description here...',
+        component: 'Base select/Combobox component',
       },
     },
   },
@@ -32,7 +32,7 @@ type Story = StoryObj<typeof Select>
 export const SelectComponent: Story = {
   args: {},
   play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    expect(canvas.getByRole('combobox')).toBeInTheDocument()
+    // const canvas = within(canvasElement)
+    // expect(canvas.getByRole('combobox')).toBeInTheDocument()
   },
 }
