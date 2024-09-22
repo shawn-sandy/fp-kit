@@ -106,4 +106,13 @@
 - Implement proper loading and error states for async components
 
 
-
+# Storybook
+- Use a consistent naming convention for stories (e.g., PascalCase)
+- Implement PropTypes or TypeScript interfaces for story props
+- Use a storybook story for each component to showcase its usage
+- Implement theming support using CSS variables or a theming system
+- Ensure components are responsive and work across different screen sizes
+- Implement proper loading and error states for async components
+- Write comprehensive unit tests for each component
+- Include JSDoc comments for component and function documentation
+- Write stories in the CFS3 format

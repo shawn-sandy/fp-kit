@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef, ChangeEvent } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import TextToSpeechPresentation from './TextToSpeechPresentation';
 
 interface GroupedVoices {
   [key: string]: SpeechSynthesisVoice[];
@@ -32,8 +33,8 @@ const TextToSpeech: React.FC = () => {
       }, {});
       setGroupedVoices(grouped);
 
-      const googleVoice = availableVoices.find(voice => 
-        voice.name.toLowerCase().includes('google') && 
+      const googleVoice = availableVoices.find(voice =>
+        voice.name.toLowerCase().includes('google') &&
         voice.lang === 'en-US'
       );
 
@@ -117,81 +118,24 @@ const TextToSpeech: React.FC = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px', margin: 'auto' }}>
-      <div>
-        <label htmlFor="text-input">Enter text to speak:</label>
-        <textarea
-          id="text-input"
-          value={text}
-          onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setText(e.target.value)}
-          placeholder="Paste your blog post here..."
-          style={{ width: '100%', height: '150px', marginTop: '0.5rem' }}
-        />
-      </div>
-      <div>
-        <label htmlFor="voice-select">Select a voice:</label>
-        <select
-          id="voice-select"
-          value={selectedVoice}
-          onChange={(e: ChangeEvent<HTMLSelectElement>) => setSelectedVoice(e.target.value)}
-          style={{ width: '100%', marginTop: '0.5rem' }}
-        >
-          {Object.entries(groupedVoices).map(([lang, langVoices]) => (
-            <optgroup key={lang} label={new Intl.DisplayNames([lang], { type: 'language' }).of(lang)}>
-              {langVoices.map((voice) => (
-                <option key={voice.name} value={voice.name}>
-                  {voice.name} ({voice.lang})
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        </select>
-      </div>
-      <div>
-        <label htmlFor="rate-input">Speech Rate: {rate.toFixed(1)}</label>
-        <input
-          id="rate-input"
-          type="range"
-          min={0.5}
-          max={2}
-          step={0.1}
-          value={rate}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => setRate(parseFloat(e.target.value))}
-          style={{ width: '100%' }}
-        />
-      </div>
-      <div>
-        <label htmlFor="pitch-input">Pitch: {pitch.toFixed(1)}</label>
-        <input
-          id="pitch-input"
-          type="range"
-          min={0.5}
-          max={2}
-          step={0.1}
-          value={pitch}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => setPitch(parseFloat(e.target.value))}
-          style={{ width: '100%' }}
-        />
-      </div>
-      <div style={{ display: 'flex', gap: '0.5rem' }}>
-        <button onClick={handleSpeak} disabled={!text}>
-          {isPaused ? 'Resume' : 'Speak'}
-        </button>
-        <button onClick={handlePause} disabled={!utterance || isPaused}>
-          Pause
-        </button>
-        <button onClick={handleStop} disabled={!utterance}>
-          Stop
-        </button>
-      </div>
-      <div>
-        <label>Progress:</label>
-        <progress value={progress} max={100} style={{ width: '100%', marginTop: '0.5rem' }} />
-      </div>
-      <div>
-        <label>Status: {status}</label>
-      </div>
-    </div>
+    <TextToSpeechPresentation
+      text={text}
+      setText={setText}
+      selectedVoice={selectedVoice}
+      setSelectedVoice={setSelectedVoice}
+      groupedVoices={groupedVoices}
+      rate={rate}
+      setRate={setRate}
+      pitch={pitch}
+      setPitch={setPitch}
+      handleSpeak={handleSpeak}
+      handlePause={handlePause}
+      handleStop={handleStop}
+      isPaused={isPaused}
+      utterance={utterance}
+      progress={progress}
+      status={status}
+    />
   );
 };
 
