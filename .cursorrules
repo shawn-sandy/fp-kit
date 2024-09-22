@@ -1,0 +1,109 @@
+# Cursor.ai Project Rules
+
+# Code Style
+- Use consistent indentation (2 spaces)
+- Follow camelCase for variable and function names
+- Use PascalCase for component names
+- Keep lines under 100 characters
+
+# React Specific
+- Use functional components with hooks
+- Prefer const for variable declarations
+- Use destructuring for props
+- Use PropTypes for type checking
+
+# Testing
+- Write unit tests for all components
+- Use meaningful test descriptions
+- Aim for high test coverage
+
+# Git Practices
+- Write clear, concise commit messages
+- Use feature branches for new developments
+- Squash commits before merging to main
+
+# Documentation
+- Add JSDoc comments for components and functions
+- Keep README files up-to-date
+- Document any complex logic or algorithms
+
+# Performance
+- Optimize renders using React.memo or useMemo when appropriate
+- Avoid unnecessary re-renders
+- Use lazy loading for large components or routes
+
+# Accessibility
+- Ensure proper ARIA attributes are used
+- Maintain keyboard navigation support
+- Use semantic HTML elements
+
+# State Management
+- Use React Context for global state when appropriate
+- Keep component state as local as possible
+- Consider using Redux for complex state management
+
+# File Structure
+- Organize components into logical folders
+- Keep related files (component, styles, tests) together
+- Use index.js files for cleaner imports
+
+# Code Review
+- Perform peer code reviews for all pull requests
+- Address all comments before merging
+- Use linting tools to catch common issues early
+
+# TypeScript Rules
+- Use strict mode with "strict": true in tsconfig.json
+- Prefer interfaces over type aliases for object types
+- Use union types for variables that can be multiple types
+- Utilize generics for reusable components and functions
+- Avoid using 'any' type; be as specific as possible
+- Use optional chaining (?.) and nullish coalescing (??) operators
+- Leverage TypeScript's built-in utility types (e.g., Partial, Readonly, Pick)
+- Use 'unknown' instead of 'any' for values of uncertain type
+- Implement proper error handling with custom error types
+- Use type assertions sparingly and only when necessary
+- Utilize const assertions for literal values
+- Use 'as const' for readonly arrays and tuples
+- Implement discriminated unions for complex type relationships
+- Use mapped types to create new types based on existing ones
+- Leverage conditional types for advanced type manipulation
+
+# Monorepo Structure
+- Use a monorepo structure with separate packages for different parts of the application
+- Organize packages under 'libs' and 'apps' directories
+- Use 'libs' for shared libraries and components
+- Use 'apps' for standalone applications
+- Maintain a clear separation of concerns between packages
+- Use a package manager that supports workspaces (e.g., Yarn workspaces, npm workspaces)
+- Implement a consistent naming convention for packages (e.g., @organization/package-name)
+- Use a build tool that supports monorepo setups (e.g., Nx, Lerna)
+- Maintain separate package.json files for each package
+- Use a root package.json for shared dependencies and scripts
+- Implement proper versioning strategy for packages (e.g., semantic versioning)
+- Use symlinks or aliases to reference local packages within the monorepo
+- Implement a consistent documentation structure across all packages
+- Use a centralized configuration for linting, testing, and building when possible
+- Implement CI/CD pipelines that can handle the monorepo structure efficiently
+- Use git submodules or subtrees for external dependencies when necessary
+- Implement proper access control for different packages if using a private repository
+
+
+# FPKit React Components
+- Create reusable and modular components in the fpkit folder
+- Follow a consistent naming convention for components (e.g., PascalCase)
+- Implement PropTypes or TypeScript interfaces for component props
+- Use functional components with hooks instead of class components
+- Keep components focused on a single responsibility
+- Implement proper error handling and fallback UI for edge cases
+- Use React.memo for performance optimization when appropriate
+- Implement accessibility features (ARIA attributes, keyboard navigation)
+- Write comprehensive unit tests for each component
+- Include JSDoc comments for component and function documentation
+- Create a storybook story for each component to showcase its usage
+- Implement theming support using CSS variables or a theming system
+- Ensure components are responsive and work across different screen sizes
+- Implement proper loading and error states for async components
+
+
+

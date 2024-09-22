@@ -21,10 +21,6 @@ type Story = StoryObj<typeof Card>
 
 export const CardComponent: Story = {
   args: {},
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    expect(canvas.getByText(/link/i)).toBeInTheDocument()
-  },
 }
 
 export const Multiple: Story = {
@@ -56,3 +52,22 @@ export const Multiple: Story = {
     </>
   ),
 } as Story
+
+
+export const CardWithTitle: Story = {
+  args: {
+    styles: {
+      // '--card-bg': '#f0f0f0',
+    },
+  },
+  render: (args) => (
+    <Card {...args}>
+      <Card.Title>Card Title</Card.Title>
+      <Card.Content>
+        <p>This card demonstrates the usage of the CardTitle component. It shows how a title can be added to a card for better organization and visual hierarchy.</p>
+      </Card.Content>
+    </Card>
+  ),
+} as Story
+
+

@@ -44,14 +44,16 @@ export const Card = ({
       data-card
       {...props}
     >
+      <UI as="div" data-card-content>
       {children}
+      </UI>
     </UI>
   )
 }
 
 
 /*
- * CardTitle component
+ * Title component
  *
  * Renders a title for the Card component using the UI component.
  *
@@ -60,9 +62,46 @@ export const Card = ({
  * @param {string} [props.className] - Additional CSS classes
  * @param {Object} [props.styles] - Inline styles
  *
- * @returns {ReactElement} CardTitle component
+ * @returns {ReactElement} Title component
  */
-export const CardTitle = ({
+export const Title = ({
+  children,
+  className,
+  styles,
+  as = 'h3',
+  ...props
+}: React.PropsWithChildren<{
+  className?: string;
+  styles?: React.CSSProperties;
+  as?: React.ElementType;
+}>) => {
+  return (
+    <UI
+      as={as}
+      className={`card-title ${className || ''}`}
+      styles={styles}
+      {...props}
+    >
+      {children}
+    </UI>
+  );
+};
+
+Title.displayName = 'Title';
+
+/*
+ * CardContent component
+ *
+ * Renders the content of the Card component using the UI component with an article element.
+ *
+ * @param {Object} props - Component props
+ * @param {ReactNode} props.children - Content
+ * @param {string} [props.className] - Additional CSS classes
+ * @param {Object} [props.styles] - Inline styles
+ *
+ * @returns {ReactElement} CardContent component
+ */
+export const Content = ({
   children,
   className,
   styles,
@@ -73,8 +112,8 @@ export const CardTitle = ({
 }>) => {
   return (
     <UI
-      as="h2"
-      className={`card-title ${className || ''}`}
+      as="article"
+      className={`card-content ${className || ''}`}
       styles={styles}
       {...props}
     >
@@ -83,11 +122,13 @@ export const CardTitle = ({
   );
 };
 
-CardTitle.displayName = 'CardTitle';
+Content.displayName = 'Content';
+
 
 
 export default Card
 Card.displayName = 'Card'
-Card.Title = CardTitle
+Card.Title = Title
+Card.Content = Content
 
 
