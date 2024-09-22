@@ -12,8 +12,7 @@ const meta: Meta<typeof Card> = {
   title: 'FP.REACT Components/Card',
   component: Card,
   args: {
-    // @ts-ignore
-    children: content,
+    children: <p>{content}</p>,
   },
 } as Story
 
@@ -37,22 +36,22 @@ export const Multiple: Story = {
   render: (args) => (
     <>
       <Card {...args}>
-        Proident et amet aliqua excepteur sunt qui deserunt commodo tempor esse.
+       <p>Proident et amet aliqua excepteur sunt qui deserunt commodo tempor esse.
         Et aliqua nulla ea amet nisi consequat id adipisicing culpa ipsum minim
         voluptate est Lorem. Amet qui laboris incididunt commodo culpa aliqua
-        veniam.
+        veniam.</p>
       </Card>
       <Card>
-        Proident et amet aliqua excepteur sunt qui deserunt commodo tempor esse.
+        <p>Proident et amet aliqua excepteur sunt qui deserunt commodo tempor esse.
         Et aliqua nulla ea amet nisi consequat id adipisicing culpa ipsum minim
         voluptate est Lorem. Amet qui laboris incididunt commodo culpa aliqua
-        veniam.
+        veniam.</p>
       </Card>
       <Card>
-        Proident et amet aliqua excepteur sunt qui deserunt commodo tempor esse.
+        <p>Proident et amet aliqua excepteur sunt qui deserunt commodo tempor esse.
         Et aliqua nulla ea amet nisi consequat id adipisicing culpa ipsum minim
         voluptate est Lorem. Amet qui laboris incididunt commodo culpa aliqua
-        veniam.
+        veniam.</p>
       </Card>
     </>
   ),

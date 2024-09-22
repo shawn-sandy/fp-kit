@@ -49,5 +49,45 @@ export const Card = ({
   )
 }
 
+
+/*
+ * CardTitle component
+ *
+ * Renders a title for the Card component using the UI component.
+ *
+ * @param {Object} props - Component props
+ * @param {ReactNode} props.children - Title content
+ * @param {string} [props.className] - Additional CSS classes
+ * @param {Object} [props.styles] - Inline styles
+ *
+ * @returns {ReactElement} CardTitle component
+ */
+export const CardTitle = ({
+  children,
+  className,
+  styles,
+  ...props
+}: React.PropsWithChildren<{
+  className?: string;
+  styles?: React.CSSProperties;
+}>) => {
+  return (
+    <UI
+      as="h2"
+      className={`card-title ${className || ''}`}
+      styles={styles}
+      {...props}
+    >
+      {children}
+    </UI>
+  );
+};
+
+CardTitle.displayName = 'CardTitle';
+
+
 export default Card
 Card.displayName = 'Card'
+Card.Title = CardTitle
+
+

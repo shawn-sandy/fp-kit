@@ -10,13 +10,16 @@
   --card-gap: 1rem;
   position: relative;
   display: var(--card-display);
-  padding: var(--card-p);
   display: var(--card-display);
   flex-direction: var(--card-direction);
   gap: var(--card-gap);
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
+}
+
+[data-card] > * {
+  padding: var(--card-p);
 }
 
 /*# sourceMappingURL=card.css.map */
