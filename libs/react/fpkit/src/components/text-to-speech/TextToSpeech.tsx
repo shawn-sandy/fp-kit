@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent, useEffect } from 'react';
 import { useTextToSpeech } from './useTextToSpeech';
-import Button from '../buttons/button'; // Changed 'Button' to 'button'
+import Button from '#components/buttons/button';
+import Textarea from "#components/form/textarea.jsx";
 
 interface TextToSpeechComponentProps {
   initialText?: string;
@@ -36,14 +37,7 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
 
   return (
     <>
-      {showTextInput && (
-      <textarea
-        value={text}
-        onChange={handleChange}
-        placeholder="Enter text to speak"
-        style={{ width: '100%', height: '100px', marginBottom: '10px' }}
-      />
-      )}
+      {showTextInput && <Textarea value={text} onChange={handleChange} />}
       <div style={{ display: 'flex', gap: '10px' }}>
         <Button type="button" onClick={handleSpeak} disabled={isSpeaking}>
           Speak

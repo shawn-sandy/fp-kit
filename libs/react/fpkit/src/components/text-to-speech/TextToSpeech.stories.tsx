@@ -14,7 +14,7 @@ type Story = StoryObj<typeof TextToSpeechComponent>;
 
 export const Default: Story = {
   args: {
-    initialText: 'Hello, world!',
+    initialText: 'Hello, how are you I am a Text to Speech (TTS) assistant!',
   },
 } as Story;
 

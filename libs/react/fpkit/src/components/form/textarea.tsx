@@ -1,8 +1,8 @@
 import React from 'react'
-import FP from '../fp'
+import UI from '../ui'
 
 export type TextareaProps = React.ComponentProps<'textarea'> &
-  React.ComponentProps<typeof FP>
+  React.ComponentProps<typeof UI>
 
 /**
  * Textarea component.
@@ -60,7 +60,7 @@ export const Textarea = ({
   }
 
   return (
-    <FP
+    <UI
       as="textarea"
       id={id}
       name={name}
