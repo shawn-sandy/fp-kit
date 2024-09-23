@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import TextToSpeechComponent from './TextToSpeech';
 
 const meta: Meta<typeof TextToSpeechComponent> = {
-  title: 'Components/TextToSpeechComponent',
+  title: 'FP.REACT Components/TextToSpeech',
   component: TextToSpeechComponent,
   tags: ['autodocs'],
 } as Story;

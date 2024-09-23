@@ -5,9 +5,18 @@ import Button from '../buttons/button'; // Changed 'Button' to 'button'
 interface TextToSpeechComponentProps {
   initialText?: string;
   showTextInput?: boolean;
+  voice?: SpeechSynthesisVoice | undefined;
+  pitch?: number;
+  rate?: number;
 }
 
-const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({ initialText = '', showTextInput = true }) => {
+const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
+  initialText = '',
+  showTextInput = true,
+  voice,
+  pitch = 1,
+  rate = 1,
+}) => {
   const { speak, pause, resume, cancel, isSpeaking, isPaused } = useTextToSpeech();
   const [text, setText] = useState<string>(initialText);
 
