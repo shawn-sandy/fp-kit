@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent, useEffect } from 'react';
 import { useTextToSpeech } from './useTextToSpeech';
+import Button from '../buttons/button'; // Changed 'Button' to 'button'
 
 interface TextToSpeechComponentProps {
   initialText?: string;
@@ -35,9 +36,9 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({ initialTe
       />
       )}
       <div style={{ display: 'flex', gap: '10px' }}>
-        <button type="button" onClick={handleSpeak} disabled={isSpeaking}>
+        <Button type="button" onClick={handleSpeak} disabled={isSpeaking}>
           Speak
-        </button>
+        </Button>
         <button type="button" onClick={pause} disabled={!isSpeaking || isPaused}>
           Pause
         </button>
