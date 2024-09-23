@@ -11,6 +11,7 @@
 - Prefer const for variable declarations
 - Use destructuring for props
 - Use PropTypes for type checking
+- do not place functional components in the same file
 
 # Testing
 - Write unit tests for all components
