@@ -1,0 +1,70 @@
+# Text-to-Speech Components
+
+This folder contains components and hooks related to text-to-speech functionality in the FPKit React library.
+
+## Contents
+
+1. `useTextToSpeech.tsx`: A custom React hook that provides text-to-speech functionality.
+2. `TextToSpeech.tsx`: A React component that implements the text-to-speech functionality using the `useTextToSpeech` hook.
+3. `TextToSpeech.stories.tsx`: Storybook stories for the TextToSpeech component.
+4. `useTextToSpeech.mdx`: Documentation for the `useTextToSpeech` hook.
+
+## Usage
+
+### useTextToSpeech Hook
+
+The `useTextToSpeech` hook provides a simple way to add text-to-speech capabilities to your React components.
+
+```tsx
+import { useTextToSpeech } from '@fpkit/react';
+
+function MyComponent() {
+  const { speak, pause, resume, cancel } = useTextToSpeech();
+
+  const handleSpeak = () => {
+    speak('Hello, world!');
+  };
+
+  return (
+    <button onClick={handleSpeak}>
+      Speak
+    </button>
+  );
+}
+```
+
+For more detailed information on the `useTextToSpeech` hook, refer to the `useTextToSpeech.mdx` file.
+
+### TextToSpeech Component
+
+The `TextToSpeech` component provides a ready-to-use implementation of text-to-speech functionality.
+
+```tsx
+import { TextToSpeech } from '@fpkit/react';
+
+function MyComponent() {
+  return (
+    <TextToSpeech text="Hello, world!" />
+  );
+}
+```
+
+## Documentation
+
+For comprehensive documentation on the `useTextToSpeech` hook, including API details and usage examples, please refer to the `useTextToSpeech.mdx` file in this folder.
+
+## Storybook
+
+The `TextToSpeech.stories.tsx` file contains Storybook stories that demonstrate the usage and various configurations of the TextToSpeech component. You can run Storybook to interact with these components in isolation and see how they behave with different props.
+
+## Contributing
+
+When contributing to this folder, please ensure that:
+
+1. Any new functionality is properly documented in the respective MDX files.
+2. Storybook stories are updated or added for new features or components.
+3. The README is kept up-to-date with any significant changes.
+
+## Testing
+
+Ensure that all components and hooks in this folder have appropriate unit tests. Run the test suite before submitting any pull requests.
