@@ -6,6 +6,14 @@ const meta: Meta<typeof TextToSpeechComponent> = {
   title: 'FP.REACT Components/TextToSpeech',
   component: TextToSpeechComponent,
   tags: ['autodocs'],
+  argTypes: {
+    voice: {
+      control: {
+        type: 'select',
+        options: ['Google US English', 'Google UK English Female', 'Google UK English Male'],
+      },
+    },
+  },
 } as Story;
 
 export default meta;
@@ -40,3 +48,73 @@ export const WithText: Story = {
     },
   },
 } as Story;
+
+export const FullFeature: Story = {
+  args: {
+    initialText: 'Welcome to the full-featured Text-to-Speech component. You can modify this text, choose a voice, adjust pitch and rate, and then click the speak button to hear it.',
+    showTextInput: true,
+    pitch: 1,
+    rate: 1,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'This story showcases all features of the TextToSpeechComponent, including text input, voice selection, pitch and rate adjustment. It provides a comprehensive demonstration of the component\'s capabilities.',
+      },
+    },
+  },
+  render: (args) => {
+    const [selectedVoice, setSelectedVoice] = React.useState<SpeechSynthesisVoice | undefined>(undefined);
+    const [pitch, setPitch] = React.useState(1);
+    const [rate, setRate] = React.useState(1);
+
+    React.useEffect(() => {
+      const voices = window.speechSynthesis.getVoices();
+      setSelectedVoice(voices.find(voice => voice.name === 'Google US English') || voices[0]);
+    }, []);
+
+    return (
+      <div>
+        <TextToSpeechComponent {...args} voice={selectedVoice} pitch={pitch} rate={rate} />
+        <div style={{ marginTop: '20px' }}>
+          <label htmlFor="voice-select">Select Voice: </label>
+          <select
+            id="voice-select"
+            onChange={(e) => setSelectedVoice(window.speechSynthesis.getVoices().find(v => v.name === e.target.value))}
+          >
+            {window.speechSynthesis.getVoices().map((voice) => (
+              <option key={voice.name} value={voice.name}>
+                {voice.name} ({voice.lang})
+              </option>
+            ))}
+          </select>
+        </div>
+        <div style={{ marginTop: '10px' }}>
+          <label htmlFor="pitch-range">Pitch: {pitch}</label>
+          <input
+            id="pitch-range"
+            type="range"
+            min="0.5"
+            max="2"
+            step="0.1"
+            value={pitch}
+            onChange={(e) => setPitch(parseFloat(e.target.value))}
+          />
+        </div>
+        <div style={{ marginTop: '10px' }}>
+          <label htmlFor="rate-range">Rate: {rate}</label>
+          <input
+            id="rate-range"
+            type="range"
+            min="0.5"
+            max="2"
+            step="0.1"
+            value={rate}
+            onChange={(e) => setRate(parseFloat(e.target.value))}
+          />
+        </div>
+      </div>
+    );
+  },
+} as Story;
+
