@@ -1,16 +1,27 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * Options for configuring speech synthesis.
+ * @interface SpeechOptions
+ */
 interface SpeechOptions {
+  /** The language for speech synthesis (e.g., 'en-US') */
   lang?: string;
+  /** The voice to use for speech synthesis */
   voice?: SpeechSynthesisVoice;
+  /** The pitch of the voice (0 to 2) */
   pitch?: number;
+  /** The speed of the voice (0.1 to 10) */
   rate?: number;
+  /** Whether to apply a "socks in mouth" effect */
+  socks?: boolean;
 }
 
 /**
  * Custom hook to handle text-to-speech functionality.
  *
- * @returns {Object} - An object containing methods to control speech synthesis and state variables.
+ * @param {SpeechSynthesisVoice} [initialVoice] - The initial voice to use for speech synthesis.
+ * @returns {Object} An object containing methods to control speech synthesis and state variables.
  */
 export const useTextToSpeech = (initialVoice?: SpeechSynthesisVoice) => {
   const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
@@ -46,6 +57,10 @@ export const useTextToSpeech = (initialVoice?: SpeechSynthesisVoice) => {
     };
   }, []);
 
+  /**
+   * Gets the list of available languages for speech synthesis.
+   * @returns {string[]} An array of available language codes.
+   */
   const getAvailableLanguages = () => {
     return [...new Set(availableVoices.map(voice => voice.lang))];
   };
@@ -55,6 +70,10 @@ export const useTextToSpeech = (initialVoice?: SpeechSynthesisVoice) => {
    *
    * @param {string} text - The text to be spoken.
    * @param {SpeechOptions} [options={}] - Options for speech synthesis.
+   * @param {string} [options.lang='en-US'] - The language for speech synthesis.
+   * @param {number} [options.pitch=1] - The pitch of the voice (0 to 2).
+   * @param {number} [options.rate=1] - The speed of the voice (0.1 to 10).
+   * @param {boolean} [options.socks=false] - Whether to apply a "socks in mouth" effect.
    */
   const speak = (text: string, options: SpeechOptions = {}) => {
     const utterance = new SpeechSynthesisUtterance(text);
@@ -71,6 +90,10 @@ export const useTextToSpeech = (initialVoice?: SpeechSynthesisVoice) => {
     setIsPaused(false);
   };
 
+  /**
+   * Changes the current voice used for speech synthesis.
+   * @param {SpeechSynthesisVoice} voice - The new voice to use.
+   */
   const changeVoice = (voice: SpeechSynthesisVoice) => {
     setCurrentVoice(voice);
   };
@@ -107,15 +130,25 @@ export const useTextToSpeech = (initialVoice?: SpeechSynthesisVoice) => {
   };
 
   return {
+    /** Initiates speech synthesis for the given text */
     speak,
+    /** Pauses the ongoing speech synthesis */
     pause,
+    /** Resumes the paused speech synthesis */
     resume,
+    /** Cancels the ongoing speech synthesis */
     cancel,
+    /** Indicates whether speech synthesis is currently active */
     isSpeaking,
+    /** Indicates whether speech synthesis is currently paused */
     isPaused,
+    /** Array of available voices for speech synthesis */
     availableVoices,
+    /** Changes the current voice used for speech synthesis */
     changeVoice,
+    /** The currently selected voice for speech synthesis */
     currentVoice,
+    /** Gets the list of available languages for speech synthesis */
     getAvailableLanguages
   };
 };
