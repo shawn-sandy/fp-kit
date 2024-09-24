@@ -7,6 +7,7 @@ interface TextToSpeechComponentProps {
   initialText?: string;
   showTextInput?: boolean;
   voice?: SpeechSynthesisVoice | undefined;
+
   pitch?: number;
   rate?: number;
 }
@@ -18,8 +19,9 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
   pitch = 1,
   rate = 1,
 }) => {
-  const { speak, pause, resume, cancel, isSpeaking, isPaused } = useTextToSpeech();
+  const { speak, pause, resume, cancel, isSpeaking, isPaused, getAvailableLanguages, availableVoices } = useTextToSpeech();
   const [text, setText] = useState<string>(initialText);
+  console.log(getAvailableLanguages());
 
   useEffect(() => {
     setText(initialText);

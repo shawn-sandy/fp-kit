@@ -1,49 +1,78 @@
 import { useState, useEffect } from 'react';
 
+interface SpeechOptions {
+  lang?: string;
+  voice?: SpeechSynthesisVoice;
+  pitch?: number;
+  rate?: number;
+}
+
 /**
  * Custom hook to handle text-to-speech functionality.
  *
  * @returns {Object} - An object containing methods to control speech synthesis and state variables.
  */
-export const useTextToSpeech = () => {
+export const useTextToSpeech = (initialVoice?: SpeechSynthesisVoice) => {
+  const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [currentVoice, setCurrentVoice] = useState<SpeechSynthesisVoice | undefined>(initialVoice);
+
   const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const [utterance, setUtterance] = useState<SpeechSynthesisUtterance | null>(null);
+
+  useEffect(() => {
+    const updateVoices = () => {
+      const voices = window.speechSynthesis.getVoices();
+      setAvailableVoices(voices);
+
+      // Set default voice to Google US English if available
+      const googleVoice = voices.find(voice => voice.name === 'Google US English');
+      if (googleVoice) {
+        setCurrentVoice(googleVoice);
+      } else {
+        // Fallback to the first English voice if Google voice is not available
+        const englishVoice = voices.find(voice => voice.lang.startsWith('en-'));
+        if (englishVoice) {
+          setCurrentVoice(englishVoice);
+        }
+      }
+    };
+
+    updateVoices();
+    window.speechSynthesis.onvoiceschanged = updateVoices;
+
+    return () => {
+      window.speechSynthesis.onvoiceschanged = null;
+    };
+  }, []);
+
+  const getAvailableLanguages = () => {
+    return [...new Set(availableVoices.map(voice => voice.lang))];
+  };
 
   /**
    * Initiates speech synthesis for the given text.
    *
    * @param {string} text - The text to be spoken.
-   * @param {string} [lang='en-US'] - The language of the speech.
-   * @param {SpeechSynthesisVoice} [voice] - The voice to use for the speech.
-   * @param {number} [pitch=1] - The pitch of the speech.
-   * @param {number} [rate=1] - The rate of the speech.
+   * @param {SpeechOptions} [options={}] - Options for speech synthesis.
    */
-  const speak = (text: string, lang: string = 'en-US', voice: SpeechSynthesisVoice | undefined = undefined, pitch: number = 1, rate: number = 1) => {
-    if (!window.speechSynthesis) {
-      console.error('SpeechSynthesis API not supported');
-      return;
-    }
+  const speak = (text: string, options: SpeechOptions = {}) => {
+    const utterance = new SpeechSynthesisUtterance(text);
+    const { lang = 'en-US', pitch = 1, rate = 1 } = options;
 
-    // If there's ongoing speech, stop it
-    if (window.speechSynthesis.speaking) {
-      window.speechSynthesis.cancel();
-    }
+    utterance.lang = lang;
+    utterance.pitch = pitch;
+    utterance.rate = rate;
+    utterance.voice = currentVoice ?? options.voice ?? null;
 
-    const newUtterance = new SpeechSynthesisUtterance(text);
-    newUtterance.lang = lang;
+    window.speechSynthesis.speak(utterance);
+    setUtterance(utterance);
+    setIsSpeaking(true);
+    setIsPaused(false);
+  };
 
-    newUtterance.onstart = () => {
-      setIsSpeaking(true);
-    };
-
-    newUtterance.onend = () => {
-      setIsSpeaking(false);
-      setIsPaused(false);
-    };
-
-    window.speechSynthesis.speak(newUtterance);
-    setUtterance(newUtterance);
+  const changeVoice = (voice: SpeechSynthesisVoice) => {
+    setCurrentVoice(voice);
   };
 
   /**
@@ -77,5 +106,16 @@ export const useTextToSpeech = () => {
     }
   };
 
-  return { speak, pause, resume, cancel, isSpeaking, isPaused };
+  return {
+    speak,
+    pause,
+    resume,
+    cancel,
+    isSpeaking,
+    isPaused,
+    availableVoices,
+    changeVoice,
+    currentVoice,
+    getAvailableLanguages
+  };
 };
