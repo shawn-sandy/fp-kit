@@ -19,4 +19,7 @@ export * from './components/up'
 export * from './components/down'
 export * from './components/star'
 export * from './components/user'
-
+export * from './components/play'
+export * from './components/pause'
+export * from './components/resume'
+export * from './components/stop'

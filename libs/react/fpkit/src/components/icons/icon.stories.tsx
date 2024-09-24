@@ -4,7 +4,6 @@ import { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from '#components/buttons/button'
 import { Icon } from './icon'
-import Svg from './components/svg'
 import './icon.scss'
 
 const meta: Meta<typeof Icon> = {
@@ -157,5 +156,29 @@ export const Star: Story = {
 export const Copy: Story = {
   args: {
     children: <Icon.Copy />,
+  },
+} as Story
+
+export const Play: Story = {
+  args: {
+    children: <Icon.Play />,
+  },
+} as Story
+
+export const Pause: Story = {
+  args: {
+    children: <Icon.Pause />,
+  },
+} as Story
+
+export const Resume: Story = {
+  args: {
+    children: <Icon.Resume />,
+  },
+} as Story
+
+export const Stop: Story = {
+  args: {
+    children: <Icon.Stop />,
   },
 } as Story
