@@ -35,22 +35,14 @@ export const Stop = ({
         stroke-linejoin="miter"
         stroke-miterlimit="10"
       >
-        <circle
-          fill="none"
-          stroke={strokeColor}
-          stroke-width="2"
-          cx="12"
-          cy="12"
-          r="11"
-        ></circle>
         <rect
-          x="8"
-          y="8"
+          x="2"
+          y="2"
           fill="none"
           stroke={strokeColor}
           stroke-width="2"
-          width="8"
-          height="8"
+          width="20"
+          height="20"
         ></rect>
       </g>
     </Svg>

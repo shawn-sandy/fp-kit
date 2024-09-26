@@ -35,32 +35,24 @@ export const Pause = ({
         stroke-linejoin="miter"
         stroke-miterlimit="10"
       >
-        <line
+        <rect
+          x="2"
+          y="2"
+          width="6"
+          height="20"
           fill="none"
           stroke={strokeColor}
           stroke-width="2"
-          x1="9"
-          y1="16"
-          x2="9"
-          y2="8"
-        ></line>
-        <line
+        ></rect>
+        <rect
+          x="16"
+          y="2"
+          width="6"
+          height="20"
           fill="none"
           stroke={strokeColor}
           stroke-width="2"
-          x1="15"
-          y1="16"
-          x2="15"
-          y2="8"
-        ></line>
-        <circle
-          fill="none"
-          stroke={strokeColor}
-          stroke-width="2"
-          cx="12"
-          cy="12"
-          r="11"
-        ></circle>
+        ></rect>
       </g>
     </Svg>
   )
