@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 /**
  * Options for configuring speech synthesis.
@@ -6,15 +6,15 @@ import { useState, useEffect } from 'react';
  */
 interface SpeechOptions {
   /** The language for speech synthesis (e.g., 'en-US') */
-  lang?: string;
+  lang?: string
   /** The voice to use for speech synthesis */
-  voice?: SpeechSynthesisVoice;
+  voice?: SpeechSynthesisVoice
   /** The pitch of the voice (0 to 2) */
-  pitch?: number;
+  pitch?: number
   /** The speed of the voice (0.1 to 10) */
-  rate?: number;
+  rate?: number
   /** Whether to apply a "socks in mouth" effect */
-  socks?: boolean;
+  socks?: boolean
 }
 
 /**
@@ -24,110 +24,129 @@ interface SpeechOptions {
  * @returns {Object} An object containing methods to control speech synthesis and state variables.
  */
 export const useTextToSpeech = (initialVoice?: SpeechSynthesisVoice) => {
-  const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [currentVoice, setCurrentVoice] = useState<SpeechSynthesisVoice | undefined>(initialVoice);
+  const [availableVoices, setAvailableVoices] = useState<
+    SpeechSynthesisVoice[]
+  >([])
+  const [currentVoice, setCurrentVoice] = useState<
+    SpeechSynthesisVoice | undefined
+  >(initialVoice)
 
-  const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
-  const [isPaused, setIsPaused] = useState<boolean>(false);
-  const [utterance, setUtterance] = useState<SpeechSynthesisUtterance | null>(null);
+  const [isSpeaking, setIsSpeaking] = useState<boolean>(false)
+  const [isPaused, setIsPaused] = useState<boolean>(false)
+  const [utterance, setUtterance] = useState<SpeechSynthesisUtterance | null>(
+    null,
+  )
 
   useEffect(() => {
     const updateVoices = () => {
-      const voices = window.speechSynthesis.getVoices();
-      setAvailableVoices(voices);
+      const voices = window.speechSynthesis.getVoices()
+      setAvailableVoices(voices)
 
       // Set default voice to Google US English if available
-      const googleVoice = voices.find(voice => voice.name === 'Google US English');
+      const googleVoice = voices.find(
+        (voice) => voice.name === 'Google US English',
+      )
       if (googleVoice) {
-        setCurrentVoice(googleVoice);
+        setCurrentVoice(googleVoice)
       } else {
         // Fallback to the first English voice if Google voice is not available
-        const englishVoice = voices.find(voice => voice.lang.startsWith('en-'));
+        const englishVoice = voices.find((voice) =>
+          voice.lang.startsWith('en-'),
+        )
         if (englishVoice) {
-          setCurrentVoice(englishVoice);
+          setCurrentVoice(englishVoice)
         }
       }
-    };
+    }
 
-    updateVoices();
-    window.speechSynthesis.onvoiceschanged = updateVoices;
+    updateVoices()
+    window.speechSynthesis.onvoiceschanged = updateVoices
 
     return () => {
-      window.speechSynthesis.onvoiceschanged = null;
-    };
-  }, []);
+      window.speechSynthesis.onvoiceschanged = null
+    }
+  }, [])
 
   /**
    * Gets the list of available languages for speech synthesis.
    * @returns {string[]} An array of available language codes.
    */
   const getAvailableLanguages = () => {
-    return [...new Set(availableVoices.map(voice => voice.lang))];
-  };
+    return [...new Set(availableVoices.map((voice) => voice.lang))]
+  }
 
   /**
    * Initiates speech synthesis for the given text.
    *
    * @param {string} text - The text to be spoken.
    * @param {SpeechOptions} [options={}] - Options for speech synthesis.
-   * @param {string} [options.lang='en-US'] - The language for speech synthesis.
-   * @param {number} [options.pitch=1] - The pitch of the voice (0 to 2).
-   * @param {number} [options.rate=1] - The speed of the voice (0.1 to 10).
-   * @param {boolean} [options.socks=false] - Whether to apply a "socks in mouth" effect.
+   * @param {Function} [onEnd] - Callback function to be called when speech ends.
    */
-  const speak = (text: string, options: SpeechOptions = {}) => {
-    const utterance = new SpeechSynthesisUtterance(text);
-    const { lang = 'en-US', pitch = 1, rate = 1 } = options;
+  const speak = (
+    text: string,
+    options: SpeechOptions = {},
+    onEnd?: () => void,
+  ) => {
+    const utterance = new SpeechSynthesisUtterance(text)
+    const { lang = 'en-US', pitch = 1, rate = 1 } = options
 
-    utterance.lang = lang;
-    utterance.pitch = pitch;
-    utterance.rate = rate;
-    utterance.voice = currentVoice ?? options.voice ?? null;
+    utterance.lang = lang
+    utterance.pitch = pitch
+    utterance.rate = rate
+    utterance.voice = currentVoice ?? options.voice ?? null
 
-    window.speechSynthesis.speak(utterance);
-    setUtterance(utterance);
-    setIsSpeaking(true);
-    setIsPaused(false);
-  };
+    utterance.onend = () => {
+      setIsSpeaking(false)
+      setIsPaused(false)
+      if (onEnd) {
+        onEnd()
+      }
+    }
+
+    window.speechSynthesis.speak(utterance)
+    setUtterance(utterance)
+    setIsSpeaking(true)
+    setIsPaused(false)
+  }
 
   /**
    * Changes the current voice used for speech synthesis.
    * @param {SpeechSynthesisVoice} voice - The new voice to use.
    */
   const changeVoice = (voice: SpeechSynthesisVoice) => {
-    setCurrentVoice(voice);
-  };
+    setCurrentVoice(voice)
+  }
 
   /**
    * Pauses the ongoing speech synthesis.
    */
   const pause = () => {
     if (isSpeaking && !isPaused) {
-      window.speechSynthesis.pause();
-      setIsPaused(true);
+      window.speechSynthesis.pause()
+      setIsPaused(true)
     }
-  };
+  }
 
   /**
    * Resumes the paused speech synthesis.
    */
   const resume = () => {
     if (isSpeaking && isPaused) {
-      window.speechSynthesis.resume();
-      setIsPaused(false);
+      window.speechSynthesis.resume()
+      setIsPaused(false)
     }
-  };
+  }
 
   /**
    * Cancels the ongoing speech synthesis.
    */
   const cancel = () => {
     if (isSpeaking) {
-      window.speechSynthesis.cancel();
-      setIsSpeaking(false);
-      setIsPaused(false);
+      window.speechSynthesis.cancel()
+      setIsSpeaking(false)
+      setIsPaused(false)
     }
-  };
+  }
 
   return {
     /** Initiates speech synthesis for the given text */
@@ -149,6 +168,6 @@ export const useTextToSpeech = (initialVoice?: SpeechSynthesisVoice) => {
     /** The currently selected voice for speech synthesis */
     currentVoice,
     /** Gets the list of available languages for speech synthesis */
-    getAvailableLanguages
-  };
-};
+    getAvailableLanguages,
+  }
+}
