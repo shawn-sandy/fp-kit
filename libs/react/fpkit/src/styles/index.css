@@ -478,11 +478,9 @@ button[type=submit], button[style*=submit] {
 }
 button[disabled], button[aria-disabled=true] {
   cursor: var(--btn-cursor, not-allowed);
-  opacity: var(--btn-opacity, 0.5);
 }
 button[disabled]:is(:hover, :focus), button[aria-disabled=true]:is(:hover, :focus) {
   transform: none;
-  opacity: var(--btn-opacity, 0.5);
 }
 button:is(:hover, :focus) {
   background-color: var(--btn-bg, var(--btn, lightgray));
@@ -516,6 +514,16 @@ button[data-btn~=md] {
 }
 button[data-btn~=lg] {
   --btn-fs: var(--btn-lg);
+}
+button[data-btn~=text] {
+  --btn-bg: transparent;
+  --btn-cl: currentColor;
+  --btn-bdr: none;
+}
+button[data-btn~=text]:is(:hover, :focus) {
+  background-color: transparent;
+  outline: thin solid var(--btn-cl);
+  outline-offset: 0;
 }
 
 p[role=note],
@@ -1259,6 +1267,16 @@ nav:not(body > nav) ol li a[href][aria-current],
 nav[data-breadcrumb] ol li a[href][aria-current] {
   color: var(--breadcrumb-current-color);
   text-decoration: none;
+}
+
+[data-tts] {
+  display: flex;
+  gap: var(--tts-gap, 0.5rem);
+  align-items: center;
+  background-color: var(--tts-bg, #fff);
+  border: var(--tts-border, 1px solid var(--tts-border-color, whitesmoke));
+  border-radius: var(--tts-radius, 99rem);
+  padding: var(--tts-padding, 0.5rem);
 }
 
 /*# sourceMappingURL=index.css.map */

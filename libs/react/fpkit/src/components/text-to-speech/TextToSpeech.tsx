@@ -19,6 +19,10 @@ interface TextToSpeechComponentProps {
   pitch?: number
   /** The rate of speech. Defaults to 1. */
   rate?: number
+  /** The language to be used for speech synthesis. */
+  language?: string
+  /** Player label */
+  label?: string | React.ReactNode
 }
 
 /**
@@ -32,6 +36,8 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
   voice,
   pitch = 1,
   rate = 1,
+  language,
+  label,
 }) => {
   const {
     speak,
@@ -73,7 +79,8 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
   return (
     <>
       {showTextInput && <Textarea value={text} onChange={handleChange} />}
-      <div style={{ display: 'flex', gap: '10px' }}>
+      <div data-tts>
+        <p>{label || 'Read content'}</p>
         <Button
           aria-label="Speak"
           type="button"

@@ -1,0 +1,11 @@
+[data-tts] {
+  display: flex;
+  gap: var(--tts-gap, 0.5rem);
+  align-items: center;
+  background-color: var(--tts-bg, #fff);
+  border: var(--tts-border, 1px solid var(--tts-border-color, whitesmoke));
+  border-radius: var(--tts-radius, 99rem);
+  padding: var(--tts-padding, 0.5rem);
+}
+
+/*# sourceMappingURL=text-to-speech.css.map */

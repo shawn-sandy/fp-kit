@@ -38,11 +38,9 @@ button[type=submit], button[style*=submit] {
 }
 button[disabled], button[aria-disabled=true] {
   cursor: var(--btn-cursor, not-allowed);
-  opacity: var(--btn-opacity, 0.5);
 }
 button[disabled]:is(:hover, :focus), button[aria-disabled=true]:is(:hover, :focus) {
   transform: none;
-  opacity: var(--btn-opacity, 0.5);
 }
 button:is(:hover, :focus) {
   background-color: var(--btn-bg, var(--btn, lightgray));
@@ -76,6 +74,16 @@ button[data-btn~=md] {
 }
 button[data-btn~=lg] {
   --btn-fs: var(--btn-lg);
+}
+button[data-btn~=text] {
+  --btn-bg: transparent;
+  --btn-cl: currentColor;
+  --btn-bdr: none;
+}
+button[data-btn~=text]:is(:hover, :focus) {
+  background-color: transparent;
+  outline: thin solid var(--btn-cl);
+  outline-offset: 0;
 }
 
 /*# sourceMappingURL=button.css.map */
