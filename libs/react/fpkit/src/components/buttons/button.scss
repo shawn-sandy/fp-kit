@@ -103,12 +103,12 @@ button {
     --btn-bdr: none;
     --btn-height: unset;
     --btn-width: unset;
-    --btn-py: 0;
-    --btn-px: 0.5rem;
+    --btn-py: 0.75rem;
+    --btn-px: 0.75rem;
 
     &:is(:hover, :focus) {
       background-color: transparent;
-      outline: thin solid var(--btn-cl);
+      outline: 0.07rem solid var(--btn-cl);
       outline-offset: 0;
     }
   }

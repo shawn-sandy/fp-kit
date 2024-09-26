@@ -182,3 +182,27 @@ export const Stop: Story = {
     children: <Icon.Stop />,
   },
 } as Story
+
+export const PlaySolid: Story = {
+  args: {
+    children: <Icon.PlaySolid />,
+  },
+} as Story
+
+export const PauseSolid: Story = {
+  args: {
+    children: <Icon.PauseSolid />,
+  },
+} as Story
+
+export const ResumeSolid: Story = {
+  args: {
+    children: <Icon.ResumeSolid />,
+  },
+} as Story
+
+export const StopSolid: Story = {
+  args: {
+    children: <Icon.StopSolid />,
+  },
+} as Story

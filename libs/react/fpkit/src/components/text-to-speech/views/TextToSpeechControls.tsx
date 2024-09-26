@@ -33,7 +33,7 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
           onClick={onSpeak}
           data-btn="sm text pill"
         >
-          <Icon.Play size={iconSize} />
+          <Icon.PlaySolid size={iconSize} />
         </Button>
       )}
       {isSpeaking && !isPaused && (
@@ -44,7 +44,7 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
           data-btn="sm text pill"
           focusable={isSpeaking && !isPaused}
         >
-          <Icon.Pause size={iconSize} />
+          <Icon.PauseSolid size={iconSize} />
         </Button>
       )}
       {isPaused && (
@@ -54,7 +54,7 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
           onClick={onResume}
           data-btn="sm text pill"
         >
-          <Icon.Resume size={iconSize} />
+          <Icon.ResumeSolid size={iconSize} />
         </Button>
       )}
       <Button
@@ -63,7 +63,7 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
         onClick={onCancel}
         data-btn="sm text pill"
       >
-        <Icon.Stop size={iconSize} />
+        <Icon.StopSolid size={iconSize} />
       </Button>
     </div>
   )

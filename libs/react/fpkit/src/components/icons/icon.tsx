@@ -20,6 +20,10 @@ import {
   Pause,
   Stop,
   Resume,
+  PlaySolid,
+  PauseSolid,
+  ResumeSolid,
+  StopSolid
 } from './index'
 
 import UI from '#components/ui'
@@ -90,3 +94,7 @@ Icon.Play = Play
 Icon.Pause = Pause
 Icon.Stop = Stop
 Icon.Resume = Resume
+Icon.ResumeSolid = ResumeSolid
+Icon.PlaySolid = PlaySolid
+Icon.PauseSolid = PauseSolid
+Icon.StopSolid = StopSolid
