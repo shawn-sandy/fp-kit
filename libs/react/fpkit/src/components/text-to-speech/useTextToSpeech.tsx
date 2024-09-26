@@ -7,16 +7,15 @@ import { useState, useEffect } from 'react'
 interface SpeechOptions {
   /** The language for speech synthesis (e.g., 'en-US') */
   lang?: string
-  /** The voice to use for speech synthesis */
-  voice?: SpeechSynthesisVoice
+
   /** The pitch of the voice (0 to 2) */
   pitch?: number
   /** The speed of the voice (0.1 to 10) */
   rate?: number
-  /** Whether to apply a "socks in mouth" effect */
-  socks?: boolean
-}
 
+  /** The voice to use for speech synthesis */
+  voice?: SpeechSynthesisVoice
+}
 /**
  * Custom hook to handle text-to-speech functionality.
  *
@@ -88,11 +87,10 @@ export const useTextToSpeech = (initialVoice?: SpeechSynthesisVoice) => {
     onEnd?: () => void,
   ) => {
     const utterance = new SpeechSynthesisUtterance(text)
-    const { lang = 'en-US', pitch = 1, rate = 1 } = options
 
-    utterance.lang = lang
-    utterance.pitch = pitch
-    utterance.rate = rate
+    utterance.lang = options.lang ?? 'en-US'
+    utterance.pitch = options.pitch ?? 1
+    utterance.rate = options.rate ?? 1
     utterance.voice = currentVoice ?? options.voice ?? null
 
     utterance.onend = () => {
@@ -103,10 +101,15 @@ export const useTextToSpeech = (initialVoice?: SpeechSynthesisVoice) => {
       }
     }
 
-    window.speechSynthesis.speak(utterance)
-    setUtterance(utterance)
-    setIsSpeaking(true)
-    setIsPaused(false)
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.speak(utterance)
+      setUtterance(utterance)
+      setIsSpeaking(true)
+      setIsPaused(false)
+    } else {
+      console.error('Speech synthesis not supported')
+      // Handle the error appropriately
+    }
   }
 
   /**

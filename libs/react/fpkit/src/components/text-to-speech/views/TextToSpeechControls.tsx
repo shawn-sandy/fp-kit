@@ -42,6 +42,7 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
           type="button"
           onClick={onPause}
           data-btn="sm text"
+          focusable={isSpeaking && !isPaused}
         >
           <Icon.Pause size={iconSize} />
         </Button>
