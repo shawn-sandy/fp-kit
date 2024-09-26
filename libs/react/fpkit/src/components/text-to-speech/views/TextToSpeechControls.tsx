@@ -25,13 +25,13 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
 
   return (
     <div data-tts>
-      <p>{label || 'Read content'}</p>
+      {label && <p>{label}</p>}
       {!isSpeaking && (
         <Button
           aria-label="Speak"
           type="button"
           onClick={onSpeak}
-          data-btn="sm text"
+          data-btn="sm text pill"
         >
           <Icon.Play size={iconSize} />
         </Button>
@@ -41,7 +41,7 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
           aria-label="Pause"
           type="button"
           onClick={onPause}
-          data-btn="sm text"
+          data-btn="sm text pill"
           focusable={isSpeaking && !isPaused}
         >
           <Icon.Pause size={iconSize} />
@@ -52,7 +52,7 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
           aria-label="Resume"
           type="button"
           onClick={onResume}
-          data-btn="sm text"
+          data-btn="sm text pill"
         >
           <Icon.Resume size={iconSize} />
         </Button>
@@ -61,7 +61,7 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
         aria-label="Stop"
         type="button"
         onClick={onCancel}
-        data-btn="sm text"
+        data-btn="sm text pill"
       >
         <Icon.Stop size={iconSize} />
       </Button>
