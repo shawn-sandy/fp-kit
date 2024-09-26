@@ -1,8 +1,7 @@
 import React, { useState, ChangeEvent, useEffect } from 'react'
 import { useTextToSpeech } from './useTextToSpeech'
-import Button from '#components/buttons/button'
 import Textarea from '#components/form/textarea.jsx'
-import Icon from '#components/icons/icon'
+import TextToSpeechControls from './views/TextToSpeechControls'
 
 /**
  * Props for the TextToSpeechComponent.
@@ -56,68 +55,28 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
     setText(initialText)
   }, [initialText])
 
-  /**
-   * Handles the speak button click event.
-   * Speaks the current text if it's not empty.
-   */
   const handleSpeak = (): void => {
     if (text.trim() !== '') {
       speak(text)
     }
   }
 
-  /**
-   * Handles changes in the textarea input.
-   * @param {ChangeEvent<HTMLTextAreaElement>} e - The change event.
-   */
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
     setText(e.target.value)
   }
 
-  const iconSize = 16
-
   return (
     <>
       {showTextInput && <Textarea value={text} onChange={handleChange} />}
-      <div data-tts>
-        <p>{label || 'Read content'}</p>
-        <Button
-          aria-label="Speak"
-          type="button"
-          onClick={handleSpeak}
-          disabled={isSpeaking}
-          data-btn="sm text"
-        >
-          <Icon.Play size={iconSize} />
-        </Button>
-        <button
-          aria-label="Pause"
-          type="button"
-          onClick={pause}
-          disabled={!isSpeaking || isPaused}
-          data-btn="sm text"
-        >
-          <Icon.Pause size={iconSize} />
-        </button>
-        <button
-          aria-label="Resume"
-          type="button"
-          onClick={resume}
-          disabled={!isPaused}
-          data-btn="sm text"
-        >
-          <Icon.Resume size={iconSize} />
-        </button>
-        <button
-          aria-label="Stop"
-          type="button"
-          onClick={cancel}
-          disabled={!isSpeaking}
-          data-btn="sm text"
-        >
-          <Icon.Stop size={iconSize} />
-        </button>
-      </div>
+      <TextToSpeechControls
+        label={label}
+        isSpeaking={isSpeaking}
+        isPaused={isPaused}
+        onSpeak={handleSpeak}
+        onPause={pause}
+        onResume={resume}
+        onCancel={cancel}
+      />
     </>
   )
 }
