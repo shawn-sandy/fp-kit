@@ -7,4 +7,5 @@
   border: var(--tts-border, 1px solid var(--tts-border-color, currentColor));
   border-radius: var(--tts-radius, 99rem);
   padding: var(--tts-padding, 0.5rem);
+  min-width: 20.3125rem;
 }

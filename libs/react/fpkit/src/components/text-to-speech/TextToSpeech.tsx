@@ -57,7 +57,7 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
 
   const handleSpeak = (): void => {
     if (text.trim() !== '') {
-      speak(text)
+      speak(text, { voice, pitch, rate })
     }
   }
 
