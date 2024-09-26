@@ -101,6 +101,11 @@ button {
     --btn-bg: transparent;
     --btn-cl: currentColor;
     --btn-bdr: none;
+    --btn-height: unset;
+    --btn-width: unset;
+    --btn-py: 0;
+    --btn-px: 0.5rem;
+
     &:is(:hover, :focus) {
       background-color: transparent;
       outline: thin solid var(--btn-cl);

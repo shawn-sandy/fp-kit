@@ -22,6 +22,8 @@ interface TextToSpeechComponentProps {
   language?: string
   /** Player label */
   label?: string | React.ReactNode
+  /** Callback function to be called when speech ends. */
+  onEnd?: () => void
 }
 
 /**
@@ -37,6 +39,7 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
   rate = 1,
   language,
   label,
+  onEnd,
 }) => {
   const {
     speak,
@@ -57,12 +60,18 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
 
   const handleSpeak = (): void => {
     if (text.trim() !== '') {
-      speak(text, { voice, pitch, rate })
+      speak(text, { voice, pitch, rate }, handleEnd)
     }
   }
 
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
     setText(e.target.value)
+  }
+
+  const handleEnd = (): void => {
+    if (onEnd) {
+      onEnd()
+    }
   }
 
   return (
