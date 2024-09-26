@@ -68,7 +68,7 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
     setText(e.target.value)
   }
 
-  const iconSize = 24
+  const iconSize = 16
 
   return (
     <>
@@ -79,6 +79,7 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
           type="button"
           onClick={handleSpeak}
           disabled={isSpeaking}
+          data-btn="sm text"
         >
           <Icon.Play size={iconSize} />
         </Button>
@@ -87,6 +88,7 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
           type="button"
           onClick={pause}
           disabled={!isSpeaking || isPaused}
+          data-btn="sm text"
         >
           <Icon.Pause size={iconSize} />
         </button>
@@ -95,6 +97,7 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
           type="button"
           onClick={resume}
           disabled={!isPaused}
+          data-btn="sm text"
         >
           <Icon.Resume size={iconSize} />
         </button>
@@ -103,6 +106,7 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
           type="button"
           onClick={cancel}
           disabled={!isSpeaking}
+          data-btn="sm text"
         >
           <Icon.Stop size={iconSize} />
         </button>
