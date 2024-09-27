@@ -519,10 +519,14 @@ button[data-btn~=text] {
   --btn-bg: transparent;
   --btn-cl: currentColor;
   --btn-bdr: none;
+  --btn-height: unset;
+  --btn-width: unset;
+  --btn-py: 0.75rem;
+  --btn-px: 0.75rem;
 }
 button[data-btn~=text]:is(:hover, :focus) {
   background-color: transparent;
-  outline: thin solid var(--btn-cl);
+  outline: 0.07rem solid var(--btn-cl);
   outline-offset: 0;
 }
 
@@ -1270,13 +1274,25 @@ nav[data-breadcrumb] ol li a[href][aria-current] {
 }
 
 [data-tts] {
+  --tts-gap: 0.5rem;
+  --tts-bg: #fff;
+  --tts-border-width: 0.125rem;
+  --tts-border-style: solid;
+  --tts-border-color: currentColor;
+  --tts-radius: 99rem;
+  --tts-padding: 0.5rem;
+  --tts-min-width: 20.3125rem;
+  --tts-align-items: center;
+  --tts-justify-content: center;
   display: flex;
-  gap: var(--tts-gap, 0.5rem);
-  align-items: center;
-  background-color: var(--tts-bg, #fff);
-  border: var(--tts-border, 1px solid var(--tts-border-color, whitesmoke));
-  border-radius: var(--tts-radius, 99rem);
-  padding: var(--tts-padding, 0.5rem);
+  gap: var(--tts-gap);
+  align-items: var(--tts-align-items);
+  justify-content: var(--tts-justify-content);
+  background-color: var(--tts-bg);
+  border: var(--tts-border-width) var(--tts-border-style) var(--tts-border-color);
+  border-radius: var(--tts-radius);
+  padding: var(--tts-padding);
+  min-width: var(--tts-min-width);
 }
 
 /*# sourceMappingURL=index.css.map */
