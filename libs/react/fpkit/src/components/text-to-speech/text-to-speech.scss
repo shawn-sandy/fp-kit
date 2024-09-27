@@ -1,11 +1,23 @@
 [data-tts] {
+  --tts-gap: 0.5rem;
+  --tts-bg: #fff;
+  --tts-border-width: 2px;
+  --tts-border-style: solid;
+  --tts-border-color: currentColor;
+  --tts-radius: 99rem;
+  --tts-padding: 0.5rem;
+  --tts-min-width: 20.3125rem;
+  --tts-align-items: center;
+  --tts-justify-content: center;
+
   display: flex;
-  gap: var(--tts-gap, 0.5rem);
-  align-items: center;
-  justify-content: center;
-  background-color: var(--tts-bg, #fff);
-  border: var(--tts-border, 2px solid var(--tts-border-color, currentColor));
-  border-radius: var(--tts-radius, 99rem);
-  padding: var(--tts-padding, 0.5rem);
-  min-width: 20.3125rem;
+  gap: var(--tts-gap);
+  align-items: var(--tts-align-items);
+  justify-content: var(--tts-justify-content);
+  background-color: var(--tts-bg);
+  border: var(--tts-border-width) var(--tts-border-style)
+    var(--tts-border-color);
+  border-radius: var(--tts-radius);
+  padding: var(--tts-padding);
+  min-width: var(--tts-min-width);
 }
