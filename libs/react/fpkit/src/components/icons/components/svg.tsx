@@ -12,7 +12,7 @@ export const Svg = ({
   fill,
   strokeColor,
   styles,
-  size,
+  size = 24,
   role = 'img',
   alt,
   children,

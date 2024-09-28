@@ -43,12 +43,12 @@ button {
   &[disabled],
   &[aria-disabled='true'] {
     cursor: var(--btn-cursor, not-allowed);
-    opacity: var(--btn-opacity, 0.5);
+    // opacity: var(--btn-opacity, 0.5);
 
     &:is(:hover, :focus) {
       transform: none;
       // background-color: var(--btn-bg, lightgray);
-      opacity: var(--btn-opacity, 0.5);
+      // opacity: var(--btn-opacity, 0.5);
     }
   }
 
@@ -95,5 +95,21 @@ button {
 
   &[data-btn~='lg'] {
     --btn-fs: var(--btn-lg);
+  }
+
+  &[data-btn~='text'] {
+    --btn-bg: transparent;
+    --btn-cl: currentColor;
+    --btn-bdr: none;
+    --btn-height: unset;
+    --btn-width: unset;
+    --btn-py: 0.75rem;
+    --btn-px: 0.75rem;
+
+    &:is(:hover, :focus) {
+      background-color: transparent;
+      outline: 0.07rem solid var(--btn-cl);
+      outline-offset: 0;
+    }
   }
 }

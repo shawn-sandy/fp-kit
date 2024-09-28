@@ -478,11 +478,9 @@ button[type=submit], button[style*=submit] {
 }
 button[disabled], button[aria-disabled=true] {
   cursor: var(--btn-cursor, not-allowed);
-  opacity: var(--btn-opacity, 0.5);
 }
 button[disabled]:is(:hover, :focus), button[aria-disabled=true]:is(:hover, :focus) {
   transform: none;
-  opacity: var(--btn-opacity, 0.5);
 }
 button:is(:hover, :focus) {
   background-color: var(--btn-bg, var(--btn, lightgray));
@@ -516,6 +514,20 @@ button[data-btn~=md] {
 }
 button[data-btn~=lg] {
   --btn-fs: var(--btn-lg);
+}
+button[data-btn~=text] {
+  --btn-bg: transparent;
+  --btn-cl: currentColor;
+  --btn-bdr: none;
+  --btn-height: unset;
+  --btn-width: unset;
+  --btn-py: 0.75rem;
+  --btn-px: 0.75rem;
+}
+button[data-btn~=text]:is(:hover, :focus) {
+  background-color: transparent;
+  outline: 0.07rem solid var(--btn-cl);
+  outline-offset: 0;
 }
 
 p[role=note],
@@ -1259,6 +1271,28 @@ nav:not(body > nav) ol li a[href][aria-current],
 nav[data-breadcrumb] ol li a[href][aria-current] {
   color: var(--breadcrumb-current-color);
   text-decoration: none;
+}
+
+[data-tts] {
+  --tts-gap: 0.5rem;
+  --tts-bg: #fff;
+  --tts-border-width: 0.125rem;
+  --tts-border-style: solid;
+  --tts-border-color: currentColor;
+  --tts-radius: 99rem;
+  --tts-padding: 0.5rem;
+  --tts-min-width: 20.3125rem;
+  --tts-align-items: center;
+  --tts-justify-content: center;
+  display: flex;
+  gap: var(--tts-gap);
+  align-items: var(--tts-align-items);
+  justify-content: var(--tts-justify-content);
+  background-color: var(--tts-bg);
+  border: var(--tts-border-width) var(--tts-border-style) var(--tts-border-color);
+  border-radius: var(--tts-radius);
+  padding: var(--tts-padding);
+  min-width: var(--tts-min-width);
 }
 
 /*# sourceMappingURL=index.css.map */
