@@ -15,9 +15,17 @@
   align-items: var(--tts-align-items);
   justify-content: var(--tts-justify-content);
   background-color: var(--tts-bg);
-  border: var(--tts-border-width) var(--tts-border-style)
+  border: none;
+  outline: var(--tts-border-width) var(--tts-border-style)
     var(--tts-border-color);
   border-radius: var(--tts-radius);
   padding: var(--tts-padding);
   min-width: var(--tts-min-width);
+  button[data-btn~='tts-btn'],
+  .tts-border {
+    outline: none;
+    &:hover {
+      outline: var(--tts-border-width) var(--tts-border-style);
+    }
+  }
 }

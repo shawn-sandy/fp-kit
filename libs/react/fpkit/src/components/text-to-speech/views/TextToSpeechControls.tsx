@@ -12,6 +12,27 @@ interface TextToSpeechControlsProps {
   onCancel: () => void
 }
 
+const TTSButtonComponent = ({
+  children,
+  onClick,
+}: {
+  children: React.ReactNode
+  onClick: () => void
+}) => {
+  return (
+    <button
+      type="button"
+      className="tts-border"
+      data-btn="sm text pill"
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  )
+}
+
+export const TTSButton = React.memo(TTSButtonComponent)
+
 const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
   label,
   isSpeaking,
@@ -27,44 +48,23 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
     <div data-tts>
       {label && <p>{label}</p>}
       {!isSpeaking && (
-        <Button
-          aria-label="Speak"
-          type="button"
-          onClick={onSpeak}
-          data-btn="sm text pill"
-        >
+        <TTSButton aria-label="Speak" onClick={onSpeak}>
           <Icon.PlaySolid size={iconSize} />
-        </Button>
+        </TTSButton>
       )}
       {isSpeaking && !isPaused && (
-        <Button
-          aria-label="Pause"
-          type="button"
-          onClick={onPause}
-          data-btn="sm text pill"
-          focusable={isSpeaking && !isPaused}
-        >
+        <TTSButton aria-label="Pause" onClick={onPause}>
           <Icon.PauseSolid size={iconSize} />
-        </Button>
+        </TTSButton>
       )}
       {isPaused && (
-        <Button
-          aria-label="Resume"
-          type="button"
-          onClick={onResume}
-          data-btn="sm text pill"
-        >
+        <TTSButton aria-label="Resume" onClick={onResume}>
           <Icon.ResumeSolid size={iconSize} />
-        </Button>
+        </TTSButton>
       )}
-      <Button
-        aria-label="Stop"
-        type="button"
-        onClick={onCancel}
-        data-btn="sm text pill"
-      >
+      <TTSButton aria-label="Stop" onClick={onCancel}>
         <Icon.StopSolid size={iconSize} />
-      </Button>
+      </TTSButton>
     </div>
   )
 }
