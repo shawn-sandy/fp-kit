@@ -70,3 +70,5 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
 }
 
 export default TextToSpeechControls
+TextToSpeechControls.displayName = 'TextToSpeechControls'
+// TextToSpeechControls.Button = TTSButton
