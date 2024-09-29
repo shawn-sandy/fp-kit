@@ -34,7 +34,7 @@ interface TextToSpeechComponentProps {
 const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
   initialText = '',
   showTextInput = true,
-  voice,
+  voice = 'Google US English',
   pitch = 1,
   rate = 1,
   language,
