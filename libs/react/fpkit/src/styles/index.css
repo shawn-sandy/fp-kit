@@ -1289,10 +1289,19 @@ nav[data-breadcrumb] ol li a[href][aria-current] {
   align-items: var(--tts-align-items);
   justify-content: var(--tts-justify-content);
   background-color: var(--tts-bg);
-  border: var(--tts-border-width) var(--tts-border-style) var(--tts-border-color);
+  border: none;
+  outline: var(--tts-border-width) var(--tts-border-style) var(--tts-border-color);
   border-radius: var(--tts-radius);
   padding: var(--tts-padding);
   min-width: var(--tts-min-width);
+}
+[data-tts] button[data-btn~=tts-btn],
+[data-tts] .tts-border {
+  outline: none;
+}
+[data-tts] button[data-btn~=tts-btn]:hover,
+[data-tts] .tts-border:hover {
+  outline: var(--tts-border-width) var(--tts-border-style);
 }
 
 /*# sourceMappingURL=index.css.map */
