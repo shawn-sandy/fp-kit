@@ -1,11 +1,11 @@
 import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
-import TextToSpeechComponent from './TextToSpeech'
+import TextToSpeech from './TextToSpeech'
 import './text-to-speech.scss'
 
-const meta: Meta<typeof TextToSpeechComponent> = {
+const meta: Meta<typeof TextToSpeech> = {
   title: 'FP.REACT Components/TextToSpeech',
-  component: TextToSpeechComponent,
+  component: TextToSpeech,
   tags: ['autodocs'],
   argTypes: {
     voice: {
@@ -23,7 +23,7 @@ const meta: Meta<typeof TextToSpeechComponent> = {
 
 export default meta
 
-type Story = StoryObj<typeof TextToSpeechComponent>
+type Story = StoryObj<typeof TextToSpeech>
 
 export const Default: Story = {
   args: {
@@ -90,7 +90,7 @@ export const FullFeature: Story = {
 
     return (
       <div>
-        <TextToSpeechComponent
+        <TextToSpeech
           {...args}
           voice={selectedVoice}
           pitch={pitch}

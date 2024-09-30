@@ -31,7 +31,7 @@ interface TextToSpeechComponentProps {
  * @param {TextToSpeechComponentProps} props - The props for the component.
  * @returns {JSX.Element} The rendered TextToSpeechComponent.
  */
-const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
+export const TextToSpeech: React.FC<TextToSpeechComponentProps> = ({
   initialText = '',
   showTextInput = true,
   voice,
@@ -90,5 +90,5 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
   )
 }
 
-export default TextToSpeechComponent
-TextToSpeechComponent.displayName = 'TextToSpeechComponent'
+export default TextToSpeech
+TextToSpeech.displayName = 'TextToSpeechComponent'
