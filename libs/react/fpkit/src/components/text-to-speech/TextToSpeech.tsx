@@ -91,3 +91,4 @@ const TextToSpeechComponent: React.FC<TextToSpeechComponentProps> = ({
 }
 
 export default TextToSpeechComponent
+TextToSpeechComponent.displayName = 'TextToSpeechComponent'
