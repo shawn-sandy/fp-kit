@@ -33,7 +33,7 @@ interface TextToSpeechComponentProps {
  */
 export const TextToSpeech: React.FC<TextToSpeechComponentProps> = ({
   initialText = '',
-  showTextInput = true,
+  showTextInput = false,
   voice,
   pitch = 1,
   rate = 1,

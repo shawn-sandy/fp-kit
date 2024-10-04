@@ -1,39 +1,81 @@
 import React from 'react'
-import Button from '#components/buttons/button'
 import Icon from '#components/icons/icon'
+import UI from '#components/ui'
+import { FC } from 'react'
 
+/**
+ * Props for the TextToSpeechControls component.
+ * @interface TextToSpeechControlsProps
+ */
 interface TextToSpeechControlsProps {
+  /** Optional label for the controls */
   label?: string | React.ReactNode
+  /** Indicates if the text-to-speech is currently speaking */
   isSpeaking: boolean
+  /** Indicates if the text-to-speech is paused */
   isPaused: boolean
+  /** Function to start speaking */
   onSpeak: () => void
+  /** Function to pause speaking */
   onPause: () => void
+  /** Function to resume speaking */
   onResume: () => void
+  /** Function to cancel speaking */
   onCancel: () => void
 }
 
-const TTSButtonComponent = ({
+/**
+ * TTSButtonComponent props
+ * @interface TTSButtonComponentProps
+ */
+interface TTSButtonComponentProps {
+  /** The content of the button */
+  children: React.ReactNode
+  /** Function to call when the button is clicked */
+  onClick: () => void
+}
+
+/**
+ * TTSButtonComponent is a reusable button component for text-to-speech controls.
+ * @param {TTSButtonComponentProps} props - The component props
+ * @returns {React.ReactElement} The rendered button
+ */
+export const TTSButtonComponent: React.FC<TTSButtonComponentProps> = ({
   children,
   onClick,
-}: {
-  children: React.ReactNode
-  onClick: () => void
 }) => {
   return (
-    <button
+    <UI
+      as="button"
       type="button"
       className="tts-border"
       data-btn="sm text pill"
       onClick={onClick}
     >
       {children}
-    </button>
+    </UI>
   )
 }
 
 export const TTSButton = React.memo(TTSButtonComponent)
 
-const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
+/**
+ * TextToSpeechControlsComponent interface extends FC<TextToSpeechControlsProps>
+ * and includes a TTSButton property.
+ * @interface TextToSpeechControlsComponent
+ * @extends {FC<TextToSpeechControlsProps>}
+ */
+interface TextToSpeechControlsComponent extends FC<TextToSpeechControlsProps> {
+  /** The TTSButton component used within TextToSpeechControls */
+  TTSButton: typeof TTSButton
+}
+
+/**
+ * TextToSpeechControls component provides a user interface for controlling text-to-speech functionality.
+ * @param {TextToSpeechControlsProps} props - The component props
+ * @returns {React.ReactElement} The rendered TextToSpeechControls component
+ */
+const TextToSpeechControls: TextToSpeechControlsComponent = ({
   label,
   isSpeaking,
   isPaused,
@@ -45,7 +87,7 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
   const iconSize = 16
 
   return (
-    <div data-tts>
+    <UI as="div" data-tts>
       {label && <p>{label}</p>}
       {!isSpeaking && (
         <TTSButton aria-label="Speak" onClick={onSpeak}>
@@ -65,10 +107,11 @@ const TextToSpeechControls: React.FC<TextToSpeechControlsProps> = ({
       <TTSButton aria-label="Stop" onClick={onCancel}>
         <Icon.StopSolid size={iconSize} />
       </TTSButton>
-    </div>
+    </UI>
   )
 }
 
-export default TextToSpeechControls
 TextToSpeechControls.displayName = 'TextToSpeechControls'
-// TextToSpeechControls.Button = TTSButton
+TextToSpeechControls.TTSButton = TTSButton
+
+export default TextToSpeechControls
