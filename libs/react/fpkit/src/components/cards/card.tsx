@@ -45,12 +45,11 @@ export const Card = ({
       {...props}
     >
       <UI as="div" data-card-content>
-      {children}
+        {children}
       </UI>
     </UI>
   )
 }
-
 
 /*
  * Title component
@@ -71,9 +70,9 @@ export const Title = ({
   as = 'h3',
   ...props
 }: React.PropsWithChildren<{
-  className?: string;
-  styles?: React.CSSProperties;
-  as?: React.ElementType;
+  className?: string
+  styles?: React.CSSProperties
+  as?: React.ElementType
 }>) => {
   return (
     <UI
@@ -84,10 +83,10 @@ export const Title = ({
     >
       {children}
     </UI>
-  );
-};
+  )
+}
 
-Title.displayName = 'Title';
+Title.displayName = 'Title'
 
 /*
  * CardContent component
@@ -107,8 +106,8 @@ export const Content = ({
   styles,
   ...props
 }: React.PropsWithChildren<{
-  className?: string;
-  styles?: React.CSSProperties;
+  className?: string
+  styles?: React.CSSProperties
 }>) => {
   return (
     <UI
@@ -119,16 +118,12 @@ export const Content = ({
     >
       {children}
     </UI>
-  );
-};
+  )
+}
 
-Content.displayName = 'Content';
-
-
+Content.displayName = 'Content'
 
 export default Card
 Card.displayName = 'Card'
 Card.Title = Title
 Card.Content = Content
-
-

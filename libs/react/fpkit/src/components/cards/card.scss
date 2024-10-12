@@ -1,5 +1,4 @@
-[data-card],
-[data-component~='card'] {
+.acss-card {
   --card-p: 2rem;
   --card-bg: #fff;
   --card-radius: calc(var(--card-p) / 3);
@@ -11,14 +10,29 @@
 
   position: relative;
   display: var(--card-display);
-  display: var(--card-display);
   flex-direction: var(--card-direction);
   gap: var(--card-gap);
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
-}
 
-[data-card] > *  {
-  padding: var(--card-p);
+  .acss-card-content,
+  > div {
+    height: 100%;
+    display: var(--card-display);
+    flex-direction: var(--card-direction);
+    gap: var(--card-gap);
+
+    article {
+      flex: 2;
+    }
+  }
+
+  + div {
+    margin-block-start: 0;
+  }
+
+  > * {
+    padding: var(--card-p);
+  }
 }
