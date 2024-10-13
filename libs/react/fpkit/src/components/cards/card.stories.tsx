@@ -80,11 +80,11 @@ export const FlexibleContent: Story = {
     styles: {
       // '--card-bg': '#f0f0f0',
     },
+    title: <Card.Title>Card Title</Card.Title>,
   },
   render: (args) => (
     <div style={{ display: 'flex', gap: '1rem' }}>
       <Card {...args}>
-        <Card.Title>Card Title</Card.Title>
         <Card.Content>
           <p>
             This card demonstrates the usage of the CardTitle component. It
@@ -95,7 +95,6 @@ export const FlexibleContent: Story = {
         <div>Footer Content</div>
       </Card>
       <Card {...args}>
-        <Card.Title>Card Title</Card.Title>
         <Card.Content>
           <p>
             This card demonstrates the usage of the CardTitle component. It

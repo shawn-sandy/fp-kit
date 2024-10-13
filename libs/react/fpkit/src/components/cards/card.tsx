@@ -121,13 +121,9 @@ export const Card = ({
       {...props}
     >
       <UI as="div" data-card-content>
-        {title && <Title>{title}</Title>}
+        {title && title}
         {children}
-        {footer && (
-          <UI as="div" data-card-footer>
-            {footer}
-          </UI>
-        )}
+        {footer && footer}
       </UI>
     </UI>
   )
