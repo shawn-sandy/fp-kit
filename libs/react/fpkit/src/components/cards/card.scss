@@ -4,6 +4,8 @@ div {
     display: flex;
     gap: var(--card-section-gap, 1rem);
     flex-direction: var(--card-section-direction, row);
+    flex-wrap: wrap;
+    justify-content: var(--card-section-justify, center);
   }
 }
 
