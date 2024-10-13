@@ -641,6 +641,12 @@ figure:has(img[alt]) > figcaption {
   background-color: var(--fig-bg);
 }
 
+section:has([data-card]) {
+  display: flex;
+  gap: var(--card-section-gap, 1rem);
+  flex-direction: var(--card-section-direction, row);
+}
+
 [data-card],
 [data-component~=card] {
   --card-p: 2rem;
@@ -670,6 +676,7 @@ figure:has(img[alt]) > figcaption {
 }
 [data-card] > div,
 [data-component~=card] > div {
+  text-align: start;
   height: 100%;
   display: var(--card-display);
   flex-direction: var(--card-direction);

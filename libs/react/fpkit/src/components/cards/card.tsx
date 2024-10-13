@@ -107,8 +107,6 @@ export const Card = ({
   children,
   classes,
   id,
-  footer,
-  title,
   ...props
 }: CardProps) => {
   return (
@@ -121,9 +119,7 @@ export const Card = ({
       {...props}
     >
       <UI as="div" data-card-content>
-        {title && title}
         {children}
-        {footer && footer}
       </UI>
     </UI>
   )
