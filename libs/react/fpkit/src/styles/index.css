@@ -697,6 +697,7 @@ div:has([data-card]) {
 
 [data-card] > * {
   padding: var(--card-p);
+  padding-block-start: calc(var(--card-p) - 0.5rem);
 }
 
 progress {
