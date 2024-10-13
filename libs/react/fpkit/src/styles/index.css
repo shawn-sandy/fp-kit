@@ -648,6 +648,7 @@ div:has([data-card]) {
   flex-direction: var(--card-section-direction, row);
   flex-wrap: wrap;
   justify-content: var(--card-section-justify, center);
+  min-width: 100%;
 }
 
 [data-card],
