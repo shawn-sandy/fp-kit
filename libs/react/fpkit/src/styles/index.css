@@ -641,7 +641,8 @@ figure:has(img[alt]) > figcaption {
   background-color: var(--fig-bg);
 }
 
-section:has([data-card]) {
+section:has([data-card]),
+div:has([data-card]) {
   display: flex;
   gap: var(--card-section-gap, 1rem);
   flex-direction: var(--card-section-direction, row);
