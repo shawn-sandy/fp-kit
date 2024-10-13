@@ -17,6 +17,29 @@
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
 }
+[data-card] [data-card-content],
+[data-card] h3,
+[data-card] h2,
+[data-component~=card] [data-card-content],
+[data-component~=card] h3,
+[data-component~=card] h2 {
+  margin-block-end: 0;
+}
+[data-card] > div,
+[data-component~=card] > div {
+  height: 100%;
+  display: var(--card-display);
+  flex-direction: var(--card-direction);
+  gap: var(--card-gap);
+}
+[data-card] > div article,
+[data-component~=card] > div article {
+  flex: 2;
+}
+[data-card] + div,
+[data-component~=card] + div {
+  margin-block-start: 0;
+}
 
 [data-card] > * {
   padding: var(--card-p);
