@@ -118,9 +118,7 @@ export const Card = ({
       data-card
       {...props}
     >
-      <UI as="div" data-card-content>
-        {children}
-      </UI>
+      {children}
     </UI>
   )
 }

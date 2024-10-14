@@ -3,7 +3,6 @@ div:has([data-card]) {
   display: flex;
   gap: var(--card-section-gap, 1rem);
   flex-direction: var(--card-section-direction, row);
-  flex-wrap: wrap;
   justify-content: var(--card-section-justify, center);
   min-width: 100%;
 }
@@ -18,14 +17,17 @@ div:has([data-card]) {
   --card-display: flex;
   --card-direction: column;
   --card-gap: 1rem;
-  position: relative;
-  display: var(--card-display);
   display: var(--card-display);
   flex-direction: var(--card-direction);
   gap: var(--card-gap);
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
+}
+[data-card] > *:not(img),
+[data-component~=card] > *:not(img) {
+  padding-inline: var(--card-p);
+  padding-block-start: calc(var(--card-p) - 0.5rem);
 }
 [data-card] [data-card-content],
 [data-card] h3,
@@ -35,26 +37,20 @@ div:has([data-card]) {
 [data-component~=card] h2 {
   margin-block-end: 0;
 }
-[data-card] > div,
-[data-component~=card] > div {
-  text-align: start;
-  height: 100%;
-  display: var(--card-display);
-  flex-direction: var(--card-direction);
-  gap: var(--card-gap);
-}
-[data-card] > div article,
-[data-component~=card] > div article {
-  flex: 2;
-}
 [data-card] + div,
 [data-component~=card] + div {
   margin-block-start: 0;
 }
-
-[data-card] > * {
-  padding: var(--card-p);
-  padding-block-start: calc(var(--card-p) - 0.5rem);
+[data-card] > article,
+[data-component~=card] > article {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+[data-card] > *:last-child,
+[data-component~=card] > *:last-child {
+  margin-block-end: 0;
+  padding-block-end: var(--card-p);
 }
 
 /*# sourceMappingURL=card.css.map */

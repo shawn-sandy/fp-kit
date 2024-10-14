@@ -110,6 +110,18 @@ export const FlexibleContent: Story = {
         </Card.Content>
         <div>Footer Content</div>
       </Card>
+      <Card {...args}>
+        <img src="https://picsum.photos/200" alt="Random Image" />
+        <Card.Title>Second Card Title</Card.Title>
+        <Card.Content>
+          <p>
+            This card demonstrates the usage of the CardTitle component. It
+            shows how a title can be added to a card for better organization and
+            visual hierarchy.
+          </p>
+        </Card.Content>
+        <div>Footer Content</div>
+      </Card>
     </div>
   ),
 } as Story
