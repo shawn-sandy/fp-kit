@@ -3,7 +3,7 @@ import { within, userEvent, screen } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
 import Card from './card'
-import './card.scss'
+// import './card.scss'
 
 const content =
   'Enim aliquip excepteur veniam esse culpa. Et exercitation incididunt occaecat incididunt proident consectetur. Voluptate elit reprehenderit nulla reprehenderit excepteur tempor adipisicing officia eiusmod est id aute. Nisi do et nulla fugiat enim id pariatur ex. Culpa aliquip excepteur velit fugiat qui magna deserunt adipisicing dolore quis. Esse proident qui consectetur Lorem id fugiat elit amet proident enim deserunt dolore sit.'
@@ -82,7 +82,7 @@ export const FlexibleContent: Story = {
     },
   },
   render: (args) => (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <div>
       <Card {...args}>
         <Card.Title>Card Title</Card.Title>
         <Card.Content>
