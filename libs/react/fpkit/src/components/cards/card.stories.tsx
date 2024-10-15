@@ -92,7 +92,7 @@ export const FlexibleContent: Story = {
             visual hierarchy.
           </p>
         </Card.Content>
-        <div>Footer Content</div>
+        <Card.Footer>Footer Content</Card.Footer>
       </Card>
       <Card {...args}>
         <Card.Title>Second Card Title</Card.Title>
@@ -108,7 +108,7 @@ export const FlexibleContent: Story = {
             visual hierarchy.
           </p>
         </Card.Content>
-        <div>Footer Content</div>
+        <Card.Footer>Footer Content</Card.Footer>
       </Card>
       <Card {...args}>
         <img src="https://picsum.photos/200" alt="Random Image" />
@@ -120,7 +120,7 @@ export const FlexibleContent: Story = {
             visual hierarchy.
           </p>
         </Card.Content>
-        <div>Footer Content</div>
+        <Card.Footer>Footer Content</Card.Footer>
       </Card>
     </div>
   ),

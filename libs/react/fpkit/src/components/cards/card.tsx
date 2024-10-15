@@ -87,6 +87,41 @@ export const Content = ({
 Content.displayName = 'Content'
 
 /*
+ * Footer component
+ *
+ * Renders a footer section for the Card component using the UI component.
+ *
+ * @param {Object} props - Component props
+ * @param {ReactNode} props.children - Footer content
+ * @param {string} [props.className] - Additional CSS classes
+ * @param {Object} [props.styles] - Inline styles
+ *
+ * @returns {ReactElement} Footer component
+ */
+export const Footer = ({
+  children,
+  className,
+  styles,
+  ...props
+}: React.PropsWithChildren<{
+  className?: string
+  styles?: React.CSSProperties
+}>) => {
+  return (
+    <UI
+      as="section"
+      className={`card-footer ${className || ''}`}
+      styles={styles}
+      {...props}
+    >
+      {children}
+    </UI>
+  )
+}
+
+Footer.displayName = 'Footer'
+
+/*
  * Card component
  *
  * Renders a card container.
@@ -127,3 +162,4 @@ export default Card
 Card.displayName = 'Card'
 Card.Title = Title
 Card.Content = Content
+Card.Footer = Footer
