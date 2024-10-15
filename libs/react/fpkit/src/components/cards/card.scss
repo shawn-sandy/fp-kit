@@ -13,7 +13,7 @@ div {
 [data-component~='card'] {
   --card-p: 2rem;
   --card-bg: #fff;
-  --card-radius: calc(var(--card-p) / 3);
+  --card-radius: calc(var(--card-p) / 4);
   --card-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   --card-position: relative;
   --card-display: flex;
@@ -21,23 +21,20 @@ div {
   --card-gap: 1.5rem;
   --card-w: 350px;
 
-  // position: relative;
   display: var(--card-display);
   flex-direction: var(--card-direction);
   gap: var(--card-gap);
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
-  // width: var(--card-w);
-  min-width: var(--card-w);
   flex: 1 1 0%;
+  text-align: var(--card-align, left);
 
   [data-card-content],
   h3,
   h2 {
     margin-block-end: 0;
   }
-
   + div {
     margin-block-start: 0;
   }

@@ -1,0 +1,16 @@
+:root {
+  --gap: 1.5rem;
+}
+
+[data-grid] {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns, 12), 1fr);
+  gap: var(--grid-gap, var(--gap));
+}
+
+[data-flex] {
+  display: flex;
+  flex-direction: var(--flex-direction, row);
+  gap: var(--flex-gap, var(--gap));
+  flex-wrap: wrap;
+}

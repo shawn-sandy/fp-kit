@@ -657,7 +657,7 @@ div:has(> [data-card]) {
 [data-component~=card] {
   --card-p: 2rem;
   --card-bg: #fff;
-  --card-radius: calc(var(--card-p) / 3);
+  --card-radius: calc(var(--card-p) / 4);
   --card-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   --card-position: relative;
   --card-display: flex;
@@ -670,8 +670,8 @@ div:has(> [data-card]) {
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
-  min-width: var(--card-w);
   flex: 1 1 0%;
+  text-align: var(--card-align, left);
 }
 [data-card] [data-card-content],
 [data-card] h3,
@@ -1072,6 +1072,23 @@ footer > div {
   justify-content: center;
   min-height: 5rem;
   text-align: center;
+}
+
+:root {
+  --gap: 1.5rem;
+}
+
+[data-grid] {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns, 12), 1fr);
+  gap: var(--grid-gap, var(--gap));
+}
+
+[data-flex] {
+  display: flex;
+  flex-direction: var(--flex-direction, row);
+  gap: var(--flex-gap, var(--gap));
+  flex-wrap: wrap;
 }
 
 sup:has(> span) {

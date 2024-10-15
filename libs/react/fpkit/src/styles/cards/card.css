@@ -11,7 +11,7 @@ div:has(> [data-card]) {
 [data-component~=card] {
   --card-p: 2rem;
   --card-bg: #fff;
-  --card-radius: calc(var(--card-p) / 3);
+  --card-radius: calc(var(--card-p) / 4);
   --card-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   --card-position: relative;
   --card-display: flex;
@@ -24,8 +24,8 @@ div:has(> [data-card]) {
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
-  min-width: var(--card-w);
   flex: 1 1 0%;
+  text-align: var(--card-align, left);
 }
 [data-card] [data-card-content],
 [data-card] h3,
