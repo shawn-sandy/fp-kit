@@ -53,12 +53,12 @@ header,
 footer,
 section {
   font-size: var(--fs-0);
-  > section {
+  > section,
+  > div {
     margin-inline: auto;
     width: var(--content-w, 80%);
   }
   > div {
-    width: 100%;
     text-align: center;
   }
 }

@@ -307,9 +307,13 @@ section {
   font-size: var(--fs-0);
 }
 main > section,
+main > div,
 header > section,
+header > div,
 footer > section,
-section > section {
+footer > div,
+section > section,
+section > div {
   margin-inline: auto;
   width: var(--content-w, 80%);
 }
@@ -317,7 +321,6 @@ main > div,
 header > div,
 footer > div,
 section > div {
-  width: 100%;
   text-align: center;
 }
 
