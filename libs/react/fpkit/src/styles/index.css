@@ -254,9 +254,9 @@ svg[role=img] {
 }
 
 :root {
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
   --TRUE: initial;
   --FALSE: ;
   --fs-weight: 500;
@@ -381,7 +381,7 @@ h6 {
   font-weight: var(--fs-weight);
   margin-block-start: 0;
   margin-block-end: 1rem;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 h1 {
@@ -641,10 +641,10 @@ figure:has(img[alt]) > figcaption {
   background-color: var(--fig-bg);
 }
 
-section:has([data-card]),
-div:has([data-card]) {
+section:has(> [data-card]),
+div:has(> [data-card]) {
   display: flex;
-  gap: var(--card-section-gap, 1rem);
+  gap: var(--card-section-gap, 1.5rem);
   flex-direction: var(--card-section-direction, row);
   min-width: 100%;
   flex-wrap: wrap;
@@ -660,14 +660,15 @@ div:has([data-card]) {
   --card-display: flex;
   --card-direction: column;
   --card-gap: 1.5rem;
-  --card-w: max(100%, 25rem);
+  --card-w: 350px;
   display: var(--card-display);
   flex-direction: var(--card-direction);
   gap: var(--card-gap);
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
-  width: var(--card-w);
+  min-width: var(--card-w);
+  flex: 1 1 0%;
 }
 [data-card] [data-card-content],
 [data-card] h3,

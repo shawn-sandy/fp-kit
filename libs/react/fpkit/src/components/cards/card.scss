@@ -1,10 +1,9 @@
 section,
 div {
-  &:has([data-card]) {
+  &:has(> [data-card]) {
     display: flex;
-    gap: var(--card-section-gap, 1rem);
+    gap: var(--card-section-gap, 1.5rem);
     flex-direction: var(--card-section-direction, row);
-    // justify-content: var(--card-section-justify, center);
     min-width: 100%;
     flex-wrap: wrap;
   }
@@ -20,7 +19,7 @@ div {
   --card-display: flex;
   --card-direction: column;
   --card-gap: 1.5rem;
-  --card-w: max(100%, 25rem);
+  --card-w: 350px;
 
   // position: relative;
   display: var(--card-display);
@@ -29,7 +28,9 @@ div {
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
-  width: var(--card-w);
+  // width: var(--card-w);
+  min-width: var(--card-w);
+  flex: 1 1 0%;
 
   [data-card-content],
   h3,
