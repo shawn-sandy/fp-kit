@@ -8,15 +8,17 @@
   --card-display: flex;
   --card-direction: column;
   --card-gap: 1.5rem;
-  --card-w: 350px;
+  --card-w: 30%;
   display: var(--card-display);
   flex-direction: var(--card-direction);
   gap: var(--card-gap);
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
-  flex: 1 1 0%;
   text-align: var(--card-align, left);
+  flex-basis: calc(var(--card-w) - var(--card-gap));
+  min-width: 300px;
+  width: max(300px, 100%);
 }
 [data-card] [data-card-content],
 [data-card] h3,

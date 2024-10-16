@@ -1,7 +1,11 @@
+:root {
+  --gap: 1.5rem;
+}
+
 [data-grid] {
   --gap: 1.5rem;
   --grid-column-min-width: 20.3125rem;
-  --grid-gap: 1.5rem;
+  --grid-gap: var(--gap);
   --grid-padding: 10px;
   --grid-justify-content: center;
   --grid-align-content: center;
@@ -14,4 +18,17 @@
   padding: var(--grid-padding);
   justify-content: var(--grid-justify-content);
   align-content: var(--grid-align-content);
+}
+
+[data-flex] {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-end: 3rem;
+  // max-width: 92.5rem;
+  margin-inline: auto;
+  justify-content: center;
+  gap: var(--gap);
+  @media screen and (max-width: 1080px) {
+    justify-content: center;
+  }
 }

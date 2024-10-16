@@ -654,15 +654,17 @@ figure:has(img[alt]) > figcaption {
   --card-display: flex;
   --card-direction: column;
   --card-gap: 1.5rem;
-  --card-w: 350px;
+  --card-w: 30%;
   display: var(--card-display);
   flex-direction: var(--card-direction);
   gap: var(--card-gap);
   box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
-  flex: 1 1 0%;
   text-align: var(--card-align, left);
+  flex-basis: calc(var(--card-w) - var(--card-gap));
+  min-width: 300px;
+  width: max(300px, 100%);
 }
 [data-card] [data-card-content],
 [data-card] h3,
@@ -1065,10 +1067,14 @@ footer > div {
   text-align: center;
 }
 
+:root {
+  --gap: 1.5rem;
+}
+
 [data-grid] {
   --gap: 1.5rem;
   --grid-column-min-width: 20.3125rem;
-  --grid-gap: 1.5rem;
+  --grid-gap: var(--gap);
   --grid-padding: 10px;
   --grid-justify-content: center;
   --grid-align-content: center;
@@ -1078,6 +1084,20 @@ footer > div {
   padding: var(--grid-padding);
   justify-content: var(--grid-justify-content);
   align-content: var(--grid-align-content);
+}
+
+[data-flex] {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-end: 3rem;
+  margin-inline: auto;
+  justify-content: center;
+  gap: var(--gap);
+}
+@media screen and (max-width: 1080px) {
+  [data-flex] {
+    justify-content: center;
+  }
 }
 
 sup:has(> span) {
