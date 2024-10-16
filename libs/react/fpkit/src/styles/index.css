@@ -1080,13 +1080,6 @@ footer > div {
   align-content: var(--grid-align-content);
 }
 
-[data-flex] {
-  display: flex;
-  flex-direction: var(--flex-direction, row);
-  gap: var(--flex-gap, var(--gap));
-  flex-wrap: wrap;
-}
-
 sup:has(> span) {
   --badge-bg: lightgray;
   --badge-color: currentColor;

@@ -15,10 +15,3 @@
   justify-content: var(--grid-justify-content);
   align-content: var(--grid-align-content);
 }
-
-[data-flex] {
-  display: flex;
-  flex-direction: var(--flex-direction, row);
-  gap: var(--flex-gap, var(--gap));
-  flex-wrap: wrap;
-}
