@@ -1,12 +1,3 @@
-section:has(> [data-card]),
-div:has(> [data-card]) {
-  display: flex;
-  gap: var(--card-section-gap, 1.5rem);
-  flex-direction: var(--card-section-direction, row);
-  min-width: 100%;
-  flex-wrap: wrap;
-}
-
 [data-card],
 [data-component~=card] {
   --card-p: 2rem;

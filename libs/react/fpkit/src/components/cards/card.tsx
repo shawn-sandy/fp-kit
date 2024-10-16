@@ -109,7 +109,7 @@ export const Footer = ({
 }>) => {
   return (
     <UI
-      as="section"
+      as="div"
       className={`card-footer ${className || ''}`}
       styles={styles}
       {...props}

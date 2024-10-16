@@ -644,15 +644,6 @@ figure:has(img[alt]) > figcaption {
   background-color: var(--fig-bg);
 }
 
-section:has(> [data-card]),
-div:has(> [data-card]) {
-  display: flex;
-  gap: var(--card-section-gap, 1.5rem);
-  flex-direction: var(--card-section-direction, row);
-  min-width: 100%;
-  flex-wrap: wrap;
-}
-
 [data-card],
 [data-component~=card] {
   --card-p: 2rem;
@@ -1074,14 +1065,19 @@ footer > div {
   text-align: center;
 }
 
-:root {
-  --gap: 1.5rem;
-}
-
 [data-grid] {
+  --gap: 1.5rem;
+  --grid-column-min-width: 20.3125rem;
+  --grid-gap: 1.5rem;
+  --grid-padding: 10px;
+  --grid-justify-content: center;
+  --grid-align-content: center;
   display: grid;
-  grid-template-columns: repeat(var(--grid-columns, 12), 1fr);
-  gap: var(--grid-gap, var(--gap));
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-column-min-width), 1fr));
+  gap: var(--grid-gap);
+  padding: var(--grid-padding);
+  justify-content: var(--grid-justify-content);
+  align-content: var(--grid-align-content);
 }
 
 [data-flex] {

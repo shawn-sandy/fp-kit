@@ -82,7 +82,7 @@ export const FlexibleContent: Story = {
     },
   },
   render: (args) => (
-    <div>
+    <div data-grid>
       <Card {...args}>
         <Card.Title>Card Title</Card.Title>
         <Card.Content>
@@ -92,7 +92,9 @@ export const FlexibleContent: Story = {
             visual hierarchy.
           </p>
         </Card.Content>
-        <Card.Footer>Footer Content</Card.Footer>
+        <Card.Footer>
+          <p>Footer Content</p>
+        </Card.Footer>
       </Card>
       <Card {...args}>
         <Card.Title>Second Card Title</Card.Title>
@@ -108,7 +110,9 @@ export const FlexibleContent: Story = {
             visual hierarchy.
           </p>
         </Card.Content>
-        <Card.Footer>Footer Content</Card.Footer>
+        <Card.Footer>
+          <p>Footer Content</p>
+        </Card.Footer>
       </Card>
       <Card {...args}>
         <img src="https://picsum.photos/200" alt="Random Image" />
@@ -120,7 +124,23 @@ export const FlexibleContent: Story = {
             visual hierarchy.
           </p>
         </Card.Content>
-        <Card.Footer>Footer Content</Card.Footer>
+        <Card.Footer>
+          <p>Footer Content</p>
+        </Card.Footer>
+      </Card>
+      <Card {...args}>
+        <img src="https://picsum.photos/200" alt="Random Image" />
+        <Card.Title>Second Card Title</Card.Title>
+        <Card.Content>
+          <p>
+            This card demonstrates the usage of the CardTitle component. It
+            shows how a title can be added to a card for better organization and
+            visual hierarchy.
+          </p>
+        </Card.Content>
+        <Card.Footer>
+          <p>Footer Content</p>
+        </Card.Footer>
       </Card>
     </div>
   ),
