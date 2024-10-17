@@ -654,7 +654,7 @@ figure:has(img[alt]) > figcaption {
   --card-display: flex;
   --card-direction: column;
   --card-gap: 2rem;
-  --card-w: 30%;
+  --card-w: 33%;
   display: var(--card-display);
   flex-direction: var(--card-direction);
   gap: var(--card-gap);
