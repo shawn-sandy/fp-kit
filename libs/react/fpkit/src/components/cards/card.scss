@@ -1,9 +1,4 @@
-// section,
-// div {
-// }
-
-[data-card],
-[data-component~='card'] {
+:root {
   --card-p: 2rem;
   --card-bg: #fff;
   --card-radius: calc(var(--card-p) / 4);
@@ -13,7 +8,9 @@
   --card-direction: column;
   --card-gap: 2rem;
   --card-w: 33%;
-
+}
+[data-card],
+[data-component~='card'] {
   display: var(--card-display);
   flex-direction: var(--card-direction);
   gap: var(--card-gap);
