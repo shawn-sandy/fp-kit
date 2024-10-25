@@ -652,7 +652,7 @@ figure:has(img[alt]) > figcaption {
   --card-position: relative;
   --card-display: flex;
   --card-direction: column;
-  --card-gap: 2rem;
+  --card-gap: 1.5rem;
   --card-w: 33%;
 }
 
@@ -1071,7 +1071,7 @@ footer > div {
 }
 
 :root {
-  --gap: 1.5rem;
+  --gap: 1.75rem;
 }
 
 [data-grid] {
@@ -1097,10 +1097,13 @@ footer > div {
   justify-content: center;
   gap: var(--gap);
 }
-@media screen and (max-width: 1080px) {
-  [data-flex] {
-    justify-content: center;
-  }
+
+[data-flex~=start] {
+  justify-content: start;
+}
+
+[data-flex~=end] {
+  justify-content: end;
 }
 
 [data-flex-grid] {

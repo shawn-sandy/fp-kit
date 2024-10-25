@@ -1,5 +1,5 @@
 :root {
-  --gap: 1.5rem;
+  --gap: 1.75rem;
 }
 
 [data-grid] {
@@ -28,9 +28,17 @@
   margin-inline: auto;
   justify-content: center;
   gap: var(--gap);
-  @media screen and (max-width: 1080px) {
-    justify-content: center;
-  }
+  // @media screen and (max-width: 1080px) {
+  //   justify-content: center;
+  // }
+}
+
+[data-flex~='start'] {
+  justify-content: start;
+}
+
+[data-flex~='end'] {
+  justify-content: end;
 }
 
 [data-flex-grid] {
