@@ -1103,6 +1103,16 @@ footer > div {
   }
 }
 
+[data-flex-grid] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-column-min-width, 20.3125rem), 1fr));
+  gap: var(--gap);
+  margin-block-end: 3rem;
+  margin-inline: auto;
+  justify-content: center;
+  align-content: start;
+}
+
 sup:has(> span) {
   --badge-bg: lightgray;
   --badge-color: currentColor;
