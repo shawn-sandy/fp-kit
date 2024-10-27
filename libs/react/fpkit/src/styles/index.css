@@ -1111,7 +1111,7 @@ footer > div {
 }
 
 [data-flex~=cols-3] {
-  --col-w: 33.33333333333333%;
+  --col-w: 33%;
 }
 
 [data-flex~=cols-4] {
@@ -1123,19 +1123,19 @@ footer > div {
 }
 
 [data-flex~=cols-6] {
-  --col-w: 16.66666666666666%;
+  --col-w: 16%;
 }
 
 [data-flex~=cols-7] {
-  --col-w: 14.28571428571428%;
+  --col-w: 14%;
 }
 
 [data-flex~=cols-8] {
-  --col-w: 12.5%;
+  --col-w: 12%;
 }
 
 [data-flex~=cols-9] {
-  --col-w: 11.11111111111111%;
+  --col-w: 11%;
 }
 
 [data-flex~=cols-10] {
@@ -1143,11 +1143,11 @@ footer > div {
 }
 
 [data-flex~=cols-11] {
-  --col-w: 9.09090909090909%;
+  --col-w: 9%;
 }
 
 [data-flex~=cols-12] {
-  --col-w: 8.33333333333333%;
+  --col-w: 8%;
 }
 
 [data-flex-grid] {
