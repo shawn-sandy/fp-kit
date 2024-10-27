@@ -653,7 +653,6 @@ figure:has(img[alt]) > figcaption {
   --card-display: flex;
   --card-direction: column;
   --card-gap: 1.5rem;
-  --card-w: 33%;
 }
 
 [data-card],
@@ -665,9 +664,6 @@ figure:has(img[alt]) > figcaption {
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
   text-align: var(--card-align, left);
-  flex-basis: calc(var(--card-w) - var(--card-gap));
-  min-width: 300px;
-  width: max(300px, 100%);
 }
 [data-card] [data-card-content],
 [data-card] h3,
@@ -1097,6 +1093,10 @@ footer > div {
   justify-content: center;
   gap: var(--gap);
 }
+[data-flex] > *:has(div, aside, article) {
+  flex-basis: calc(var(--col-w, 100%) - var(--card-gap));
+  min-width: var(--col-min-w, 18.75rem);
+}
 
 [data-flex~=start] {
   justify-content: start;
@@ -1104,6 +1104,50 @@ footer > div {
 
 [data-flex~=end] {
   justify-content: end;
+}
+
+[data-flex~=cols-2] {
+  --col-w: 50%;
+}
+
+[data-flex~=cols-3] {
+  --col-w: 33.33333333333333%;
+}
+
+[data-flex~=cols-4] {
+  --col-w: 25%;
+}
+
+[data-flex~=cols-5] {
+  --col-w: 20%;
+}
+
+[data-flex~=cols-6] {
+  --col-w: 16.66666666666666%;
+}
+
+[data-flex~=cols-7] {
+  --col-w: 14.28571428571428%;
+}
+
+[data-flex~=cols-8] {
+  --col-w: 12.5%;
+}
+
+[data-flex~=cols-9] {
+  --col-w: 11.11111111111111%;
+}
+
+[data-flex~=cols-10] {
+  --col-w: 10%;
+}
+
+[data-flex~=cols-11] {
+  --col-w: 9.09090909090909%;
+}
+
+[data-flex~=cols-12] {
+  --col-w: 8.33333333333333%;
 }
 
 [data-flex-grid] {

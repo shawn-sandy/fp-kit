@@ -28,9 +28,10 @@
   margin-inline: auto;
   justify-content: center;
   gap: var(--gap);
-  // @media screen and (max-width: 1080px) {
-  //   justify-content: center;
-  // }
+  > *:has(div, aside, article) {
+    flex-basis: calc(var(--col-w, 100%) - var(--card-gap));
+    min-width: var(--col-min-w, 18.75rem); // 300px converted to rem
+  }
 }
 
 [data-flex~='start'] {
@@ -39,6 +40,50 @@
 
 [data-flex~='end'] {
   justify-content: end;
+}
+
+[data-flex~='cols-2'] {
+  --col-w: 50%;
+}
+
+[data-flex~='cols-3'] {
+  --col-w: 33.33333333333333%;
+}
+
+[data-flex~='cols-4'] {
+  --col-w: 25%;
+}
+
+[data-flex~='cols-5'] {
+  --col-w: 20%;
+}
+
+[data-flex~='cols-6'] {
+  --col-w: 16.66666666666666%;
+}
+
+[data-flex~='cols-7'] {
+  --col-w: 14.28571428571428%;
+}
+
+[data-flex~='cols-8'] {
+  --col-w: 12.5%;
+}
+
+[data-flex~='cols-9'] {
+  --col-w: 11.11111111111111%;
+}
+
+[data-flex~='cols-10'] {
+  --col-w: 10%;
+}
+
+[data-flex~='cols-11'] {
+  --col-w: 9.09090909090909%;
+}
+
+[data-flex~='cols-12'] {
+  --col-w: 8.33333333333333%;
 }
 
 [data-flex-grid] {
@@ -54,5 +99,3 @@
   align-content: start;
   // max-width: 92.5rem;
 }
-
-// ... existing code ...

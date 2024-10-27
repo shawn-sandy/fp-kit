@@ -82,7 +82,7 @@ export const FlexibleContent: Story = {
     },
   },
   render: (args) => (
-    <div data-flex>
+    <div data-flex="cols-4">
       <Card {...args}>
         <Card.Title>Card Title</Card.Title>
         <Card.Content>

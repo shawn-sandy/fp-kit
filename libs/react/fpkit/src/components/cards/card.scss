@@ -7,7 +7,7 @@
   --card-display: flex;
   --card-direction: column;
   --card-gap: 1.5rem;
-  --card-w: 33%;
+  // --card-w: 33%;
 }
 [data-card],
 [data-component~='card'] {
@@ -18,9 +18,7 @@
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
   text-align: var(--card-align, left);
-  flex-basis: calc(var(--card-w) - var(--card-gap));
-  min-width: 300px;
-  width: max(300px, 100%);
+  // min-width: 300px;
 
   [data-card-content],
   h3,
