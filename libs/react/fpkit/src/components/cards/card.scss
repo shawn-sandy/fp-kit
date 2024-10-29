@@ -2,23 +2,19 @@
   --card-p: 2rem;
   --card-bg: #fff;
   --card-radius: calc(var(--card-p) / 4);
-  --card-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   --card-position: relative;
   --card-display: flex;
   --card-direction: column;
   --card-gap: 1.5rem;
-  // --card-w: 33%;
 }
 [data-card],
 [data-component~='card'] {
   display: var(--card-display);
   flex-direction: var(--card-direction);
   gap: var(--card-gap);
-  box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
   text-align: var(--card-align, left);
-  // min-width: 300px;
 
   [data-card-content],
   h3,

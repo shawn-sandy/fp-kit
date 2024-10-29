@@ -140,7 +140,7 @@ export const Card = ({
   elm = 'div',
   styles,
   children,
-  classes,
+  classes = 'shadow',
   id,
   ...props
 }: CardProps) => {
