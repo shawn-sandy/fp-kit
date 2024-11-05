@@ -2,7 +2,7 @@
   --gap: 1.75rem;
 }
 
-[data-grid] {
+:where([data-grid]) {
   --gap: 1.5rem;
   --grid-column-min-width: 20.3125rem;
   --grid-gap: var(--gap);
@@ -20,7 +20,7 @@
   align-content: var(--grid-align-content);
 }
 
-[data-flex] {
+:where([data-flex]) {
   display: flex;
   flex-wrap: wrap;
   margin-block-end: 3rem;
@@ -34,11 +34,11 @@
   }
 }
 
-[data-flex~='start'] {
+:where([data-flex~='start']) {
   justify-content: start;
 }
 
-[data-flex~='end'] {
+:where([data-flex~='end']) {
   justify-content: end;
 }
 
@@ -86,7 +86,7 @@
   --col-w: 8%;
 }
 
-[data-flex-grid] {
+:where([data-flex-grid]) {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,

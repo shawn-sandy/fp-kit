@@ -1068,7 +1068,7 @@ footer > div {
   --gap: 1.75rem;
 }
 
-[data-grid] {
+:where([data-grid]) {
   --gap: 1.5rem;
   --grid-column-min-width: 20.3125rem;
   --grid-gap: var(--gap);
@@ -1083,7 +1083,7 @@ footer > div {
   align-content: var(--grid-align-content);
 }
 
-[data-flex] {
+:where([data-flex]) {
   display: flex;
   flex-wrap: wrap;
   margin-block-end: 3rem;
@@ -1091,16 +1091,16 @@ footer > div {
   justify-content: center;
   gap: var(--gap);
 }
-[data-flex] > *:has(div, aside, article) {
+:where([data-flex]) > *:has(div, aside, article) {
   flex-basis: calc(var(--col-w, 100%) - var(--card-gap));
   min-width: var(--col-min-w, 18.75rem);
 }
 
-[data-flex~=start] {
+:where([data-flex~=start]) {
   justify-content: start;
 }
 
-[data-flex~=end] {
+:where([data-flex~=end]) {
   justify-content: end;
 }
 
@@ -1148,7 +1148,7 @@ footer > div {
   --col-w: 8%;
 }
 
-[data-flex-grid] {
+:where([data-flex-grid]) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--grid-column-min-width, 20.3125rem), 1fr));
   gap: var(--gap);
