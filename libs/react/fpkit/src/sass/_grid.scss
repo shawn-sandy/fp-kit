@@ -42,47 +42,47 @@
   justify-content: end;
 }
 
-[data-flex~='cols-2'] {
+:where([data-flex~='cols-2']) {
   --col-w: 50%;
 }
 
-[data-flex~='cols-3'] {
+:where([data-flex~='cols-3']) {
   --col-w: 33%;
 }
 
-[data-flex~='cols-4'] {
+:where([data-flex~='cols-4']) {
   --col-w: 25%;
 }
 
-[data-flex~='cols-5'] {
+:where([data-flex~='cols-5']) {
   --col-w: 20%;
 }
 
-[data-flex~='cols-6'] {
+:where([data-flex~='cols-6']) {
   --col-w: 16%;
 }
 
-[data-flex~='cols-7'] {
+:where([data-flex~='cols-7']) {
   --col-w: 14%;
 }
 
-[data-flex~='cols-8'] {
+:where([data-flex~='cols-8']) {
   --col-w: 12%;
 }
 
-[data-flex~='cols-9'] {
+:where([data-flex~='cols-9']) {
   --col-w: 11%;
 }
 
-[data-flex~='cols-10'] {
+:where([data-flex~='cols-10']) {
   --col-w: 10%;
 }
 
-[data-flex~='cols-11'] {
+:where([data-flex~='cols-11']) {
   --col-w: 9%;
 }
 
-[data-flex~='cols-12'] {
+:where([data-flex~='cols-12']) {
   --col-w: 8%;
 }
 
