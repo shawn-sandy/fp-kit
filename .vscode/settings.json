@@ -12,10 +12,8 @@
   ],
   // Required: The website to display
   "liveFrame.url": "http://localhost:4040",
-
   // Optional: Title for the pane tab heading
   "liveFrame.title": "First Paint 3.0",
-
   // Optional: Which pane to open the frame in
   "liveFrame.pane": "Beside",
   "files.autoSave": "onFocusChange",
@@ -24,6 +22,10 @@
       "language": "markdown",
       "scheme": "file"
     }
-  ]
-
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#013521",
+    "titleBar.activeBackground": "#014B2E",
+    "titleBar.activeForeground": "#E8FFF6"
+  }
 }
