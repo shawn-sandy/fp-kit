@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { within, userEvent, screen } from '@storybook/testing-library'
+import { within, userEvent, screen } from '@storybook/test'
 import { expect } from '@storybook/jest'
 
 import Card from './card'
@@ -21,6 +21,9 @@ type Story = StoryObj<typeof Card>
 
 export const CardComponent: Story = {
   args: {},
+  play: async ({ canvasElement }) => {
+    await expect(canvasElement).toHaveTextContent(content)
+  },
 }
 
 export const Multiple: Story = {

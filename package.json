@@ -80,7 +80,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^7.6.10",
     "@storybook/react-webpack5": "^7.6.10",
-    "@storybook/test": "^8.3.2",
+    "@storybook/test": "^8.4.3",
     "@storybook/test-runner": "^0.16.0",
     "@storybook/testing-library": "^0.2.2",
     "@storybook/testing-react": "^2.0.1",
