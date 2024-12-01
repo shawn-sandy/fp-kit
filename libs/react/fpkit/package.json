@@ -1,8 +1,8 @@
 {
-  "name": "@fpkit/react",
+  "name": "@fpkit/acss",
   "description": "A lightweight React UI library for building modern and accessible components that leverage CSS custom properties for reactive Styles.",
   "private": false,
-  "version": "0.3.78",
+  "version": "0.4.19",
   "scripts": {
     "start": "run-p package:watch sass:watch",
     "dev": "vite --open",
@@ -121,5 +121,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "8f62c18d587856b2ab424e9662804e2494f7c4b8"
+  "gitHead": "00db2b908b9aa637e99c401861de87d43b7009d6"
 }

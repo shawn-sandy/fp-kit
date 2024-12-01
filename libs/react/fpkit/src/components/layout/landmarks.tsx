@@ -32,7 +32,7 @@ export const Header = ({
   return (
     <UI as="header" id={id} styles={styles} className={classes} {...props}>
       {headerBackground}
-      <UI as="section">{children}I</UI>
+      <UI as="section">{children}</UI>
     </UI>
   )
 }

@@ -24,6 +24,7 @@ header,
   width: var(--overlay-w);
   color: var(--overlay-color);
   background-color: var(--overlay-bg);
+  min-width: 20rem;
 }
 header > *,
 [data-hero] > *,
@@ -34,7 +35,6 @@ header > img,
 [data-hero] > img,
 [data-grid~=overlay] > img {
   width: var(--overlay-w);
-  height: auto;
   background-size: contain;
 }
 header > div,
@@ -43,22 +43,62 @@ header > section,
 [data-hero] > section,
 [data-grid~=overlay] > div,
 [data-grid~=overlay] > section {
+  --overlay-display: flex;
   max-width: var(--overlay-content-w);
   padding-inline: var(--spc-4);
   margin-inline: var(--overlay-mx);
-}
-header > section,
-[data-hero] > section,
-[data-grid~=overlay] > section {
-  --overlay-display: flex;
   gap: var(--overlay-gap);
   text-align: center;
 }
+header > div p,
 header > section p,
+[data-hero] > div p,
 [data-hero] > section p,
+[data-grid~=overlay] > div p,
 [data-grid~=overlay] > section p {
   width: auto;
   max-width: 60ch;
+  font-size: var(--fs-8);
+  line-height: 1.4;
+}
+header > div > h1,
+header > div > h2,
+header > section > h1,
+header > section > h2,
+[data-hero] > div > h1,
+[data-hero] > div > h2,
+[data-hero] > section > h1,
+[data-hero] > section > h2,
+[data-grid~=overlay] > div > h1,
+[data-grid~=overlay] > div > h2,
+[data-grid~=overlay] > section > h1,
+[data-grid~=overlay] > section > h2 {
+  line-height: var(--header-lh, 1.1);
+  font-weight: 500;
+}
+header > div > h1,
+header > section > h1,
+[data-hero] > div > h1,
+[data-hero] > section > h1,
+[data-grid~=overlay] > div > h1,
+[data-grid~=overlay] > section > h1 {
+  font-size: var(--fs-12);
+}
+header > div > h2,
+header > section > h2,
+[data-hero] > div > h2,
+[data-hero] > section > h2,
+[data-grid~=overlay] > div > h2,
+[data-grid~=overlay] > section > h2 {
+  font-size: var(--fs-11);
+}
+header > div > h3,
+header > section > h3,
+[data-hero] > div > h3,
+[data-hero] > section > h3,
+[data-grid~=overlay] > div > h3,
+[data-grid~=overlay] > section > h3 {
+  font-size: var(--fs-10);
 }
 
 main,

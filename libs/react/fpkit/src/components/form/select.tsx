@@ -1,7 +1,7 @@
-import FP from '../fp'
+import UI from '../ui'
 import React from 'react'
 
-export type SelectProps = React.ComponentProps<typeof FP>
+export type SelectProps = React.ComponentProps<typeof UI>
 
 export type SelectOptionsProps = {
   /**
@@ -70,42 +70,31 @@ export const Select = ({
 
   const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
     if (onBlur && !disabled) onBlur?.(e)
-    const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-      if (onSelectionChange && !disabled) onSelectionChange?.(e)
-    }
-
-    const handlePointerDown = (e: React.PointerEvent<HTMLSelectElement>) => {
-      if (onPointerDown && !disabled) onPointerDown?.(e)
-    }
-
-    const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
-      if (onBlur && !disabled) onBlur?.(e)
-    }
-
-    return (
-      <FP
-        as="select"
-        id={id}
-        ref={ref}
-        name={name}
-        className={classes}
-        selected={selected}
-        onChange={handleOnChange}
-        onPointerDown={handlePointerDown}
-        onBlur={handleOnBlur}
-        required={required}
-        aria-required={required} // Accessibility
-        disabled={disabled}
-        aria-disabled={disabled ? true : false}
-        style={styles}
-        {...props} // Accessibility
-      >
-        {children || <option value="" />}
-        {children || <option value="" />}
-      </FP>
-    )
   }
+
+  return (
+    <UI
+      as="select"
+      id={id}
+      ref={ref}
+      name={name}
+      className={classes}
+      selected={selected}
+      onChange={handleOnChange}
+      onPointerDown={handlePointerDown}
+      onBlur={handleOnBlur}
+      required={required}
+      aria-required={required} // Accessibility
+      disabled={disabled}
+      aria-disabled={disabled ? true : false}
+      style={styles}
+      {...props} // Accessibility
+    >
+      <option value="" />
+    </UI>
+  )
 }
+
 export default Select
 Select.displayName = 'Select' // Remove this line
 Select.Option = Option // Remove this line

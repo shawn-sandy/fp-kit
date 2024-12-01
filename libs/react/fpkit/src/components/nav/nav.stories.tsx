@@ -75,3 +75,22 @@ export const NavBlock: Story = {
     ),
   },
 } as Story
+
+export const MultipleNavs: Story = {
+  args: {
+    ...NavSection.args,
+    classes: 'navbar',
+    children: (
+      <>
+        <Nav.List>
+          <Nav.Item>Link 1</Nav.Item>
+          <Nav.Item>Link 2</Nav.Item>
+        </Nav.List>
+        <Nav.List>
+          <Nav.Item>Link 1</Nav.Item>
+          <Nav.Item>Link 2</Nav.Item>
+        </Nav.List>
+      </>
+    ),
+  },
+} as Story

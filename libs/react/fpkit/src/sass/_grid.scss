@@ -1,0 +1,101 @@
+:root {
+  --gap: 1.75rem;
+}
+
+:where([data-grid]) {
+  --gap: 1.5rem;
+  --grid-column-min-width: 20.3125rem;
+  --grid-gap: var(--gap);
+  --grid-padding: 10px;
+  --grid-justify-content: center;
+  --grid-align-content: center;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--grid-column-min-width), 1fr)
+  );
+  gap: var(--grid-gap);
+  padding: var(--grid-padding);
+  justify-content: var(--grid-justify-content);
+  align-content: var(--grid-align-content);
+}
+
+:where([data-flex]) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-end: 3rem;
+  // max-width: 92.5rem;
+  margin-inline: auto;
+  justify-content: center;
+  gap: var(--gap);
+  > *:has(div, aside, article) {
+    flex-basis: calc(var(--col-w, 100%) - var(--card-gap));
+    min-width: var(--col-min-w, 18.75rem); // 300px converted to rem
+  }
+}
+
+:where([data-flex~='start']) {
+  justify-content: start;
+}
+
+:where([data-flex~='end']) {
+  justify-content: end;
+}
+
+:where([data-flex~='cols-2']) {
+  --col-w: 50%;
+}
+
+:where([data-flex~='cols-3']) {
+  --col-w: 33%;
+}
+
+:where([data-flex~='cols-4']) {
+  --col-w: 25%;
+}
+
+:where([data-flex~='cols-5']) {
+  --col-w: 20%;
+}
+
+:where([data-flex~='cols-6']) {
+  --col-w: 16%;
+}
+
+:where([data-flex~='cols-7']) {
+  --col-w: 14%;
+}
+
+:where([data-flex~='cols-8']) {
+  --col-w: 12%;
+}
+
+:where([data-flex~='cols-9']) {
+  --col-w: 11%;
+}
+
+:where([data-flex~='cols-10']) {
+  --col-w: 10%;
+}
+
+:where([data-flex~='cols-11']) {
+  --col-w: 9%;
+}
+
+:where([data-flex~='cols-12']) {
+  --col-w: 8%;
+}
+
+:where([data-flex-grid]) {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--grid-column-min-width, 20.3125rem), 1fr)
+  );
+  gap: var(--gap);
+  margin-block-end: 3rem;
+  margin-inline: auto;
+  justify-content: center;
+  align-content: start;
+  // max-width: 92.5rem;
+}

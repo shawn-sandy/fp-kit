@@ -1,10 +1,10 @@
 :root {
-  --font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+    Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
   --TRUE: initial;
   --FALSE: ;
-  --weight: 600;
+  --fs-weight: 500;
 }
 
 html {
@@ -22,6 +22,24 @@ body {
   main {
     flex-grow: 1;
   }
+
+  > a[href^='#'] {
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    width: 100%;
+    display: block;
+    justify-content: flex-start;
+    padding: 1rem;
+    z-index: 100;
+    transition: top 0.3s;
+    border-radius: 0;
+    // padding: 1rem;
+    background-color: whitesmoke;
+    &:focus {
+      top: 0;
+    }
+  }
 }
 
 * + div,
@@ -35,12 +53,12 @@ header,
 footer,
 section {
   font-size: var(--fs-0);
-  > section {
+  > section,
+  > div {
     margin-inline: auto;
     width: var(--content-w, 80%);
   }
   > div {
-    width: 100%;
     text-align: center;
   }
 }
@@ -53,6 +71,7 @@ section {
 }
 
 p {
+  max-width: 75ch;
   max-width: 75ch;
   font-size: var(--fs-0);
   line-height: 1.6;
@@ -68,7 +87,7 @@ ol {
   flex-direction: var(--li-direction, column);
   gap: var(--li-gap, 0.2rem);
   flex-wrap: var(--li-wrap, nowrap);
-  padding-inline-start: var(--spc-3);
+  padding-inline-start: var(--li-ps, var(--spc-0));
   &[role='list'],
   &[data-list~='unstyled'] {
     list-style: var(--li-style, none);
@@ -94,7 +113,7 @@ blockquote {
 }
 
 strong {
-  font-weight: var(--weight);
+  font-weight: var(--fs-weight);
 }
 
 h1,
@@ -103,34 +122,34 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--weight);
+  font-weight: var(--fs-weight);
   margin-block-start: 0;
   margin-block-end: 1rem;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: var(--title-1, var(--fs-6));
+  font-size: var(--h1, var(--fs-7));
 }
 
 h2 {
-  font-size: var(--title-2, var(--fs-5));
+  font-size: var(--h2, var(--fs-6));
 }
 
 h3 {
-  font-size: var(--title-3, var(--fs-4));
+  font-size: var(--h3, var(--fs-5));
 }
 
 h4 {
-  font-size: var(--title-4, var(--fs-3));
+  font-size: var(--h4, var(--fs-4));
 }
 
 h5 {
-  font-size: var(--title-5, var(--fs-0));
+  font-size: var(--h5, var(--fs-3));
 }
 
 h6 {
-  font-size: var(--title-6, var(--fs-2));
+  font-size: var(--h6, var(--fs-2));
 }
 
 hr {

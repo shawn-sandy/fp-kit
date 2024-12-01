@@ -1,8 +1,8 @@
 import React from 'react'
-import FP from '../fp'
+import UI from '../ui'
 
 export type TextareaProps = React.ComponentProps<'textarea'> &
-  React.ComponentProps<typeof FP>
+  React.ComponentProps<typeof UI>
 
 /**
  * Textarea component.
@@ -53,14 +53,14 @@ export const Textarea = ({
     }
   }
 
-  const handleKeyDown = (e: React.PointerEvent<HTMLTextAreaElement>) => {
+  const handlePointerDown = (e: React.PointerEvent<HTMLTextAreaElement>) => {
     if (onPointerDown && !disabled) {
       onPointerDown?.(e)
     }
   }
 
   return (
-    <FP
+    <UI
       as="textarea"
       id={id}
       name={name}
@@ -75,7 +75,7 @@ export const Textarea = ({
       readOnly={readOnly}
       onChange={handleChange}
       onBlur={handleBlur}
-      onPointerDown={handleKeyDown}
+      onPointerDown={handlePointerDown}
       ref={ref}
       placeholder={placeholder || `${required ? '*' : ''} Message`}
       {...props}

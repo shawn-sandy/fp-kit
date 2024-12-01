@@ -1,21 +1,43 @@
-[data-card],
-[data-component~='card'] {
+:root {
   --card-p: 2rem;
   --card-bg: #fff;
-  --card-radius: calc(var(--card-p) / 3);
-  --card-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  --card-radius: calc(var(--card-p) / 4);
   --card-position: relative;
   --card-display: flex;
   --card-direction: column;
-  --card-gap: 1rem;
-
-  position: relative;
-  display: var(--card-display);
-  padding: var(--card-p);
+  --card-gap: 1.5rem;
+}
+[data-card],
+[data-component~='card'] {
   display: var(--card-display);
   flex-direction: var(--card-direction);
   gap: var(--card-gap);
-  box-shadow: var(--card-shadow);
   border-radius: var(--card-radius);
   background-color: var(--card-bg);
+  text-align: var(--card-align, left);
+
+  [data-card-content],
+  h3,
+  h2 {
+    margin-block-end: 0;
+  }
+  + div {
+    margin-block-start: 0;
+  }
+  > article {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+
+  > *:not(img) {
+    padding-inline: var(--card-p);
+  }
+  > *:last-child:not(img) {
+    // margin-block-end: 0;
+    padding-block-end: var(--card-p);
+  }
+  > *:first-child:not(img) {
+    padding-block-start: calc(var(--card-p) - 0.5rem);
+  }
 }

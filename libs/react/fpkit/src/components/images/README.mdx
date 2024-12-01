@@ -1,0 +1,43 @@
+# Images Directory
+
+This directory contains React components and utilities related to rendering images in a web application. The key files and their purposes are as follows:
+
+## img.tsx
+
+The `Img` component is a React component that renders an `<img>` element with additional props and functionality. It provides options to customize the image's source, alt text, dimensions, loading behavior, placeholder, fetch priority, and decoding method. It also supports callbacks for image load and error events.
+
+## img.scss
+
+This file contains CSS styles for the `<img>` element and the `<figure>` element that can contain an image. It sets default styles for image sizing, aspect ratio, object fit, and positioning. It also styles the `<figure>` element to display the image and caption in a flex layout with a background color.
+
+## figure.tsx
+
+The `Figure` component is a React component that renders a `<figure>` element with an image and an optional caption. It uses the `Img` component to render the image and provides props to set the image source, dimensions, and alt text, as well as the caption text.
+
+## img.test.tsx
+
+This file contains unit tests for the `Img` component, ensuring it renders correctly with various props and handles image load and error events as expected.
+
+## img.stories.tsx and figure.stories.tsx
+
+These files contain Storybook stories for the `Img` and `Figure` components, respectively. They provide examples and documentation for how to use the components with different props and configurations.
+
+## Usage
+
+To use the `Img` or `Figure` components in your React application, import them from this directory and pass in the required props. For example:
+
+```jsx
+import Img from './components/images/img';
+import Figure from './components/images/figure';
+
+function MyComponent() {
+return (
+<div>
+<Img src="/path/to/image.jpg" alt="My Image" width={300} height={200} />
+<Figure src="/path/to/image.jpg" alt="My Image" width={300} height={200} caption="This is a caption" />
+</div>
+);
+}
+```
+
+The components provide a consistent and extensible way to render images in your application, with additional features like placeholders, loading behavior, and error handling.

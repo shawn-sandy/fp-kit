@@ -34,7 +34,7 @@ export const Details = ({
   styles,
   classes,
   ariaLabel,
-
+  name,
   open,
   onPointerDown,
   onToggle,
@@ -61,6 +61,7 @@ export const Details = ({
       ref={ref}
       open={open}
       aria-label={ariaLabel || 'Details dropdown'}
+      name={name}
       {...props}
     >
       <UI as="summary" role="group" onPointerDown={onPointerDownCallback}>

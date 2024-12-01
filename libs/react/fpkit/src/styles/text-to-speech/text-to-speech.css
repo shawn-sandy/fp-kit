@@ -1,0 +1,32 @@
+[data-tts] {
+  --tts-gap: 0.5rem;
+  --tts-bg: #fff;
+  --tts-border-width: 0.125rem;
+  --tts-border-style: solid;
+  --tts-border-color: currentColor;
+  --tts-radius: 99rem;
+  --tts-padding: 0.5rem;
+  --tts-min-width: 20.3125rem;
+  --tts-align-items: center;
+  --tts-justify-content: center;
+  display: flex;
+  gap: var(--tts-gap);
+  align-items: var(--tts-align-items);
+  justify-content: var(--tts-justify-content);
+  background-color: var(--tts-bg);
+  border: none;
+  outline: var(--tts-border-width) var(--tts-border-style) var(--tts-border-color);
+  border-radius: var(--tts-radius);
+  padding: var(--tts-padding);
+  min-width: var(--tts-min-width);
+}
+[data-tts] button[data-btn~=tts-btn],
+[data-tts] .tts-border {
+  outline: none;
+}
+[data-tts] button[data-btn~=tts-btn]:hover,
+[data-tts] .tts-border:hover {
+  outline: var(--tts-border-width) var(--tts-border-style);
+}
+
+/*# sourceMappingURL=text-to-speech.css.map */

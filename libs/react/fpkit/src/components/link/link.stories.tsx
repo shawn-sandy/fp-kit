@@ -57,6 +57,13 @@ export const ButtonLink: Story = {
   },
 } as Story
 
+export const ButtonPill: Story = {
+  args: {
+    ...LinkComponent.args,
+    children: <i>Button Link</i>,
+  },
+} as Story
+
 export const ButtonRounded: Story = {
   args: {
     ...ButtonLink.args,

@@ -1,0 +1,192 @@
+# Text-to-Speech Components
+
+This folder contains components and hooks related to text-to-speech functionality in the FPKit React library.
+
+## Contents
+
+1. `useTextToSpeech.tsx`: A custom React hook that provides text-to-speech functionality.
+2. `TextToSpeech.tsx`: A React component that implements the text-to-speech functionality using the `useTextToSpeech` hook.
+3. `TextToSpeech.stories.tsx`: Storybook stories for the TextToSpeech component.
+4. `useTextToSpeech.mdx`: Documentation for the `useTextToSpeech` hook.
+
+## Usage
+
+### useTextToSpeech Hook
+
+The `useTextToSpeech` hook provides a simple way to add text-to-speech capabilities to your React components.
+
+```tsx
+import { useTextToSpeech } from '@fpkit/react';
+
+function MyComponent() {
+  const { speak, pause, resume, cancel } = useTextToSpeech();
+
+  const handleSpeak = () => {
+    speak('Hello, world!');
+  };
+
+  return (
+    <button onClick={handleSpeak}>
+      Speak
+    </button>
+  );
+}
+```
+
+
+## Example 2
+
+Here's a detailed example of how to use the `useTextToSpeech` hook in a React component:
+
+```tsx
+import React, { useState, useEffect } from 'react';
+import { useTextToSpeech } from '@fpkit/react';
+
+const TextToSpeechExample: React.FC = () => {
+  const [text, setText] = useState('Welcome to the text-to-speech example!');
+  const [rate, setRate] = useState(1);
+  const [pitch, setPitch] = useState(1);
+  const [volume, setVolume] = useState(1);
+
+  const {
+    speak,
+    pause,
+    resume,
+    cancel,
+    isSpeaking,
+    isPaused,
+    error
+  } = useTextToSpeech({ rate, pitch, volume });
+
+  useEffect(() => {
+    if (error) {
+      console.error('Text-to-speech error:', error);
+    }
+  }, [error]);
+
+  const handleSpeak = () => {
+    speak(text);
+  };
+
+  return (
+    <div>
+      <h2>Text-to-Speech Example</h2>
+      <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        rows={4}
+        cols={50}
+      />
+      <div>
+        <label>
+          Rate:
+          <input
+            type="range"
+            min="0.1"
+            max="10"
+            step="0.1"
+            value={rate}
+            onChange={(e) => setRate(parseFloat(e.target.value))}
+          />
+          {rate}
+        </label>
+      </div>
+      <div>
+        <label>
+          Pitch:
+          <input
+            type="range"
+            min="0"
+            max="2"
+            step="0.1"
+            value={pitch}
+            onChange={(e) => setPitch(parseFloat(e.target.value))}
+          />
+          {pitch}
+        </label>
+      </div>
+      <div>
+        <label>
+          Volume:
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value={volume}
+            onChange={(e) => setVolume(parseFloat(e.target.value))}
+          />
+          {volume}
+        </label>
+      </div>
+      <div>
+        <button onClick={handleSpeak} disabled={isSpeaking && !isPaused}>
+          Speak
+        </button>
+        <button onClick={pause} disabled={!isSpeaking || isPaused}>
+          Pause
+        </button>
+        <button onClick={resume} disabled={!isPaused}>
+          Resume
+        </button>
+        <button onClick={cancel} disabled={!isSpeaking && !isPaused}>
+          Cancel
+        </button>
+      </div>
+      <div>
+        Status: {isSpeaking ? (isPaused ? 'Paused' : 'Speaking') : 'Idle'}
+      </div>
+      {error && <div style={{ color: 'red' }}>Error: {error.message}</div>}
+    </div>
+  );
+};
+
+export default TextToSpeechExample;
+```
+
+This example demonstrates:
+
+1. Using all the functions and state variables returned by the hook.
+2. Allowing users to input custom text.
+3. Providing controls for rate, pitch, and volume.
+4. Displaying the current speaking status.
+5. Handling and displaying errors.
+6. Disabling buttons based on the current state.
+
+
+
+For more detailed information on the `useTextToSpeech` hook, refer to the `useTextToSpeech.mdx` file.
+
+### TextToSpeech Component
+
+The `TextToSpeech` component provides a ready-to-use implementation of text-to-speech functionality.
+
+```tsx
+import { TextToSpeech } from '@fpkit/react';
+
+function MyComponent() {
+  return (
+    <TextToSpeech text="Hello, world!" />
+  );
+}
+```
+
+## Documentation
+
+For comprehensive documentation on the `useTextToSpeech` hook, including API details and usage examples, please refer to the `useTextToSpeech.mdx` file in this folder.
+
+## Storybook
+
+The `TextToSpeech.stories.tsx` file contains Storybook stories that demonstrate the usage and various configurations of the TextToSpeech component. You can run Storybook to interact with these components in isolation and see how they behave with different props.
+
+## Contributing
+
+When contributing to this folder, please ensure that:
+
+1. Any new functionality is properly documented in the respective MDX files.
+2. Storybook stories are updated or added for new features or components.
+3. The README is kept up-to-date with any significant changes.
+
+## Testing
+
+Ensure that all components and hooks in this folder have appropriate unit tests. Run the test suite before submitting any pull requests.

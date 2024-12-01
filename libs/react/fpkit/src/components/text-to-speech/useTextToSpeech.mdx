@@ -1,0 +1,182 @@
+
+
+```bash
+npm install fpkit-react
+```
+
+## Usage
+
+To use the `useTextToSpeech` hook in your React application, follow these steps:
+
+1. Import the hook into your component:
+
+```jsx
+import { useTextToSpeech } from 'fpkit-react';
+```
+
+2. Initialize the hook:
+
+```jsx
+const { speak, speaking, paused, availableVoices, availableLanguages, cancel } = useTextToSpeech();
+```
+
+3. Use the hook's functions to control speech:
+
+```jsx
+speak('Hello, world!');
+```
+
+4. Customize speech options:
+
+```jsx
+speak('Hello, world!', {
+  voice: availableVoices[0],
+  language: availableLanguages[0],
+  pitch: 1,
+  rate: 1,
+});
+```
+
+5. Handle speaking and paused states:
+
+```jsx
+<div>
+  {speaking ? 'Speaking...' : 'Paused'}
+  <button onClick={cancel}>Cancel</button>
+</div>
+```
+
+## Example
+
+Here's a simple example that demonstrates the use of the `useTextToSpeech` hook:
+
+```jsx
+import React, { useState } from 'react';
+import { useTextToSpeech } from 'fpkit-react';
+
+const App = () => {
+  const { speak, speaking, paused, availableVoices, availableLanguages, cancel } = useTextToSpeech();
+  const [text, setText] = useState('');
+
+  return (
+    <div>
+      <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
+      <button onClick={() => speak(text)}>Speak</button>
+      <button onClick={cancel}>Cancel</button>
+      <p>{speaking ? 'Speaking...' : paused ? 'Paused' : 'Not speaking'}</p>
+      <select>
+        {availableVoices.map((voice) => (
+          <option key={voice.name} value={voice.name}>
+            {voice.name}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+};
+
+export default App;
+```
+
+This example creates a simple text-to-speech application with an input field, a speak button, a cancel button, and a dropdown menu to select voices.
+
+## API
+
+### `speak(text, options)`
+
+- `text`: The text to be spoken.
+- `options`: An object with the following optional properties:
+  - `voice`: The voice to use for the speech.
+  - `language`: The language to use for the speech.
+  - `pitch`: The pitch of the speech (0.1 to 2).
+  - `rate`: The rate of the speech (0.1 to 10).
+
+### `speaking`
+
+- A boolean value indicating whether the speech is currently being spoken.
+
+### `paused`
+
+- A boolean value indicating whether the speech is currently paused.
+
+### `availableVoices`
+
+- An array of available voices for the speech.
+
+### `availableLanguages`
+
+- An array of available languages for the speech.
+
+### `cancel()`
+
+- A function to cancel the speech.
+
+# useTextToSpeech Hook
+
+The `useTextToSpeech` hook provides a simple way to add text-to-speech capabilities to your React components.
+
+## API
+
+```typescript
+const {
+  speak,
+  pause,
+  resume,
+  cancel,
+  isSpeaking,
+  isPaused,
+  error
+} = useTextToSpeech(options);
+```
+
+### Parameters
+
+- `options` (optional): An object containing configuration options for the text-to-speech functionality.
+  - `rate` (optional): Speech rate (0.1 to 10). Default is 1.
+  - `pitch` (optional): Speech pitch (0 to 2). Default is 1.
+  - `volume` (optional): Speech volume (0 to 1). Default is 1.
+  - `voice` (optional): A `SpeechSynthesisVoice` object to use for speech.
+
+### Return Value
+
+- `speak`: Function to start speaking the provided text.
+- `pause`: Function to pause the current speech.
+- `resume`: Function to resume paused speech.
+- `cancel`: Function to cancel the current speech.
+- `isSpeaking`: Boolean indicating if speech is currently in progress.
+- `isPaused`: Boolean indicating if speech is currently paused.
+- `error`: Any error that occurred during speech synthesis.
+
+## Best Practices
+
+1. Always provide visual feedback about the current state (speaking, paused, idle).
+2. Handle errors gracefully and inform the user when something goes wrong.
+3. Use appropriate ARIA attributes for accessibility when implementing custom controls.
+4. Consider providing options to customize the voice, if supported by the browser.
+5. Test the component across different browsers and devices to ensure consistent behavior.
+
+---
+
+## Browser Support
+
+The text-to-speech functionality relies on the Web Speech API, which is supported in most modern browsers. However, it's always a good idea to check for compatibility and provide fallback content or functionality for unsupported browsers.
+
+## Notes
+
+- The `useTextToSpeech` hook requires a user gesture to be triggered, such as a button click.
+- The `availableVoices` and `availableLanguages` arrays are dynamically generated based on the browser's capabilities.
+- The `pitch` and `rate` values are normalized to a range of 0.1 to 2 and 0.1 to 10, respectively.
+
+## Browser Support
+
+The Web Speech API is supported in most modern browsers, including Chrome, Edge, and some versions of Firefox. However, the availability of voices and languages may vary by browser.
+
+## Contributing
+
+We welcome contributions to the FPKit React library. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on our GitHub repository.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+

@@ -1,8 +1,15 @@
 body > nav,
-[aria-label~='navbar'] {
+[aria-label~='navbar'], .navbar {
   padding-inline: var(--nav-px, 1rem);
-  height: var(--nav-h, calc(50rem / 16));
+  min-height: var(--nav-h, fit-content);
 
+  @media(max-width: 580px) {
+    flex-direction: column;
+    height: fit-content;
+    min-height: fit-content;
+    padding-block: unset;
+    gap: 0.5rem;
+  }
   ul {
     > li {
       display: flex;
@@ -15,6 +22,9 @@ body > nav,
 
       &:hover {
         background-color: var(--nav-hov-bg, whitesmoke);
+      }
+      &:hover:where(img) {
+        background-color: transparent;
       }
     }
   }

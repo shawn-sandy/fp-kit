@@ -37,7 +37,7 @@ const meta: Meta<typeof Details> = {
     // @ts-ignore
     children: content,
     icon: icon,
-    summary: <h3>Summary Section</h3>,
+    summary: <>Summary Section</>,
   },
   actions: { argTypesRegex: '^on.*' },
   decorators: [
@@ -88,4 +88,35 @@ export const CustomDropdown: Story = {
       </p>
     </>
   ),
+} as Story
+
+export const DetailsAccordion: Story = {
+  render: () => (
+    <>
+    <Details
+        summary="Summary Section"
+        icon={icon}
+        ariaLabel="Details Section"
+        name="accordion-details"
+      >
+        {content}
+      </Details>
+    <Details
+        summary="Summary Section"
+        icon={icon}
+        ariaLabel="Details Section"
+        name="accordion-details"
+      >
+        {content}
+      </Details>
+    <Details
+        summary="Summary Section"
+        icon={icon}
+        ariaLabel="Details Section"
+        name="accordion-details"
+      >
+        {content}
+      </Details>
+    </>
+  )
 } as Story
