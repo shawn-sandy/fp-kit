@@ -73,11 +73,20 @@ export const Select = ({
     const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       if (onSelectionChange && !disabled) onSelectionChange?.(e)
     }
+    const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+      if (onSelectionChange && !disabled) onSelectionChange?.(e)
+    }
 
     const handlePointerDown = (e: React.PointerEvent<HTMLSelectElement>) => {
       if (onPointerDown && !disabled) onPointerDown?.(e)
     }
+    const handlePointerDown = (e: React.PointerEvent<HTMLSelectElement>) => {
+      if (onPointerDown && !disabled) onPointerDown?.(e)
+    }
 
+    const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
+      if (onBlur && !disabled) onBlur?.(e)
+    }
     const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
       if (onBlur && !disabled) onBlur?.(e)
     }
@@ -100,7 +109,7 @@ export const Select = ({
         style={styles}
         {...props} // Accessibility
       >
-         <option value="" />
+        <option value="" />
       </UI>
     )
   }

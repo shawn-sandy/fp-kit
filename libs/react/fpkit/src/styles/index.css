@@ -384,7 +384,11 @@ h6 {
   font-weight: var(--fs-weight);
   margin-block-start: 0;
   margin-block-end: 1rem;
+<<<<<<< HEAD
   line-height: 1.2;
+=======
+  line-height: 1.5;
+>>>>>>> main
 }
 
 h1 {

@@ -52,6 +52,7 @@ select::placeholder {
   font-size: var(--placeholder-fs);
   text-transform: capitalize;
 }
+<<<<<<< HEAD
 input[type]:not([type=checkbox], [type=radio]):focus-visible, input[type]:not([type=checkbox], [type=radio]):focus,
 textarea:focus-visible,
 textarea:focus,
@@ -59,6 +60,8 @@ select:focus-visible,
 select:focus {
   outline-width: medium;
 }
+=======
+>>>>>>> main
 input[type]:not([type=checkbox], [type=radio])[aria-required=true]::placeholder,
 textarea[aria-required=true]::placeholder,
 select[aria-required=true]::placeholder {

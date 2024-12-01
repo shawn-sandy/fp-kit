@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 :root {
+=======
+[data-card],
+[data-component~=card] {
+>>>>>>> main
   --card-p: 2rem;
   --card-bg: #fff;
   --card-radius: calc(var(--card-p) / 4);
