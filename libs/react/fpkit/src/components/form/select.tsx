@@ -70,50 +70,31 @@ export const Select = ({
 
   const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
     if (onBlur && !disabled) onBlur?.(e)
-    const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-      if (onSelectionChange && !disabled) onSelectionChange?.(e)
-    }
-    const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-      if (onSelectionChange && !disabled) onSelectionChange?.(e)
-    }
-
-    const handlePointerDown = (e: React.PointerEvent<HTMLSelectElement>) => {
-      if (onPointerDown && !disabled) onPointerDown?.(e)
-    }
-    const handlePointerDown = (e: React.PointerEvent<HTMLSelectElement>) => {
-      if (onPointerDown && !disabled) onPointerDown?.(e)
-    }
-
-    const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
-      if (onBlur && !disabled) onBlur?.(e)
-    }
-    const handleOnBlur = (e: React.FocusEvent<HTMLSelectElement>) => {
-      if (onBlur && !disabled) onBlur?.(e)
-    }
-
-    return (
-      <UI
-        as="select"
-        id={id}
-        ref={ref}
-        name={name}
-        className={classes}
-        selected={selected}
-        onChange={handleOnChange}
-        onPointerDown={handlePointerDown}
-        onBlur={handleOnBlur}
-        required={required}
-        aria-required={required} // Accessibility
-        disabled={disabled}
-        aria-disabled={disabled ? true : false}
-        style={styles}
-        {...props} // Accessibility
-      >
-        <option value="" />
-      </UI>
-    )
   }
+
+  return (
+    <UI
+      as="select"
+      id={id}
+      ref={ref}
+      name={name}
+      className={classes}
+      selected={selected}
+      onChange={handleOnChange}
+      onPointerDown={handlePointerDown}
+      onBlur={handleOnBlur}
+      required={required}
+      aria-required={required} // Accessibility
+      disabled={disabled}
+      aria-disabled={disabled ? true : false}
+      style={styles}
+      {...props} // Accessibility
+    >
+      <option value="" />
+    </UI>
+  )
 }
+
 export default Select
 Select.displayName = 'Select' // Remove this line
 Select.Option = Option // Remove this line
